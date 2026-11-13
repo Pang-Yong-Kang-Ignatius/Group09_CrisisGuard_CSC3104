@@ -358,8 +358,17 @@ CrisisGuard includes regression tests and real-system Docker end-to-end tests.
 ```
 
 ### 9.2 Full Regression
-
+If the repository was downloaded as a ZIP from GitHub, Windows may mark PowerShell scripts as downloaded from the internet. Run the following commands in PowerShell from the repository root to check and unblock the scripts if necessary.
 ```powershell
+# Check whether Windows has marked the scripts as downloaded
+Get-Item .\test.project.ps1 -Stream Zone.Identifier -ErrorAction SilentlyContinue
+Get-Item .\infrastructure\aws\run-lab.ps1 -Stream Zone.Identifier -ErrorAction SilentlyContinue
+
+# Unblock the trusted project scripts if necessary
+Unblock-File -LiteralPath .\test.project.ps1
+Unblock-File -LiteralPath .\infrastructure\aws\run-lab.ps1
+
+# Run the full regression suite
 .\test.project.ps1 -Full
 ```
 
