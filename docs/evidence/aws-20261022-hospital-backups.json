@@ -1,0 +1,199 @@
+{
+  "date": "2026-10-22",
+  "shutdown_verified": {"ec2_instances": "all three Stopped", "learner_lab": "Terminated; timer 00:00", "disks_retained": true},
+  "deployed_application_commit": "2c7cb71fbfca624b540bc8c18b08bb8c62c4b9d6",
+  "scope": "Online backups of actual AWS hospital SQLite stores; isolated restoration on each server and on Windows; no live database replacement",
+  "backup_tool_uploaded_to": [
+    "hospital-a",
+    "hospital-b"
+  ],
+  "hospitals": [
+    {
+      "role": "hospital-a",
+      "backup": {
+        "checked_at_utc": "2026-10-22T06:14:24.322666+00:00",
+        "operation": "backup",
+        "kind": "sqlite",
+        "file": "/home/ubuntu/crisisguard-backups/20261022-0614/hospital.sqlite3",
+        "bytes": 20480,
+        "sha256": "30f98e4c39e4b4ea4ad160f0dbbce17c175ba6cec6916e21f91a91c3514fbc7c",
+        "restore_tested": false,
+        "result": "passed"
+      },
+      "on_host_restore": {
+        "checked_at_utc": "2026-10-22T06:14:55.132881+00:00",
+        "operation": "restore-check",
+        "sha256": "30f98e4c39e4b4ea4ad160f0dbbce17c175ba6cec6916e21f91a91c3514fbc7c",
+        "kind": "sqlite",
+        "tables": {
+          "events": 1,
+          "recovery_state": 1
+        },
+        "event_status_counts": {
+          "applied": 1
+        },
+        "expected_events_found": 1,
+        "result": "passed"
+      },
+      "off_host_backup_filename": "hospital-a-20261022.sqlite3",
+      "off_host_restore": {
+        "checked_at_utc": "2026-10-22T06:16:10.341754+00:00",
+        "operation": "restore-check",
+        "sha256": "30f98e4c39e4b4ea4ad160f0dbbce17c175ba6cec6916e21f91a91c3514fbc7c",
+        "kind": "sqlite",
+        "tables": {
+          "events": 1,
+          "recovery_state": 1
+        },
+        "event_status_counts": {
+          "applied": 1
+        },
+        "expected_events_found": 1,
+        "result": "passed"
+      },
+      "post_backup_health": {
+        "checked_at_utc": "2026-10-22T06:15:16.887871+00:00",
+        "hostname": "ip-172-31-27-60",
+        "role": "hospital-a",
+        "scope": "Existing deployment health and original applied records; no writes or replay",
+        "containers": [
+          {
+            "Service": "hospital",
+            "State": "running",
+            "Health": "healthy"
+          }
+        ],
+        "cloud_health_ports": [
+          8001
+        ],
+        "verified_events": [
+          {
+            "event_id": "TX_AWS_A_20261016_01",
+            "site_id": "Hospital_A",
+            "status": "applied"
+          }
+        ],
+        "result": "passed"
+      }
+    },
+    {
+      "role": "hospital-b",
+      "backup": {
+        "checked_at_utc": "2026-10-22T06:14:32.213504+00:00",
+        "operation": "backup",
+        "kind": "sqlite",
+        "file": "/home/ubuntu/crisisguard-backups/20261022-0614/hospital.sqlite3",
+        "bytes": 20480,
+        "sha256": "388fb0fd5e1ac8d58fb8684c686ac78c83ae77e9eafd31055bd52a931d3680df",
+        "restore_tested": false,
+        "result": "passed"
+      },
+      "on_host_restore": {
+        "checked_at_utc": "2026-10-22T06:15:03.894145+00:00",
+        "operation": "restore-check",
+        "sha256": "388fb0fd5e1ac8d58fb8684c686ac78c83ae77e9eafd31055bd52a931d3680df",
+        "kind": "sqlite",
+        "tables": {
+          "events": 1,
+          "recovery_state": 1
+        },
+        "event_status_counts": {
+          "applied": 1
+        },
+        "expected_events_found": 1,
+        "result": "passed"
+      },
+      "off_host_backup_filename": "hospital-b-20261022.sqlite3",
+      "off_host_restore": {
+        "checked_at_utc": "2026-10-22T06:16:12.213787+00:00",
+        "operation": "restore-check",
+        "sha256": "388fb0fd5e1ac8d58fb8684c686ac78c83ae77e9eafd31055bd52a931d3680df",
+        "kind": "sqlite",
+        "tables": {
+          "events": 1,
+          "recovery_state": 1
+        },
+        "event_status_counts": {
+          "applied": 1
+        },
+        "expected_events_found": 1,
+        "result": "passed"
+      },
+      "post_backup_health": {
+        "checked_at_utc": "2026-10-22T06:15:17.456073+00:00",
+        "hostname": "ip-172-31-19-60",
+        "role": "hospital-b",
+        "scope": "Existing deployment health and original applied records; no writes or replay",
+        "containers": [
+          {
+            "Service": "hospital",
+            "State": "running",
+            "Health": "healthy"
+          }
+        ],
+        "cloud_health_ports": [
+          8001
+        ],
+        "verified_events": [
+          {
+            "event_id": "TX_AWS_B_20261016_01",
+            "site_id": "Hospital_B",
+            "status": "applied"
+          }
+        ],
+        "result": "passed"
+      }
+    }
+  ],
+  "cloud_health": {
+    "checked_at_utc": "2026-10-22T06:15:19.185265+00:00",
+    "hostname": "ip-172-31-23-56",
+    "role": "cloud",
+    "scope": "Existing deployment health and original applied records; no writes or replay",
+    "containers": [
+      {
+        "Service": "admin",
+        "State": "running",
+        "Health": "healthy"
+      },
+      {
+        "Service": "emergency",
+        "State": "running",
+        "Health": "healthy"
+      },
+      {
+        "Service": "patient",
+        "State": "running",
+        "Health": "healthy"
+      },
+      {
+        "Service": "postgres",
+        "State": "running",
+        "Health": "healthy"
+      }
+    ],
+    "cloud_health_ports": [
+      8001,
+      8003,
+      8004
+    ],
+    "verified_events": [
+      {
+        "event_id": "TX_AWS_A_20261016_01",
+        "site_id": "Hospital_A",
+        "status": "applied"
+      },
+      {
+        "event_id": "TX_AWS_B_20261016_01",
+        "site_id": "Hospital_B",
+        "status": "applied"
+      }
+    ],
+    "result": "passed"
+  },
+  "limitations": [
+    "Not a live application recovery cutover",
+    "Network-partition testing remains pending",
+    "New hosted CI run awaits commit and push"
+  ]
+}

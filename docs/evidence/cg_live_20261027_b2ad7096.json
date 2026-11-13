@@ -1,0 +1,158 @@
+{
+  "run_id": "CG_LIVE_20261027_b2ad7096",
+  "started_at": "2026-10-27T09:54:24.158750+00:00",
+  "scenarios": {},
+  "calls": [
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "postgres",
+        "psql",
+        "-U",
+        "crisisguard",
+        "-d",
+        "crisisguard",
+        "-At",
+        "-c",
+        "SELECT coalesce(json_agg(event_id ORDER BY event_id),'[]'::json) FROM events"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-a",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at,applied_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    }
+  ],
+  "events": [],
+  "limitations": [],
+  "baseline": {
+    "cloud": {
+      "project": "crisisguard-local",
+      "services": {
+        "patient": {
+          "healthy": true,
+          "running": true
+        },
+        "emergency": {
+          "healthy": true,
+          "running": true
+        },
+        "admin": {
+          "healthy": true,
+          "running": true
+        }
+      },
+      "busy": false
+    },
+    "containers": {
+      "dashboard": {
+        "id": "109172d3e4313d33f24665fd526b20924faca822fe908e8449dacbf11f23c6c9",
+        "image": "sha256:4a22c27b3bf3c1bcd02e4c92bdff48dc438351cf968881bf9b371f0c95daf3b6",
+        "mounts": [],
+        "restarts": 0
+      },
+      "hospital-a": {
+        "id": "f0b33acea69f249c89e6a004a1bfe40a13d4699b00358ed584ba52ea41c4e16b",
+        "image": "sha256:4a22c27b3bf3c1bcd02e4c92bdff48dc438351cf968881bf9b371f0c95daf3b6",
+        "mounts": [
+          {
+            "Type": "volume",
+            "Name": "crisisguard-local_hospital-a-data",
+            "Source": "/var/lib/docker/volumes/crisisguard-local_hospital-a-data/_data",
+            "Destination": "/data",
+            "Driver": "local",
+            "Mode": "rw",
+            "RW": true,
+            "Propagation": ""
+          }
+        ],
+        "restarts": 0
+      },
+      "emergency": {
+        "id": "be6229be529dd6b7aec54bb98af43674a6cbcd3dfac7195054548b12fe0f7aa4",
+        "image": "sha256:4a22c27b3bf3c1bcd02e4c92bdff48dc438351cf968881bf9b371f0c95daf3b6",
+        "mounts": [],
+        "restarts": 0
+      },
+      "admin": {
+        "id": "5979811bd137ed9d9370a60b06157f4da4cdad6847c9cd3edd32dfa1dec086b4",
+        "image": "sha256:4a22c27b3bf3c1bcd02e4c92bdff48dc438351cf968881bf9b371f0c95daf3b6",
+        "mounts": [],
+        "restarts": 0
+      },
+      "hospital-b": {
+        "id": "ecada5b14cf25180667fa30ab927e12ffc4fe40e941969283fbd27d5ba1b6577",
+        "image": "sha256:4a22c27b3bf3c1bcd02e4c92bdff48dc438351cf968881bf9b371f0c95daf3b6",
+        "mounts": [
+          {
+            "Type": "volume",
+            "Name": "crisisguard-local_hospital-b-data",
+            "Source": "/var/lib/docker/volumes/crisisguard-local_hospital-b-data/_data",
+            "Destination": "/data",
+            "Driver": "local",
+            "Mode": "rw",
+            "RW": true,
+            "Propagation": ""
+          }
+        ],
+        "restarts": 0
+      },
+      "patient": {
+        "id": "7d42f305516a1d2f754f711bdf2c735f8cd89fd5f43c31b6a5f6abc61cef7243",
+        "image": "sha256:4a22c27b3bf3c1bcd02e4c92bdff48dc438351cf968881bf9b371f0c95daf3b6",
+        "mounts": [],
+        "restarts": 0
+      },
+      "postgres": {
+        "id": "01cce11cfc59db4d000d7fe60669817513e1d21eef90e0012c5ef4fd5e32b103",
+        "image": "sha256:9e2cf6287f25c3151f4c9421ccce2b17f3e60061c111a29165e0d2cdd9ff0a97",
+        "mounts": [
+          {
+            "Type": "volume",
+            "Name": "crisisguard-local_postgres-data",
+            "Source": "/var/lib/docker/volumes/crisisguard-local_postgres-data/_data",
+            "Destination": "/var/lib/postgresql/data",
+            "Driver": "local",
+            "Mode": "rw",
+            "RW": true,
+            "Propagation": ""
+          }
+        ],
+        "restarts": 0
+      }
+    },
+    "volumes": [
+      "b4a991065d804026972195281eea606219b68328d33d569a8a43e16276cbb9bd",
+      "crisisguard-local_hospital-a-data",
+      "crisisguard-local_hospital-b-data",
+      "crisisguard-local_postgres-data",
+      "crisisguard_pgdata",
+      "topicf-task4-benchmark_benchmark_postgres",
+      "topicf-task4-benchmark_benchmark_qdrant",
+      "topicf-task4-round3_round3_postgres",
+      "topicf-task4-round3_round3_qdrant",
+      "topicf-task4-round3_round3_state",
+      "topicf_gis_bedrock_ltm_data",
+      "topicf_gis_db_data",
+      "topicf_gis_titan_qdrant_data"
+    ]
+  },
+  "execution_error": {
+    "type": "CalledProcessError",
+    "message": "Command '['docker', 'compose', 'exec', '-T', 'hospital-a', 'python', '-c', \"import sqlite3,os,json\\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at,applied_at FROM events')]\\nprint(json.dumps(rows))\"]' returned non-zero exit status 1."
+  },
+  "environment_restored": true,
+  "container_identity_and_mounts_preserved": true,
+  "original_volumes_retained": true,
+  "finished_at": "2026-10-27T09:54:26.886994+00:00"
+}

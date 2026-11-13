@@ -1,0 +1,36 @@
+{
+  "path": "CrisisGuard-evidence-20261030.zip",
+  "bytes": 22948677,
+  "sha256": "304b7446c20be6e995746f9ab505c8dce41957ea6abb155ce4795d4542fecd27",
+  "entries": 570,
+  "crc_and_all_entry_sha256_verified": true,
+  "scope": "Local OneDrive-folder retention outside .venv; off-machine synchronization/recovery has not been verified",
+  "excluded": "Private Compose configs, .env, command logs, credentials and database binaries",
+  "studies": [
+    "cp8-pilot01-20261030",
+    "cp8-matrix01-20261030",
+    "cp8-pilot02-20261030",
+    "cp8-pilot03-drr-20261030",
+    "cp8-matrix02-20261030",
+    "cp8-auto01-20261030",
+    "cp8-auto02-20261030",
+    "cp8-auto03-20261030",
+    "cp8-constant01-20261030",
+    "cp8-cost-calibration01-20261030",
+    "cp8-cost-stress01-20261030"
+  ],
+  "raw_directories": [
+    "C:\\Users\\muhdh\\OneDrive\\Documents\\GitHub\\CrisisGuard\\.venv\\cp8-0c1a9a2cbf64",
+    "C:\\Users\\muhdh\\OneDrive\\Documents\\GitHub\\CrisisGuard\\.venv\\cp8-2091777e8b95",
+    "C:\\Users\\muhdh\\OneDrive\\Documents\\GitHub\\CrisisGuard\\.venv\\cp8-269706b8a5dc",
+    "C:\\Users\\muhdh\\OneDrive\\Documents\\GitHub\\CrisisGuard\\.venv\\cp8-8dde221cd7bc",
+    "C:\\Users\\muhdh\\OneDrive\\Documents\\GitHub\\CrisisGuard\\.venv\\cp8-cost-2ae0c1037a51",
+    "C:\\Users\\muhdh\\OneDrive\\Documents\\GitHub\\CrisisGuard\\.venv\\cp8-d06e388f538a",
+    "C:\\Users\\muhdh\\OneDrive\\Documents\\GitHub\\CrisisGuard\\.venv\\cp8-ee29b379da93",
+    "C:\\Users\\muhdh\\OneDrive\\Documents\\GitHub\\CrisisGuard\\.venv\\cp8-ef4eb831d355",
+    "C:\\Users\\muhdh\\OneDrive\\Documents\\GitHub\\CrisisGuard\\.venv\\cp8-fce9fb6c4b7f",
+    "C:\\Users\\muhdh\\OneDrive\\Documents\\GitHub\\CrisisGuard\\.venv\\cp8-fddf7b5d263a",
+    "C:\\Users\\muhdh\\OneDrive\\Documents\\GitHub\\CrisisGuard\\.venv\\cp8-fe56eeceacd6"
+  ],
+  "path_basis": "Archive filename; absolute storage location is retained in an untracked machine-local backup index."
+}

@@ -1,0 +1,86 @@
+{
+  "checkpoint": "7B",
+  "scope": "Final external and project-owned live event producer audit",
+  "completed_at_singapore_date": "2026-10-29",
+  "result": "passed",
+  "conclusion": {
+    "project_owned_live_cloud_producers_requiring_instrumentation": 0,
+    "dashboard_direct_cloud_path": "Already sends authenticated live provenance; intentionally disabled before forwarding by METAGUARD_REQUIRED=1",
+    "dashboard_hospital_capture": "Not a Cloud producer; delivery proceeds through Hospital authenticated replay",
+    "hospital_a_b": "Authenticated replay producers, not live producers",
+    "external_test_tools": "Not deployed runtime producers and deliberately not given private live credentials",
+    "future_clients": "No implementation or deployment exists; any future client must use the existing authenticated live provenance contract",
+    "application_code_changed": false,
+    "deployment_performed": false
+  },
+  "tests": {
+    "focused_dashboard_cloud_and_capture": {
+      "passed": 43,
+      "failed": 0,
+      "skipped": 0,
+      "junit": "docs/evidence/cp7b-external-live-caller-focused-20261028.xml"
+    },
+    "cloud_api_and_telemetry_integration": {
+      "passed": 51,
+      "failed": 0,
+      "skipped": 1,
+      "skip_reason": "Explicit opt-in disposable Dashboard Docker test",
+      "junit": "docs/evidence/cp7b-external-live-caller-integration-20261028.xml"
+    },
+    "full_unit": {
+      "passed": 821,
+      "failed": 0,
+      "skipped": 0,
+      "junit": "docs/evidence/cp7b-external-live-caller-unit-regression-20261028.xml"
+    },
+    "overlap_note": "Selections overlap and are not additive unique test counts."
+  },
+  "live_verification": {
+    "guarded_dashboard_routes": {
+      "patient": 403,
+      "emergency": 403,
+      "admin": 403,
+      "cloud_samples_created": 0
+    },
+    "deployed_dashboard_transport_probes": {
+      "patient_cloud_status": 401,
+      "emergency_cloud_status": 401,
+      "admin_cloud_status": 401,
+      "classification": {
+        "patient": {"live": 1, "replay": 0, "unclassified": 0},
+        "emergency": {"live": 1, "replay": 0, "unclassified": 0},
+        "admin": {"live": 1, "replay": 0, "unclassified": 0}
+      },
+      "persisted_probe_ids": 0
+    },
+    "raw_evidence": "docs/evidence/cp7b-external-live-caller-audit-20261028.json",
+    "reproduction_script": "docs/evidence/cp7b-external-live-caller-audit-20261028.py"
+  },
+  "canonical_preservation": {
+    "method": "All columns serialized with row_to_json after deterministic grant_id or column ordering, SHA-256 hashed, with independent row counts",
+    "modification_detection": true,
+    "addition_detection": true,
+    "deletion_detection": true,
+    "self_test": "docs/evidence/cp7b-external-live-caller-canonical-self-test-20261029.json",
+    "failed_pg_dump_attempt_preserved": "docs/evidence/cp7b-external-live-caller-audit-attempt1-20261028.json"
+  },
+  "durable_preservation": {
+    "postgresql_events": 191,
+    "postgresql_events_sha256": "4c916b2f01e836bc1118e0621105dfcf589f2a5ffc17e1bd560bf0620d839d7f",
+    "controller_grants": 8,
+    "controller_grants_sha256": "9a29c839b25b5ca8c9c26c3f837f3cfda46890b61c23841684fd7b64876d2d56",
+    "controller_tickets": 0,
+    "controller_tickets_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "hospital_a_events": 60,
+    "hospital_a_sha256": "13a287aef75bd1bdb4e9fa757636d807a4708e6db4c2c04cdca304e8c0a9b27a",
+    "hospital_b_events": 42,
+    "hospital_b_sha256": "aee2685d59b3a86640ed3a7331f1742eb1320b732ad63a08b5f63b2dd2e28642",
+    "sqlite_integrity": "ok",
+    "docker_volumes": 16,
+    "docker_container_records": 33,
+    "container_ids_images_mounts_preserved": true,
+    "initial_stopped_states_restored": true,
+    "evidence": "docs/evidence/cp7b-external-live-caller-current-preservation-20261029.json",
+    "reproduction_script": "docs/evidence/cp7b-external-live-caller-current-preservation-20261029.py"
+  }
+}

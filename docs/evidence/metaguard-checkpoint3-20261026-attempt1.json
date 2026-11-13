@@ -1,0 +1,75 @@
+{
+  "project": "cg-metaguard-a62b53643681",
+  "image": "crisisguard-metaguard-test:cg-metaguard-a62b53643681",
+  "started_at": "2026-10-26T05:06:20.393736+00:00",
+  "checks": [
+    {
+      "name": "Compose rendering, isolated ports/resources and unchanged hospital replay configuration",
+      "result": "passed"
+    },
+    {
+      "name": "All eight real containers healthy using the existing Dockerfile",
+      "result": "passed"
+    },
+    {
+      "name": "Controller HTTP liveness and real PostgreSQL connectivity/schema",
+      "result": "passed"
+    },
+    {
+      "name": "Ticket/grant persistence, duplicate requests, ACK/completion idempotency and Cloud token gate",
+      "result": "passed"
+    },
+    {
+      "name": "Controller container restart AND recreation preserve grants, history and waiting ticket",
+      "result": "passed"
+    },
+    {
+      "name": "Unacknowledged expiry reissues safely; acknowledged expiry requires authoritative reconciliation",
+      "result": "passed"
+    },
+    {
+      "name": "Database outage returns 503, container readiness fails, and same controller recovers",
+      "result": "passed"
+    },
+    {
+      "name": "Both hospitals capture offline; dashboard shows eight pending events during Cloud API outage",
+      "result": "passed"
+    },
+    {
+      "name": "Cleanup and original container states, image tags and volumes preserved",
+      "result": "passed"
+    }
+  ],
+  "ports": {
+    "POSTGRES_PORT": 56966,
+    "CONTROLLER_PORT": 56967,
+    "PATIENT_PORT": 56968,
+    "EMERGENCY_PORT": 56969,
+    "ADMIN_PORT": 56970,
+    "HOSPITAL_A_PORT": 56971,
+    "HOSPITAL_B_PORT": 56972,
+    "DASHBOARD_PORT": 56973
+  },
+  "artifacts": "C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\.venv\\cg-metaguard-a62b53643681",
+  "aws_used": false,
+  "containers": {
+    "dashboard": "47bc9c758bb6ac91ac800e093e0977decfa62083e828f0b90fb9895529e9d123",
+    "hospital-b": "bbd1c18d0749154e11db2ccf2ba61bbb40c901c0a95c8b69a80cd1919bc9989e",
+    "hospital-a": "3e5572c9e67ba9d37d20ad716b810bc9cf5161e3f7fc89527b502b6f5477e0f3",
+    "admin": "1a1ff099ca0fad8313628666f40e26ecae6517a29eb795d8074008cdc27214c7",
+    "emergency": "461ee9f614b277dbdf33835ee8aa41bcc86bbee340ea147501455bf251ba8f1a",
+    "patient": "116634a23176814a4bf12754452dd0846874ee3d3513ad64bb9455803aef99da",
+    "controller": "22193d7e0c078db7d3353064cb4ad3c64c8a5245bc7f10a2e78bf7de7e75af89",
+    "postgres": "5382672d28bcde7aec85926f27b22656da9ee5a3b7a5adbaf3854abdaa46fc9d"
+  },
+  "postgres_version": "16.15 (Debian 16.15-1.pgdg13+2)",
+  "result": "failed",
+  "error": "fromisoformat: argument must be str",
+  "cleanup": "passed; disposable containers/network/volumes removed; test image retained",
+  "existing_resources_preserved": {
+    "containers": 24,
+    "volumes": 13,
+    "result": "passed"
+  },
+  "finished_at": "2026-10-26T05:08:19.218773+00:00"
+}

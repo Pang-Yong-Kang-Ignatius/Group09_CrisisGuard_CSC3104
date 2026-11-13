@@ -1,0 +1,634 @@
+{
+  "project": "cg-metaguard-97dc77f70dba",
+  "provenance": "Expected event identities reconstructed from deterministic inputs of the passed existing harness. Not a raw PostgreSQL export, not observed per-event commit timestamps. Excludes later pytest fixture events.",
+  "events": [
+    {
+      "scenario": "hospital_automatic_recovery",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba_admission_Hospital_A_1",
+        "site_id": "Hospital_A",
+        "event_type": "patient_registration",
+        "base_priority": 1,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "SYNTHETIC_cg-metaguard-97dc77f70dba_Hospital_A"
+        }
+      }
+    },
+    {
+      "scenario": "hospital_automatic_recovery",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba_admission_Hospital_A_2",
+        "site_id": "Hospital_A",
+        "event_type": "encounter_creation",
+        "base_priority": 1,
+        "prerequisite_ids": [
+          "cg-metaguard-97dc77f70dba_admission_Hospital_A_1"
+        ],
+        "payload": {
+          "patient_id": "SYNTHETIC_cg-metaguard-97dc77f70dba_Hospital_A"
+        }
+      }
+    },
+    {
+      "scenario": "hospital_automatic_recovery",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba_admission_Hospital_A_3",
+        "site_id": "Hospital_A",
+        "event_type": "emergency_record",
+        "base_priority": 5,
+        "prerequisite_ids": [
+          "cg-metaguard-97dc77f70dba_admission_Hospital_A_2"
+        ],
+        "payload": {
+          "patient_id": "SYNTHETIC_cg-metaguard-97dc77f70dba_Hospital_A"
+        }
+      }
+    },
+    {
+      "scenario": "hospital_automatic_recovery",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba_admission_Hospital_A_4",
+        "site_id": "Hospital_A",
+        "event_type": "patient_discharge",
+        "base_priority": 1,
+        "prerequisite_ids": [
+          "cg-metaguard-97dc77f70dba_admission_Hospital_A_3"
+        ],
+        "payload": {
+          "patient_id": "SYNTHETIC_cg-metaguard-97dc77f70dba_Hospital_A"
+        }
+      }
+    },
+    {
+      "scenario": "hospital_automatic_recovery",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba_admission_Hospital_B_1",
+        "site_id": "Hospital_B",
+        "event_type": "patient_registration",
+        "base_priority": 1,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "SYNTHETIC_cg-metaguard-97dc77f70dba_Hospital_B"
+        }
+      }
+    },
+    {
+      "scenario": "hospital_automatic_recovery",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba_admission_Hospital_B_2",
+        "site_id": "Hospital_B",
+        "event_type": "encounter_creation",
+        "base_priority": 1,
+        "prerequisite_ids": [
+          "cg-metaguard-97dc77f70dba_admission_Hospital_B_1"
+        ],
+        "payload": {
+          "patient_id": "SYNTHETIC_cg-metaguard-97dc77f70dba_Hospital_B"
+        }
+      }
+    },
+    {
+      "scenario": "hospital_automatic_recovery",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba_admission_Hospital_B_3",
+        "site_id": "Hospital_B",
+        "event_type": "emergency_record",
+        "base_priority": 5,
+        "prerequisite_ids": [
+          "cg-metaguard-97dc77f70dba_admission_Hospital_B_2"
+        ],
+        "payload": {
+          "patient_id": "SYNTHETIC_cg-metaguard-97dc77f70dba_Hospital_B"
+        }
+      }
+    },
+    {
+      "scenario": "hospital_automatic_recovery",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba_admission_Hospital_B_4",
+        "site_id": "Hospital_B",
+        "event_type": "patient_discharge",
+        "base_priority": 1,
+        "prerequisite_ids": [
+          "cg-metaguard-97dc77f70dba_admission_Hospital_B_3"
+        ],
+        "payload": {
+          "patient_id": "SYNTHETIC_cg-metaguard-97dc77f70dba_Hospital_B"
+        }
+      }
+    },
+    {
+      "scenario": "normal",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-normal-Hospital_A-0",
+        "site_id": "Hospital_A",
+        "event_type": "patient_registration",
+        "base_priority": 5,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "synthetic",
+          "phase": "normal"
+        }
+      }
+    },
+    {
+      "scenario": "normal",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-normal-Hospital_A-1",
+        "site_id": "Hospital_A",
+        "event_type": "patient_registration",
+        "base_priority": 5,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "synthetic",
+          "phase": "normal"
+        }
+      }
+    },
+    {
+      "scenario": "normal",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-normal-Hospital_A-2",
+        "site_id": "Hospital_A",
+        "event_type": "patient_registration",
+        "base_priority": 5,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "synthetic",
+          "phase": "normal"
+        }
+      }
+    },
+    {
+      "scenario": "normal",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-normal-Hospital_A-3",
+        "site_id": "Hospital_A",
+        "event_type": "patient_registration",
+        "base_priority": 5,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "synthetic",
+          "phase": "normal"
+        }
+      }
+    },
+    {
+      "scenario": "normal",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-normal-Hospital_B-0",
+        "site_id": "Hospital_B",
+        "event_type": "patient_registration",
+        "base_priority": 1,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "synthetic",
+          "phase": "normal"
+        }
+      }
+    },
+    {
+      "scenario": "normal",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-normal-Hospital_B-1",
+        "site_id": "Hospital_B",
+        "event_type": "patient_registration",
+        "base_priority": 1,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "synthetic",
+          "phase": "normal"
+        }
+      }
+    },
+    {
+      "scenario": "normal",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-normal-Hospital_B-2",
+        "site_id": "Hospital_B",
+        "event_type": "patient_registration",
+        "base_priority": 1,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "synthetic",
+          "phase": "normal"
+        }
+      }
+    },
+    {
+      "scenario": "normal",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-normal-Hospital_B-3",
+        "site_id": "Hospital_B",
+        "event_type": "patient_registration",
+        "base_priority": 1,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "synthetic",
+          "phase": "normal"
+        }
+      }
+    },
+    {
+      "scenario": "latency_prime",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-latency_prime-Hospital_A-0",
+        "site_id": "Hospital_A",
+        "event_type": "patient_registration",
+        "base_priority": 5,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "synthetic",
+          "phase": "latency_prime"
+        }
+      }
+    },
+    {
+      "scenario": "latency_prime",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-latency_prime-Hospital_A-1",
+        "site_id": "Hospital_A",
+        "event_type": "patient_registration",
+        "base_priority": 5,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "synthetic",
+          "phase": "latency_prime"
+        }
+      }
+    },
+    {
+      "scenario": "latency_prime",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-latency_prime-Hospital_A-2",
+        "site_id": "Hospital_A",
+        "event_type": "patient_registration",
+        "base_priority": 5,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "synthetic",
+          "phase": "latency_prime"
+        }
+      }
+    },
+    {
+      "scenario": "latency_prime",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-latency_prime-Hospital_B-0",
+        "site_id": "Hospital_B",
+        "event_type": "patient_registration",
+        "base_priority": 1,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "synthetic",
+          "phase": "latency_prime"
+        }
+      }
+    },
+    {
+      "scenario": "latency_prime",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-latency_prime-Hospital_B-1",
+        "site_id": "Hospital_B",
+        "event_type": "patient_registration",
+        "base_priority": 1,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "synthetic",
+          "phase": "latency_prime"
+        }
+      }
+    },
+    {
+      "scenario": "latency_prime",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-latency_prime-Hospital_B-2",
+        "site_id": "Hospital_B",
+        "event_type": "patient_registration",
+        "base_priority": 1,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "synthetic",
+          "phase": "latency_prime"
+        }
+      }
+    },
+    {
+      "scenario": "caution",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-caution-Hospital_A-0",
+        "site_id": "Hospital_A",
+        "event_type": "patient_registration",
+        "base_priority": 5,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "synthetic",
+          "phase": "caution"
+        }
+      }
+    },
+    {
+      "scenario": "caution",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-caution-Hospital_A-1",
+        "site_id": "Hospital_A",
+        "event_type": "patient_registration",
+        "base_priority": 5,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "synthetic",
+          "phase": "caution"
+        }
+      }
+    },
+    {
+      "scenario": "caution",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-caution-Hospital_B-0",
+        "site_id": "Hospital_B",
+        "event_type": "patient_registration",
+        "base_priority": 1,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "synthetic",
+          "phase": "caution"
+        }
+      }
+    },
+    {
+      "scenario": "caution",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-caution-Hospital_B-1",
+        "site_id": "Hospital_B",
+        "event_type": "patient_registration",
+        "base_priority": 1,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "synthetic",
+          "phase": "caution"
+        }
+      }
+    },
+    {
+      "scenario": "error_prime",
+      "expected_outcome": "rejected_test_write_failure",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-error_prime-Hospital_A-0",
+        "site_id": "Hospital_A",
+        "event_type": "patient_registration",
+        "base_priority": 5,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "synthetic",
+          "phase": "error_prime"
+        }
+      }
+    },
+    {
+      "scenario": "error_prime",
+      "expected_outcome": "rejected_test_write_failure",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-error_prime-Hospital_A-1",
+        "site_id": "Hospital_A",
+        "event_type": "patient_registration",
+        "base_priority": 5,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "synthetic",
+          "phase": "error_prime"
+        }
+      }
+    },
+    {
+      "scenario": "error_prime",
+      "expected_outcome": "rejected_test_write_failure",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-error_prime-Hospital_A-2",
+        "site_id": "Hospital_A",
+        "event_type": "patient_registration",
+        "base_priority": 5,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "synthetic",
+          "phase": "error_prime"
+        }
+      }
+    },
+    {
+      "scenario": "error_prime",
+      "expected_outcome": "rejected_test_write_failure",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-error_prime-Hospital_B-0",
+        "site_id": "Hospital_B",
+        "event_type": "patient_registration",
+        "base_priority": 1,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "synthetic",
+          "phase": "error_prime"
+        }
+      }
+    },
+    {
+      "scenario": "error_prime",
+      "expected_outcome": "rejected_test_write_failure",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-error_prime-Hospital_B-1",
+        "site_id": "Hospital_B",
+        "event_type": "patient_registration",
+        "base_priority": 1,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "synthetic",
+          "phase": "error_prime"
+        }
+      }
+    },
+    {
+      "scenario": "error_prime",
+      "expected_outcome": "rejected_test_write_failure",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-error_prime-Hospital_B-2",
+        "site_id": "Hospital_B",
+        "event_type": "patient_registration",
+        "base_priority": 1,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "synthetic",
+          "phase": "error_prime"
+        }
+      }
+    },
+    {
+      "scenario": "recovery",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-recovery-Hospital_A-0",
+        "site_id": "Hospital_A",
+        "event_type": "patient_registration",
+        "base_priority": 5,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "synthetic",
+          "phase": "recovery"
+        }
+      }
+    },
+    {
+      "scenario": "recovery",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-recovery-Hospital_A-1",
+        "site_id": "Hospital_A",
+        "event_type": "patient_registration",
+        "base_priority": 5,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "synthetic",
+          "phase": "recovery"
+        }
+      }
+    },
+    {
+      "scenario": "recovery",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-recovery-Hospital_B-0",
+        "site_id": "Hospital_B",
+        "event_type": "patient_registration",
+        "base_priority": 1,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "synthetic",
+          "phase": "recovery"
+        }
+      }
+    },
+    {
+      "scenario": "recovery",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-recovery-Hospital_B-1",
+        "site_id": "Hospital_B",
+        "event_type": "patient_registration",
+        "base_priority": 1,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "synthetic",
+          "phase": "recovery"
+        }
+      }
+    },
+    {
+      "scenario": "restored",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-restored-Hospital_A-0",
+        "site_id": "Hospital_A",
+        "event_type": "patient_registration",
+        "base_priority": 5,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "synthetic",
+          "phase": "restored"
+        }
+      }
+    },
+    {
+      "scenario": "restored",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-restored-Hospital_A-1",
+        "site_id": "Hospital_A",
+        "event_type": "patient_registration",
+        "base_priority": 5,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "synthetic",
+          "phase": "restored"
+        }
+      }
+    },
+    {
+      "scenario": "restored",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-restored-Hospital_B-0",
+        "site_id": "Hospital_B",
+        "event_type": "patient_registration",
+        "base_priority": 1,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "synthetic",
+          "phase": "restored"
+        }
+      }
+    },
+    {
+      "scenario": "restored",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-restored-Hospital_B-1",
+        "site_id": "Hospital_B",
+        "event_type": "patient_registration",
+        "base_priority": 1,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "synthetic",
+          "phase": "restored"
+        }
+      }
+    },
+    {
+      "scenario": "database_outage_capture",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-db-outage-Hospital_A",
+        "site_id": "Hospital_A",
+        "event_type": "patient_registration",
+        "base_priority": 5,
+        "prerequisite_ids": [],
+        "payload": {}
+      }
+    },
+    {
+      "scenario": "database_outage_capture",
+      "expected_outcome": "applied",
+      "event": {
+        "event_id": "cg-metaguard-97dc77f70dba-db-outage-Hospital_B",
+        "site_id": "Hospital_B",
+        "event_type": "patient_registration",
+        "base_priority": 5,
+        "prerequisite_ids": [],
+        "payload": {}
+      }
+    }
+  ]
+}

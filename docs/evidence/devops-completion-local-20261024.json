@@ -1,0 +1,116 @@
+{
+  "verification_date": "2026-10-24",
+  "recorded_date": "2026-10-25",
+  "result": "passed",
+  "base_commit": "68c097ba8eeb2c2ffd88f9d03a8874c3f8f22c4b",
+  "source_state": "Base plus uncommitted deployment helpers, tests, CI and docs; previous update/rollback changes preserved; application source unchanged",
+  "environment": {
+    "host": "Windows / Docker Desktop Linux engine 29.5.2",
+    "unit_and_application_python": "3.11.17"
+  },
+  "unit_tests": {
+    "passed": 473,
+    "new_cases_this_task": 49,
+    "focused_audit_cleanup_launcher_passed": 73,
+    "warnings": 1,
+    "warning": "Existing Starlette TestClient deprecation"
+  },
+  "smoke": {
+    "run_id": "cg-smoke-1db3845a792c",
+    "scenarios_passed": 4,
+    "summaries": [
+      "combined manual: capture during API outage, site isolation, scheduled replay, duplicate ACKs, pending/applied persistence, SQLite/PostgreSQL backup restoration and dashboard/reusable health checks",
+      "combined automatic: 8 events captured during API outage, pending queues survived hospital recreation, automatic three-service recovery without manual replay, dependency order, duplicate ACKs, applied persistence, dashboard and reusable health checker; {\"Hospital_A\": {\"last_reconnected_at\": \"2026-10-24T15:38:21.179838+00:00\", \"drain_completed_at\": \"2026-10-24T15:38:21.524142+00:00\", \"replayable_backlog\": 0}, \"Hospital_B\": {\"last_reconnected_at\": \"2026-10-24T15:38:22.504514+00:00\", \"drain_completed_at\": \"2026-10-24T15:38:22.917156+00:00\", \"replayable_backlog\": 0}}",
+      "split manual: capture during API outage, site isolation, scheduled replay, duplicate ACKs, pending/applied persistence, SQLite/PostgreSQL backup restoration and dashboard/reusable health checks",
+      "split automatic: 8 events captured during API outage, pending queues survived hospital recreation, automatic three-service recovery without manual replay, dependency order, duplicate ACKs, applied persistence, dashboard and reusable health checker; {\"Hospital_A\": {\"last_reconnected_at\": \"2026-10-24T15:43:42.052110+00:00\", \"drain_completed_at\": \"2026-10-24T15:43:49.331637+00:00\", \"replayable_backlog\": 0}, \"Hospital_B\": {\"last_reconnected_at\": \"2026-10-24T15:43:41.957153+00:00\", \"drain_completed_at\": \"2026-10-24T15:43:49.320915+00:00\", \"replayable_backlog\": 0}}"
+    ],
+    "health_checker_calls": 12,
+    "dashboard_checkpoints": 16
+  },
+  "configuration": {
+    "result": "passed",
+    "preflights": [
+      {
+        "role": "cloud",
+        "expected_acceptance": true,
+        "result": "passed"
+      },
+      {
+        "role": "hospital",
+        "expected_acceptance": true,
+        "result": "passed"
+      },
+      {
+        "role": "hospital",
+        "expected_acceptance": true,
+        "result": "passed"
+      },
+      {
+        "role": "cloud",
+        "expected_acceptance": false,
+        "result": "passed"
+      },
+      {
+        "role": "cloud",
+        "expected_acceptance": false,
+        "result": "passed"
+      },
+      {
+        "role": "hospital",
+        "expected_acceptance": false,
+        "result": "passed"
+      }
+    ],
+    "controller_scaffold": "configuration_only_passed",
+    "containers_started": 0,
+    "aws_used": false,
+    "scope": "Real Compose rendering; synthetic settings; no controller implementation/health claim"
+  },
+  "wrapper_mock": {
+    "wrapper": "passed",
+    "no_overwrite_before_docker": "passed",
+    "readonly_credential_mount": "passed",
+    "aws_used": false,
+    "docker_engine_used": false
+  },
+  "deploy_gate_mock": "Rejected preflight exits before Compose up; Docker/Python functions mocked",
+  "launcher": {
+    "build": "passed",
+    "preview_network": "none",
+    "new_command_help": "cleanup-plan present",
+    "aws_used": false
+  },
+  "local_cleanup": {
+    "containers": 0,
+    "volumes": 0,
+    "networks": 0,
+    "smoke_image_tags": 0,
+    "own_unit_launcher_image_tags": "removed"
+  },
+  "checksums": {
+    "infrastructure/scripts/audit_deployment.py": "e723026a70b1b90d8969876aea33f397f9a2c4a8f8af0cfadc5a190564a6257f",
+    "infrastructure/scripts/verify_devops_config.py": "f1baebfa89ef70c9f65ce98dea187bf718b31bd07af4fa2e98838f600a252257",
+    "infrastructure/aws/deploy.sh": "3b3423f619fb1f725c656177d5d286b6781c06d88d083e367a68480920bfd0fa",
+    "infrastructure/aws/launch_lab.py": "0840619b89f2b38e72a175c5f09d4a0062a48dfbb55646be07139f6100750cc2",
+    "infrastructure/aws/run-lab.ps1": "4e997a3f7929689266651a8ed1c9d362ce5ff3e81807acb3c91722a0b0436472",
+    "infrastructure/docker/compose.controller.example.yaml": "c12b204d1b1888976a98d4fac23df4abb92e92ff16819023f036045fc1a1ce32",
+    "tests/unit/test_deployment_audit.py": "c345901502401cc22e42e9ef5b53ed4361e7135ece4b54ef9fcb5ab5b7702260",
+    "tests/unit/test_cleanup_plan.py": "da75e75152b4ba662666a752d10da4e7c6d4f71e79f95e6555b2f565c63575c3",
+    "tests/unit/test_lab_launcher.py": "27ed0d6a90be266f6487bd02459a5402c617629a5a1c7d9ffd0131556f4aabda",
+    ".github/workflows/ci.yml": "960ccea90e502a4ff8ffa4c632e17fa46b17abf33c4b3d7deee279706f252a59"
+  },
+  "raw_log_sha256": {
+    "unit-python311.log": "5edf2005dcd1a8834939218ee33af8340e21e7071590f6af1b5a4cbef73781d7",
+    "smoke.log": "3e31f1792afcdaa29d9eb72c93c290a85750c05339946144c3eb7de98a039ff5",
+    "configuration.json": "a0554dcf8dc166ad47f1d66f20e90d6517fb4b33e75f6e970c6bc1ccc8bc41fb",
+    "wrapper.log": "ad21066037f80625913b297875bf82fdb94b5d1fb4ca7eb93f799ece617f9b98",
+    "deploy-gate.log": "879380fe6e4df332b224f9d47ede0c434ed89cc07e6f832576b202032e0fcf4a",
+    "launcher-preview.json": "e1307fff06bee75bf6d7645f6c4c5c3fc3ff66099b53761b934238230c12f7b5"
+  },
+  "limits": [
+    "Cleanup inventory clients mocked; no live launcher teardown/deletion performed",
+    "Controller scaffold rendered only; no controller implementation or health proof",
+    "Hosted CI for uncommitted changes and independent teammate results remain pending",
+    "AWS release rehearsal reported separately"
+  ]
+}

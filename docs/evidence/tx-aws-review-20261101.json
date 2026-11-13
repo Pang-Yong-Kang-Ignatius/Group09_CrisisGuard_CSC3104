@@ -1,0 +1,717 @@
+{
+  "checked_at_utc": "2026-11-01T07:08:56.549410+00:00",
+  "owner_selected_target": "TX original three-instance deployment",
+  "region": "us-east-1",
+  "source_commit": "16e74b8c0f226f85b342ce2452e35797908c3a5e",
+  "result": "passed",
+  "aws_used": true,
+  "release_ci_url": "https://github.com/Pang-Yong-Kang-Ignatius/CrisisGuard/actions/runs/41277909082",
+  "source_archive_sha256": "c8304395d5ae13a2535bd306eca1117922976935cd5ea1908ef9d2d014821e45",
+  "baseline": {
+    "cloud_applied": 12,
+    "hospital_a_applied": 6,
+    "hospital_b_applied": 6,
+    "healthy_services": 6,
+    "metaguard_present": false,
+    "git_checkout_present": false,
+    "baseline_binary_revision_independently_verified": false
+  },
+  "security_review": {
+    "cloud_security_group": "sg-0eae5cc5fc043294a",
+    "hospital_security_group": "sg-019db2aad892f9e3d",
+    "cloud_api_and_controller_tcp_from_hospital_sg_only": [
+      8001,
+      8003,
+      8004,
+      8005
+    ],
+    "controller_rule_added_with_explicit_user_confirmation": "sgr-0c14b4837ff78eae6",
+    "ssh_from_approved_client_ipv4_32_only": true,
+    "hospital_public_application_ingress": false,
+    "postgres_host_port_published": false,
+    "hospital_capture_binding": "127.0.0.1:8000",
+    "all_private_settings_mode": "0600",
+    "ssh_host_keys_matched_existing_known_hosts": true,
+    "ssh_strict_host_key_checking": true,
+    "private_http_is_transport_encrypted": false,
+    "backup_local_acl": "Current operator, SYSTEM and Administrators only; inheritance restricted",
+    "backup_at_rest_encryption_verified": false
+  },
+  "pre_upgrade_backups": {
+    "cloud": {
+      "run": "tx-20261101-7fc1c5a9956b",
+      "bytes": 2361,
+      "sha256": "ba57cd2d25c50fe01ac411617d34947a2fe508a098f366065bddbf7d22040f22",
+      "isolated_restore": {
+        "event_count": 12,
+        "event_status_counts": {
+          "applied": 12
+        },
+        "events_fingerprint": "4508cdf2113659d62d2fd80599ff2fe6",
+        "expected_events_found": 0,
+        "verified_tables": {
+          "events": {
+            "rows": 12,
+            "fingerprint": "4508cdf2113659d62d2fd80599ff2fe6"
+          }
+        },
+        "restore_target": "isolated container; no network or persistent volume"
+      },
+      "source_fingerprint": {
+        "events": {
+          "rows": 12,
+          "fingerprint": "4508cdf2113659d62d2fd80599ff2fe6"
+        }
+      },
+      "source_unchanged": true,
+      "containers_images_mounts_preserved": true,
+      "off_host_checksum_verified": true,
+      "settings_file_mode": "0o600",
+      "static_deployment_audit": {
+        "result": "passed",
+        "role": "cloud",
+        "services_checked": 4,
+        "scope": "Static AWS deployment configuration; no live health, security-group or record verification",
+        "changes_made": false
+      },
+      "off_host_isolated_restore_matches_source": true,
+      "consistent_exported_postgres_snapshot": false,
+      "source_comparison_scope": "All tables unchanged"
+    },
+    "Hospital_A": {
+      "run": "tx-20261101-7fc1c5a9956b",
+      "bytes": 20480,
+      "sha256": "42495d4a8cc93fce1e36460edfcbe009bcbd15469d370ea03402748917e2e369",
+      "isolated_restore": {
+        "tables": {
+          "events": 6,
+          "recovery_state": 6
+        },
+        "event_status_counts": {
+          "applied": 6
+        },
+        "expected_events_found": 0
+      },
+      "source_fingerprint": "d9a3760b0922e9de6e3dffd4422a5782c38416fe6911d2b21a1b55fea5f41219",
+      "source_unchanged": true,
+      "containers_images_mounts_preserved": true,
+      "off_host_checksum_verified": true,
+      "settings_file_mode": "0o600",
+      "static_deployment_audit": {
+        "result": "passed",
+        "role": "hospital",
+        "services_checked": 1,
+        "scope": "Static AWS deployment configuration; no live health, security-group or record verification",
+        "changes_made": false
+      },
+      "off_host_isolated_restore_matches_source": true,
+      "consistent_exported_postgres_snapshot": false,
+      "source_comparison_scope": "All tables unchanged"
+    },
+    "Hospital_B": {
+      "run": "tx-20261101-7fc1c5a9956b",
+      "bytes": 20480,
+      "sha256": "314fb29752d6323b73554df08b9efc4016384f1c499f925ec7d3041746aaa946",
+      "isolated_restore": {
+        "tables": {
+          "events": 6,
+          "recovery_state": 6
+        },
+        "event_status_counts": {
+          "applied": 6
+        },
+        "expected_events_found": 0
+      },
+      "source_fingerprint": "72bb6f677b989a41a7117c94fb56158b3c573540a4c3aa464ad51c4c97973360",
+      "source_unchanged": true,
+      "containers_images_mounts_preserved": true,
+      "off_host_checksum_verified": true,
+      "settings_file_mode": "0o600",
+      "static_deployment_audit": {
+        "result": "passed",
+        "role": "hospital",
+        "services_checked": 1,
+        "scope": "Static AWS deployment configuration; no live health, security-group or record verification",
+        "changes_made": false
+      },
+      "off_host_isolated_restore_matches_source": true,
+      "consistent_exported_postgres_snapshot": false,
+      "source_comparison_scope": "All tables unchanged"
+    }
+  },
+  "candidate_migration_checks": {
+    "cloud": {
+      "existing_rows_preserved": 12,
+      "controller_tables_created": 4,
+      "repeat_initialization_unchanged": true,
+      "fixed_policy_preflight": "passed",
+      "events_fingerprint": {
+        "rows": 12,
+        "fingerprint": "4508cdf2113659d62d2fd80599ff2fe6"
+      },
+      "scope": "Actual candidate image against isolated restored PostgreSQL copy on EC2; no live schema change",
+      "role": "cloud",
+      "image_id": "sha256:f3a25e4800a7fac1dcbfbc76eabf1e7ebce8e63f37c6819d3db6a838cb48616d",
+      "source_commit": "16e74b8c0f226f85b342ce2452e35797908c3a5e",
+      "candidate_metadata": {
+        "application_sha256": "176fe280befcc95c505f1d5a3132ca7ad17d10edfadd1522ee6a62e45f7e44a0",
+        "package_set_sha256": "7db634c3c5032c6283910c359b72472497d7de4a78c469a6ce6aea71c35031a3"
+      },
+      "live_containers_unchanged": true,
+      "backup_unchanged": true,
+      "result": "passed",
+      "activated": false
+    },
+    "Hospital_A": {
+      "existing_rows_preserved": 6,
+      "all_original_columns_preserved": true,
+      "repeat_initialization_unchanged": true,
+      "metaguard_attempts_empty": true,
+      "integrity_check": "ok",
+      "scope": "Actual candidate image against isolated restored SQLite copy on EC2; no live schema change",
+      "role": "Hospital_A",
+      "image_id": "sha256:510b8ca5cf769200e6d31384899bed691e3ef44adf03395f671b320cd74416a0",
+      "source_commit": "16e74b8c0f226f85b342ce2452e35797908c3a5e",
+      "candidate_metadata": {
+        "application_sha256": "176fe280befcc95c505f1d5a3132ca7ad17d10edfadd1522ee6a62e45f7e44a0",
+        "package_set_sha256": "7db634c3c5032c6283910c359b72472497d7de4a78c469a6ce6aea71c35031a3"
+      },
+      "live_containers_unchanged": true,
+      "backup_unchanged": true,
+      "result": "passed",
+      "activated": false
+    },
+    "Hospital_B": {
+      "existing_rows_preserved": 6,
+      "all_original_columns_preserved": true,
+      "repeat_initialization_unchanged": true,
+      "metaguard_attempts_empty": true,
+      "integrity_check": "ok",
+      "scope": "Actual candidate image against isolated restored SQLite copy on EC2; no live schema change",
+      "role": "Hospital_B",
+      "image_id": "sha256:12835d128f18660395c9da5bb83a6587b5f0c37e1efa42800f39eb937275c65d",
+      "source_commit": "16e74b8c0f226f85b342ce2452e35797908c3a5e",
+      "candidate_metadata": {
+        "application_sha256": "176fe280befcc95c505f1d5a3132ca7ad17d10edfadd1522ee6a62e45f7e44a0",
+        "package_set_sha256": "7db634c3c5032c6283910c359b72472497d7de4a78c469a6ce6aea71c35031a3"
+      },
+      "live_containers_unchanged": true,
+      "backup_unchanged": true,
+      "result": "passed",
+      "activated": false
+    }
+  },
+  "staged_credential_validation": {
+    "result": "passed",
+    "matching_cloud_hospital_credentials": true,
+    "hospital_credentials_scoped_to_own_site": true,
+    "operator_and_database_credentials_absent_from_hospital_service": true,
+    "all_settings_mode": "0600",
+    "credential_values_published": false,
+    "activated": false
+  },
+  "current_inventory": {
+    "cloud": {
+      "instance_id": "i-07c7700e26d3565cc",
+      "private_ipv4": "172.31.23.56",
+      "project": "crisisguard-aws-cloud",
+      "services": [
+        {
+          "service": "controller",
+          "image": "sha256:f3a25e4800a7fac1dcbfbc76eabf1e7ebce8e63f37c6819d3db6a838cb48616d",
+          "revision_label": "16e74b8c0f226f85b342ce2452e35797908c3a5e",
+          "running": true,
+          "health": "healthy",
+          "restart_count": 0,
+          "ports": {
+            "8000/tcp": [
+              {
+                "HostIp": "172.31.23.56",
+                "HostPort": "8005"
+              }
+            ]
+          },
+          "mounts": [],
+          "configuration": {
+            "CONTROLLER_ADMISSION_POLICY": "fixed"
+          }
+        },
+        {
+          "service": "emergency",
+          "image": "sha256:f3a25e4800a7fac1dcbfbc76eabf1e7ebce8e63f37c6819d3db6a838cb48616d",
+          "revision_label": "16e74b8c0f226f85b342ce2452e35797908c3a5e",
+          "running": true,
+          "health": "healthy",
+          "restart_count": 0,
+          "ports": {
+            "8000/tcp": [
+              {
+                "HostIp": "172.31.23.56",
+                "HostPort": "8003"
+              }
+            ]
+          },
+          "mounts": [],
+          "configuration": {
+            "METAGUARD_REQUIRED": "1"
+          }
+        },
+        {
+          "service": "admin",
+          "image": "sha256:f3a25e4800a7fac1dcbfbc76eabf1e7ebce8e63f37c6819d3db6a838cb48616d",
+          "revision_label": "16e74b8c0f226f85b342ce2452e35797908c3a5e",
+          "running": true,
+          "health": "healthy",
+          "restart_count": 0,
+          "ports": {
+            "8000/tcp": [
+              {
+                "HostIp": "172.31.23.56",
+                "HostPort": "8004"
+              }
+            ]
+          },
+          "mounts": [],
+          "configuration": {
+            "METAGUARD_REQUIRED": "1"
+          }
+        },
+        {
+          "service": "patient",
+          "image": "sha256:f3a25e4800a7fac1dcbfbc76eabf1e7ebce8e63f37c6819d3db6a838cb48616d",
+          "revision_label": "16e74b8c0f226f85b342ce2452e35797908c3a5e",
+          "running": true,
+          "health": "healthy",
+          "restart_count": 0,
+          "ports": {
+            "8000/tcp": [
+              {
+                "HostIp": "172.31.23.56",
+                "HostPort": "8001"
+              }
+            ]
+          },
+          "mounts": [],
+          "configuration": {
+            "METAGUARD_REQUIRED": "1"
+          }
+        },
+        {
+          "service": "postgres",
+          "image": "sha256:ca0bd484cb98bf4b24eb1010e73fb3fcbd6714d240fbc1a10eea5b7dbecb641d",
+          "revision_label": null,
+          "running": true,
+          "health": "healthy",
+          "restart_count": 0,
+          "ports": {},
+          "mounts": [
+            {
+              "type": "volume",
+              "name": "crisisguard-aws-cloud_postgres-data",
+              "destination": "/var/lib/postgresql/data"
+            }
+          ],
+          "configuration": {},
+          "database": {
+            "events": 44,
+            "statuses": {
+              "applied": 44
+            },
+            "fingerprint": "63f77fc1e7a98ed171ed51cd50c90d85"
+          },
+          "public_tables": [
+            "controller_admission",
+            "controller_grant_audit",
+            "controller_grants",
+            "controller_tickets",
+            "events"
+          ]
+        }
+      ]
+    },
+    "Hospital_A": {
+      "instance_id": "i-0d51d7af792a2cd8a",
+      "private_ipv4": "172.31.27.60",
+      "project": "crisisguard-aws-hospital-a",
+      "services": [
+        {
+          "service": "hospital",
+          "image": "sha256:510b8ca5cf769200e6d31384899bed691e3ef44adf03395f671b320cd74416a0",
+          "revision_label": "16e74b8c0f226f85b342ce2452e35797908c3a5e",
+          "running": true,
+          "health": "healthy",
+          "restart_count": 0,
+          "ports": {
+            "8000/tcp": [
+              {
+                "HostIp": "127.0.0.1",
+                "HostPort": "8000"
+              }
+            ]
+          },
+          "mounts": [
+            {
+              "type": "volume",
+              "name": "crisisguard-aws-hospital-a_hospital-data",
+              "destination": "/data"
+            }
+          ],
+          "configuration": {
+            "SITE_ID": "Hospital_A",
+            "METAGUARD_ENABLED": "1",
+            "AUTO_REPLAY": "1",
+            "AUTO_REPLAY_INTERVAL_SECONDS": "5",
+            "CONTROLLER_URL": "http://172.31.23.56:8005",
+            "CLOUD_URL": "http://172.31.23.56:8001/events",
+            "EMERGENCY_URL": "http://172.31.23.56:8003/events",
+            "ADMIN_URL": "http://172.31.23.56:8004/events"
+          },
+          "database": {
+            "statuses": {
+              "applied": 22
+            },
+            "fingerprint": "7a0b16117b7613d70e4fedd91121c831c5bebd12bce929a5cfe99b7bc9480013",
+            "table_rows": {
+              "events": 22,
+              "recovery_state": 22,
+              "metaguard_attempts": 16
+            }
+          },
+          "cloud_health": {
+            "patient": {
+              "http": 200,
+              "status": "healthy"
+            },
+            "emergency": {
+              "http": 200,
+              "status": "healthy"
+            },
+            "admin": {
+              "http": 200,
+              "status": "healthy"
+            }
+          },
+          "recovery": {
+            "enabled": true,
+            "cloud_reachable": true,
+            "replayable_backlog": 0,
+            "last_replay_attempted": 1,
+            "last_replay_applied": 1
+          }
+        }
+      ]
+    },
+    "Hospital_B": {
+      "instance_id": "i-0380d518323626a27",
+      "private_ipv4": "172.31.19.60",
+      "project": "crisisguard-aws-hospital-b",
+      "services": [
+        {
+          "service": "hospital",
+          "image": "sha256:12835d128f18660395c9da5bb83a6587b5f0c37e1efa42800f39eb937275c65d",
+          "revision_label": "16e74b8c0f226f85b342ce2452e35797908c3a5e",
+          "running": true,
+          "health": "healthy",
+          "restart_count": 0,
+          "ports": {
+            "8000/tcp": [
+              {
+                "HostIp": "127.0.0.1",
+                "HostPort": "8000"
+              }
+            ]
+          },
+          "mounts": [
+            {
+              "type": "volume",
+              "name": "crisisguard-aws-hospital-b_hospital-data",
+              "destination": "/data"
+            }
+          ],
+          "configuration": {
+            "SITE_ID": "Hospital_B",
+            "METAGUARD_ENABLED": "1",
+            "AUTO_REPLAY": "1",
+            "AUTO_REPLAY_INTERVAL_SECONDS": "5",
+            "CONTROLLER_URL": "http://172.31.23.56:8005",
+            "CLOUD_URL": "http://172.31.23.56:8001/events",
+            "EMERGENCY_URL": "http://172.31.23.56:8003/events",
+            "ADMIN_URL": "http://172.31.23.56:8004/events"
+          },
+          "database": {
+            "statuses": {
+              "applied": 22
+            },
+            "fingerprint": "d00176d8d2a163cbb01bd2a06ab8ac5ce14fb74544ad4827303e5ef6c811fd09",
+            "table_rows": {
+              "events": 22,
+              "recovery_state": 22,
+              "metaguard_attempts": 16
+            }
+          },
+          "cloud_health": {
+            "patient": {
+              "http": 200,
+              "status": "healthy"
+            },
+            "emergency": {
+              "http": 200,
+              "status": "healthy"
+            },
+            "admin": {
+              "http": 200,
+              "status": "healthy"
+            }
+          },
+          "recovery": {
+            "enabled": true,
+            "cloud_reachable": true,
+            "replayable_backlog": 0,
+            "last_replay_attempted": 1,
+            "last_replay_applied": 1
+          }
+        }
+      ]
+    }
+  },
+  "retained_history": {
+    "cloud": {
+      "role": "cloud",
+      "all_32_event_grant_histories_retained": true,
+      "all_have_completed_attempt": true,
+      "grant_audit_rows": 96
+    },
+    "Hospital_A": {
+      "role": "Hospital_A",
+      "all_original_event_and_recovery_columns_retained": true,
+      "baseline_events": 6,
+      "baseline_recovery_rows": 6,
+      "test_firewall_rule_and_timer_removed": true
+    },
+    "Hospital_B": {
+      "role": "Hospital_B",
+      "all_original_event_and_recovery_columns_retained": true,
+      "baseline_events": 6,
+      "baseline_recovery_rows": 6,
+      "test_firewall_rule_and_timer_removed": true
+    }
+  },
+  "protected_recovery": {
+    "test_run": "TX_META_20261101_498B8BF6",
+    "synthetic_events_applied": 32,
+    "final_cloud_records": 44,
+    "final_hospital_records_each": 22,
+    "verification": {
+      "baseline_rows_preserved": 12,
+      "new_events_verified": 32,
+      "correct_payloads_and_dependencies": true,
+      "exactly_one_row_per_event": true,
+      "baseline_fingerprint": {
+        "rows": 12,
+        "fingerprint": "4508cdf2113659d62d2fd80599ff2fe6"
+      }
+    },
+    "partitions": [
+      {
+        "disconnected": "Hospital_A",
+        "other_hospital": "Hospital_B",
+        "blocked_destination_ports": [
+          8001,
+          8003,
+          8004,
+          8005
+        ],
+        "pending_survived_restart": 4,
+        "other_site_applied_during_fault": 4,
+        "all_four_remote_health_probes_unreachable": true,
+        "cloud_healthy_during_fault": true,
+        "automatic_rollback_seconds": 300,
+        "scoped_rule_removed": true,
+        "recovery_after_restore_verified": true,
+        "scope": "Actual EC2 container-to-private-Cloud firewall fault; not a physical-link failure"
+      },
+      {
+        "disconnected": "Hospital_B",
+        "other_hospital": "Hospital_A",
+        "blocked_destination_ports": [
+          8001,
+          8003,
+          8004,
+          8005
+        ],
+        "pending_survived_restart": 4,
+        "other_site_applied_during_fault": 4,
+        "all_four_remote_health_probes_unreachable": true,
+        "cloud_healthy_during_fault": true,
+        "automatic_rollback_seconds": 300,
+        "scoped_rule_removed": true,
+        "recovery_after_restore_verified": true,
+        "scope": "Actual EC2 container-to-private-Cloud firewall fault; not a physical-link failure"
+      }
+    ]
+  },
+  "same_image_aimd_to_fixed_backout": {
+    "policy": "fixed",
+    "same_controller_image": true,
+    "same_postgres_container": true,
+    "events_retained": 36
+  },
+  "final_admission": {
+    "policy": "fixed",
+    "state": "Normal",
+    "telemetry_fresh": true,
+    "rate_rps": 2.0,
+    "reason": "healthy",
+    "inflight_limit": 4,
+    "events": 44,
+    "unresolved_grants": 0,
+    "healthy_services": 5,
+    "unauthenticated_status": 401
+  },
+  "postgres_container_and_volume_preserved": true,
+  "post_upgrade_backups": {
+    "cloud": {
+      "run": "tx-20261101-1adc89842109",
+      "bytes": 16223,
+      "sha256": "f37f994f441160135618fb3bdf144211ac99848c3737a7b283c6f2cc252923dd",
+      "isolated_restore": {
+        "event_count": 44,
+        "event_status_counts": {
+          "applied": 44
+        },
+        "events_fingerprint": "63f77fc1e7a98ed171ed51cd50c90d85",
+        "expected_events_found": 0,
+        "verified_tables": {
+          "controller_admission": {
+            "rows": 1,
+            "fingerprint": "6b3af8c691ee9b4221d9635368abf5ff"
+          },
+          "controller_grant_audit": {
+            "rows": 96,
+            "fingerprint": "8bb8020180430a083efc430856a1a57c"
+          },
+          "controller_grants": {
+            "rows": 32,
+            "fingerprint": "7e5c1b29dde9925c895527e2e1052937"
+          },
+          "controller_tickets": {
+            "rows": 0,
+            "fingerprint": "d41d8cd98f00b204e9800998ecf8427e"
+          },
+          "events": {
+            "rows": 44,
+            "fingerprint": "63f77fc1e7a98ed171ed51cd50c90d85"
+          }
+        },
+        "restore_target": "isolated container; no network or persistent volume"
+      },
+      "source_fingerprint": {
+        "controller_admission": {
+          "rows": 1,
+          "fingerprint": "6b3af8c691ee9b4221d9635368abf5ff"
+        },
+        "controller_grant_audit": {
+          "rows": 96,
+          "fingerprint": "8bb8020180430a083efc430856a1a57c"
+        },
+        "controller_grants": {
+          "rows": 32,
+          "fingerprint": "7e5c1b29dde9925c895527e2e1052937"
+        },
+        "controller_tickets": {
+          "rows": 0,
+          "fingerprint": "d41d8cd98f00b204e9800998ecf8427e"
+        },
+        "events": {
+          "rows": 44,
+          "fingerprint": "63f77fc1e7a98ed171ed51cd50c90d85"
+        }
+      },
+      "source_unchanged": true,
+      "containers_images_mounts_preserved": true,
+      "off_host_checksum_verified": true,
+      "settings_file_mode": "0o600",
+      "static_deployment_audit": {
+        "result": "passed",
+        "role": "cloud",
+        "services_checked": 5,
+        "scope": "Static AWS deployment configuration; no live health, security-group or record verification",
+        "changes_made": false
+      },
+      "off_host_isolated_restore_matches_source": true,
+      "consistent_exported_postgres_snapshot": true,
+      "source_comparison_scope": "Events/grants/tickets/audit unchanged; live admission continues polling"
+    },
+    "Hospital_A": {
+      "run": "tx-20261101-1adc89842109",
+      "bytes": 36864,
+      "sha256": "66b0b02c9244a3104cdeff3c198e4f9986258eda08e4557dc1e7e220370b480d",
+      "isolated_restore": {
+        "tables": {
+          "events": 22,
+          "metaguard_attempts": 16,
+          "recovery_state": 22
+        },
+        "event_status_counts": {
+          "applied": 22
+        },
+        "expected_events_found": 0
+      },
+      "source_fingerprint": "7a0b16117b7613d70e4fedd91121c831c5bebd12bce929a5cfe99b7bc9480013",
+      "source_unchanged": true,
+      "containers_images_mounts_preserved": true,
+      "off_host_checksum_verified": true,
+      "settings_file_mode": "0o600",
+      "static_deployment_audit": {
+        "result": "passed",
+        "role": "hospital",
+        "services_checked": 1,
+        "scope": "Static AWS deployment configuration; no live health, security-group or record verification",
+        "changes_made": false
+      },
+      "off_host_isolated_restore_matches_source": true,
+      "consistent_exported_postgres_snapshot": false,
+      "source_comparison_scope": "All tables unchanged"
+    },
+    "Hospital_B": {
+      "run": "tx-20261101-1adc89842109",
+      "bytes": 36864,
+      "sha256": "0e003a865785c88ccb77d4e54657a80f91cdad878064929b646a57548030803d",
+      "isolated_restore": {
+        "tables": {
+          "events": 22,
+          "metaguard_attempts": 16,
+          "recovery_state": 22
+        },
+        "event_status_counts": {
+          "applied": 22
+        },
+        "expected_events_found": 0
+      },
+      "source_fingerprint": "d00176d8d2a163cbb01bd2a06ab8ac5ce14fb74544ad4827303e5ef6c811fd09",
+      "source_unchanged": true,
+      "containers_images_mounts_preserved": true,
+      "off_host_checksum_verified": true,
+      "settings_file_mode": "0o600",
+      "static_deployment_audit": {
+        "result": "passed",
+        "role": "hospital",
+        "services_checked": 1,
+        "scope": "Static AWS deployment configuration; no live health, security-group or record verification",
+        "changes_made": false
+      },
+      "off_host_isolated_restore_matches_source": true,
+      "consistent_exported_postgres_snapshot": false,
+      "source_comparison_scope": "All tables unchanged"
+    }
+  },
+  "resources_left_running": true,
+  "limits": [
+    "Synthetic coursework workload; no clinical or representative-load performance acceptance",
+    "Current release EC2 stop/start recovery not repeated in this run",
+    "Fixed-policy backout retains the candidate binary/schema; arbitrary historical-binary downgrade not certified",
+    "Independent online backups are not distributed atomic snapshots",
+    "Private HTTP bearer traffic is not TLS; backup/EBS encryption not newly verified",
+    "Clean Windows installation and independent teammate reproduction remain separate"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "summary": "evaluation\\results\\h1-h2-submission-20261101-151506\\ratio1-1_depth3_balanced_load70-seed3108\\summary.json",
+  "summary_sha256": "d772f33a0b0d439564aca05e755f89cb310f9c7e233b266b85653851ac7b7f24",
+  "trial_raw_path": "C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\.venv\\cp8-b5fed89620dc\\cg-cp8-5881bf8c75fe\\raw.json",
+  "trial_raw_sha256": "c13c68bfc0121564a16482c97200cadcc2ce98d245e61e51d6d1afb30b9945e7",
+  "condition": "ratio1-1_depth3_balanced_load70",
+  "seed": 3108,
+  "policy": "bounded_on",
+  "admission": "constant",
+  "stop_seconds": 24.25,
+  "rate": 84.0,
+  "target": 2037,
+  "issued": 2038,
+  "duplicate_offered_indices": 0,
+  "cap_skips": 0,
+  "lag_skips": 0,
+  "last_reads": [
+    {
+      "offered_index": 2037,
+      "scheduled_elapsed": 24.238095238095237,
+      "started_elapsed": 24.25,
+      "start_lag_ms": 11.90476190476275,
+      "event_id": "CP8_LIVE_FIXTURE_a5025c001abc4299a012a7455e4cee4a",
+      "service": "patient",
+      "status_code": 200,
+      "latency_ms": 0.0,
+      "finished_elapsed": 24.25
+    },
+    {
+      "offered_index": 2038,
+      "scheduled_elapsed": 24.25,
+      "started_elapsed": 24.25,
+      "start_lag_ms": 0.0,
+      "event_id": "CP8_LIVE_FIXTURE_a5025c001abc4299a012a7455e4cee4a",
+      "service": "patient",
+      "status_code": 200,
+      "latency_ms": 0.0,
+      "finished_elapsed": 24.25
+    }
+  ],
+  "decision": "Original remains invalid under unchanged half-open [0, stop) contract; replace only constant arm. Do not remove a real request or adjust original stop/target.",
+  "cause": "Dispatch permits due==clock; stop capture and submission not synchronized. Last issued due and start tie the stop clock exactly. Thread order within tie cannot be recovered.",
+  "fix": "Clock strictly past due before dispatch; serialize submission and stop capture; unchanged skip/SLO definitions and thresholds.",
+  "tests_passed": 100,
+  "assessment_updated": false
+}

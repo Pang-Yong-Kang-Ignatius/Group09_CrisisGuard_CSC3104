@@ -1,0 +1,55 @@
+{
+  "deployment": "passed",
+  "dashboard_id": "4f6d1a86999c2f9b18f660e17556ea02c1180a453fbc7666068b83e6fe56b4e2",
+  "healthy": true,
+  "assets": {
+    "/static/style.css": {
+      "status": 200,
+      "matches_source": true,
+      "sha256": "d337b9073890b453645df8c871a73e17b21ed884160204e7bcddcf0a35e7fdfe"
+    },
+    "/static/app.js": {
+      "status": 200,
+      "matches_source": true,
+      "sha256": "b62c846c33a4234c5d5eb096392e18b5582342bfb2eed35fa932559df36ad7e5"
+    },
+    "/static/outage.js": {
+      "status": 200,
+      "matches_source": true,
+      "sha256": "5a4db9e867b48eb73febeb05870c4db09a4be2d994547c9636e68d521dc7ce86"
+    },
+    "/static/workspace.js": {
+      "status": 200,
+      "matches_source": true,
+      "sha256": "1c596eae042388075c36d1f70f63135d96f7c9be902c6558ae59ce5adaff3040"
+    },
+    "/static/sync-status.js": {
+      "status": 200,
+      "matches_source": true,
+      "sha256": "9f973b06423e442e0cd5d0d8b136299f8b779bd41a5639523860977dd662a23f"
+    },
+    "/static/quick-events.js": {
+      "status": 200,
+      "matches_source": true,
+      "sha256": "8a6917565eb65f9c8081d05bcd6b4c2478709bfe2fdc3b5470b62a7809ea3042"
+    }
+  },
+  "index_matches_source": true,
+  "other_containers_unchanged": 31,
+  "volume_set_unchanged": true,
+  "database_operations": 0,
+  "python_smoke": {
+    "passed": 43,
+    "failed": 0
+  },
+  "javascript": {
+    "passed": 48,
+    "failed": 0
+  },
+  "queue_script": "passed",
+  "browser_verification": "Not performed; no desktop or browser automation used",
+  "commands": [
+    "docker compose build dashboard",
+    "docker compose up -d --no-deps --no-build --force-recreate --wait dashboard"
+  ]
+}

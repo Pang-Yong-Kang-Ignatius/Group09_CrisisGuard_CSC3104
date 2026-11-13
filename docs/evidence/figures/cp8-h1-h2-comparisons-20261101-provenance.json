@@ -1,0 +1,33 @@
+{
+  "assessment": "evaluation/results/replacement-3108-constant-20261101-160903/submission-assessment.json",
+  "verified_trials": 20,
+  "paired_seeds_per_load": 5,
+  "sources_sha256": {
+    "evaluation/results/h1-h2-corrected-20261101-143329/ratio1-1_depth3_balanced_load30-seed3104/summary.json": "5e9fdb3eb5ef8c0b198a3b991ec1e0152af3581ac056317bed2e33f4742550ba",
+    "evaluation/results/h1-h2-submission-20261101-151506/ratio1-1_depth3_balanced_load30-seed3104/summary.json": "dcba8a2452577e62bbb03f5d49f95aa6e72df5fe3864daab5c47428bb5164fdb",
+    "evaluation/results/h1-h2-submission-20261101-151506/ratio1-1_depth3_balanced_load30-seed3105/summary.json": "e7fac96357aff52e6959d47b9c71c0a003be7fefac7e01b0a84cb32058e6f417",
+    "evaluation/results/h1-h2-submission-20261101-151506/ratio1-1_depth3_balanced_load30-seed3106/summary.json": "88a0e8818cd7ca38a7f371793e8bfc74f4842f717cd8e09a33e52c08b5c3e167",
+    "evaluation/results/h1-h2-submission-20261101-151506/ratio1-1_depth3_balanced_load30-seed3107/summary.json": "e3a66aeb31fbcf87c1a68eaebdb37a63224ec10694f08fad782e5b45bf574399",
+    "evaluation/results/h1-h2-submission-20261101-151506/ratio1-1_depth3_balanced_load30-seed3108/summary.json": "b5a04ce20a2141cf12ffacfbc29cdc41064851f172c280b731a44683cfbf93a3",
+    "evaluation/results/h1-h2-submission-20261101-151506/ratio1-1_depth3_balanced_load70-seed3104/summary.json": "984e9b3f113545fea3abed1bf639b33423251878dfa3bf95749e9a399e41c673",
+    "evaluation/results/h1-h2-submission-20261101-151506/ratio1-1_depth3_balanced_load70-seed3105/summary.json": "bd5e7823afd1a50aa1117c653bf93fd41f5118cfd5a06236b5a94999c5e3822b",
+    "evaluation/results/h1-h2-submission-20261101-151506/ratio1-1_depth3_balanced_load70-seed3106/summary.json": "3430a1382a130b2820031dd3502ece8be0e35d121b389e11c34ec2e4ba3396b4",
+    "evaluation/results/h1-h2-submission-20261101-151506/ratio1-1_depth3_balanced_load70-seed3107/summary.json": "7e3904c37e826016ef89a33a3aa6e1a788d6547c47588a2944233d108e8a8598",
+    "evaluation/results/replacement-3108-constant-20261101-160903/original-seed3108-analysis-selection.json": "15288da3553acdccafaa5b0d96c248aaa00ce8ff90c20ea82082206da41cdd7b",
+    "evaluation/results/replacement-3108-constant-20261101-160903/summary.json": "4c0c5b95185d6cfff810ff1de472bcab9d112027dfc340f126874b72ef25765c",
+    "evaluation/results/replacement-3108-constant-20261101-160903/submission-assessment.json": "3e8eda7f517415ad9a23a271e3e4cc92b6d19184872e9d1af459d761af35f571",
+    "evaluation/results/h1-h2-submission-20261101-151506/ratio1-1_depth3_balanced_load70-seed3108/summary.json": "d772f33a0b0d439564aca05e755f89cb310f9c7e233b266b85653851ac7b7f24"
+  },
+  "script_sha256": "5955003eb0218cb8543f72321a0f8e189d25a68cca55b9c959050e60861e19b4",
+  "verifier_sha256": "66b4718d849fadb7a63a4c09e18dcb8ceb4d3d740a800c8f3d1db61df6ce7cc7",
+  "generator_validity_protocol": {
+    "max_skip_fraction": 0.001,
+    "minimum_issuance_ratio": 0.999,
+    "sensitivity_limits": [
+      0.0,
+      0.0001,
+      0.001
+    ],
+    "amendment": "Changed after initial blocks; existing evidence is retrospective under this rule. D2 exact arrival matching is approximated, not proven by aggregate accuracy. Report sensitivity and start-lag diagnostics."
+  }
+}

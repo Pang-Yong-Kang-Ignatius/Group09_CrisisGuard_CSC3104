@@ -1,0 +1,121 @@
+{
+  "checked_at": "2026-10-28T05:44:47.244594+00:00",
+  "status": "BLOCKED: previous AIMD deployment absent",
+  "sqlite": {
+    ".venv\\cp7b-resume-hospital-a.db": {
+      "integrity": "ok",
+      "tables": {
+        "events": {
+          "count": 8,
+          "records_sha256": "15ab6b5ce2de594424fea9df89720f372a5e322fba944a4e6f83475501bf7294"
+        },
+        "metaguard_attempts": {
+          "count": 0,
+          "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "recovery_state": {
+          "count": 8,
+          "records_sha256": "221371a42af4c281ea3bb0b8981ae58d1687ce711f573e39ffea4dc80e804663"
+        }
+      }
+    },
+    ".venv\\cp7b-resume-hospital-b.db": {
+      "integrity": "ok",
+      "tables": {
+        "events": {
+          "count": 0,
+          "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "metaguard_attempts": {
+          "count": 0,
+          "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "recovery_state": {
+          "count": 0,
+          "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        }
+      }
+    },
+    "db-snapshots\\hospital-a.db": {
+      "integrity": "ok",
+      "tables": {
+        "events": {
+          "count": 8,
+          "records_sha256": "15ab6b5ce2de594424fea9df89720f372a5e322fba944a4e6f83475501bf7294"
+        },
+        "metaguard_attempts": {
+          "count": 0,
+          "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "recovery_state": {
+          "count": 8,
+          "records_sha256": "221371a42af4c281ea3bb0b8981ae58d1687ce711f573e39ffea4dc80e804663"
+        }
+      }
+    },
+    "db-snapshots\\hospital-b.db": {
+      "integrity": "ok",
+      "tables": {
+        "events": {
+          "count": 0,
+          "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "metaguard_attempts": {
+          "count": 0,
+          "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        "recovery_state": {
+          "count": 0,
+          "records_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        }
+      }
+    }
+  },
+  "postgres": "BEGIN\n{\"tables\" : [\"events\"], \"event_count\" : 8, \"events_md5\" : \"da1237d8b08f48a2e15c978866aa1b2b\"}\nCOMMIT",
+  "docker_context": "desktop-linux",
+  "volumes": [
+    "crisisguard-local_hospital-a-data",
+    "crisisguard-local_hospital-b-data",
+    "crisisguard-local_postgres-data",
+    "ltm-refactor-20261015-b7d2_bedrock_ltm_data",
+    "ltm-refactor-20261015-b7d2_titan_qdrant_data",
+    "ltm-relocated-20261015-c4_bedrock_ltm_data",
+    "ltm-relocated-20261015-c4_titan_qdrant_data",
+    "ltm-stage4-ec479c1b_bedrock_ltm_data",
+    "ltm-stage4-ec479c1b_titan_qdrant_data"
+  ],
+  "containers": [
+    "crisisguard-local-dashboard-1 Created",
+    "crisisguard-local-emergency-1 Created",
+    "crisisguard-local-admin-1 Created",
+    "crisisguard-local-patient-1 Exited (255) 2 minutes ago",
+    "crisisguard-local-postgres-1 Up About a minute (healthy)",
+    "crisisguard-local-hospital-b-1 Exited (255) 2 minutes ago",
+    "crisisguard-local-hospital-a-1 Exited (255) 2 minutes ago",
+    "ltm-relocation-harness-tests Exited (0) 12 days ago",
+    "ltm-relocated-20261015-c4-ltm-1 Exited (0) 12 days ago",
+    "ltm-relocated-20261015-c4-qdrant-1 Exited (143) 12 days ago",
+    "ltm-refactor-20261015-b7d2-ltm-1 Exited (0) 12 days ago",
+    "ltm-refactor-20261015-b7d2-qdrant-1 Exited (143) 12 days ago",
+    "ltm-stage4-ec479c1b-ltm-1 Exited (0) 13 days ago",
+    "ltm-stage4-ec479c1b-qdrant-1 Exited (143) 13 days ago"
+  ],
+  "policy_source": {
+    "default": "fixed",
+    "aimd_requires": "CONTROLLER_ADMISSION_POLICY=aimd",
+    "missing_telemetry": "Recovery, no new issue/ACK admission; reason telemetry_unavailable",
+    "recovery": "fresh samples, dwell and healthy-sample thresholds; AIMD additive rate recovery"
+  },
+  "missing_previous_resources": [
+    "controller container and tables",
+    "cg-metaguard-41f79711c3cc containers and volumes",
+    "private local-aimd.compose.json",
+    "backups/cp7b-20261027T223759+0800",
+    "previous replacement credentials"
+  ],
+  "executed_tests": {
+    "admission_unit_passed": 39,
+    "failures": 0,
+    "live_patient_failure_test": "NOT RUN: no active AIMD deployment"
+  }
+}

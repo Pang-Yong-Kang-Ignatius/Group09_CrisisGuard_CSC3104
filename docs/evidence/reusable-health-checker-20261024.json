@@ -1,0 +1,165 @@
+{
+  "date": "2026-10-24",
+  "result": "passed",
+  "run_id": "cg-smoke-d495b62bae75",
+  "base_commit": "7a246ef4d37031968c04e2a399572a74cecff728",
+  "source_state": "Base plus uncommitted dashboard and reusable-checker working-tree changes",
+  "checker_sha256": "82417f0978447d63867d4c66b36285512aad89a6cf7226abb66d4091b7f51ffc",
+  "smoke_script_sha256": "1eb0078a695a5335f976cda8b23a75efcbeee0c3e0051da881b2f1fb4dce59c2",
+  "raw_log_sha256": "f6da88eb0334f33ac9833c2685917f59c1021e41ffb5d344fd4186072d467268",
+  "environment": {
+    "host": "Windows / Docker Desktop Linux engine 29.5.2",
+    "smoke_host_python": "3.14.0",
+    "application_and_unit_python": "3.11.17"
+  },
+  "smoke_command": "python infrastructure/scripts/smoke_deployment.py",
+  "smoke_exit_code": 0,
+  "scenarios": [
+    {
+      "layout": "combined",
+      "mode": "manual",
+      "result": "passed",
+      "checker_runs": [
+        {
+          "role": "cloud",
+          "service": "patient",
+          "verified_full_records": 2
+        },
+        {
+          "role": "hospital",
+          "service": "hospital-a",
+          "verified_full_records": 1
+        },
+        {
+          "role": "hospital",
+          "service": "hospital-b",
+          "verified_full_records": 1
+        }
+      ],
+      "automatic_loop_required_on_hospitals": false,
+      "output": "PASS combined manual: capture during API outage, site isolation, scheduled replay, duplicate ACKs, pending/applied persistence, SQLite/PostgreSQL backup restoration and dashboard/reusable health checks"
+    },
+    {
+      "layout": "combined",
+      "mode": "automatic",
+      "result": "passed",
+      "checker_runs": [
+        {
+          "role": "cloud",
+          "service": "patient",
+          "verified_full_records": 8
+        },
+        {
+          "role": "hospital",
+          "service": "hospital-a",
+          "verified_full_records": 4
+        },
+        {
+          "role": "hospital",
+          "service": "hospital-b",
+          "verified_full_records": 4
+        }
+      ],
+      "automatic_loop_required_on_hospitals": true,
+      "output": "PASS combined automatic: 8 events captured during API outage, pending queues survived hospital recreation, automatic three-service recovery without manual replay, dependency order, duplicate ACKs, applied persistence, dashboard and reusable health checker; {\"Hospital_A\": {\"last_reconnected_at\": \"2026-10-24T13:52:40.971306+00:00\", \"drain_completed_at\": \"2026-10-24T13:52:41.238709+00:00\", \"replayable_backlog\": 0}, \"Hospital_B\": {\"last_reconnected_at\": \"2026-10-24T13:52:39.388988+00:00\", \"drain_completed_at\": \"2026-10-24T13:52:39.693241+00:00\", \"replayable_backlog\": 0}}"
+    },
+    {
+      "layout": "split",
+      "mode": "manual",
+      "result": "passed",
+      "checker_runs": [
+        {
+          "role": "cloud",
+          "service": "patient",
+          "verified_full_records": 2
+        },
+        {
+          "role": "hospital",
+          "service": "hospital",
+          "verified_full_records": 1
+        },
+        {
+          "role": "hospital",
+          "service": "hospital",
+          "verified_full_records": 1
+        }
+      ],
+      "automatic_loop_required_on_hospitals": false,
+      "output": "PASS split manual: capture during API outage, site isolation, scheduled replay, duplicate ACKs, pending/applied persistence, SQLite/PostgreSQL backup restoration and dashboard/reusable health checks"
+    },
+    {
+      "layout": "split",
+      "mode": "automatic",
+      "result": "passed",
+      "checker_runs": [
+        {
+          "role": "cloud",
+          "service": "patient",
+          "verified_full_records": 8
+        },
+        {
+          "role": "hospital",
+          "service": "hospital",
+          "verified_full_records": 4
+        },
+        {
+          "role": "hospital",
+          "service": "hospital",
+          "verified_full_records": 4
+        }
+      ],
+      "automatic_loop_required_on_hospitals": true,
+      "output": "PASS split automatic: 8 events captured during API outage, pending queues survived hospital recreation, automatic three-service recovery without manual replay, dependency order, duplicate ACKs, applied persistence, dashboard and reusable health checker; {\"Hospital_A\": {\"last_reconnected_at\": \"2026-10-24T13:57:43.190525+00:00\", \"drain_completed_at\": \"2026-10-24T13:57:49.991453+00:00\", \"replayable_backlog\": 0}, \"Hospital_B\": {\"last_reconnected_at\": \"2026-10-24T13:57:43.228707+00:00\", \"drain_completed_at\": \"2026-10-24T13:57:50.007012+00:00\", \"replayable_backlog\": 0}}"
+    }
+  ],
+  "checker_runs_total": 12,
+  "record_scope": "All live checker runs used generated full capture-body manifests; no fixed TX IDs or cloud IP",
+  "capabilities": [
+    "Custom env, repeated Compose files, project names and hospital service names",
+    "Three live health probes from inside the selected application container",
+    "Hospital identity, queue counts, automatic-loop configuration and freshness",
+    "Explicit manual-mode opt-out marked skipped",
+    "Optional metadata-only or complete expected applied records",
+    "Cloud database queried in read-only transaction with parameterized expected IDs",
+    "Safe JSON reports without payloads, credentials or raw exception text",
+    "Report overwrite rejected before any Docker probes"
+  ],
+  "unit_tests": {
+    "passed": 408,
+    "elapsed_seconds": 13.88,
+    "new_reusable_checker_tests": 30,
+    "retained_existing_checker_tests": 10,
+    "python": "3.11.17",
+    "warning_count": 1,
+    "warning": "Existing Starlette TestClient/httpx deprecation warning",
+    "coverage": [
+      "Missing/altered/duplicate records",
+      "Shared manifest filtering and custom project config",
+      "Stale, disabled and partially reachable automatic recovery",
+      "Strict JSON false/0 distinction",
+      "Credential URL and recovery error redaction",
+      "Read-only transaction and SQL parameterization",
+      "Data cannot become executable Python",
+      "No-overwrite and invalid options before probes"
+    ]
+  },
+  "cleanup": {
+    "result": "passed",
+    "remaining_generated_resources": {
+      "image": [],
+      "containers": [],
+      "volumes": [],
+      "networks": []
+    }
+  },
+  "aws_used": false,
+  "live_ec2_checker_run": false,
+  "hosted_ci_run": false,
+  "limitations": [
+    "Local disposable Docker integration, not a new AWS deployment/session",
+    "Native Linux host networking awaits CI after push",
+    "Health-only runs skip event verification unless expectations supplied",
+    "No controller, lost-ACK, partition or performance claim"
+  ]
+}
+

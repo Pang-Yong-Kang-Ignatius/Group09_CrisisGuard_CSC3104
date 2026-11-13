@@ -1,0 +1,1780 @@
+{
+  "config": {
+    "backlog_ratio": [
+      10,
+      1
+    ],
+    "capture_interval_seconds": 1.0,
+    "dependency_depth": 3,
+    "run_id": "haris-demo01",
+    "seed": 3104,
+    "snapshot_at": "2026-10-21T00:00:00+00:00",
+    "total_events": 88,
+    "urgent_distribution": "a_only",
+    "urgent_fraction": 0.2
+  },
+  "events": [
+    {
+      "base_priority": 1,
+      "created_at": "2026-10-20T23:58:40+00:00",
+      "event_id": "e5ccca80-f0db-5a7b-819e-8dd9dda8cb49",
+      "event_type": "patient_registration",
+      "payload": {
+        "patient_id": "SYNTHETIC_946cfd5e-7310-5507-a138-6131d88c0cf8",
+        "step": 0,
+        "synthetic": true,
+        "workflow_id": "946cfd5e-7310-5507-a138-6131d88c0cf8"
+      },
+      "prerequisite_ids": [],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 2,
+      "created_at": "2026-10-20T23:58:41+00:00",
+      "event_id": "e39dec09-11f5-5b78-87de-7eb79d000db5",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_946cfd5e-7310-5507-a138-6131d88c0cf8",
+        "step": 1,
+        "synthetic": true,
+        "workflow_id": "946cfd5e-7310-5507-a138-6131d88c0cf8"
+      },
+      "prerequisite_ids": [
+        "e5ccca80-f0db-5a7b-819e-8dd9dda8cb49"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 3,
+      "created_at": "2026-10-20T23:58:42+00:00",
+      "event_id": "74cb180c-6d76-557a-ae2c-cca305a4f4d9",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_946cfd5e-7310-5507-a138-6131d88c0cf8",
+        "step": 2,
+        "synthetic": true,
+        "workflow_id": "946cfd5e-7310-5507-a138-6131d88c0cf8"
+      },
+      "prerequisite_ids": [
+        "e39dec09-11f5-5b78-87de-7eb79d000db5"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 3,
+      "created_at": "2026-10-20T23:58:43+00:00",
+      "event_id": "4e375218-289a-555b-97c3-cab2871c14ff",
+      "event_type": "patient_discharge",
+      "payload": {
+        "patient_id": "SYNTHETIC_946cfd5e-7310-5507-a138-6131d88c0cf8",
+        "step": 3,
+        "synthetic": true,
+        "workflow_id": "946cfd5e-7310-5507-a138-6131d88c0cf8"
+      },
+      "prerequisite_ids": [
+        "74cb180c-6d76-557a-ae2c-cca305a4f4d9"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 3,
+      "created_at": "2026-10-20T23:58:44+00:00",
+      "event_id": "7a7bfaf3-2d13-515a-8813-b4eaff5a0a64",
+      "event_type": "patient_registration",
+      "payload": {
+        "patient_id": "SYNTHETIC_86f6541d-ced1-5464-8a55-4542a42848a8",
+        "step": 0,
+        "synthetic": true,
+        "workflow_id": "86f6541d-ced1-5464-8a55-4542a42848a8"
+      },
+      "prerequisite_ids": [],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 3,
+      "created_at": "2026-10-20T23:58:45+00:00",
+      "event_id": "f0d04b8f-f31f-5424-849d-12bc78579792",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_86f6541d-ced1-5464-8a55-4542a42848a8",
+        "step": 1,
+        "synthetic": true,
+        "workflow_id": "86f6541d-ced1-5464-8a55-4542a42848a8"
+      },
+      "prerequisite_ids": [
+        "7a7bfaf3-2d13-515a-8813-b4eaff5a0a64"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 3,
+      "created_at": "2026-10-20T23:58:46+00:00",
+      "event_id": "8725a26e-c589-5522-98db-8e317812ce22",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_86f6541d-ced1-5464-8a55-4542a42848a8",
+        "step": 2,
+        "synthetic": true,
+        "workflow_id": "86f6541d-ced1-5464-8a55-4542a42848a8"
+      },
+      "prerequisite_ids": [
+        "f0d04b8f-f31f-5424-849d-12bc78579792"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 3,
+      "created_at": "2026-10-20T23:58:47+00:00",
+      "event_id": "c045ae20-07ac-52a1-a62d-98f6fa764bd1",
+      "event_type": "patient_discharge",
+      "payload": {
+        "patient_id": "SYNTHETIC_86f6541d-ced1-5464-8a55-4542a42848a8",
+        "step": 3,
+        "synthetic": true,
+        "workflow_id": "86f6541d-ced1-5464-8a55-4542a42848a8"
+      },
+      "prerequisite_ids": [
+        "8725a26e-c589-5522-98db-8e317812ce22"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 2,
+      "created_at": "2026-10-20T23:58:48+00:00",
+      "event_id": "b62fc412-0d0c-5b0a-9ec2-a99f1b95cadd",
+      "event_type": "patient_registration",
+      "payload": {
+        "patient_id": "SYNTHETIC_de1ad0e6-a5d1-5861-9e4a-95f3ed55cb3a",
+        "step": 0,
+        "synthetic": true,
+        "workflow_id": "de1ad0e6-a5d1-5861-9e4a-95f3ed55cb3a"
+      },
+      "prerequisite_ids": [],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 2,
+      "created_at": "2026-10-20T23:58:49+00:00",
+      "event_id": "c677baf8-8d0e-5342-9c11-f17fc7131f53",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_de1ad0e6-a5d1-5861-9e4a-95f3ed55cb3a",
+        "step": 1,
+        "synthetic": true,
+        "workflow_id": "de1ad0e6-a5d1-5861-9e4a-95f3ed55cb3a"
+      },
+      "prerequisite_ids": [
+        "b62fc412-0d0c-5b0a-9ec2-a99f1b95cadd"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 1,
+      "created_at": "2026-10-20T23:58:50+00:00",
+      "event_id": "13974f58-97bd-5ae2-8b70-1d2c4a7e7238",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_de1ad0e6-a5d1-5861-9e4a-95f3ed55cb3a",
+        "step": 2,
+        "synthetic": true,
+        "workflow_id": "de1ad0e6-a5d1-5861-9e4a-95f3ed55cb3a"
+      },
+      "prerequisite_ids": [
+        "c677baf8-8d0e-5342-9c11-f17fc7131f53"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 1,
+      "created_at": "2026-10-20T23:58:51+00:00",
+      "event_id": "641667f5-d2ad-58a3-a2e7-4272607f6fb3",
+      "event_type": "patient_discharge",
+      "payload": {
+        "patient_id": "SYNTHETIC_de1ad0e6-a5d1-5861-9e4a-95f3ed55cb3a",
+        "step": 3,
+        "synthetic": true,
+        "workflow_id": "de1ad0e6-a5d1-5861-9e4a-95f3ed55cb3a"
+      },
+      "prerequisite_ids": [
+        "13974f58-97bd-5ae2-8b70-1d2c4a7e7238"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 2,
+      "created_at": "2026-10-20T23:58:52+00:00",
+      "event_id": "88741dcf-fc78-5e27-9051-e10ea45d50dd",
+      "event_type": "patient_registration",
+      "payload": {
+        "patient_id": "SYNTHETIC_b3fb4b4d-3469-54d2-9bb1-8916d7873eca",
+        "step": 0,
+        "synthetic": true,
+        "workflow_id": "b3fb4b4d-3469-54d2-9bb1-8916d7873eca"
+      },
+      "prerequisite_ids": [],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 1,
+      "created_at": "2026-10-20T23:58:53+00:00",
+      "event_id": "1ccb3f25-0489-54d5-87cc-9fb9f3d21633",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_b3fb4b4d-3469-54d2-9bb1-8916d7873eca",
+        "step": 1,
+        "synthetic": true,
+        "workflow_id": "b3fb4b4d-3469-54d2-9bb1-8916d7873eca"
+      },
+      "prerequisite_ids": [
+        "88741dcf-fc78-5e27-9051-e10ea45d50dd"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 3,
+      "created_at": "2026-10-20T23:58:54+00:00",
+      "event_id": "42b47088-ab9e-5562-9dda-a42241d744e9",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_b3fb4b4d-3469-54d2-9bb1-8916d7873eca",
+        "step": 2,
+        "synthetic": true,
+        "workflow_id": "b3fb4b4d-3469-54d2-9bb1-8916d7873eca"
+      },
+      "prerequisite_ids": [
+        "1ccb3f25-0489-54d5-87cc-9fb9f3d21633"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 5,
+      "created_at": "2026-10-20T23:58:55+00:00",
+      "event_id": "ad82b84c-ac04-579f-bd57-f001c6591921",
+      "event_type": "emergency_record",
+      "payload": {
+        "patient_id": "SYNTHETIC_b3fb4b4d-3469-54d2-9bb1-8916d7873eca",
+        "step": 3,
+        "synthetic": true,
+        "workflow_id": "b3fb4b4d-3469-54d2-9bb1-8916d7873eca"
+      },
+      "prerequisite_ids": [
+        "42b47088-ab9e-5562-9dda-a42241d744e9"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 3,
+      "created_at": "2026-10-20T23:58:56+00:00",
+      "event_id": "430a5b7d-b23b-57e9-ab0e-03a4dd93745c",
+      "event_type": "patient_registration",
+      "payload": {
+        "patient_id": "SYNTHETIC_7aee1a42-a2f6-51e0-8196-31423978e14b",
+        "step": 0,
+        "synthetic": true,
+        "workflow_id": "7aee1a42-a2f6-51e0-8196-31423978e14b"
+      },
+      "prerequisite_ids": [],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 3,
+      "created_at": "2026-10-20T23:58:57+00:00",
+      "event_id": "96495051-3630-5006-9261-0ef8483c9e43",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_7aee1a42-a2f6-51e0-8196-31423978e14b",
+        "step": 1,
+        "synthetic": true,
+        "workflow_id": "7aee1a42-a2f6-51e0-8196-31423978e14b"
+      },
+      "prerequisite_ids": [
+        "430a5b7d-b23b-57e9-ab0e-03a4dd93745c"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 2,
+      "created_at": "2026-10-20T23:58:58+00:00",
+      "event_id": "8e2f83b0-ca30-5b19-aece-c228faf06a25",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_7aee1a42-a2f6-51e0-8196-31423978e14b",
+        "step": 2,
+        "synthetic": true,
+        "workflow_id": "7aee1a42-a2f6-51e0-8196-31423978e14b"
+      },
+      "prerequisite_ids": [
+        "96495051-3630-5006-9261-0ef8483c9e43"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 2,
+      "created_at": "2026-10-20T23:58:59+00:00",
+      "event_id": "79b4b5e7-3a87-53c7-8234-16a8fb9142c0",
+      "event_type": "patient_discharge",
+      "payload": {
+        "patient_id": "SYNTHETIC_7aee1a42-a2f6-51e0-8196-31423978e14b",
+        "step": 3,
+        "synthetic": true,
+        "workflow_id": "7aee1a42-a2f6-51e0-8196-31423978e14b"
+      },
+      "prerequisite_ids": [
+        "8e2f83b0-ca30-5b19-aece-c228faf06a25"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 3,
+      "created_at": "2026-10-20T23:59:00+00:00",
+      "event_id": "2da05392-568b-592f-a230-d66c415d095d",
+      "event_type": "patient_registration",
+      "payload": {
+        "patient_id": "SYNTHETIC_0188b169-2903-5c0f-9352-97a9d7ced8fb",
+        "step": 0,
+        "synthetic": true,
+        "workflow_id": "0188b169-2903-5c0f-9352-97a9d7ced8fb"
+      },
+      "prerequisite_ids": [],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 2,
+      "created_at": "2026-10-20T23:59:01+00:00",
+      "event_id": "0b321209-804a-51b1-8753-f67c801ab0ee",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_0188b169-2903-5c0f-9352-97a9d7ced8fb",
+        "step": 1,
+        "synthetic": true,
+        "workflow_id": "0188b169-2903-5c0f-9352-97a9d7ced8fb"
+      },
+      "prerequisite_ids": [
+        "2da05392-568b-592f-a230-d66c415d095d"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 1,
+      "created_at": "2026-10-20T23:59:02+00:00",
+      "event_id": "a6904506-2ace-5534-9c82-0a4ccca76603",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_0188b169-2903-5c0f-9352-97a9d7ced8fb",
+        "step": 2,
+        "synthetic": true,
+        "workflow_id": "0188b169-2903-5c0f-9352-97a9d7ced8fb"
+      },
+      "prerequisite_ids": [
+        "0b321209-804a-51b1-8753-f67c801ab0ee"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 3,
+      "created_at": "2026-10-20T23:59:03+00:00",
+      "event_id": "4006a25a-dc73-5674-a705-c7087b553ae7",
+      "event_type": "patient_discharge",
+      "payload": {
+        "patient_id": "SYNTHETIC_0188b169-2903-5c0f-9352-97a9d7ced8fb",
+        "step": 3,
+        "synthetic": true,
+        "workflow_id": "0188b169-2903-5c0f-9352-97a9d7ced8fb"
+      },
+      "prerequisite_ids": [
+        "a6904506-2ace-5534-9c82-0a4ccca76603"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 1,
+      "created_at": "2026-10-20T23:59:04+00:00",
+      "event_id": "255968c1-d733-590a-bed0-0191bd0bfb41",
+      "event_type": "patient_registration",
+      "payload": {
+        "patient_id": "SYNTHETIC_ef74d0f0-73f0-588c-a705-d0a55cf7bd3d",
+        "step": 0,
+        "synthetic": true,
+        "workflow_id": "ef74d0f0-73f0-588c-a705-d0a55cf7bd3d"
+      },
+      "prerequisite_ids": [],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 1,
+      "created_at": "2026-10-20T23:59:05+00:00",
+      "event_id": "72d11a4c-d19c-5840-aece-7cbb9fdef0ea",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_ef74d0f0-73f0-588c-a705-d0a55cf7bd3d",
+        "step": 1,
+        "synthetic": true,
+        "workflow_id": "ef74d0f0-73f0-588c-a705-d0a55cf7bd3d"
+      },
+      "prerequisite_ids": [
+        "255968c1-d733-590a-bed0-0191bd0bfb41"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 3,
+      "created_at": "2026-10-20T23:59:06+00:00",
+      "event_id": "b468e752-6409-51b2-a11d-5980b677bced",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_ef74d0f0-73f0-588c-a705-d0a55cf7bd3d",
+        "step": 2,
+        "synthetic": true,
+        "workflow_id": "ef74d0f0-73f0-588c-a705-d0a55cf7bd3d"
+      },
+      "prerequisite_ids": [
+        "72d11a4c-d19c-5840-aece-7cbb9fdef0ea"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 1,
+      "created_at": "2026-10-20T23:59:07+00:00",
+      "event_id": "7b07f4b3-9638-53c1-b544-a95d885ad367",
+      "event_type": "patient_discharge",
+      "payload": {
+        "patient_id": "SYNTHETIC_ef74d0f0-73f0-588c-a705-d0a55cf7bd3d",
+        "step": 3,
+        "synthetic": true,
+        "workflow_id": "ef74d0f0-73f0-588c-a705-d0a55cf7bd3d"
+      },
+      "prerequisite_ids": [
+        "b468e752-6409-51b2-a11d-5980b677bced"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 2,
+      "created_at": "2026-10-20T23:59:08+00:00",
+      "event_id": "073ee773-8529-5292-a250-7336861b5538",
+      "event_type": "patient_registration",
+      "payload": {
+        "patient_id": "SYNTHETIC_c16bfecd-5bf9-503b-b703-7d4ac7c9b136",
+        "step": 0,
+        "synthetic": true,
+        "workflow_id": "c16bfecd-5bf9-503b-b703-7d4ac7c9b136"
+      },
+      "prerequisite_ids": [],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 2,
+      "created_at": "2026-10-20T23:59:09+00:00",
+      "event_id": "2b51c681-7627-5f68-9c1f-18fa0a7f8700",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_c16bfecd-5bf9-503b-b703-7d4ac7c9b136",
+        "step": 1,
+        "synthetic": true,
+        "workflow_id": "c16bfecd-5bf9-503b-b703-7d4ac7c9b136"
+      },
+      "prerequisite_ids": [
+        "073ee773-8529-5292-a250-7336861b5538"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 1,
+      "created_at": "2026-10-20T23:59:10+00:00",
+      "event_id": "207d54b0-bd14-50d2-b924-a2a013116e2d",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_c16bfecd-5bf9-503b-b703-7d4ac7c9b136",
+        "step": 2,
+        "synthetic": true,
+        "workflow_id": "c16bfecd-5bf9-503b-b703-7d4ac7c9b136"
+      },
+      "prerequisite_ids": [
+        "2b51c681-7627-5f68-9c1f-18fa0a7f8700"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 1,
+      "created_at": "2026-10-20T23:59:11+00:00",
+      "event_id": "29c4401c-d91c-53aa-8ff3-61ddf5524274",
+      "event_type": "patient_discharge",
+      "payload": {
+        "patient_id": "SYNTHETIC_c16bfecd-5bf9-503b-b703-7d4ac7c9b136",
+        "step": 3,
+        "synthetic": true,
+        "workflow_id": "c16bfecd-5bf9-503b-b703-7d4ac7c9b136"
+      },
+      "prerequisite_ids": [
+        "207d54b0-bd14-50d2-b924-a2a013116e2d"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 3,
+      "created_at": "2026-10-20T23:59:12+00:00",
+      "event_id": "db33cffb-a618-5a5d-a139-87295e40aa2d",
+      "event_type": "patient_registration",
+      "payload": {
+        "patient_id": "SYNTHETIC_f22b46a7-4798-51ed-874c-4fd1cb95f938",
+        "step": 0,
+        "synthetic": true,
+        "workflow_id": "f22b46a7-4798-51ed-874c-4fd1cb95f938"
+      },
+      "prerequisite_ids": [],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 2,
+      "created_at": "2026-10-20T23:59:13+00:00",
+      "event_id": "d30ccca6-d2a3-5f89-a31d-54ce3fbac0cf",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_f22b46a7-4798-51ed-874c-4fd1cb95f938",
+        "step": 1,
+        "synthetic": true,
+        "workflow_id": "f22b46a7-4798-51ed-874c-4fd1cb95f938"
+      },
+      "prerequisite_ids": [
+        "db33cffb-a618-5a5d-a139-87295e40aa2d"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 1,
+      "created_at": "2026-10-20T23:59:14+00:00",
+      "event_id": "48f890c8-9ae0-52d9-b44a-409ef0a2673d",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_f22b46a7-4798-51ed-874c-4fd1cb95f938",
+        "step": 2,
+        "synthetic": true,
+        "workflow_id": "f22b46a7-4798-51ed-874c-4fd1cb95f938"
+      },
+      "prerequisite_ids": [
+        "d30ccca6-d2a3-5f89-a31d-54ce3fbac0cf"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 2,
+      "created_at": "2026-10-20T23:59:15+00:00",
+      "event_id": "541e3234-d161-5df5-a0f4-1fd6c2d94e3b",
+      "event_type": "patient_discharge",
+      "payload": {
+        "patient_id": "SYNTHETIC_f22b46a7-4798-51ed-874c-4fd1cb95f938",
+        "step": 3,
+        "synthetic": true,
+        "workflow_id": "f22b46a7-4798-51ed-874c-4fd1cb95f938"
+      },
+      "prerequisite_ids": [
+        "48f890c8-9ae0-52d9-b44a-409ef0a2673d"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 2,
+      "created_at": "2026-10-20T23:59:16+00:00",
+      "event_id": "e0726001-26e6-5a91-a69a-36e682dbb4ce",
+      "event_type": "patient_registration",
+      "payload": {
+        "patient_id": "SYNTHETIC_548fee85-1638-55ee-95c8-99eedc83a1b0",
+        "step": 0,
+        "synthetic": true,
+        "workflow_id": "548fee85-1638-55ee-95c8-99eedc83a1b0"
+      },
+      "prerequisite_ids": [],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 1,
+      "created_at": "2026-10-20T23:59:17+00:00",
+      "event_id": "cca0ae96-09d9-5790-9208-921efa665659",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_548fee85-1638-55ee-95c8-99eedc83a1b0",
+        "step": 1,
+        "synthetic": true,
+        "workflow_id": "548fee85-1638-55ee-95c8-99eedc83a1b0"
+      },
+      "prerequisite_ids": [
+        "e0726001-26e6-5a91-a69a-36e682dbb4ce"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 1,
+      "created_at": "2026-10-20T23:59:18+00:00",
+      "event_id": "2e587544-5905-5a19-a2e3-26f5cc1043f2",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_548fee85-1638-55ee-95c8-99eedc83a1b0",
+        "step": 2,
+        "synthetic": true,
+        "workflow_id": "548fee85-1638-55ee-95c8-99eedc83a1b0"
+      },
+      "prerequisite_ids": [
+        "cca0ae96-09d9-5790-9208-921efa665659"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 1,
+      "created_at": "2026-10-20T23:59:19+00:00",
+      "event_id": "4f20bd2e-317d-55b9-8832-51fe8c44b4a2",
+      "event_type": "patient_discharge",
+      "payload": {
+        "patient_id": "SYNTHETIC_548fee85-1638-55ee-95c8-99eedc83a1b0",
+        "step": 3,
+        "synthetic": true,
+        "workflow_id": "548fee85-1638-55ee-95c8-99eedc83a1b0"
+      },
+      "prerequisite_ids": [
+        "2e587544-5905-5a19-a2e3-26f5cc1043f2"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 1,
+      "created_at": "2026-10-20T23:59:20+00:00",
+      "event_id": "94cf3cbf-5e25-5f00-8ffd-78680e825b63",
+      "event_type": "patient_registration",
+      "payload": {
+        "patient_id": "SYNTHETIC_2c081ee6-e45d-56eb-ae4b-e5db9868273a",
+        "step": 0,
+        "synthetic": true,
+        "workflow_id": "2c081ee6-e45d-56eb-ae4b-e5db9868273a"
+      },
+      "prerequisite_ids": [],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 3,
+      "created_at": "2026-10-20T23:59:21+00:00",
+      "event_id": "4e791edb-b40c-592b-b7d5-452bdc7d6c26",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_2c081ee6-e45d-56eb-ae4b-e5db9868273a",
+        "step": 1,
+        "synthetic": true,
+        "workflow_id": "2c081ee6-e45d-56eb-ae4b-e5db9868273a"
+      },
+      "prerequisite_ids": [
+        "94cf3cbf-5e25-5f00-8ffd-78680e825b63"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 3,
+      "created_at": "2026-10-20T23:59:22+00:00",
+      "event_id": "77457d4a-6cdf-5a29-ba4b-99b7ea2be047",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_2c081ee6-e45d-56eb-ae4b-e5db9868273a",
+        "step": 2,
+        "synthetic": true,
+        "workflow_id": "2c081ee6-e45d-56eb-ae4b-e5db9868273a"
+      },
+      "prerequisite_ids": [
+        "4e791edb-b40c-592b-b7d5-452bdc7d6c26"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 3,
+      "created_at": "2026-10-20T23:59:23+00:00",
+      "event_id": "dbdaf7b8-9d76-5548-83a7-bd53b8096371",
+      "event_type": "patient_discharge",
+      "payload": {
+        "patient_id": "SYNTHETIC_2c081ee6-e45d-56eb-ae4b-e5db9868273a",
+        "step": 3,
+        "synthetic": true,
+        "workflow_id": "2c081ee6-e45d-56eb-ae4b-e5db9868273a"
+      },
+      "prerequisite_ids": [
+        "77457d4a-6cdf-5a29-ba4b-99b7ea2be047"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 3,
+      "created_at": "2026-10-20T23:59:24+00:00",
+      "event_id": "b668995a-85b5-5573-8327-95fbfad0edb8",
+      "event_type": "patient_registration",
+      "payload": {
+        "patient_id": "SYNTHETIC_24dcef7f-e275-5449-a801-4942291f2757",
+        "step": 0,
+        "synthetic": true,
+        "workflow_id": "24dcef7f-e275-5449-a801-4942291f2757"
+      },
+      "prerequisite_ids": [],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 3,
+      "created_at": "2026-10-20T23:59:25+00:00",
+      "event_id": "f68cfdce-478f-5b85-a50d-f54aa0568166",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_24dcef7f-e275-5449-a801-4942291f2757",
+        "step": 1,
+        "synthetic": true,
+        "workflow_id": "24dcef7f-e275-5449-a801-4942291f2757"
+      },
+      "prerequisite_ids": [
+        "b668995a-85b5-5573-8327-95fbfad0edb8"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 2,
+      "created_at": "2026-10-20T23:59:26+00:00",
+      "event_id": "d858853d-5a27-5e0d-b971-33dbce4da248",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_24dcef7f-e275-5449-a801-4942291f2757",
+        "step": 2,
+        "synthetic": true,
+        "workflow_id": "24dcef7f-e275-5449-a801-4942291f2757"
+      },
+      "prerequisite_ids": [
+        "f68cfdce-478f-5b85-a50d-f54aa0568166"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 5,
+      "created_at": "2026-10-20T23:59:27+00:00",
+      "event_id": "b3f774ec-ff1c-5a98-a424-475b50fa01d7",
+      "event_type": "emergency_record",
+      "payload": {
+        "patient_id": "SYNTHETIC_24dcef7f-e275-5449-a801-4942291f2757",
+        "step": 3,
+        "synthetic": true,
+        "workflow_id": "24dcef7f-e275-5449-a801-4942291f2757"
+      },
+      "prerequisite_ids": [
+        "d858853d-5a27-5e0d-b971-33dbce4da248"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 2,
+      "created_at": "2026-10-20T23:59:28+00:00",
+      "event_id": "3c92a986-183a-5990-bc3d-9db3d833198b",
+      "event_type": "patient_registration",
+      "payload": {
+        "patient_id": "SYNTHETIC_2bc10428-aadf-55c6-89f0-bbdc15d88e67",
+        "step": 0,
+        "synthetic": true,
+        "workflow_id": "2bc10428-aadf-55c6-89f0-bbdc15d88e67"
+      },
+      "prerequisite_ids": [],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 2,
+      "created_at": "2026-10-20T23:59:29+00:00",
+      "event_id": "9ca8f950-3636-52e6-9fcb-419b87508852",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_2bc10428-aadf-55c6-89f0-bbdc15d88e67",
+        "step": 1,
+        "synthetic": true,
+        "workflow_id": "2bc10428-aadf-55c6-89f0-bbdc15d88e67"
+      },
+      "prerequisite_ids": [
+        "3c92a986-183a-5990-bc3d-9db3d833198b"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 1,
+      "created_at": "2026-10-20T23:59:30+00:00",
+      "event_id": "f1f52d75-e49c-56e2-9083-cc0c4360a4a8",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_2bc10428-aadf-55c6-89f0-bbdc15d88e67",
+        "step": 2,
+        "synthetic": true,
+        "workflow_id": "2bc10428-aadf-55c6-89f0-bbdc15d88e67"
+      },
+      "prerequisite_ids": [
+        "9ca8f950-3636-52e6-9fcb-419b87508852"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 5,
+      "created_at": "2026-10-20T23:59:31+00:00",
+      "event_id": "45ce1a77-55f8-5a56-a7d9-718407e9046d",
+      "event_type": "emergency_record",
+      "payload": {
+        "patient_id": "SYNTHETIC_2bc10428-aadf-55c6-89f0-bbdc15d88e67",
+        "step": 3,
+        "synthetic": true,
+        "workflow_id": "2bc10428-aadf-55c6-89f0-bbdc15d88e67"
+      },
+      "prerequisite_ids": [
+        "f1f52d75-e49c-56e2-9083-cc0c4360a4a8"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 2,
+      "created_at": "2026-10-20T23:59:32+00:00",
+      "event_id": "fc8b84be-8cac-5eb1-bbc3-d50b6d46878e",
+      "event_type": "patient_registration",
+      "payload": {
+        "patient_id": "SYNTHETIC_6386f628-b9e4-5051-9956-9790093e0c4f",
+        "step": 0,
+        "synthetic": true,
+        "workflow_id": "6386f628-b9e4-5051-9956-9790093e0c4f"
+      },
+      "prerequisite_ids": [],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 2,
+      "created_at": "2026-10-20T23:59:33+00:00",
+      "event_id": "3083b14b-22e8-5f1f-9d72-4bda7b13dc20",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_6386f628-b9e4-5051-9956-9790093e0c4f",
+        "step": 1,
+        "synthetic": true,
+        "workflow_id": "6386f628-b9e4-5051-9956-9790093e0c4f"
+      },
+      "prerequisite_ids": [
+        "fc8b84be-8cac-5eb1-bbc3-d50b6d46878e"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 1,
+      "created_at": "2026-10-20T23:59:34+00:00",
+      "event_id": "e4344e0a-59ce-5384-87ae-3b62d38f34e8",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_6386f628-b9e4-5051-9956-9790093e0c4f",
+        "step": 2,
+        "synthetic": true,
+        "workflow_id": "6386f628-b9e4-5051-9956-9790093e0c4f"
+      },
+      "prerequisite_ids": [
+        "3083b14b-22e8-5f1f-9d72-4bda7b13dc20"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 3,
+      "created_at": "2026-10-20T23:59:35+00:00",
+      "event_id": "395a015f-6507-588b-b938-22fe7caafe08",
+      "event_type": "patient_discharge",
+      "payload": {
+        "patient_id": "SYNTHETIC_6386f628-b9e4-5051-9956-9790093e0c4f",
+        "step": 3,
+        "synthetic": true,
+        "workflow_id": "6386f628-b9e4-5051-9956-9790093e0c4f"
+      },
+      "prerequisite_ids": [
+        "e4344e0a-59ce-5384-87ae-3b62d38f34e8"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 1,
+      "created_at": "2026-10-20T23:59:36+00:00",
+      "event_id": "2539bce2-aa36-531d-bebf-69af2ca77822",
+      "event_type": "patient_registration",
+      "payload": {
+        "patient_id": "SYNTHETIC_4e02a2f1-0c12-5e32-ae01-a699fea03264",
+        "step": 0,
+        "synthetic": true,
+        "workflow_id": "4e02a2f1-0c12-5e32-ae01-a699fea03264"
+      },
+      "prerequisite_ids": [],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 1,
+      "created_at": "2026-10-20T23:59:37+00:00",
+      "event_id": "0bb7e579-c8bf-5c43-b566-3ee3ff0afe2e",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_4e02a2f1-0c12-5e32-ae01-a699fea03264",
+        "step": 1,
+        "synthetic": true,
+        "workflow_id": "4e02a2f1-0c12-5e32-ae01-a699fea03264"
+      },
+      "prerequisite_ids": [
+        "2539bce2-aa36-531d-bebf-69af2ca77822"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 1,
+      "created_at": "2026-10-20T23:59:38+00:00",
+      "event_id": "8d719366-3a01-54bb-8735-47997be943be",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_4e02a2f1-0c12-5e32-ae01-a699fea03264",
+        "step": 2,
+        "synthetic": true,
+        "workflow_id": "4e02a2f1-0c12-5e32-ae01-a699fea03264"
+      },
+      "prerequisite_ids": [
+        "0bb7e579-c8bf-5c43-b566-3ee3ff0afe2e"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 2,
+      "created_at": "2026-10-20T23:59:39+00:00",
+      "event_id": "006fc44e-433b-5bcb-ad30-f44544e8f692",
+      "event_type": "patient_discharge",
+      "payload": {
+        "patient_id": "SYNTHETIC_4e02a2f1-0c12-5e32-ae01-a699fea03264",
+        "step": 3,
+        "synthetic": true,
+        "workflow_id": "4e02a2f1-0c12-5e32-ae01-a699fea03264"
+      },
+      "prerequisite_ids": [
+        "8d719366-3a01-54bb-8735-47997be943be"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 3,
+      "created_at": "2026-10-20T23:59:40+00:00",
+      "event_id": "25cebba9-a9cf-5f31-9c2d-eb25997072e5",
+      "event_type": "patient_registration",
+      "payload": {
+        "patient_id": "SYNTHETIC_dc63f752-b7b5-5d4e-8afc-740cb1cd66d2",
+        "step": 0,
+        "synthetic": true,
+        "workflow_id": "dc63f752-b7b5-5d4e-8afc-740cb1cd66d2"
+      },
+      "prerequisite_ids": [],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 1,
+      "created_at": "2026-10-20T23:59:41+00:00",
+      "event_id": "4a4e912a-e742-5750-bb29-8556591b7815",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_dc63f752-b7b5-5d4e-8afc-740cb1cd66d2",
+        "step": 1,
+        "synthetic": true,
+        "workflow_id": "dc63f752-b7b5-5d4e-8afc-740cb1cd66d2"
+      },
+      "prerequisite_ids": [
+        "25cebba9-a9cf-5f31-9c2d-eb25997072e5"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 3,
+      "created_at": "2026-10-20T23:59:42+00:00",
+      "event_id": "aadba0cb-3d7a-5888-989e-f00e8052507b",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_dc63f752-b7b5-5d4e-8afc-740cb1cd66d2",
+        "step": 2,
+        "synthetic": true,
+        "workflow_id": "dc63f752-b7b5-5d4e-8afc-740cb1cd66d2"
+      },
+      "prerequisite_ids": [
+        "4a4e912a-e742-5750-bb29-8556591b7815"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 5,
+      "created_at": "2026-10-20T23:59:43+00:00",
+      "event_id": "dffb973d-07c0-5dde-b387-a1c635c22964",
+      "event_type": "emergency_record",
+      "payload": {
+        "patient_id": "SYNTHETIC_dc63f752-b7b5-5d4e-8afc-740cb1cd66d2",
+        "step": 3,
+        "synthetic": true,
+        "workflow_id": "dc63f752-b7b5-5d4e-8afc-740cb1cd66d2"
+      },
+      "prerequisite_ids": [
+        "aadba0cb-3d7a-5888-989e-f00e8052507b"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 1,
+      "created_at": "2026-10-20T23:59:44+00:00",
+      "event_id": "36cb16ed-b2ef-57e2-8362-c125aee67c51",
+      "event_type": "patient_registration",
+      "payload": {
+        "patient_id": "SYNTHETIC_b890b7b6-b720-5f75-b32d-0a5407b60d37",
+        "step": 0,
+        "synthetic": true,
+        "workflow_id": "b890b7b6-b720-5f75-b32d-0a5407b60d37"
+      },
+      "prerequisite_ids": [],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 2,
+      "created_at": "2026-10-20T23:59:45+00:00",
+      "event_id": "cb4c6816-be7b-500e-94d9-e73032ace092",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_b890b7b6-b720-5f75-b32d-0a5407b60d37",
+        "step": 1,
+        "synthetic": true,
+        "workflow_id": "b890b7b6-b720-5f75-b32d-0a5407b60d37"
+      },
+      "prerequisite_ids": [
+        "36cb16ed-b2ef-57e2-8362-c125aee67c51"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 2,
+      "created_at": "2026-10-20T23:59:46+00:00",
+      "event_id": "78e824cc-dcae-5f62-bbd9-bd9467c02a4c",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_b890b7b6-b720-5f75-b32d-0a5407b60d37",
+        "step": 2,
+        "synthetic": true,
+        "workflow_id": "b890b7b6-b720-5f75-b32d-0a5407b60d37"
+      },
+      "prerequisite_ids": [
+        "cb4c6816-be7b-500e-94d9-e73032ace092"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 1,
+      "created_at": "2026-10-20T23:59:47+00:00",
+      "event_id": "b4ed046e-db05-5553-ae3e-2dddc27439e1",
+      "event_type": "patient_discharge",
+      "payload": {
+        "patient_id": "SYNTHETIC_b890b7b6-b720-5f75-b32d-0a5407b60d37",
+        "step": 3,
+        "synthetic": true,
+        "workflow_id": "b890b7b6-b720-5f75-b32d-0a5407b60d37"
+      },
+      "prerequisite_ids": [
+        "78e824cc-dcae-5f62-bbd9-bd9467c02a4c"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 2,
+      "created_at": "2026-10-20T23:59:48+00:00",
+      "event_id": "dd7c1a5c-b256-52bd-bb24-b3e0351e8143",
+      "event_type": "patient_registration",
+      "payload": {
+        "patient_id": "SYNTHETIC_0a8ae0af-b0ef-5ef9-9e46-9c8502254c29",
+        "step": 0,
+        "synthetic": true,
+        "workflow_id": "0a8ae0af-b0ef-5ef9-9e46-9c8502254c29"
+      },
+      "prerequisite_ids": [],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 2,
+      "created_at": "2026-10-20T23:59:49+00:00",
+      "event_id": "2a7225ee-f51d-58a4-a646-f9e91bc95bba",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_0a8ae0af-b0ef-5ef9-9e46-9c8502254c29",
+        "step": 1,
+        "synthetic": true,
+        "workflow_id": "0a8ae0af-b0ef-5ef9-9e46-9c8502254c29"
+      },
+      "prerequisite_ids": [
+        "dd7c1a5c-b256-52bd-bb24-b3e0351e8143"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 1,
+      "created_at": "2026-10-20T23:59:50+00:00",
+      "event_id": "13272d74-c143-5016-a1b8-366b9694753b",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_0a8ae0af-b0ef-5ef9-9e46-9c8502254c29",
+        "step": 2,
+        "synthetic": true,
+        "workflow_id": "0a8ae0af-b0ef-5ef9-9e46-9c8502254c29"
+      },
+      "prerequisite_ids": [
+        "2a7225ee-f51d-58a4-a646-f9e91bc95bba"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 3,
+      "created_at": "2026-10-20T23:59:51+00:00",
+      "event_id": "0a653bcc-6b35-5a17-9cb7-6bcaabfd5100",
+      "event_type": "patient_discharge",
+      "payload": {
+        "patient_id": "SYNTHETIC_0a8ae0af-b0ef-5ef9-9e46-9c8502254c29",
+        "step": 3,
+        "synthetic": true,
+        "workflow_id": "0a8ae0af-b0ef-5ef9-9e46-9c8502254c29"
+      },
+      "prerequisite_ids": [
+        "13272d74-c143-5016-a1b8-366b9694753b"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 2,
+      "created_at": "2026-10-20T23:59:52+00:00",
+      "event_id": "e55912eb-a7c8-5224-967a-698e361eed4b",
+      "event_type": "patient_registration",
+      "payload": {
+        "patient_id": "SYNTHETIC_1423adb3-4020-5bb4-9ab8-cce99f7886cd",
+        "step": 0,
+        "synthetic": true,
+        "workflow_id": "1423adb3-4020-5bb4-9ab8-cce99f7886cd"
+      },
+      "prerequisite_ids": [],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 3,
+      "created_at": "2026-10-20T23:59:53+00:00",
+      "event_id": "32282629-0193-5dd3-baeb-05bfbc63aee2",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_1423adb3-4020-5bb4-9ab8-cce99f7886cd",
+        "step": 1,
+        "synthetic": true,
+        "workflow_id": "1423adb3-4020-5bb4-9ab8-cce99f7886cd"
+      },
+      "prerequisite_ids": [
+        "e55912eb-a7c8-5224-967a-698e361eed4b"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 1,
+      "created_at": "2026-10-20T23:59:54+00:00",
+      "event_id": "06f8d5c6-6251-54a5-a41f-db5b4d9b853d",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_1423adb3-4020-5bb4-9ab8-cce99f7886cd",
+        "step": 2,
+        "synthetic": true,
+        "workflow_id": "1423adb3-4020-5bb4-9ab8-cce99f7886cd"
+      },
+      "prerequisite_ids": [
+        "32282629-0193-5dd3-baeb-05bfbc63aee2"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 2,
+      "created_at": "2026-10-20T23:59:55+00:00",
+      "event_id": "eb1bf48b-acd8-58e1-a579-7363efce12e1",
+      "event_type": "patient_discharge",
+      "payload": {
+        "patient_id": "SYNTHETIC_1423adb3-4020-5bb4-9ab8-cce99f7886cd",
+        "step": 3,
+        "synthetic": true,
+        "workflow_id": "1423adb3-4020-5bb4-9ab8-cce99f7886cd"
+      },
+      "prerequisite_ids": [
+        "06f8d5c6-6251-54a5-a41f-db5b4d9b853d"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 2,
+      "created_at": "2026-10-20T23:59:56+00:00",
+      "event_id": "579c7d8e-a730-5c87-9415-3f074acd03ab",
+      "event_type": "patient_registration",
+      "payload": {
+        "patient_id": "SYNTHETIC_afcf270d-13e4-5115-9528-afd947a7ca54",
+        "step": 0,
+        "synthetic": true,
+        "workflow_id": "afcf270d-13e4-5115-9528-afd947a7ca54"
+      },
+      "prerequisite_ids": [],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 3,
+      "created_at": "2026-10-20T23:59:57+00:00",
+      "event_id": "d3e1b875-b885-5b41-bae4-89f1bd971e0b",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_afcf270d-13e4-5115-9528-afd947a7ca54",
+        "step": 1,
+        "synthetic": true,
+        "workflow_id": "afcf270d-13e4-5115-9528-afd947a7ca54"
+      },
+      "prerequisite_ids": [
+        "579c7d8e-a730-5c87-9415-3f074acd03ab"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 3,
+      "created_at": "2026-10-20T23:59:58+00:00",
+      "event_id": "5b99b002-e50b-504b-b8d4-469e4aad8330",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_afcf270d-13e4-5115-9528-afd947a7ca54",
+        "step": 2,
+        "synthetic": true,
+        "workflow_id": "afcf270d-13e4-5115-9528-afd947a7ca54"
+      },
+      "prerequisite_ids": [
+        "d3e1b875-b885-5b41-bae4-89f1bd971e0b"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 3,
+      "created_at": "2026-10-20T23:59:59+00:00",
+      "event_id": "78b7a780-5793-536f-b999-601c6e5c7a09",
+      "event_type": "patient_discharge",
+      "payload": {
+        "patient_id": "SYNTHETIC_afcf270d-13e4-5115-9528-afd947a7ca54",
+        "step": 3,
+        "synthetic": true,
+        "workflow_id": "afcf270d-13e4-5115-9528-afd947a7ca54"
+      },
+      "prerequisite_ids": [
+        "5b99b002-e50b-504b-b8d4-469e4aad8330"
+      ],
+      "site_id": "Hospital_A",
+      "status": "pending"
+    },
+    {
+      "base_priority": 3,
+      "created_at": "2026-10-20T23:59:52+00:00",
+      "event_id": "745c0253-847c-5161-adef-1dcd449fd368",
+      "event_type": "patient_registration",
+      "payload": {
+        "patient_id": "SYNTHETIC_b3dc84a8-0ed6-5822-8719-9fd7d41a8ace",
+        "step": 0,
+        "synthetic": true,
+        "workflow_id": "b3dc84a8-0ed6-5822-8719-9fd7d41a8ace"
+      },
+      "prerequisite_ids": [],
+      "site_id": "Hospital_B",
+      "status": "pending"
+    },
+    {
+      "base_priority": 2,
+      "created_at": "2026-10-20T23:59:53+00:00",
+      "event_id": "dda1da44-d49b-5e79-9d3c-8c1092e2f5ac",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_b3dc84a8-0ed6-5822-8719-9fd7d41a8ace",
+        "step": 1,
+        "synthetic": true,
+        "workflow_id": "b3dc84a8-0ed6-5822-8719-9fd7d41a8ace"
+      },
+      "prerequisite_ids": [
+        "745c0253-847c-5161-adef-1dcd449fd368"
+      ],
+      "site_id": "Hospital_B",
+      "status": "pending"
+    },
+    {
+      "base_priority": 1,
+      "created_at": "2026-10-20T23:59:54+00:00",
+      "event_id": "b9c43227-5b4b-575a-867f-dc43ccf71902",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_b3dc84a8-0ed6-5822-8719-9fd7d41a8ace",
+        "step": 2,
+        "synthetic": true,
+        "workflow_id": "b3dc84a8-0ed6-5822-8719-9fd7d41a8ace"
+      },
+      "prerequisite_ids": [
+        "dda1da44-d49b-5e79-9d3c-8c1092e2f5ac"
+      ],
+      "site_id": "Hospital_B",
+      "status": "pending"
+    },
+    {
+      "base_priority": 2,
+      "created_at": "2026-10-20T23:59:55+00:00",
+      "event_id": "e42ad190-9be6-5254-ae48-a6a55ae56500",
+      "event_type": "patient_discharge",
+      "payload": {
+        "patient_id": "SYNTHETIC_b3dc84a8-0ed6-5822-8719-9fd7d41a8ace",
+        "step": 3,
+        "synthetic": true,
+        "workflow_id": "b3dc84a8-0ed6-5822-8719-9fd7d41a8ace"
+      },
+      "prerequisite_ids": [
+        "b9c43227-5b4b-575a-867f-dc43ccf71902"
+      ],
+      "site_id": "Hospital_B",
+      "status": "pending"
+    },
+    {
+      "base_priority": 3,
+      "created_at": "2026-10-20T23:59:56+00:00",
+      "event_id": "4b740a93-99e2-5ce4-b801-6280eda7d70c",
+      "event_type": "patient_registration",
+      "payload": {
+        "patient_id": "SYNTHETIC_9025db65-2f6e-52a9-960d-a6dc08217df6",
+        "step": 0,
+        "synthetic": true,
+        "workflow_id": "9025db65-2f6e-52a9-960d-a6dc08217df6"
+      },
+      "prerequisite_ids": [],
+      "site_id": "Hospital_B",
+      "status": "pending"
+    },
+    {
+      "base_priority": 3,
+      "created_at": "2026-10-20T23:59:57+00:00",
+      "event_id": "d07a4396-2153-5ee8-aa34-443e7292820e",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_9025db65-2f6e-52a9-960d-a6dc08217df6",
+        "step": 1,
+        "synthetic": true,
+        "workflow_id": "9025db65-2f6e-52a9-960d-a6dc08217df6"
+      },
+      "prerequisite_ids": [
+        "4b740a93-99e2-5ce4-b801-6280eda7d70c"
+      ],
+      "site_id": "Hospital_B",
+      "status": "pending"
+    },
+    {
+      "base_priority": 2,
+      "created_at": "2026-10-20T23:59:58+00:00",
+      "event_id": "ba10eddc-52d2-5450-ad6a-046ae8ccff9c",
+      "event_type": "encounter_creation",
+      "payload": {
+        "patient_id": "SYNTHETIC_9025db65-2f6e-52a9-960d-a6dc08217df6",
+        "step": 2,
+        "synthetic": true,
+        "workflow_id": "9025db65-2f6e-52a9-960d-a6dc08217df6"
+      },
+      "prerequisite_ids": [
+        "d07a4396-2153-5ee8-aa34-443e7292820e"
+      ],
+      "site_id": "Hospital_B",
+      "status": "pending"
+    },
+    {
+      "base_priority": 3,
+      "created_at": "2026-10-20T23:59:59+00:00",
+      "event_id": "fc3956ed-a4b1-57ae-9864-30be0db53955",
+      "event_type": "patient_discharge",
+      "payload": {
+        "patient_id": "SYNTHETIC_9025db65-2f6e-52a9-960d-a6dc08217df6",
+        "step": 3,
+        "synthetic": true,
+        "workflow_id": "9025db65-2f6e-52a9-960d-a6dc08217df6"
+      },
+      "prerequisite_ids": [
+        "ba10eddc-52d2-5450-ad6a-046ae8ccff9c"
+      ],
+      "site_id": "Hospital_B",
+      "status": "pending"
+    }
+  ],
+  "generator_version": "1.0.0",
+  "schema_version": 1,
+  "summary": {
+    "event_count": 88,
+    "events_by_site": {
+      "Hospital_A": 80,
+      "Hospital_B": 8
+    },
+    "urgent_workflow_count": 4,
+    "urgent_workflows_by_site": {
+      "Hospital_A": 4,
+      "Hospital_B": 0
+    },
+    "workflow_count": 22,
+    "workflow_depth_counts": {
+      "3": 22
+    },
+    "workflows_by_site": {
+      "Hospital_A": 20,
+      "Hospital_B": 2
+    }
+  },
+  "workflows": [
+    {
+      "completion_event_id": "4e375218-289a-555b-97c3-cab2871c14ff",
+      "dependency_depth": 3,
+      "required_event_ids": [
+        "e5ccca80-f0db-5a7b-819e-8dd9dda8cb49",
+        "e39dec09-11f5-5b78-87de-7eb79d000db5",
+        "74cb180c-6d76-557a-ae2c-cca305a4f4d9",
+        "4e375218-289a-555b-97c3-cab2871c14ff"
+      ],
+      "site_id": "Hospital_A",
+      "urgent": false,
+      "workflow_id": "946cfd5e-7310-5507-a138-6131d88c0cf8"
+    },
+    {
+      "completion_event_id": "c045ae20-07ac-52a1-a62d-98f6fa764bd1",
+      "dependency_depth": 3,
+      "required_event_ids": [
+        "7a7bfaf3-2d13-515a-8813-b4eaff5a0a64",
+        "f0d04b8f-f31f-5424-849d-12bc78579792",
+        "8725a26e-c589-5522-98db-8e317812ce22",
+        "c045ae20-07ac-52a1-a62d-98f6fa764bd1"
+      ],
+      "site_id": "Hospital_A",
+      "urgent": false,
+      "workflow_id": "86f6541d-ced1-5464-8a55-4542a42848a8"
+    },
+    {
+      "completion_event_id": "641667f5-d2ad-58a3-a2e7-4272607f6fb3",
+      "dependency_depth": 3,
+      "required_event_ids": [
+        "b62fc412-0d0c-5b0a-9ec2-a99f1b95cadd",
+        "c677baf8-8d0e-5342-9c11-f17fc7131f53",
+        "13974f58-97bd-5ae2-8b70-1d2c4a7e7238",
+        "641667f5-d2ad-58a3-a2e7-4272607f6fb3"
+      ],
+      "site_id": "Hospital_A",
+      "urgent": false,
+      "workflow_id": "de1ad0e6-a5d1-5861-9e4a-95f3ed55cb3a"
+    },
+    {
+      "completion_event_id": "ad82b84c-ac04-579f-bd57-f001c6591921",
+      "dependency_depth": 3,
+      "required_event_ids": [
+        "88741dcf-fc78-5e27-9051-e10ea45d50dd",
+        "1ccb3f25-0489-54d5-87cc-9fb9f3d21633",
+        "42b47088-ab9e-5562-9dda-a42241d744e9",
+        "ad82b84c-ac04-579f-bd57-f001c6591921"
+      ],
+      "site_id": "Hospital_A",
+      "urgent": true,
+      "workflow_id": "b3fb4b4d-3469-54d2-9bb1-8916d7873eca"
+    },
+    {
+      "completion_event_id": "79b4b5e7-3a87-53c7-8234-16a8fb9142c0",
+      "dependency_depth": 3,
+      "required_event_ids": [
+        "430a5b7d-b23b-57e9-ab0e-03a4dd93745c",
+        "96495051-3630-5006-9261-0ef8483c9e43",
+        "8e2f83b0-ca30-5b19-aece-c228faf06a25",
+        "79b4b5e7-3a87-53c7-8234-16a8fb9142c0"
+      ],
+      "site_id": "Hospital_A",
+      "urgent": false,
+      "workflow_id": "7aee1a42-a2f6-51e0-8196-31423978e14b"
+    },
+    {
+      "completion_event_id": "4006a25a-dc73-5674-a705-c7087b553ae7",
+      "dependency_depth": 3,
+      "required_event_ids": [
+        "2da05392-568b-592f-a230-d66c415d095d",
+        "0b321209-804a-51b1-8753-f67c801ab0ee",
+        "a6904506-2ace-5534-9c82-0a4ccca76603",
+        "4006a25a-dc73-5674-a705-c7087b553ae7"
+      ],
+      "site_id": "Hospital_A",
+      "urgent": false,
+      "workflow_id": "0188b169-2903-5c0f-9352-97a9d7ced8fb"
+    },
+    {
+      "completion_event_id": "7b07f4b3-9638-53c1-b544-a95d885ad367",
+      "dependency_depth": 3,
+      "required_event_ids": [
+        "255968c1-d733-590a-bed0-0191bd0bfb41",
+        "72d11a4c-d19c-5840-aece-7cbb9fdef0ea",
+        "b468e752-6409-51b2-a11d-5980b677bced",
+        "7b07f4b3-9638-53c1-b544-a95d885ad367"
+      ],
+      "site_id": "Hospital_A",
+      "urgent": false,
+      "workflow_id": "ef74d0f0-73f0-588c-a705-d0a55cf7bd3d"
+    },
+    {
+      "completion_event_id": "29c4401c-d91c-53aa-8ff3-61ddf5524274",
+      "dependency_depth": 3,
+      "required_event_ids": [
+        "073ee773-8529-5292-a250-7336861b5538",
+        "2b51c681-7627-5f68-9c1f-18fa0a7f8700",
+        "207d54b0-bd14-50d2-b924-a2a013116e2d",
+        "29c4401c-d91c-53aa-8ff3-61ddf5524274"
+      ],
+      "site_id": "Hospital_A",
+      "urgent": false,
+      "workflow_id": "c16bfecd-5bf9-503b-b703-7d4ac7c9b136"
+    },
+    {
+      "completion_event_id": "541e3234-d161-5df5-a0f4-1fd6c2d94e3b",
+      "dependency_depth": 3,
+      "required_event_ids": [
+        "db33cffb-a618-5a5d-a139-87295e40aa2d",
+        "d30ccca6-d2a3-5f89-a31d-54ce3fbac0cf",
+        "48f890c8-9ae0-52d9-b44a-409ef0a2673d",
+        "541e3234-d161-5df5-a0f4-1fd6c2d94e3b"
+      ],
+      "site_id": "Hospital_A",
+      "urgent": false,
+      "workflow_id": "f22b46a7-4798-51ed-874c-4fd1cb95f938"
+    },
+    {
+      "completion_event_id": "4f20bd2e-317d-55b9-8832-51fe8c44b4a2",
+      "dependency_depth": 3,
+      "required_event_ids": [
+        "e0726001-26e6-5a91-a69a-36e682dbb4ce",
+        "cca0ae96-09d9-5790-9208-921efa665659",
+        "2e587544-5905-5a19-a2e3-26f5cc1043f2",
+        "4f20bd2e-317d-55b9-8832-51fe8c44b4a2"
+      ],
+      "site_id": "Hospital_A",
+      "urgent": false,
+      "workflow_id": "548fee85-1638-55ee-95c8-99eedc83a1b0"
+    },
+    {
+      "completion_event_id": "dbdaf7b8-9d76-5548-83a7-bd53b8096371",
+      "dependency_depth": 3,
+      "required_event_ids": [
+        "94cf3cbf-5e25-5f00-8ffd-78680e825b63",
+        "4e791edb-b40c-592b-b7d5-452bdc7d6c26",
+        "77457d4a-6cdf-5a29-ba4b-99b7ea2be047",
+        "dbdaf7b8-9d76-5548-83a7-bd53b8096371"
+      ],
+      "site_id": "Hospital_A",
+      "urgent": false,
+      "workflow_id": "2c081ee6-e45d-56eb-ae4b-e5db9868273a"
+    },
+    {
+      "completion_event_id": "b3f774ec-ff1c-5a98-a424-475b50fa01d7",
+      "dependency_depth": 3,
+      "required_event_ids": [
+        "b668995a-85b5-5573-8327-95fbfad0edb8",
+        "f68cfdce-478f-5b85-a50d-f54aa0568166",
+        "d858853d-5a27-5e0d-b971-33dbce4da248",
+        "b3f774ec-ff1c-5a98-a424-475b50fa01d7"
+      ],
+      "site_id": "Hospital_A",
+      "urgent": true,
+      "workflow_id": "24dcef7f-e275-5449-a801-4942291f2757"
+    },
+    {
+      "completion_event_id": "45ce1a77-55f8-5a56-a7d9-718407e9046d",
+      "dependency_depth": 3,
+      "required_event_ids": [
+        "3c92a986-183a-5990-bc3d-9db3d833198b",
+        "9ca8f950-3636-52e6-9fcb-419b87508852",
+        "f1f52d75-e49c-56e2-9083-cc0c4360a4a8",
+        "45ce1a77-55f8-5a56-a7d9-718407e9046d"
+      ],
+      "site_id": "Hospital_A",
+      "urgent": true,
+      "workflow_id": "2bc10428-aadf-55c6-89f0-bbdc15d88e67"
+    },
+    {
+      "completion_event_id": "395a015f-6507-588b-b938-22fe7caafe08",
+      "dependency_depth": 3,
+      "required_event_ids": [
+        "fc8b84be-8cac-5eb1-bbc3-d50b6d46878e",
+        "3083b14b-22e8-5f1f-9d72-4bda7b13dc20",
+        "e4344e0a-59ce-5384-87ae-3b62d38f34e8",
+        "395a015f-6507-588b-b938-22fe7caafe08"
+      ],
+      "site_id": "Hospital_A",
+      "urgent": false,
+      "workflow_id": "6386f628-b9e4-5051-9956-9790093e0c4f"
+    },
+    {
+      "completion_event_id": "006fc44e-433b-5bcb-ad30-f44544e8f692",
+      "dependency_depth": 3,
+      "required_event_ids": [
+        "2539bce2-aa36-531d-bebf-69af2ca77822",
+        "0bb7e579-c8bf-5c43-b566-3ee3ff0afe2e",
+        "8d719366-3a01-54bb-8735-47997be943be",
+        "006fc44e-433b-5bcb-ad30-f44544e8f692"
+      ],
+      "site_id": "Hospital_A",
+      "urgent": false,
+      "workflow_id": "4e02a2f1-0c12-5e32-ae01-a699fea03264"
+    },
+    {
+      "completion_event_id": "dffb973d-07c0-5dde-b387-a1c635c22964",
+      "dependency_depth": 3,
+      "required_event_ids": [
+        "25cebba9-a9cf-5f31-9c2d-eb25997072e5",
+        "4a4e912a-e742-5750-bb29-8556591b7815",
+        "aadba0cb-3d7a-5888-989e-f00e8052507b",
+        "dffb973d-07c0-5dde-b387-a1c635c22964"
+      ],
+      "site_id": "Hospital_A",
+      "urgent": true,
+      "workflow_id": "dc63f752-b7b5-5d4e-8afc-740cb1cd66d2"
+    },
+    {
+      "completion_event_id": "b4ed046e-db05-5553-ae3e-2dddc27439e1",
+      "dependency_depth": 3,
+      "required_event_ids": [
+        "36cb16ed-b2ef-57e2-8362-c125aee67c51",
+        "cb4c6816-be7b-500e-94d9-e73032ace092",
+        "78e824cc-dcae-5f62-bbd9-bd9467c02a4c",
+        "b4ed046e-db05-5553-ae3e-2dddc27439e1"
+      ],
+      "site_id": "Hospital_A",
+      "urgent": false,
+      "workflow_id": "b890b7b6-b720-5f75-b32d-0a5407b60d37"
+    },
+    {
+      "completion_event_id": "0a653bcc-6b35-5a17-9cb7-6bcaabfd5100",
+      "dependency_depth": 3,
+      "required_event_ids": [
+        "dd7c1a5c-b256-52bd-bb24-b3e0351e8143",
+        "2a7225ee-f51d-58a4-a646-f9e91bc95bba",
+        "13272d74-c143-5016-a1b8-366b9694753b",
+        "0a653bcc-6b35-5a17-9cb7-6bcaabfd5100"
+      ],
+      "site_id": "Hospital_A",
+      "urgent": false,
+      "workflow_id": "0a8ae0af-b0ef-5ef9-9e46-9c8502254c29"
+    },
+    {
+      "completion_event_id": "eb1bf48b-acd8-58e1-a579-7363efce12e1",
+      "dependency_depth": 3,
+      "required_event_ids": [
+        "e55912eb-a7c8-5224-967a-698e361eed4b",
+        "32282629-0193-5dd3-baeb-05bfbc63aee2",
+        "06f8d5c6-6251-54a5-a41f-db5b4d9b853d",
+        "eb1bf48b-acd8-58e1-a579-7363efce12e1"
+      ],
+      "site_id": "Hospital_A",
+      "urgent": false,
+      "workflow_id": "1423adb3-4020-5bb4-9ab8-cce99f7886cd"
+    },
+    {
+      "completion_event_id": "78b7a780-5793-536f-b999-601c6e5c7a09",
+      "dependency_depth": 3,
+      "required_event_ids": [
+        "579c7d8e-a730-5c87-9415-3f074acd03ab",
+        "d3e1b875-b885-5b41-bae4-89f1bd971e0b",
+        "5b99b002-e50b-504b-b8d4-469e4aad8330",
+        "78b7a780-5793-536f-b999-601c6e5c7a09"
+      ],
+      "site_id": "Hospital_A",
+      "urgent": false,
+      "workflow_id": "afcf270d-13e4-5115-9528-afd947a7ca54"
+    },
+    {
+      "completion_event_id": "e42ad190-9be6-5254-ae48-a6a55ae56500",
+      "dependency_depth": 3,
+      "required_event_ids": [
+        "745c0253-847c-5161-adef-1dcd449fd368",
+        "dda1da44-d49b-5e79-9d3c-8c1092e2f5ac",
+        "b9c43227-5b4b-575a-867f-dc43ccf71902",
+        "e42ad190-9be6-5254-ae48-a6a55ae56500"
+      ],
+      "site_id": "Hospital_B",
+      "urgent": false,
+      "workflow_id": "b3dc84a8-0ed6-5822-8719-9fd7d41a8ace"
+    },
+    {
+      "completion_event_id": "fc3956ed-a4b1-57ae-9864-30be0db53955",
+      "dependency_depth": 3,
+      "required_event_ids": [
+        "4b740a93-99e2-5ce4-b801-6280eda7d70c",
+        "d07a4396-2153-5ee8-aa34-443e7292820e",
+        "ba10eddc-52d2-5450-ad6a-046ae8ccff9c",
+        "fc3956ed-a4b1-57ae-9864-30be0db53955"
+      ],
+      "site_id": "Hospital_B",
+      "urgent": false,
+      "workflow_id": "9025db65-2f6e-52a9-960d-a6dc08217df6"
+    }
+  ]
+}

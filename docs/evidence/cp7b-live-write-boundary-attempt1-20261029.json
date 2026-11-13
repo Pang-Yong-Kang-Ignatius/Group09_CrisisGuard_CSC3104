@@ -1,0 +1,63 @@
+{
+  "schema": "cp7b-live-write-boundary-v1",
+  "started_at": "2026-10-29T08:23:18.827220+00:00",
+  "project": "cg-livewrite-d93afa75",
+  "source_revision": "f128ac0f2b6e551af3e03cb3e3d44262b451195a",
+  "isolated": true,
+  "observations": [
+    {
+      "label": "live_write_no_hospital_token",
+      "method": "POST",
+      "status_code": 401,
+      "client_latency_ms": 205.651
+    },
+    {
+      "label": "live_write_no_grant",
+      "method": "POST",
+      "status_code": 403,
+      "client_latency_ms": 236.17
+    },
+    {
+      "label": "register_ticket",
+      "method": "POST",
+      "status_code": 200,
+      "client_latency_ms": 234.879
+    },
+    {
+      "label": "issue_grant",
+      "method": "POST",
+      "status_code": 200,
+      "client_latency_ms": 243.676
+    },
+    {
+      "label": "ack_grant",
+      "method": "POST",
+      "status_code": 200,
+      "client_latency_ms": 222.236
+    },
+    {
+      "label": "patient_authorized_write",
+      "method": "POST",
+      "status_code": 201,
+      "client_latency_ms": 235.069
+    }
+  ],
+  "metrics": {},
+  "result": "failed",
+  "original_resource_counts": {
+    "containers": 33,
+    "volumes": 16
+  },
+  "controller": {
+    "policy": "aimd",
+    "state": "Normal",
+    "telemetry_fresh": true
+  },
+  "error": "AssertionError: patient_authorized_write: HTTP 201, expected 200",
+  "compose_cleanup": "passed",
+  "image_cleanup": "passed",
+  "original_resources_preserved": true,
+  "project_resources_absent": true,
+  "private_work_cleanup": "passed",
+  "finished_at": "2026-10-29T08:23:46.110071+00:00"
+}

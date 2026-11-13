@@ -1,0 +1,1759 @@
+{
+  "aggregate": {
+    "live_6rps": {
+      "patient": {
+        "middleware_live_p95_ms": {
+          "n": 3,
+          "mean": 9.183333333333332,
+          "sd": 0.3722006627255431,
+          "min": 8.79,
+          "max": 9.53
+        },
+        "client_live_window_p95_ms": {
+          "n": 3,
+          "mean": 22.623333303878706,
+          "sd": 2.6220235728856647,
+          "min": 19.599499995820224,
+          "max": 24.2668999126181
+        },
+        "middleware_mixed_mean_ms": {
+          "n": 3,
+          "mean": 7.613333333333333,
+          "sd": 0.2458319208998971,
+          "min": 7.33,
+          "max": 7.77
+        },
+        "middleware_throughput_rps": {
+          "n": 3,
+          "mean": 5.994433333333333,
+          "sd": 0.009641749495466843,
+          "min": 5.9833,
+          "max": 6.0
+        },
+        "middleware_live_count": {
+          "n": 3,
+          "mean": 359.6666666666667,
+          "sd": 0.5773502691896257,
+          "min": 359,
+          "max": 360
+        },
+        "middleware_replay_count": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "peak_active_workers": {
+          "n": 3,
+          "mean": 1.0,
+          "sd": 0.0,
+          "min": 1,
+          "max": 1
+        },
+        "peak_executor_waiting": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "peak_executor_pressure": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "metric_fetch_max_ms": {
+          "n": 3,
+          "mean": 29.422499976741772,
+          "sd": 4.021968177436022,
+          "min": 24.780299980193377,
+          "max": 31.860699993558228
+        },
+        "delivered_client_rps": {
+          "n": 3,
+          "mean": 6.011344366205691,
+          "sd": 0.000517367197001894,
+          "min": 6.01079592645671,
+          "max": 6.011823718227435
+        },
+        "skipped_generator_opportunities": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        }
+      },
+      "emergency": {
+        "middleware_live_p95_ms": {
+          "n": 3,
+          "mean": 9.243333333333332,
+          "sd": 0.4875790534193746,
+          "min": 8.69,
+          "max": 9.61
+        },
+        "client_live_window_p95_ms": {
+          "n": 3,
+          "mean": 20.616866648197174,
+          "sd": 2.8589055547501587,
+          "min": 17.315699951723218,
+          "max": 22.275499999523163
+        },
+        "middleware_mixed_mean_ms": {
+          "n": 3,
+          "mean": 7.623333333333332,
+          "sd": 0.3100537587795597,
+          "min": 7.27,
+          "max": 7.85
+        },
+        "middleware_throughput_rps": {
+          "n": 3,
+          "mean": 5.994433333333333,
+          "sd": 0.009641749495466843,
+          "min": 5.9833,
+          "max": 6.0
+        },
+        "middleware_live_count": {
+          "n": 3,
+          "mean": 359.6666666666667,
+          "sd": 0.5773502691896257,
+          "min": 359,
+          "max": 360
+        },
+        "middleware_replay_count": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "peak_active_workers": {
+          "n": 3,
+          "mean": 1.3333333333333333,
+          "sd": 0.5773502691896257,
+          "min": 1,
+          "max": 2
+        },
+        "peak_executor_waiting": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "peak_executor_pressure": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "metric_fetch_max_ms": {
+          "n": 3,
+          "mean": 27.447599995260436,
+          "sd": 4.150765747326764,
+          "min": 24.75450001657009,
+          "max": 32.22769999410957
+        },
+        "delivered_client_rps": {
+          "n": 3,
+          "mean": 6.011327500205592,
+          "sd": 0.0006977863221782236,
+          "min": 6.010561140949022,
+          "max": 6.0119261464642895
+        },
+        "skipped_generator_opportunities": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        }
+      },
+      "admin": {
+        "middleware_live_p95_ms": {
+          "n": 3,
+          "mean": 9.343333333333334,
+          "sd": 0.3682843104631713,
+          "min": 8.95,
+          "max": 9.68
+        },
+        "client_live_window_p95_ms": {
+          "n": 3,
+          "mean": 19.440299986551207,
+          "sd": 2.13327583971685,
+          "min": 16.985599999316037,
+          "max": 20.845699938945472
+        },
+        "middleware_mixed_mean_ms": {
+          "n": 3,
+          "mean": 7.703333333333333,
+          "sd": 0.29938826518975864,
+          "min": 7.36,
+          "max": 7.91
+        },
+        "middleware_throughput_rps": {
+          "n": 3,
+          "mean": 6.0,
+          "sd": 0.0,
+          "min": 6.0,
+          "max": 6.0
+        },
+        "middleware_live_count": {
+          "n": 3,
+          "mean": 360.0,
+          "sd": 0.0,
+          "min": 360,
+          "max": 360
+        },
+        "middleware_replay_count": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "peak_active_workers": {
+          "n": 3,
+          "mean": 1.0,
+          "sd": 0.0,
+          "min": 1,
+          "max": 1
+        },
+        "peak_executor_waiting": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "peak_executor_pressure": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "metric_fetch_max_ms": {
+          "n": 3,
+          "mean": 28.77096664936592,
+          "sd": 6.434465445840399,
+          "min": 24.81239999178797,
+          "max": 36.19539993815124
+        },
+        "delivered_client_rps": {
+          "n": 3,
+          "mean": 6.011293717906735,
+          "sd": 0.0007359000160861933,
+          "min": 6.010531838207483,
+          "max": 6.012000546274994
+        },
+        "skipped_generator_opportunities": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        }
+      }
+    },
+    "live_24rps": {
+      "patient": {
+        "middleware_live_p95_ms": {
+          "n": 3,
+          "mean": 9.233333333333333,
+          "sd": 0.037859388972002035,
+          "min": 9.19,
+          "max": 9.26
+        },
+        "client_live_window_p95_ms": {
+          "n": 3,
+          "mean": 26.17376666360845,
+          "sd": 0.2397811100182112,
+          "min": 25.923300068825483,
+          "max": 26.401199982501566
+        },
+        "middleware_mixed_mean_ms": {
+          "n": 3,
+          "mean": 7.253333333333333,
+          "sd": 0.020816659994660883,
+          "min": 7.23,
+          "max": 7.27
+        },
+        "middleware_throughput_rps": {
+          "n": 3,
+          "mean": 23.994433333333333,
+          "sd": 0.009641749495466843,
+          "min": 23.9833,
+          "max": 24.0
+        },
+        "middleware_live_count": {
+          "n": 3,
+          "mean": 1439.6666666666667,
+          "sd": 0.5773502691896257,
+          "min": 1439,
+          "max": 1440
+        },
+        "middleware_replay_count": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "peak_active_workers": {
+          "n": 3,
+          "mean": 1.6666666666666667,
+          "sd": 0.5773502691896257,
+          "min": 1,
+          "max": 2
+        },
+        "peak_executor_waiting": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "peak_executor_pressure": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "metric_fetch_max_ms": {
+          "n": 3,
+          "mean": 47.61593334842473,
+          "sd": 9.397433221868013,
+          "min": 40.25950003415346,
+          "max": 58.202399988658726
+        },
+        "delivered_client_rps": {
+          "n": 3,
+          "mean": 24.0020646890945,
+          "sd": 0.0033917169070429814,
+          "min": 23.998409385457848,
+          "max": 24.005110047803022
+        },
+        "skipped_generator_opportunities": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        }
+      },
+      "emergency": {
+        "middleware_live_p95_ms": {
+          "n": 3,
+          "mean": 9.193333333333333,
+          "sd": 0.055075705472860864,
+          "min": 9.13,
+          "max": 9.23
+        },
+        "client_live_window_p95_ms": {
+          "n": 3,
+          "mean": 24.201400034750502,
+          "sd": 0.4168363152122146,
+          "min": 23.732800036668777,
+          "max": 24.5309000601992
+        },
+        "middleware_mixed_mean_ms": {
+          "n": 3,
+          "mean": 7.283333333333334,
+          "sd": 0.04932882862316244,
+          "min": 7.25,
+          "max": 7.34
+        },
+        "middleware_throughput_rps": {
+          "n": 3,
+          "mean": 24.0,
+          "sd": 0.0,
+          "min": 24.0,
+          "max": 24.0
+        },
+        "middleware_live_count": {
+          "n": 3,
+          "mean": 1440.0,
+          "sd": 0.0,
+          "min": 1440,
+          "max": 1440
+        },
+        "middleware_replay_count": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "peak_active_workers": {
+          "n": 3,
+          "mean": 2.0,
+          "sd": 1.0,
+          "min": 1,
+          "max": 3
+        },
+        "peak_executor_waiting": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "peak_executor_pressure": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "metric_fetch_max_ms": {
+          "n": 3,
+          "mean": 44.36540002158532,
+          "sd": 10.577951472491405,
+          "min": 38.20310009177774,
+          "max": 56.579599971883
+        },
+        "delivered_client_rps": {
+          "n": 3,
+          "mean": 24.00316139078276,
+          "sd": 0.005589929045729229,
+          "min": 23.996873687292236,
+          "max": 24.00756853004388
+        },
+        "skipped_generator_opportunities": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        }
+      },
+      "admin": {
+        "middleware_live_p95_ms": {
+          "n": 3,
+          "mean": 9.433333333333332,
+          "sd": 0.01527525231651914,
+          "min": 9.42,
+          "max": 9.45
+        },
+        "client_live_window_p95_ms": {
+          "n": 3,
+          "mean": 22.57936665167411,
+          "sd": 0.2879143272684049,
+          "min": 22.35009998548776,
+          "max": 22.90250000078231
+        },
+        "middleware_mixed_mean_ms": {
+          "n": 3,
+          "mean": 7.419999999999999,
+          "sd": 0.04999999999999982,
+          "min": 7.37,
+          "max": 7.47
+        },
+        "middleware_throughput_rps": {
+          "n": 3,
+          "mean": 23.994433333333333,
+          "sd": 0.009641749495466843,
+          "min": 23.9833,
+          "max": 24.0
+        },
+        "middleware_live_count": {
+          "n": 3,
+          "mean": 1439.6666666666667,
+          "sd": 0.5773502691896257,
+          "min": 1439,
+          "max": 1440
+        },
+        "middleware_replay_count": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "peak_active_workers": {
+          "n": 3,
+          "mean": 1.6666666666666667,
+          "sd": 0.5773502691896257,
+          "min": 1,
+          "max": 2
+        },
+        "peak_executor_waiting": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "peak_executor_pressure": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "metric_fetch_max_ms": {
+          "n": 3,
+          "mean": 47.09603330896547,
+          "sd": 8.146753651734594,
+          "min": 37.69459994509816,
+          "max": 52.07850004080683
+        },
+        "delivered_client_rps": {
+          "n": 3,
+          "mean": 24.001930651024235,
+          "sd": 0.0054371145610672255,
+          "min": 23.995814969875948,
+          "max": 24.006217738448903
+        },
+        "skipped_generator_opportunities": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        }
+      }
+    },
+    "mixed_live_replay": {
+      "patient": {
+        "middleware_live_p95_ms": {
+          "n": 3,
+          "mean": 9.15,
+          "sd": 0.05567764362829999,
+          "min": 9.09,
+          "max": 9.2
+        },
+        "client_live_window_p95_ms": {
+          "n": 3,
+          "mean": 23.643300014858443,
+          "sd": 2.258883707002006,
+          "min": 21.098700002767146,
+          "max": 25.411900016479194
+        },
+        "middleware_mixed_mean_ms": {
+          "n": 3,
+          "mean": 7.583333333333333,
+          "sd": 0.028867513459481187,
+          "min": 7.55,
+          "max": 7.6
+        },
+        "middleware_throughput_rps": {
+          "n": 3,
+          "mean": 18.033333333333335,
+          "sd": 0.0288675134594817,
+          "min": 18.0,
+          "max": 18.05
+        },
+        "middleware_live_count": {
+          "n": 3,
+          "mean": 719.6666666666666,
+          "sd": 0.5773502691896257,
+          "min": 719,
+          "max": 720
+        },
+        "middleware_replay_count": {
+          "n": 3,
+          "mean": 362.3333333333333,
+          "sd": 1.1547005383792515,
+          "min": 361,
+          "max": 363
+        },
+        "peak_active_workers": {
+          "n": 3,
+          "mean": 2.0,
+          "sd": 0.0,
+          "min": 2,
+          "max": 2
+        },
+        "peak_executor_waiting": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "peak_executor_pressure": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "metric_fetch_max_ms": {
+          "n": 3,
+          "mean": 33.652666645745434,
+          "sd": 6.122555897353391,
+          "min": 28.84359995368868,
+          "max": 40.544999996200204
+        },
+        "delivered_client_rps": {
+          "n": 3,
+          "mean": 18.014162600265863,
+          "sd": 0.0018737410582566451,
+          "min": 18.012028408553885,
+          "max": 18.0155376325695
+        },
+        "skipped_generator_opportunities": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        }
+      },
+      "emergency": {
+        "middleware_live_p95_ms": {
+          "n": 3,
+          "mean": 9.15,
+          "sd": 0.07549834435270765,
+          "min": 9.08,
+          "max": 9.23
+        },
+        "client_live_window_p95_ms": {
+          "n": 3,
+          "mean": 23.210000052737694,
+          "sd": 2.33920552282543,
+          "min": 21.05350000783801,
+          "max": 25.696800090372562
+        },
+        "middleware_mixed_mean_ms": {
+          "n": 3,
+          "mean": 7.573333333333333,
+          "sd": 0.020816659994661382,
+          "min": 7.55,
+          "max": 7.59
+        },
+        "middleware_throughput_rps": {
+          "n": 3,
+          "mean": 18.02776666666667,
+          "sd": 0.009584014468548015,
+          "min": 18.0167,
+          "max": 18.0333
+        },
+        "middleware_live_count": {
+          "n": 3,
+          "mean": 720.0,
+          "sd": 0.0,
+          "min": 720,
+          "max": 720
+        },
+        "middleware_replay_count": {
+          "n": 3,
+          "mean": 361.6666666666667,
+          "sd": 0.5773502691896257,
+          "min": 361,
+          "max": 362
+        },
+        "peak_active_workers": {
+          "n": 3,
+          "mean": 2.0,
+          "sd": 0.0,
+          "min": 2,
+          "max": 2
+        },
+        "peak_executor_waiting": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "peak_executor_pressure": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "metric_fetch_max_ms": {
+          "n": 3,
+          "mean": 34.190266664760806,
+          "sd": 5.7829639199783776,
+          "min": 28.11800001654774,
+          "max": 39.632300031371415
+        },
+        "delivered_client_rps": {
+          "n": 3,
+          "mean": 18.015138164193402,
+          "sd": 0.001706273498397697,
+          "min": 18.01318615663689,
+          "max": 18.01634572601152
+        },
+        "skipped_generator_opportunities": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        }
+      },
+      "admin": {
+        "middleware_live_p95_ms": {
+          "n": 3,
+          "mean": 9.253333333333332,
+          "sd": 0.07571877794400368,
+          "min": 9.2,
+          "max": 9.34
+        },
+        "client_live_window_p95_ms": {
+          "n": 3,
+          "mean": 23.056633343609672,
+          "sd": 2.4401622196603254,
+          "min": 21.02119999472052,
+          "max": 25.761700002476573
+        },
+        "middleware_mixed_mean_ms": {
+          "n": 3,
+          "mean": 7.760000000000001,
+          "sd": 0.03605551275463999,
+          "min": 7.72,
+          "max": 7.79
+        },
+        "middleware_throughput_rps": {
+          "n": 3,
+          "mean": 18.0111,
+          "sd": 0.02546605583909722,
+          "min": 17.9833,
+          "max": 18.0333
+        },
+        "middleware_live_count": {
+          "n": 3,
+          "mean": 719.6666666666666,
+          "sd": 0.5773502691896257,
+          "min": 719,
+          "max": 720
+        },
+        "middleware_replay_count": {
+          "n": 3,
+          "mean": 361.0,
+          "sd": 1.0,
+          "min": 360,
+          "max": 362
+        },
+        "peak_active_workers": {
+          "n": 3,
+          "mean": 2.0,
+          "sd": 0.0,
+          "min": 2,
+          "max": 2
+        },
+        "peak_executor_waiting": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "peak_executor_pressure": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "metric_fetch_max_ms": {
+          "n": 3,
+          "mean": 34.55526661127806,
+          "sd": 5.428393239824699,
+          "min": 28.40399998240173,
+          "max": 38.67439995519817
+        },
+        "delivered_client_rps": {
+          "n": 3,
+          "mean": 18.01407388758864,
+          "sd": 0.0018322948528245368,
+          "min": 18.011979214996344,
+          "max": 18.015379224807262
+        },
+        "skipped_generator_opportunities": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        }
+      }
+    },
+    "db_wait_low_concurrency": {
+      "patient": {
+        "middleware_live_p95_ms": {
+          "n": 3,
+          "mean": 2000.1666666666667,
+          "sd": 11.264947107436104,
+          "min": 1992.01,
+          "max": 2013.02
+        },
+        "client_live_window_p95_ms": {
+          "n": 3,
+          "mean": 2011.5209332822512,
+          "sd": 14.598702944656479,
+          "min": 1998.2158999191597,
+          "max": 2027.1375000011176
+        },
+        "middleware_mixed_mean_ms": {
+          "n": 3,
+          "mean": 520.9033333333333,
+          "sd": 20.504819758616076,
+          "min": 500.66,
+          "max": 541.66
+        },
+        "middleware_throughput_rps": {
+          "n": 3,
+          "mean": 1.3888666666666667,
+          "sd": 0.041928073331997155,
+          "min": 1.35,
+          "max": 1.4333
+        },
+        "middleware_live_count": {
+          "n": 3,
+          "mean": 83.33333333333333,
+          "sd": 2.516611478423583,
+          "min": 81,
+          "max": 86
+        },
+        "middleware_replay_count": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "peak_active_workers": {
+          "n": 3,
+          "mean": 4.333333333333333,
+          "sd": 0.5773502691896257,
+          "min": 4,
+          "max": 5
+        },
+        "peak_executor_waiting": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "peak_executor_pressure": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "metric_fetch_max_ms": {
+          "n": 3,
+          "mean": 28.217733294392627,
+          "sd": 6.348406150470664,
+          "min": 21.98109996970743,
+          "max": 34.67229998204857
+        },
+        "delivered_client_rps": {
+          "n": 3,
+          "mean": 1.894289468743878,
+          "sd": 0.056594163266200426,
+          "min": 1.8420051032402256,
+          "max": 1.9543824712017395
+        },
+        "skipped_generator_opportunities": {
+          "n": 3,
+          "mean": 5.666666666666667,
+          "sd": 2.516611478423583,
+          "min": 3,
+          "max": 8
+        }
+      },
+      "emergency": {
+        "middleware_live_p95_ms": {
+          "n": 3,
+          "mean": 2000.04,
+          "sd": 10.640493409612162,
+          "min": 1991.79,
+          "max": 2012.05
+        },
+        "client_live_window_p95_ms": {
+          "n": 3,
+          "mean": 2009.3151333276182,
+          "sd": 13.855786073420118,
+          "min": 1999.0609999513254,
+          "max": 2025.0781000358984
+        },
+        "middleware_mixed_mean_ms": {
+          "n": 3,
+          "mean": 520.8333333333334,
+          "sd": 20.494822110312,
+          "min": 500.6,
+          "max": 541.58
+        },
+        "middleware_throughput_rps": {
+          "n": 3,
+          "mean": 1.3888666666666667,
+          "sd": 0.041928073331997155,
+          "min": 1.35,
+          "max": 1.4333
+        },
+        "middleware_live_count": {
+          "n": 3,
+          "mean": 83.33333333333333,
+          "sd": 2.516611478423583,
+          "min": 81,
+          "max": 86
+        },
+        "middleware_replay_count": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "peak_active_workers": {
+          "n": 3,
+          "mean": 4.333333333333333,
+          "sd": 0.5773502691896257,
+          "min": 4,
+          "max": 5
+        },
+        "peak_executor_waiting": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "peak_executor_pressure": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "metric_fetch_max_ms": {
+          "n": 3,
+          "mean": 24.20699999978145,
+          "sd": 2.666361394973637,
+          "min": 21.766799967736006,
+          "max": 27.05300005618483
+        },
+        "delivered_client_rps": {
+          "n": 3,
+          "mean": 1.8942748879065956,
+          "sd": 0.05661369999695231,
+          "min": 1.8419592039492767,
+          "max": 1.9543799379649096
+        },
+        "skipped_generator_opportunities": {
+          "n": 3,
+          "mean": 5.666666666666667,
+          "sd": 2.516611478423583,
+          "min": 3,
+          "max": 8
+        }
+      },
+      "admin": {
+        "middleware_live_p95_ms": {
+          "n": 3,
+          "mean": 1999.7366666666667,
+          "sd": 9.736782493890539,
+          "min": 1992.13,
+          "max": 2010.71
+        },
+        "client_live_window_p95_ms": {
+          "n": 3,
+          "mean": 2010.801066683295,
+          "sd": 9.951261511182816,
+          "min": 2002.6085000718012,
+          "max": 2021.8750999774784
+        },
+        "middleware_mixed_mean_ms": {
+          "n": 3,
+          "mean": 523.0366666666666,
+          "sd": 20.67822365033644,
+          "min": 500.71,
+          "max": 541.53
+        },
+        "middleware_throughput_rps": {
+          "n": 3,
+          "mean": 1.3833333333333335,
+          "sd": 0.0440706629554552,
+          "min": 1.35,
+          "max": 1.4333
+        },
+        "middleware_live_count": {
+          "n": 3,
+          "mean": 83.0,
+          "sd": 2.6457513110645907,
+          "min": 81,
+          "max": 86
+        },
+        "middleware_replay_count": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "peak_active_workers": {
+          "n": 3,
+          "mean": 4.0,
+          "sd": 0.0,
+          "min": 4,
+          "max": 4
+        },
+        "peak_executor_waiting": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "peak_executor_pressure": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "metric_fetch_max_ms": {
+          "n": 3,
+          "mean": 23.835800006054342,
+          "sd": 3.3421130991216312,
+          "min": 20.488300011493266,
+          "max": 27.17250003479421
+        },
+        "delivered_client_rps": {
+          "n": 3,
+          "mean": 1.886813524902559,
+          "sd": 0.05954060111075179,
+          "min": 1.8420126712827172,
+          "max": 1.9543774969323782
+        },
+        "skipped_generator_opportunities": {
+          "n": 3,
+          "mean": 6.0,
+          "sd": 2.6457513110645907,
+          "min": 3,
+          "max": 8
+        }
+      }
+    },
+    "executor_wait_bounded": {
+      "patient": {
+        "middleware_live_p95_ms": {
+          "n": 3,
+          "mean": 1871.5633333333335,
+          "sd": 16.314258589753212,
+          "min": 1854.6,
+          "max": 1887.14
+        },
+        "client_live_window_p95_ms": {
+          "n": 3,
+          "mean": 2438.507066651558,
+          "sd": 486.8231170374823,
+          "min": 1877.034300006926,
+          "max": 2742.8653999231756
+        },
+        "middleware_mixed_mean_ms": {
+          "n": 3,
+          "mean": 440.2866666666667,
+          "sd": 5.0913685128198525,
+          "min": 436.4,
+          "max": 446.05
+        },
+        "middleware_throughput_rps": {
+          "n": 3,
+          "mean": 28.011133333333333,
+          "sd": 3.124391614912147,
+          "min": 26.1,
+          "max": 31.6167
+        },
+        "middleware_live_count": {
+          "n": 3,
+          "mean": 1680.6666666666667,
+          "sd": 187.4628852155363,
+          "min": 1566,
+          "max": 1897
+        },
+        "middleware_replay_count": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "peak_active_workers": {
+          "n": 3,
+          "mean": 40.0,
+          "sd": 0.0,
+          "min": 40,
+          "max": 40
+        },
+        "peak_executor_waiting": {
+          "n": 3,
+          "mean": 16.666666666666668,
+          "sd": 9.018499505645789,
+          "min": 8,
+          "max": 26
+        },
+        "peak_executor_pressure": {
+          "n": 3,
+          "mean": 0.4166666666666667,
+          "sd": 0.2254624876411447,
+          "min": 0.2,
+          "max": 0.65
+        },
+        "metric_fetch_max_ms": {
+          "n": 3,
+          "mean": 2102.544666694788,
+          "sd": 638.1629414637342,
+          "min": 1366.0023000556976,
+          "max": 2490.333699970506
+        },
+        "delivered_client_rps": {
+          "n": 3,
+          "mean": 37.071638685811195,
+          "sd": 4.584920650093159,
+          "min": 34.26094776666844,
+          "max": 42.36240687469235
+        },
+        "skipped_generator_opportunities": {
+          "n": 3,
+          "mean": 563.3333333333334,
+          "sd": 190.07717730788548,
+          "min": 344,
+          "max": 680
+        }
+      },
+      "emergency": {
+        "middleware_live_p95_ms": {
+          "n": 3,
+          "mean": 2028.58,
+          "sd": 13.879492065634151,
+          "min": 2012.56,
+          "max": 2036.99
+        },
+        "client_live_window_p95_ms": {
+          "n": 3,
+          "mean": 2088.4208333445713,
+          "sd": 57.70037362480732,
+          "min": 2021.796900080517,
+          "max": 2122.2541000461206
+        },
+        "middleware_mixed_mean_ms": {
+          "n": 3,
+          "mean": 543.0,
+          "sd": 1.9293781381574837,
+          "min": 541.0,
+          "max": 544.85
+        },
+        "middleware_throughput_rps": {
+          "n": 3,
+          "mean": 1.3611333333333333,
+          "sd": 0.009641749495466714,
+          "min": 1.35,
+          "max": 1.3667
+        },
+        "middleware_live_count": {
+          "n": 3,
+          "mean": 81.66666666666667,
+          "sd": 0.5773502691896257,
+          "min": 81,
+          "max": 82
+        },
+        "middleware_replay_count": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "peak_active_workers": {
+          "n": 3,
+          "mean": 4.0,
+          "sd": 0.0,
+          "min": 4,
+          "max": 4
+        },
+        "peak_executor_waiting": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "peak_executor_pressure": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "metric_fetch_max_ms": {
+          "n": 3,
+          "mean": 172.24243333718428,
+          "sd": 107.28689509952521,
+          "min": 48.38579997885972,
+          "max": 236.43540008924901
+        },
+        "delivered_client_rps": {
+          "n": 3,
+          "mean": 1.848436911366713,
+          "sd": 0.005928150331163321,
+          "min": 1.8415939324285608,
+          "max": 1.8520107024703114
+        },
+        "skipped_generator_opportunities": {
+          "n": 3,
+          "mean": 7.333333333333333,
+          "sd": 0.5773502691896257,
+          "min": 7,
+          "max": 8
+        }
+      },
+      "admin": {
+        "middleware_live_p95_ms": {
+          "n": 3,
+          "mean": 2029.4099999999999,
+          "sd": 15.016324450410611,
+          "min": 2012.21,
+          "max": 2039.91
+        },
+        "client_live_window_p95_ms": {
+          "n": 3,
+          "mean": 2083.643366660302,
+          "sd": 54.72332409810632,
+          "min": 2020.7895999774337,
+          "max": 2120.7000999711454
+        },
+        "middleware_mixed_mean_ms": {
+          "n": 3,
+          "mean": 540.8266666666667,
+          "sd": 2.946936262176923,
+          "min": 537.82,
+          "max": 543.71
+        },
+        "middleware_throughput_rps": {
+          "n": 3,
+          "mean": 1.3666666666666665,
+          "sd": 0.016650025025006163,
+          "min": 1.35,
+          "max": 1.3833
+        },
+        "middleware_live_count": {
+          "n": 3,
+          "mean": 82.0,
+          "sd": 1.0,
+          "min": 81,
+          "max": 83
+        },
+        "middleware_replay_count": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "peak_active_workers": {
+          "n": 3,
+          "mean": 4.0,
+          "sd": 0.0,
+          "min": 4,
+          "max": 4
+        },
+        "peak_executor_waiting": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "peak_executor_pressure": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "metric_fetch_max_ms": {
+          "n": 3,
+          "mean": 169.47299994838735,
+          "sd": 104.80951943834158,
+          "min": 48.47159993369132,
+          "max": 231.98149993550032
+        },
+        "delivered_client_rps": {
+          "n": 3,
+          "mean": 1.8484130930989842,
+          "sd": 0.005968591937109107,
+          "min": 1.8415232478461194,
+          "max": 1.852005032749629
+        },
+        "skipped_generator_opportunities": {
+          "n": 3,
+          "mean": 7.333333333333333,
+          "sd": 0.5773502691896257,
+          "min": 7,
+          "max": 8
+        }
+      }
+    },
+    "upstream_delay_300ms": {
+      "patient": {
+        "middleware_live_p95_ms": {
+          "n": 3,
+          "mean": 7.7,
+          "sd": 0.0953939201416943,
+          "min": 7.61,
+          "max": 7.8
+        },
+        "client_live_window_p95_ms": {
+          "n": 3,
+          "mean": 318.1063666706905,
+          "sd": 0.8109455176017831,
+          "min": 317.34269997105,
+          "max": 318.9575000433251
+        },
+        "middleware_mixed_mean_ms": {
+          "n": 3,
+          "mean": 6.763333333333333,
+          "sd": 0.10503967504392486,
+          "min": 6.66,
+          "max": 6.87
+        },
+        "middleware_throughput_rps": {
+          "n": 3,
+          "mean": 4.4667,
+          "sd": 0.0,
+          "min": 4.4667,
+          "max": 4.4667
+        },
+        "middleware_live_count": {
+          "n": 3,
+          "mean": 268.0,
+          "sd": 0.0,
+          "min": 268,
+          "max": 268
+        },
+        "middleware_replay_count": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "peak_active_workers": {
+          "n": 3,
+          "mean": 1.3333333333333333,
+          "sd": 0.5773502691896257,
+          "min": 1,
+          "max": 2
+        },
+        "peak_executor_waiting": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "peak_executor_pressure": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "metric_fetch_max_ms": {
+          "n": 3,
+          "mean": 20.19409998320043,
+          "sd": 0.9885595446868237,
+          "min": 19.07839998602867,
+          "max": 20.960900001227856
+        },
+        "delivered_client_rps": {
+          "n": 3,
+          "mean": 5.979323547979089,
+          "sd": 0.0006605558108082711,
+          "min": 5.978778207170117,
+          "max": 5.980058047930859
+        },
+        "skipped_generator_opportunities": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        }
+      },
+      "emergency": {
+        "middleware_live_p95_ms": {
+          "n": 3,
+          "mean": 7.366666666666667,
+          "sd": 0.15631165450257783,
+          "min": 7.2,
+          "max": 7.51
+        },
+        "client_live_window_p95_ms": {
+          "n": 3,
+          "mean": 317.8933666786179,
+          "sd": 1.1769437795623823,
+          "min": 316.56890001613647,
+          "max": 318.81930003874004
+        },
+        "middleware_mixed_mean_ms": {
+          "n": 3,
+          "mean": 6.52,
+          "sd": 0.07549834435270725,
+          "min": 6.45,
+          "max": 6.6
+        },
+        "middleware_throughput_rps": {
+          "n": 3,
+          "mean": 4.4722333333333335,
+          "sd": 0.009584014468547501,
+          "min": 4.4667,
+          "max": 4.4833
+        },
+        "middleware_live_count": {
+          "n": 3,
+          "mean": 268.3333333333333,
+          "sd": 0.5773502691896257,
+          "min": 268,
+          "max": 269
+        },
+        "middleware_replay_count": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "peak_active_workers": {
+          "n": 3,
+          "mean": 1.3333333333333333,
+          "sd": 0.5773502691896257,
+          "min": 1,
+          "max": 2
+        },
+        "peak_executor_waiting": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "peak_executor_pressure": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "metric_fetch_max_ms": {
+          "n": 3,
+          "mean": 21.11763332504779,
+          "sd": 0.9456977478518167,
+          "min": 20.23430005647242,
+          "max": 22.115299943834543
+        },
+        "delivered_client_rps": {
+          "n": 3,
+          "mean": 5.979061467990299,
+          "sd": 0.0007677890819067123,
+          "min": 5.97833069016778,
+          "max": 5.97986156704048
+        },
+        "skipped_generator_opportunities": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        }
+      },
+      "admin": {
+        "middleware_live_p95_ms": {
+          "n": 3,
+          "mean": 7.8133333333333335,
+          "sd": 0.2409010862020618,
+          "min": 7.65,
+          "max": 8.09
+        },
+        "client_live_window_p95_ms": {
+          "n": 3,
+          "mean": 317.8789666853845,
+          "sd": 1.3180352308755368,
+          "min": 316.35810004081577,
+          "max": 318.68879997637123
+        },
+        "middleware_mixed_mean_ms": {
+          "n": 3,
+          "mean": 6.78,
+          "sd": 0.19974984355438163,
+          "min": 6.65,
+          "max": 7.01
+        },
+        "middleware_throughput_rps": {
+          "n": 3,
+          "mean": 4.4667,
+          "sd": 0.0,
+          "min": 4.4667,
+          "max": 4.4667
+        },
+        "middleware_live_count": {
+          "n": 3,
+          "mean": 268.0,
+          "sd": 0.0,
+          "min": 268,
+          "max": 268
+        },
+        "middleware_replay_count": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "peak_active_workers": {
+          "n": 3,
+          "mean": 1.0,
+          "sd": 0.0,
+          "min": 1,
+          "max": 1
+        },
+        "peak_executor_waiting": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        },
+        "peak_executor_pressure": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0.0,
+          "max": 0.0
+        },
+        "metric_fetch_max_ms": {
+          "n": 3,
+          "mean": 19.229666679166257,
+          "sd": 0.776325102901439,
+          "min": 18.513399991206825,
+          "max": 20.054599968716502
+        },
+        "delivered_client_rps": {
+          "n": 3,
+          "mean": 5.978988937397659,
+          "sd": 0.0007656121493476611,
+          "min": 5.9782350529295565,
+          "max": 5.97976576163905
+        },
+        "skipped_generator_opportunities": {
+          "n": 3,
+          "mean": 0.0,
+          "sd": 0.0,
+          "min": 0,
+          "max": 0
+        }
+      }
+    }
+  },
+  "requests": 41144,
+  "metrics_samples": 8737,
+  "evidence_files": [
+    {
+      "path": "docs\\evidence\\cp7b-representative-telemetry-raw-20261029.json",
+      "sha256": "bf90aad9f5ea1dab0621529306df88ebc8d59405668a19e7031d62c4219de850",
+      "recorded_result": "failed",
+      "recorded_preservation": {
+        "containers": 33,
+        "volumes": 16,
+        "container_identity_image_mounts_equal": true,
+        "volume_set_equal": true,
+        "application_sources_equal": true
+      }
+    },
+    {
+      "path": "docs\\evidence\\cp7b-representative-telemetry-diagnostics-20261029.json",
+      "sha256": "eddd195a867d0b009f6254775bd1f83c6f052026e537f317da56f191643ccf23",
+      "recorded_result": "failed",
+      "recorded_preservation": {
+        "containers": 33,
+        "volumes": 16,
+        "container_identity_image_mounts_equal": false,
+        "volume_set_equal": false,
+        "application_sources_equal": true
+      }
+    },
+    {
+      "path": "docs\\evidence\\cp7b-representative-telemetry-diagnostic-recovery-20261029.json",
+      "sha256": "f1924b152e7d05429f6fcb1c77b6589d4f107ae62a79f5e1affd65571ec8c17b",
+      "recorded_result": "passed",
+      "recorded_preservation": {
+        "containers": 33,
+        "volumes": 16,
+        "container_identity_image_mounts_equal": true,
+        "volume_set_equal": true,
+        "application_sources_equal": true
+      }
+    }
+  ],
+  "phase_lineage": [
+    {
+      "trial": 1,
+      "phase": "live_6rps",
+      "project": "cg-telemetry-1-7a9137ed",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-raw-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": false
+    },
+    {
+      "trial": 1,
+      "phase": "live_24rps",
+      "project": "cg-telemetry-1-7a9137ed",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-raw-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": false
+    },
+    {
+      "trial": 1,
+      "phase": "mixed_live_replay",
+      "project": "cg-telemetry-1-7a9137ed",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-raw-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": false
+    },
+    {
+      "trial": 1,
+      "phase": "db_wait_low_concurrency",
+      "project": "cg-telemetry-1-260a226f",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-diagnostics-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": false
+    },
+    {
+      "trial": 1,
+      "phase": "executor_wait_bounded",
+      "project": "cg-telemetry-1-260a226f",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-diagnostics-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": false
+    },
+    {
+      "trial": 1,
+      "phase": "upstream_delay_300ms",
+      "project": "cg-telemetry-1-260a226f",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-diagnostics-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": false
+    },
+    {
+      "trial": 2,
+      "phase": "live_6rps",
+      "project": "cg-telemetry-2-6291ac87",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-raw-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": false
+    },
+    {
+      "trial": 2,
+      "phase": "live_24rps",
+      "project": "cg-telemetry-2-6291ac87",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-raw-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": false
+    },
+    {
+      "trial": 2,
+      "phase": "mixed_live_replay",
+      "project": "cg-telemetry-2-6291ac87",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-raw-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": false
+    },
+    {
+      "trial": 2,
+      "phase": "db_wait_low_concurrency",
+      "project": "cg-telemetry-2-0104504d",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-diagnostic-recovery-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": true
+    },
+    {
+      "trial": 2,
+      "phase": "executor_wait_bounded",
+      "project": "cg-telemetry-2-0104504d",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-diagnostic-recovery-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": true
+    },
+    {
+      "trial": 2,
+      "phase": "upstream_delay_300ms",
+      "project": "cg-telemetry-2-0104504d",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-diagnostic-recovery-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": true
+    },
+    {
+      "trial": 3,
+      "phase": "live_6rps",
+      "project": "cg-telemetry-3-cf5eab62",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-raw-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": false
+    },
+    {
+      "trial": 3,
+      "phase": "live_24rps",
+      "project": "cg-telemetry-3-cf5eab62",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-raw-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": false
+    },
+    {
+      "trial": 3,
+      "phase": "mixed_live_replay",
+      "project": "cg-telemetry-3-cf5eab62",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-raw-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": false
+    },
+    {
+      "trial": 3,
+      "phase": "db_wait_low_concurrency",
+      "project": "cg-telemetry-3-27c381ca",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-diagnostics-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": false
+    },
+    {
+      "trial": 3,
+      "phase": "executor_wait_bounded",
+      "project": "cg-telemetry-3-27c381ca",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-diagnostics-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": false
+    },
+    {
+      "trial": 3,
+      "phase": "upstream_delay_300ms",
+      "project": "cg-telemetry-3-27c381ca",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-diagnostics-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": false
+    }
+  ],
+  "completed_phase_replicas": 18,
+  "client_errors": 0,
+  "non_200_responses": 0,
+  "skipped_generator_opportunities": 1786,
+  "all_expiry_windows_empty": true,
+  "all_live_replay_windows_classified": true,
+  "executor_capacity_unchanged": true,
+  "real_replay_extra_requests": 48,
+  "note": "Means and sample SD use three project replicates. Comparison uses the latest periodic middleware snapshot at/before the final generated client completion, with client completion windows aligned approximately by UTC; full response time and route populations still differ. Diagnostic locks and proxy delay are synthetic perturbations, not representative capacity measurements."
+}

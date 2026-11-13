@@ -1,0 +1,85 @@
+{
+  "run_id": "cg-update-09dbb3fe278a",
+  "scope": "Local image-only maintenance rehearsal; same application schema/source",
+  "aws_used": false,
+  "live_database_restoration": false,
+  "images": {
+    "baseline": "sha256:aecc7508db88aa2fd91a8781d6c788b5c5aff9931a6eb857fb291a79c8f5ffd4",
+    "candidate": "sha256:50d8292b133c1905231f5f3d1e38c76e947bc116fe11e32ac955a797d828470b",
+    "broken": "sha256:4a2937ac7ce75bfc853b5fc9bba129a85558312aad6b8f0d9b86ee42a9a8fa27"
+  },
+  "backups": [
+    {
+      "kind": "postgres",
+      "bytes": 2121,
+      "sha256": "12d659ce58dae72f2959494e535bdc6cfeb3dadd1ffeb34fab631df72432fdf8",
+      "restore_expected_events_found": 2
+    },
+    {
+      "kind": "sqlite",
+      "bytes": 20480,
+      "sha256": "7bfaf90f7814e3f9403da49167a9d4090a71501acb39a1f31c02e0dfb82e0f40",
+      "restore_expected_events_found": 1
+    },
+    {
+      "kind": "sqlite",
+      "bytes": 20480,
+      "sha256": "a3219f5de126b66de5045d0cdf27d77c94e906bd049f4e0c08a89ae1a97c7590",
+      "restore_expected_events_found": 1
+    }
+  ],
+  "configuration_drift_rejected": true,
+  "pending_sqlite_and_recovery_state_preserved": true,
+  "records_after_compatible_rollback": 6,
+  "before_failed_attempt_backup": {
+    "kind": "sqlite",
+    "bytes": 20480,
+    "sha256": "15edc7b4a9473cd6a1e634d2c4639db365c03be25e66d21c4cdd9424aeab1705",
+    "restore_expected_events_found": 3
+  },
+  "failed_candidate_rejected_and_backed_out": true,
+  "postgres_identity_preserved": true,
+  "final_cloud_records": 6,
+  "final_records_per_hospital": 3,
+  "exact_target_images_verified": true,
+  "cleanup": "passed",
+  "result": "passed",
+  "date": "2026-10-24",
+  "base_commit": "68c097ba8eeb2c2ffd88f9d03a8874c3f8f22c4b",
+  "source_state": "Base plus uncommitted deployment-only helpers, tests, CI and documentation; application source unchanged",
+  "environment": {
+    "host": "Windows / Docker Desktop Linux engine 29.5.2",
+    "rehearsal_host_python": "3.14.0",
+    "application_and_unit_python": "3.11.17"
+  },
+  "unit_tests": {
+    "passed": 424,
+    "checkpoint_cases": 16,
+    "warnings": 1,
+    "warning_scope": "Existing Starlette TestClient deprecation"
+  },
+  "commands": {
+    "rehearsal": "python infrastructure/scripts/rehearse_update.py --report NEW_PRIVATE_REPORT.json",
+    "units": "python -m pytest tests/unit -q -p no:cacheprovider --basetemp /tmp/release-check-pytest"
+  },
+  "sha256": {
+    "infrastructure/scripts/release_checkpoint.py": "6080978bcd70856d12560b5e394f5419a10c6e9e1e1a8e1fbf7e92ec4e79a298",
+    "infrastructure/scripts/rehearse_update.py": "4d2f9989d31ed5907523a7fe52bf8e86706166e376377276a54a20ae26313370",
+    "tests/unit/test_release_checkpoint.py": "1452da2a07433f1c8ef4e94031c9b2d251e95d01f12944e42450685aa5de3b96"
+  },
+  "raw_log_sha256": "c9c7aea06f5311d734e718ab9631209f9720228165de9da18a04e9fea74e2c59",
+  "unit_log_sha256": "78d41c4a59e61334f7ef21f554ddf2b2b5e38a1df4cfb701078cb837a3301b29",
+  "cleanup_inventory": {
+    "containers": 0,
+    "volumes": 0,
+    "networks": 0,
+    "labeled_images": 0
+  },
+  "limitations": [
+    "Same application source; compatible candidate differs by image label only",
+    "Broken candidate exits before application startup",
+    "No arbitrary migration compatibility, zero-downtime or atomic multi-host claim",
+    "No live database restoration",
+    "No AWS usage or new hosted CI result"
+  ]
+}

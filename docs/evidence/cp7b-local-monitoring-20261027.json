@@ -1,0 +1,47 @@
+{
+  "project": "cg-metaguard-41f79711c3cc",
+  "controller_url": "http://127.0.0.1:57663",
+  "dashboard_url": "http://127.0.0.1:57669",
+  "response": {
+    "hospitals": {
+      "hospital-a": {
+        "status": "available",
+        "enabled": true,
+        "cloud_reachable": true,
+        "last_check_at": "2026-10-27T11:05:44.593943+00:00",
+        "last_reconnected_at": "2026-10-27T11:02:09.549969+00:00",
+        "drain_completed_at": "2026-10-27T11:03:03.476555+00:00",
+        "last_replay_at": "2026-10-27T11:03:03.476224+00:00",
+        "last_replay_attempted": 1,
+        "last_replay_applied": 1,
+        "replayable_backlog": 0
+      },
+      "hospital-b": {
+        "status": "available",
+        "enabled": true,
+        "cloud_reachable": true,
+        "last_check_at": "2026-10-27T11:05:44.436926+00:00",
+        "last_reconnected_at": "2026-10-27T11:02:42.171778+00:00",
+        "drain_completed_at": "2026-10-27T11:03:13.369006+00:00",
+        "last_replay_at": "2026-10-27T11:03:13.368712+00:00",
+        "last_replay_attempted": 1,
+        "last_replay_applied": 1,
+        "replayable_backlog": 0
+      }
+    },
+    "controller": {
+      "status": "available",
+      "enabled": true,
+      "state": "Normal",
+      "state_since": "2026-10-27T11:02:43.720057+00:00",
+      "observed_at": "2026-10-27T11:05:47.258483+00:00",
+      "server_time": "2026-10-27T11:05:47.942292+00:00",
+      "rate_rps": 2.0,
+      "inflight_limit": 4,
+      "healthy_samples": 0,
+      "allowed": 100,
+      "denied": 1109
+    }
+  },
+  "credentials": "private ignored local-aimd configuration only; not exported"
+}

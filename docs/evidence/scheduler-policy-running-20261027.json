@@ -1,0 +1,280 @@
+{
+  "project": "cg-scheduler-demo-a3a9f1",
+  "scope": "isolated running Docker stack; synthetic data only",
+  "started_at": "2026-10-27T15:55:16.640746+00:00",
+  "checks": [
+    {
+      "name": "all eight isolated services running; seven HTTP endpoints healthy",
+      "passed": true
+    },
+    {
+      "name": "dashboard serves prerequisite field and updated Inspector wait explanation",
+      "passed": true
+    },
+    {
+      "name": "unsent A has a real issued grant",
+      "passed": true
+    },
+    {
+      "name": "Inspector selects independent C while unsent A is delayed",
+      "passed": true
+    },
+    {
+      "name": "dependent B stays ineligible",
+      "passed": true
+    },
+    {
+      "name": "real hospital replay applies C only",
+      "passed": true
+    },
+    {
+      "name": "old A grant is safely retired",
+      "passed": true
+    },
+    {
+      "name": "Cloud has C, but neither A nor dependent B yet",
+      "passed": true
+    },
+    {
+      "name": "A then B apply after A becomes available",
+      "passed": true
+    },
+    {
+      "name": "running hospital logs prove executed order C, A, B",
+      "passed": true
+    },
+    {
+      "name": "lost response sends A once and does not send C",
+      "passed": true
+    },
+    {
+      "name": "Inspector accurately explains uncertain-A wait",
+      "passed": true
+    },
+    {
+      "name": "Cloud applied uncertain A exactly once; C remains unsent",
+      "passed": true
+    },
+    {
+      "name": "reconciliation resolves A and releases C",
+      "passed": true
+    },
+    {
+      "name": "all five Hospital A events have one Cloud record each",
+      "passed": true
+    },
+    {
+      "name": "Hospital B grant-based replay also works",
+      "passed": true
+    },
+    {
+      "name": "both hospital queues finish applied",
+      "passed": true
+    },
+    {
+      "name": "final Inspector has no pending selection",
+      "passed": true
+    },
+    {
+      "name": "original container preserved: /crisisguard-local-hospital-a-1",
+      "passed": true
+    },
+    {
+      "name": "original container preserved: /crisisguard-local-hospital-b-1",
+      "passed": true
+    },
+    {
+      "name": "original container preserved: /crisisguard-local-dashboard-1",
+      "passed": true
+    },
+    {
+      "name": "original container preserved: /crisisguard-local-admin-1",
+      "passed": true
+    },
+    {
+      "name": "original container preserved: /crisisguard-local-emergency-1",
+      "passed": true
+    },
+    {
+      "name": "original container preserved: /crisisguard-local-patient-1",
+      "passed": true
+    },
+    {
+      "name": "original container preserved: /crisisguard-local-postgres-1",
+      "passed": true
+    },
+    {
+      "name": "original container preserved: /hospital_postgres",
+      "passed": true
+    },
+    {
+      "name": "original container preserved: /hospital_redis",
+      "passed": true
+    },
+    {
+      "name": "original container preserved: /hospital_mongodb",
+      "passed": true
+    }
+  ],
+  "snapshots": {
+    "unsent_preview": {
+      "inheritance_enabled": true,
+      "evaluated_at": "2026-10-27T15:55:20.817246+00:00",
+      "next_event_id": "INDEPENDENT_C",
+      "events": [
+        {
+          "event_id": "UNSENT_A",
+          "created_at": "2026-10-27T15:55:19.620362+00:00",
+          "base_priority": 1,
+          "aged_priority": 1,
+          "effective_priority": 5,
+          "inherited_from": "DEPENDENT_B",
+          "prerequisite_ids": [],
+          "waiting_on": [],
+          "eligible": false,
+          "reason": "Waiting for retry deadline",
+          "selected": false,
+          "dependency_eligible": false
+        },
+        {
+          "event_id": "DEPENDENT_B",
+          "created_at": "2026-10-27T15:55:19.662806+00:00",
+          "base_priority": 5,
+          "aged_priority": 5,
+          "effective_priority": 5,
+          "inherited_from": null,
+          "prerequisite_ids": [
+            "UNSENT_A"
+          ],
+          "waiting_on": [
+            "UNSENT_A"
+          ],
+          "eligible": false,
+          "reason": "Waiting for prerequisite acknowledgement",
+          "selected": false,
+          "dependency_eligible": false
+        },
+        {
+          "event_id": "INDEPENDENT_C",
+          "created_at": "2026-10-27T15:55:19.728704+00:00",
+          "base_priority": 3,
+          "aged_priority": 3,
+          "effective_priority": 3,
+          "inherited_from": null,
+          "prerequisite_ids": [],
+          "waiting_on": [],
+          "eligible": true,
+          "reason": "Eligible",
+          "selected": true,
+          "dependency_eligible": true
+        }
+      ],
+      "scheduler_next_event_id": "INDEPENDENT_C",
+      "metaguard_enabled": true,
+      "outstanding_event_id": null,
+      "replay_wait_reason": null,
+      "pending_count": 3,
+      "warning": "Read-only snapshot. Concurrent replay or capture may change the next scheduling decision. Controller grants/admission can still defer transmission. Inheritance OFF is a comparison only."
+    },
+    "unsent_replay": {
+      "total_attempted": 1,
+      "applied": 1,
+      "results": [
+        {
+          "event_id": "INDEPENDENT_C",
+          "status": "applied"
+        }
+      ]
+    },
+    "dependency_replay": {
+      "total_attempted": 2,
+      "applied": 2,
+      "results": [
+        {
+          "event_id": "UNSENT_A",
+          "status": "applied"
+        },
+        {
+          "event_id": "DEPENDENT_B",
+          "status": "applied"
+        }
+      ]
+    },
+    "lost_response_attempt": {
+      "send_calls": [
+        "UNCERTAIN_A"
+      ],
+      "results": [
+        {
+          "event_id": "UNCERTAIN_A",
+          "status": "pending",
+          "retry_delay_seconds": 2,
+          "error": "Synthetic lost response after successful Cloud application"
+        }
+      ]
+    },
+    "uncertain_preview": {
+      "inheritance_enabled": true,
+      "evaluated_at": "2026-10-27T15:55:23.308947+00:00",
+      "next_event_id": null,
+      "events": [
+        {
+          "event_id": "UNCERTAIN_A",
+          "created_at": "2026-10-27T15:55:22.114658+00:00",
+          "base_priority": 5,
+          "aged_priority": 5,
+          "effective_priority": 5,
+          "inherited_from": null,
+          "prerequisite_ids": [],
+          "waiting_on": [],
+          "eligible": false,
+          "reason": "Waiting for retry deadline",
+          "selected": false,
+          "dependency_eligible": false
+        },
+        {
+          "event_id": "WAITING_C",
+          "created_at": "2026-10-27T15:55:22.145244+00:00",
+          "base_priority": 3,
+          "aged_priority": 3,
+          "effective_priority": 3,
+          "inherited_from": null,
+          "prerequisite_ids": [],
+          "waiting_on": [],
+          "eligible": false,
+          "reason": "Waiting for outstanding MetaGuard event UNCERTAIN_A",
+          "selected": false,
+          "dependency_eligible": true
+        }
+      ],
+      "scheduler_next_event_id": "WAITING_C",
+      "metaguard_enabled": true,
+      "outstanding_event_id": "UNCERTAIN_A",
+      "replay_wait_reason": "Waiting for outstanding MetaGuard event UNCERTAIN_A",
+      "pending_count": 2,
+      "warning": "Read-only snapshot. Concurrent replay or capture may change the next scheduling decision. Controller grants/admission can still defer transmission. Inheritance OFF is a comparison only."
+    },
+    "reconciled_replay": {
+      "total_attempted": 2,
+      "applied": 2,
+      "results": [
+        {
+          "event_id": "UNCERTAIN_A",
+          "status": "applied"
+        },
+        {
+          "event_id": "WAITING_C",
+          "status": "applied"
+        }
+      ]
+    }
+  },
+  "dashboard_url": "http://127.0.0.1:32776",
+  "executed_selection_order": [
+    "INDEPENDENT_C",
+    "UNSENT_A",
+    "DEPENDENT_B"
+  ],
+  "passed": true,
+  "finished_at": "2026-10-27T15:55:25.629705+00:00"
+}

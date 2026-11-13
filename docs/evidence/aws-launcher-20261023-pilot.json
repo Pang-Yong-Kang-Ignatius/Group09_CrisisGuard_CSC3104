@@ -1,0 +1,189 @@
+{
+  "date": "2026-10-23",
+  "region": "us-east-1",
+  "pilot_stack": "crisisguard-pilot-20261023",
+  "launch_started_at_utc": "2026-10-23T13:50:23+00:00",
+  "stack_status": "CREATE_COMPLETE",
+  "source": {
+    "base_commit": "d8978a72dab942072f3192de80c7b235b39c6ce0",
+    "candidate_changes": [
+      "infrastructure/aws/bootstrap_lab.sh"
+    ],
+    "bootstrap_sha256": "2d5e12b7fa48d380c757e3ebc4744b9aadd976754f633c97e9c8ad193ba640d8",
+    "archive_sha256": "bf94d27cd95ac332685f74a5b21f967e35b0061a06dca184db7c5d86c8009c89"
+  },
+  "archive_note": "Pilot used HEAD plus the uncommitted bootstrap candidate, without committing or changing the user branch. Teammates must commit/push the launcher files before using git archive HEAD.",
+  "resources": {
+    "ec2": {
+      "t3.small": 1,
+      "t3.micro": 2
+    },
+    "ebs_gib": 52,
+    "security_groups": 2,
+    "private_source_bucket": 1,
+    "iam_resources_created": 0
+  },
+  "launcher_commands_verified": [
+    "preview",
+    "plan",
+    "launch",
+    "status",
+    "stop"
+  ],
+  "latest_launcher_capacity_guard": {
+    "active_instances": 0,
+    "active_vcpus": 0,
+    "planned_instances": 3,
+    "planned_vcpus": 6,
+    "live_read_only_plan": "passed",
+    "focused_unit_tests_passed": 24
+  },
+  "hospitals": [
+    {
+      "checked_at_utc": "2026-10-23T14:09:02.349539+00:00",
+      "site": "Hospital_A",
+      "automatic_replay": true,
+      "all_service_health": {
+        "patient": true,
+        "emergency": true,
+        "admin": true
+      },
+      "events": [
+        {
+          "event_id": "TX_LAUNCH_A_20261023_01",
+          "event_type": "patient_registration",
+          "cloud_port": 8001,
+          "local_status": "applied",
+          "cloud_status": "applied",
+          "duplicate_http": 200
+        },
+        {
+          "event_id": "TX_LAUNCH_A_20261023_02",
+          "event_type": "encounter_creation",
+          "cloud_port": 8001,
+          "local_status": "applied",
+          "cloud_status": "applied",
+          "duplicate_http": 200
+        },
+        {
+          "event_id": "TX_LAUNCH_A_20261023_03",
+          "event_type": "emergency_record",
+          "cloud_port": 8003,
+          "local_status": "applied",
+          "cloud_status": "applied",
+          "duplicate_http": 200
+        },
+        {
+          "event_id": "TX_LAUNCH_A_20261023_04",
+          "event_type": "patient_discharge",
+          "cloud_port": 8004,
+          "local_status": "applied",
+          "cloud_status": "applied",
+          "duplicate_http": 200
+        }
+      ],
+      "wrong_site_http": 403,
+      "result": "passed"
+    },
+    {
+      "checked_at_utc": "2026-10-23T14:07:51.151930+00:00",
+      "site": "Hospital_B",
+      "automatic_replay": true,
+      "all_service_health": {
+        "patient": true,
+        "emergency": true,
+        "admin": true
+      },
+      "events": [
+        {
+          "event_id": "TX_LAUNCH_B_20261023_01",
+          "event_type": "patient_registration",
+          "cloud_port": 8001,
+          "local_status": "applied",
+          "cloud_status": "applied",
+          "duplicate_http": 200
+        },
+        {
+          "event_id": "TX_LAUNCH_B_20261023_02",
+          "event_type": "encounter_creation",
+          "cloud_port": 8001,
+          "local_status": "applied",
+          "cloud_status": "applied",
+          "duplicate_http": 200
+        },
+        {
+          "event_id": "TX_LAUNCH_B_20261023_03",
+          "event_type": "emergency_record",
+          "cloud_port": 8003,
+          "local_status": "applied",
+          "cloud_status": "applied",
+          "duplicate_http": 200
+        },
+        {
+          "event_id": "TX_LAUNCH_B_20261023_04",
+          "event_type": "patient_discharge",
+          "cloud_port": 8004,
+          "local_status": "applied",
+          "cloud_status": "applied",
+          "duplicate_http": 200
+        }
+      ],
+      "wrong_site_http": 403,
+      "result": "passed"
+    }
+  ],
+  "cloud": {
+    "checked_at_utc": "2026-10-23T14:10:01.262519+00:00",
+    "containers": [
+      {
+        "service": "admin",
+        "state": "running",
+        "health": "healthy"
+      },
+      {
+        "service": "emergency",
+        "state": "running",
+        "health": "healthy"
+      },
+      {
+        "service": "patient",
+        "state": "running",
+        "health": "healthy"
+      },
+      {
+        "service": "postgres",
+        "state": "running",
+        "health": "healthy"
+      }
+    ],
+    "database": {
+      "rows": 8,
+      "distinct_ids": 8,
+      "applied": 8,
+      "hospital_a": 4,
+      "hospital_b": 4
+    },
+    "result": "passed"
+  },
+  "stop_command": "passed; three pilot instances stopped",
+  "original_deployment": "same three instances stopped; application, databases, env files and security groups not modified",
+  "cleanup": {
+    "user_approved": true,
+    "status": "passed",
+    "pilot_stacks": "deleted",
+    "pilot_instances": "terminated",
+    "retained_pilot_disks": "three deleted; 52 GiB",
+    "pilot_source_bucket": "deleted",
+    "deletion_verified": true,
+    "temporary_credential_file_removed": true,
+    "original_instances": "all three stopped; disks retained",
+    "learner_lab": "Terminated; 00:00 verified in UI",
+    "lab_budget_display": "Used $1 of $50; delayed display, not a measured pilot cost"
+  },
+  "limitations": [
+    "No AWS network-partition or restart/resume experiment in this pilot",
+    "Hosted CI run still pending",
+    "No new full-unit-suite result"
+  ],
+  "evidence_saved_at_utc": "2026-10-23T14:15:37.667067+00:00"
+}

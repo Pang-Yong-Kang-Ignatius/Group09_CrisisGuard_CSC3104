@@ -1,0 +1,4 @@
+# Includes the host runtime requirements. The runners never install packages.
+-r requirements.txt
+# Optional coverage dependency.
+coverage>=7.6,<8

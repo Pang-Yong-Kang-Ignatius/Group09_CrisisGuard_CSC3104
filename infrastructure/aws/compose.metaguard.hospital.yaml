@@ -1,0 +1,8 @@
+# Opt in after compose.hospital.yaml and the existing AWS hospital override.
+services:
+  hospital:
+    environment:
+      METAGUARD_ENABLED: "1"
+      CONTROLLER_URL: ${CONTROLLER_URL:?Set the controller private endpoint}
+      HOSPITAL_CONTROLLER_TOKEN: ${HOSPITAL_CONTROLLER_TOKEN:?Set only this hospital's private token}
+      CLOUD_REPLAY_TELEMETRY_TOKEN: ${CLOUD_REPLAY_TELEMETRY_TOKEN:-}

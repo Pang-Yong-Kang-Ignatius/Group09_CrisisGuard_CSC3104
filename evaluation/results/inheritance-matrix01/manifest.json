@@ -1,0 +1,44 @@
+{
+  "case_count": 40,
+  "comparison": "paired_local_inheritance_off_vs_on",
+  "condition_count": 8,
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]"
+  },
+  "limitations": [
+    "Each site drains independently; backlog skew does not create cross-site contention.",
+    "Positions count selections, not seconds; acknowledgement is simulated immediate success.",
+    "Time is frozen at the snapshot; live traffic, grants and adaptive admission are absent.",
+    "Seed variation changes urgency placement and routine priorities; topology stays in the chain family.",
+    "Urgency is a fraction of workflows; depth changes workflow and urgent-terminal counts.",
+    "Seed min/max is observed spread, not a confidence interval or significance test.",
+    "Aggregates average paired per-seed p95 differences, not a pooled event p95."
+  ],
+  "matrix_config": {
+    "ageing_interval_seconds": 600,
+    "repetitions": 3,
+    "run_id": "haris-matrix01",
+    "seeds": [
+      3104,
+      3105,
+      3106,
+      3107,
+      3108
+    ],
+    "snapshot_at": "2026-10-21T00:00:00+00:00",
+    "total_events": 440,
+    "urgent_fraction": 0.2
+  },
+  "schema_version": 1,
+  "source_file_sha256": {
+    "edge/scheduler/dag.py": "e3862739ffbd2d3ca01840eb26df620f707f5a23046877f768a081eebbbd70f8",
+    "edge/scheduler/priority.py": "3f23a72846ff8a7296c14787ea6a8bd0cd6820c12169ab3c72d8a553719cdd13",
+    "edge/scheduler/scheduler.py": "947f4efe332b230c9af46f813287982ddfca11d2a5fc64f148c0df96d5a84b6f",
+    "edge/scheduler/session.py": "09e5f27b74d38b1635909c8776e54ab87c3c29463f3fd3431c5c6f9e6b44cbb8",
+    "evaluation/experiments/compare_inheritance.py": "dceab4ebb0a682c719a1375fac966db6e1b8cd3097cb29711ebb8737d775efe5",
+    "evaluation/experiments/run_inheritance_matrix.py": "7bf61db0bc0d5f61f37940fad74ba13c15be30bd084e134fc40ffa70c8eb6d27",
+    "evaluation/workloads/generate_workload.py": "9af13322986e76ad2a497f41415a9ffbb758a594bbe3da9692660564cd3308ee"
+  },
+  "status": "running"
+}

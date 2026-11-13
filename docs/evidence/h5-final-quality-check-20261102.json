@@ -1,0 +1,17 @@
+{
+  "source_hashes_verified": 44,
+  "strict_valid_trials": 0,
+  "diagnostic_generator_valid_trials": 40,
+  "comparisons_checked": 24,
+  "fixed_windows_checked": 20,
+  "links_checked": 37,
+  "new_broken_links": 0,
+  "historical_raw_links_unavailable": [
+    {
+      "file": "docs/TODO.md",
+      "target": "../evaluation/results/replacement-3108-constant-20261101-160903/submission-assessment.json"
+    }
+  ],
+  "archive_entries_verified": 104,
+  "archive_sha256": "d6321c46ea165bb1c07528d435465c61cd7cd07bb5e62c73036a5126f73cba6a"
+}

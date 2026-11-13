@@ -1,0 +1,230 @@
+{
+  "date": "2026-10-24",
+  "result": "passed",
+  "run_id": "cg-smoke-e33b8f168480",
+  "base_commit": "7a246ef4d37031968c04e2a399572a74cecff728",
+  "source_state": "Base commit plus uncommitted dashboard-smoke, assertion-test and documentation changes",
+  "smoke_script_sha256": "4035ccc21aa7a06305f560be79eebad6ed9da7e033d65ce7a2027d537534c562",
+  "raw_smoke_log_sha256": "12899c3166a350de64800d1d37aba26fe1ec30e2770583d02cf0c4ddae14c823",
+  "command": "python infrastructure/scripts/smoke_deployment.py",
+  "exit_code": 0,
+  "environment": {
+    "host": "Windows / Docker Desktop Linux engine 29.5.2",
+    "smoke_host_python": "3.14.0",
+    "application_and_full_unit_test_python": "3.11.17"
+  },
+  "dashboard": {
+    "port": "Fresh loopback host port per scenario; Compose port output asserted",
+    "health_and_assets": [
+      "/health",
+      "/",
+      "/static/app.js",
+      "/static/style.css"
+    ],
+    "api_endpoints": [
+      "/api/services",
+      "/api/hospitals",
+      "/api/history?limit=100",
+      "/api/metrics"
+    ],
+    "forwarding_failures_inside_http_200_rejected": true,
+    "exact_event_contents_and_site_isolation_checked": true,
+    "metrics": "Correct service identity, HTTP 200, healthy database, finite nonnegative values, consistent counters, positive totals for APIs exercised by event traffic; zero totals allowed after process restart",
+    "split_layout": "Dashboard added only to the generated test cloud override; production split and AWS files unchanged"
+  },
+  "scenarios": [
+    {
+      "layout": "combined",
+      "mode": "manual",
+      "result": "passed",
+      "dashboard_checkpoints": [
+        {
+          "cloud_apis": "healthy",
+          "hospital_events": 0,
+          "hospital_status": "applied",
+          "cloud_history_rows": 0
+        },
+        {
+          "cloud_apis": "unreachable",
+          "hospital_events": 2,
+          "hospital_status": "pending",
+          "cloud_history_rows": 0
+        },
+        {
+          "cloud_apis": "healthy",
+          "hospital_events": 2,
+          "hospital_status": "applied",
+          "cloud_history_rows": 2
+        }
+      ],
+      "events_per_site": 1,
+      "cloud_events": 2,
+      "backup_restore_checked": true,
+      "output": "PASS combined manual: capture during API outage, site isolation, scheduled replay, duplicate ACKs, pending/applied persistence, SQLite/PostgreSQL backup restoration and dashboard views/metrics"
+    },
+    {
+      "layout": "combined",
+      "mode": "automatic",
+      "result": "passed",
+      "dashboard_checkpoints": [
+        {
+          "cloud_apis": "healthy",
+          "hospital_events": 0,
+          "hospital_status": "applied",
+          "cloud_history_rows": 0
+        },
+        {
+          "cloud_apis": "unreachable",
+          "hospital_events": 8,
+          "hospital_status": "pending",
+          "cloud_history_rows": 0
+        },
+        {
+          "cloud_apis": "unreachable",
+          "hospital_events": 8,
+          "hospital_status": "pending",
+          "cloud_history_rows": 0
+        },
+        {
+          "cloud_apis": "healthy",
+          "hospital_events": 8,
+          "hospital_status": "applied",
+          "cloud_history_rows": 8
+        },
+        {
+          "cloud_apis": "healthy",
+          "hospital_events": 8,
+          "hospital_status": "applied",
+          "cloud_history_rows": 8
+        }
+      ],
+      "events_per_site": 4,
+      "cloud_events": 8,
+      "backup_restore_checked": false,
+      "manual_replay_used": false,
+      "recovery": {
+        "Hospital_A": {
+          "last_reconnected_at": "2026-10-24T13:04:59.139485+00:00",
+          "drain_completed_at": "2026-10-24T13:04:59.449471+00:00",
+          "replayable_backlog": 0
+        },
+        "Hospital_B": {
+          "last_reconnected_at": "2026-10-24T13:04:59.672281+00:00",
+          "drain_completed_at": "2026-10-24T13:04:59.907165+00:00",
+          "replayable_backlog": 0
+        }
+      },
+      "output": "PASS combined automatic: 8 events captured during API outage, pending queues survived hospital recreation, automatic three-service recovery without manual replay, dependency order, duplicate ACKs, applied persistence and dashboard views/metrics; {\"Hospital_A\": {\"last_reconnected_at\": \"2026-10-24T13:04:59.139485+00:00\", \"drain_completed_at\": \"2026-10-24T13:04:59.449471+00:00\", \"replayable_backlog\": 0}, \"Hospital_B\": {\"last_reconnected_at\": \"2026-10-24T13:04:59.672281+00:00\", \"drain_completed_at\": \"2026-10-24T13:04:59.907165+00:00\", \"replayable_backlog\": 0}}"
+    },
+    {
+      "layout": "split",
+      "mode": "manual",
+      "result": "passed",
+      "dashboard_checkpoints": [
+        {
+          "cloud_apis": "healthy",
+          "hospital_events": 0,
+          "hospital_status": "applied",
+          "cloud_history_rows": 0
+        },
+        {
+          "cloud_apis": "unreachable",
+          "hospital_events": 2,
+          "hospital_status": "pending",
+          "cloud_history_rows": 0
+        },
+        {
+          "cloud_apis": "healthy",
+          "hospital_events": 2,
+          "hospital_status": "applied",
+          "cloud_history_rows": 2
+        }
+      ],
+      "events_per_site": 1,
+      "cloud_events": 2,
+      "backup_restore_checked": true,
+      "output": "PASS split manual: capture during API outage, site isolation, scheduled replay, duplicate ACKs, pending/applied persistence, SQLite/PostgreSQL backup restoration and dashboard views/metrics"
+    },
+    {
+      "layout": "split",
+      "mode": "automatic",
+      "result": "passed",
+      "dashboard_checkpoints": [
+        {
+          "cloud_apis": "healthy",
+          "hospital_events": 0,
+          "hospital_status": "applied",
+          "cloud_history_rows": 0
+        },
+        {
+          "cloud_apis": "unreachable",
+          "hospital_events": 8,
+          "hospital_status": "pending",
+          "cloud_history_rows": 0
+        },
+        {
+          "cloud_apis": "unreachable",
+          "hospital_events": 8,
+          "hospital_status": "pending",
+          "cloud_history_rows": 0
+        },
+        {
+          "cloud_apis": "healthy",
+          "hospital_events": 8,
+          "hospital_status": "applied",
+          "cloud_history_rows": 8
+        },
+        {
+          "cloud_apis": "healthy",
+          "hospital_events": 8,
+          "hospital_status": "applied",
+          "cloud_history_rows": 8
+        }
+      ],
+      "events_per_site": 4,
+      "cloud_events": 8,
+      "backup_restore_checked": false,
+      "manual_replay_used": false,
+      "recovery": {
+        "Hospital_A": {
+          "last_reconnected_at": "2026-10-24T13:09:49.541911+00:00",
+          "drain_completed_at": "2026-10-24T13:09:56.476818+00:00",
+          "replayable_backlog": 0
+        },
+        "Hospital_B": {
+          "last_reconnected_at": "2026-10-24T13:09:50.112012+00:00",
+          "drain_completed_at": "2026-10-24T13:09:57.194690+00:00",
+          "replayable_backlog": 0
+        }
+      },
+      "output": "PASS split automatic: 8 events captured during API outage, pending queues survived hospital recreation, automatic three-service recovery without manual replay, dependency order, duplicate ACKs, applied persistence and dashboard views/metrics; {\"Hospital_A\": {\"last_reconnected_at\": \"2026-10-24T13:09:49.541911+00:00\", \"drain_completed_at\": \"2026-10-24T13:09:56.476818+00:00\", \"replayable_backlog\": 0}, \"Hospital_B\": {\"last_reconnected_at\": \"2026-10-24T13:09:50.112012+00:00\", \"drain_completed_at\": \"2026-10-24T13:09:57.194690+00:00\", \"replayable_backlog\": 0}}"
+    }
+  ],
+  "unit_tests": {
+    "full_suite_passed": 378,
+    "full_suite_elapsed_seconds": 13.66,
+    "new_dashboard_tests": 18,
+    "focused_dashboard_and_automatic_tests_passed": 34,
+    "full_suite_execution": "Application image; repository mounted read-only; python -m pytest tests/unit -q -p no:cacheprovider --basetemp /tmp/dashboard-smoke-pytest",
+    "warning_count": 1,
+    "warning": "Existing Starlette TestClient/httpx deprecation"
+  },
+  "cleanup": {
+    "result": "passed",
+    "remaining_generated_resources": {
+      "volumes": [],
+      "image": [],
+      "containers": [],
+      "networks": []
+    }
+  },
+  "aws_used": false,
+  "hosted_ci_run": false,
+  "limitations": [
+    "HTTP integration and packaged assets, not browser rendering or visual layout",
+    "Local cloud API outage, not a network partition or performance benchmark",
+    "No authentication or controller-grant completion claim",
+    "Native Linux host networking awaits hosted CI after push"
+  ]
+}
+

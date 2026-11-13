@@ -1,0 +1,122 @@
+{
+  "date": "2026-10-23",
+  "result": "passed",
+  "run_id": "cg-smoke-d87cd8c1be4f",
+  "base_commit": "17ef97fc8d2591205f63c9cac45149307b4304a9",
+  "source_state": "Base commit plus uncommitted smoke-test, unit-test and documentation changes",
+  "smoke_script_sha256": "6a18474c3e53eb106fe9aab5c1a0d90ca667b6eda031acda5e28580cc363e1e5",
+  "environment": {
+    "host": "Windows / Docker Desktop Linux engine 29.5.2",
+    "host_python": "3.14.0",
+    "application_image_base": "python:3.11-slim"
+  },
+  "command": "python infrastructure/scripts/smoke_deployment.py",
+  "smoke_exit_code": 0,
+  "scenarios": [
+    {
+      "layout": "combined",
+      "mode": "manual",
+      "result": "passed",
+      "events_per_site": 1,
+      "cloud_event_count": 2,
+      "manual_replay_invoked": true,
+      "backup_restore_checked": true
+    },
+    {
+      "layout": "combined",
+      "mode": "automatic",
+      "result": "passed",
+      "events_per_site": 4,
+      "cloud_event_count": 8,
+      "manual_replay_invoked": false,
+      "backup_restore_checked": false,
+      "recovery": {
+        "Hospital_A": {
+          "last_reconnected_at": "2026-10-23T15:21:14.806928+00:00",
+          "drain_completed_at": "2026-10-23T15:21:15.030135+00:00",
+          "replayable_backlog": 0
+        },
+        "Hospital_B": {
+          "last_reconnected_at": "2026-10-23T15:21:14.549003+00:00",
+          "drain_completed_at": "2026-10-23T15:21:14.793484+00:00",
+          "replayable_backlog": 0
+        }
+      }
+    },
+    {
+      "layout": "split",
+      "mode": "manual",
+      "result": "passed",
+      "events_per_site": 1,
+      "cloud_event_count": 2,
+      "manual_replay_invoked": true,
+      "backup_restore_checked": true
+    },
+    {
+      "layout": "split",
+      "mode": "automatic",
+      "result": "passed",
+      "events_per_site": 4,
+      "cloud_event_count": 8,
+      "manual_replay_invoked": false,
+      "backup_restore_checked": false,
+      "recovery": {
+        "Hospital_A": {
+          "last_reconnected_at": "2026-10-23T15:24:54.945168+00:00",
+          "drain_completed_at": "2026-10-23T15:25:01.934614+00:00",
+          "replayable_backlog": 0
+        },
+        "Hospital_B": {
+          "last_reconnected_at": "2026-10-23T15:24:54.988017+00:00",
+          "drain_completed_at": "2026-10-23T15:25:01.943602+00:00",
+          "replayable_backlog": 0
+        }
+      }
+    }
+  ],
+  "automatic_assertions": [
+    "All three service health states observed offline before recovery",
+    "Four-event dependency chain captured at each hospital while APIs stopped",
+    "Four pending records per site survived hospital container recreation",
+    "Cloud ledger remained empty before API restoration",
+    "Background loop restored all eight events without manual replay",
+    "Full event contents and per-hospital isolation preserved",
+    "Cross-service event lookups and dependency application order verified",
+    "Eight identical retries returned already_applied and left all cloud rows unchanged",
+    "Applied local and cloud records survived subsequent recreation"
+  ],
+  "unit_tests": {
+    "command": "python -m pytest tests/unit -q --basetemp DEDICATED_TEST_DIRECTORY",
+    "passed": 342,
+    "elapsed_seconds": 12.04,
+    "new_smoke_assertion_tests": 16,
+    "focused_smoke_and_backup_tests_passed": 25,
+    "warnings": 1,
+    "warning_summary": "Existing Starlette TestClient/httpx deprecation warning",
+    "note": "An initial restricted full-suite attempt stalled and was stopped; the complete rerun passed with a 45-second diagnostic watchdog that did not trigger."
+  },
+  "cleanup": {
+    "remaining_generated_resources": {
+      "image": [],
+      "volumes": [],
+      "containers": [],
+      "networks": []
+    },
+    "result": "passed",
+    "existing_user_projects_used": false
+  },
+  "aws_used": false,
+  "hosted_ci_run": false,
+  "limitations": [
+    "Local cloud API process outage, not a packet-level network partition",
+    "No controller-grant, lost-ACK or performance benchmark claim",
+    "Docker execution verified on Windows Docker Desktop; native Linux hosted CI remains to run after push"
+  ],
+  "pass_output": [
+    "PASS combined manual: capture during API outage, site isolation, scheduled replay, duplicate ACKs, pending/applied persistence and SQLite/PostgreSQL backup restoration",
+    "PASS combined automatic: 8 events captured during API outage, pending queues survived hospital recreation, automatic three-service recovery without manual replay, dependency order, duplicate ACKs and applied persistence; {\"Hospital_A\": {\"last_reconnected_at\": \"2026-10-23T15:21:14.806928+00:00\", \"drain_completed_at\": \"2026-10-23T15:21:15.030135+00:00\", \"replayable_backlog\": 0}, \"Hospital_B\": {\"last_reconnected_at\": \"2026-10-23T15:21:14.549003+00:00\", \"drain_completed_at\": \"2026-10-23T15:21:14.793484+00:00\", \"replayable_backlog\": 0}}",
+    "PASS split manual: capture during API outage, site isolation, scheduled replay, duplicate ACKs, pending/applied persistence and SQLite/PostgreSQL backup restoration",
+    "PASS split automatic: 8 events captured during API outage, pending queues survived hospital recreation, automatic three-service recovery without manual replay, dependency order, duplicate ACKs and applied persistence; {\"Hospital_A\": {\"last_reconnected_at\": \"2026-10-23T15:24:54.945168+00:00\", \"drain_completed_at\": \"2026-10-23T15:25:01.934614+00:00\", \"replayable_backlog\": 0}, \"Hospital_B\": {\"last_reconnected_at\": \"2026-10-23T15:24:54.988017+00:00\", \"drain_completed_at\": \"2026-10-23T15:25:01.943602+00:00\", \"replayable_backlog\": 0}}"
+  ]
+}
+

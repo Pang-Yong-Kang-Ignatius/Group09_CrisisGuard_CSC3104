@@ -1,0 +1,494 @@
+{
+  "comparisons": [
+    {
+      "condition": "ratio1-1_depth3_balanced",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "scheduler",
+      "site": "Hospital_A",
+      "metric": "urgent_post_reconnect_p95_upper_seconds",
+      "target_max": -10,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "mean_policy_minus_rr_on": null,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null
+      },
+      "excluded_pairs": 10,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "scheduler",
+      "site": "Hospital_A",
+      "metric": "routine_post_reconnect_p95_upper_seconds",
+      "target_max": 20,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "mean_policy_minus_rr_on": null,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null
+      },
+      "excluded_pairs": 10,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "scheduler",
+      "site": "Hospital_A",
+      "metric": "cloud_drain_upper_seconds",
+      "target_max": 20,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "mean_policy_minus_rr_on": null,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null
+      },
+      "excluded_pairs": 10,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "scheduler",
+      "site": "Hospital_A",
+      "metric": "client_live_slo_violation_rate",
+      "target_max": 1,
+      "units": "percentage points",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "mean_policy_minus_rr_on": null,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null
+      },
+      "excluded_pairs": 10,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "scheduler",
+      "site": "Hospital_B",
+      "metric": "urgent_post_reconnect_p95_upper_seconds",
+      "target_max": -10,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "mean_policy_minus_rr_on": null,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null
+      },
+      "excluded_pairs": 10,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "scheduler",
+      "site": "Hospital_B",
+      "metric": "routine_post_reconnect_p95_upper_seconds",
+      "target_max": 20,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "mean_policy_minus_rr_on": null,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null
+      },
+      "excluded_pairs": 10,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "scheduler",
+      "site": "Hospital_B",
+      "metric": "cloud_drain_upper_seconds",
+      "target_max": 20,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "mean_policy_minus_rr_on": null,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null
+      },
+      "excluded_pairs": 10,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "scheduler",
+      "site": "Hospital_B",
+      "metric": "client_live_slo_violation_rate",
+      "target_max": 1,
+      "units": "percentage points",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "mean_policy_minus_rr_on": null,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null
+      },
+      "excluded_pairs": 10,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "admission",
+      "site": "Hospital_A",
+      "metric": "urgent_post_reconnect_p95_upper_seconds",
+      "target_max": -10,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "mean_policy_minus_rr_on": null,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null
+      },
+      "excluded_pairs": 10,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "admission",
+      "site": "Hospital_A",
+      "metric": "routine_post_reconnect_p95_upper_seconds",
+      "target_max": 20,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "mean_policy_minus_rr_on": null,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null
+      },
+      "excluded_pairs": 10,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "admission",
+      "site": "Hospital_A",
+      "metric": "cloud_drain_upper_seconds",
+      "target_max": 20,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "mean_policy_minus_rr_on": null,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null
+      },
+      "excluded_pairs": 10,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "admission",
+      "site": "Hospital_A",
+      "metric": "client_live_slo_violation_rate",
+      "target_max": 1,
+      "units": "percentage points",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "mean_policy_minus_rr_on": null,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null
+      },
+      "excluded_pairs": 10,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "admission",
+      "site": "Hospital_B",
+      "metric": "urgent_post_reconnect_p95_upper_seconds",
+      "target_max": -10,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "mean_policy_minus_rr_on": null,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null
+      },
+      "excluded_pairs": 10,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "admission",
+      "site": "Hospital_B",
+      "metric": "routine_post_reconnect_p95_upper_seconds",
+      "target_max": 20,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "mean_policy_minus_rr_on": null,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null
+      },
+      "excluded_pairs": 10,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "admission",
+      "site": "Hospital_B",
+      "metric": "cloud_drain_upper_seconds",
+      "target_max": 20,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "mean_policy_minus_rr_on": null,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null
+      },
+      "excluded_pairs": 10,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "admission",
+      "site": "Hospital_B",
+      "metric": "client_live_slo_violation_rate",
+      "target_max": 1,
+      "units": "percentage points",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "mean_policy_minus_rr_on": null,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null
+      },
+      "excluded_pairs": 10,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced",
+      "policy": "bounded_on",
+      "admission": "constant",
+      "comparison": "scheduler",
+      "site": "Hospital_A",
+      "metric": "urgent_post_reconnect_p95_upper_seconds",
+      "target_max": -10,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "mean_policy_minus_rr_on": null,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null
+      },
+      "excluded_pairs": 10,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced",
+      "policy": "bounded_on",
+      "admission": "constant",
+      "comparison": "scheduler",
+      "site": "Hospital_A",
+      "metric": "routine_post_reconnect_p95_upper_seconds",
+      "target_max": 20,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "mean_policy_minus_rr_on": null,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null
+      },
+      "excluded_pairs": 10,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced",
+      "policy": "bounded_on",
+      "admission": "constant",
+      "comparison": "scheduler",
+      "site": "Hospital_A",
+      "metric": "cloud_drain_upper_seconds",
+      "target_max": 20,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "mean_policy_minus_rr_on": null,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null
+      },
+      "excluded_pairs": 10,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced",
+      "policy": "bounded_on",
+      "admission": "constant",
+      "comparison": "scheduler",
+      "site": "Hospital_A",
+      "metric": "client_live_slo_violation_rate",
+      "target_max": 1,
+      "units": "percentage points",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "mean_policy_minus_rr_on": null,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null
+      },
+      "excluded_pairs": 10,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced",
+      "policy": "bounded_on",
+      "admission": "constant",
+      "comparison": "scheduler",
+      "site": "Hospital_B",
+      "metric": "urgent_post_reconnect_p95_upper_seconds",
+      "target_max": -10,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "mean_policy_minus_rr_on": null,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null
+      },
+      "excluded_pairs": 10,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced",
+      "policy": "bounded_on",
+      "admission": "constant",
+      "comparison": "scheduler",
+      "site": "Hospital_B",
+      "metric": "routine_post_reconnect_p95_upper_seconds",
+      "target_max": 20,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "mean_policy_minus_rr_on": null,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null
+      },
+      "excluded_pairs": 10,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced",
+      "policy": "bounded_on",
+      "admission": "constant",
+      "comparison": "scheduler",
+      "site": "Hospital_B",
+      "metric": "cloud_drain_upper_seconds",
+      "target_max": 20,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "mean_policy_minus_rr_on": null,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null
+      },
+      "excluded_pairs": 10,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced",
+      "policy": "bounded_on",
+      "admission": "constant",
+      "comparison": "scheduler",
+      "site": "Hospital_B",
+      "metric": "client_live_slo_violation_rate",
+      "target_max": 1,
+      "units": "percentage points",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "mean_policy_minus_rr_on": null,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null
+      },
+      "excluded_pairs": 10,
+      "observer_relative_interval": null,
+      "status": "not established"
+    }
+  ],
+  "correctness": {
+    "status": "not established",
+    "reason": "Passing functional trials check event sets, dependency and grant order; duplicate domain effects and complete grant-bound eligibility coverage require separate witnesses."
+  },
+  "fairness": {
+    "status": "not established",
+    "reason": "Per-site metrics report grant/completion/cost shares, retries, sampled bounds, CPU and memory. Finite-prefix fairness is not a sustained fairness guarantee."
+  },
+  "full_D2_D3": "not established: requires reviewed sustainable representative capacity, preregistered skewed dependency case, complete matrix and correctness witnesses",
+  "uncertainty_note": "Seed is the unit; bootstrap and exact sign-flip uncertainty are separate from observer intervals. Targets use point estimates, not a significance claim."
+}

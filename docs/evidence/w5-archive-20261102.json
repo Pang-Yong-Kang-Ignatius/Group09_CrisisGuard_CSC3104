@@ -1,0 +1,14 @@
+{
+  "archive": "[REDACTED_LOCAL_PATH]\\evaluation\\results\\w5-evidence-20261102.zip",
+  "bytes": 8353809,
+  "sha256": "b90c7368e536ecf8b942ba4adbe81f4e6093bfcf7c31477bfca36d6ee24ae6f1",
+  "entries": 266,
+  "archive_readback_verified": true,
+  "excludes": [
+    "private Compose configurations",
+    "commands.log",
+    "credentials",
+    "database volume binaries"
+  ],
+  "retention": "All test database volumes remain in Docker; local archive is not an off-machine backup."
+}

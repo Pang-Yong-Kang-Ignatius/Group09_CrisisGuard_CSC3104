@@ -1,0 +1,265 @@
+{
+  "run": "cg-meta-deploy-7caaaac189fa",
+  "aws_used": false,
+  "checks": [
+    "Three real AWS Compose configurations pass private-listener, credential, persistence and restart audits",
+    "Independent Hospital A/B projects replay eight dependent events through authenticated private controller/Cloud endpoints",
+    "Controller restart automatically reconciles committed uncertain work across the hospital boundary without reissue",
+    "PostgreSQL persistence/outage recovery and missing-endpoint adaptive Recovery/Normal transitions pass across split projects",
+    "Each hospital independently loses APIs/controller while the other applies records; pending data survives restart and drains after reconnection",
+    "AIMD to fixed policy backout retains controller image, PostgreSQL, prior events and protected replay",
+    "Cloud and both hospital exports pass copied-file checksums and isolated restores",
+    "Selected regressions: 153 passed",
+    "Existing resource states, volumes and images preserved; disposable projects removed"
+  ],
+  "events_applied": 29,
+  "admission": {
+    "enabled": true,
+    "state": "Normal",
+    "reason": "healthy",
+    "state_since": "2026-11-01T05:26:59.836986+00:00",
+    "observed_at": "2026-11-01T05:27:00.888732+00:00",
+    "server_time": "2026-11-01T05:27:01.050222+00:00",
+    "healthy_samples": 0,
+    "rate_rps": 1.0999999999999999,
+    "policy": "aimd",
+    "telemetry_fresh": true,
+    "inflight_limit": 4,
+    "next_issue_at": "2026-11-01T05:26:48.485896+00:00",
+    "next_ack_at": "2026-11-01T05:26:48.616174+00:00",
+    "allowed": 22,
+    "denied": 11,
+    "last_decision": {
+      "at": "2026-11-01T05:26:48.116174+00:00",
+      "phase": "ack",
+      "state": "Caution",
+      "reason": "admitted",
+      "allowed": true,
+      "inflight": 0,
+      "rate_rps": 2.0,
+      "inflight_limit": 2
+    },
+    "metrics": {
+      "admin": {
+        "service": "admin",
+        "error_rate": 0.0,
+        "sampled_at": "2026-11-01T05:27:00.889097+00:00",
+        "p95_latency_ms": null,
+        "throughput_rps": 0.0,
+        "total_requests": 0,
+        "uptime_seconds": 7.46,
+        "window_seconds": 60,
+        "failed_requests": 0,
+        "window_requests": 0,
+        "database_healthy": true,
+        "average_latency_ms": 0.0,
+        "in_flight_requests": 0,
+        "live_p95_latency_ms": null,
+        "observation_seconds": 7.464245,
+        "executor_queue_depth": 0,
+        "latency_sample_count": 0,
+        "executor_worker_limit": 40,
+        "live_slo_threshold_ms": null,
+        "executor_active_workers": 0,
+        "executor_queue_pressure": 0.0,
+        "live_slo_violation_rate": null,
+        "live_slo_violation_count": null,
+        "executor_queue_sampled_at": "2026-11-01T05:27:00.889151+00:00",
+        "live_latency_sample_count": 0,
+        "replay_latency_sample_count": 0,
+        "unclassified_latency_sample_count": 0
+      },
+      "patient": {
+        "service": "patient",
+        "error_rate": 0.0,
+        "sampled_at": "2026-11-01T05:27:00.889260+00:00",
+        "p95_latency_ms": 34.02,
+        "throughput_rps": 0.05,
+        "total_requests": 7,
+        "uptime_seconds": 86.82,
+        "window_seconds": 60,
+        "failed_requests": 0,
+        "window_requests": 3,
+        "database_healthy": true,
+        "average_latency_ms": 25.5,
+        "in_flight_requests": 0,
+        "live_p95_latency_ms": null,
+        "observation_seconds": 60,
+        "executor_queue_depth": 0,
+        "latency_sample_count": 3,
+        "executor_worker_limit": 40,
+        "live_slo_threshold_ms": null,
+        "executor_active_workers": 0,
+        "executor_queue_pressure": 0.0,
+        "live_slo_violation_rate": null,
+        "live_slo_violation_count": null,
+        "executor_queue_sampled_at": "2026-11-01T05:27:00.889314+00:00",
+        "live_latency_sample_count": 0,
+        "replay_latency_sample_count": 0,
+        "unclassified_latency_sample_count": 3
+      },
+      "emergency": {
+        "service": "emergency",
+        "error_rate": 0.0,
+        "sampled_at": "2026-11-01T05:27:00.888732+00:00",
+        "p95_latency_ms": null,
+        "throughput_rps": 0.0,
+        "total_requests": 2,
+        "uptime_seconds": 81.03,
+        "window_seconds": 60,
+        "failed_requests": 0,
+        "window_requests": 0,
+        "database_healthy": true,
+        "average_latency_ms": 0.0,
+        "in_flight_requests": 0,
+        "live_p95_latency_ms": null,
+        "observation_seconds": 60,
+        "executor_queue_depth": 0,
+        "latency_sample_count": 0,
+        "executor_worker_limit": 40,
+        "live_slo_threshold_ms": null,
+        "executor_active_workers": 0,
+        "executor_queue_pressure": 0.0,
+        "live_slo_violation_rate": null,
+        "live_slo_violation_count": null,
+        "executor_queue_sampled_at": "2026-11-01T05:27:00.888785+00:00",
+        "live_latency_sample_count": 0,
+        "replay_latency_sample_count": 0,
+        "unclassified_latency_sample_count": 0
+      }
+    },
+    "settings": {
+      "normal_rps": 2.0,
+      "caution_rps": 0.5,
+      "recovery_rps": 0.2,
+      "normal_inflight": 4,
+      "caution_inflight": 2,
+      "recovery_inflight": 1,
+      "caution_latency_ms": 250.0,
+      "recovery_latency_ms": 1000.0,
+      "healthy_latency_ms": 150.0,
+      "caution_error_rate": 0.05,
+      "recovery_error_rate": 0.2,
+      "healthy_error_rate": 0.01,
+      "caution_throughput_rps": 20.0,
+      "recovery_throughput_rps": 50.0,
+      "healthy_throughput_rps": 10.0,
+      "poll_seconds": 1.0,
+      "max_age_seconds": 5.0,
+      "timeout_seconds": 1.0,
+      "dwell_seconds": 3.0,
+      "healthy_samples": 2,
+      "additive_rps": 0.2
+    }
+  },
+  "independent_links": [
+    {
+      "disconnected": "Hospital_A",
+      "started_at": "2026-11-01T05:27:01.852918+00:00",
+      "restored_at": "2026-11-01T05:27:24.483953+00:00",
+      "pending_during_fault": 4,
+      "other_site_applied_during_fault": 4,
+      "applied_after_restore": 8,
+      "restart_retained_pending": true,
+      "cloud_services_stopped": false,
+      "scope": "Local Docker peer-interface partition, including APIs and controller; not AWS or a physical link"
+    },
+    {
+      "disconnected": "Hospital_B",
+      "started_at": "2026-11-01T05:27:25.313808+00:00",
+      "restored_at": "2026-11-01T05:27:50.078661+00:00",
+      "pending_during_fault": 4,
+      "other_site_applied_during_fault": 4,
+      "applied_after_restore": 8,
+      "restart_retained_pending": true,
+      "cloud_services_stopped": false,
+      "scope": "Local Docker peer-interface partition, including APIs and controller; not AWS or a physical link"
+    }
+  ],
+  "policy_backout": {
+    "from": "aimd",
+    "to": "fixed",
+    "same_controller_image": true,
+    "same_postgres_container_and_mounts": true,
+    "all_previous_events_retained": true,
+    "new_events_applied": 2,
+    "scope": "Local candidate-policy backout; no older binary or database restore"
+  },
+  "backup_restores": [
+    {
+      "role": "cloud",
+      "sha256": "a43f75db4c1decfe106d80ec38fbf085a7a9b2c3607718a9b8674a554c630f79",
+      "bytes": 15545,
+      "expected_events_found": 29,
+      "copy_checksum_verified": true,
+      "isolated_restore": true,
+      "verified_postgres_tables": {
+        "controller_admission": {
+          "rows": 1,
+          "fingerprint": "5aa9d41b78f608b1996f95d58c356211"
+        },
+        "controller_grant_audit": {
+          "rows": 88,
+          "fingerprint": "fb407a6dcbffa965baa6cbd2ad2c3e42"
+        },
+        "controller_grants": {
+          "rows": 29,
+          "fingerprint": "a3bced5e0d7c68162724f3f8ba7de9e9"
+        },
+        "controller_tickets": {
+          "rows": 0,
+          "fingerprint": "d41d8cd98f00b204e9800998ecf8427e"
+        },
+        "events": {
+          "rows": 29,
+          "fingerprint": "25f54afee4702e08eab32d14f9c130d9"
+        }
+      },
+      "scope": "Disposable local databases; host copy is not an off-machine AWS backup"
+    },
+    {
+      "role": "Hospital_A",
+      "sha256": "7aeec7464373a1f77dc4194e0d7b4c95d7e8d727b15e6956bf2852990fcda421",
+      "bytes": 28672,
+      "expected_events_found": 15,
+      "copy_checksum_verified": true,
+      "isolated_restore": true,
+      "verified_postgres_tables": null,
+      "scope": "Disposable local databases; host copy is not an off-machine AWS backup"
+    },
+    {
+      "role": "Hospital_B",
+      "sha256": "d00cae234bca4b126c83de5d88b0b6d239a673a3e372709f054390ebb52f6636",
+      "bytes": 28672,
+      "expected_events_found": 14,
+      "copy_checksum_verified": true,
+      "isolated_restore": true,
+      "verified_postgres_tables": null,
+      "scope": "Disposable local databases; host copy is not an off-machine AWS backup"
+    }
+  ],
+  "pytest": {
+    "tests": 153,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "result": "passed",
+  "preserved": {
+    "containers": 26,
+    "volumes": 23,
+    "images": true
+  },
+  "cleanup": "passed; own containers/networks/volumes removed; test image retained",
+  "source_base": "ae78a880ef8e18d444573f2010500b4a052c5fba",
+  "source_file_sha256": {
+    "infrastructure/aws/compose.metaguard.cloud.yaml": "a3e9e9fd9283ac17a38f0abee4e1c9efae96ff115252eb3293824d80cc5ee710",
+    "infrastructure/scripts/audit_deployment.py": "96e33d33ccc63ef4e2fc77559330161f31554111f646e3b31918fb2bb165a006",
+    "infrastructure/scripts/database_backup.py": "f4916f8871dfb43efc1ae4667f73b9204475bd626843d220f452249ef9883d0b",
+    "infrastructure/scripts/smoke_metaguard_deployment.py": "e946b5e7330123c278857615297c6a62a3f59871142acf22d671bc3ef2f8de54",
+    "infrastructure/scripts/verify_devops_config.py": "b5884a0717b6084cd84dd09d40dd9ced4cebf5ddeda5dadf911d39bb9a72a4fa",
+    "infrastructure/scripts/verify_windows_launcher.py": "c3c7ee6f1cc292731df0b8125934533f71741911a15b68189858c2feb40f9979",
+    "start.project.bat": "e9d050fb881b719f8f1712f8628badc66d395535fa0f17380834bfa79925f0c4",
+    ".github/workflows/ci.yml": "1d39bf0d783287256c268a5dcea01a53590e0de1bc1dae97a4253209236a7186"
+  }
+}

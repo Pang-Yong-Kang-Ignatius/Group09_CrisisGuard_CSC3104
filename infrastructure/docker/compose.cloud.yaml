@@ -1,0 +1,72 @@
+# Central cloud only. For local testing, use cloud.env.example.
+name: ${CLOUD_PROJECT:?Choose a unique cloud project name}
+
+x-app: &app
+  image: crisisguard-cloud:dev
+  build:
+    context: ../..
+    dockerfile: infrastructure/docker/Dockerfile
+
+x-database-environment: &database-environment
+  DATABASE_URL: postgresql://${POSTGRES_USER:?Set POSTGRES_USER}:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:?Set POSTGRES_DB}
+
+x-api-health: &api-health
+  test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=2)"]
+  interval: 5s
+  timeout: 3s
+  retries: 12
+  start_period: 10s
+
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:?Set POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB:?Set POSTGRES_DB}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    # Database traffic stays on this project's Docker network.
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -h 127.0.0.1 -U \"$$POSTGRES_USER\" -d \"$$POSTGRES_DB\""]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+      start_period: 10s
+
+  patient:
+    <<: *app
+    command: ["python", "-m", "uvicorn", "cloud.patient_service.main:app", "--host", "0.0.0.0", "--port", "8000"]
+    environment: *database-environment
+    ports:
+      - "${CLOUD_BIND_ADDRESS:-127.0.0.1}:${PATIENT_PORT:-8001}:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck: *api-health
+
+  emergency:
+    <<: *app
+    command: ["python", "-m", "uvicorn", "cloud.emergency_service.main:app", "--host", "0.0.0.0", "--port", "8000"]
+    environment: *database-environment
+    ports:
+      - "${CLOUD_BIND_ADDRESS:-127.0.0.1}:${EMERGENCY_PORT:-8003}:8000"
+    # Wait for Patient to initialize the shared schema on a fresh database.
+    depends_on:
+      patient:
+        condition: service_healthy
+    healthcheck: *api-health
+
+  admin:
+    <<: *app
+    command: ["python", "-m", "uvicorn", "cloud.admin_service.main:app", "--host", "0.0.0.0", "--port", "8000"]
+    environment: *database-environment
+    ports:
+      - "${CLOUD_BIND_ADDRESS:-127.0.0.1}:${ADMIN_PORT:-8004}:8000"
+    depends_on:
+      patient:
+        condition: service_healthy
+    healthcheck: *api-health
+
+volumes:
+  postgres-data:

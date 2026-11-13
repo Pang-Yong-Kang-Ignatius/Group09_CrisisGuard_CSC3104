@@ -1,0 +1,143 @@
+{
+  "redaction_date": "2026-11-13",
+  "scope": "Public-copy privacy redaction of private workstation roots only; original run/file suffixes retained where present.",
+  "replacement_label": "[REDACTED_LOCAL_PATH]",
+  "artifact_status": "Redacted derivatives of retained historical evidence; not new experimental results or archive verification.",
+  "preserved": "All measurements, event records, outcomes, timestamps and existing recorded hash values. Source-hash map entries remain distinct.",
+  "reproduction": "The redaction label is not an executable path. Historical acquisition/analysis scripts are unchanged and operate on separately supplied local raw results; missing raw archives are not supplied by this cleanup.",
+  "files": [
+    {
+      "file": "docs/evidence/w5-archive-20261102.json",
+      "original_matching_lines": [
+        2
+      ],
+      "replacements": 1,
+      "classification": "Private workstation directory metadata within historical experimental provenance; not attribution, disclosure, or a functional dependency",
+      "pre_redaction_sha256": "c89fa748f8adedc396eda144fd2c150320ee3da67f8364cd687d44cbc2d41a2c",
+      "redacted_sha256": "94d9c82c5b6940f1fc61a18a48801084cb754989e87658d5132c24125592329a",
+      "bytes_before": 527,
+      "bytes_after": 477
+    },
+    {
+      "file": "docs/evidence/w5-holdout-20261102.csv",
+      "original_matching_lines": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "replacements": 20,
+      "classification": "Private workstation directory metadata within historical experimental provenance; not attribution, disclosure, or a functional dependency",
+      "pre_redaction_sha256": "ddbbbcff24badb09ed9e5a3ced0709f3a419d9efafea0c2ff3c64561b488263a",
+      "redacted_sha256": "f9c5a4e49ef0f7efa01df40a533f3658a2117f6ad474e1f8c2200516d78904a6",
+      "bytes_before": 5905,
+      "bytes_after": 5025
+    },
+    {
+      "file": "docs/evidence/w5-holdout-20261102.json",
+      "original_matching_lines": [
+        2038,
+        2039,
+        2040,
+        2041,
+        2042,
+        2043,
+        2044,
+        2045,
+        2046,
+        2047,
+        2048,
+        2049,
+        2050,
+        2051,
+        2052,
+        2053,
+        2054,
+        2055,
+        2056,
+        2057,
+        2058,
+        2059,
+        2060,
+        2061,
+        2062,
+        2063,
+        2064,
+        2065,
+        2066,
+        2067,
+        2068,
+        2069,
+        2070,
+        2071,
+        2072,
+        2073,
+        2074,
+        2075,
+        2076,
+        2077,
+        2118,
+        2131,
+        2150,
+        2166,
+        2183
+      ],
+      "replacements": 45,
+      "classification": "Private workstation directory metadata within historical experimental provenance; not attribution, disclosure, or a functional dependency",
+      "pre_redaction_sha256": "b2197d95d3e8abf7deaf14b69ab3538ff7dd41a74ec3da79580ed8f6a1978799",
+      "redacted_sha256": "6eb2fa7bb0f2c0ec08bbcd5f0c57525f8e0620066426c341ad51621f87d346ed",
+      "bytes_before": 70020,
+      "bytes_after": 67770
+    },
+    {
+      "file": "docs/reports/W5_AIMD_RECOVERY_VALIDATION_20261102.md",
+      "original_matching_lines": [
+        192,
+        257
+      ],
+      "replacements": 2,
+      "classification": "Private workstation directory metadata within historical experimental provenance; not attribution, disclosure, or a functional dependency",
+      "pre_redaction_sha256": "e004eb69a3bddb64e27f13fa1a6f685757c597e2f9a61a9ce4f754a51371f2a4",
+      "redacted_sha256": "730b738dea1c2b6c08efb094fd668713a7b1c95ddfb4f69b18f07b8f91aaafb7",
+      "bytes_before": 16317,
+      "bytes_after": 16835
+    }
+  ],
+  "historical_checksum_references": [
+    {
+      "reference_file": "docs/evidence/h5-w5-review-20261103.json",
+      "file": "docs/evidence/w5-holdout-20261102.json",
+      "recorded_sha256": "b2197d95d3e8abf7deaf14b69ab3538ff7dd41a74ec3da79580ed8f6a1978799",
+      "matched_pre_redaction_file": true
+    },
+    {
+      "reference_file": "docs/evidence/h5-w5-review-20261103.json",
+      "file": "docs/evidence/w5-holdout-20261102.csv",
+      "recorded_sha256": "ddbbbcff24badb09ed9e5a3ced0709f3a419d9efafea0c2ff3c64561b488263a",
+      "matched_pre_redaction_file": true
+    },
+    {
+      "reference_file": "docs/evidence/h5-w5-review-20261103.json",
+      "file": "docs/reports/W5_AIMD_RECOVERY_VALIDATION_20261102.md",
+      "recorded_sha256": "a241a5f030324f4ca4bd0cd6530df9b27ac817e4edaf0005c3f22594eb662ba2",
+      "matched_pre_redaction_file": false
+    }
+  ],
+  "historical_checksum_note": "Existing recorded digests are preserved. They do not verify these redacted derivatives. A false pre-redaction match records a pre-existing byte mismatch, not a change introduced by redaction; its cause is not established."
+}

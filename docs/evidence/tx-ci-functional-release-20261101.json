@@ -1,0 +1,38 @@
+{
+  "commit": "5dd3be122f8904a23f701255731fcc6871c65a4d",
+  "run": {
+    "id": 41277254425,
+    "html_url": "https://github.com/Pang-Yong-Kang-Ignatius/CrisisGuard/actions/runs/41277254425",
+    "head_sha": "5dd3be122f8904a23f701255731fcc6871c65a4d",
+    "event": "push",
+    "status": "completed",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "id": 124761836329,
+        "name": "unit-tests",
+        "status": "completed",
+        "conclusion": "success",
+        "active_step": null
+      },
+      {
+        "id": 124761836520,
+        "name": "docker-deployment",
+        "status": "completed",
+        "conclusion": "success",
+        "active_step": null
+      },
+      {
+        "id": 124761972663,
+        "name": "metaguard-integration",
+        "status": "completed",
+        "conclusion": "success",
+        "active_step": null
+      }
+    ],
+    "artifacts": [
+      "metaguard-evidence-5dd3be122f8904a23f701255731fcc6871c65a4d",
+      "unit-evidence-5dd3be122f8904a23f701255731fcc6871c65a4d"
+    ]
+  }
+}

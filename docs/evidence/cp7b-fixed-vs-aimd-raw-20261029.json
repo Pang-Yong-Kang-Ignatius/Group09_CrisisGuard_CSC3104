@@ -1,0 +1,2041 @@
+{
+  "schema": "cp7b-fixed-vs-aimd-v1",
+  "started_at": "2026-10-29T01:38:39.076617+00:00",
+  "experiment": {
+    "trials_per_policy": 5,
+    "order": [
+      "fixed",
+      "aimd",
+      "fixed",
+      "aimd",
+      "fixed",
+      "aimd",
+      "fixed",
+      "aimd",
+      "fixed",
+      "aimd"
+    ],
+    "events_per_hospital": 4,
+    "fault": "Cloud and controller absent while the identical local backlogs are captured; all recovery services start at t=0",
+    "controlled_difference": "CONTROLLER_ADMISSION_POLICY only",
+    "controller": {
+      "normal_rps": 2.0,
+      "caution_rps": 0.5,
+      "recovery_rps": 0.2,
+      "normal_inflight": 4,
+      "caution_inflight": 2,
+      "recovery_inflight": 1,
+      "poll_seconds": 1,
+      "max_age_seconds": 5,
+      "timeout_seconds": 1,
+      "dwell_seconds": 3,
+      "healthy_samples": 2,
+      "additive_rps": 0.2,
+      "caution_latency_ms": 80,
+      "recovery_latency_ms": 1000,
+      "healthy_latency_ms": 50,
+      "recovery_error_rate": 0.15
+    },
+    "measurement_boundaries": {
+      "middleware": "Cloud ASGI middleware duration for authenticated replay POST and reconciliation GET traffic in each process-local rolling window",
+      "client": "host-observed end-to-end duration of one authenticated replay status GET per applied event, measured after middleware snapshots",
+      "queueing": "Hospital durable pending-event trajectory plus AnyIO executor wait depth sampled by each Cloud /metrics endpoint",
+      "not_measured": "socket accept queues, upstream/network queues, PostgreSQL lock/connection queues"
+    }
+  },
+  "image": "crisisguard-policy-eval:73dfff22f3d7",
+  "trials": [
+    {
+      "policy": "fixed",
+      "ordinal": 1,
+      "project": "cg-policy-fixed-1-8caf3d05",
+      "started_at": "2026-10-29T01:38:41.476224+00:00",
+      "result": "passed",
+      "samples": [
+        {
+          "elapsed_seconds": 12.533758,
+          "sampled_at": "2026-10-29T01:39:04.362636+00:00",
+          "controller": {
+            "state": "Caution",
+            "reason": "healthy",
+            "rate_rps": 0.5,
+            "telemetry_fresh": true,
+            "allowed": 2,
+            "denied": 4,
+            "last_decision": {
+              "at": "2026-10-29T01:39:03.193954+00:00",
+              "phase": "issue",
+              "state": "Recovery",
+              "reason": "rate_limit",
+              "allowed": false,
+              "inflight": 0,
+              "rate_rps": 0.2,
+              "inflight_limit": 1
+            }
+          },
+          "cloud": {
+            "patient": {
+              "sampled_at": "2026-10-29T01:39:04.834411+00:00",
+              "p95_latency_ms": 8.63,
+              "average_latency_ms": 8.63,
+              "throughput_rps": 0.0871,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "emergency": {
+              "sampled_at": "2026-10-29T01:39:05.083526+00:00",
+              "p95_latency_ms": null,
+              "average_latency_ms": 0.0,
+              "throughput_rps": 0.0,
+              "error_rate": 0.0,
+              "latency_sample_count": 0,
+              "replay_latency_sample_count": 0,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "admin": {
+              "sampled_at": "2026-10-29T01:39:05.339016+00:00",
+              "p95_latency_ms": null,
+              "average_latency_ms": 0.0,
+              "throughput_rps": 0.0,
+              "error_rate": 0.0,
+              "latency_sample_count": 0,
+              "replay_latency_sample_count": 0,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            }
+          },
+          "hospitals": {
+            "Hospital_A": {
+              "pending": 4,
+              "applied": 0
+            },
+            "Hospital_B": {
+              "pending": 3,
+              "applied": 1
+            }
+          }
+        },
+        {
+          "elapsed_seconds": 14.049459,
+          "sampled_at": "2026-10-29T01:39:05.878336+00:00",
+          "controller": {
+            "state": "Caution",
+            "reason": "healthy",
+            "rate_rps": 0.5,
+            "telemetry_fresh": true,
+            "allowed": 2,
+            "denied": 5,
+            "last_decision": {
+              "at": "2026-10-29T01:39:05.456413+00:00",
+              "phase": "issue",
+              "state": "Caution",
+              "reason": "rate_limit",
+              "allowed": false,
+              "inflight": 0,
+              "rate_rps": 0.5,
+              "inflight_limit": 2
+            }
+          },
+          "cloud": {
+            "patient": {
+              "sampled_at": "2026-10-29T01:39:06.368169+00:00",
+              "p95_latency_ms": 8.63,
+              "average_latency_ms": 8.63,
+              "throughput_rps": 0.0769,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "emergency": {
+              "sampled_at": "2026-10-29T01:39:06.616625+00:00",
+              "p95_latency_ms": null,
+              "average_latency_ms": 0.0,
+              "throughput_rps": 0.0,
+              "error_rate": 0.0,
+              "latency_sample_count": 0,
+              "replay_latency_sample_count": 0,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "admin": {
+              "sampled_at": "2026-10-29T01:39:06.843283+00:00",
+              "p95_latency_ms": null,
+              "average_latency_ms": 0.0,
+              "throughput_rps": 0.0,
+              "error_rate": 0.0,
+              "latency_sample_count": 0,
+              "replay_latency_sample_count": 0,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            }
+          },
+          "hospitals": {
+            "Hospital_A": {
+              "pending": 4,
+              "applied": 0
+            },
+            "Hospital_B": {
+              "pending": 3,
+              "applied": 1
+            }
+          }
+        },
+        {
+          "elapsed_seconds": 15.523988,
+          "sampled_at": "2026-10-29T01:39:07.352865+00:00",
+          "controller": {
+            "state": "Normal",
+            "reason": "healthy",
+            "rate_rps": 2.0,
+            "telemetry_fresh": true,
+            "allowed": 2,
+            "denied": 6,
+            "last_decision": {
+              "at": "2026-10-29T01:39:06.701393+00:00",
+              "phase": "issue",
+              "state": "Caution",
+              "reason": "rate_limit",
+              "allowed": false,
+              "inflight": 0,
+              "rate_rps": 0.5,
+              "inflight_limit": 2
+            }
+          },
+          "cloud": {
+            "patient": {
+              "sampled_at": "2026-10-29T01:39:07.855238+00:00",
+              "p95_latency_ms": 8.63,
+              "average_latency_ms": 8.63,
+              "throughput_rps": 0.069,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "emergency": {
+              "sampled_at": "2026-10-29T01:39:08.095905+00:00",
+              "p95_latency_ms": null,
+              "average_latency_ms": 0.0,
+              "throughput_rps": 0.0,
+              "error_rate": 0.0,
+              "latency_sample_count": 0,
+              "replay_latency_sample_count": 0,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "admin": {
+              "sampled_at": "2026-10-29T01:39:08.347231+00:00",
+              "p95_latency_ms": null,
+              "average_latency_ms": 0.0,
+              "throughput_rps": 0.0,
+              "error_rate": 0.0,
+              "latency_sample_count": 0,
+              "replay_latency_sample_count": 0,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            }
+          },
+          "hospitals": {
+            "Hospital_A": {
+              "pending": 4,
+              "applied": 0
+            },
+            "Hospital_B": {
+              "pending": 3,
+              "applied": 1
+            }
+          }
+        },
+        {
+          "elapsed_seconds": 17.038801,
+          "sampled_at": "2026-10-29T01:39:08.867679+00:00",
+          "controller": {
+            "state": "Normal",
+            "reason": "healthy",
+            "rate_rps": 2.0,
+            "telemetry_fresh": true,
+            "allowed": 2,
+            "denied": 6,
+            "last_decision": {
+              "at": "2026-10-29T01:39:06.701393+00:00",
+              "phase": "issue",
+              "state": "Caution",
+              "reason": "rate_limit",
+              "allowed": false,
+              "inflight": 0,
+              "rate_rps": 0.5,
+              "inflight_limit": 2
+            }
+          },
+          "cloud": {
+            "patient": {
+              "sampled_at": "2026-10-29T01:39:09.336639+00:00",
+              "p95_latency_ms": 8.63,
+              "average_latency_ms": 8.63,
+              "throughput_rps": 0.0626,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "emergency": {
+              "sampled_at": "2026-10-29T01:39:09.558645+00:00",
+              "p95_latency_ms": null,
+              "average_latency_ms": 0.0,
+              "throughput_rps": 0.0,
+              "error_rate": 0.0,
+              "latency_sample_count": 0,
+              "replay_latency_sample_count": 0,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "admin": {
+              "sampled_at": "2026-10-29T01:39:09.788968+00:00",
+              "p95_latency_ms": null,
+              "average_latency_ms": 0.0,
+              "throughput_rps": 0.0,
+              "error_rate": 0.0,
+              "latency_sample_count": 0,
+              "replay_latency_sample_count": 0,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            }
+          },
+          "hospitals": {
+            "Hospital_A": {
+              "pending": 4,
+              "applied": 0
+            },
+            "Hospital_B": {
+              "pending": 2,
+              "applied": 2
+            }
+          }
+        },
+        {
+          "elapsed_seconds": 18.495957,
+          "sampled_at": "2026-10-29T01:39:10.324830+00:00",
+          "controller": {
+            "state": "Normal",
+            "reason": "healthy",
+            "rate_rps": 2.0,
+            "telemetry_fresh": true,
+            "allowed": 4,
+            "denied": 7,
+            "last_decision": {
+              "at": "2026-10-29T01:39:10.064473+00:00",
+              "phase": "issue",
+              "state": "Normal",
+              "reason": "rate_limit",
+              "allowed": false,
+              "inflight": 0,
+              "rate_rps": 2.0,
+              "inflight_limit": 4
+            }
+          },
+          "cloud": {
+            "patient": {
+              "sampled_at": "2026-10-29T01:39:10.857220+00:00",
+              "p95_latency_ms": 9.3,
+              "average_latency_ms": 8.97,
+              "throughput_rps": 0.1143,
+              "error_rate": 0.0,
+              "latency_sample_count": 2,
+              "replay_latency_sample_count": 2,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "emergency": {
+              "sampled_at": "2026-10-29T01:39:11.133219+00:00",
+              "p95_latency_ms": null,
+              "average_latency_ms": 0.0,
+              "throughput_rps": 0.0,
+              "error_rate": 0.0,
+              "latency_sample_count": 0,
+              "replay_latency_sample_count": 0,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "admin": {
+              "sampled_at": "2026-10-29T01:39:11.393627+00:00",
+              "p95_latency_ms": null,
+              "average_latency_ms": 0.0,
+              "throughput_rps": 0.0,
+              "error_rate": 0.0,
+              "latency_sample_count": 0,
+              "replay_latency_sample_count": 0,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            }
+          },
+          "hospitals": {
+            "Hospital_A": {
+              "pending": 4,
+              "applied": 0
+            },
+            "Hospital_B": {
+              "pending": 2,
+              "applied": 2
+            }
+          }
+        },
+        {
+          "elapsed_seconds": 20.131905,
+          "sampled_at": "2026-10-29T01:39:11.960785+00:00",
+          "controller": {
+            "state": "Normal",
+            "reason": "healthy",
+            "rate_rps": 2.0,
+            "telemetry_fresh": true,
+            "allowed": 4,
+            "denied": 7,
+            "last_decision": {
+              "at": "2026-10-29T01:39:10.064473+00:00",
+              "phase": "issue",
+              "state": "Normal",
+              "reason": "rate_limit",
+              "allowed": false,
+              "inflight": 0,
+              "rate_rps": 2.0,
+              "inflight_limit": 4
+            }
+          },
+          "cloud": {
+            "patient": {
+              "sampled_at": "2026-10-29T01:39:12.435230+00:00",
+              "p95_latency_ms": 9.3,
+              "average_latency_ms": 8.97,
+              "throughput_rps": 0.1048,
+              "error_rate": 0.0,
+              "latency_sample_count": 2,
+              "replay_latency_sample_count": 2,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "emergency": {
+              "sampled_at": "2026-10-29T01:39:12.667788+00:00",
+              "p95_latency_ms": 9.2,
+              "average_latency_ms": 9.2,
+              "throughput_rps": 0.0741,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "admin": {
+              "sampled_at": "2026-10-29T01:39:12.929843+00:00",
+              "p95_latency_ms": null,
+              "average_latency_ms": 0.0,
+              "throughput_rps": 0.0,
+              "error_rate": 0.0,
+              "latency_sample_count": 0,
+              "replay_latency_sample_count": 0,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            }
+          },
+          "hospitals": {
+            "Hospital_A": {
+              "pending": 4,
+              "applied": 0
+            },
+            "Hospital_B": {
+              "pending": 1,
+              "applied": 3
+            }
+          }
+        },
+        {
+          "elapsed_seconds": 21.649497,
+          "sampled_at": "2026-10-29T01:39:13.478374+00:00",
+          "controller": {
+            "state": "Normal",
+            "reason": "healthy",
+            "rate_rps": 2.0,
+            "telemetry_fresh": true,
+            "allowed": 6,
+            "denied": 8,
+            "last_decision": {
+              "at": "2026-10-29T01:39:12.468095+00:00",
+              "phase": "issue",
+              "state": "Normal",
+              "reason": "rate_limit",
+              "allowed": false,
+              "inflight": 0,
+              "rate_rps": 2.0,
+              "inflight_limit": 4
+            }
+          },
+          "cloud": {
+            "patient": {
+              "sampled_at": "2026-10-29T01:39:13.953455+00:00",
+              "p95_latency_ms": 9.3,
+              "average_latency_ms": 8.97,
+              "throughput_rps": 0.0971,
+              "error_rate": 0.0,
+              "latency_sample_count": 2,
+              "replay_latency_sample_count": 2,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "emergency": {
+              "sampled_at": "2026-10-29T01:39:14.192283+00:00",
+              "p95_latency_ms": 9.2,
+              "average_latency_ms": 9.2,
+              "throughput_rps": 0.0665,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "admin": {
+              "sampled_at": "2026-10-29T01:39:14.433112+00:00",
+              "p95_latency_ms": null,
+              "average_latency_ms": 0.0,
+              "throughput_rps": 0.0,
+              "error_rate": 0.0,
+              "latency_sample_count": 0,
+              "replay_latency_sample_count": 0,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            }
+          },
+          "hospitals": {
+            "Hospital_A": {
+              "pending": 4,
+              "applied": 0
+            },
+            "Hospital_B": {
+              "pending": 0,
+              "applied": 4
+            }
+          }
+        },
+        {
+          "elapsed_seconds": 23.103221,
+          "sampled_at": "2026-10-29T01:39:14.932095+00:00",
+          "controller": {
+            "state": "Normal",
+            "reason": "healthy",
+            "rate_rps": 2.0,
+            "telemetry_fresh": true,
+            "allowed": 8,
+            "denied": 9,
+            "last_decision": {
+              "at": "2026-10-29T01:39:14.996445+00:00",
+              "phase": "issue",
+              "state": "Normal",
+              "reason": "rate_limit",
+              "allowed": false,
+              "inflight": 0,
+              "rate_rps": 2.0,
+              "inflight_limit": 4
+            }
+          },
+          "cloud": {
+            "patient": {
+              "sampled_at": "2026-10-29T01:39:15.427199+00:00",
+              "p95_latency_ms": 9.3,
+              "average_latency_ms": 8.97,
+              "throughput_rps": 0.0906,
+              "error_rate": 0.0,
+              "latency_sample_count": 2,
+              "replay_latency_sample_count": 2,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "emergency": {
+              "sampled_at": "2026-10-29T01:39:15.714616+00:00",
+              "p95_latency_ms": 9.2,
+              "average_latency_ms": 9.2,
+              "throughput_rps": 0.0604,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "admin": {
+              "sampled_at": "2026-10-29T01:39:16.002664+00:00",
+              "p95_latency_ms": 9.11,
+              "average_latency_ms": 9.11,
+              "throughput_rps": 0.0588,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            }
+          },
+          "hospitals": {
+            "Hospital_A": {
+              "pending": 4,
+              "applied": 0
+            },
+            "Hospital_B": {
+              "pending": 0,
+              "applied": 4
+            }
+          }
+        },
+        {
+          "elapsed_seconds": 24.721146,
+          "sampled_at": "2026-10-29T01:39:16.550028+00:00",
+          "controller": {
+            "state": "Normal",
+            "reason": "healthy",
+            "rate_rps": 2.0,
+            "telemetry_fresh": true,
+            "allowed": 8,
+            "denied": 9,
+            "last_decision": {
+              "at": "2026-10-29T01:39:14.996445+00:00",
+              "phase": "issue",
+              "state": "Normal",
+              "reason": "rate_limit",
+              "allowed": false,
+              "inflight": 0,
+              "rate_rps": 2.0,
+              "inflight_limit": 4
+            }
+          },
+          "cloud": {
+            "patient": {
+              "sampled_at": "2026-10-29T01:39:17.053730+00:00",
+              "p95_latency_ms": 9.3,
+              "average_latency_ms": 8.97,
+              "throughput_rps": 0.0844,
+              "error_rate": 0.0,
+              "latency_sample_count": 2,
+              "replay_latency_sample_count": 2,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "emergency": {
+              "sampled_at": "2026-10-29T01:39:17.281130+00:00",
+              "p95_latency_ms": 9.2,
+              "average_latency_ms": 9.2,
+              "throughput_rps": 0.0552,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "admin": {
+              "sampled_at": "2026-10-29T01:39:17.531665+00:00",
+              "p95_latency_ms": 9.11,
+              "average_latency_ms": 9.11,
+              "throughput_rps": 0.0539,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            }
+          },
+          "hospitals": {
+            "Hospital_A": {
+              "pending": 4,
+              "applied": 0
+            },
+            "Hospital_B": {
+              "pending": 0,
+              "applied": 4
+            }
+          }
+        },
+        {
+          "elapsed_seconds": 26.202813,
+          "sampled_at": "2026-10-29T01:39:18.031695+00:00",
+          "controller": {
+            "state": "Normal",
+            "reason": "healthy",
+            "rate_rps": 2.0,
+            "telemetry_fresh": true,
+            "allowed": 8,
+            "denied": 9,
+            "last_decision": {
+              "at": "2026-10-29T01:39:14.996445+00:00",
+              "phase": "issue",
+              "state": "Normal",
+              "reason": "rate_limit",
+              "allowed": false,
+              "inflight": 0,
+              "rate_rps": 2.0,
+              "inflight_limit": 4
+            }
+          },
+          "cloud": {
+            "patient": {
+              "sampled_at": "2026-10-29T01:39:18.549581+00:00",
+              "p95_latency_ms": 9.3,
+              "average_latency_ms": 8.97,
+              "throughput_rps": 0.0794,
+              "error_rate": 0.0,
+              "latency_sample_count": 2,
+              "replay_latency_sample_count": 2,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "emergency": {
+              "sampled_at": "2026-10-29T01:39:18.781046+00:00",
+              "p95_latency_ms": 9.2,
+              "average_latency_ms": 9.2,
+              "throughput_rps": 0.051,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "admin": {
+              "sampled_at": "2026-10-29T01:39:19.060898+00:00",
+              "p95_latency_ms": 9.11,
+              "average_latency_ms": 9.11,
+              "throughput_rps": 0.0498,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            }
+          },
+          "hospitals": {
+            "Hospital_A": {
+              "pending": 4,
+              "applied": 0
+            },
+            "Hospital_B": {
+              "pending": 0,
+              "applied": 4
+            }
+          }
+        },
+        {
+          "elapsed_seconds": 27.770321,
+          "sampled_at": "2026-10-29T01:39:19.599195+00:00",
+          "controller": {
+            "state": "Normal",
+            "reason": "healthy",
+            "rate_rps": 2.0,
+            "telemetry_fresh": true,
+            "allowed": 8,
+            "denied": 9,
+            "last_decision": {
+              "at": "2026-10-29T01:39:14.996445+00:00",
+              "phase": "issue",
+              "state": "Normal",
+              "reason": "rate_limit",
+              "allowed": false,
+              "inflight": 0,
+              "rate_rps": 2.0,
+              "inflight_limit": 4
+            }
+          },
+          "cloud": {
+            "patient": {
+              "sampled_at": "2026-10-29T01:39:20.089543+00:00",
+              "p95_latency_ms": 9.3,
+              "average_latency_ms": 8.97,
+              "throughput_rps": 0.0748,
+              "error_rate": 0.0,
+              "latency_sample_count": 2,
+              "replay_latency_sample_count": 2,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "emergency": {
+              "sampled_at": "2026-10-29T01:39:20.323869+00:00",
+              "p95_latency_ms": 9.2,
+              "average_latency_ms": 9.2,
+              "throughput_rps": 0.0473,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "admin": {
+              "sampled_at": "2026-10-29T01:39:20.551827+00:00",
+              "p95_latency_ms": 9.11,
+              "average_latency_ms": 9.11,
+              "throughput_rps": 0.0464,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            }
+          },
+          "hospitals": {
+            "Hospital_A": {
+              "pending": 4,
+              "applied": 0
+            },
+            "Hospital_B": {
+              "pending": 0,
+              "applied": 4
+            }
+          }
+        },
+        {
+          "elapsed_seconds": 29.294805,
+          "sampled_at": "2026-10-29T01:39:21.123686+00:00",
+          "controller": {
+            "state": "Normal",
+            "reason": "healthy",
+            "rate_rps": 2.0,
+            "telemetry_fresh": true,
+            "allowed": 8,
+            "denied": 9,
+            "last_decision": {
+              "at": "2026-10-29T01:39:14.996445+00:00",
+              "phase": "issue",
+              "state": "Normal",
+              "reason": "rate_limit",
+              "allowed": false,
+              "inflight": 0,
+              "rate_rps": 2.0,
+              "inflight_limit": 4
+            }
+          },
+          "cloud": {
+            "patient": {
+              "sampled_at": "2026-10-29T01:39:21.632071+00:00",
+              "p95_latency_ms": 9.3,
+              "average_latency_ms": 8.97,
+              "throughput_rps": 0.0707,
+              "error_rate": 0.0,
+              "latency_sample_count": 2,
+              "replay_latency_sample_count": 2,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "emergency": {
+              "sampled_at": "2026-10-29T01:39:21.860826+00:00",
+              "p95_latency_ms": 9.2,
+              "average_latency_ms": 9.2,
+              "throughput_rps": 0.0441,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "admin": {
+              "sampled_at": "2026-10-29T01:39:22.111101+00:00",
+              "p95_latency_ms": 9.11,
+              "average_latency_ms": 9.11,
+              "throughput_rps": 0.0432,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            }
+          },
+          "hospitals": {
+            "Hospital_A": {
+              "pending": 4,
+              "applied": 0
+            },
+            "Hospital_B": {
+              "pending": 0,
+              "applied": 4
+            }
+          }
+        },
+        {
+          "elapsed_seconds": 30.821386,
+          "sampled_at": "2026-10-29T01:39:22.650263+00:00",
+          "controller": {
+            "state": "Normal",
+            "reason": "healthy",
+            "rate_rps": 2.0,
+            "telemetry_fresh": true,
+            "allowed": 8,
+            "denied": 9,
+            "last_decision": {
+              "at": "2026-10-29T01:39:14.996445+00:00",
+              "phase": "issue",
+              "state": "Normal",
+              "reason": "rate_limit",
+              "allowed": false,
+              "inflight": 0,
+              "rate_rps": 2.0,
+              "inflight_limit": 4
+            }
+          },
+          "cloud": {
+            "patient": {
+              "sampled_at": "2026-10-29T01:39:23.169926+00:00",
+              "p95_latency_ms": 9.3,
+              "average_latency_ms": 8.97,
+              "throughput_rps": 0.0671,
+              "error_rate": 0.0,
+              "latency_sample_count": 2,
+              "replay_latency_sample_count": 2,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "emergency": {
+              "sampled_at": "2026-10-29T01:39:23.416246+00:00",
+              "p95_latency_ms": 9.2,
+              "average_latency_ms": 9.2,
+              "throughput_rps": 0.0412,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "admin": {
+              "sampled_at": "2026-10-29T01:39:23.645087+00:00",
+              "p95_latency_ms": 9.11,
+              "average_latency_ms": 9.11,
+              "throughput_rps": 0.0406,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            }
+          },
+          "hospitals": {
+            "Hospital_A": {
+              "pending": 4,
+              "applied": 0
+            },
+            "Hospital_B": {
+              "pending": 0,
+              "applied": 4
+            }
+          }
+        },
+        {
+          "elapsed_seconds": 32.373968,
+          "sampled_at": "2026-10-29T01:39:24.202852+00:00",
+          "controller": {
+            "state": "Normal",
+            "reason": "healthy",
+            "rate_rps": 2.0,
+            "telemetry_fresh": true,
+            "allowed": 8,
+            "denied": 9,
+            "last_decision": {
+              "at": "2026-10-29T01:39:14.996445+00:00",
+              "phase": "issue",
+              "state": "Normal",
+              "reason": "rate_limit",
+              "allowed": false,
+              "inflight": 0,
+              "rate_rps": 2.0,
+              "inflight_limit": 4
+            }
+          },
+          "cloud": {
+            "patient": {
+              "sampled_at": "2026-10-29T01:39:24.666653+00:00",
+              "p95_latency_ms": 9.3,
+              "average_latency_ms": 8.97,
+              "throughput_rps": 0.0639,
+              "error_rate": 0.0,
+              "latency_sample_count": 2,
+              "replay_latency_sample_count": 2,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "emergency": {
+              "sampled_at": "2026-10-29T01:39:24.891670+00:00",
+              "p95_latency_ms": 9.2,
+              "average_latency_ms": 9.2,
+              "throughput_rps": 0.0389,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "admin": {
+              "sampled_at": "2026-10-29T01:39:25.133330+00:00",
+              "p95_latency_ms": 9.11,
+              "average_latency_ms": 9.11,
+              "throughput_rps": 0.0382,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            }
+          },
+          "hospitals": {
+            "Hospital_A": {
+              "pending": 4,
+              "applied": 0
+            },
+            "Hospital_B": {
+              "pending": 0,
+              "applied": 4
+            }
+          }
+        },
+        {
+          "elapsed_seconds": 33.870916,
+          "sampled_at": "2026-10-29T01:39:25.699793+00:00",
+          "controller": {
+            "state": "Normal",
+            "reason": "healthy",
+            "rate_rps": 2.0,
+            "telemetry_fresh": true,
+            "allowed": 8,
+            "denied": 9,
+            "last_decision": {
+              "at": "2026-10-29T01:39:14.996445+00:00",
+              "phase": "issue",
+              "state": "Normal",
+              "reason": "rate_limit",
+              "allowed": false,
+              "inflight": 0,
+              "rate_rps": 2.0,
+              "inflight_limit": 4
+            }
+          },
+          "cloud": {
+            "patient": {
+              "sampled_at": "2026-10-29T01:39:26.158692+00:00",
+              "p95_latency_ms": 9.3,
+              "average_latency_ms": 8.97,
+              "throughput_rps": 0.061,
+              "error_rate": 0.0,
+              "latency_sample_count": 2,
+              "replay_latency_sample_count": 2,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "emergency": {
+              "sampled_at": "2026-10-29T01:39:26.443874+00:00",
+              "p95_latency_ms": 9.2,
+              "average_latency_ms": 9.2,
+              "throughput_rps": 0.0367,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "admin": {
+              "sampled_at": "2026-10-29T01:39:26.685865+00:00",
+              "p95_latency_ms": 9.11,
+              "average_latency_ms": 9.11,
+              "throughput_rps": 0.0361,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            }
+          },
+          "hospitals": {
+            "Hospital_A": {
+              "pending": 4,
+              "applied": 0
+            },
+            "Hospital_B": {
+              "pending": 0,
+              "applied": 4
+            }
+          }
+        },
+        {
+          "elapsed_seconds": 35.422255,
+          "sampled_at": "2026-10-29T01:39:27.251134+00:00",
+          "controller": {
+            "state": "Normal",
+            "reason": "healthy",
+            "rate_rps": 2.0,
+            "telemetry_fresh": true,
+            "allowed": 8,
+            "denied": 9,
+            "last_decision": {
+              "at": "2026-10-29T01:39:14.996445+00:00",
+              "phase": "issue",
+              "state": "Normal",
+              "reason": "rate_limit",
+              "allowed": false,
+              "inflight": 0,
+              "rate_rps": 2.0,
+              "inflight_limit": 4
+            }
+          },
+          "cloud": {
+            "patient": {
+              "sampled_at": "2026-10-29T01:39:27.789403+00:00",
+              "p95_latency_ms": 9.3,
+              "average_latency_ms": 8.97,
+              "throughput_rps": 0.0581,
+              "error_rate": 0.0,
+              "latency_sample_count": 2,
+              "replay_latency_sample_count": 2,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "emergency": {
+              "sampled_at": "2026-10-29T01:39:28.029550+00:00",
+              "p95_latency_ms": 9.2,
+              "average_latency_ms": 9.2,
+              "throughput_rps": 0.0346,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "admin": {
+              "sampled_at": "2026-10-29T01:39:28.256734+00:00",
+              "p95_latency_ms": 9.11,
+              "average_latency_ms": 9.11,
+              "throughput_rps": 0.0342,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            }
+          },
+          "hospitals": {
+            "Hospital_A": {
+              "pending": 4,
+              "applied": 0
+            },
+            "Hospital_B": {
+              "pending": 0,
+              "applied": 4
+            }
+          }
+        },
+        {
+          "elapsed_seconds": 37.027424,
+          "sampled_at": "2026-10-29T01:39:28.856302+00:00",
+          "controller": {
+            "state": "Normal",
+            "reason": "healthy",
+            "rate_rps": 2.0,
+            "telemetry_fresh": true,
+            "allowed": 8,
+            "denied": 9,
+            "last_decision": {
+              "at": "2026-10-29T01:39:14.996445+00:00",
+              "phase": "issue",
+              "state": "Normal",
+              "reason": "rate_limit",
+              "allowed": false,
+              "inflight": 0,
+              "rate_rps": 2.0,
+              "inflight_limit": 4
+            }
+          },
+          "cloud": {
+            "patient": {
+              "sampled_at": "2026-10-29T01:39:29.378799+00:00",
+              "p95_latency_ms": 9.3,
+              "average_latency_ms": 8.97,
+              "throughput_rps": 0.0555,
+              "error_rate": 0.0,
+              "latency_sample_count": 2,
+              "replay_latency_sample_count": 2,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "emergency": {
+              "sampled_at": "2026-10-29T01:39:29.616147+00:00",
+              "p95_latency_ms": 9.2,
+              "average_latency_ms": 9.2,
+              "throughput_rps": 0.0328,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "admin": {
+              "sampled_at": "2026-10-29T01:39:29.854767+00:00",
+              "p95_latency_ms": 9.11,
+              "average_latency_ms": 9.11,
+              "throughput_rps": 0.0324,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            }
+          },
+          "hospitals": {
+            "Hospital_A": {
+              "pending": 4,
+              "applied": 0
+            },
+            "Hospital_B": {
+              "pending": 0,
+              "applied": 4
+            }
+          }
+        },
+        {
+          "elapsed_seconds": 38.56698,
+          "sampled_at": "2026-10-29T01:39:30.395865+00:00",
+          "controller": {
+            "state": "Normal",
+            "reason": "healthy",
+            "rate_rps": 2.0,
+            "telemetry_fresh": true,
+            "allowed": 8,
+            "denied": 9,
+            "last_decision": {
+              "at": "2026-10-29T01:39:14.996445+00:00",
+              "phase": "issue",
+              "state": "Normal",
+              "reason": "rate_limit",
+              "allowed": false,
+              "inflight": 0,
+              "rate_rps": 2.0,
+              "inflight_limit": 4
+            }
+          },
+          "cloud": {
+            "patient": {
+              "sampled_at": "2026-10-29T01:39:30.900499+00:00",
+              "p95_latency_ms": 9.3,
+              "average_latency_ms": 8.97,
+              "throughput_rps": 0.0533,
+              "error_rate": 0.0,
+              "latency_sample_count": 2,
+              "replay_latency_sample_count": 2,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "emergency": {
+              "sampled_at": "2026-10-29T01:39:31.168978+00:00",
+              "p95_latency_ms": 9.2,
+              "average_latency_ms": 9.2,
+              "throughput_rps": 0.0312,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "admin": {
+              "sampled_at": "2026-10-29T01:39:31.417053+00:00",
+              "p95_latency_ms": 9.11,
+              "average_latency_ms": 9.11,
+              "throughput_rps": 0.0308,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            }
+          },
+          "hospitals": {
+            "Hospital_A": {
+              "pending": 3,
+              "applied": 1
+            },
+            "Hospital_B": {
+              "pending": 0,
+              "applied": 4
+            }
+          }
+        },
+        {
+          "elapsed_seconds": 40.107668,
+          "sampled_at": "2026-10-29T01:39:31.936549+00:00",
+          "controller": {
+            "state": "Normal",
+            "reason": "healthy",
+            "rate_rps": 2.0,
+            "telemetry_fresh": true,
+            "allowed": 10,
+            "denied": 10,
+            "last_decision": {
+              "at": "2026-10-29T01:39:31.694306+00:00",
+              "phase": "issue",
+              "state": "Normal",
+              "reason": "rate_limit",
+              "allowed": false,
+              "inflight": 0,
+              "rate_rps": 2.0,
+              "inflight_limit": 4
+            }
+          },
+          "cloud": {
+            "patient": {
+              "sampled_at": "2026-10-29T01:39:32.416075+00:00",
+              "p95_latency_ms": 10.4,
+              "average_latency_ms": 9.44,
+              "throughput_rps": 0.0768,
+              "error_rate": 0.0,
+              "latency_sample_count": 3,
+              "replay_latency_sample_count": 3,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "emergency": {
+              "sampled_at": "2026-10-29T01:39:32.636989+00:00",
+              "p95_latency_ms": 9.2,
+              "average_latency_ms": 9.2,
+              "throughput_rps": 0.0299,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "admin": {
+              "sampled_at": "2026-10-29T01:39:32.851887+00:00",
+              "p95_latency_ms": 9.11,
+              "average_latency_ms": 9.11,
+              "throughput_rps": 0.0295,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            }
+          },
+          "hospitals": {
+            "Hospital_A": {
+              "pending": 3,
+              "applied": 1
+            },
+            "Hospital_B": {
+              "pending": 0,
+              "applied": 4
+            }
+          }
+        },
+        {
+          "elapsed_seconds": 41.549081,
+          "sampled_at": "2026-10-29T01:39:33.377959+00:00",
+          "controller": {
+            "state": "Normal",
+            "reason": "healthy",
+            "rate_rps": 2.0,
+            "telemetry_fresh": true,
+            "allowed": 10,
+            "denied": 10,
+            "last_decision": {
+              "at": "2026-10-29T01:39:31.694306+00:00",
+              "phase": "issue",
+              "state": "Normal",
+              "reason": "rate_limit",
+              "allowed": false,
+              "inflight": 0,
+              "rate_rps": 2.0,
+              "inflight_limit": 4
+            }
+          },
+          "cloud": {
+            "patient": {
+              "sampled_at": "2026-10-29T01:39:33.899533+00:00",
+              "p95_latency_ms": 10.4,
+              "average_latency_ms": 9.44,
+              "throughput_rps": 0.074,
+              "error_rate": 0.0,
+              "latency_sample_count": 3,
+              "replay_latency_sample_count": 3,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "emergency": {
+              "sampled_at": "2026-10-29T01:39:34.147638+00:00",
+              "p95_latency_ms": 9.2,
+              "average_latency_ms": 9.2,
+              "throughput_rps": 0.0286,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "admin": {
+              "sampled_at": "2026-10-29T01:39:34.369031+00:00",
+              "p95_latency_ms": 9.11,
+              "average_latency_ms": 9.11,
+              "throughput_rps": 0.0283,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            }
+          },
+          "hospitals": {
+            "Hospital_A": {
+              "pending": 2,
+              "applied": 2
+            },
+            "Hospital_B": {
+              "pending": 0,
+              "applied": 4
+            }
+          }
+        },
+        {
+          "elapsed_seconds": 43.048493,
+          "sampled_at": "2026-10-29T01:39:34.877371+00:00",
+          "controller": {
+            "state": "Normal",
+            "reason": "healthy",
+            "rate_rps": 2.0,
+            "telemetry_fresh": true,
+            "allowed": 12,
+            "denied": 11,
+            "last_decision": {
+              "at": "2026-10-29T01:39:34.101304+00:00",
+              "phase": "issue",
+              "state": "Normal",
+              "reason": "rate_limit",
+              "allowed": false,
+              "inflight": 0,
+              "rate_rps": 2.0,
+              "inflight_limit": 4
+            }
+          },
+          "cloud": {
+            "patient": {
+              "sampled_at": "2026-10-29T01:39:35.345351+00:00",
+              "p95_latency_ms": 10.4,
+              "average_latency_ms": 9.25,
+              "throughput_rps": 0.0953,
+              "error_rate": 0.0,
+              "latency_sample_count": 4,
+              "replay_latency_sample_count": 4,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "emergency": {
+              "sampled_at": "2026-10-29T01:39:35.578659+00:00",
+              "p95_latency_ms": 9.2,
+              "average_latency_ms": 9.2,
+              "throughput_rps": 0.0275,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "admin": {
+              "sampled_at": "2026-10-29T01:39:35.799148+00:00",
+              "p95_latency_ms": 9.11,
+              "average_latency_ms": 9.11,
+              "throughput_rps": 0.0272,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            }
+          },
+          "hospitals": {
+            "Hospital_A": {
+              "pending": 2,
+              "applied": 2
+            },
+            "Hospital_B": {
+              "pending": 0,
+              "applied": 4
+            }
+          }
+        },
+        {
+          "elapsed_seconds": 44.470728,
+          "sampled_at": "2026-10-29T01:39:36.299604+00:00",
+          "controller": {
+            "state": "Normal",
+            "reason": "healthy",
+            "rate_rps": 2.0,
+            "telemetry_fresh": true,
+            "allowed": 14,
+            "denied": 12,
+            "last_decision": {
+              "at": "2026-10-29T01:39:36.506515+00:00",
+              "phase": "issue",
+              "state": "Normal",
+              "reason": "rate_limit",
+              "allowed": false,
+              "inflight": 0,
+              "rate_rps": 2.0,
+              "inflight_limit": 4
+            }
+          },
+          "cloud": {
+            "patient": {
+              "sampled_at": "2026-10-29T01:39:36.759166+00:00",
+              "p95_latency_ms": 10.4,
+              "average_latency_ms": 9.25,
+              "throughput_rps": 0.0922,
+              "error_rate": 0.0,
+              "latency_sample_count": 4,
+              "replay_latency_sample_count": 4,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "emergency": {
+              "sampled_at": "2026-10-29T01:39:36.994296+00:00",
+              "p95_latency_ms": 9.2,
+              "average_latency_ms": 8.83,
+              "throughput_rps": 0.0529,
+              "error_rate": 0.0,
+              "latency_sample_count": 2,
+              "replay_latency_sample_count": 2,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "admin": {
+              "sampled_at": "2026-10-29T01:39:37.210545+00:00",
+              "p95_latency_ms": 9.11,
+              "average_latency_ms": 9.11,
+              "throughput_rps": 0.0262,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            }
+          },
+          "hospitals": {
+            "Hospital_A": {
+              "pending": 1,
+              "applied": 3
+            },
+            "Hospital_B": {
+              "pending": 0,
+              "applied": 4
+            }
+          }
+        },
+        {
+          "elapsed_seconds": 45.887915,
+          "sampled_at": "2026-10-29T01:39:37.716792+00:00",
+          "controller": {
+            "state": "Normal",
+            "reason": "healthy",
+            "rate_rps": 2.0,
+            "telemetry_fresh": true,
+            "allowed": 14,
+            "denied": 12,
+            "last_decision": {
+              "at": "2026-10-29T01:39:36.506515+00:00",
+              "phase": "issue",
+              "state": "Normal",
+              "reason": "rate_limit",
+              "allowed": false,
+              "inflight": 0,
+              "rate_rps": 2.0,
+              "inflight_limit": 4
+            }
+          },
+          "cloud": {
+            "patient": {
+              "sampled_at": "2026-10-29T01:39:38.161100+00:00",
+              "p95_latency_ms": 10.4,
+              "average_latency_ms": 9.25,
+              "throughput_rps": 0.0893,
+              "error_rate": 0.0,
+              "latency_sample_count": 4,
+              "replay_latency_sample_count": 4,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "emergency": {
+              "sampled_at": "2026-10-29T01:39:38.373125+00:00",
+              "p95_latency_ms": 9.2,
+              "average_latency_ms": 8.83,
+              "throughput_rps": 0.051,
+              "error_rate": 0.0,
+              "latency_sample_count": 2,
+              "replay_latency_sample_count": 2,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "admin": {
+              "sampled_at": "2026-10-29T01:39:38.586312+00:00",
+              "p95_latency_ms": 9.11,
+              "average_latency_ms": 9.11,
+              "throughput_rps": 0.0253,
+              "error_rate": 0.0,
+              "latency_sample_count": 1,
+              "replay_latency_sample_count": 1,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            }
+          },
+          "hospitals": {
+            "Hospital_A": {
+              "pending": 1,
+              "applied": 3
+            },
+            "Hospital_B": {
+              "pending": 0,
+              "applied": 4
+            }
+          }
+        },
+        {
+          "elapsed_seconds": 47.273319,
+          "sampled_at": "2026-10-29T01:39:39.102207+00:00",
+          "controller": {
+            "state": "Normal",
+            "reason": "healthy",
+            "rate_rps": 2.0,
+            "telemetry_fresh": true,
+            "allowed": 16,
+            "denied": 12,
+            "last_decision": {
+              "at": "2026-10-29T01:39:38.814906+00:00",
+              "phase": "ack",
+              "state": "Normal",
+              "reason": "admitted",
+              "allowed": true,
+              "inflight": 0,
+              "rate_rps": 2.0,
+              "inflight_limit": 4
+            }
+          },
+          "cloud": {
+            "patient": {
+              "sampled_at": "2026-10-29T01:39:39.524909+00:00",
+              "p95_latency_ms": 10.4,
+              "average_latency_ms": 9.25,
+              "throughput_rps": 0.0866,
+              "error_rate": 0.0,
+              "latency_sample_count": 4,
+              "replay_latency_sample_count": 4,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "emergency": {
+              "sampled_at": "2026-10-29T01:39:39.747483+00:00",
+              "p95_latency_ms": 9.2,
+              "average_latency_ms": 8.83,
+              "throughput_rps": 0.0493,
+              "error_rate": 0.0,
+              "latency_sample_count": 2,
+              "replay_latency_sample_count": 2,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            },
+            "admin": {
+              "sampled_at": "2026-10-29T01:39:39.981883+00:00",
+              "p95_latency_ms": 9.11,
+              "average_latency_ms": 8.7,
+              "throughput_rps": 0.0488,
+              "error_rate": 0.0,
+              "latency_sample_count": 2,
+              "replay_latency_sample_count": 2,
+              "executor_queue_depth": 0,
+              "executor_queue_pressure": 0.0
+            }
+          },
+          "hospitals": {
+            "Hospital_A": {
+              "pending": 0,
+              "applied": 4
+            },
+            "Hospital_B": {
+              "pending": 0,
+              "applied": 4
+            }
+          }
+        }
+      ],
+      "recovery_start_at": "2026-10-29T01:38:51.828867+00:00",
+      "recovery_completion_seconds": 47.27331920003053,
+      "event_completion": {
+        "EVAL-fixed-1-Hospital_B-1": {
+          "elapsed_seconds": 12.533758,
+          "observed_at": "2026-10-29T01:39:05.828013+00:00"
+        },
+        "EVAL-fixed-1-Hospital_B-2": {
+          "elapsed_seconds": 17.038801,
+          "observed_at": "2026-10-29T01:39:10.274791+00:00"
+        },
+        "EVAL-fixed-1-Hospital_B-3": {
+          "elapsed_seconds": 20.131905,
+          "observed_at": "2026-10-29T01:39:13.428014+00:00"
+        },
+        "EVAL-fixed-1-Hospital_B-4": {
+          "elapsed_seconds": 21.649497,
+          "observed_at": "2026-10-29T01:39:14.881596+00:00"
+        },
+        "EVAL-fixed-1-Hospital_A-1": {
+          "elapsed_seconds": 38.56698,
+          "observed_at": "2026-10-29T01:39:31.656506+00:00"
+        },
+        "EVAL-fixed-1-Hospital_A-2": {
+          "elapsed_seconds": 41.549081,
+          "observed_at": "2026-10-29T01:39:34.604798+00:00"
+        },
+        "EVAL-fixed-1-Hospital_A-3": {
+          "elapsed_seconds": 44.470728,
+          "observed_at": "2026-10-29T01:39:37.462311+00:00"
+        },
+        "EVAL-fixed-1-Hospital_A-4": {
+          "elapsed_seconds": 47.273319,
+          "observed_at": "2026-10-29T01:39:40.192023+00:00"
+        }
+      },
+      "site_completion_seconds": {
+        "Hospital_A": 47.273319,
+        "Hospital_B": 21.649497
+      },
+      "middleware_metrics": {
+        "patient": {
+          "p95_latency_ms": 10.4,
+          "average_latency_ms": 9.25,
+          "throughput_rps": 0.0846,
+          "error_rate": 0.0,
+          "latency_sample_count": 4,
+          "replay_latency_sample_count": 4,
+          "failed_requests": 0,
+          "executor_queue_depth": 0,
+          "executor_queue_pressure": 0.0,
+          "observation_seconds": 47.281549
+        },
+        "emergency": {
+          "p95_latency_ms": 9.2,
+          "average_latency_ms": 8.83,
+          "throughput_rps": 0.048,
+          "error_rate": 0.0,
+          "latency_sample_count": 2,
+          "replay_latency_sample_count": 2,
+          "failed_requests": 0,
+          "executor_queue_depth": 0,
+          "executor_queue_pressure": 0.0,
+          "observation_seconds": 41.708108
+        },
+        "admin": {
+          "p95_latency_ms": 9.11,
+          "average_latency_ms": 8.7,
+          "throughput_rps": 0.0474,
+          "error_rate": 0.0,
+          "latency_sample_count": 2,
+          "replay_latency_sample_count": 2,
+          "failed_requests": 0,
+          "executor_queue_depth": 0,
+          "executor_queue_pressure": 0.0,
+          "observation_seconds": 42.150177
+        }
+      },
+      "client_status_reads": [
+        {
+          "event_id": "EVAL-fixed-1-Hospital_A-1",
+          "service": "patient",
+          "latency_ms": 250.38280000444502
+        },
+        {
+          "event_id": "EVAL-fixed-1-Hospital_A-2",
+          "service": "patient",
+          "latency_ms": 231.99859994929284
+        },
+        {
+          "event_id": "EVAL-fixed-1-Hospital_A-3",
+          "service": "emergency",
+          "latency_ms": 221.23529994860291
+        },
+        {
+          "event_id": "EVAL-fixed-1-Hospital_A-4",
+          "service": "admin",
+          "latency_ms": 231.55729996506125
+        },
+        {
+          "event_id": "EVAL-fixed-1-Hospital_B-1",
+          "service": "patient",
+          "latency_ms": 210.45030001550913
+        },
+        {
+          "event_id": "EVAL-fixed-1-Hospital_B-2",
+          "service": "patient",
+          "latency_ms": 242.03989992383868
+        },
+        {
+          "event_id": "EVAL-fixed-1-Hospital_B-3",
+          "service": "emergency",
+          "latency_ms": 231.97339999023825
+        },
+        {
+          "event_id": "EVAL-fixed-1-Hospital_B-4",
+          "service": "admin",
+          "latency_ms": 249.4179999921471
+        }
+      ],
+      "client_status_read_p95_ms": 250.38280000444502,
+      "controller_final": {
+        "state": "Normal",
+        "reason": "healthy",
+        "rate_rps": 2.0,
+        "telemetry_fresh": true,
+        "allowed": 16,
+        "denied": 12
+      },
+      "hospital_journals": {
+        "Hospital_A": {
+          "retry_count_total": 7,
+          "retry_count_max": 4,
+          "attempt_phases": [
+            [
+              "sent",
+              4
+            ]
+          ]
+        },
+        "Hospital_B": {
+          "retry_count_total": 5,
+          "retry_count_max": 2,
+          "attempt_phases": [
+            [
+              "sent",
+              4
+            ]
+          ]
+        }
+      },
+      "integrity": {
+        "expected_events": 8,
+        "postgres_events": 8,
+        "unique_event_ids": 8,
+        "completed_grants": 8,
+        "remaining_tickets": 0,
+        "same_eligible_event_set": true,
+        "dependency_order_preserved": true,
+        "loss_or_duplication": false
+      },
+      "grant_audit": [
+        {
+          "hospital_id": "Hospital_B",
+          "event_id": "EVAL-fixed-1-Hospital_B-1",
+          "action": "allocate",
+          "created_at": "2026-10-29T01:39:03.054956+00:00"
+        },
+        {
+          "hospital_id": "Hospital_B",
+          "event_id": "EVAL-fixed-1-Hospital_B-1",
+          "action": "acknowledge",
+          "created_at": "2026-10-29T01:39:03.108217+00:00"
+        },
+        {
+          "hospital_id": "Hospital_B",
+          "event_id": "EVAL-fixed-1-Hospital_B-1",
+          "action": "authoritative_cloud_query",
+          "created_at": "2026-10-29T01:39:03.143164+00:00"
+        },
+        {
+          "hospital_id": "Hospital_B",
+          "event_id": "EVAL-fixed-1-Hospital_B-2",
+          "action": "allocate",
+          "created_at": "2026-10-29T01:39:09.927008+00:00"
+        },
+        {
+          "hospital_id": "Hospital_B",
+          "event_id": "EVAL-fixed-1-Hospital_B-2",
+          "action": "acknowledge",
+          "created_at": "2026-10-29T01:39:09.972353+00:00"
+        },
+        {
+          "hospital_id": "Hospital_B",
+          "event_id": "EVAL-fixed-1-Hospital_B-2",
+          "action": "authoritative_cloud_query",
+          "created_at": "2026-10-29T01:39:10.012542+00:00"
+        },
+        {
+          "hospital_id": "Hospital_B",
+          "event_id": "EVAL-fixed-1-Hospital_B-3",
+          "action": "allocate",
+          "created_at": "2026-10-29T01:39:12.328492+00:00"
+        },
+        {
+          "hospital_id": "Hospital_B",
+          "event_id": "EVAL-fixed-1-Hospital_B-3",
+          "action": "acknowledge",
+          "created_at": "2026-10-29T01:39:12.378993+00:00"
+        },
+        {
+          "hospital_id": "Hospital_B",
+          "event_id": "EVAL-fixed-1-Hospital_B-3",
+          "action": "authoritative_cloud_query",
+          "created_at": "2026-10-29T01:39:12.416346+00:00"
+        },
+        {
+          "hospital_id": "Hospital_B",
+          "event_id": "EVAL-fixed-1-Hospital_B-4",
+          "action": "allocate",
+          "created_at": "2026-10-29T01:39:14.724843+00:00"
+        },
+        {
+          "hospital_id": "Hospital_B",
+          "event_id": "EVAL-fixed-1-Hospital_B-4",
+          "action": "acknowledge",
+          "created_at": "2026-10-29T01:39:14.776121+00:00"
+        },
+        {
+          "hospital_id": "Hospital_B",
+          "event_id": "EVAL-fixed-1-Hospital_B-4",
+          "action": "authoritative_cloud_query",
+          "created_at": "2026-10-29T01:39:14.812670+00:00"
+        },
+        {
+          "hospital_id": "Hospital_A",
+          "event_id": "EVAL-fixed-1-Hospital_A-1",
+          "action": "allocate",
+          "created_at": "2026-10-29T01:39:31.552851+00:00"
+        },
+        {
+          "hospital_id": "Hospital_A",
+          "event_id": "EVAL-fixed-1-Hospital_A-1",
+          "action": "acknowledge",
+          "created_at": "2026-10-29T01:39:31.602501+00:00"
+        },
+        {
+          "hospital_id": "Hospital_A",
+          "event_id": "EVAL-fixed-1-Hospital_A-1",
+          "action": "authoritative_cloud_query",
+          "created_at": "2026-10-29T01:39:31.641549+00:00"
+        },
+        {
+          "hospital_id": "Hospital_A",
+          "event_id": "EVAL-fixed-1-Hospital_A-2",
+          "action": "allocate",
+          "created_at": "2026-10-29T01:39:33.961315+00:00"
+        },
+        {
+          "hospital_id": "Hospital_A",
+          "event_id": "EVAL-fixed-1-Hospital_A-2",
+          "action": "acknowledge",
+          "created_at": "2026-10-29T01:39:34.014475+00:00"
+        },
+        {
+          "hospital_id": "Hospital_A",
+          "event_id": "EVAL-fixed-1-Hospital_A-2",
+          "action": "authoritative_cloud_query",
+          "created_at": "2026-10-29T01:39:34.050649+00:00"
+        },
+        {
+          "hospital_id": "Hospital_A",
+          "event_id": "EVAL-fixed-1-Hospital_A-3",
+          "action": "allocate",
+          "created_at": "2026-10-29T01:39:36.358408+00:00"
+        },
+        {
+          "hospital_id": "Hospital_A",
+          "event_id": "EVAL-fixed-1-Hospital_A-3",
+          "action": "acknowledge",
+          "created_at": "2026-10-29T01:39:36.402524+00:00"
+        },
+        {
+          "hospital_id": "Hospital_A",
+          "event_id": "EVAL-fixed-1-Hospital_A-3",
+          "action": "authoritative_cloud_query",
+          "created_at": "2026-10-29T01:39:36.446033+00:00"
+        },
+        {
+          "hospital_id": "Hospital_A",
+          "event_id": "EVAL-fixed-1-Hospital_A-4",
+          "action": "allocate",
+          "created_at": "2026-10-29T01:39:38.770175+00:00"
+        },
+        {
+          "hospital_id": "Hospital_A",
+          "event_id": "EVAL-fixed-1-Hospital_A-4",
+          "action": "acknowledge",
+          "created_at": "2026-10-29T01:39:38.816267+00:00"
+        },
+        {
+          "hospital_id": "Hospital_A",
+          "event_id": "EVAL-fixed-1-Hospital_A-4",
+          "action": "authoritative_cloud_query",
+          "created_at": "2026-10-29T01:39:38.852603+00:00"
+        }
+      ],
+      "finished_at": "2026-10-29T01:39:43.589767+00:00"
+    }
+  ],
+  "original_resource_baseline": {
+    "containers": 33,
+    "volumes": 16,
+    "container_ids": [
+      "01cce11cfc59db4d000d7fe60669817513e1d21eef90e0012c5ef4fd5e32b103",
+      "032d6f604fe6ea388645570ea9d17e7f0051a00e06b14611c1157f5f6d564cd8",
+      "07831148b3f86b3722da48e9b0c99a1f1ccaf559cc88f7988e9dfdb1b5bb3dfa",
+      "0da8ab1757e3cc5a474ea9227a78b735eba980e845e583bb33ab366d69f23718",
+      "1ccbef9efbb2f41de301b63e8608232eca4e113c70e006e36305391587b2e242",
+      "3eb6ec3768846e34f3ca01be018b3373f2d8f4dbe61050dec2b42ebc591d307c",
+      "42bb59276c732e2752b62b99f9d9f102a9a94b311f129bfd4e6b5d7ff65b06cd",
+      "439c4c1de70d44e85fa43da1bb42b6e96c81438e8a037471fd35e4ed93a7ccfb",
+      "471fddd4fb574e11c6c7ebf62c8fc29bb6a887fae851ea658b32a9bb2729c11d",
+      "4ecfdc05dfd867bdee9998ed2a194ce89f064f287e993384d254b3af2b48ae14",
+      "52dd6fa28c64de03d825c9bda124a89a42e1908080f9074aaa0cab03cbb2f418",
+      "564b1608bd34f27e389ff9e307a0201e6f373ceb6bea6ece05ebffd0d86e7965",
+      "5b143aee4f0945c73c951e01c840dafbd63ed016b9fb3ac36fcfa78f941b537f",
+      "61d5b12671b0523921b9b1e7455d7a127476ecc0cf88a8b6e3f97416a0069170",
+      "65027a4e4229c94d43a8c6555a2f621306de14048043ac60a53e41a691e09eea",
+      "6a84630d4f13eff108390c318397679bdacf8968e736e41f48643b7036d999a8",
+      "7989278b7645b72eb50ae9d86a112e429e33732c7faaf5634bb53a3a2321f0e1",
+      "8403468e12ab8219b9b7d5fb6359cff40203eddd478233341a1e85b3d322fd91",
+      "91a4b4e81d6ffcaa3fd2a4641f73a1c1806e57b322701e92fd453b63fdef32d8",
+      "97a296e0857ec7b6379513400f9d44523d71cfb003dd1865d03400aecc19e2a8",
+      "abace36180c2cf450db629f6d6382b2d081d06a32bf883200b8deec1a889e9b8",
+      "aff06e3ec433e36ff0f96de7d4f9626355d6d022ddb6e4a7e7468ef7f992351b",
+      "b742f42f7805a68d046d3cb7de2dfa765d6fee26fc45957e389179a9522fcba8",
+      "b89da75f38a8f3887f64a1a299d905785e1afdde501c8e7685b110a0a5a21c88",
+      "bc388d68e29a836959713a9a4d7881729b041d30a34eabcf769f5535eec127a4",
+      "d081697aa59921b00e909d8a3dafa83518a3a0289299d29f0dce49dc522a4e74",
+      "d1508a040c56aa98bf7e97a4e1679e251a72d6b71a9db2d6c1b18dfacbad1565",
+      "ea00d7f6ce18b5c90435edc3d8296573ede0defb24f84561cf7d9ba3b935fc21",
+      "ebced519cb0e158fe986ea24bd5e8f8ebd5a6ddc12a8cd7fb97a475b7a0e413e",
+      "fac28841ea108efe32c6585b6a58e1b3a41b744723c8d53ff8c7c261b7679762",
+      "fc5e22e7be32ced0ca74937dc77abe981fdb9623b6a7d4d69ca11cf484fe8ff0",
+      "fdd0c6e82182d3a5388642431c7975da4fe102f9835da6cdd00bc7f4cb877b60",
+      "fdec29438b27a784d2e84d4b3d1b616952047f11d75ed4cae7ba21c385ac612a"
+    ],
+    "volume_names": [
+      "b4a991065d804026972195281eea606219b68328d33d569a8a43e16276cbb9bd",
+      "cg-metaguard-41f79711c3cc_hospital-a-data",
+      "cg-metaguard-41f79711c3cc_hospital-b-data",
+      "cg-metaguard-41f79711c3cc_postgres-data",
+      "crisisguard-local_hospital-a-data",
+      "crisisguard-local_hospital-b-data",
+      "crisisguard-local_postgres-data",
+      "crisisguard_pgdata",
+      "topicf-task4-benchmark_benchmark_postgres",
+      "topicf-task4-benchmark_benchmark_qdrant",
+      "topicf-task4-round3_round3_postgres",
+      "topicf-task4-round3_round3_qdrant",
+      "topicf-task4-round3_round3_state",
+      "topicf_gis_bedrock_ltm_data",
+      "topicf_gis_db_data",
+      "topicf_gis_titan_qdrant_data"
+    ]
+  },
+  "original_resources_preserved": {
+    "result": "failed",
+    "container_identity_image_mounts_equal": false,
+    "all_original_volumes_present": true,
+    "containers": 33,
+    "volumes": 16,
+    "retained_disposable_image": "crisisguard-policy-eval:73dfff22f3d7"
+  },
+  "finished_at": "2026-10-29T01:39:46.425788+00:00",
+  "result": "failed"
+}

@@ -1,0 +1,25 @@
+acceptance_applicable,condition,policy,admission,comparison,site,metric,target_max,units,mean,excluded_pairs,observer_relative_interval,status,descriptive_threshold_status
+False,ratio1-1_depth3_balanced_load30,bounded_on,aimd,admission,Hospital_A,urgent_post_reconnect_p95_upper_seconds,-10,percent,65.18408954440103,0,"[59.42632408752136, 75.859102937601]",not established,not established
+True,ratio1-1_depth3_balanced_load30,bounded_on,aimd,admission,Hospital_A,routine_post_reconnect_p95_upper_seconds,20,percent,36.40735634548659,0,"[32.8321358113033, 41.684725014635326]",not established,failed
+True,ratio1-1_depth3_balanced_load30,bounded_on,aimd,admission,global,cloud_drain_upper_seconds,20,percent,34.03967612617912,0,"[32.920697653667176, 35.646435923714265]",not established,failed
+True,ratio1-1_depth3_balanced_load30,bounded_on,aimd,admission,global,client_live_end_to_end_violation_rate,1,percentage points,-1.5808131039151756,0,,not established,achieved
+False,ratio1-1_depth3_balanced_load30,bounded_on,aimd,admission,Hospital_B,urgent_post_reconnect_p95_upper_seconds,-10,percent,98.41116424381836,0,"[93.36403598037225, 110.83538826649172]",not established,not established
+True,ratio1-1_depth3_balanced_load30,bounded_on,aimd,admission,Hospital_B,routine_post_reconnect_p95_upper_seconds,20,percent,45.7343785331925,0,"[42.231381256490536, 51.24284637821212]",not established,failed
+False,ratio1-1_depth3_balanced_load70,bounded_on,aimd,admission,Hospital_A,urgent_post_reconnect_p95_upper_seconds,-10,percent,27.45002886037928,0,"[22.848697485981692, 33.84454485067896]",not established,not established
+True,ratio1-1_depth3_balanced_load70,bounded_on,aimd,admission,Hospital_A,routine_post_reconnect_p95_upper_seconds,20,percent,22.00532734685564,0,"[18.901808647468954, 25.9501622581218]",not established,failed
+True,ratio1-1_depth3_balanced_load70,bounded_on,aimd,admission,global,cloud_drain_upper_seconds,20,percent,14.771444581639127,0,"[13.76300625408735, 15.978741249779222]",not established,achieved
+True,ratio1-1_depth3_balanced_load70,bounded_on,aimd,admission,global,client_live_end_to_end_violation_rate,1,percentage points,-0.9072491080620008,0,,not established,achieved
+False,ratio1-1_depth3_balanced_load70,bounded_on,aimd,admission,Hospital_B,urgent_post_reconnect_p95_upper_seconds,-10,percent,11.622641853835948,0,"[7.827108946215011, 16.282058988078894]",not established,not established
+True,ratio1-1_depth3_balanced_load70,bounded_on,aimd,admission,Hospital_B,routine_post_reconnect_p95_upper_seconds,20,percent,23.61118030885393,0,"[20.444703259689902, 27.991600229281424]",not established,failed
+True,ratio10-1_depth3_a_only_load30,bounded_on,aimd,scheduler,Hospital_A,urgent_post_reconnect_p95_upper_seconds,-10,percent,0.3774878211540499,0,"[-2.1808476157978007, 2.99871906063363]",not established,failed
+True,ratio10-1_depth3_a_only_load30,bounded_on,aimd,scheduler,Hospital_A,routine_post_reconnect_p95_upper_seconds,20,percent,-1.506230749563544,0,"[-3.322940735171882, 0.3669367386453204]",not established,achieved
+True,ratio10-1_depth3_a_only_load30,bounded_on,aimd,scheduler,global,cloud_drain_upper_seconds,20,percent,-0.7399418715915207,0,"[-1.4423662002545323, -0.030927274527010606]",not established,achieved
+True,ratio10-1_depth3_a_only_load30,bounded_on,aimd,scheduler,global,client_live_end_to_end_violation_rate,1,percentage points,0.24486029854000418,0,,not established,achieved
+False,ratio10-1_depth3_a_only_load30,bounded_on,aimd,scheduler,Hospital_B,urgent_post_reconnect_p95_upper_seconds,-10,percent,,5,,not established,not established
+True,ratio10-1_depth3_a_only_load30,bounded_on,aimd,scheduler,Hospital_B,routine_post_reconnect_p95_upper_seconds,20,percent,15.638103364703223,0,"[9.973632704650178, 22.61044779250708]",not established,achieved
+True,ratio10-1_depth3_a_only_load70,bounded_on,aimd,scheduler,Hospital_A,urgent_post_reconnect_p95_upper_seconds,-10,percent,3.315956335978523,0,"[0.38906869925159776, 6.363908843725186]",not established,failed
+True,ratio10-1_depth3_a_only_load70,bounded_on,aimd,scheduler,Hospital_A,routine_post_reconnect_p95_upper_seconds,20,percent,-6.900770045097049,0,"[-8.760259118239592, -5.205647294570728]",not established,achieved
+True,ratio10-1_depth3_a_only_load70,bounded_on,aimd,scheduler,global,cloud_drain_upper_seconds,20,percent,-13.076034018353258,0,"[-13.69699318364878, -12.521912437106977]",not established,achieved
+True,ratio10-1_depth3_a_only_load70,bounded_on,aimd,scheduler,global,client_live_end_to_end_violation_rate,1,percentage points,0.7111171942225865,0,,not established,achieved
+False,ratio10-1_depth3_a_only_load70,bounded_on,aimd,scheduler,Hospital_B,urgent_post_reconnect_p95_upper_seconds,-10,percent,,5,,not established,not established
+True,ratio10-1_depth3_a_only_load70,bounded_on,aimd,scheduler,Hospital_B,routine_post_reconnect_p95_upper_seconds,20,percent,-22.56992603152824,0,"[-26.55674852623933, -18.619767302123133]",not established,achieved

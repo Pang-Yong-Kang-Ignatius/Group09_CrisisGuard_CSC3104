@@ -1,0 +1,13 @@
+# Shared application dependencies for Docker services and host-side tools.
+# The Windows local outage agent requires these four packages on the host.
+fastapi
+uvicorn[standard]
+pydantic
+httpx
+
+sqlalchemy
+psycopg[binary]
+pytest
+python-dotenv
+pandas
+matplotlib

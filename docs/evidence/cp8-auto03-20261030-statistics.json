@@ -1,0 +1,20 @@
+{
+  "executed_trials": 1,
+  "planned_trials": 1,
+  "analyzer_sha256": "8172d174ab5c714dcd3617edc3b4a1731ae294e00eedc10a3954735689f2107f",
+  "passed_trials": 1,
+  "total_original_events": 44,
+  "total_observed_events": 44,
+  "cleanup_all_passed": true,
+  "sampled_ticket_witnesses": 11,
+  "sampled_ticket_bound_violations": 0,
+  "preservation": {
+    "container_identity_image_mounts_equal": true,
+    "container_states_equal": true,
+    "exact_network_set_equal": true,
+    "exact_volume_set_equal": true
+  },
+  "paired_comparisons": [],
+  "acceptance_targets": "NOT ESTABLISHED: uncalibrated live load and no supported grant-enforced live writes; bounded screen/cost stress is not full D2/D3",
+  "raw_backup_directory": "C:\\Users\\muhdh\\OneDrive\\Documents\\GitHub\\CrisisGuard\\.venv\\cp8-ef4eb831d355"
+}

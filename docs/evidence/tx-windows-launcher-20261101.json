@@ -1,0 +1,13 @@
+{
+  "run": "cg-launcher-check-df1843d6e009",
+  "aws_used": false,
+  "result": "passed",
+  "scope": "Fresh source on existing Windows/Docker; shared installed dependencies; no interactive browser/agent",
+  "python": "3.11.9",
+  "services_healthy": 8,
+  "http_probes_passed": 7,
+  "private_configuration_generated": true,
+  "hospital_snapshots_created": true,
+  "retained_resources_preserved": true,
+  "cleanup": "Only this run's containers, volumes and image removed; private run folder retained"
+}

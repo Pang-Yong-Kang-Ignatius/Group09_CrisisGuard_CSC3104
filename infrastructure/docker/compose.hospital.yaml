@@ -1,0 +1,34 @@
+# One hospital per Compose project. Use the A or B example environment file.
+name: ${HOSPITAL_PROJECT:?Choose a unique project name for this hospital}
+
+services:
+  hospital:
+    image: crisisguard-hospital:dev
+    build:
+      context: ../..
+      dockerfile: infrastructure/docker/Dockerfile
+    command: ["python", "-m", "uvicorn", "edge.capture_api.main:app", "--host", "0.0.0.0", "--port", "8000"]
+    environment:
+      HOSPITAL_DB_PATH: /data/hospital.db
+      CLOUD_URL: ${CLOUD_URL:?Set the reachable Patient Service events URL}
+      EMERGENCY_URL: ${EMERGENCY_URL:-}
+      ADMIN_URL: ${ADMIN_URL:-}
+      SITE_ID: ${SITE_ID:-}
+      AUTO_REPLAY: ${AUTO_REPLAY:-0}
+      AUTO_REPLAY_INTERVAL_SECONDS: ${AUTO_REPLAY_INTERVAL_SECONDS:-5}
+      SCHEDULER_ENABLE_INHERITANCE: ${SCHEDULER_ENABLE_INHERITANCE:-1}
+      SCHEDULER_AGEING_INTERVAL_SECONDS: ${SCHEDULER_AGEING_INTERVAL_SECONDS:-600}
+    ports:
+      - "${HOSPITAL_BIND_ADDRESS:-127.0.0.1}:${HOSPITAL_PORT:-8000}:8000"
+    volumes:
+      - hospital-data:/data
+    # Capture must start even when the remote cloud is unavailable.
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/', timeout=2)"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+      start_period: 10s
+
+volumes:
+  hospital-data:

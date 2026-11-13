@@ -1,0 +1,5 @@
+*
+!launch_lab.py
+!package_source.py
+!launcher.Dockerfile
+!.dockerignore

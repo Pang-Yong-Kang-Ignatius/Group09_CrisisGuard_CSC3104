@@ -1,0 +1,18 @@
+# Merge after infrastructure/docker/compose.cloud.yaml.
+x-runtime: &runtime
+  restart: unless-stopped
+  logging:
+    driver: json-file
+    options:
+      max-size: "10m"
+      max-file: "3"
+
+services:
+  postgres:
+    <<: *runtime
+  patient:
+    <<: *runtime
+  emergency:
+    <<: *runtime
+  admin:
+    <<: *runtime

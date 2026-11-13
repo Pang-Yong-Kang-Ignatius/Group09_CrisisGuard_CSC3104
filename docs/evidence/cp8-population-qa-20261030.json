@@ -1,0 +1,72 @@
+{
+  "matrix02": {
+    "trials": 280,
+    "producer_client_count_mismatches": [],
+    "explicit_stop_clock_offer_accounting_mismatches": [],
+    "client_live_read_status_counts": {
+      "404": 3789,
+      "200": 3753
+    },
+    "note": "Middleware samples count only completed in-window server requests; transport errors need not reach Cloud. A nonzero mismatch needs inspection, not relabelling.",
+    "sampled_admission_states": {
+      "('Normal', 20.0, True)": 13074
+    }
+  },
+  "auto03": {
+    "trials": 1,
+    "producer_client_count_mismatches": [],
+    "explicit_stop_clock_offer_accounting_mismatches": [],
+    "client_live_read_status_counts": {
+      "transport_error": 3,
+      "404": 23,
+      "200": 16
+    },
+    "note": "Middleware samples count only completed in-window server requests; transport errors need not reach Cloud. A nonzero mismatch needs inspection, not relabelling.",
+    "sampled_admission_states": {
+      "('Recovery', 2.5, False)": 25,
+      "('Recovery', 2.0, False)": 4,
+      "('Recovery', 2.0, True)": 3,
+      "('Caution', 4.0, True)": 8,
+      "('Caution', 6.0, True)": 4,
+      "('Normal', 6.0, True)": 4,
+      "('Normal', 8.0, True)": 7,
+      "('Normal', 10.0, True)": 7,
+      "('Normal', 12.0, True)": 8,
+      "('Normal', 14.0, True)": 7,
+      "('Normal', 16.0, True)": 8,
+      "('Normal', 18.0, True)": 1
+    }
+  },
+  "constant01": {
+    "trials": 1,
+    "producer_client_count_mismatches": [],
+    "explicit_stop_clock_offer_accounting_mismatches": [],
+    "client_live_read_status_counts": {
+      "404": 9,
+      "200": 12
+    },
+    "note": "Middleware samples count only completed in-window server requests; transport errors need not reach Cloud. A nonzero mismatch needs inspection, not relabelling.",
+    "sampled_admission_states": {
+      "('Normal', 20.0, True)": 38
+    }
+  },
+  "cost-stress01": {
+    "trials": 35,
+    "producer_client_count_mismatches": [],
+    "explicit_stop_clock_offer_accounting_mismatches": [],
+    "client_live_read_status_counts": {
+      "404": 562,
+      "200": 606
+    },
+    "note": "Middleware samples count only completed in-window server requests; transport errors need not reach Cloud. A nonzero mismatch needs inspection, not relabelling.",
+    "sampled_admission_states": {
+      "('Normal', 20.0, True)": 1932,
+      "('Caution', 10.0, True)": 34,
+      "('Normal', 12.0, True)": 18,
+      "('Normal', 14.0, True)": 23,
+      "('Normal', 16.0, True)": 21,
+      "('Normal', 18.0, True)": 22,
+      "('Caution', 12.0, True)": 4
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "result": "passed",
+  "preflights": [
+    {
+      "role": "cloud",
+      "expected_acceptance": true,
+      "result": "passed",
+      "metaguard": false,
+      "policy": null
+    },
+    {
+      "role": "hospital",
+      "expected_acceptance": true,
+      "result": "passed",
+      "metaguard": false,
+      "policy": null
+    },
+    {
+      "role": "hospital",
+      "expected_acceptance": true,
+      "result": "passed",
+      "metaguard": false,
+      "policy": null
+    },
+    {
+      "role": "cloud",
+      "expected_acceptance": false,
+      "result": "passed",
+      "metaguard": false,
+      "policy": null
+    },
+    {
+      "role": "cloud",
+      "expected_acceptance": false,
+      "result": "passed",
+      "metaguard": false,
+      "policy": null
+    },
+    {
+      "role": "hospital",
+      "expected_acceptance": false,
+      "result": "passed",
+      "metaguard": false,
+      "policy": null
+    },
+    {
+      "role": "cloud",
+      "expected_acceptance": true,
+      "result": "passed",
+      "metaguard": true,
+      "policy": "fixed"
+    },
+    {
+      "role": "cloud",
+      "expected_acceptance": true,
+      "result": "passed",
+      "metaguard": true,
+      "policy": "aimd"
+    },
+    {
+      "role": "cloud",
+      "expected_acceptance": false,
+      "result": "passed",
+      "metaguard": true,
+      "policy": "unknown"
+    },
+    {
+      "role": "cloud",
+      "expected_acceptance": false,
+      "result": "passed",
+      "metaguard": true,
+      "policy": "aimd"
+    },
+    {
+      "role": "hospital",
+      "expected_acceptance": true,
+      "result": "passed",
+      "metaguard": true,
+      "policy": null
+    },
+    {
+      "role": "hospital",
+      "expected_acceptance": true,
+      "result": "passed",
+      "metaguard": true,
+      "policy": null
+    }
+  ],
+  "controller_scaffold": "configuration_only_passed",
+  "containers_started": 0,
+  "aws_used": false,
+  "scope": "Real Compose rendering; synthetic settings; no controller implementation/health claim"
+}

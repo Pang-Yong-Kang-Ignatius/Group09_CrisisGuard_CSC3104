@@ -1,0 +1,124 @@
+name: CrisisGuard checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+          cache: pip
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Reject tracked private deployment artifacts
+        run: python infrastructure/scripts/audit_deployment.py repository
+      - name: Run JavaScript unit tests
+        run: |
+          mkdir -p .ci-results
+          node --test --test-reporter=spec --test-reporter-destination=stdout --test-reporter=junit --test-reporter-destination=.ci-results/javascript.xml tests/unit/*.cjs
+      - run: python -m pip install -r requirements.txt
+      # Root test_connection.py makes live HTTP requests at import time.
+      - run: python -m pytest tests/unit -q --junitxml=.ci-results/unit.xml
+      - name: Preserve unit test evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: unit-evidence-${{ github.sha }}
+          path: |
+            .ci-results/unit.xml
+            .ci-results/javascript.xml
+          include-hidden-files: true
+          retention-days: 30
+
+  docker-deployment:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+      - name: Validate Compose examples
+        run: |
+          docker compose config --quiet
+          docker compose --env-file infrastructure/docker/hospital-a.env.example -f infrastructure/docker/compose.hospital.yaml config --quiet
+          docker compose --env-file infrastructure/docker/hospital-b.env.example -f infrastructure/docker/compose.hospital.yaml config --quiet
+          docker compose --env-file infrastructure/docker/cloud.env.example -f infrastructure/docker/compose.cloud.yaml config --quiet
+          docker compose --env-file infrastructure/docker/split-cloud.env.example -f infrastructure/docker/compose.cloud.yaml config --quiet
+          docker compose --env-file infrastructure/docker/split-hospital-a.env.example -f infrastructure/docker/compose.hospital.yaml config --quiet
+          docker compose --env-file infrastructure/docker/split-hospital-b.env.example -f infrastructure/docker/compose.hospital.yaml config --quiet
+          docker compose --env-file infrastructure/docker/split-cloud.env.example -f infrastructure/docker/compose.cloud.yaml -f infrastructure/aws/compose.cloud.override.yaml config --quiet
+          docker compose --env-file infrastructure/docker/split-hospital-a.env.example -f infrastructure/docker/compose.hospital.yaml -f infrastructure/aws/compose.hospital.override.yaml config --quiet
+      - name: Verify AWS deployment configuration offline
+        run: |
+          mkdir -p .ci-results
+          python infrastructure/scripts/verify_devops_config.py --report .ci-results/compose.json
+      - name: Build AWS launcher and render template offline
+        run: |
+          bash -n infrastructure/aws/bootstrap_lab.sh
+          bash -n infrastructure/aws/deploy.sh
+          docker build -f infrastructure/aws/launcher.Dockerfile -t crisisguard-aws-launcher:ci infrastructure/aws
+          docker run --rm -e AWS_EC2_METADATA_DISABLED=true crisisguard-aws-launcher:ci preview --ssh-cidr 8.8.8.8/32 > /tmp/crisisguard-template.json
+          python -m json.tool /tmp/crisisguard-template.json > /dev/null
+          python -m pip install cfn-lint==1.58.0
+          cfn-lint -t /tmp/crisisguard-template.json
+      - name: Verify private AWS SSH transport offline
+        run: |
+          docker build -f tests/fixtures/aws-ssh.Dockerfile -t crisisguard-ssh-transport:ci infrastructure/aws
+          docker run --name crisisguard-ssh-transport-ci --mount "type=bind,source=$GITHUB_WORKSPACE,target=/repo,readonly" crisisguard-ssh-transport:ci python3 /repo/infrastructure/scripts/verify_aws_ssh_transport.py --isolated-container
+      - name: Verify dashboard, deployment health, recovery and backup restores
+        run: python infrastructure/scripts/smoke_deployment.py
+      - name: Rehearse application-image update and compatible rollback
+        run: python infrastructure/scripts/rehearse_update.py --report .ci-results/rollback.json
+      - name: Preserve deployment evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: deployment-evidence-${{ github.sha }}
+          path: .ci-results/*.json
+          include-hidden-files: true
+          retention-days: 30
+
+  metaguard-integration:
+    needs: unit-tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      # Synthetic credentials and UUID projects only; no AWS or repository secrets.
+      # Unit tests already run above; TX's job owns the existing dashboard smoke.
+      - name: Verify MetaGuard deployment boundaries and PostgreSQL contracts
+        env:
+          AWS_EC2_METADATA_DISABLED: 'true'
+        run: python infrastructure/scripts/smoke_metaguard_deployment.py --ci
+      - name: Preserve protected deployment evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: metaguard-evidence-${{ github.sha }}
+          path: .venv/cg-meta-deploy-*/report.json
+          if-no-files-found: warn
+          include-hidden-files: true
+          retention-days: 30

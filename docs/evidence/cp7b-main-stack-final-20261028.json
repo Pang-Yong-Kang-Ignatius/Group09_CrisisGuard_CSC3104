@@ -1,0 +1,163 @@
+{
+  "checkpoint": "7B",
+  "scope": "Original crisisguard-local desktop stack AIMD activation and final verification",
+  "verified_at": "2026-10-28T20:38:17.0832544+08:00",
+  "git_commit": "66e66bb2f566afd9f2d1e792c3267fc89ac34c74",
+  "deployment": {
+    "project": "crisisguard-local",
+    "policy": "aimd",
+    "admission_enabled": true,
+    "metaguard_required_on_cloud_services": true,
+    "metaguard_enabled_on_hospitals": true,
+    "automatic_replay_enabled_on_hospitals": true,
+    "container_recreation_performed_during_resume": false,
+    "image_rebuild_performed_during_resume": false,
+    "volume_deletion_or_database_reset_performed": false,
+    "compose_validation": {
+      "base": "passed",
+      "aimd_replay": "passed",
+      "fixed_policy_rollback": "passed"
+    },
+    "containers": {
+      "postgres": {"id": "01cce11cfc59", "status": "running", "health": "healthy"},
+      "controller": {"id": "abace36180c2", "status": "running", "health": "healthy", "restart_count": 10},
+      "patient": {"id": "471fddd4fb57", "status": "running", "health": "healthy"},
+      "emergency": {"id": "ebced519cb0e", "status": "running", "health": "healthy"},
+      "admin": {"id": "0da8ab1757e3", "status": "running", "health": "healthy"},
+      "hospital_a": {"id": "03f2fb9ef00c", "status": "running", "health": "healthy"},
+      "hospital_b": {"id": "aead6bf7e867", "status": "running", "health": "healthy"},
+      "dashboard": {"id": "fdec29438b27", "status": "running", "health": "healthy"}
+    },
+    "resource_inventory": {
+      "docker_containers_total": 33,
+      "docker_volumes_total": 16,
+      "main_stack_running": 8,
+      "docker_running_total": 9,
+      "note": "The additional running entry is the pre-existing disposable cg-metaguard controller following its own restart policy; it was not modified."
+    }
+  },
+  "previous_results_verification": {
+    "private_artifact": ".venv/cp7b-main-stack/deployment-verification.json",
+    "artifact_sha256": "7e06843fe430734f95bc7ace62cfb79459cb4bd728233f0223a5e2bbbacde578",
+    "recorded_phases": ["preflight", "build", "cloud", "controller", "apps", "hospital-a", "hospital-b", "fault"],
+    "completed_synthetic_events": 7,
+    "hospital_a_three_event_replay": "verified in PostgreSQL, SQLite and completed grants",
+    "hospital_b_three_event_replay": "verified in PostgreSQL, SQLite and completed grants",
+    "previous_stale_telemetry_denial": true,
+    "previous_fault_event": "CP7B_MAIN_20261027T144951_Hospital_A_stale",
+    "previous_fault_event_status": "applied with completed grant"
+  },
+  "resumed_patient_fault_test": {
+    "procedure": "Stopped only the existing Patient container, waited for telemetry to become unavailable, captured one synthetic Hospital A event, verified admission denial and absence from PostgreSQL, then restarted the same Patient container.",
+    "event_id": "CP7B_RESUME_20261028T123204Z_Hospital_A_stale",
+    "patient_container_id_preserved": true,
+    "before_fault": {"state": "Normal", "rate_rps": 1.4, "telemetry_fresh": true, "allowed": 14, "denied": 8},
+    "unavailable": {
+      "state": "Recovery",
+      "reason": "telemetry_missing_or_stale",
+      "patient_metric_error": "telemetry_unavailable",
+      "telemetry_fresh": false,
+      "rate_rps_first": 0.7,
+      "rate_rps_next": 0.35,
+      "rate_rps_floor": 0.2,
+      "last_decision_reason": "telemetry_unavailable",
+      "denied_after_first_replay_attempt": 9,
+      "denied_before_recovery": 12,
+      "postgres_event_count": 0
+    },
+    "recovery": {
+      "patient_health": "healthy",
+      "telemetry_fresh": true,
+      "state_sequence": ["Recovery", "Caution", "Normal"],
+      "rate_sequence_rps": [0.2, 0.4, 1.9999999999999998],
+      "final_reason": "healthy",
+      "final_allowed": 16,
+      "final_denied": 12,
+      "grant_status": "completed",
+      "grant_acknowledged": true,
+      "event_status_in_hospital": "applied",
+      "event_status_in_postgresql": "applied",
+      "applied_at": "2026-10-28T12:33:00.903060+00:00"
+    }
+  },
+  "access_controls": {
+    "authenticated_hospital_direct_cloud_without_grant_status": 403,
+    "authenticated_hospital_direct_cloud_detail": "Valid MetaGuard grant required",
+    "dashboard_direct_cloud_status": 403,
+    "rejected_direct_event_rows_written": 0,
+    "hospital_capture_status": 201,
+    "five_private_credentials_present_strong_and_distinct": true,
+    "secrets_printed": false
+  },
+  "database_integrity": {
+    "postgresql": {
+      "historical_rows_expected": 183,
+      "historical_rows_preserved_with_matching_sha256": 183,
+      "missing_historical_rows": 0,
+      "mismatched_historical_rows": 0,
+      "final_rows": 191,
+      "new_checkpoint_7b_rows": 8
+    },
+    "hospital_a_sqlite": {
+      "historical_rows_expected": 55,
+      "historical_rows_preserved_with_matching_sha256": 55,
+      "missing_historical_rows": 0,
+      "mismatched_historical_rows": 0,
+      "final_rows": 60,
+      "applied_rows": 60,
+      "pending_rows": 0
+    },
+    "hospital_b_sqlite": {
+      "historical_rows_expected": 39,
+      "historical_rows_preserved_with_matching_sha256": 39,
+      "missing_historical_rows": 0,
+      "mismatched_historical_rows": 0,
+      "final_rows": 42,
+      "applied_rows": 42,
+      "pending_rows": 0
+    },
+    "controller": {
+      "completed_grants": 8,
+      "non_completed_grants": 0,
+      "tickets": 0,
+      "final_state": "Normal",
+      "final_policy": "aimd",
+      "final_rate_rps": 1.9999999999999998,
+      "telemetry_fresh": true
+    }
+  },
+  "dashboard_monitoring": {
+    "controller_status": "available",
+    "controller_state": "Normal",
+    "controller_policy": "aimd",
+    "controller_telemetry_fresh": true,
+    "hospital_a_status": "available",
+    "hospital_a_replayable_backlog": 0,
+    "hospital_b_status": "available",
+    "hospital_b_replayable_backlog": 0
+  },
+  "tests": {
+    "unit": {
+      "tests": 814,
+      "passed": 814,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "warnings": 1,
+      "junit": "cp7b-main-stack-unit-final-20261028.xml"
+    },
+    "initial_restricted_shell_attempts": {
+      "attempts": 2,
+      "result_each": "667 passed, 147 setup errors, 0 assertion failures",
+      "cause": "Windows PermissionError on pytest temporary directories under the managed filesystem sandbox",
+      "resolution": "Identical suite rerun outside the restricted shell with a workspace basetemp; all 814 passed.",
+      "invalid_junit_files_removed": true
+    }
+  },
+  "diagnostic_notes": [
+    "Controller restart count 10 occurred while Docker Desktop restarted it before PostgreSQL was started; startup completed at 2026-10-28T12:29:49.538917905Z and the container remained healthy.",
+    "Three PostgreSQL ERROR entries were caused by read-only diagnostic queries using obsolete controller_state, admission_grants and created_at names; no data was changed.",
+    "No application tracebacks were observed after the main stack became healthy."
+  ],
+  "result": "passed"
+}

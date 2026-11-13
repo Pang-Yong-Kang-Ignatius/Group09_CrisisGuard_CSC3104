@@ -1,0 +1,292 @@
+{
+  "root_cause": "Stale running dashboard image: build-time COPY includes current files, but the old container lacked sync-status.js and quick-events.js. Static routing, build context and references were correct; no source fix required.",
+  "commands": [
+    "docker compose build dashboard",
+    "docker compose up -d --no-deps --no-build dashboard"
+  ],
+  "before": {
+    "containers": {
+      "admin": {
+        "id": "5979811bd137ed9d9370a60b06157f4da4cdad6847c9cd3edd32dfa1dec086b4",
+        "image": "sha256:4a22c27b3bf3c1bcd02e4c92bdff48dc438351cf968881bf9b371f0c95daf3b6",
+        "started_at": "2026-10-27T09:55:01.782974753Z",
+        "restarts": 0,
+        "mounts": []
+      },
+      "dashboard": {
+        "id": "109172d3e4313d33f24665fd526b20924faca822fe908e8449dacbf11f23c6c9",
+        "image": "sha256:4a22c27b3bf3c1bcd02e4c92bdff48dc438351cf968881bf9b371f0c95daf3b6",
+        "started_at": "2026-10-27T09:24:45.682639985Z",
+        "restarts": 0,
+        "mounts": []
+      },
+      "emergency": {
+        "id": "be6229be529dd6b7aec54bb98af43674a6cbcd3dfac7195054548b12fe0f7aa4",
+        "image": "sha256:4a22c27b3bf3c1bcd02e4c92bdff48dc438351cf968881bf9b371f0c95daf3b6",
+        "started_at": "2026-10-27T09:55:01.575853847Z",
+        "restarts": 0,
+        "mounts": []
+      },
+      "hospital-a": {
+        "id": "f0b33acea69f249c89e6a004a1bfe40a13d4699b00358ed584ba52ea41c4e16b",
+        "image": "sha256:4a22c27b3bf3c1bcd02e4c92bdff48dc438351cf968881bf9b371f0c95daf3b6",
+        "started_at": "2026-10-27T09:24:28.80873215Z",
+        "restarts": 0,
+        "mounts": [
+          {
+            "Type": "volume",
+            "Name": "crisisguard-local_hospital-a-data",
+            "Source": "/var/lib/docker/volumes/crisisguard-local_hospital-a-data/_data",
+            "Destination": "/data",
+            "Driver": "local",
+            "Mode": "rw",
+            "RW": true,
+            "Propagation": ""
+          }
+        ]
+      },
+      "hospital-b": {
+        "id": "ecada5b14cf25180667fa30ab927e12ffc4fe40e941969283fbd27d5ba1b6577",
+        "image": "sha256:4a22c27b3bf3c1bcd02e4c92bdff48dc438351cf968881bf9b371f0c95daf3b6",
+        "started_at": "2026-10-27T09:24:28.581004265Z",
+        "restarts": 0,
+        "mounts": [
+          {
+            "Type": "volume",
+            "Name": "crisisguard-local_hospital-b-data",
+            "Source": "/var/lib/docker/volumes/crisisguard-local_hospital-b-data/_data",
+            "Destination": "/data",
+            "Driver": "local",
+            "Mode": "rw",
+            "RW": true,
+            "Propagation": ""
+          }
+        ]
+      },
+      "patient": {
+        "id": "7d42f305516a1d2f754f711bdf2c735f8cd89fd5f43c31b6a5f6abc61cef7243",
+        "image": "sha256:4a22c27b3bf3c1bcd02e4c92bdff48dc438351cf968881bf9b371f0c95daf3b6",
+        "started_at": "2026-10-27T09:54:58.468714971Z",
+        "restarts": 0,
+        "mounts": []
+      },
+      "postgres": {
+        "id": "01cce11cfc59db4d000d7fe60669817513e1d21eef90e0012c5ef4fd5e32b103",
+        "image": "sha256:9e2cf6287f25c3151f4c9421ccce2b17f3e60061c111a29165e0d2cdd9ff0a97",
+        "started_at": "2026-10-27T09:24:28.369837588Z",
+        "restarts": 0,
+        "mounts": [
+          {
+            "Type": "volume",
+            "Name": "crisisguard-local_postgres-data",
+            "Source": "/var/lib/docker/volumes/crisisguard-local_postgres-data/_data",
+            "Destination": "/var/lib/postgresql/data",
+            "Driver": "local",
+            "Mode": "rw",
+            "RW": true,
+            "Propagation": ""
+          }
+        ]
+      }
+    },
+    "volumes": [
+      "b4a991065d804026972195281eea606219b68328d33d569a8a43e16276cbb9bd",
+      "crisisguard-local_hospital-a-data",
+      "crisisguard-local_hospital-b-data",
+      "crisisguard-local_postgres-data",
+      "crisisguard_pgdata",
+      "topicf-task4-benchmark_benchmark_postgres",
+      "topicf-task4-benchmark_benchmark_qdrant",
+      "topicf-task4-round3_round3_postgres",
+      "topicf-task4-round3_round3_qdrant",
+      "topicf-task4-round3_round3_state",
+      "topicf_gis_bedrock_ltm_data",
+      "topicf_gis_db_data",
+      "topicf_gis_titan_qdrant_data"
+    ],
+    "hospital-a": {
+      "count": 27,
+      "records_sha256": "2a9555d2361cfc3dda10675da3289a6439fbbd58ade7f3574eabfc8bd07f582d"
+    },
+    "hospital-b": {
+      "count": 18,
+      "records_sha256": "a5eeae1132edadd180eba68ec9f8615bd618f5b70d11de280c8e248589091c9a"
+    },
+    "postgres": {
+      "count": 132,
+      "records_sha256": "deff23699a79d03ba9deee3b65dc14ecb2eb06afc98f3abd1f26384aee3834f5"
+    }
+  },
+  "after_containers": {
+    "admin": {
+      "id": "5979811bd137ed9d9370a60b06157f4da4cdad6847c9cd3edd32dfa1dec086b4",
+      "image": "sha256:4a22c27b3bf3c1bcd02e4c92bdff48dc438351cf968881bf9b371f0c95daf3b6",
+      "started_at": "2026-10-27T09:55:01.782974753Z",
+      "restarts": 0,
+      "mounts": []
+    },
+    "dashboard": {
+      "id": "43754a1e5265293e3d9c626f19c0d6f8fc95f1df8b391afc5d6b6b4d4d93c648",
+      "image": "sha256:8fb667aedeec2be874bd990eb39ad2162aef4c09bd80d53f6480b20d7d8a31fa",
+      "started_at": "2026-10-27T09:59:20.054073873Z",
+      "restarts": 0,
+      "mounts": []
+    },
+    "emergency": {
+      "id": "be6229be529dd6b7aec54bb98af43674a6cbcd3dfac7195054548b12fe0f7aa4",
+      "image": "sha256:4a22c27b3bf3c1bcd02e4c92bdff48dc438351cf968881bf9b371f0c95daf3b6",
+      "started_at": "2026-10-27T09:55:01.575853847Z",
+      "restarts": 0,
+      "mounts": []
+    },
+    "hospital-a": {
+      "id": "f0b33acea69f249c89e6a004a1bfe40a13d4699b00358ed584ba52ea41c4e16b",
+      "image": "sha256:4a22c27b3bf3c1bcd02e4c92bdff48dc438351cf968881bf9b371f0c95daf3b6",
+      "started_at": "2026-10-27T09:24:28.80873215Z",
+      "restarts": 0,
+      "mounts": [
+        {
+          "Type": "volume",
+          "Name": "crisisguard-local_hospital-a-data",
+          "Source": "/var/lib/docker/volumes/crisisguard-local_hospital-a-data/_data",
+          "Destination": "/data",
+          "Driver": "local",
+          "Mode": "rw",
+          "RW": true,
+          "Propagation": ""
+        }
+      ]
+    },
+    "hospital-b": {
+      "id": "ecada5b14cf25180667fa30ab927e12ffc4fe40e941969283fbd27d5ba1b6577",
+      "image": "sha256:4a22c27b3bf3c1bcd02e4c92bdff48dc438351cf968881bf9b371f0c95daf3b6",
+      "started_at": "2026-10-27T09:24:28.581004265Z",
+      "restarts": 0,
+      "mounts": [
+        {
+          "Type": "volume",
+          "Name": "crisisguard-local_hospital-b-data",
+          "Source": "/var/lib/docker/volumes/crisisguard-local_hospital-b-data/_data",
+          "Destination": "/data",
+          "Driver": "local",
+          "Mode": "rw",
+          "RW": true,
+          "Propagation": ""
+        }
+      ]
+    },
+    "patient": {
+      "id": "7d42f305516a1d2f754f711bdf2c735f8cd89fd5f43c31b6a5f6abc61cef7243",
+      "image": "sha256:4a22c27b3bf3c1bcd02e4c92bdff48dc438351cf968881bf9b371f0c95daf3b6",
+      "started_at": "2026-10-27T09:54:58.468714971Z",
+      "restarts": 0,
+      "mounts": []
+    },
+    "postgres": {
+      "id": "01cce11cfc59db4d000d7fe60669817513e1d21eef90e0012c5ef4fd5e32b103",
+      "image": "sha256:9e2cf6287f25c3151f4c9421ccce2b17f3e60061c111a29165e0d2cdd9ff0a97",
+      "started_at": "2026-10-27T09:24:28.369837588Z",
+      "restarts": 0,
+      "mounts": [
+        {
+          "Type": "volume",
+          "Name": "crisisguard-local_postgres-data",
+          "Source": "/var/lib/docker/volumes/crisisguard-local_postgres-data/_data",
+          "Destination": "/var/lib/postgresql/data",
+          "Driver": "local",
+          "Mode": "rw",
+          "RW": true,
+          "Propagation": ""
+        }
+      ]
+    }
+  },
+  "non_dashboard_containers_completely_unchanged": {
+    "admin": true,
+    "emergency": true,
+    "hospital-a": true,
+    "hospital-b": true,
+    "patient": true,
+    "postgres": true
+  },
+  "stores_unchanged": {
+    "hospital-a": {
+      "count": 27,
+      "records_sha256": "2a9555d2361cfc3dda10675da3289a6439fbbd58ade7f3574eabfc8bd07f582d"
+    },
+    "hospital-b": {
+      "count": 18,
+      "records_sha256": "a5eeae1132edadd180eba68ec9f8615bd618f5b70d11de280c8e248589091c9a"
+    },
+    "postgres": {
+      "count": 132,
+      "records_sha256": "deff23699a79d03ba9deee3b65dc14ecb2eb06afc98f3abd1f26384aee3834f5"
+    }
+  },
+  "volume_set_unchanged": true,
+  "final_health": {
+    "admin": "healthy",
+    "dashboard": "healthy",
+    "emergency": "healthy",
+    "hospital-a": "healthy",
+    "hospital-b": "healthy",
+    "patient": "healthy",
+    "postgres": "healthy"
+  },
+  "assets": {
+    "/static/style.css": {
+      "status": 200,
+      "content_type": "text/css; charset=utf-8",
+      "bytes": 10069,
+      "matches_workspace": true
+    },
+    "/static/app.js": {
+      "status": 200,
+      "content_type": "application/javascript",
+      "bytes": 26266,
+      "matches_workspace": true
+    },
+    "/static/outage.js": {
+      "status": 200,
+      "content_type": "application/javascript",
+      "bytes": 3767,
+      "matches_workspace": true
+    },
+    "/static/workspace.js": {
+      "status": 200,
+      "content_type": "application/javascript",
+      "bytes": 6134,
+      "matches_workspace": true
+    },
+    "/static/sync-status.js": {
+      "status": 200,
+      "content_type": "application/javascript",
+      "bytes": 3567,
+      "matches_workspace": true
+    },
+    "/static/quick-events.js": {
+      "status": 200,
+      "content_type": "application/javascript",
+      "bytes": 3088,
+      "matches_workspace": true
+    }
+  },
+  "verification": {
+    "python": {
+      "passed": 65,
+      "failures": 0,
+      "errors": 0,
+      "warning": "Existing FastAPI/Starlette TestClient deprecation"
+    },
+    "javascript": {
+      "passed": 34,
+      "failures": 0,
+      "queue_script": "passed"
+    },
+    "syntax": "app.js, sync-status.js, quick-events.js, workspace.js passed",
+    "browser": "NOT VERIFIED: Computer Use stopped because Chrome URL could not be determined confidently enough for policy enforcement. No further browser input attempted.",
+    "runtime_limit": "Asset delivery and syntax/unit behavior verified; real browser JS exceptions and visible pending-to-applied behavior not verified."
+  },
+  "database_events_added": 0,
+  "shared_image_tag_note": "Dashboard uses the shared crisisguard-local:dev tag. The build updates that tag for future starts; running non-dashboard image IDs, containers, start times, restart counts and mounts were unchanged."
+}

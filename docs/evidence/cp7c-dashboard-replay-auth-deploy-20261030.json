@@ -1,0 +1,95 @@
+{
+  "checkpoint": "7C",
+  "scope": "original desktop Dashboard only",
+  "date_local": "2026-10-30",
+  "deployment": {
+    "previous_dashboard_image_id": "sha256:bd07a7bb5e3d1cd45573ab252faf3e0efc1a35236114f7f55eaee22da766c08a",
+    "new_dashboard_image_id": "sha256:0a64e28857a3f4fee6798087d51ea04bfa1a99d628f4451d365eebc59cefa821",
+    "previous_image_tag_preserved": "crisisguard-dashboard:cp7b-guard-20261027",
+    "new_image_tag": "crisisguard-dashboard:cp7c-replay-auth-20261030",
+    "dashboard_recreated_only": true,
+    "dashboard_healthy": true,
+    "deployed_main_js_html_sha256_match_workspace": true,
+    "manual_replay_enabled": false,
+    "manual_replay_operator_token_configured": false,
+    "metaguard_required": true,
+    "unauthorized_replay_http_status": 404,
+    "html_and_six_assets_http_status": 200
+  },
+  "preservation": {
+    "existing_postgres_and_hospital_backups_checksum_and_restore_records_valid": true,
+    "cold_database_files_before_and_after": 1302,
+    "cold_database_file_sha256_sets_identical": true,
+    "all_seven_non_dashboard_container_ids_images_mounts_states_unchanged": true,
+    "original_database_and_hospital_containers_remained_stopped": true,
+    "original_volumes_unchanged": true
+  },
+  "security": {
+    "served_html_js_css_openapi_and_read_only_api_paths_scanned": 13,
+    "configured_secret_value_hits": 0,
+    "history_unavailable_response": "HTTP 503: PostgreSQL is unavailable",
+    "history_error_contains_secret": false,
+    "focused_python_tests_passed": 35,
+    "focused_javascript_tests_passed": 3,
+    "javascript_syntax_and_git_diff_check": "passed"
+  },
+  "limits": [
+    "The other original services were stopped, so end-to-end Dashboard API and MetaGuard browser observations were not run.",
+    "Authorized opt-in manual replay was tested with mocks, not enabled or exercised on the original stack."
+  ],
+  "refresh_progress_addendum": {
+    "date_local": "2026-10-30",
+    "scope": "original Dashboard image and container only; previous deployment record above is retained",
+    "rollback": {
+      "previous_image_tag_retained": "crisisguard-dashboard:cp7c-replay-auth-20261030",
+      "previous_image_id": "sha256:0a64e28857a3f4fee6798087d51ea04bfa1a99d628f4451d365eebc59cefa821",
+      "prior_three_file_backup_manifest_checksums_valid": true,
+      "prior_backup_restore_verification_recorded_as_passed": true,
+      "database_restore_performed": false
+    },
+    "deployment": {
+      "new_image_tag": "crisisguard-dashboard:cp7c-refresh-20261030",
+      "new_image_id": "sha256:f188a3581743b984b0c68c28a3ad80b668f327e566b4eabf1e8757819a89a96b",
+      "previous_dashboard_container_id": "8bedbb9d7589b24dbf57647938b138aea5e720670f29d8e824f25bc1ea6433e1",
+      "new_dashboard_container_id": "67892345ac4542503d8e10608a87a911344a7294a3d140317de7bf4573d497e8",
+      "dashboard_only_recreated": true,
+      "original_dashboard_healthy": true,
+      "loopback_port": 8080,
+      "resolved_environment_and_port_matched_previous_container": true,
+      "served_metaguard_html_matches_expected_source_transform": true,
+      "html_and_six_assets_http_status": 200,
+      "six_assets_sha256_match_workspace": true,
+      "deployed_app_js_sha256": "01eb8a56cbff5e17cda55e8558359e75a4ba3bab0eb425604be5087de2793631",
+      "read_only_services_metrics_recovery_http_status": 200,
+      "controller_adapter_status": "available"
+    },
+    "preservation": {
+      "other_container_ids_images_mounts_unchanged": 46,
+      "volume_set_unchanged": 22,
+      "hospital_containers_remained_stopped": true,
+      "postgres_events": {"rows": 191, "aggregate_md5": "a476dfdfe31b150fd05cb3aaee1b1397"},
+      "controller_tickets": {"rows": 0, "aggregate_md5": "d41d8cd98f00b204e9800998ecf8427e"},
+      "controller_grants": {"rows": 8, "aggregate_md5": "f6a337459107ba4a62e617535731125d"},
+      "controller_grant_audit": {"rows": 24, "aggregate_md5": "2b08bcbd2c78dcc2683e058a13cf5353"},
+      "all_listed_row_counts_and_hashes_match_predeployment": true
+    },
+    "focused_checks": {
+      "dashboard_javascript_tests_passed": 24,
+      "dashboard_python_tests_passed": 35,
+      "javascript_syntax_check": "passed",
+      "python_temp_directory_setup_errors_resolved_on_workspace_temp_rerun": true
+    },
+    "browser_observations_reported_by_user": [
+      "Pending to Applied without refresh passed",
+      "MetaGuard Dashboard matched controller",
+      "Cloud Outage and Restore controls passed",
+      "Refreshing loading indicator passed on source preview port 8081",
+      "Cloud Unavailable then Healthy display passed"
+    ],
+    "limitations": [
+      "The explicit 15-second timeout message passed automated tests but was not visually verified in a browser.",
+      "The deployed port 8080 asset was verified by HTTP and source hash; no new port 8080 browser observation was made during this addendum.",
+      "The retained database backups predate this image-only deployment; current database records were compared by read-only pre/post hashes rather than restored."
+    ]
+  }
+}

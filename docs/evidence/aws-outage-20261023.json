@@ -1,0 +1,827 @@
+{
+  "result": "passed",
+  "date": "2026-10-23",
+  "region": "us-east-1",
+  "application_commit": "ab76b88638f7a1ebaa50e45f866a62eb69a03390",
+  "scope": "One real EC2-host firewall partition of Hospital A Docker-container traffic to cloud TCP 8001/8003/8004; synthetic events only; Hospital B control.",
+  "test_id": "CG_OUTAGE_20261023",
+  "manual_replay_used": false,
+  "baseline": {
+    "a": {
+      "site": "Hospital_A",
+      "capture_health": 200,
+      "cloud_health_from_container": {
+        "8001": 200,
+        "8003": 200,
+        "8004": 200
+      },
+      "test_events": [],
+      "recovery": {
+        "enabled": true,
+        "cloud_reachable": true,
+        "service_health": {
+          "patient": true,
+          "emergency": true,
+          "admin": true
+        },
+        "last_check_at": "2026-10-23T14:47:15.008971+00:00",
+        "last_disconnected_at": null,
+        "last_reconnected_at": null,
+        "drain_completed_at": null,
+        "last_replay_at": null,
+        "last_replay_attempted": 0,
+        "last_replay_applied": 0,
+        "replayable_backlog": 0,
+        "reconciled_on_startup": {
+          "applied": [],
+          "released": [],
+          "unresolved": []
+        },
+        "last_error": null
+      },
+      "firewall_counters": []
+    },
+    "b": {
+      "site": "Hospital_B",
+      "capture_health": 200,
+      "cloud_health_from_container": {
+        "8001": 200,
+        "8003": 200,
+        "8004": 200
+      },
+      "test_events": [],
+      "recovery": {
+        "enabled": true,
+        "cloud_reachable": true,
+        "service_health": {
+          "patient": true,
+          "emergency": true,
+          "admin": true
+        },
+        "last_check_at": "2026-10-23T14:47:18.353866+00:00",
+        "last_disconnected_at": null,
+        "last_reconnected_at": null,
+        "drain_completed_at": null,
+        "last_replay_at": null,
+        "last_replay_attempted": 0,
+        "last_replay_applied": 0,
+        "replayable_backlog": 0,
+        "reconciled_on_startup": {
+          "applied": [],
+          "released": [],
+          "unresolved": []
+        },
+        "last_error": null
+      },
+      "firewall_counters": []
+    }
+  },
+  "arm": {
+    "armed": true,
+    "rollback_seconds": 300,
+    "destination_ports": [
+      8001,
+      8003,
+      8004
+    ],
+    "source": "172.18.0.2",
+    "cloud": "172.31.23.56",
+    "container": "5557b31556cbd311d0b71eca50b67a8c3236c36a7043b1bdfa339d2e3e004c90"
+  },
+  "arm_acknowledged_at_utc": "2026-10-23 14:48:18 UTC",
+  "capture": {
+    "a": [
+      {
+        "event_id": "CG_OUTAGE_20261023_A_01",
+        "code": 201
+      },
+      {
+        "event_id": "CG_OUTAGE_20261023_A_02",
+        "code": 201
+      },
+      {
+        "event_id": "CG_OUTAGE_20261023_A_03",
+        "code": 201
+      },
+      {
+        "event_id": "CG_OUTAGE_20261023_A_04",
+        "code": 201
+      }
+    ],
+    "b": [
+      {
+        "event_id": "CG_OUTAGE_20261023_B_01",
+        "code": 201
+      },
+      {
+        "event_id": "CG_OUTAGE_20261023_B_02",
+        "code": 201
+      },
+      {
+        "event_id": "CG_OUTAGE_20261023_B_03",
+        "code": 201
+      },
+      {
+        "event_id": "CG_OUTAGE_20261023_B_04",
+        "code": 201
+      }
+    ]
+  },
+  "during": {
+    "a": {
+      "site": "Hospital_A",
+      "capture_health": 200,
+      "cloud_health_from_container": {
+        "8001": "unreachable",
+        "8003": "unreachable",
+        "8004": "unreachable"
+      },
+      "test_events": [
+        {
+          "event_id": "CG_OUTAGE_20261023_A_01",
+          "status": "pending"
+        },
+        {
+          "event_id": "CG_OUTAGE_20261023_A_02",
+          "status": "pending"
+        },
+        {
+          "event_id": "CG_OUTAGE_20261023_A_03",
+          "status": "pending"
+        },
+        {
+          "event_id": "CG_OUTAGE_20261023_A_04",
+          "status": "pending"
+        }
+      ],
+      "recovery": {
+        "enabled": true,
+        "cloud_reachable": false,
+        "service_health": {
+          "patient": false,
+          "emergency": false,
+          "admin": false
+        },
+        "last_check_at": "2026-10-23T14:48:51.066816+00:00",
+        "last_disconnected_at": "2026-10-23T14:48:20.900377+00:00",
+        "last_reconnected_at": null,
+        "drain_completed_at": null,
+        "last_replay_at": null,
+        "last_replay_attempted": 0,
+        "last_replay_applied": 0,
+        "replayable_backlog": 4,
+        "reconciled_on_startup": {
+          "applied": [],
+          "released": [],
+          "unresolved": []
+        },
+        "last_error": null
+      },
+      "firewall_counters": [
+        "[27:1620] -A DOCKER-USER -s 172.18.0.2/32 -d 172.31.23.56/32 -p tcp -m multiport --dports 8001,8003,8004 -m comment --comment CG_OUTAGE_20261023 -j REJECT --reject-with tcp-reset"
+      ]
+    },
+    "b": {
+      "site": "Hospital_B",
+      "capture_health": 200,
+      "cloud_health_from_container": {
+        "8001": 200,
+        "8003": 200,
+        "8004": 200
+      },
+      "test_events": [
+        {
+          "event_id": "CG_OUTAGE_20261023_B_01",
+          "status": "applied"
+        },
+        {
+          "event_id": "CG_OUTAGE_20261023_B_02",
+          "status": "applied"
+        },
+        {
+          "event_id": "CG_OUTAGE_20261023_B_03",
+          "status": "applied"
+        },
+        {
+          "event_id": "CG_OUTAGE_20261023_B_04",
+          "status": "applied"
+        }
+      ],
+      "recovery": {
+        "enabled": true,
+        "cloud_reachable": true,
+        "service_health": {
+          "patient": true,
+          "emergency": true,
+          "admin": true
+        },
+        "last_check_at": "2026-10-23T14:48:55.082060+00:00",
+        "last_disconnected_at": null,
+        "last_reconnected_at": null,
+        "drain_completed_at": "2026-10-23T14:48:39.830150+00:00",
+        "last_replay_at": "2026-10-23T14:48:39.829657+00:00",
+        "last_replay_attempted": 4,
+        "last_replay_applied": 4,
+        "replayable_backlog": 0,
+        "reconciled_on_startup": {
+          "applied": [],
+          "released": [],
+          "unresolved": []
+        },
+        "last_error": null
+      },
+      "firewall_counters": []
+    },
+    "cloud": [
+      {
+        "event_id": "CG_OUTAGE_20261023_A_01",
+        "code": 404,
+        "body": {
+          "detail": {
+            "code": "EVENT_NOT_FOUND",
+            "event_id": "CG_OUTAGE_20261023_A_01"
+          }
+        }
+      },
+      {
+        "event_id": "CG_OUTAGE_20261023_A_02",
+        "code": 404,
+        "body": {
+          "detail": {
+            "code": "EVENT_NOT_FOUND",
+            "event_id": "CG_OUTAGE_20261023_A_02"
+          }
+        }
+      },
+      {
+        "event_id": "CG_OUTAGE_20261023_A_03",
+        "code": 404,
+        "body": {
+          "detail": {
+            "code": "EVENT_NOT_FOUND",
+            "event_id": "CG_OUTAGE_20261023_A_03"
+          }
+        }
+      },
+      {
+        "event_id": "CG_OUTAGE_20261023_A_04",
+        "code": 404,
+        "body": {
+          "detail": {
+            "code": "EVENT_NOT_FOUND",
+            "event_id": "CG_OUTAGE_20261023_A_04"
+          }
+        }
+      },
+      {
+        "event_id": "CG_OUTAGE_20261023_B_01",
+        "code": 200,
+        "body": {
+          "event_id": "CG_OUTAGE_20261023_B_01",
+          "site_id": "Hospital_B",
+          "event_type": "patient_registration",
+          "status": "applied",
+          "applied_at": "2026-10-23T14:48:39.665853+00:00"
+        }
+      },
+      {
+        "event_id": "CG_OUTAGE_20261023_B_02",
+        "code": 200,
+        "body": {
+          "event_id": "CG_OUTAGE_20261023_B_02",
+          "site_id": "Hospital_B",
+          "event_type": "encounter_creation",
+          "status": "applied",
+          "applied_at": "2026-10-23T14:48:39.707859+00:00"
+        }
+      },
+      {
+        "event_id": "CG_OUTAGE_20261023_B_03",
+        "code": 200,
+        "body": {
+          "event_id": "CG_OUTAGE_20261023_B_03",
+          "site_id": "Hospital_B",
+          "event_type": "emergency_record",
+          "status": "applied",
+          "applied_at": "2026-10-23T14:48:39.749436+00:00"
+        }
+      },
+      {
+        "event_id": "CG_OUTAGE_20261023_B_04",
+        "code": 200,
+        "body": {
+          "event_id": "CG_OUTAGE_20261023_B_04",
+          "site_id": "Hospital_B",
+          "event_type": "patient_discharge",
+          "status": "applied",
+          "applied_at": "2026-10-23T14:48:39.816634+00:00"
+        }
+      }
+    ]
+  },
+  "restore": {
+    "restored": true,
+    "rule_absent": true
+  },
+  "restore_acknowledged_at_utc": "2026-10-23 14:49:21 UTC",
+  "after": {
+    "a": {
+      "site": "Hospital_A",
+      "capture_health": 200,
+      "cloud_health_from_container": {
+        "8001": 200,
+        "8003": 200,
+        "8004": 200
+      },
+      "test_events": [
+        {
+          "event_id": "CG_OUTAGE_20261023_A_01",
+          "status": "applied"
+        },
+        {
+          "event_id": "CG_OUTAGE_20261023_A_02",
+          "status": "applied"
+        },
+        {
+          "event_id": "CG_OUTAGE_20261023_A_03",
+          "status": "applied"
+        },
+        {
+          "event_id": "CG_OUTAGE_20261023_A_04",
+          "status": "applied"
+        }
+      ],
+      "recovery": {
+        "enabled": true,
+        "cloud_reachable": true,
+        "service_health": {
+          "patient": true,
+          "emergency": true,
+          "admin": true
+        },
+        "last_check_at": "2026-10-23T14:49:36.660363+00:00",
+        "last_disconnected_at": "2026-10-23T14:48:20.900377+00:00",
+        "last_reconnected_at": "2026-10-23T14:49:21.270202+00:00",
+        "drain_completed_at": "2026-10-23T14:49:21.428454+00:00",
+        "last_replay_at": "2026-10-23T14:49:21.428015+00:00",
+        "last_replay_attempted": 4,
+        "last_replay_applied": 4,
+        "replayable_backlog": 0,
+        "reconciled_on_startup": {
+          "applied": [],
+          "released": [],
+          "unresolved": []
+        },
+        "last_error": null
+      },
+      "firewall_counters": []
+    },
+    "b": {
+      "site": "Hospital_B",
+      "capture_health": 200,
+      "cloud_health_from_container": {
+        "8001": 200,
+        "8003": 200,
+        "8004": 200
+      },
+      "test_events": [
+        {
+          "event_id": "CG_OUTAGE_20261023_B_01",
+          "status": "applied"
+        },
+        {
+          "event_id": "CG_OUTAGE_20261023_B_02",
+          "status": "applied"
+        },
+        {
+          "event_id": "CG_OUTAGE_20261023_B_03",
+          "status": "applied"
+        },
+        {
+          "event_id": "CG_OUTAGE_20261023_B_04",
+          "status": "applied"
+        }
+      ],
+      "recovery": {
+        "enabled": true,
+        "cloud_reachable": true,
+        "service_health": {
+          "patient": true,
+          "emergency": true,
+          "admin": true
+        },
+        "last_check_at": "2026-10-23T14:49:41.149220+00:00",
+        "last_disconnected_at": null,
+        "last_reconnected_at": null,
+        "drain_completed_at": "2026-10-23T14:48:39.830150+00:00",
+        "last_replay_at": "2026-10-23T14:48:39.829657+00:00",
+        "last_replay_attempted": 4,
+        "last_replay_applied": 4,
+        "replayable_backlog": 0,
+        "reconciled_on_startup": {
+          "applied": [],
+          "released": [],
+          "unresolved": []
+        },
+        "last_error": null
+      },
+      "firewall_counters": []
+    },
+    "cloud": [
+      {
+        "event_id": "CG_OUTAGE_20261023_A_01",
+        "code": 200,
+        "body": {
+          "event_id": "CG_OUTAGE_20261023_A_01",
+          "site_id": "Hospital_A",
+          "event_type": "patient_registration",
+          "status": "applied",
+          "applied_at": "2026-10-23T14:49:21.307503+00:00"
+        }
+      },
+      {
+        "event_id": "CG_OUTAGE_20261023_A_02",
+        "code": 200,
+        "body": {
+          "event_id": "CG_OUTAGE_20261023_A_02",
+          "site_id": "Hospital_A",
+          "event_type": "encounter_creation",
+          "status": "applied",
+          "applied_at": "2026-10-23T14:49:21.343485+00:00"
+        }
+      },
+      {
+        "event_id": "CG_OUTAGE_20261023_A_03",
+        "code": 200,
+        "body": {
+          "event_id": "CG_OUTAGE_20261023_A_03",
+          "site_id": "Hospital_A",
+          "event_type": "emergency_record",
+          "status": "applied",
+          "applied_at": "2026-10-23T14:49:21.380502+00:00"
+        }
+      },
+      {
+        "event_id": "CG_OUTAGE_20261023_A_04",
+        "code": 200,
+        "body": {
+          "event_id": "CG_OUTAGE_20261023_A_04",
+          "site_id": "Hospital_A",
+          "event_type": "patient_discharge",
+          "status": "applied",
+          "applied_at": "2026-10-23T14:49:21.416593+00:00"
+        }
+      },
+      {
+        "event_id": "CG_OUTAGE_20261023_B_01",
+        "code": 200,
+        "body": {
+          "event_id": "CG_OUTAGE_20261023_B_01",
+          "site_id": "Hospital_B",
+          "event_type": "patient_registration",
+          "status": "applied",
+          "applied_at": "2026-10-23T14:48:39.665853+00:00"
+        }
+      },
+      {
+        "event_id": "CG_OUTAGE_20261023_B_02",
+        "code": 200,
+        "body": {
+          "event_id": "CG_OUTAGE_20261023_B_02",
+          "site_id": "Hospital_B",
+          "event_type": "encounter_creation",
+          "status": "applied",
+          "applied_at": "2026-10-23T14:48:39.707859+00:00"
+        }
+      },
+      {
+        "event_id": "CG_OUTAGE_20261023_B_03",
+        "code": 200,
+        "body": {
+          "event_id": "CG_OUTAGE_20261023_B_03",
+          "site_id": "Hospital_B",
+          "event_type": "emergency_record",
+          "status": "applied",
+          "applied_at": "2026-10-23T14:48:39.749436+00:00"
+        }
+      },
+      {
+        "event_id": "CG_OUTAGE_20261023_B_04",
+        "code": 200,
+        "body": {
+          "event_id": "CG_OUTAGE_20261023_B_04",
+          "site_id": "Hospital_B",
+          "event_type": "patient_discharge",
+          "status": "applied",
+          "applied_at": "2026-10-23T14:48:39.816634+00:00"
+        }
+      }
+    ]
+  },
+  "duplicates": {
+    "a": [
+      {
+        "event_id": "CG_OUTAGE_20261023_A_01",
+        "code": 200,
+        "body": {
+          "status": "applied",
+          "event_id": "CG_OUTAGE_20261023_A_01",
+          "site_id": "Hospital_A",
+          "result": "already_applied"
+        }
+      },
+      {
+        "event_id": "CG_OUTAGE_20261023_A_02",
+        "code": 200,
+        "body": {
+          "status": "applied",
+          "event_id": "CG_OUTAGE_20261023_A_02",
+          "site_id": "Hospital_A",
+          "result": "already_applied"
+        }
+      },
+      {
+        "event_id": "CG_OUTAGE_20261023_A_03",
+        "code": 200,
+        "body": {
+          "status": "applied",
+          "event_id": "CG_OUTAGE_20261023_A_03",
+          "site_id": "Hospital_A",
+          "result": "already_applied"
+        }
+      },
+      {
+        "event_id": "CG_OUTAGE_20261023_A_04",
+        "code": 200,
+        "body": {
+          "status": "applied",
+          "event_id": "CG_OUTAGE_20261023_A_04",
+          "site_id": "Hospital_A",
+          "result": "already_applied"
+        }
+      }
+    ],
+    "b": [
+      {
+        "event_id": "CG_OUTAGE_20261023_B_01",
+        "code": 200,
+        "body": {
+          "status": "applied",
+          "event_id": "CG_OUTAGE_20261023_B_01",
+          "site_id": "Hospital_B",
+          "result": "already_applied"
+        }
+      },
+      {
+        "event_id": "CG_OUTAGE_20261023_B_02",
+        "code": 200,
+        "body": {
+          "status": "applied",
+          "event_id": "CG_OUTAGE_20261023_B_02",
+          "site_id": "Hospital_B",
+          "result": "already_applied"
+        }
+      },
+      {
+        "event_id": "CG_OUTAGE_20261023_B_03",
+        "code": 200,
+        "body": {
+          "status": "applied",
+          "event_id": "CG_OUTAGE_20261023_B_03",
+          "site_id": "Hospital_B",
+          "result": "already_applied"
+        }
+      },
+      {
+        "event_id": "CG_OUTAGE_20261023_B_04",
+        "code": 200,
+        "body": {
+          "status": "applied",
+          "event_id": "CG_OUTAGE_20261023_B_04",
+          "site_id": "Hospital_B",
+          "result": "already_applied"
+        }
+      }
+    ]
+  },
+  "database": {
+    "total": 10,
+    "distinct": 10,
+    "applied": 10,
+    "sites": {
+      "Hospital_A": 5,
+      "Hospital_B": 5
+    },
+    "outage_rows": [
+      [
+        "CG_OUTAGE_20261023_B_01",
+        "Hospital_B",
+        "patient_registration",
+        "2026-10-23 14:48:39.665853+00"
+      ],
+      [
+        "CG_OUTAGE_20261023_B_02",
+        "Hospital_B",
+        "encounter_creation",
+        "2026-10-23 14:48:39.707859+00"
+      ],
+      [
+        "CG_OUTAGE_20261023_B_03",
+        "Hospital_B",
+        "emergency_record",
+        "2026-10-23 14:48:39.749436+00"
+      ],
+      [
+        "CG_OUTAGE_20261023_B_04",
+        "Hospital_B",
+        "patient_discharge",
+        "2026-10-23 14:48:39.816634+00"
+      ],
+      [
+        "CG_OUTAGE_20261023_A_01",
+        "Hospital_A",
+        "patient_registration",
+        "2026-10-23 14:49:21.307503+00"
+      ],
+      [
+        "CG_OUTAGE_20261023_A_02",
+        "Hospital_A",
+        "encounter_creation",
+        "2026-10-23 14:49:21.343485+00"
+      ],
+      [
+        "CG_OUTAGE_20261023_A_03",
+        "Hospital_A",
+        "emergency_record",
+        "2026-10-23 14:49:21.380502+00"
+      ],
+      [
+        "CG_OUTAGE_20261023_A_04",
+        "Hospital_A",
+        "patient_discharge",
+        "2026-10-23 14:49:21.416593+00"
+      ]
+    ]
+  },
+  "original_record_checks": {
+    "cloud": {
+      "checked_at_utc": "2026-10-23T14:50:31.920572+00:00",
+      "hostname": "ip-172-31-23-56",
+      "role": "cloud",
+      "scope": "Existing deployment health and original applied records; no writes or replay",
+      "containers": [
+        {
+          "Service": "admin",
+          "State": "running",
+          "Health": "healthy"
+        },
+        {
+          "Service": "emergency",
+          "State": "running",
+          "Health": "healthy"
+        },
+        {
+          "Service": "patient",
+          "State": "running",
+          "Health": "healthy"
+        },
+        {
+          "Service": "postgres",
+          "State": "running",
+          "Health": "healthy"
+        }
+      ],
+      "cloud_health_ports": [
+        8001,
+        8003,
+        8004
+      ],
+      "verified_events": [
+        {
+          "event_id": "TX_AWS_A_20261016_01",
+          "site_id": "Hospital_A",
+          "status": "applied"
+        },
+        {
+          "event_id": "TX_AWS_B_20261016_01",
+          "site_id": "Hospital_B",
+          "status": "applied"
+        }
+      ],
+      "result": "passed"
+    },
+    "a": {
+      "checked_at_utc": "2026-10-23T14:50:32.059259+00:00",
+      "hostname": "ip-172-31-27-60",
+      "role": "hospital-a",
+      "scope": "Existing deployment health and original applied records; no writes or replay",
+      "containers": [
+        {
+          "Service": "hospital",
+          "State": "running",
+          "Health": "healthy"
+        }
+      ],
+      "cloud_health_ports": [
+        8001
+      ],
+      "verified_events": [
+        {
+          "event_id": "TX_AWS_A_20261016_01",
+          "site_id": "Hospital_A",
+          "status": "applied"
+        }
+      ],
+      "result": "passed"
+    },
+    "b": {
+      "checked_at_utc": "2026-10-23T14:50:32.329526+00:00",
+      "hostname": "ip-172-31-19-60",
+      "role": "hospital-b",
+      "scope": "Existing deployment health and original applied records; no writes or replay",
+      "containers": [
+        {
+          "Service": "hospital",
+          "State": "running",
+          "Health": "healthy"
+        }
+      ],
+      "cloud_health_ports": [
+        8001
+      ],
+      "verified_events": [
+        {
+          "event_id": "TX_AWS_B_20261016_01",
+          "site_id": "Hospital_B",
+          "status": "applied"
+        }
+      ],
+      "result": "passed"
+    }
+  },
+  "backups": {
+    "location": "On each EC2 host: ~/crisisguard-backups/20261023-pre-outage",
+    "off_host_download": false,
+    "restore_drill_this_run": false,
+    "cloud": {
+      "bytes": 2115,
+      "sha256": "1e9cfe88384de872ece1b049d7aaca07a5d62b1d002f2b5716c55178f7bdee53"
+    },
+    "a": {
+      "bytes": 20480,
+      "sha256": "30f98e4c39e4b4ea4ad160f0dbbce17c175ba6cec6916e21f91a91c3514fbc7c"
+    },
+    "b": {
+      "bytes": 20480,
+      "sha256": "388fb0fd5e1ac8d58fb8684c686ac78c83ae77e9eafd31055bd52a931d3680df"
+    }
+  },
+  "safety": {
+    "rollback_timer_seconds": 300,
+    "rule_removed": true,
+    "timer_inactive": true,
+    "original_data_preserved": true,
+    "new_instances_created": 0,
+    "new_storage_created": 0,
+    "api_public_access_added": false
+  },
+  "limitations": [
+    "Single synthetic correctness run; not a performance benchmark",
+    "Scoped REJECT fault; not physical network, availability-zone, or regional failure",
+    "No lost-ACK fault or controller grant integration tested"
+  ],
+  "observed_reconnection_to_drain_seconds": 0.158,
+  "cleanup": {
+    "all_original_instances_stopped": [
+      {
+        "id": "i-07c7700e26d3565cc",
+        "state": "stopped"
+      },
+      {
+        "id": "i-0d51d7af792a2cd8a",
+        "state": "stopped"
+      },
+      {
+        "id": "i-0380d518323626a27",
+        "state": "stopped"
+      }
+    ],
+    "lab_status": "Terminated",
+    "lab_timer": "00:00",
+    "local_temporary_credentials_removed": true,
+    "volumes_and_records_retained": true,
+    "budget_display": "Used $1 of $50 (delayed; not an incremental cost measurement)",
+    "lab_proof": "Screenshot retained outside Git: aws-outage-lab-ended-20261023.png"
+  },
+  "validation": {
+    "helper_tests_before_live": 9,
+    "final_helper_tests": 10,
+    "existing_recovery_checker_tests": 10,
+    "final_combined_tests_passed": 20,
+    "git_diff_check": "passed",
+    "post_live_change": "Restore now rejects iptables verification errors instead of treating them as rule absence. Unit-tested only; not redeployed to stopped hosts.",
+    "full_suite_run": false,
+    "hosted_ci_run": false
+  }
+}
+

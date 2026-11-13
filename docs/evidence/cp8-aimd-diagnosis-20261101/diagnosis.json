@@ -1,0 +1,1045 @@
+{
+  "scope": "Retrospective diagnosis only; original primary outcomes unchanged",
+  "trials": [
+    {
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "seed": 3104,
+      "admission": "aimd",
+      "drain_seconds": 119.73400000000038,
+      "readiness_seconds": 12.42200000000048,
+      "live_stop_seconds": 119.76500000000124,
+      "fresh_observed_seconds": 109.29700000000048,
+      "fresh_time_at_rate_floor_fraction": 1.0,
+      "observed_recovery_fraction": 1.0,
+      "throughput_trigger_snapshots": 107,
+      "missing_or_stale_snapshots": 3,
+      "healthy_snapshots": 0,
+      "rates_observed": [
+        2.0,
+        2.5
+      ],
+      "retry_journal_total": 197,
+      "whole_run": {
+        "attempts": 4312,
+        "request_failures": 20,
+        "late_successes": 25,
+        "violations": 45,
+        "violation_fraction": 0.010435992578849721
+      },
+      "before_readiness": {
+        "attempts": 447,
+        "request_failures": 20,
+        "late_successes": 25,
+        "violations": 45,
+        "violation_fraction": 0.10067114093959731
+      },
+      "after_readiness": {
+        "attempts": 3865,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      },
+      "source_summary": "evaluation\\results\\h1-h2-corrected-20261101-143329\\ratio1-1_depth3_balanced_load30-seed3104\\summary.json",
+      "raw_trial_sha256": "b70716bd67b089735ea386a575f67081c6f8c4fe3a510c487dde4a3f795d3b6e"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "seed": 3104,
+      "admission": "constant",
+      "drain_seconds": 30.59400000000096,
+      "readiness_seconds": 12.359000000000378,
+      "live_stop_seconds": 30.64099999999962,
+      "fresh_observed_seconds": 20.188000000000102,
+      "fresh_time_at_rate_floor_fraction": 1.0,
+      "observed_recovery_fraction": 1.0,
+      "throughput_trigger_snapshots": 20,
+      "missing_or_stale_snapshots": 2,
+      "healthy_snapshots": 0,
+      "rates_observed": [
+        20.0
+      ],
+      "retry_journal_total": 57,
+      "whole_run": {
+        "attempts": 1104,
+        "request_failures": 19,
+        "late_successes": 24,
+        "violations": 43,
+        "violation_fraction": 0.03894927536231884
+      },
+      "before_readiness": {
+        "attempts": 445,
+        "request_failures": 19,
+        "late_successes": 24,
+        "violations": 43,
+        "violation_fraction": 0.09662921348314607
+      },
+      "after_readiness": {
+        "attempts": 659,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      },
+      "source_summary": "evaluation\\results\\h1-h2-submission-20261101-151506\\ratio1-1_depth3_balanced_load30-seed3104\\summary.json",
+      "raw_trial_sha256": "3ea46584d074f813b9d6e96e6bb9559e195fb987721b2e7273d160f51cb3e070"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "seed": 3105,
+      "admission": "aimd",
+      "drain_seconds": 107.85900000000038,
+      "readiness_seconds": 12.343000000000757,
+      "live_stop_seconds": 107.89000000000124,
+      "fresh_observed_seconds": 97.42200000000048,
+      "fresh_time_at_rate_floor_fraction": 1.0,
+      "observed_recovery_fraction": 1.0,
+      "throughput_trigger_snapshots": 95,
+      "missing_or_stale_snapshots": 3,
+      "healthy_snapshots": 0,
+      "rates_observed": [
+        2.0,
+        2.5
+      ],
+      "retry_journal_total": 206,
+      "whole_run": {
+        "attempts": 3885,
+        "request_failures": 23,
+        "late_successes": 22,
+        "violations": 45,
+        "violation_fraction": 0.011583011583011582
+      },
+      "before_readiness": {
+        "attempts": 444,
+        "request_failures": 23,
+        "late_successes": 22,
+        "violations": 45,
+        "violation_fraction": 0.10135135135135136
+      },
+      "after_readiness": {
+        "attempts": 3441,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      },
+      "source_summary": "evaluation\\results\\h1-h2-submission-20261101-151506\\ratio1-1_depth3_balanced_load30-seed3105\\summary.json",
+      "raw_trial_sha256": "6bf76fc4fc723788e1d431feec8599511d5ad38922a2ad1008adeb513bd1347d"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "seed": 3105,
+      "admission": "constant",
+      "drain_seconds": 22.54699999999866,
+      "readiness_seconds": 12.40599999999904,
+      "live_stop_seconds": 22.59399999999914,
+      "fresh_observed_seconds": 13.421999999998661,
+      "fresh_time_at_rate_floor_fraction": 1.0,
+      "observed_recovery_fraction": 1.0,
+      "throughput_trigger_snapshots": 14,
+      "missing_or_stale_snapshots": 2,
+      "healthy_snapshots": 0,
+      "rates_observed": [
+        20.0
+      ],
+      "retry_journal_total": 60,
+      "whole_run": {
+        "attempts": 814,
+        "request_failures": 33,
+        "late_successes": 13,
+        "violations": 46,
+        "violation_fraction": 0.056511056511056514
+      },
+      "before_readiness": {
+        "attempts": 447,
+        "request_failures": 33,
+        "late_successes": 13,
+        "violations": 46,
+        "violation_fraction": 0.1029082774049217
+      },
+      "after_readiness": {
+        "attempts": 367,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      },
+      "source_summary": "evaluation\\results\\h1-h2-submission-20261101-151506\\ratio1-1_depth3_balanced_load30-seed3105\\summary.json",
+      "raw_trial_sha256": "9d8244330d7b103b38ecf1b5fe42cc3fb23d1ec88a470379086b58322bae098c"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "seed": 3106,
+      "admission": "constant",
+      "drain_seconds": 33.21800000000076,
+      "readiness_seconds": 12.328000000001339,
+      "live_stop_seconds": 33.26500000000124,
+      "fresh_observed_seconds": 21.98400000000038,
+      "fresh_time_at_rate_floor_fraction": 1.0,
+      "observed_recovery_fraction": 1.0,
+      "throughput_trigger_snapshots": 22,
+      "missing_or_stale_snapshots": 2,
+      "healthy_snapshots": 0,
+      "rates_observed": [
+        20.0
+      ],
+      "retry_journal_total": 82,
+      "whole_run": {
+        "attempts": 1198,
+        "request_failures": 20,
+        "late_successes": 23,
+        "violations": 43,
+        "violation_fraction": 0.03589315525876461
+      },
+      "before_readiness": {
+        "attempts": 444,
+        "request_failures": 20,
+        "late_successes": 23,
+        "violations": 43,
+        "violation_fraction": 0.09684684684684684
+      },
+      "after_readiness": {
+        "attempts": 754,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      },
+      "source_summary": "evaluation\\results\\h1-h2-submission-20261101-151506\\ratio1-1_depth3_balanced_load30-seed3106\\summary.json",
+      "raw_trial_sha256": "bd8cc54bc2a65ecdeda1401e148e1fa6a7052526cf21909c31d2123a62a132b1"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "seed": 3106,
+      "admission": "aimd",
+      "drain_seconds": 105.46899999999914,
+      "readiness_seconds": 12.438000000000102,
+      "live_stop_seconds": 105.48499999999876,
+      "fresh_observed_seconds": 94.75,
+      "fresh_time_at_rate_floor_fraction": 1.0,
+      "observed_recovery_fraction": 1.0,
+      "throughput_trigger_snapshots": 93,
+      "missing_or_stale_snapshots": 3,
+      "healthy_snapshots": 0,
+      "rates_observed": [
+        2.0,
+        2.5
+      ],
+      "retry_journal_total": 196,
+      "whole_run": {
+        "attempts": 3798,
+        "request_failures": 21,
+        "late_successes": 24,
+        "violations": 45,
+        "violation_fraction": 0.011848341232227487
+      },
+      "before_readiness": {
+        "attempts": 448,
+        "request_failures": 21,
+        "late_successes": 24,
+        "violations": 45,
+        "violation_fraction": 0.10044642857142858
+      },
+      "after_readiness": {
+        "attempts": 3350,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      },
+      "source_summary": "evaluation\\results\\h1-h2-submission-20261101-151506\\ratio1-1_depth3_balanced_load30-seed3106\\summary.json",
+      "raw_trial_sha256": "d093a73b17e5ba02d9c8219515a178d8a07e8a6f8fe9e552cb4d08bb91bda219"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "seed": 3107,
+      "admission": "aimd",
+      "drain_seconds": 120.42200000000048,
+      "readiness_seconds": 12.343999999999141,
+      "live_stop_seconds": 120.46899999999914,
+      "fresh_observed_seconds": 109.9369999999999,
+      "fresh_time_at_rate_floor_fraction": 1.0,
+      "observed_recovery_fraction": 1.0,
+      "throughput_trigger_snapshots": 107,
+      "missing_or_stale_snapshots": 3,
+      "healthy_snapshots": 0,
+      "rates_observed": [
+        2.0,
+        2.5
+      ],
+      "retry_journal_total": 220,
+      "whole_run": {
+        "attempts": 4337,
+        "request_failures": 21,
+        "late_successes": 23,
+        "violations": 44,
+        "violation_fraction": 0.010145261701637076
+      },
+      "before_readiness": {
+        "attempts": 444,
+        "request_failures": 21,
+        "late_successes": 23,
+        "violations": 44,
+        "violation_fraction": 0.0990990990990991
+      },
+      "after_readiness": {
+        "attempts": 3893,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      },
+      "source_summary": "evaluation\\results\\h1-h2-submission-20261101-151506\\ratio1-1_depth3_balanced_load30-seed3107\\summary.json",
+      "raw_trial_sha256": "ab872dacad56f60528a1632b7508012eab1cce153d604a68be5056cf2bddc8eb"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "seed": 3107,
+      "admission": "constant",
+      "drain_seconds": 35.03100000000086,
+      "readiness_seconds": 12.375,
+      "live_stop_seconds": 35.07800000000134,
+      "fresh_observed_seconds": 23.311999999999898,
+      "fresh_time_at_rate_floor_fraction": 1.0,
+      "observed_recovery_fraction": 1.0,
+      "throughput_trigger_snapshots": 23,
+      "missing_or_stale_snapshots": 3,
+      "healthy_snapshots": 0,
+      "rates_observed": [
+        20.0
+      ],
+      "retry_journal_total": 71,
+      "whole_run": {
+        "attempts": 1263,
+        "request_failures": 21,
+        "late_successes": 23,
+        "violations": 44,
+        "violation_fraction": 0.03483768804433888
+      },
+      "before_readiness": {
+        "attempts": 445,
+        "request_failures": 21,
+        "late_successes": 23,
+        "violations": 44,
+        "violation_fraction": 0.09887640449438202
+      },
+      "after_readiness": {
+        "attempts": 818,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      },
+      "source_summary": "evaluation\\results\\h1-h2-submission-20261101-151506\\ratio1-1_depth3_balanced_load30-seed3107\\summary.json",
+      "raw_trial_sha256": "02dba58cfc6ce784a40830c6f5e9eb6c97191bfeffd7223340cc4e6adf55efa6"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "seed": 3108,
+      "admission": "aimd",
+      "drain_seconds": 125.9369999999999,
+      "readiness_seconds": 12.343999999999141,
+      "live_stop_seconds": 126.0,
+      "fresh_observed_seconds": 115.23400000000038,
+      "fresh_time_at_rate_floor_fraction": 1.0,
+      "observed_recovery_fraction": 1.0,
+      "throughput_trigger_snapshots": 113,
+      "missing_or_stale_snapshots": 3,
+      "healthy_snapshots": 0,
+      "rates_observed": [
+        2.0,
+        2.5
+      ],
+      "retry_journal_total": 211,
+      "whole_run": {
+        "attempts": 4536,
+        "request_failures": 21,
+        "late_successes": 23,
+        "violations": 44,
+        "violation_fraction": 0.009700176366843033
+      },
+      "before_readiness": {
+        "attempts": 444,
+        "request_failures": 21,
+        "late_successes": 23,
+        "violations": 44,
+        "violation_fraction": 0.0990990990990991
+      },
+      "after_readiness": {
+        "attempts": 4092,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      },
+      "source_summary": "evaluation\\results\\h1-h2-submission-20261101-151506\\ratio1-1_depth3_balanced_load30-seed3108\\summary.json",
+      "raw_trial_sha256": "c5ddd6c2f9b5be045036d34106c2b7410b1e00c065bd93f69f646e512bf08828"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "seed": 3108,
+      "admission": "constant",
+      "drain_seconds": 34.82799999999952,
+      "readiness_seconds": 12.390999999999622,
+      "live_stop_seconds": 34.875,
+      "fresh_observed_seconds": 24.42199999999866,
+      "fresh_time_at_rate_floor_fraction": 1.0,
+      "observed_recovery_fraction": 1.0,
+      "throughput_trigger_snapshots": 24,
+      "missing_or_stale_snapshots": 2,
+      "healthy_snapshots": 0,
+      "rates_observed": [
+        20.0
+      ],
+      "retry_journal_total": 72,
+      "whole_run": {
+        "attempts": 1256,
+        "request_failures": 20,
+        "late_successes": 24,
+        "violations": 44,
+        "violation_fraction": 0.03503184713375796
+      },
+      "before_readiness": {
+        "attempts": 446,
+        "request_failures": 20,
+        "late_successes": 24,
+        "violations": 44,
+        "violation_fraction": 0.09865470852017937
+      },
+      "after_readiness": {
+        "attempts": 810,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      },
+      "source_summary": "evaluation\\results\\h1-h2-submission-20261101-151506\\ratio1-1_depth3_balanced_load30-seed3108\\summary.json",
+      "raw_trial_sha256": "192985a9da463f40075ecaa92fb062d1c8701ebf389f912968fc97b0bc794e47"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "seed": 3104,
+      "admission": "constant",
+      "drain_seconds": 23.89099999999962,
+      "readiness_seconds": 12.390999999999622,
+      "live_stop_seconds": 23.95299999999952,
+      "fresh_observed_seconds": 13.438000000000102,
+      "fresh_time_at_rate_floor_fraction": 1.0,
+      "observed_recovery_fraction": 1.0,
+      "throughput_trigger_snapshots": 14,
+      "missing_or_stale_snapshots": 2,
+      "healthy_snapshots": 0,
+      "rates_observed": [
+        20.0
+      ],
+      "retry_journal_total": 64,
+      "whole_run": {
+        "attempts": 2013,
+        "request_failures": 68,
+        "late_successes": 36,
+        "violations": 104,
+        "violation_fraction": 0.051664182811723795
+      },
+      "before_readiness": {
+        "attempts": 1040,
+        "request_failures": 68,
+        "late_successes": 36,
+        "violations": 104,
+        "violation_fraction": 0.1
+      },
+      "after_readiness": {
+        "attempts": 973,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      },
+      "source_summary": "evaluation\\results\\h1-h2-submission-20261101-151506\\ratio1-1_depth3_balanced_load70-seed3104\\summary.json",
+      "raw_trial_sha256": "101e20e6dab4733190c9ec7f43b897a5e69749b53f13a4b5c8a950c47c246574"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "seed": 3104,
+      "admission": "aimd",
+      "drain_seconds": 119.3130000000001,
+      "readiness_seconds": 12.390999999999622,
+      "live_stop_seconds": 119.35999999999876,
+      "fresh_observed_seconds": 107.53100000000086,
+      "fresh_time_at_rate_floor_fraction": 1.0,
+      "observed_recovery_fraction": 1.0,
+      "throughput_trigger_snapshots": 105,
+      "missing_or_stale_snapshots": 4,
+      "healthy_snapshots": 0,
+      "rates_observed": [
+        2.0,
+        2.5
+      ],
+      "retry_journal_total": 205,
+      "whole_run": {
+        "attempts": 10025,
+        "request_failures": 46,
+        "late_successes": 54,
+        "violations": 100,
+        "violation_fraction": 0.00997506234413965
+      },
+      "before_readiness": {
+        "attempts": 1040,
+        "request_failures": 46,
+        "late_successes": 54,
+        "violations": 100,
+        "violation_fraction": 0.09615384615384616
+      },
+      "after_readiness": {
+        "attempts": 8985,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      },
+      "source_summary": "evaluation\\results\\h1-h2-submission-20261101-151506\\ratio1-1_depth3_balanced_load70-seed3104\\summary.json",
+      "raw_trial_sha256": "429ebf7dad85c2b5c9e0b919b14c58f0303f0a060efa85635eb542610b3a086e"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "seed": 3105,
+      "admission": "aimd",
+      "drain_seconds": 124.29700000000048,
+      "readiness_seconds": 12.406000000000859,
+      "live_stop_seconds": 124.34400000000096,
+      "fresh_observed_seconds": 116.82799999999952,
+      "fresh_time_at_rate_floor_fraction": 1.0,
+      "observed_recovery_fraction": 1.0,
+      "throughput_trigger_snapshots": 114,
+      "missing_or_stale_snapshots": 3,
+      "healthy_snapshots": 0,
+      "rates_observed": [
+        2.0,
+        2.5
+      ],
+      "retry_journal_total": 198,
+      "whole_run": {
+        "attempts": 10445,
+        "request_failures": 67,
+        "late_successes": 35,
+        "violations": 102,
+        "violation_fraction": 0.009765438008616564
+      },
+      "before_readiness": {
+        "attempts": 1041,
+        "request_failures": 67,
+        "late_successes": 35,
+        "violations": 102,
+        "violation_fraction": 0.09798270893371758
+      },
+      "after_readiness": {
+        "attempts": 9404,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      },
+      "source_summary": "evaluation\\results\\h1-h2-submission-20261101-151506\\ratio1-1_depth3_balanced_load70-seed3105\\summary.json",
+      "raw_trial_sha256": "6c05577891191303773a0920e279d99debe1d0bd7db2541ffc113ef8e3ed54b4"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "seed": 3105,
+      "admission": "constant",
+      "drain_seconds": 31.79700000000048,
+      "readiness_seconds": 12.406000000000859,
+      "live_stop_seconds": 31.813000000000102,
+      "fresh_observed_seconds": 20.53100000000086,
+      "fresh_time_at_rate_floor_fraction": 1.0,
+      "observed_recovery_fraction": 1.0,
+      "throughput_trigger_snapshots": 21,
+      "missing_or_stale_snapshots": 2,
+      "healthy_snapshots": 0,
+      "rates_observed": [
+        20.0
+      ],
+      "retry_journal_total": 83,
+      "whole_run": {
+        "attempts": 2673,
+        "request_failures": 84,
+        "late_successes": 27,
+        "violations": 111,
+        "violation_fraction": 0.04152637485970819
+      },
+      "before_readiness": {
+        "attempts": 1041,
+        "request_failures": 84,
+        "late_successes": 27,
+        "violations": 111,
+        "violation_fraction": 0.10662824207492795
+      },
+      "after_readiness": {
+        "attempts": 1632,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      },
+      "source_summary": "evaluation\\results\\h1-h2-submission-20261101-151506\\ratio1-1_depth3_balanced_load70-seed3105\\summary.json",
+      "raw_trial_sha256": "83e98b60845b6782f579b1b8a9dede974f5abc850e3f612771da4f58cc8fa814"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "seed": 3106,
+      "admission": "aimd",
+      "drain_seconds": 106.03199999999924,
+      "readiness_seconds": 12.42200000000048,
+      "live_stop_seconds": 106.07899999999972,
+      "fresh_observed_seconds": 95.26599999999962,
+      "fresh_time_at_rate_floor_fraction": 1.0,
+      "observed_recovery_fraction": 1.0,
+      "throughput_trigger_snapshots": 93,
+      "missing_or_stale_snapshots": 3,
+      "healthy_snapshots": 0,
+      "rates_observed": [
+        2.0,
+        2.5
+      ],
+      "retry_journal_total": 208,
+      "whole_run": {
+        "attempts": 8911,
+        "request_failures": 49,
+        "late_successes": 57,
+        "violations": 106,
+        "violation_fraction": 0.011895410167209068
+      },
+      "before_readiness": {
+        "attempts": 1043,
+        "request_failures": 49,
+        "late_successes": 57,
+        "violations": 106,
+        "violation_fraction": 0.10162991371045062
+      },
+      "after_readiness": {
+        "attempts": 7868,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      },
+      "source_summary": "evaluation\\results\\h1-h2-submission-20261101-151506\\ratio1-1_depth3_balanced_load70-seed3106\\summary.json",
+      "raw_trial_sha256": "0cd4e991387c6ea7556a5f42f90d17a2d4761a7bd6761dfeb1bcc4e6bfb19a32"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "seed": 3106,
+      "admission": "constant",
+      "drain_seconds": 36.35899999999856,
+      "readiness_seconds": 12.343999999999141,
+      "live_stop_seconds": 36.42199999999866,
+      "fresh_observed_seconds": 24.875,
+      "fresh_time_at_rate_floor_fraction": 1.0,
+      "observed_recovery_fraction": 1.0,
+      "throughput_trigger_snapshots": 25,
+      "missing_or_stale_snapshots": 3,
+      "healthy_snapshots": 0,
+      "rates_observed": [
+        20.0
+      ],
+      "retry_journal_total": 75,
+      "whole_run": {
+        "attempts": 3060,
+        "request_failures": 48,
+        "late_successes": 52,
+        "violations": 100,
+        "violation_fraction": 0.032679738562091505
+      },
+      "before_readiness": {
+        "attempts": 1036,
+        "request_failures": 48,
+        "late_successes": 52,
+        "violations": 100,
+        "violation_fraction": 0.09652509652509653
+      },
+      "after_readiness": {
+        "attempts": 2024,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      },
+      "source_summary": "evaluation\\results\\h1-h2-submission-20261101-151506\\ratio1-1_depth3_balanced_load70-seed3106\\summary.json",
+      "raw_trial_sha256": "6eeb5c2ab1c1da0ee58454ef98128e29549ef74e07b0683e2cbe1d14da1e0431"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "seed": 3107,
+      "admission": "aimd",
+      "drain_seconds": 104.1869999999999,
+      "readiness_seconds": 12.390999999999622,
+      "live_stop_seconds": 104.21899999999914,
+      "fresh_observed_seconds": 92.9369999999999,
+      "fresh_time_at_rate_floor_fraction": 1.0,
+      "observed_recovery_fraction": 1.0,
+      "throughput_trigger_snapshots": 91,
+      "missing_or_stale_snapshots": 4,
+      "healthy_snapshots": 0,
+      "rates_observed": [
+        2.0,
+        2.5
+      ],
+      "retry_journal_total": 207,
+      "whole_run": {
+        "attempts": 8755,
+        "request_failures": 47,
+        "late_successes": 53,
+        "violations": 100,
+        "violation_fraction": 0.011422044545973729
+      },
+      "before_readiness": {
+        "attempts": 1040,
+        "request_failures": 47,
+        "late_successes": 53,
+        "violations": 100,
+        "violation_fraction": 0.09615384615384616
+      },
+      "after_readiness": {
+        "attempts": 7715,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      },
+      "source_summary": "evaluation\\results\\h1-h2-submission-20261101-151506\\ratio1-1_depth3_balanced_load70-seed3107\\summary.json",
+      "raw_trial_sha256": "111bdf96999867f6df1067aec5cfbe13571ffb5de50c7567ccb4861a940ad263"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "seed": 3107,
+      "admission": "constant",
+      "drain_seconds": 34.6869999999999,
+      "readiness_seconds": 12.375,
+      "live_stop_seconds": 34.71800000000076,
+      "fresh_observed_seconds": 23.15599999999904,
+      "fresh_time_at_rate_floor_fraction": 1.0,
+      "observed_recovery_fraction": 1.0,
+      "throughput_trigger_snapshots": 23,
+      "missing_or_stale_snapshots": 3,
+      "healthy_snapshots": 0,
+      "rates_observed": [
+        20.0
+      ],
+      "retry_journal_total": 73,
+      "whole_run": {
+        "attempts": 2917,
+        "request_failures": 45,
+        "late_successes": 55,
+        "violations": 100,
+        "violation_fraction": 0.03428179636612959
+      },
+      "before_readiness": {
+        "attempts": 1039,
+        "request_failures": 45,
+        "late_successes": 55,
+        "violations": 100,
+        "violation_fraction": 0.09624639076034648
+      },
+      "after_readiness": {
+        "attempts": 1878,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      },
+      "source_summary": "evaluation\\results\\h1-h2-submission-20261101-151506\\ratio1-1_depth3_balanced_load70-seed3107\\summary.json",
+      "raw_trial_sha256": "5138bb63a96fb4fd4726821f75c726ab92977d243550a57e7737a75b811961f0"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "seed": 3108,
+      "admission": "aimd",
+      "drain_seconds": 103.96900000000096,
+      "readiness_seconds": 12.359000000000378,
+      "live_stop_seconds": 104.01599999999962,
+      "fresh_observed_seconds": 92.75,
+      "fresh_time_at_rate_floor_fraction": 1.0,
+      "observed_recovery_fraction": 1.0,
+      "throughput_trigger_snapshots": 91,
+      "missing_or_stale_snapshots": 4,
+      "healthy_snapshots": 0,
+      "rates_observed": [
+        2.0,
+        2.5,
+        5.0
+      ],
+      "retry_journal_total": 205,
+      "whole_run": {
+        "attempts": 8738,
+        "request_failures": 50,
+        "late_successes": 52,
+        "violations": 102,
+        "violation_fraction": 0.011673151750972763
+      },
+      "before_readiness": {
+        "attempts": 1037,
+        "request_failures": 50,
+        "late_successes": 52,
+        "violations": 102,
+        "violation_fraction": 0.09836065573770492
+      },
+      "after_readiness": {
+        "attempts": 7701,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      },
+      "source_summary": "evaluation\\results\\replacement-3108-constant-20261101-160903\\original-seed3108-analysis-selection.json",
+      "raw_trial_sha256": "635e74d4dcb5825baf3498860dc72d2b13b20cdad3ac5d84f4c75b2f88a037d4"
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "seed": 3108,
+      "admission": "constant",
+      "drain_seconds": 26.03200000000288,
+      "readiness_seconds": 12.34400000000096,
+      "live_stop_seconds": 26.079000000001543,
+      "fresh_observed_seconds": 18.01599999999962,
+      "fresh_time_at_rate_floor_fraction": 1.0,
+      "observed_recovery_fraction": 1.0,
+      "throughput_trigger_snapshots": 18,
+      "missing_or_stale_snapshots": 3,
+      "healthy_snapshots": 0,
+      "rates_observed": [
+        20.0
+      ],
+      "retry_journal_total": 57,
+      "whole_run": {
+        "attempts": 2190,
+        "request_failures": 67,
+        "late_successes": 32,
+        "violations": 99,
+        "violation_fraction": 0.045205479452054796
+      },
+      "before_readiness": {
+        "attempts": 1036,
+        "request_failures": 67,
+        "late_successes": 32,
+        "violations": 99,
+        "violation_fraction": 0.09555984555984556
+      },
+      "after_readiness": {
+        "attempts": 1154,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      },
+      "source_summary": "evaluation\\results\\replacement-3108-constant-20261101-160903\\summary.json",
+      "raw_trial_sha256": "ad82c4aec1c8fb05df9c0b6aab590f216aaf56c8d4146197610431fa6b32833f"
+    }
+  ],
+  "matched_post_ready_windows": [
+    {
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "seed": 3104,
+      "common_post_ready_seconds": 18.281999999999243,
+      "aimd": {
+        "attempts": 659,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      },
+      "constant": {
+        "attempts": 658,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      }
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "seed": 3105,
+      "common_post_ready_seconds": 10.188000000000102,
+      "aimd": {
+        "attempts": 367,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      },
+      "constant": {
+        "attempts": 366,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      }
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "seed": 3106,
+      "common_post_ready_seconds": 20.936999999999898,
+      "constant": {
+        "attempts": 753,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      },
+      "aimd": {
+        "attempts": 753,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      }
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "seed": 3107,
+      "common_post_ready_seconds": 22.70300000000134,
+      "aimd": {
+        "attempts": 818,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      },
+      "constant": {
+        "attempts": 818,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      }
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "seed": 3108,
+      "common_post_ready_seconds": 22.48400000000038,
+      "aimd": {
+        "attempts": 810,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      },
+      "constant": {
+        "attempts": 809,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      }
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "seed": 3104,
+      "common_post_ready_seconds": 11.561999999999898,
+      "constant": {
+        "attempts": 971,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      },
+      "aimd": {
+        "attempts": 971,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      }
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "seed": 3105,
+      "common_post_ready_seconds": 19.406999999999243,
+      "aimd": {
+        "attempts": 1630,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      },
+      "constant": {
+        "attempts": 1630,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      }
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "seed": 3106,
+      "common_post_ready_seconds": 24.07799999999952,
+      "aimd": {
+        "attempts": 2022,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      },
+      "constant": {
+        "attempts": 2023,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      }
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "seed": 3107,
+      "common_post_ready_seconds": 22.343000000000757,
+      "aimd": {
+        "attempts": 1877,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      },
+      "constant": {
+        "attempts": 1875,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      }
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "seed": 3108,
+      "common_post_ready_seconds": 13.735000000000582,
+      "aimd": {
+        "attempts": 1154,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      },
+      "constant": {
+        "attempts": 1154,
+        "request_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0
+      }
+    }
+  ],
+  "source_sha256": {
+    "evaluation\\results\\h1-h2-corrected-20261101-143329\\ratio1-1_depth3_balanced_load30-seed3104\\summary.json": "5e9fdb3eb5ef8c0b198a3b991ec1e0152af3581ac056317bed2e33f4742550ba",
+    "evaluation\\results\\h1-h2-submission-20261101-151506\\ratio1-1_depth3_balanced_load30-seed3104\\summary.json": "dcba8a2452577e62bbb03f5d49f95aa6e72df5fe3864daab5c47428bb5164fdb",
+    "evaluation\\results\\h1-h2-submission-20261101-151506\\ratio1-1_depth3_balanced_load30-seed3105\\summary.json": "e7fac96357aff52e6959d47b9c71c0a003be7fefac7e01b0a84cb32058e6f417",
+    "evaluation\\results\\h1-h2-submission-20261101-151506\\ratio1-1_depth3_balanced_load30-seed3106\\summary.json": "88a0e8818cd7ca38a7f371793e8bfc74f4842f717cd8e09a33e52c08b5c3e167",
+    "evaluation\\results\\h1-h2-submission-20261101-151506\\ratio1-1_depth3_balanced_load30-seed3107\\summary.json": "e3a66aeb31fbcf87c1a68eaebdb37a63224ec10694f08fad782e5b45bf574399",
+    "evaluation\\results\\h1-h2-submission-20261101-151506\\ratio1-1_depth3_balanced_load30-seed3108\\summary.json": "b5a04ce20a2141cf12ffacfbc29cdc41064851f172c280b731a44683cfbf93a3",
+    "evaluation\\results\\h1-h2-submission-20261101-151506\\ratio1-1_depth3_balanced_load70-seed3104\\summary.json": "984e9b3f113545fea3abed1bf639b33423251878dfa3bf95749e9a399e41c673",
+    "evaluation\\results\\h1-h2-submission-20261101-151506\\ratio1-1_depth3_balanced_load70-seed3105\\summary.json": "bd5e7823afd1a50aa1117c653bf93fd41f5118cfd5a06236b5a94999c5e3822b",
+    "evaluation\\results\\h1-h2-submission-20261101-151506\\ratio1-1_depth3_balanced_load70-seed3106\\summary.json": "3430a1382a130b2820031dd3502ece8be0e35d121b389e11c34ec2e4ba3396b4",
+    "evaluation\\results\\h1-h2-submission-20261101-151506\\ratio1-1_depth3_balanced_load70-seed3107\\summary.json": "7e3904c37e826016ef89a33a3aa6e1a788d6547c47588a2944233d108e8a8598",
+    "evaluation\\results\\replacement-3108-constant-20261101-160903\\original-seed3108-analysis-selection.json": "15288da3553acdccafaa5b0d96c248aaa00ce8ff90c20ea82082206da41cdd7b",
+    "evaluation\\results\\replacement-3108-constant-20261101-160903\\summary.json": "4c0c5b95185d6cfff810ff1de472bcab9d112027dfc340f126874b72ef25765c",
+    "evaluation\\results\\replacement-3108-constant-20261101-160903\\submission-assessment.json": "3e8eda7f517415ad9a23a271e3e4cc92b6d19184872e9d1af459d761af35f571",
+    "evaluation\\results\\h1-h2-submission-20261101-151506\\ratio1-1_depth3_balanced_load70-seed3108\\summary.json": "d772f33a0b0d439564aca05e755f89cb310f9c7e233b266b85653851ac7b7f24"
+  },
+  "script_sha256": "a97a945dfa32d1b8f56fe68ac50c5a1c52982ff6e43c4cd05b9f89bb9034b47c"
+}

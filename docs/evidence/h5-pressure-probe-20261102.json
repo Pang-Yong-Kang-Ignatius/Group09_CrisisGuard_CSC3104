@@ -1,0 +1,90 @@
+{
+  "result": "completed",
+  "decision": "stopped: unsafe or generator-invalid; no profile justified",
+  "cleanup": "passed",
+  "preservation": {
+    "containers": true,
+    "states": true,
+    "volumes": true,
+    "networks": true
+  },
+  "source_unchanged": true,
+  "configuration": {
+    "controller": {
+      "CONTROLLER_ADMISSION_POLICY": "aimd",
+      "CONTROLLER_ADMISSION_ENABLED": "1",
+      "CONTROLLER_ADMISSION_POLL_SECONDS": "1",
+      "CONTROLLER_ADMISSION_MAX_AGE_SECONDS": "5",
+      "CONTROLLER_ADMISSION_TIMEOUT_SECONDS": "1",
+      "CONTROLLER_ADMISSION_DWELL_SECONDS": "3",
+      "CONTROLLER_ADMISSION_HEALTHY_SAMPLES": "2",
+      "CONTROLLER_ADMISSION_ADDITIVE_RPS": "2.0",
+      "CONTROLLER_ADMISSION_NORMAL_RPS": "20",
+      "CONTROLLER_ADMISSION_CAUTION_RPS": "5.0",
+      "CONTROLLER_ADMISSION_RECOVERY_RPS": "2.0",
+      "CONTROLLER_ADMISSION_NORMAL_INFLIGHT": "4",
+      "CONTROLLER_ADMISSION_CAUTION_INFLIGHT": "2",
+      "CONTROLLER_ADMISSION_RECOVERY_INFLIGHT": "1",
+      "CONTROLLER_ADMISSION_CAUTION_LATENCY_MS": "80",
+      "CONTROLLER_ADMISSION_RECOVERY_LATENCY_MS": "1000",
+      "CONTROLLER_ADMISSION_HEALTHY_LATENCY_MS": "50",
+      "CONTROLLER_ADMISSION_RECOVERY_ERROR_RATE": "0.15",
+      "CONTROLLER_ADMISSION_HEALTH_POLICY": "pressure-experimental"
+    },
+    "live_slo_ms": 250,
+    "rate_rps": 160,
+    "workers": 128,
+    "warmup_seconds": 60,
+    "measurement_seconds": 60,
+    "workload": "One preseeded applied synthetic Patient record; no replay backlog"
+  },
+  "phases": [
+    {
+      "phase": "warmup",
+      "classification": "safety_stopped_incomplete_window",
+      "summary": {
+        "scheduled": 9600,
+        "issued": 2387,
+        "cap_skips": 2555,
+        "lag_skips": 0,
+        "safety_withheld": 4658,
+        "generator_valid": false,
+        "issuance_ratio": 0.24864583333333334,
+        "http_non_200": 0,
+        "transport_failures": 1146,
+        "successful_p95_ms": 1925.2180000039516,
+        "start_lag_p95_ms": 193.9548999944236,
+        "failure_fraction": 0.4801005446166737,
+        "slo_violation_fraction": 0.9840804356933389,
+        "unique_schedule_indices": true,
+        "issued_within_window": true,
+        "no_early_issue": true
+      }
+    }
+  ],
+  "scope": "One 160-RPS read-only probe. No representative mixed-capacity or genuine-overload protection claim.",
+  "observed_patient_ranges": {
+    "p95_latency_ms": [
+      10.2,
+      46.61
+    ],
+    "live_p95_latency_ms": [
+      10.2,
+      46.61
+    ],
+    "error_rate": [
+      0.0,
+      0.0
+    ],
+    "executor_queue_depth": [
+      0,
+      0
+    ],
+    "executor_queue_pressure": [
+      0.0,
+      0.0
+    ]
+  },
+  "monitoring_snapshots": 22,
+  "interpretation": "Client degradation and generator invalidity; all 22 observed health snapshots were fresh with no Cloud pressure. Patient p95 stayed 10.20\u201346.61 ms, no sampled executor queue or server errors. This is not confirmed Cloud overload or an overload calibration."
+}

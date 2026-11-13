@@ -1,0 +1,530 @@
+{
+  "scope": "Single paired seed 60202 at 84 RPS; descriptive experimental retry comparison, not proposal acceptance",
+  "paired_workload_and_source_and_other_configuration_equal": true,
+  "trials": {
+    "bounded-deferral": {
+      "source": "evaluation\\results\\aimd-deferral-pilot-20261101-202315\\run-bounded-deferral\\summary.json",
+      "generator": {
+        "scheduled_opportunities": 2845,
+        "issued_attempts": 2845,
+        "cap_skips": 0,
+        "lag_skips": 0,
+        "ledger_reconciled": true,
+        "skip_fraction": 0.0,
+        "issuance_ratio": 1.0,
+        "issued_rps": 84.02492690274279,
+        "scheduled_rps": 84.02492690274279
+      },
+      "generator_sensitivity": {
+        "0": true,
+        "0.0001": true,
+        "0.001": true
+      },
+      "drain_interval_seconds": [
+        33.54599999999846,
+        33.82800000000134
+      ],
+      "readiness_seconds": 12.359000000000378,
+      "post_ready_exposure_seconds": 21.5,
+      "full_run": {
+        "attempts": 2845,
+        "http_non_200": 0,
+        "transport_failures": 47,
+        "late_successes": 55,
+        "violations": 102,
+        "fraction": 0.035852372583479786,
+        "successful_p95_ms": 16.00000000325963
+      },
+      "fixed10": {
+        "attempts": 840,
+        "http_non_200": 0,
+        "transport_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "fraction": 0.0,
+        "successful_p95_ms": 15.99999999962165
+      },
+      "post_ready": {
+        "attempts": 1808,
+        "http_non_200": 0,
+        "transport_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "fraction": 0.0,
+        "successful_p95_ms": 15.99999999962165
+      },
+      "workflow_p95": [
+        {
+          "site": "Hospital_A",
+          "urgent_original_workflows": 6,
+          "routine_original_workflows": 5,
+          "urgent_workflow_p95_upper_seconds": 28.093000000000757,
+          "routine_workflow_p95_upper_seconds": 30.264999999999418
+        },
+        {
+          "site": "Hospital_B",
+          "urgent_original_workflows": 5,
+          "routine_original_workflows": 6,
+          "urgent_workflow_p95_upper_seconds": 26.514999999999418,
+          "routine_workflow_p95_upper_seconds": 33.82800000000134
+        }
+      ],
+      "transitions": [
+        {
+          "elapsed_seconds": 0.014999999999417923,
+          "state": "Recovery",
+          "rate_rps": 5.0,
+          "fresh": false,
+          "reason": "telemetry_missing_or_stale"
+        },
+        {
+          "elapsed_seconds": 0.5620000000017171,
+          "state": "Recovery",
+          "rate_rps": 2.5,
+          "fresh": false,
+          "reason": "telemetry_missing_or_stale"
+        },
+        {
+          "elapsed_seconds": 5.562000000001717,
+          "state": "Recovery",
+          "rate_rps": 2.0,
+          "fresh": false,
+          "reason": "telemetry_missing_or_stale"
+        },
+        {
+          "elapsed_seconds": 11.312000000001717,
+          "state": "Recovery",
+          "rate_rps": 2.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 12.420999999998457,
+          "state": "Caution",
+          "rate_rps": 4.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 14.545999999998457,
+          "state": "Caution",
+          "rate_rps": 6.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 15.625,
+          "state": "Normal",
+          "rate_rps": 6.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 16.670999999998457,
+          "state": "Normal",
+          "rate_rps": 8.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 18.53099999999904,
+          "state": "Normal",
+          "rate_rps": 10.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 20.639999999999418,
+          "state": "Normal",
+          "rate_rps": 12.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 22.764999999999418,
+          "state": "Normal",
+          "rate_rps": 14.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 24.889999999999418,
+          "state": "Normal",
+          "rate_rps": 16.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 26.78099999999904,
+          "state": "Normal",
+          "rate_rps": 18.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 28.920999999998457,
+          "state": "Normal",
+          "rate_rps": 20.0,
+          "fresh": true,
+          "reason": "healthy"
+        }
+      ],
+      "first_normal_ceiling_seconds": 28.920999999998457,
+      "events_remaining_at_ceiling": 12,
+      "fresh_post_ready_snapshots": 81,
+      "post_ready_snapshots": 81,
+      "fresh_metric_ranges": {
+        "p95_latency_ms": [
+          8.89,
+          46.99
+        ],
+        "live_p95_latency_ms": [
+          8.77,
+          46.99
+        ],
+        "error_rate": [
+          0.0,
+          0.0
+        ],
+        "executor_queue_pressure": [
+          0.0,
+          0.0
+        ],
+        "live_slo_violation_rate": [
+          0.0,
+          0.0
+        ]
+      },
+      "last_sampled_counters": {
+        "allowed": 187,
+        "denied": 69
+      },
+      "sampled_unique_decision_reasons": {
+        "telemetry_unavailable": 12,
+        "rate_limit": 13,
+        "admitted": 49
+      },
+      "recorded_deferrals_by_site": {
+        "Hospital_A": 11,
+        "Hospital_B": 10
+      },
+      "recorded_deferral_reasons": {
+        "rate_limit": 21
+      },
+      "deferral_wait_range_seconds": [
+        1.0,
+        1.0
+      ],
+      "failure_backoff_counters_by_site": {
+        "Hospital_A": 28,
+        "Hospital_B": 36
+      },
+      "max_event_failure_counter": 3,
+      "grant_statuses": {
+        "completed": 88,
+        "superseded": 11
+      },
+      "audit_actions": {
+        "allocate": 99,
+        "acknowledge": 88,
+        "authoritative_cloud_query": 88,
+        "candidate_change": 11
+      },
+      "replay_loop_errors": 0
+    },
+    "failure-backoff": {
+      "source": "evaluation\\results\\aimd-deferral-pilot-20261101-202315\\run-failure-backoff\\summary.json",
+      "generator": {
+        "scheduled_opportunities": 5325,
+        "issued_attempts": 5325,
+        "cap_skips": 0,
+        "lag_skips": 0,
+        "ledger_reconciled": true,
+        "skip_fraction": 0.0,
+        "issuance_ratio": 1.0,
+        "issued_rps": 84.00378608613423,
+        "scheduled_rps": 84.00378608613423
+      },
+      "generator_sensitivity": {
+        "0": true,
+        "0.0001": true,
+        "0.001": true
+      },
+      "drain_interval_seconds": [
+        63.06199999999808,
+        63.34300000000076
+      ],
+      "readiness_seconds": 12.375,
+      "post_ready_exposure_seconds": 51.01499999999942,
+      "full_run": {
+        "attempts": 5325,
+        "http_non_200": 0,
+        "transport_failures": 50,
+        "late_successes": 49,
+        "violations": 99,
+        "fraction": 0.018591549295774647,
+        "successful_p95_ms": 16.00000000325963
+      },
+      "fixed10": {
+        "attempts": 840,
+        "http_non_200": 0,
+        "transport_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "fraction": 0.0,
+        "successful_p95_ms": 16.00000000325963
+      },
+      "post_ready": {
+        "attempts": 4286,
+        "http_non_200": 0,
+        "transport_failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "fraction": 0.0,
+        "successful_p95_ms": 16.00000000325963
+      },
+      "workflow_p95": [
+        {
+          "site": "Hospital_A",
+          "urgent_original_workflows": 6,
+          "routine_original_workflows": 5,
+          "urgent_workflow_p95_upper_seconds": 63.34300000000076,
+          "routine_workflow_p95_upper_seconds": 34.82800000000134
+        },
+        {
+          "site": "Hospital_B",
+          "urgent_original_workflows": 5,
+          "routine_original_workflows": 6,
+          "urgent_workflow_p95_upper_seconds": 53.56199999999808,
+          "routine_workflow_p95_upper_seconds": 24.0
+        }
+      ],
+      "transitions": [
+        {
+          "elapsed_seconds": 0.014999999999417923,
+          "state": "Recovery",
+          "rate_rps": 2.5,
+          "fresh": false,
+          "reason": "telemetry_missing_or_stale"
+        },
+        {
+          "elapsed_seconds": 4.686999999998079,
+          "state": "Recovery",
+          "rate_rps": 2.0,
+          "fresh": false,
+          "reason": "telemetry_missing_or_stale"
+        },
+        {
+          "elapsed_seconds": 10.68699999999808,
+          "state": "Recovery",
+          "rate_rps": 2.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 11.73399999999674,
+          "state": "Caution",
+          "rate_rps": 4.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 13.593000000000757,
+          "state": "Caution",
+          "rate_rps": 6.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 14.655999999995402,
+          "state": "Normal",
+          "rate_rps": 6.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 15.718000000000757,
+          "state": "Normal",
+          "rate_rps": 8.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 17.85899999999674,
+          "state": "Normal",
+          "rate_rps": 10.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 19.95300000000134,
+          "state": "Normal",
+          "rate_rps": 12.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 21.843000000000757,
+          "state": "Normal",
+          "rate_rps": 14.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 24.0,
+          "state": "Normal",
+          "rate_rps": 16.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 25.9059999999954,
+          "state": "Normal",
+          "rate_rps": 18.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 28.06199999999808,
+          "state": "Normal",
+          "rate_rps": 20.0,
+          "fresh": true,
+          "reason": "healthy"
+        }
+      ],
+      "first_normal_ceiling_seconds": 28.06199999999808,
+      "events_remaining_at_ceiling": 16,
+      "fresh_post_ready_snapshots": 189,
+      "post_ready_snapshots": 189,
+      "fresh_metric_ranges": {
+        "p95_latency_ms": [
+          7.73,
+          32.84
+        ],
+        "live_p95_latency_ms": [
+          7.52,
+          32.84
+        ],
+        "error_rate": [
+          0.0,
+          0.0
+        ],
+        "executor_queue_pressure": [
+          0.0,
+          0.0
+        ],
+        "live_slo_violation_rate": [
+          0.0,
+          0.0
+        ]
+      },
+      "last_sampled_counters": {
+        "allowed": 177,
+        "denied": 89
+      },
+      "sampled_unique_decision_reasons": {
+        "telemetry_unavailable": 7,
+        "rate_limit": 10,
+        "admitted": 48
+      },
+      "recorded_deferrals_by_site": {},
+      "recorded_deferral_reasons": {},
+      "deferral_wait_range_seconds": null,
+      "failure_backoff_counters_by_site": {
+        "Hospital_A": 45,
+        "Hospital_B": 45
+      },
+      "max_event_failure_counter": 5,
+      "grant_statuses": {
+        "completed": 88,
+        "superseded": 1
+      },
+      "audit_actions": {
+        "allocate": 89,
+        "acknowledge": 88,
+        "authoritative_cloud_query": 88,
+        "candidate_change": 1
+      },
+      "replay_loop_errors": 0
+    }
+  },
+  "effects": {
+    "drain_relative_pct": -46.59551963121271,
+    "drain_relative_observer_bounds_pct": [
+      -47.0407148382646,
+      -46.35755288445915
+    ],
+    "full_run_slo_difference_pp": 1.7260823287705138,
+    "fixed10_slo_difference_pp": 0.0,
+    "workflow_differences": [
+      {
+        "site": "Hospital_A",
+        "urgent_p95_relative_pct": -55.64940088091751,
+        "routine_p95_relative_pct": -13.101527506608889
+      },
+      {
+        "site": "Hospital_B",
+        "urgent_p95_relative_pct": -50.496620738582635,
+        "routine_p95_relative_pct": 40.95000000000557
+      }
+    ]
+  },
+  "source_sha256": {
+    "evaluation\\results\\aimd-deferral-pilot-20261101-202315\\run-bounded-deferral\\summary.json": "0bcdd5f02d3452aa3792027385eb26afc7537a58739dbec98b70f41164e81ca9",
+    "C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\.venv\\cp8-ebbeccfee970\\cg-cp8-50f0ff7d01f0\\raw.json": "ed9b4e8be172232dc6d20f80f5002a34bb530f9d9ceb8bf156ef14238d95351c",
+    "evaluation\\results\\aimd-deferral-pilot-20261101-202315\\run-failure-backoff\\summary.json": "db3c955efdebf703edc2faaeec771a2f93254fed27afc494041e2669e55b72cf",
+    "C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\.venv\\cp8-423054ddee6e\\cg-cp8-5e19ed87dc03\\raw.json": "2816164a3b95347734106b7c17f7c3d4bef63b3e59e0319955e36b6926e656e8"
+  },
+  "recorded_source_manifest": {
+    "edge/capture_api/admission_retry.py": "ce4ed81e6ec9305ee11eba3345185fb4ae9a748fcc858bc5c84fbcb6cb3b7e49",
+    "edge/capture_api/auto_replay.py": "16fb8671258854a1961f07bc7747e523b2df655f2ee18d2bd8531b3e7f9ed02d",
+    "edge/capture_api/cloud_client.py": "8d8dc47669a8949e348926964008ef1b9ab879fd489cf3417da6ee221ce7bd29",
+    "edge/capture_api/grant_client.py": "b391f9cd8c781df702cacd225653744d2b7bbaccf796d3ea11a4d2bf7d8ac1fd",
+    "edge/capture_api/main.py": "0389cbe039255c1322e1e23bbc7bcbff8e1464b6c4121b74274484a3b7c0dc89",
+    "edge/capture_api/scheduled_replay.py": "515d90b1ef403d062521b555a7999aa65abe80f0820cd39ac87fb69925a8af56",
+    "edge/database/db.py": "18ed4964e0b22cf9835913a5eb8b1585a9a29f7df3fe22e7b3c456c0e3be4a4b",
+    "edge/scheduler/config.py": "2a603a16b87441ae40eb73a33e634c4b43e89357da01df9037f47d857623eda5",
+    "edge/scheduler/dag.py": "e3862739ffbd2d3ca01840eb26df620f707f5a23046877f768a081eebbbd70f8",
+    "edge/scheduler/inspector.py": "079ebe6e0457d72dc48b03060f6d0ac43348f103728670fa55ece2a9e5380664",
+    "edge/scheduler/live_preview.py": "5d536280ec226dfc9d4b09aba3168a87e3113aeae32593b844eefbf6953e898e",
+    "edge/scheduler/priority.py": "0da0e9eed9b9f9bfdbe7a855c2118ac16ea534f654596953aed4458979075113",
+    "edge/scheduler/scheduler.py": "43c5f885aa91e29d73c279e3ef0a9966ef0fa3230ce59a19dee88ef4d743b876",
+    "edge/scheduler/session.py": "a055640df0b652de7f79692d8dc877e6afb9cae2c0c9a92879ab2cfe15572c40",
+    "edge/scheduler/validation.py": "593aeeb8b27968e03b0ee623679706a2b7d8fc250e88417861785a0785b873fc",
+    "cloud/metaguard.py": "fbb397ee27185e069335a98715eeceb39081500770d36ade8e71e7c9ee7a77f5",
+    "cloud/telemetry.py": "dbbd9b160e2f111438db21dd358ad8cd55e21ff9b811383fa276180c0712ae8a",
+    "cloud/traffic.py": "a4c8a4a3e377841da3a51e1a10617570dffda5629fca078cbc7be44a2380be0e",
+    "cloud/admin_service/main.py": "69d6bcba9a336770083eb6b6cbfe9b72603ea0d54713a12372d82cde2c6c872d",
+    "cloud/controller/admission.py": "7319465add66615a726b45e80a958e88abab4c1f0da7fa255736a4acf7cb84bd",
+    "cloud/controller/experimental.py": "c95bf5aab30e3c61a3ab65ef1a675c3ed0902db1f591047f090fc4f6347862ef",
+    "cloud/controller/grants.py": "c157ccf624d42b86c2b15ef64d45c3494a59435359996e3f64bb85d25c8ae110",
+    "cloud/controller/main.py": "3d154ea1fef3b1c47b2016a27f4beaffcd8dcd636990f54e4c6406a32e308706",
+    "cloud/controller/pressure_health.py": "0f57068098d411bf8f48e396235274085b92b42db9732de57ec1f621ffc9cb31",
+    "cloud/controller/scheduler.py": "41d873d616ec25b824a06ba13a05fce71a6258ffe5dfdc6b643b29244420a3ad",
+    "cloud/controller/storage.py": "966e97e67be2c2a1981637570bbabb758b3800eec750846b9b0834e72e65b624",
+    "cloud/database/db.py": "ba2eef73df6439d1621b60397ab8e1c5daad7310bea7e9a2bcafb43ca0fb9cf0",
+    "cloud/emergency_service/main.py": "8ff78f7b82360bdc37738c76e3a199d400f54f1908380ec61c38696858397b4b",
+    "cloud/patient_service/main.py": "d8978fa415aaaa1833bf5150bbaf08dfb3e06a3b95cb13ca9c8cb7a72ffe2169",
+    "evaluation/experiments/analyze_inheritance_results.py": "fee7ccd0b7a699297d7ac67384bc6988cc4269c411fabb80f0c973254e823975",
+    "evaluation/experiments/analyze_recovery_matrix.py": "ae57cec1e56ad76905d718198589d7eef66a8008d52c98c4176f3b3b887e4726",
+    "evaluation/experiments/assess_acceptance.py": "749d0478e56b478ca25fccd1d1f15b18faab75501c6cf6db38c71e02c9908098",
+    "evaluation/experiments/calibrate_event_costs.py": "2d274293ccfc484efadf691689d8eaa3ba9a4712ba39d081961831fd856ae11e",
+    "evaluation/experiments/calibrate_live_reads.py": "1b71a3740a4a3ed7a4ba813e44775282b31a1fe55eab396b2f06504c2b4a9640",
+    "evaluation/experiments/calibrate_ready_load.py": "270831e262fc798404872b8da1d4287301f6f3faa352ad00ffb7af5a86c78acf",
+    "evaluation/experiments/compare_inheritance.py": "6efa8f9ee044485e5a92d4b55aa1ce245419b8cc1224536b490a09e6902ac926",
+    "evaluation/experiments/run_inheritance_matrix.py": "99548957a79ea80557cbd02dff9be77463c40feeb8f0f6d7bb2db2fd735abb33",
+    "evaluation/experiments/run_recovery_matrix.py": "920cd47c053f02be152b2fccbcd43ed267a866f6aa980e5e17dbd573dd3c320a",
+    "evaluation/workloads/generate_workload.py": "53a5a52cbb56ad6fc4206ae90099570e3e6770f71ddae1f9a486039b7e922844",
+    "compose.yaml": "9e3e8abaa5f8a988a0a113576cfc25b18e251b67fd3e160fabe856e69740eba7",
+    "infrastructure/docker/compose.metaguard.yaml": "1be294bc6150501ecb87337e18ebe11d388ff2158e9a44df5d11bd68fe28582c",
+    "docs/evidence/cp7b-fixed-vs-aimd-experiment-20261029.py": "6bb5cd4ab04c373a52a965bd71b2dd65c0e4158e27e42f51bef600725caed066",
+    "docs/evidence/cp7b-sustained-fairness-experiment-20261029.py": "316f0d00994654895331882913c58c0fe9c5bf48b78f99f6731e84cb71ed933c"
+  },
+  "limitations": [
+    "No inferential confidence interval or statistical significance with one seed.",
+    "Failure-backoff counters include unclassified waits and ambiguous outcomes; they are not genuine-failure counts.",
+    "Sampled last-decision reasons do not form a complete denial/attempt ledger.",
+    "No matched constant-rate arm or RR baseline; original negative results remain unchanged."
+  ],
+  "script_sha256": "7ad4cc44787ffc1f90048240e915a335cb2a3b3ede3f8b5fe1843694ae3e7baf"
+}

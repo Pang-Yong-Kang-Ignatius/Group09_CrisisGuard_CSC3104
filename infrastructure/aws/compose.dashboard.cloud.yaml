@@ -1,0 +1,36 @@
+# Dashboard remains local to Cloud; hospital traffic uses private SSH reverse tunnels.
+services:
+  dashboard:
+    image: crisisguard-cloud:dev
+    build:
+      context: ../..
+      dockerfile: infrastructure/docker/Dockerfile
+    command: ["python", "-m", "uvicorn", "dashboard.main:app", "--host", "0.0.0.0", "--port", "8080"]
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:?}:${POSTGRES_PASSWORD:?}@postgres:5432/${POSTGRES_DB:?}
+      METAGUARD_REQUIRED: "1"
+      CLOUD_LIVE_TELEMETRY_TOKEN: ${CLOUD_LIVE_TELEMETRY_TOKEN:-}
+      DASHBOARD_CONTROLLER_URL: http://controller:8000
+      DASHBOARD_CONTROLLER_TOKEN: ${CONTROLLER_CLOUD_TOKEN:?}
+      DASHBOARD_PATIENT_URL: http://patient:8000
+      DASHBOARD_EMERGENCY_URL: http://emergency:8000
+      DASHBOARD_ADMIN_URL: http://admin:8000
+      DASHBOARD_HOSPITAL_A_URL: http://${CLOUD_BIND_ADDRESS:?}:18000
+      DASHBOARD_HOSPITAL_B_URL: http://${CLOUD_BIND_ADDRESS:?}:18002
+    ports:
+      - "127.0.0.1:8080:8080"
+    depends_on:
+      patient: {condition: service_healthy}
+      emergency: {condition: service_healthy}
+      admin: {condition: service_healthy}
+      controller: {condition: service_healthy}
+    restart: unless-stopped
+    logging:
+      driver: json-file
+      options: {max-size: "10m", max-file: "3"}
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/health', timeout=2)"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+      start_period: 10s

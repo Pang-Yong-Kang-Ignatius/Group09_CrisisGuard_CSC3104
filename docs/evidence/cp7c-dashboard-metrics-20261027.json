@@ -1,0 +1,207 @@
+{
+  "commands": [
+    "docker compose build dashboard",
+    "docker compose up -d --no-deps --no-build dashboard",
+    "isolated local-aimd compose up -d --no-deps --no-build --wait dashboard"
+  ],
+  "dashboards": {
+    "original": {
+      "assets": {
+        "/static/style.css": {
+          "status": 200,
+          "matches_workspace": true
+        },
+        "/static/app.js": {
+          "status": 200,
+          "matches_workspace": true
+        },
+        "/static/outage.js": {
+          "status": 200,
+          "matches_workspace": true
+        },
+        "/static/workspace.js": {
+          "status": 200,
+          "matches_workspace": true
+        },
+        "/static/sync-status.js": {
+          "status": 200,
+          "matches_workspace": true
+        },
+        "/static/quick-events.js": {
+          "status": 200,
+          "matches_workspace": true
+        }
+      },
+      "metrics": {
+        "patient": {
+          "service": "patient",
+          "http_status": 200,
+          "response": {
+            "average_latency_ms": 0.0,
+            "error_rate": 0.0,
+            "throughput_rps": 0.0,
+            "window_requests": 0,
+            "total_requests": 7,
+            "failed_requests": 0,
+            "window_seconds": 60,
+            "uptime_seconds": 4574.83,
+            "sampled_at": "2026-10-27T11:11:13.556448+00:00",
+            "service": "patient",
+            "database_healthy": true
+          }
+        },
+        "emergency": {
+          "service": "emergency",
+          "http_status": 200,
+          "response": {
+            "average_latency_ms": 0.0,
+            "error_rate": 0.0,
+            "throughput_rps": 0.0,
+            "window_requests": 0,
+            "total_requests": 0,
+            "failed_requests": 0,
+            "window_seconds": 60,
+            "uptime_seconds": 4571.66,
+            "sampled_at": "2026-10-27T11:11:13.569867+00:00",
+            "service": "emergency",
+            "database_healthy": true
+          }
+        },
+        "admin": {
+          "service": "admin",
+          "http_status": 200,
+          "response": {
+            "average_latency_ms": 0.0,
+            "error_rate": 0.0,
+            "throughput_rps": 0.0,
+            "window_requests": 0,
+            "total_requests": 0,
+            "failed_requests": 0,
+            "window_seconds": 60,
+            "uptime_seconds": 4571.44,
+            "sampled_at": "2026-10-27T11:11:13.585327+00:00",
+            "service": "admin",
+            "database_healthy": true
+          }
+        }
+      },
+      "controller": {
+        "status": "not_configured"
+      }
+    },
+    "aimd": {
+      "assets": {
+        "/static/style.css": {
+          "status": 200,
+          "matches_workspace": true
+        },
+        "/static/app.js": {
+          "status": 200,
+          "matches_workspace": true
+        },
+        "/static/outage.js": {
+          "status": 200,
+          "matches_workspace": true
+        },
+        "/static/workspace.js": {
+          "status": 200,
+          "matches_workspace": true
+        },
+        "/static/sync-status.js": {
+          "status": 200,
+          "matches_workspace": true
+        },
+        "/static/quick-events.js": {
+          "status": 200,
+          "matches_workspace": true
+        }
+      },
+      "metrics": {
+        "patient": {
+          "service": "patient",
+          "http_status": 200,
+          "response": {
+            "p95_latency_ms": 0.57,
+            "latency_sample_count": 1,
+            "observation_seconds": 60,
+            "in_flight_requests": 0,
+            "average_latency_ms": 0.57,
+            "error_rate": 0.0,
+            "throughput_rps": 0.0167,
+            "window_requests": 1,
+            "total_requests": 5,
+            "failed_requests": 0,
+            "window_seconds": 60,
+            "uptime_seconds": 523.97,
+            "sampled_at": "2026-10-27T11:11:13.655702+00:00",
+            "service": "patient",
+            "database_healthy": true
+          }
+        },
+        "emergency": {
+          "service": "emergency",
+          "http_status": 200,
+          "response": {
+            "p95_latency_ms": 0.51,
+            "latency_sample_count": 1,
+            "observation_seconds": 60,
+            "in_flight_requests": 0,
+            "average_latency_ms": 0.51,
+            "error_rate": 0.0,
+            "throughput_rps": 0.0167,
+            "window_requests": 1,
+            "total_requests": 3,
+            "failed_requests": 0,
+            "window_seconds": 60,
+            "uptime_seconds": 518.26,
+            "sampled_at": "2026-10-27T11:11:13.672622+00:00",
+            "service": "emergency",
+            "database_healthy": true
+          }
+        },
+        "admin": {
+          "service": "admin",
+          "http_status": 200,
+          "response": {
+            "p95_latency_ms": 0.72,
+            "latency_sample_count": 1,
+            "observation_seconds": 60,
+            "in_flight_requests": 0,
+            "average_latency_ms": 0.72,
+            "error_rate": 0.0,
+            "throughput_rps": 0.0167,
+            "window_requests": 1,
+            "total_requests": 3,
+            "failed_requests": 0,
+            "window_seconds": 60,
+            "uptime_seconds": 518.08,
+            "sampled_at": "2026-10-27T11:11:13.688301+00:00",
+            "service": "admin",
+            "database_healthy": true
+          }
+        }
+      },
+      "controller": {
+        "status": "available",
+        "enabled": true,
+        "state": "Normal",
+        "state_since": "2026-10-27T11:02:43.720057+00:00",
+        "observed_at": "2026-10-27T11:11:13.669967+00:00",
+        "server_time": "2026-10-27T11:11:13.727121+00:00",
+        "rate_rps": 2.0,
+        "inflight_limit": 4,
+        "healthy_samples": 0,
+        "allowed": 100,
+        "denied": 1109,
+        "telemetry_fresh": true,
+        "policy": "aimd"
+      }
+    }
+  },
+  "non_dashboard_containers_unchanged": true,
+  "all_volumes_unchanged": true,
+  "python_tests_passed": 67,
+  "javascript_tests_passed": 45,
+  "queue_regression": "passed",
+  "browser_behavior": "NOT VERIFIED: no real browser runtime/visual check; earlier Computer Use was blocked by URL detection"
+}

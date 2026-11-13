@@ -1,0 +1,2213 @@
+{
+  "trial_validity": [
+    {
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "seed": 60101,
+      "policy": "bounded_on",
+      "admission": "constant",
+      "valid": true,
+      "generator_accuracy": {
+        "scheduled_opportunities": 734,
+        "issued_attempts": 734,
+        "cap_skips": 0,
+        "lag_skips": 0,
+        "ledger_reconciled": true,
+        "skip_fraction": 0.0,
+        "issuance_ratio": 1.0,
+        "issued_rps": 36.034075510524666,
+        "scheduled_rps": 36.034075510524666
+      }
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "seed": 60101,
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "valid": true,
+      "generator_accuracy": {
+        "scheduled_opportunities": 1514,
+        "issued_attempts": 1514,
+        "cap_skips": 0,
+        "lag_skips": 0,
+        "ledger_reconciled": true,
+        "skip_fraction": 0.0,
+        "issuance_ratio": 1.0,
+        "issued_rps": 36.00373854829389,
+        "scheduled_rps": 36.00373854829389
+      }
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "seed": 60101,
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "valid": true,
+      "generator_accuracy": {
+        "scheduled_opportunities": 2610,
+        "issued_attempts": 2610,
+        "cap_skips": 0,
+        "lag_skips": 0,
+        "ledger_reconciled": true,
+        "skip_fraction": 0.0,
+        "issuance_ratio": 1.0,
+        "issued_rps": 84.01472845781062,
+        "scheduled_rps": 84.01472845781062
+      }
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "seed": 60101,
+      "policy": "bounded_on",
+      "admission": "constant",
+      "valid": true,
+      "generator_accuracy": {
+        "scheduled_opportunities": 2617,
+        "issued_attempts": 2617,
+        "cap_skips": 0,
+        "lag_skips": 0,
+        "ledger_reconciled": true,
+        "skip_fraction": 0.0,
+        "issuance_ratio": 1.0,
+        "issued_rps": 84.01608737601961,
+        "scheduled_rps": 84.01608737601961
+      }
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "seed": 60102,
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "valid": true,
+      "generator_accuracy": {
+        "scheduled_opportunities": 1238,
+        "issued_attempts": 1238,
+        "cap_skips": 0,
+        "lag_skips": 0,
+        "ledger_reconciled": true,
+        "skip_fraction": 0.0,
+        "issuance_ratio": 1.0,
+        "issued_rps": 36.00507478442685,
+        "scheduled_rps": 36.00507478442685
+      }
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "seed": 60102,
+      "policy": "bounded_on",
+      "admission": "constant",
+      "valid": true,
+      "generator_accuracy": {
+        "scheduled_opportunities": 811,
+        "issued_attempts": 811,
+        "cap_skips": 0,
+        "lag_skips": 0,
+        "ledger_reconciled": true,
+        "skip_fraction": 0.0,
+        "issuance_ratio": 1.0,
+        "issued_rps": 36.00838308905181,
+        "scheduled_rps": 36.00838308905181
+      }
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "seed": 60102,
+      "policy": "bounded_on",
+      "admission": "constant",
+      "valid": true,
+      "generator_accuracy": {
+        "scheduled_opportunities": 1695,
+        "issued_attempts": 1694,
+        "cap_skips": 0,
+        "lag_skips": 1,
+        "ledger_reconciled": true,
+        "skip_fraction": 0.0005899705014749262,
+        "issuance_ratio": 0.9994100294985251,
+        "issued_rps": 83.99943588468719,
+        "scheduled_rps": 84.04902232853883
+      }
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "seed": 60102,
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "valid": true,
+      "generator_accuracy": {
+        "scheduled_opportunities": 2950,
+        "issued_attempts": 2950,
+        "cap_skips": 0,
+        "lag_skips": 0,
+        "ledger_reconciled": true,
+        "skip_fraction": 0.0,
+        "issuance_ratio": 1.0,
+        "issued_rps": 84.00635594940411,
+        "scheduled_rps": 84.00635594940411
+      }
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "seed": 60103,
+      "policy": "bounded_on",
+      "admission": "constant",
+      "valid": true,
+      "generator_accuracy": {
+        "scheduled_opportunities": 733,
+        "issued_attempts": 733,
+        "cap_skips": 0,
+        "lag_skips": 0,
+        "ledger_reconciled": true,
+        "skip_fraction": 0.0,
+        "issuance_ratio": 1.0,
+        "issued_rps": 36.00993245318704,
+        "scheduled_rps": 36.00993245318704
+      }
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "seed": 60103,
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "valid": true,
+      "generator_accuracy": {
+        "scheduled_opportunities": 1255,
+        "issued_attempts": 1255,
+        "cap_skips": 0,
+        "lag_skips": 0,
+        "ledger_reconciled": true,
+        "skip_fraction": 0.0,
+        "issuance_ratio": 1.0,
+        "issued_rps": 36.007627167139496,
+        "scheduled_rps": 36.007627167139496
+      }
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "seed": 60103,
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "valid": true,
+      "generator_accuracy": {
+        "scheduled_opportunities": 3680,
+        "issued_attempts": 3680,
+        "cap_skips": 0,
+        "lag_skips": 0,
+        "ledger_reconciled": true,
+        "skip_fraction": 0.0,
+        "issuance_ratio": 1.0,
+        "issued_rps": 84.00634821368273,
+        "scheduled_rps": 84.00634821368273
+      }
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "seed": 60103,
+      "policy": "bounded_on",
+      "admission": "constant",
+      "valid": true,
+      "generator_accuracy": {
+        "scheduled_opportunities": 2132,
+        "issued_attempts": 2131,
+        "cap_skips": 0,
+        "lag_skips": 1,
+        "ledger_reconciled": true,
+        "skip_fraction": 0.00046904315196998124,
+        "issuance_ratio": 0.9995309568480301,
+        "issued_rps": 83.99058627531768,
+        "scheduled_rps": 84.02999997136429
+      }
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "seed": 60104,
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "valid": true,
+      "generator_accuracy": {
+        "scheduled_opportunities": 1224,
+        "issued_attempts": 1224,
+        "cap_skips": 0,
+        "lag_skips": 0,
+        "ledger_reconciled": true,
+        "skip_fraction": 0.0,
+        "issuance_ratio": 1.0,
+        "issued_rps": 36.00849461570987,
+        "scheduled_rps": 36.00849461570987
+      }
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "seed": 60104,
+      "policy": "bounded_on",
+      "admission": "constant",
+      "valid": true,
+      "generator_accuracy": {
+        "scheduled_opportunities": 1016,
+        "issued_attempts": 1016,
+        "cap_skips": 0,
+        "lag_skips": 0,
+        "ledger_reconciled": true,
+        "skip_fraction": 0.0,
+        "issuance_ratio": 1.0,
+        "issued_rps": 36.02464190461126,
+        "scheduled_rps": 36.02464190461126
+      }
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "seed": 60104,
+      "policy": "bounded_on",
+      "admission": "constant",
+      "valid": true,
+      "generator_accuracy": {
+        "scheduled_opportunities": 2203,
+        "issued_attempts": 2202,
+        "cap_skips": 0,
+        "lag_skips": 1,
+        "ledger_reconciled": true,
+        "skip_fraction": 0.00045392646391284613,
+        "issuance_ratio": 0.9995460735360872,
+        "issued_rps": 83.99137255263541,
+        "scheduled_rps": 84.02951577359482
+      }
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "seed": 60104,
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "valid": true,
+      "generator_accuracy": {
+        "scheduled_opportunities": 3732,
+        "issued_attempts": 3731,
+        "cap_skips": 0,
+        "lag_skips": 1,
+        "ledger_reconciled": true,
+        "skip_fraction": 0.0002679528403001072,
+        "issuance_ratio": 0.9997320471596999,
+        "issued_rps": 83.99112347761326,
+        "scheduled_rps": 84.01363516978094
+      }
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "seed": 60105,
+      "policy": "bounded_on",
+      "admission": "constant",
+      "valid": true,
+      "generator_accuracy": {
+        "scheduled_opportunities": 1026,
+        "issued_attempts": 1026,
+        "cap_skips": 0,
+        "lag_skips": 0,
+        "ledger_reconciled": true,
+        "skip_fraction": 0.0,
+        "issuance_ratio": 1.0,
+        "issued_rps": 36.00213296846567,
+        "scheduled_rps": 36.00213296846567
+      }
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "seed": 60105,
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "valid": true,
+      "generator_accuracy": {
+        "scheduled_opportunities": 2332,
+        "issued_attempts": 2332,
+        "cap_skips": 0,
+        "lag_skips": 0,
+        "ledger_reconciled": true,
+        "skip_fraction": 0.0,
+        "issuance_ratio": 1.0,
+        "issued_rps": 36.00715286104764,
+        "scheduled_rps": 36.00715286104764
+      }
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "seed": 60105,
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "valid": true,
+      "generator_accuracy": {
+        "scheduled_opportunities": 2666,
+        "issued_attempts": 2666,
+        "cap_skips": 0,
+        "lag_skips": 0,
+        "ledger_reconciled": true,
+        "skip_fraction": 0.0,
+        "issuance_ratio": 1.0,
+        "issued_rps": 84.00879905517398,
+        "scheduled_rps": 84.00879905517398
+      }
+    },
+    {
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "seed": 60105,
+      "policy": "bounded_on",
+      "admission": "constant",
+      "valid": true,
+      "generator_accuracy": {
+        "scheduled_opportunities": 1712,
+        "issued_attempts": 1711,
+        "cap_skips": 0,
+        "lag_skips": 1,
+        "ledger_reconciled": true,
+        "skip_fraction": 0.0005841121495327102,
+        "issuance_ratio": 0.9994158878504673,
+        "issued_rps": 83.97967909688592,
+        "scheduled_rps": 84.02876131728154
+      }
+    }
+  ],
+  "generator_validity_protocol": {
+    "max_skip_fraction": 0.001,
+    "minimum_issuance_ratio": 0.999,
+    "sensitivity_limits": [
+      0.0,
+      0.0001,
+      0.001
+    ],
+    "amendment": "W5 .001 primary and strict sensitivities frozen prospectively in protocol.json; no outcome-based exclusions."
+  },
+  "comparisons": [
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        }
+      ],
+      "acceptance_applicable": false,
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "scheduler",
+      "site": "Hospital_A",
+      "metric": "urgent_post_reconnect_p95_upper_seconds",
+      "target_max": -10,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null,
+        "mean_effect": null
+      },
+      "excluded_pairs": 5,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        }
+      ],
+      "acceptance_applicable": true,
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "scheduler",
+      "site": "Hospital_A",
+      "metric": "routine_post_reconnect_p95_upper_seconds",
+      "target_max": 20,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null,
+        "mean_effect": null
+      },
+      "excluded_pairs": 5,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        }
+      ],
+      "acceptance_applicable": true,
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "scheduler",
+      "site": "global",
+      "metric": "cloud_drain_upper_seconds",
+      "target_max": 20,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null,
+        "mean_effect": null
+      },
+      "excluded_pairs": 5,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        }
+      ],
+      "acceptance_applicable": true,
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "scheduler",
+      "site": "global",
+      "metric": "client_live_end_to_end_violation_rate",
+      "target_max": 1,
+      "units": "percentage points",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null,
+        "mean_effect": null
+      },
+      "excluded_pairs": 5,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        }
+      ],
+      "acceptance_applicable": false,
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "scheduler",
+      "site": "Hospital_B",
+      "metric": "urgent_post_reconnect_p95_upper_seconds",
+      "target_max": -10,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null,
+        "mean_effect": null
+      },
+      "excluded_pairs": 5,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        }
+      ],
+      "acceptance_applicable": true,
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "scheduler",
+      "site": "Hospital_B",
+      "metric": "routine_post_reconnect_p95_upper_seconds",
+      "target_max": 20,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null,
+        "mean_effect": null
+      },
+      "excluded_pairs": 5,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 5,
+          "excluded_pairs": 0,
+          "mean": 128.63516972298754,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 5,
+          "excluded_pairs": 0,
+          "mean": 128.63516972298754,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 5,
+          "excluded_pairs": 0,
+          "mean": 128.63516972298754,
+          "status": "not established"
+        }
+      ],
+      "acceptance_applicable": false,
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "admission",
+      "site": "Hospital_A",
+      "metric": "urgent_post_reconnect_p95_upper_seconds",
+      "target_max": -10,
+      "units": "percent",
+      "mean": 128.63516972298754,
+      "uncertainty": {
+        "n": 5,
+        "bootstrap_95pct": [
+          62.71371348176651,
+          190.16510957187103
+        ],
+        "exact_sign_flip_p": 0.0625,
+        "mean_effect": 128.63516972298754
+      },
+      "excluded_pairs": 0,
+      "observer_relative_interval": [
+        122.95482329085921,
+        142.95069642647576
+      ],
+      "status": "not established"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 5,
+          "excluded_pairs": 0,
+          "mean": 69.64911330102298,
+          "status": "failed"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 5,
+          "excluded_pairs": 0,
+          "mean": 69.64911330102298,
+          "status": "failed"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 5,
+          "excluded_pairs": 0,
+          "mean": 69.64911330102298,
+          "status": "failed"
+        }
+      ],
+      "acceptance_applicable": true,
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "admission",
+      "site": "Hospital_A",
+      "metric": "routine_post_reconnect_p95_upper_seconds",
+      "target_max": 20,
+      "units": "percent",
+      "mean": 69.64911330102298,
+      "uncertainty": {
+        "n": 5,
+        "bootstrap_95pct": [
+          35.38756096389682,
+          103.91066563814911
+        ],
+        "exact_sign_flip_p": 0.0625,
+        "mean_effect": 69.64911330102298
+      },
+      "excluded_pairs": 0,
+      "observer_relative_interval": [
+        65.52890176936253,
+        77.10023735050922
+      ],
+      "status": "failed"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 5,
+          "excluded_pairs": 0,
+          "mean": 75.81909016742532,
+          "status": "failed"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 5,
+          "excluded_pairs": 0,
+          "mean": 75.81909016742532,
+          "status": "failed"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 5,
+          "excluded_pairs": 0,
+          "mean": 75.81909016742532,
+          "status": "failed"
+        }
+      ],
+      "acceptance_applicable": true,
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "admission",
+      "site": "global",
+      "metric": "cloud_drain_upper_seconds",
+      "target_max": 20,
+      "units": "percent",
+      "mean": 75.81909016742532,
+      "uncertainty": {
+        "n": 5,
+        "bootstrap_95pct": [
+          43.67600784759041,
+          108.41324279229949
+        ],
+        "exact_sign_flip_p": 0.0625,
+        "mean_effect": 75.81909016742532
+      },
+      "excluded_pairs": 0,
+      "observer_relative_interval": [
+        74.63169296949704,
+        77.94619192589758
+      ],
+      "status": "failed"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 5,
+          "excluded_pairs": 0,
+          "mean": -2.235655725647791,
+          "status": "achieved"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 5,
+          "excluded_pairs": 0,
+          "mean": -2.235655725647791,
+          "status": "achieved"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 5,
+          "excluded_pairs": 0,
+          "mean": -2.235655725647791,
+          "status": "achieved"
+        }
+      ],
+      "acceptance_applicable": true,
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "admission",
+      "site": "global",
+      "metric": "client_live_end_to_end_violation_rate",
+      "target_max": 1,
+      "units": "percentage points",
+      "mean": -2.235655725647791,
+      "uncertainty": {
+        "n": 5,
+        "bootstrap_95pct": [
+          -2.8849625596801642,
+          -1.4022495951563116
+        ],
+        "exact_sign_flip_p": 0.0625,
+        "mean_effect": -2.235655725647791
+      },
+      "excluded_pairs": 0,
+      "observer_relative_interval": null,
+      "status": "achieved"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 5,
+          "excluded_pairs": 0,
+          "mean": 209.19196934189978,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 5,
+          "excluded_pairs": 0,
+          "mean": 209.19196934189978,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 5,
+          "excluded_pairs": 0,
+          "mean": 209.19196934189978,
+          "status": "not established"
+        }
+      ],
+      "acceptance_applicable": false,
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "admission",
+      "site": "Hospital_B",
+      "metric": "urgent_post_reconnect_p95_upper_seconds",
+      "target_max": -10,
+      "units": "percent",
+      "mean": 209.19196934189978,
+      "uncertainty": {
+        "n": 5,
+        "bootstrap_95pct": [
+          87.26828942331038,
+          331.1156492604892
+        ],
+        "exact_sign_flip_p": 0.0625,
+        "mean_effect": 209.19196934189978
+      },
+      "excluded_pairs": 0,
+      "observer_relative_interval": [
+        203.67837856538435,
+        227.94767735130472
+      ],
+      "status": "not established"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 5,
+          "excluded_pairs": 0,
+          "mean": 56.00302454929848,
+          "status": "failed"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 5,
+          "excluded_pairs": 0,
+          "mean": 56.00302454929848,
+          "status": "failed"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 5,
+          "excluded_pairs": 0,
+          "mean": 56.00302454929848,
+          "status": "failed"
+        }
+      ],
+      "acceptance_applicable": true,
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "admission",
+      "site": "Hospital_B",
+      "metric": "routine_post_reconnect_p95_upper_seconds",
+      "target_max": 20,
+      "units": "percent",
+      "mean": 56.00302454929848,
+      "uncertainty": {
+        "n": 5,
+        "bootstrap_95pct": [
+          32.30295448155409,
+          78.0427401583122
+        ],
+        "exact_sign_flip_p": 0.0625,
+        "mean_effect": 56.00302454929848
+      },
+      "excluded_pairs": 0,
+      "observer_relative_interval": [
+        52.35951631938548,
+        62.11999260196812
+      ],
+      "status": "failed"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        }
+      ],
+      "acceptance_applicable": false,
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "policy": "bounded_on",
+      "admission": "constant",
+      "comparison": "scheduler",
+      "site": "Hospital_A",
+      "metric": "urgent_post_reconnect_p95_upper_seconds",
+      "target_max": -10,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null,
+        "mean_effect": null
+      },
+      "excluded_pairs": 5,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        }
+      ],
+      "acceptance_applicable": true,
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "policy": "bounded_on",
+      "admission": "constant",
+      "comparison": "scheduler",
+      "site": "Hospital_A",
+      "metric": "routine_post_reconnect_p95_upper_seconds",
+      "target_max": 20,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null,
+        "mean_effect": null
+      },
+      "excluded_pairs": 5,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        }
+      ],
+      "acceptance_applicable": true,
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "policy": "bounded_on",
+      "admission": "constant",
+      "comparison": "scheduler",
+      "site": "global",
+      "metric": "cloud_drain_upper_seconds",
+      "target_max": 20,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null,
+        "mean_effect": null
+      },
+      "excluded_pairs": 5,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        }
+      ],
+      "acceptance_applicable": true,
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "policy": "bounded_on",
+      "admission": "constant",
+      "comparison": "scheduler",
+      "site": "global",
+      "metric": "client_live_end_to_end_violation_rate",
+      "target_max": 1,
+      "units": "percentage points",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null,
+        "mean_effect": null
+      },
+      "excluded_pairs": 5,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        }
+      ],
+      "acceptance_applicable": false,
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "policy": "bounded_on",
+      "admission": "constant",
+      "comparison": "scheduler",
+      "site": "Hospital_B",
+      "metric": "urgent_post_reconnect_p95_upper_seconds",
+      "target_max": -10,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null,
+        "mean_effect": null
+      },
+      "excluded_pairs": 5,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        }
+      ],
+      "acceptance_applicable": true,
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "policy": "bounded_on",
+      "admission": "constant",
+      "comparison": "scheduler",
+      "site": "Hospital_B",
+      "metric": "routine_post_reconnect_p95_upper_seconds",
+      "target_max": 20,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null,
+        "mean_effect": null
+      },
+      "excluded_pairs": 5,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        }
+      ],
+      "acceptance_applicable": false,
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "scheduler",
+      "site": "Hospital_A",
+      "metric": "urgent_post_reconnect_p95_upper_seconds",
+      "target_max": -10,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null,
+        "mean_effect": null
+      },
+      "excluded_pairs": 5,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        }
+      ],
+      "acceptance_applicable": true,
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "scheduler",
+      "site": "Hospital_A",
+      "metric": "routine_post_reconnect_p95_upper_seconds",
+      "target_max": 20,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null,
+        "mean_effect": null
+      },
+      "excluded_pairs": 5,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        }
+      ],
+      "acceptance_applicable": true,
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "scheduler",
+      "site": "global",
+      "metric": "cloud_drain_upper_seconds",
+      "target_max": 20,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null,
+        "mean_effect": null
+      },
+      "excluded_pairs": 5,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        }
+      ],
+      "acceptance_applicable": true,
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "scheduler",
+      "site": "global",
+      "metric": "client_live_end_to_end_violation_rate",
+      "target_max": 1,
+      "units": "percentage points",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null,
+        "mean_effect": null
+      },
+      "excluded_pairs": 5,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        }
+      ],
+      "acceptance_applicable": false,
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "scheduler",
+      "site": "Hospital_B",
+      "metric": "urgent_post_reconnect_p95_upper_seconds",
+      "target_max": -10,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null,
+        "mean_effect": null
+      },
+      "excluded_pairs": 5,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        }
+      ],
+      "acceptance_applicable": true,
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "scheduler",
+      "site": "Hospital_B",
+      "metric": "routine_post_reconnect_p95_upper_seconds",
+      "target_max": 20,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null,
+        "mean_effect": null
+      },
+      "excluded_pairs": 5,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 1,
+          "excluded_pairs": 4,
+          "mean": 11.706572967858243,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 1,
+          "excluded_pairs": 4,
+          "mean": 11.706572967858243,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 5,
+          "excluded_pairs": 0,
+          "mean": 115.49499344584379,
+          "status": "not established"
+        }
+      ],
+      "acceptance_applicable": false,
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "admission",
+      "site": "Hospital_A",
+      "metric": "urgent_post_reconnect_p95_upper_seconds",
+      "target_max": -10,
+      "units": "percent",
+      "mean": 115.49499344584379,
+      "uncertainty": {
+        "n": 5,
+        "bootstrap_95pct": [
+          54.53650445779357,
+          173.822708165726
+        ],
+        "exact_sign_flip_p": 0.0625,
+        "mean_effect": 115.49499344584379
+      },
+      "excluded_pairs": 0,
+      "observer_relative_interval": [
+        111.17170833397067,
+        125.77739572669813
+      ],
+      "status": "not established"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 1,
+          "excluded_pairs": 4,
+          "mean": -10.947839457997599,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 1,
+          "excluded_pairs": 4,
+          "mean": -10.947839457997599,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 5,
+          "excluded_pairs": 0,
+          "mean": 59.24753869144054,
+          "status": "failed"
+        }
+      ],
+      "acceptance_applicable": true,
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "admission",
+      "site": "Hospital_A",
+      "metric": "routine_post_reconnect_p95_upper_seconds",
+      "target_max": 20,
+      "units": "percent",
+      "mean": 59.24753869144054,
+      "uncertainty": {
+        "n": 5,
+        "bootstrap_95pct": [
+          17.23904253546285,
+          101.25603484741823
+        ],
+        "exact_sign_flip_p": 0.125,
+        "mean_effect": 59.24753869144054
+      },
+      "excluded_pairs": 0,
+      "observer_relative_interval": [
+        55.56194903693989,
+        65.81207194926378
+      ],
+      "status": "failed"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 1,
+          "excluded_pairs": 4,
+          "mean": -0.2646355843311077,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 1,
+          "excluded_pairs": 4,
+          "mean": -0.2646355843311077,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 5,
+          "excluded_pairs": 0,
+          "mean": 54.43465135689426,
+          "status": "failed"
+        }
+      ],
+      "acceptance_applicable": true,
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "admission",
+      "site": "global",
+      "metric": "cloud_drain_upper_seconds",
+      "target_max": 20,
+      "units": "percent",
+      "mean": 54.43465135689426,
+      "uncertainty": {
+        "n": 5,
+        "bootstrap_95pct": [
+          25.863882595744265,
+          72.77699506671968
+        ],
+        "exact_sign_flip_p": 0.125,
+        "mean_effect": 54.43465135689426
+      },
+      "excluded_pairs": 0,
+      "observer_relative_interval": [
+        53.27200123807906,
+        56.28551518130514
+      ],
+      "status": "failed"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 1,
+          "excluded_pairs": 4,
+          "mean": -0.44798451621215274,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 1,
+          "excluded_pairs": 4,
+          "mean": -0.44798451621215274,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 5,
+          "excluded_pairs": 0,
+          "mean": -1.6386373082160943,
+          "status": "achieved"
+        }
+      ],
+      "acceptance_applicable": true,
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "admission",
+      "site": "global",
+      "metric": "client_live_end_to_end_violation_rate",
+      "target_max": 1,
+      "units": "percentage points",
+      "mean": -1.6386373082160943,
+      "uncertainty": {
+        "n": 5,
+        "bootstrap_95pct": [
+          -2.28778633323266,
+          -0.9768630578798227
+        ],
+        "exact_sign_flip_p": 0.0625,
+        "mean_effect": -1.6386373082160943
+      },
+      "excluded_pairs": 0,
+      "observer_relative_interval": null,
+      "status": "achieved"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 1,
+          "excluded_pairs": 4,
+          "mean": 30.95980604009576,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 1,
+          "excluded_pairs": 4,
+          "mean": 30.95980604009576,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 5,
+          "excluded_pairs": 0,
+          "mean": 97.31516607058347,
+          "status": "not established"
+        }
+      ],
+      "acceptance_applicable": false,
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "admission",
+      "site": "Hospital_B",
+      "metric": "urgent_post_reconnect_p95_upper_seconds",
+      "target_max": -10,
+      "units": "percent",
+      "mean": 97.31516607058347,
+      "uncertainty": {
+        "n": 5,
+        "bootstrap_95pct": [
+          57.497432092775874,
+          137.83158372463015
+        ],
+        "exact_sign_flip_p": 0.0625,
+        "mean_effect": 97.31516607058347
+      },
+      "excluded_pairs": 0,
+      "observer_relative_interval": [
+        92.04421167028667,
+        108.87025848721146
+      ],
+      "status": "not established"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 1,
+          "excluded_pairs": 4,
+          "mean": 19.468403889053864,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 1,
+          "excluded_pairs": 4,
+          "mean": 19.468403889053864,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 5,
+          "excluded_pairs": 0,
+          "mean": 76.74709031368857,
+          "status": "failed"
+        }
+      ],
+      "acceptance_applicable": true,
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "policy": "bounded_on",
+      "admission": "aimd",
+      "comparison": "admission",
+      "site": "Hospital_B",
+      "metric": "routine_post_reconnect_p95_upper_seconds",
+      "target_max": 20,
+      "units": "percent",
+      "mean": 76.74709031368857,
+      "uncertainty": {
+        "n": 5,
+        "bootstrap_95pct": [
+          44.1687310775887,
+          103.13807433497357
+        ],
+        "exact_sign_flip_p": 0.0625,
+        "mean_effect": 76.74709031368857
+      },
+      "excluded_pairs": 0,
+      "observer_relative_interval": [
+        72.58304039603351,
+        84.63334819937305
+      ],
+      "status": "failed"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        }
+      ],
+      "acceptance_applicable": false,
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "policy": "bounded_on",
+      "admission": "constant",
+      "comparison": "scheduler",
+      "site": "Hospital_A",
+      "metric": "urgent_post_reconnect_p95_upper_seconds",
+      "target_max": -10,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null,
+        "mean_effect": null
+      },
+      "excluded_pairs": 5,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        }
+      ],
+      "acceptance_applicable": true,
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "policy": "bounded_on",
+      "admission": "constant",
+      "comparison": "scheduler",
+      "site": "Hospital_A",
+      "metric": "routine_post_reconnect_p95_upper_seconds",
+      "target_max": 20,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null,
+        "mean_effect": null
+      },
+      "excluded_pairs": 5,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        }
+      ],
+      "acceptance_applicable": true,
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "policy": "bounded_on",
+      "admission": "constant",
+      "comparison": "scheduler",
+      "site": "global",
+      "metric": "cloud_drain_upper_seconds",
+      "target_max": 20,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null,
+        "mean_effect": null
+      },
+      "excluded_pairs": 5,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        }
+      ],
+      "acceptance_applicable": true,
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "policy": "bounded_on",
+      "admission": "constant",
+      "comparison": "scheduler",
+      "site": "global",
+      "metric": "client_live_end_to_end_violation_rate",
+      "target_max": 1,
+      "units": "percentage points",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null,
+        "mean_effect": null
+      },
+      "excluded_pairs": 5,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        }
+      ],
+      "acceptance_applicable": false,
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "policy": "bounded_on",
+      "admission": "constant",
+      "comparison": "scheduler",
+      "site": "Hospital_B",
+      "metric": "urgent_post_reconnect_p95_upper_seconds",
+      "target_max": -10,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null,
+        "mean_effect": null
+      },
+      "excluded_pairs": 5,
+      "observer_relative_interval": null,
+      "status": "not established"
+    },
+    {
+      "generator_accuracy_sensitivity": [
+        {
+          "max_skip_fraction": 0.0,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.0001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        },
+        {
+          "max_skip_fraction": 0.001,
+          "n": 0,
+          "excluded_pairs": 5,
+          "mean": null,
+          "status": "not established"
+        }
+      ],
+      "acceptance_applicable": true,
+      "condition": "ratio1-1_depth3_balanced_load70",
+      "policy": "bounded_on",
+      "admission": "constant",
+      "comparison": "scheduler",
+      "site": "Hospital_B",
+      "metric": "routine_post_reconnect_p95_upper_seconds",
+      "target_max": 20,
+      "units": "percent",
+      "mean": null,
+      "uncertainty": {
+        "n": 0,
+        "bootstrap_95pct": null,
+        "exact_sign_flip_p": null,
+        "mean_effect": null
+      },
+      "excluded_pairs": 5,
+      "observer_relative_interval": null,
+      "status": "not established"
+    }
+  ],
+  "slo_definition": "End-to-end: non-200 or transport failure or latency > configured threshold, divided by all attempted requests; success-only latency reported separately. D3 does not specify failure accounting; this conservative operational definition must be frozen before execution. Generator skips remain separate; reconciled trials must satisfy the explicit generator accuracy budget. Skips never enter the Cloud SLO denominator.",
+  "correctness": {
+    "status": "not established",
+    "reason": "Passing functional trials check event sets, dependency and grant order; duplicate domain effects and complete grant-bound eligibility coverage require separate witnesses."
+  },
+  "fairness": {
+    "status": "not established",
+    "reason": "Per-site metrics report grant/completion/cost shares, retries, sampled bounds, CPU and memory. Finite-prefix fairness is not a sustained fairness guarantee."
+  },
+  "full_D2_D3": "not established: requires reviewed sustainable representative capacity, preregistered skewed dependency case, complete matrix and correctness witnesses",
+  "uncertainty_note": "Seed is the unit; bootstrap and exact sign-flip uncertainty are separate from observer intervals. Targets use point estimates, not a significance claim.",
+  "source_hashes": {
+    "[REDACTED_LOCAL_PATH]\\evaluation\\results\\w5-holdout-20261102-r3\\run-36-60101-constant\\summary.json": "38608e4c20d6d005f2007e688d3e9a487a6319374b18885ec7c15664c9fc88b5",
+    "[REDACTED_LOCAL_PATH]\\.venv\\cp8-e7b8dcb03a1e\\cg-cp8-699e95a0f361\\raw.json": "e4f1bfc3cd5955ad3f489e6a7123fddecab051018b87e643778cbd3a7ca4ef25",
+    "[REDACTED_LOCAL_PATH]\\evaluation\\results\\w5-holdout-20261102-r3\\run-36-60101-aimd\\summary.json": "0851cf6622440e15c392eff629645800757d1073a7119225248a651ad476adcd",
+    "[REDACTED_LOCAL_PATH]\\.venv\\cp8-2ab1c9d88016\\cg-cp8-4859ea2aa609\\raw.json": "e0217b9b53b55d405b7f84bbdecae1fe15973c118c895278694084c9135dafcb",
+    "[REDACTED_LOCAL_PATH]\\evaluation\\results\\w5-holdout-20261102-r3\\run-84-60101-aimd\\summary.json": "b6ab61c681e7eb5e732a36205e1ace30470c0684e2e94269b0d82d718d5069d2",
+    "[REDACTED_LOCAL_PATH]\\.venv\\cp8-4a330916adc0\\cg-cp8-efe45157bfa3\\raw.json": "c6ac3ac9429d494b41eb2f8a96e21ce4ee7b3fe9b0e6f113af7500bbc25caa26",
+    "[REDACTED_LOCAL_PATH]\\evaluation\\results\\w5-holdout-20261102-r3\\run-84-60101-constant\\summary.json": "f1f5c5c23ab6fa08b592a44fd90b4333fb30b53613cb0405bd8b0cfd58118098",
+    "[REDACTED_LOCAL_PATH]\\.venv\\cp8-32678c94e326\\cg-cp8-abc7a0c3ea36\\raw.json": "64b999a9e5a9eeeefdea68b0f83eb2d90cd3684b66b9651bc003f24d7c7a501d",
+    "[REDACTED_LOCAL_PATH]\\evaluation\\results\\w5-holdout-20261102-r3\\run-36-60102-aimd\\summary.json": "3d76fc49b880a5921168e34b1b786b66facf808ec2fd4d19912d520f5958670f",
+    "[REDACTED_LOCAL_PATH]\\.venv\\cp8-b2aca8f93a62\\cg-cp8-274ae2e2ceaa\\raw.json": "cb3a577a329c3b2eebbb3e5ff3c74e6cb5001da16526e406f1d55153d31b80fa",
+    "[REDACTED_LOCAL_PATH]\\evaluation\\results\\w5-holdout-20261102-r3\\run-36-60102-constant\\summary.json": "ffd05dbf37bd67e7f8e8471d6a72b9d0995bb5eb4cc2cc9124e9d5113bfdd7af",
+    "[REDACTED_LOCAL_PATH]\\.venv\\cp8-335d75f8a2c7\\cg-cp8-7f85eca8d57a\\raw.json": "9d4d7479b1c9aadbe4d6566fe2d74ca565168fbf7965f7a94b8c6cf8c98e29b0",
+    "[REDACTED_LOCAL_PATH]\\evaluation\\results\\w5-holdout-20261102-r3\\run-84-60102-constant\\summary.json": "d21e00f5352f06789198df46fbe0ee7e984ee697d6068cc9644efa3c61f63562",
+    "[REDACTED_LOCAL_PATH]\\.venv\\cp8-1cd70f50b419\\cg-cp8-f34ca2ed06a8\\raw.json": "0bc85dc372bb33ba556f1da8e5d9ea435b6aeb5489f2bd128be13858ae7c499b",
+    "[REDACTED_LOCAL_PATH]\\evaluation\\results\\w5-holdout-20261102-r3\\run-84-60102-aimd\\summary.json": "2e287d646d38563ac6da610769bc459b88e67b15fc9fcbc7f11cff3b0a748bda",
+    "[REDACTED_LOCAL_PATH]\\.venv\\cp8-5936f4b6abbb\\cg-cp8-67bf3e3bfa40\\raw.json": "17f8dbe157ca8bfce79c6560a43d64bc98ba875c55d1fd88a3be62926f1c3b20",
+    "[REDACTED_LOCAL_PATH]\\evaluation\\results\\w5-holdout-20261102-r3\\run-36-60103-constant\\summary.json": "f984aec9ce4582752f3be53bef59331d1faa3097c217290894a998636af25a3c",
+    "[REDACTED_LOCAL_PATH]\\.venv\\cp8-116de3e692fb\\cg-cp8-5a51f87d4204\\raw.json": "5a8a961213155e25550d005607ad921fc5023bb79de674efee665cd76fdd6dfa",
+    "[REDACTED_LOCAL_PATH]\\evaluation\\results\\w5-holdout-20261102-r3\\run-36-60103-aimd\\summary.json": "59d1f1ec6b2bbcb8cdd60aeafa5c69d62ba005ca3029e8d06e42a37f9fb21700",
+    "[REDACTED_LOCAL_PATH]\\.venv\\cp8-0a19f69baf92\\cg-cp8-0a4da6e572de\\raw.json": "8224907747f9a26deea32ca957ea27350c75df0b5f596f37ce11181f94131371",
+    "[REDACTED_LOCAL_PATH]\\evaluation\\results\\w5-replacement-60103-20261102\\run\\summary.json": "2a83a0ef6dcf7b3fd2e884cde593a776c85a3a47801dde346e3247992bcf5f6a",
+    "[REDACTED_LOCAL_PATH]\\.venv\\cp8-52064ea7ba7c\\cg-cp8-075646d8f9e6\\raw.json": "59084630571c9261dbaa0619f67b1116c435ec878152c4a1fc447add6c766ed6",
+    "[REDACTED_LOCAL_PATH]\\evaluation\\results\\w5-holdout-20261102-r3\\run-84-60103-constant\\summary.json": "39441725eb986731a921f7e14caf1299f92d21e896de4578fc89c67d8deab52b",
+    "[REDACTED_LOCAL_PATH]\\.venv\\cp8-b353d976a9a5\\cg-cp8-3af642b0edb5\\raw.json": "8b59a98127dff5ead9246fca261ad9ca9588aa8444756e674359c0afda82d9a9",
+    "[REDACTED_LOCAL_PATH]\\evaluation\\results\\w5-holdout-20261102-r3\\run-36-60104-aimd\\summary.json": "b227b6e2fcc505115cb40af009f34072f90898e440b4ba7ea32f582ccab1f13a",
+    "[REDACTED_LOCAL_PATH]\\.venv\\cp8-2b4665b74550\\cg-cp8-10953251e64f\\raw.json": "7e470b48adeb56f78618655c54a0213f1304b0836b6455c4c74b210da02a7ea8",
+    "[REDACTED_LOCAL_PATH]\\evaluation\\results\\w5-holdout-20261102-r3\\run-36-60104-constant\\summary.json": "30b770dd8102c78daed5d1817e28b9e4982eb9ceb6e805adb11c67802c8b48f6",
+    "[REDACTED_LOCAL_PATH]\\.venv\\cp8-0f15e5cc6801\\cg-cp8-5e769ad5e847\\raw.json": "740b9448420620e1968e0edcc142ca7b37e554ab26bfb9677d06ee83a7cc1d76",
+    "[REDACTED_LOCAL_PATH]\\evaluation\\results\\w5-holdout-20261102-r3\\run-84-60104-constant\\summary.json": "d0691c28c318e8a57fb3777057882eb81cf9743733602a4b60911e12adb8395d",
+    "[REDACTED_LOCAL_PATH]\\.venv\\cp8-b8fdf1e7b687\\cg-cp8-d92481c22802\\raw.json": "53f6ab1c89e8911b2272579941b91d18bd77e9b53025242a3c744e7ed47f78f5",
+    "[REDACTED_LOCAL_PATH]\\evaluation\\results\\w5-holdout-20261102-r3\\run-84-60104-aimd\\summary.json": "ebb00d416a784b3f467dd8072e9b9c8a64fe80d4e4fb8b8a49538bf5039f6a09",
+    "[REDACTED_LOCAL_PATH]\\.venv\\cp8-2e7ff81aa4d6\\cg-cp8-f60dc238205f\\raw.json": "b0851fe043b49db75f51a5a9fbdc191284e281e28dbf1d764e3be0b9b417d059",
+    "[REDACTED_LOCAL_PATH]\\evaluation\\results\\w5-holdout-20261102-r3\\run-36-60105-constant\\summary.json": "7d326e5a54e0101e34efb67700f8c76d03ec28d079cd0af2efdd14b1d99869d7",
+    "[REDACTED_LOCAL_PATH]\\.venv\\cp8-2934ad120157\\cg-cp8-205fe4428454\\raw.json": "bfc28c7963ecfa186c5b7f7659f56f47a79c1966fd6c2fabee1423cf766b760a",
+    "[REDACTED_LOCAL_PATH]\\evaluation\\results\\w5-holdout-20261102-r3\\run-36-60105-aimd\\summary.json": "f6f12ef98851a2bb8c4c200698987fb55086ac06f4246581608a311b28783987",
+    "[REDACTED_LOCAL_PATH]\\.venv\\cp8-2586b717bfe6\\cg-cp8-60ef8731a770\\raw.json": "7f4a544418316456675f83576396437f950cddfa0556cc7723c67d0ba417a085",
+    "[REDACTED_LOCAL_PATH]\\evaluation\\results\\w5-holdout-20261102-r3\\run-84-60105-aimd\\summary.json": "eae7ddbe812a217133ae5cfe4146b1951ef1a8a4b83430df7947b0ff9f6492fa",
+    "[REDACTED_LOCAL_PATH]\\.venv\\cp8-59ed9baa8a76\\cg-cp8-d06a879758d8\\raw.json": "54267bc815e70e1755897e3ade2cdb751dd5410f3b13387287d3b6d251436b80",
+    "[REDACTED_LOCAL_PATH]\\evaluation\\results\\w5-holdout-20261102-r3\\run-84-60105-constant\\summary.json": "6a4c2ec5fedb5dfa34fc33c473550db0f9854e8b8b1e40e75cfbc8b36650da07",
+    "[REDACTED_LOCAL_PATH]\\.venv\\cp8-7236156eac4c\\cg-cp8-6c0de03d5150\\raw.json": "75cad530c2acf6f89a3d94225561472cd560f8f8a8ae041362d14dcb6d0b0411"
+  },
+  "fixed10_slo_pp": {
+    "36": {
+      "n": 3,
+      "bootstrap_95pct": [
+        0.0,
+        0.0
+      ],
+      "exact_sign_flip_p": 1.0,
+      "mean_aimd_minus_constant_pp": 0.0
+    },
+    "84": {
+      "n": 3,
+      "bootstrap_95pct": [
+        0.0,
+        0.0
+      ],
+      "exact_sign_flip_p": 1.0,
+      "mean_aimd_minus_constant_pp": 0.0
+    }
+  },
+  "normalization": "Derived pilot condition IDs add _load30/_load70 only; original files unchanged.",
+  "source_pairing": "All 20 fingerprints identical; exact paired workload/config audited except admission policy/state rates and assigned ports.",
+  "recorded_correctness_checks": {
+    "status": "passed",
+    "trials": 20,
+    "original_events": 1760,
+    "checks": [
+      "event identity/content",
+      "prerequisite application and grant order",
+      "complete original populations",
+      "no outstanding tickets/grants",
+      "completed-grant duplicate POST fenced with 409 and unchanged row count",
+      "SQLite integrity and local applied ACK state"
+    ],
+    "limitation": "Recorded scenarios only; not complete failure/eligibility or duplicate-domain-effect coverage."
+  },
+  "generator_replacement": {
+    "protocol": {
+      "reason": "Original AIMD arm invalid under prospectively frozen .001 generator rule; 117 cap and 1 lag skips.",
+      "original_source": "[REDACTED_LOCAL_PATH]\\evaluation\\results\\w5-holdout-20261102-r3\\run-84-60103-aimd\\summary.json",
+      "original_sha256": "91e81e62b48c4fe86f24fe39575d16a597e16237449ccf726325d97cb758e356",
+      "original_generator": {
+        "scheduled_opportunities": 2854,
+        "issued_attempts": 2736,
+        "cap_skips": 117,
+        "lag_skips": 1,
+        "ledger_reconciled": true,
+        "skip_fraction": 0.04134548002803083,
+        "issuance_ratio": 0.9586545199719692,
+        "issued_rps": 80.55379129863792,
+        "scheduled_rps": 84.0279679701435
+      },
+      "paired_control": "[REDACTED_LOCAL_PATH]\\evaluation\\results\\w5-holdout-20261102-r3\\run-84-60103-constant\\summary.json",
+      "control_sha256": "39441725eb986731a921f7e14caf1299f92d21e896de4578fc89c67d8deab52b",
+      "maximum_replacement_attempts": 1,
+      "selection": "Keep 19 original arms plus this replacement only if generator-valid; otherwise 84 RPS remains unestablished.",
+      "limitation": "Replacement planned after original outcomes; valid control acquired earlier. Preserve original invalid arm and report retrospective pairing.",
+      "unchanged": "No controller, measurement, policy, graph, generator limit or threshold changes."
+    },
+    "used": true,
+    "generator": {
+      "scheduled_opportunities": 3680,
+      "issued_attempts": 3680,
+      "cap_skips": 0,
+      "lag_skips": 0,
+      "ledger_reconciled": true,
+      "skip_fraction": 0.0,
+      "issuance_ratio": 1.0,
+      "issued_rps": 84.00634821368273,
+      "scheduled_rps": 84.00634821368273
+    },
+    "source": "[REDACTED_LOCAL_PATH]\\evaluation\\results\\w5-replacement-60103-20261102\\run\\summary.json",
+    "sha256": "2a83a0ef6dcf7b3fd2e884cde593a776c85a3a47801dde346e3247992bcf5f6a",
+    "original_invalid_generator": {
+      "scheduled_opportunities": 2854,
+      "issued_attempts": 2736,
+      "cap_skips": 117,
+      "lag_skips": 1,
+      "ledger_reconciled": true,
+      "skip_fraction": 0.04134548002803083,
+      "issuance_ratio": 0.9586545199719692,
+      "issued_rps": 80.55379129863792,
+      "scheduled_rps": 84.0279679701435
+    }
+  },
+  "excluded_infrastructure_attempts": [
+    {
+      "source": "[REDACTED_LOCAL_PATH]\\evaluation\\results\\w5-holdout-20261102\\run-36-60101-constant\\summary.json",
+      "sha256": "6737cb3abe8c8f22dafef88f0c9fbd059191027c81ef22af5b9bf5a26be70641",
+      "reason": "Built-in Docker bridge ID changed during engine startup",
+      "preservation": {
+        "container_identity_image_mounts_equal": true,
+        "container_states_equal": true,
+        "exact_network_set_equal": false,
+        "original_volumes_preserved_only_owned_added": true
+      },
+      "container_state_changes": {},
+      "drain": [
+        20.730412399978377,
+        21.01048080000328
+      ],
+      "disposition": "Preserved unchanged; excluded from matched analysis for failed preservation; full batch restarted without policy changes"
+    },
+    {
+      "source": "[REDACTED_LOCAL_PATH]\\evaluation\\results\\w5-holdout-20261102-r2\\run-36-60101-constant\\summary.json",
+      "sha256": "ac50266603fb13d64a6971b065982e43b1fd0a759cd1f927c72b3d9e69a30fcf",
+      "reason": "Pre-existing local services started concurrently; user subsequently paused other tests",
+      "preservation": {
+        "container_identity_image_mounts_equal": true,
+        "container_states_equal": false,
+        "exact_network_set_equal": true,
+        "original_volumes_preserved_only_owned_added": true
+      },
+      "container_state_changes": {
+        "5f78c570ebdfa212a6475338c99c7c7564d418f4e7b1341dc094fe80f9028353": {
+          "before": "exited",
+          "after": "running"
+        },
+        "8bcf2d9ad605818b587139fc365189ae6b8a6f597c354ed815d59d57e4f4ff7a": {
+          "before": "exited",
+          "after": "running"
+        },
+        "aea75b062bef6a10b99b7726307edc13d0ee6ba03334897c895cfe62c4b38ce2": {
+          "before": "exited",
+          "after": "running"
+        }
+      },
+      "drain": [
+        30.353620300011244,
+        30.647662200033665
+      ],
+      "disposition": "Preserved unchanged; excluded from matched analysis for failed preservation; full batch restarted without policy changes"
+    }
+  ]
+}

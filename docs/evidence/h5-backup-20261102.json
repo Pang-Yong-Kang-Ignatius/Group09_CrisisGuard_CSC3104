@@ -1,0 +1,8 @@
+{
+  "filename": "CrisisGuard-H5-evidence-20261102.zip",
+  "bytes": 14379019,
+  "sha256": "d6321c46ea165bb1c07528d435465c61cd7cd07bb5e62c73036a5126f73cba6a",
+  "files": 105,
+  "entry_hashes_and_crc_verified": true,
+  "scope": "Sanitized raw outcomes/plans/source/test evidence; excludes credentials, resolved private Compose files and command logs. Local backup, not off-machine recovery."
+}

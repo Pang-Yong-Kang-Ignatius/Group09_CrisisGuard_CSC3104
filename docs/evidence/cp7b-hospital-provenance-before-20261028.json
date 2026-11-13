@@ -1,0 +1,361 @@
+{
+  "checkpoint": "7B",
+  "phase": "before",
+  "captured_at": "2026-10-28T13:14:19.820864+00:00",
+  "workspace_cloud_client_sha256": "8d8dc47669a8949e348926964008ef1b9ab879fd489cf3417da6ee221ce7bd29",
+  "main_containers": {
+    "postgres": {
+      "id": "01cce11cfc59db4d000d7fe60669817513e1d21eef90e0012c5ef4fd5e32b103",
+      "image_id": "sha256:9e2cf6287f25c3151f4c9421ccce2b17f3e60061c111a29165e0d2cdd9ff0a97",
+      "created": "2026-10-27T09:24:27.874968558Z",
+      "started_at": "2026-10-28T12:29:07.899740661Z",
+      "state": "running",
+      "health": "healthy",
+      "mounts": [
+        {
+          "name": "crisisguard-local_postgres-data",
+          "destination": "/var/lib/postgresql/data",
+          "type": "volume",
+          "rw": true
+        }
+      ],
+      "compose_config_files": "C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\compose.yaml,C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\compose.override.yaml"
+    },
+    "controller": {
+      "id": "abace36180c2cf450db629f6d6382b2d081d06a32bf883200b8deec1a889e9b8",
+      "image_id": "sha256:55cb80928288851103652cb9d77b6630eb434dd8330e1a7312b81370812ebc54",
+      "created": "2026-10-27T14:50:59.06144548Z",
+      "started_at": "2026-10-28T12:29:48.996287286Z",
+      "state": "running",
+      "health": "healthy",
+      "mounts": [],
+      "compose_config_files": "C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\compose.yaml,C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\compose.override.yaml,C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\infrastructure\\docker\\compose.metaguard.yaml,C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\.venv\\cp7b-main-stack\\main.compose.json"
+    },
+    "patient": {
+      "id": "471fddd4fb574e11c6c7ebf62c8fc29bb6a887fae851ea658b32a9bb2729c11d",
+      "image_id": "sha256:55cb80928288851103652cb9d77b6630eb434dd8330e1a7312b81370812ebc54",
+      "created": "2026-10-27T14:50:36.048020162Z",
+      "started_at": "2026-10-28T12:32:39.482990198Z",
+      "state": "running",
+      "health": "healthy",
+      "mounts": [],
+      "compose_config_files": "C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\compose.yaml,C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\compose.override.yaml,C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\infrastructure\\docker\\compose.metaguard.yaml,C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\.venv\\cp7b-main-stack\\main.compose.json"
+    },
+    "emergency": {
+      "id": "ebced519cb0e158fe986ea24bd5e8f8ebd5a6ddc12a8cd7fb97a475b7a0e413e",
+      "image_id": "sha256:55cb80928288851103652cb9d77b6630eb434dd8330e1a7312b81370812ebc54",
+      "created": "2026-10-27T14:50:36.150528248Z",
+      "started_at": "2026-10-28T12:30:26.089781632Z",
+      "state": "running",
+      "health": "healthy",
+      "mounts": [],
+      "compose_config_files": "C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\compose.yaml,C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\compose.override.yaml,C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\infrastructure\\docker\\compose.metaguard.yaml,C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\.venv\\cp7b-main-stack\\main.compose.json"
+    },
+    "admin": {
+      "id": "0da8ab1757e3cc5a474ea9227a78b735eba980e845e583bb33ab366d69f23718",
+      "image_id": "sha256:55cb80928288851103652cb9d77b6630eb434dd8330e1a7312b81370812ebc54",
+      "created": "2026-10-27T14:50:36.152056014Z",
+      "started_at": "2026-10-28T12:30:26.312595429Z",
+      "state": "running",
+      "health": "healthy",
+      "mounts": [],
+      "compose_config_files": "C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\compose.yaml,C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\compose.override.yaml,C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\infrastructure\\docker\\compose.metaguard.yaml,C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\.venv\\cp7b-main-stack\\main.compose.json"
+    },
+    "hospital_a": {
+      "id": "03f2fb9ef00cf370a138b8096a4cef633c8c59636177cd1d3f4d33cec22f005d",
+      "image_id": "sha256:55cb80928288851103652cb9d77b6630eb434dd8330e1a7312b81370812ebc54",
+      "created": "2026-10-27T14:52:07.468199133Z",
+      "started_at": "2026-10-28T12:30:33.156682505Z",
+      "state": "running",
+      "health": "healthy",
+      "mounts": [
+        {
+          "name": "crisisguard-local_hospital-a-data",
+          "destination": "/data",
+          "type": "volume",
+          "rw": true
+        }
+      ],
+      "compose_config_files": "C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\compose.yaml,C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\compose.override.yaml,C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\infrastructure\\docker\\compose.metaguard.yaml,C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\.venv\\cp7b-main-stack\\main.compose.json,C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\.venv\\cp7b-main-stack\\replay.compose.json"
+    },
+    "hospital_b": {
+      "id": "aead6bf7e8676c210acbdff32b8488dc9961ba942f73c3bc46dc53d277288592",
+      "image_id": "sha256:55cb80928288851103652cb9d77b6630eb434dd8330e1a7312b81370812ebc54",
+      "created": "2026-10-27T14:52:49.411609082Z",
+      "started_at": "2026-10-28T12:30:33.365230239Z",
+      "state": "running",
+      "health": "healthy",
+      "mounts": [
+        {
+          "name": "crisisguard-local_hospital-b-data",
+          "destination": "/data",
+          "type": "volume",
+          "rw": true
+        }
+      ],
+      "compose_config_files": "C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\compose.yaml,C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\compose.override.yaml,C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\infrastructure\\docker\\compose.metaguard.yaml,C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\.venv\\cp7b-main-stack\\main.compose.json,C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\.venv\\cp7b-main-stack\\replay.compose.json"
+    },
+    "dashboard": {
+      "id": "fdec29438b27a784d2e84d4b3d1b616952047f11d75ed4cae7ba21c385ac612a",
+      "image_id": "sha256:03ef0e42bc4733961e88d4f5be3846998d8b7f190284d346c5972efb148f44d0",
+      "created": "2026-10-27T14:51:45.067974069Z",
+      "started_at": "2026-10-28T12:30:39.961634414Z",
+      "state": "running",
+      "health": "healthy",
+      "mounts": [],
+      "compose_config_files": "C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\compose.yaml,C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\compose.override.yaml,C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\infrastructure\\docker\\compose.metaguard.yaml,C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\.venv\\cp7b-main-stack\\main.compose.json"
+    }
+  },
+  "all_containers": {
+    "crisisguard-local-hospital-b-1": {
+      "id": "aead6bf7e8676c210acbdff32b8488dc9961ba942f73c3bc46dc53d277288592",
+      "image": "sha256:55cb80928288851103652cb9d77b6630eb434dd8330e1a7312b81370812ebc54",
+      "status": "Up 43 minutes (healthy)"
+    },
+    "crisisguard-local-hospital-a-1": {
+      "id": "03f2fb9ef00cf370a138b8096a4cef633c8c59636177cd1d3f4d33cec22f005d",
+      "image": "sha256:55cb80928288851103652cb9d77b6630eb434dd8330e1a7312b81370812ebc54",
+      "status": "Up 43 minutes (healthy)"
+    },
+    "crisisguard-local-dashboard-1": {
+      "id": "fdec29438b27a784d2e84d4b3d1b616952047f11d75ed4cae7ba21c385ac612a",
+      "image": "crisisguard-dashboard:cp7b-guard-20261027",
+      "status": "Up 43 minutes (healthy)"
+    },
+    "crisisguard-local-controller-1": {
+      "id": "abace36180c2cf450db629f6d6382b2d081d06a32bf883200b8deec1a889e9b8",
+      "image": "sha256:55cb80928288851103652cb9d77b6630eb434dd8330e1a7312b81370812ebc54",
+      "status": "Up 44 minutes (healthy)"
+    },
+    "crisisguard-local-admin-1": {
+      "id": "0da8ab1757e3cc5a474ea9227a78b735eba980e845e583bb33ab366d69f23718",
+      "image": "sha256:55cb80928288851103652cb9d77b6630eb434dd8330e1a7312b81370812ebc54",
+      "status": "Up 43 minutes (healthy)"
+    },
+    "crisisguard-local-emergency-1": {
+      "id": "ebced519cb0e158fe986ea24bd5e8f8ebd5a6ddc12a8cd7fb97a475b7a0e413e",
+      "image": "sha256:55cb80928288851103652cb9d77b6630eb434dd8330e1a7312b81370812ebc54",
+      "status": "Up 43 minutes (healthy)"
+    },
+    "crisisguard-local-patient-1": {
+      "id": "471fddd4fb574e11c6c7ebf62c8fc29bb6a887fae851ea658b32a9bb2729c11d",
+      "image": "sha256:55cb80928288851103652cb9d77b6630eb434dd8330e1a7312b81370812ebc54",
+      "status": "Up 41 minutes (healthy)"
+    },
+    "cg-metaguard-41f79711c3cc-dashboard-1": {
+      "id": "b742f42f7805a68d046d3cb7de2dfa765d6fee26fc45957e389179a9522fcba8",
+      "image": "sha256:44e59576dabf314c55bd74814b29d776a418dac5934ecca6bf47712c6e818a68",
+      "status": "Exited (0) 25 hours ago"
+    },
+    "cg-metaguard-41f79711c3cc-hospital-a-1": {
+      "id": "7989278b7645b72eb50ae9d86a112e429e33732c7faaf5634bb53a3a2321f0e1",
+      "image": "crisisguard-metaguard-test:cg-metaguard-41f79711c3cc",
+      "status": "Exited (0) 25 hours ago"
+    },
+    "cg-metaguard-41f79711c3cc-hospital-b-1": {
+      "id": "8403468e12ab8219b9b7d5fb6359cff40203eddd478233341a1e85b3d322fd91",
+      "image": "crisisguard-metaguard-test:cg-metaguard-41f79711c3cc",
+      "status": "Exited (0) 25 hours ago"
+    },
+    "cg-metaguard-41f79711c3cc-emergency-1": {
+      "id": "97a296e0857ec7b6379513400f9d44523d71cfb003dd1865d03400aecc19e2a8",
+      "image": "crisisguard-metaguard-test:cg-metaguard-41f79711c3cc",
+      "status": "Exited (0) 25 hours ago"
+    },
+    "cg-metaguard-41f79711c3cc-admin-1": {
+      "id": "564b1608bd34f27e389ff9e307a0201e6f373ceb6bea6ece05ebffd0d86e7965",
+      "image": "crisisguard-metaguard-test:cg-metaguard-41f79711c3cc",
+      "status": "Exited (0) 25 hours ago"
+    },
+    "cg-metaguard-41f79711c3cc-controller-1": {
+      "id": "6a84630d4f13eff108390c318397679bdacf8968e736e41f48643b7036d999a8",
+      "image": "crisisguard-metaguard-test:cg-metaguard-41f79711c3cc",
+      "status": "Restarting (3) 17 seconds ago"
+    },
+    "cg-metaguard-41f79711c3cc-patient-1": {
+      "id": "ea00d7f6ce18b5c90435edc3d8296573ede0defb24f84561cf7d9ba3b935fc21",
+      "image": "crisisguard-metaguard-test:cg-metaguard-41f79711c3cc",
+      "status": "Exited (0) 25 hours ago"
+    },
+    "cg-metaguard-41f79711c3cc-postgres-1": {
+      "id": "aff06e3ec433e36ff0f96de7d4f9626355d6d022ddb6e4a7e7468ef7f992351b",
+      "image": "postgres:16",
+      "status": "Exited (0) 25 hours ago"
+    },
+    "crisisguard-local-postgres-1": {
+      "id": "01cce11cfc59db4d000d7fe60669817513e1d21eef90e0012c5ef4fd5e32b103",
+      "image": "postgres:16",
+      "status": "Up 45 minutes (healthy)"
+    },
+    "topicf_gis-frontend-1": {
+      "id": "d081697aa59921b00e909d8a3dafa83518a3a0289299d29f0dce49dc522a4e74",
+      "image": "topicf_gis-frontend",
+      "status": "Created"
+    },
+    "topicf_gis-backend-1": {
+      "id": "3eb6ec3768846e34f3ca01be018b3373f2d8f4dbe61050dec2b42ebc591d307c",
+      "image": "topicf_gis-backend",
+      "status": "Created"
+    },
+    "topicf_gis-gis-1": {
+      "id": "61d5b12671b0523921b9b1e7455d7a127476ecc0cf88a8b6e3f97416a0069170",
+      "image": "topicf_gis-gis",
+      "status": "Created"
+    },
+    "topicf_gis-db-1": {
+      "id": "5b143aee4f0945c73c951e01c840dafbd63ed016b9fb3ac36fcfa78f941b537f",
+      "image": "postgis/postgis:16-3.4",
+      "status": "Created"
+    },
+    "topicf_gis-ltm-1": {
+      "id": "bc388d68e29a836959713a9a4d7881729b041d30a34eabcf769f5535eec127a4",
+      "image": "topicf_gis-ltm",
+      "status": "Created"
+    },
+    "topicf-task4-round3-postgres-1": {
+      "id": "fac28841ea108efe32c6585b6a58e1b3a41b744723c8d53ff8c7c261b7679762",
+      "image": "pgvector/pgvector:0.8.1-pg16",
+      "status": "Exited (0) 3 days ago"
+    },
+    "topicf-task4-round3-qdrant-1": {
+      "id": "42bb59276c732e2752b62b99f9d9f102a9a94b311f129bfd4e6b5d7ff65b06cd",
+      "image": "qdrant/qdrant:v1.19.1",
+      "status": "Exited (143) 3 days ago"
+    },
+    "topicf-task4-benchmark-runner-1": {
+      "id": "439c4c1de70d44e85fa43da1bb42b6e96c81438e8a037471fd35e4ed93a7ccfb",
+      "image": "sha256:7b6a09413a065f83289dfa0ba8fe33b91a8fbc9ab4bdcac68de65fe796408507",
+      "status": "Exited (1) 3 days ago"
+    },
+    "topicf-task4-benchmark-qdrant-1": {
+      "id": "1ccbef9efbb2f41de301b63e8608232eca4e113c70e006e36305391587b2e242",
+      "image": "qdrant/qdrant:v1.19.1",
+      "status": "Exited (143) 3 days ago"
+    },
+    "topicf-task4-benchmark-postgres-1": {
+      "id": "d1508a040c56aa98bf7e97a4e1679e251a72d6b71a9db2d6c1b18dfacbad1565",
+      "image": "pgvector/pgvector:0.8.1-pg16",
+      "status": "Exited (0) 3 days ago"
+    },
+    "topicf_gis-redis-1": {
+      "id": "91a4b4e81d6ffcaa3fd2a4641f73a1c1806e57b322701e92fd453b63fdef32d8",
+      "image": "redis:7-alpine",
+      "status": "Exited (0) 2 days ago"
+    },
+    "topicf_gis-qdrant-1": {
+      "id": "07831148b3f86b3722da48e9b0c99a1f1ccaf559cc88f7988e9dfdb1b5bb3dfa",
+      "image": "sha256:6c01f782a6b4f437cc15d44053af726ebd7bb58c08215b1f4cb8f3acabcb7da2",
+      "status": "Exited (143) 2 days ago"
+    },
+    "web_new": {
+      "id": "4ecfdc05dfd867bdee9998ed2a194ce89f064f287e993384d254b3af2b48ae14",
+      "image": "myhttpd:v2",
+      "status": "Exited (0) 13 days ago"
+    },
+    "web2": {
+      "id": "52dd6fa28c64de03d825c9bda124a89a42e1908080f9074aaa0cab03cbb2f418",
+      "image": "myhttpd:v1",
+      "status": "Exited (0) 13 days ago"
+    },
+    "web1": {
+      "id": "b89da75f38a8f3887f64a1a299d905785e1afdde501c8e7685b110a0a5a21c88",
+      "image": "myhttpd:v1",
+      "status": "Exited (0) 13 days ago"
+    },
+    "festive_ride": {
+      "id": "fdd0c6e82182d3a5388642431c7975da4fe102f9835da6cdd00bc7f4cb877b60",
+      "image": "hello-world",
+      "status": "Exited (0) 13 days ago"
+    },
+    "crisisguard-postgres": {
+      "id": "032d6f604fe6ea388645570ea9d17e7f0051a00e06b14611c1157f5f6d564cd8",
+      "image": "sha256:ca0bd484cb98bf4b24eb1010e73fb3fcbd6714d240fbc1a10eea5b7dbecb641d",
+      "status": "Exited (255) 13 days ago"
+    }
+  },
+  "volumes": [
+    "b4a991065d804026972195281eea606219b68328d33d569a8a43e16276cbb9bd",
+    "cg-metaguard-41f79711c3cc_hospital-a-data",
+    "cg-metaguard-41f79711c3cc_hospital-b-data",
+    "cg-metaguard-41f79711c3cc_postgres-data",
+    "crisisguard-local_hospital-a-data",
+    "crisisguard-local_hospital-b-data",
+    "crisisguard-local_postgres-data",
+    "crisisguard_pgdata",
+    "topicf-task4-benchmark_benchmark_postgres",
+    "topicf-task4-benchmark_benchmark_qdrant",
+    "topicf-task4-round3_round3_postgres",
+    "topicf-task4-round3_round3_qdrant",
+    "topicf-task4-round3_round3_state",
+    "topicf_gis_bedrock_ltm_data",
+    "topicf_gis_db_data",
+    "topicf_gis_titan_qdrant_data"
+  ],
+  "postgresql": {
+    "events": 191,
+    "grants": 8,
+    "tickets": 0,
+    "events_logical_sha256": "4c916b2f01e836bc1118e0621105dfcf589f2a5ffc17e1bd560bf0620d839d7f",
+    "controller_data_sha256": "e37ca57a2c276ae62d2f6749fcc7cf392487028be9bf7274b89dda0501373379"
+  },
+  "hospital_a_sqlite": {
+    "events": 60,
+    "attempts": 5,
+    "integrity": "ok",
+    "events_logical_sha256": "13a287aef75bd1bdb4e9fa757636d807a4708e6db4c2c04cdca304e8c0a9b27a"
+  },
+  "hospital_b_sqlite": {
+    "events": 42,
+    "attempts": 3,
+    "integrity": "ok",
+    "events_logical_sha256": "aee2685d59b3a86640ed3a7331f1742eb1320b732ad63a08b5f63b2dd2e28642"
+  },
+  "controller": {
+    "enabled": true,
+    "state": "Normal",
+    "reason": "healthy",
+    "rate_rps": 2.0,
+    "policy": "aimd",
+    "telemetry_fresh": true,
+    "observed_at": "2026-10-28T13:14:17.570170+00:00"
+  },
+  "cloud_metrics": {
+    "patient": {
+      "live_latency_sample_count": 0,
+      "replay_latency_sample_count": 0,
+      "unclassified_latency_sample_count": 0,
+      "latency_sample_count": 0,
+      "total_requests": 380,
+      "database_healthy": true,
+      "sampled_at": "2026-10-28T13:14:20.806696+00:00"
+    },
+    "emergency": {
+      "live_latency_sample_count": 0,
+      "replay_latency_sample_count": 0,
+      "unclassified_latency_sample_count": 0,
+      "latency_sample_count": 0,
+      "total_requests": 364,
+      "database_healthy": true,
+      "sampled_at": "2026-10-28T13:14:20.816012+00:00"
+    },
+    "admin": {
+      "live_latency_sample_count": 0,
+      "replay_latency_sample_count": 0,
+      "unclassified_latency_sample_count": 0,
+      "latency_sample_count": 0,
+      "total_requests": 364,
+      "database_healthy": true,
+      "sampled_at": "2026-10-28T13:14:20.850770+00:00"
+    }
+  },
+  "hospital_a_deployed": {
+    "cloud_client_sha256": "dcb07beb94d8946d0a1d9d10d28473b875a119425b3d5a5bffbe067768f4f2f6",
+    "replay_credential_configured": true,
+    "replay_credential_length": 64
+  },
+  "hospital_b_deployed": {
+    "cloud_client_sha256": "dcb07beb94d8946d0a1d9d10d28473b875a119425b3d5a5bffbe067768f4f2f6",
+    "replay_credential_configured": true,
+    "replay_credential_length": 64
+  }
+}

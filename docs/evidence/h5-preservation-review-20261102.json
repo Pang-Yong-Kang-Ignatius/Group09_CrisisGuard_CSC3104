@@ -1,0 +1,50 @@
+{
+  "original_summary_sha256": "93479cb9fb021392f01f4edae2251a5a1cba89037999d7a7c0daa2ba016ad35d",
+  "original_overall_result": "failed",
+  "original_preservation": {
+    "container_identity_image_mounts_equal": true,
+    "container_states_equal": true,
+    "exact_network_set_equal": false,
+    "exact_volume_set_equal": true
+  },
+  "original_container_count": 17,
+  "original_container_state_changes": {},
+  "source_unchanged_during_run": true,
+  "all_40_trial_integrity_and_cleanup_passed": true,
+  "missing_baseline_network_ids": [
+    "f2f3dea13f38"
+  ],
+  "newly_observed_networks": [
+    {
+      "CreatedAt": "2026-11-02 14:05:27.467845973 +0000 UTC",
+      "Driver": "bridge",
+      "ID": "1ae77d1a7cd7",
+      "IPv4": "true",
+      "IPv6": "false",
+      "Internal": "false",
+      "Labels": "",
+      "Name": "bridge",
+      "Scope": "local"
+    }
+  ],
+  "retained_baseline_networks": [
+    {
+      "id": "2f6a525a8cb9",
+      "name": "crisisguard-local_default"
+    },
+    {
+      "id": "d9314eecbf55",
+      "name": "host"
+    },
+    {
+      "id": "24c1f53a933d",
+      "name": "none"
+    },
+    {
+      "id": "d3c1c43aeb8b",
+      "name": "topicf_gis_default"
+    }
+  ],
+  "cause": "Not measured. Baseline inventory retained IDs, not the disappeared network name. The unique added network is the built-in bridge; regeneration is an inference, not a measured cause.",
+  "decision": "Original exact-network guard remains FAILED. No waiver or acceptance approval assumed. Descriptive resource-guard sensitivity must be separated from strict primary acceptance."
+}

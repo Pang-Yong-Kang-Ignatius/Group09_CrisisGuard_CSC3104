@@ -1,0 +1,162 @@
+{
+  "review_date": "2026-11-03",
+  "base_commit": "d394fd9d939ee67a9cd790834843771adc8f1266",
+  "scope": "Compact W5 JSON/CSV cross-check and source integration; not raw-data reproduction or owner sign-off",
+  "selected_trials": 20,
+  "comparisons_checked": 8,
+  "comparisons": [
+    {
+      "load_rps": 36,
+      "metric": "cloud_drain_upper_seconds",
+      "site": "global",
+      "per_seed": [
+        106.76950285045712,
+        52.88348182762756,
+        71.32970387977835,
+        20.64168585145929,
+        127.47107642780423
+      ],
+      "mean": 75.81909016742532,
+      "interval": [
+        43.67600784759041,
+        108.41324279229949
+      ],
+      "status": "failed"
+    },
+    {
+      "load_rps": 36,
+      "metric": "routine_post_reconnect_p95_upper_seconds",
+      "site": "Hospital_A",
+      "per_seed": [
+        78.24062592133407,
+        106.4618611099784,
+        114.19449002472737,
+        32.46818986215019,
+        16.88039958692482
+      ],
+      "mean": 69.64911330102298,
+      "interval": [
+        35.38756096389682,
+        103.91066563814911
+      ],
+      "status": "failed"
+    },
+    {
+      "load_rps": 36,
+      "metric": "routine_post_reconnect_p95_upper_seconds",
+      "site": "Hospital_B",
+      "per_seed": [
+        74.58546019621424,
+        73.67239686457296,
+        83.68519176727978,
+        28.64345477186008,
+        19.428619146565374
+      ],
+      "mean": 56.00302454929848,
+      "interval": [
+        32.30295448155409,
+        78.0427401583122
+      ],
+      "status": "failed"
+    },
+    {
+      "load_rps": 36,
+      "metric": "client_live_end_to_end_violation_rate",
+      "site": "global",
+      "per_seed": [
+        -3.2245814721095387,
+        -2.117890316707469,
+        -2.6331780653647345,
+        -0.6059904276671302,
+        -2.596638346390084
+      ],
+      "mean": -2.235655725647791,
+      "interval": [
+        -2.8849625596801642,
+        -1.4022495951563116
+      ],
+      "status": "achieved"
+    },
+    {
+      "load_rps": 84,
+      "metric": "cloud_drain_upper_seconds",
+      "site": "global",
+      "per_seed": [
+        -0.2646355843311077,
+        74.44328891527705,
+        72.67382486595653,
+        69.65074777113121,
+        55.6700308164376
+      ],
+      "mean": 54.43465135689426,
+      "interval": [
+        25.863882595744265,
+        72.77699506671968
+      ],
+      "status": "failed"
+    },
+    {
+      "load_rps": 84,
+      "metric": "routine_post_reconnect_p95_upper_seconds",
+      "site": "Hospital_A",
+      "per_seed": [
+        -10.947839457997599,
+        103.03064843373787,
+        22.359152972296336,
+        63.37258564871679,
+        118.42314586044931
+      ],
+      "mean": 59.24753869144054,
+      "interval": [
+        17.23904253546285,
+        101.25603484741823
+      ],
+      "status": "failed"
+    },
+    {
+      "load_rps": 84,
+      "metric": "routine_post_reconnect_p95_upper_seconds",
+      "site": "Hospital_B",
+      "per_seed": [
+        19.468403889053864,
+        117.2821190035068,
+        60.635615869945255,
+        94.7768208619173,
+        91.57249194401965
+      ],
+      "mean": 76.74709031368857,
+      "interval": [
+        44.1687310775887,
+        103.13807433497357
+      ],
+      "status": "failed"
+    },
+    {
+      "load_rps": 84,
+      "metric": "client_live_end_to_end_violation_rate",
+      "site": "global",
+      "per_seed": [
+        -0.44798451621215274,
+        -2.7319552558381535,
+        -1.7701808703813278,
+        -1.8446961425628268,
+        -1.3983697560860118
+      ],
+      "mean": -1.6386373082160943,
+      "interval": [
+        -2.28778633323266,
+        -0.9768630578798227
+      ],
+      "status": "achieved"
+    }
+  ],
+  "source_sha256": {
+    "docs/evidence/w5-holdout-20261102.json": "b2197d95d3e8abf7deaf14b69ab3538ff7dd41a74ec3da79580ed8f6a1978799",
+    "docs/evidence/w5-holdout-20261102.csv": "ddbbbcff24badb09ed9e5a3ced0709f3a419d9efafea0c2ff3c64561b488263a",
+    "docs/reports/W5_AIMD_RECOVERY_VALIDATION_20261102.md": "a241a5f030324f4ca4bd0cd6530df9b27ac817e4edaf0005c3f22594eb662ba2"
+  },
+  "raw_archive_available": false,
+  "h5_network_guard": "failed; unchanged",
+  "additional_experiments": 0,
+  "owner_approvals_assumed": false
+}

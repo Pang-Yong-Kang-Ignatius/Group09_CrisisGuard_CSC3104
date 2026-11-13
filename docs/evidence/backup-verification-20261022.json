@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-22",
+  "base_commit": "7528310aa3a136887995e16b87bddad15c3e5fdf",
+  "includes_uncommitted_backup_changes": true,
+  "host": "Windows Docker Desktop",
+  "host_python": "3.14.0",
+  "docker_engine": "29.5.2",
+  "unit_tests": {"command": "python -m pytest tests/unit -q", "passed": 280},
+  "smoke_test": {
+    "command": "python infrastructure/scripts/smoke_deployment.py",
+    "run_id": "cg-smoke-5fabb64fcb68",
+    "exit_code": 0,
+    "combined": "passed",
+    "split": "passed",
+    "checks": [
+      "capture during cloud API outage",
+      "site isolation and scheduler-aware manual replay",
+      "duplicate acknowledgements and pending/applied persistence",
+      "both hospital SQLite backups restored with schema, data and recovery state",
+      "PostgreSQL backups restored with identical complete event-row fingerprints"
+    ],
+    "temporary_resources_removed": true
+  },
+  "aws_postgres_backup_restore": "See aws-20261022-backup-local-restore.json",
+  "not_verified": ["actual AWS hospital backups and their off-host restoration", "network partition recovery", "new hosted CI run"]
+}

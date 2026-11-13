@@ -1,0 +1,24 @@
+{
+  "scope": "Reduced admission study, not full D2",
+  "represented_arms": 20,
+  "new_arms": 19,
+  "reused_arms": [
+    {
+      "condition": "ratio1-1_depth3_balanced_load30",
+      "seed": 3104,
+      "policy": "bounded_on",
+      "admission": "aimd"
+    }
+  ],
+  "reuse_summary": "evaluation\\results\\h1-h2-corrected-20261101-143329\\ratio1-1_depth3_balanced_load30-seed3104\\summary.json",
+  "reuse_summary_sha256": "5e9fdb3eb5ef8c0b198a3b991ec1e0152af3581ac056317bed2e33f4742550ba",
+  "full_matrix": "Preserved proposed scope; intentionally unexecuted",
+  "existing_assessment": "evaluation/results/h1-h2-submission-existing-assessment-20261101.json",
+  "generator_skip_fraction_max": 0.001,
+  "sensitivity_limits": [
+    0,
+    0.0001,
+    0.001
+  ],
+  "pending": "19 new arms; update measured assessment afterward"
+}

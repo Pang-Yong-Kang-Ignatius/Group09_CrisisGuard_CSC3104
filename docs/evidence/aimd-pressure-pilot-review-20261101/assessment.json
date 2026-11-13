@@ -1,0 +1,698 @@
+{
+  "scope": "One independent paired seed per load; descriptive pilot, no inferential CI or significance",
+  "paired_graph_and_source_manifests_equal": true,
+  "trials": [
+    {
+      "load_rps": 36.0,
+      "admission": "aimd",
+      "source": "evaluation\\results\\aimd-pressure-pilot-20261101-194831\\run-36-aimd\\summary.json",
+      "generator": {
+        "scheduled_opportunities": 1332,
+        "issued_attempts": 1332,
+        "cap_skips": 0,
+        "lag_skips": 0,
+        "ledger_reconciled": true,
+        "skip_fraction": 0.0,
+        "issuance_ratio": 1.0,
+        "issued_rps": 36.0,
+        "scheduled_rps": 36.0
+      },
+      "generator_sensitivity": {
+        "0": true,
+        "0.0001": true,
+        "0.001": true
+      },
+      "drain_interval_seconds": [
+        36.68699999999808,
+        36.96900000000096
+      ],
+      "readiness_seconds": 12.390999999999622,
+      "post_ready_exposure_seconds": 24.60900000000038,
+      "whole_run": {
+        "attempts": 1332,
+        "failures": 20,
+        "late_successes": 24,
+        "violations": 44,
+        "violation_fraction": 0.03303303303303303,
+        "successful_p95_ms": 16.00000000325963
+      },
+      "post_ready": {
+        "attempts": 886,
+        "failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0,
+        "successful_p95_ms": 16.00000000325963
+      },
+      "fixed10": {
+        "attempts": 360,
+        "failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0,
+        "successful_p95_ms": 16.00000000325963
+      },
+      "last_violation_completion_seconds": 1.4369999999980791,
+      "workflow_p95": [
+        {
+          "site": "Hospital_A",
+          "urgent_original_workflows": 6,
+          "routine_original_workflows": 5,
+          "urgent_workflow_p95_upper_seconds": 36.68699999999808,
+          "routine_workflow_p95_upper_seconds": 36.96900000000096
+        },
+        {
+          "site": "Hospital_B",
+          "urgent_original_workflows": 5,
+          "routine_original_workflows": 6,
+          "urgent_workflow_p95_upper_seconds": 28.82800000000134,
+          "routine_workflow_p95_upper_seconds": 29.375
+        }
+      ],
+      "transitions": [
+        {
+          "elapsed_seconds": 0.030999999999039574,
+          "state": "Recovery",
+          "rate_rps": 2.5,
+          "fresh": false,
+          "reason": "telemetry_missing_or_stale"
+        },
+        {
+          "elapsed_seconds": 4.453000000001339,
+          "state": "Recovery",
+          "rate_rps": 2.0,
+          "fresh": false,
+          "reason": "telemetry_missing_or_stale"
+        },
+        {
+          "elapsed_seconds": 10.421999999998661,
+          "state": "Recovery",
+          "rate_rps": 2.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 11.484000000000378,
+          "state": "Caution",
+          "rate_rps": 4.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 13.625,
+          "state": "Caution",
+          "rate_rps": 6.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 14.671999999998661,
+          "state": "Normal",
+          "rate_rps": 6.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 15.484000000000378,
+          "state": "Normal",
+          "rate_rps": 8.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 17.625,
+          "state": "Normal",
+          "rate_rps": 10.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 19.71900000000096,
+          "state": "Normal",
+          "rate_rps": 12.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 21.82800000000134,
+          "state": "Normal",
+          "rate_rps": 14.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 23.73400000000038,
+          "state": "Normal",
+          "rate_rps": 16.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 25.85900000000038,
+          "state": "Normal",
+          "rate_rps": 18.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 28.01599999999962,
+          "state": "Normal",
+          "rate_rps": 20.0,
+          "fresh": true,
+          "reason": "healthy"
+        }
+      ],
+      "fresh_samples": 100,
+      "samples": 138,
+      "post_ready_samples": 92,
+      "post_ready_fresh_samples": 92,
+      "distinct_fresh_assessments": {
+        "(0, 'healthy', True)": 26
+      },
+      "first_fresh_seconds": 10.421999999998661,
+      "first_normal_ceiling_seconds": 28.01599999999962,
+      "events_remaining_at_ceiling": 16,
+      "last_sampled_admission_counters": {
+        "allowed": 176,
+        "denied": 89
+      },
+      "unique_sampled_decision_reasons": {
+        "telemetry_unavailable": 7,
+        "admitted": 49,
+        "rate_limit": 10
+      },
+      "retry_total": 89,
+      "maximum_event_retry_count": 4,
+      "replay_errors": 0,
+      "audit_actions": {
+        "allocate": 88,
+        "acknowledge": 88,
+        "authoritative_cloud_query": 88
+      }
+    },
+    {
+      "load_rps": 36.0,
+      "admission": "constant",
+      "source": "evaluation\\results\\aimd-pressure-pilot-20261101-194831\\run-36-constant\\summary.json",
+      "generator": {
+        "scheduled_opportunities": 870,
+        "issued_attempts": 870,
+        "cap_skips": 0,
+        "lag_skips": 0,
+        "ledger_reconciled": true,
+        "skip_fraction": 0.0,
+        "issuance_ratio": 1.0,
+        "issued_rps": 36.01589667163581,
+        "scheduled_rps": 36.01589667163581
+      },
+      "generator_sensitivity": {
+        "0": true,
+        "0.0001": true,
+        "0.001": true
+      },
+      "drain_interval_seconds": [
+        23.84299999999712,
+        24.125
+      ],
+      "readiness_seconds": 12.389999999999418,
+      "post_ready_exposure_seconds": 11.765999999999622,
+      "whole_run": {
+        "attempts": 870,
+        "failures": 20,
+        "late_successes": 24,
+        "violations": 44,
+        "violation_fraction": 0.05057471264367816,
+        "successful_p95_ms": 16.00000000325963
+      },
+      "post_ready": {
+        "attempts": 424,
+        "failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0,
+        "successful_p95_ms": 15.99999999962165
+      },
+      "fixed10": {
+        "attempts": 360,
+        "failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0,
+        "successful_p95_ms": 16.00000000325963
+      },
+      "last_violation_completion_seconds": 1.4529999999977008,
+      "workflow_p95": [
+        {
+          "site": "Hospital_A",
+          "urgent_original_workflows": 6,
+          "routine_original_workflows": 5,
+          "urgent_workflow_p95_upper_seconds": 19.5779999999977,
+          "routine_workflow_p95_upper_seconds": 24.125
+        },
+        {
+          "site": "Hospital_B",
+          "urgent_original_workflows": 5,
+          "routine_original_workflows": 6,
+          "urgent_workflow_p95_upper_seconds": 20.375,
+          "routine_workflow_p95_upper_seconds": 18.75
+        }
+      ],
+      "transitions": [
+        {
+          "elapsed_seconds": 0.0,
+          "state": "Recovery",
+          "rate_rps": 20.0,
+          "fresh": false,
+          "reason": "telemetry_missing_or_stale"
+        },
+        {
+          "elapsed_seconds": 10.15599999999904,
+          "state": "Recovery",
+          "rate_rps": 20.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 11.234000000000378,
+          "state": "Caution",
+          "rate_rps": 20.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 14.467999999997119,
+          "state": "Normal",
+          "rate_rps": 20.0,
+          "fresh": true,
+          "reason": "healthy"
+        }
+      ],
+      "fresh_samples": 53,
+      "samples": 90,
+      "post_ready_samples": 44,
+      "post_ready_fresh_samples": 44,
+      "distinct_fresh_assessments": {
+        "(0, 'healthy', True)": 14
+      },
+      "first_fresh_seconds": 10.15599999999904,
+      "first_normal_ceiling_seconds": 14.467999999997119,
+      "events_remaining_at_ceiling": 43,
+      "last_sampled_admission_counters": {
+        "allowed": 177,
+        "denied": 54
+      },
+      "unique_sampled_decision_reasons": {
+        "telemetry_unavailable": 6,
+        "admitted": 35,
+        "rate_limit": 2
+      },
+      "retry_total": 54,
+      "maximum_event_retry_count": 3,
+      "replay_errors": 0,
+      "audit_actions": {
+        "allocate": 89,
+        "acknowledge": 88,
+        "authoritative_cloud_query": 88,
+        "candidate_change": 1
+      }
+    },
+    {
+      "load_rps": 84.0,
+      "admission": "aimd",
+      "source": "evaluation\\results\\aimd-pressure-pilot-20261101-194831\\run-84-aimd\\summary.json",
+      "generator": {
+        "scheduled_opportunities": 2905,
+        "issued_attempts": 2904,
+        "cap_skips": 0,
+        "lag_skips": 1,
+        "ledger_reconciled": true,
+        "skip_fraction": 0.00034423407917383823,
+        "issuance_ratio": 0.9996557659208262,
+        "issued_rps": 83.98403609231862,
+        "scheduled_rps": 84.01295621493993
+      },
+      "generator_sensitivity": {
+        "0": false,
+        "0.0001": false,
+        "0.001": true
+      },
+      "drain_interval_seconds": [
+        34.25,
+        34.53199999999924
+      ],
+      "readiness_seconds": 12.390999999999622,
+      "post_ready_exposure_seconds": 22.18699999999808,
+      "whole_run": {
+        "attempts": 2904,
+        "failures": 50,
+        "late_successes": 52,
+        "violations": 102,
+        "violation_fraction": 0.03512396694214876,
+        "successful_p95_ms": 16.00000000325963
+      },
+      "post_ready": {
+        "attempts": 1864,
+        "failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0,
+        "successful_p95_ms": 16.00000000325963
+      },
+      "fixed10": {
+        "attempts": 840,
+        "failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0,
+        "successful_p95_ms": 16.00000000325963
+      },
+      "last_violation_completion_seconds": 1.485000000000582,
+      "workflow_p95": [
+        {
+          "site": "Hospital_A",
+          "urgent_original_workflows": 6,
+          "routine_original_workflows": 5,
+          "urgent_workflow_p95_upper_seconds": 25.812999999998283,
+          "routine_workflow_p95_upper_seconds": 25.0
+        },
+        {
+          "site": "Hospital_B",
+          "urgent_original_workflows": 5,
+          "routine_original_workflows": 6,
+          "urgent_workflow_p95_upper_seconds": 34.53199999999924,
+          "routine_workflow_p95_upper_seconds": 33.42199999999866
+        }
+      ],
+      "transitions": [
+        {
+          "elapsed_seconds": 0.0,
+          "state": "Recovery",
+          "rate_rps": 2.5,
+          "fresh": false,
+          "reason": "telemetry_missing_or_stale"
+        },
+        {
+          "elapsed_seconds": 4.702999999997701,
+          "state": "Recovery",
+          "rate_rps": 2.0,
+          "fresh": false,
+          "reason": "telemetry_missing_or_stale"
+        },
+        {
+          "elapsed_seconds": 10.71900000000096,
+          "state": "Recovery",
+          "rate_rps": 2.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 13.735000000000582,
+          "state": "Caution",
+          "rate_rps": 4.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 15.860000000000582,
+          "state": "Caution",
+          "rate_rps": 6.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 16.67199999999866,
+          "state": "Normal",
+          "rate_rps": 6.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 17.75,
+          "state": "Normal",
+          "rate_rps": 8.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 19.92199999999866,
+          "state": "Normal",
+          "rate_rps": 10.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 21.79699999999866,
+          "state": "Normal",
+          "rate_rps": 12.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 23.92199999999866,
+          "state": "Normal",
+          "rate_rps": 14.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 26.09400000000096,
+          "state": "Normal",
+          "rate_rps": 16.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 28.0,
+          "state": "Normal",
+          "rate_rps": 18.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 30.156999999999243,
+          "state": "Normal",
+          "rate_rps": 20.0,
+          "fresh": true,
+          "reason": "healthy"
+        }
+      ],
+      "fresh_samples": 89,
+      "samples": 128,
+      "post_ready_samples": 82,
+      "post_ready_fresh_samples": 82,
+      "distinct_fresh_assessments": {
+        "(0, 'healthy', False)": 2,
+        "(0, 'healthy', True)": 22
+      },
+      "first_fresh_seconds": 10.71900000000096,
+      "first_normal_ceiling_seconds": 30.156999999999243,
+      "events_remaining_at_ceiling": 23,
+      "last_sampled_admission_counters": {
+        "allowed": 177,
+        "denied": 86
+      },
+      "unique_sampled_decision_reasons": {
+        "telemetry_unavailable": 8,
+        "rate_limit": 11,
+        "admitted": 53
+      },
+      "retry_total": 87,
+      "maximum_event_retry_count": 4,
+      "replay_errors": 0,
+      "audit_actions": {
+        "allocate": 89,
+        "acknowledge": 88,
+        "authoritative_cloud_query": 88,
+        "candidate_change": 1
+      }
+    },
+    {
+      "load_rps": 84.0,
+      "admission": "constant",
+      "source": "evaluation\\results\\aimd-pressure-pilot-20261101-194831\\run-84-constant\\summary.json",
+      "generator": {
+        "scheduled_opportunities": 1986,
+        "issued_attempts": 1986,
+        "cap_skips": 0,
+        "lag_skips": 0,
+        "ledger_reconciled": true,
+        "skip_fraction": 0.0,
+        "issuance_ratio": 1.0,
+        "issued_rps": 84.00659870563986,
+        "scheduled_rps": 84.00659870563986
+      },
+      "generator_sensitivity": {
+        "0": true,
+        "0.0001": true,
+        "0.001": true
+      },
+      "drain_interval_seconds": [
+        23.3279999999977,
+        23.59400000000096
+      ],
+      "readiness_seconds": 12.375,
+      "post_ready_exposure_seconds": 11.265999999999622,
+      "whole_run": {
+        "attempts": 1986,
+        "failures": 68,
+        "late_successes": 35,
+        "violations": 103,
+        "violation_fraction": 0.051863041289023165,
+        "successful_p95_ms": 16.00000000325963
+      },
+      "post_ready": {
+        "attempts": 947,
+        "failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0,
+        "successful_p95_ms": 16.00000000325963
+      },
+      "fixed10": {
+        "attempts": 840,
+        "failures": 0,
+        "late_successes": 0,
+        "violations": 0,
+        "violation_fraction": 0.0,
+        "successful_p95_ms": 16.00000000325963
+      },
+      "last_violation_completion_seconds": 1.4529999999977008,
+      "workflow_p95": [
+        {
+          "site": "Hospital_A",
+          "urgent_original_workflows": 6,
+          "routine_original_workflows": 5,
+          "urgent_workflow_p95_upper_seconds": 23.59400000000096,
+          "routine_workflow_p95_upper_seconds": 22.01599999999962
+        },
+        {
+          "site": "Hospital_B",
+          "urgent_original_workflows": 5,
+          "routine_original_workflows": 6,
+          "urgent_workflow_p95_upper_seconds": 20.39099999999962,
+          "routine_workflow_p95_upper_seconds": 22.531999999999243
+        }
+      ],
+      "transitions": [
+        {
+          "elapsed_seconds": 0.0,
+          "state": "Recovery",
+          "rate_rps": 20.0,
+          "fresh": false,
+          "reason": "telemetry_missing_or_stale"
+        },
+        {
+          "elapsed_seconds": 11.531999999999243,
+          "state": "Recovery",
+          "rate_rps": 20.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 12.610000000000582,
+          "state": "Caution",
+          "rate_rps": 20.0,
+          "fresh": true,
+          "reason": "healthy"
+        },
+        {
+          "elapsed_seconds": 15.8279999999977,
+          "state": "Normal",
+          "rate_rps": 20.0,
+          "fresh": true,
+          "reason": "healthy"
+        }
+      ],
+      "fresh_samples": 46,
+      "samples": 88,
+      "post_ready_samples": 42,
+      "post_ready_fresh_samples": 42,
+      "distinct_fresh_assessments": {
+        "(0, 'healthy', True)": 12
+      },
+      "first_fresh_seconds": 11.531999999999243,
+      "first_normal_ceiling_seconds": 15.8279999999977,
+      "events_remaining_at_ceiling": 58,
+      "last_sampled_admission_counters": {
+        "allowed": 177,
+        "denied": 73
+      },
+      "unique_sampled_decision_reasons": {
+        "telemetry_unavailable": 12,
+        "admitted": 39
+      },
+      "retry_total": 73,
+      "maximum_event_retry_count": 3,
+      "replay_errors": 0,
+      "audit_actions": {
+        "allocate": 89,
+        "acknowledge": 88,
+        "authoritative_cloud_query": 88,
+        "candidate_change": 1
+      }
+    }
+  ],
+  "pairs": [
+    {
+      "load_rps": 36,
+      "drain_relative_pct": 53.23937823834595,
+      "drain_relative_observer_bounds_pct": [
+        52.07046632123556,
+        55.05179717319728
+      ],
+      "full_run_slo_difference_pp": -1.754167961064513,
+      "fixed10_slo_difference_pp": 0.0,
+      "workflow_differences": [
+        {
+          "site": "Hospital_A",
+          "urgent_p95_relative_pct": 87.38890591481452,
+          "routine_p95_relative_pct": 53.23937823834595
+        },
+        {
+          "site": "Hospital_B",
+          "urgent_p95_relative_pct": 41.487116564423744,
+          "routine_p95_relative_pct": 56.666666666666664
+        }
+      ]
+    },
+    {
+      "load_rps": 84,
+      "drain_relative_pct": 46.359243875552416,
+      "drain_relative_observer_bounds_pct": [
+        45.164024752049706,
+        48.028120713317236
+      ],
+      "full_run_slo_difference_pp": -1.6739074346874403,
+      "fixed10_slo_difference_pp": 0.0,
+      "workflow_differences": [
+        {
+          "site": "Hospital_A",
+          "urgent_p95_relative_pct": 9.40493345764699,
+          "routine_p95_relative_pct": 13.553779069769401
+        },
+        {
+          "site": "Hospital_B",
+          "urgent_p95_relative_pct": 69.349222696287,
+          "routine_p95_relative_pct": 48.331262204863236
+        }
+      ]
+    }
+  ],
+  "source_sha256": {
+    "evaluation\\results\\aimd-pressure-pilot-20261101-194831\\run-36-aimd\\summary.json": "5ce7e7e2e6d35d34ffc343d23da13e69a2902cc6b9c5ac00cfb3df4d8ad244ec",
+    "C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\.venv\\cp8-52dd4a7b7cb4\\cg-cp8-dfcde02a62f7\\raw.json": "c774c62dc15e9fb854dadbf2380966296931feeb7f724b876a9c90b49ff6b4bb",
+    "evaluation\\results\\aimd-pressure-pilot-20261101-194831\\run-36-constant\\summary.json": "4d7cd5305c7f16c9fb49fa7552e955d42810cdb3f1bdb10a00a6f66ff84de665",
+    "C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\.venv\\cp8-cde783c65834\\cg-cp8-25cd816e15c0\\raw.json": "b4da4a8c439334e4a63e03aeb9f0f629d8d273699164f1db3bab32a55335dd5e",
+    "evaluation\\results\\aimd-pressure-pilot-20261101-194831\\run-84-aimd\\summary.json": "ad3b0fcd1a4cd18aab36a726bf5da43d65b14dd5125024b91528e16a4466d449",
+    "C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\.venv\\cp8-4767128a7c17\\cg-cp8-098edb393dd8\\raw.json": "bfa12337ab8316440b83ff2eb1f0454d6aa35df66308ca7bb31072010f18bfab",
+    "evaluation\\results\\aimd-pressure-pilot-20261101-194831\\run-84-constant\\summary.json": "887b11ea6e376b8e10cc06420169c83511443b707ea250051090cb1d75039380",
+    "C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\.venv\\cp8-d21d399cc7f8\\cg-cp8-7eacbdde0d43\\raw.json": "da4ec4096d31a219d462492f9e522924d325bf949d280eb08d0e5b6712e3eed8"
+  },
+  "caveats": [
+    "Denial reasons are sampled last decisions, not an exhaustive denial ledger.",
+    "Retry totals combine deferrals and failures; exact causal delay attribution is unavailable.",
+    "Retry jitter is not controlled by the workload seed.",
+    "Drain observer bounds are not statistical confidence intervals."
+  ],
+  "script_sha256": "2cbbabf1e4987d37f4ebcc872a6fb5ee830e7f56c9f80d85853220e41c3ad276"
+}

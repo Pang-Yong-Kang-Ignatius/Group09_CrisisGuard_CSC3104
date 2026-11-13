@@ -1,0 +1,2829 @@
+{
+  "run_id": "CG_LIVE_20261027_fa3c6536",
+  "started_at": "2026-10-27T09:54:37.488679+00:00",
+  "scenarios": {
+    "environment": {
+      "result": "PASS",
+      "expected": "All seven services healthy; database/dashboard reachable; counts retained",
+      "actual": {
+        "hospital-a": {
+          "total": 20,
+          "pending": 0,
+          "applied": 20
+        },
+        "hospital-b": {
+          "total": 17,
+          "pending": 0,
+          "applied": 17
+        }
+      }
+    },
+    "normal_api_sql": {
+      "http_status": 200,
+      "capture_response": {
+        "http_status": 201,
+        "response": {
+          "status": "pending",
+          "event_id": "CG_LIVE_20261027_fa3c6536_NORMAL_A",
+          "site_id": "Hospital_A"
+        }
+      },
+      "immediate_sqlite": {
+        "event_id": "CG_LIVE_20261027_fa3c6536_NORMAL_A",
+        "site_id": "Hospital_A",
+        "event_type": "patient_registration",
+        "base_priority": 2,
+        "prerequisite_ids": "[]",
+        "payload": "{\"patient_id\": \"CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A\", \"test_source\": \"live_integration_verification\"}",
+        "status": "pending",
+        "created_at": "2026-10-27T09:54:39.660672+00:00"
+      },
+      "synchronization": {
+        "elapsed_observed_seconds": 5.412,
+        "postgresql": [
+          {
+            "event_id": "CG_LIVE_20261027_fa3c6536_NORMAL_A",
+            "site_id": "Hospital_A",
+            "event_type": "patient_registration",
+            "base_priority": 2,
+            "prerequisite_ids": [],
+            "payload": {
+              "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+              "test_source": "live_integration_verification"
+            },
+            "status": "applied",
+            "applied_at": "2026-10-27T09:54:44.026343+00:00"
+          }
+        ],
+        "sqlite": [
+          {
+            "event_id": "CG_LIVE_20261027_fa3c6536_NORMAL_A",
+            "site_id": "Hospital_A",
+            "event_type": "patient_registration",
+            "base_priority": 2,
+            "prerequisite_ids": "[]",
+            "payload": "{\"patient_id\": \"CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A\", \"test_source\": \"live_integration_verification\"}",
+            "status": "applied",
+            "created_at": "2026-10-27T09:54:39.660672+00:00"
+          }
+        ]
+      },
+      "result": "PASS"
+    },
+    "automatic_dashboard_tracking": {
+      "result": "FAIL",
+      "expected": "Deployed automatic pending-to-applied tracking",
+      "actual": "sync-status.js returns 404; root HTML does not reference it; quick-events.js also 404. Browser Computer Use stopped because URL could not be determined safely."
+    },
+    "shared_cloud_outage_recovery": {
+      "scope": "All three Cloud APIs stopped; both hospitals remain running; only Hospital A tested for offline capture",
+      "captures": [
+        {
+          "http_status": 200,
+          "capture_response": {
+            "http_status": 201,
+            "response": {
+              "status": "pending",
+              "event_id": "CG_LIVE_20261027_fa3c6536_OFFLINE_A_1",
+              "site_id": "Hospital_A"
+            }
+          },
+          "immediate_sqlite": {
+            "event_id": "CG_LIVE_20261027_fa3c6536_OFFLINE_A_1",
+            "site_id": "Hospital_A",
+            "event_type": "patient_registration",
+            "base_priority": 2,
+            "prerequisite_ids": "[]",
+            "payload": "{\"patient_id\": \"CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A\", \"test_source\": \"live_integration_verification\"}",
+            "status": "pending",
+            "created_at": "2026-10-27T09:54:50.303263+00:00"
+          }
+        },
+        {
+          "http_status": 200,
+          "capture_response": {
+            "http_status": 201,
+            "response": {
+              "status": "pending",
+              "event_id": "CG_LIVE_20261027_fa3c6536_OFFLINE_A_2",
+              "site_id": "Hospital_A"
+            }
+          },
+          "immediate_sqlite": {
+            "event_id": "CG_LIVE_20261027_fa3c6536_OFFLINE_A_2",
+            "site_id": "Hospital_A",
+            "event_type": "patient_registration",
+            "base_priority": 2,
+            "prerequisite_ids": "[]",
+            "payload": "{\"patient_id\": \"CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A\", \"test_source\": \"live_integration_verification\"}",
+            "status": "pending",
+            "created_at": "2026-10-27T09:54:50.521206+00:00"
+          }
+        },
+        {
+          "http_status": 200,
+          "capture_response": {
+            "http_status": 201,
+            "response": {
+              "status": "pending",
+              "event_id": "CG_LIVE_20261027_fa3c6536_OFFLINE_A_3",
+              "site_id": "Hospital_A"
+            }
+          },
+          "immediate_sqlite": {
+            "event_id": "CG_LIVE_20261027_fa3c6536_OFFLINE_A_3",
+            "site_id": "Hospital_A",
+            "event_type": "patient_registration",
+            "base_priority": 2,
+            "prerequisite_ids": "[]",
+            "payload": "{\"patient_id\": \"CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A\", \"test_source\": \"live_integration_verification\"}",
+            "status": "pending",
+            "created_at": "2026-10-27T09:54:50.710203+00:00"
+          }
+        }
+      ],
+      "sqlite_during_outage": [
+        {
+          "event_id": "CG_LIVE_20261027_fa3c6536_OFFLINE_A_1",
+          "site_id": "Hospital_A",
+          "event_type": "patient_registration",
+          "base_priority": 2,
+          "prerequisite_ids": "[]",
+          "payload": "{\"patient_id\": \"CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A\", \"test_source\": \"live_integration_verification\"}",
+          "status": "pending",
+          "created_at": "2026-10-27T09:54:50.303263+00:00"
+        },
+        {
+          "event_id": "CG_LIVE_20261027_fa3c6536_OFFLINE_A_2",
+          "site_id": "Hospital_A",
+          "event_type": "patient_registration",
+          "base_priority": 2,
+          "prerequisite_ids": "[]",
+          "payload": "{\"patient_id\": \"CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A\", \"test_source\": \"live_integration_verification\"}",
+          "status": "pending",
+          "created_at": "2026-10-27T09:54:50.521206+00:00"
+        },
+        {
+          "event_id": "CG_LIVE_20261027_fa3c6536_OFFLINE_A_3",
+          "site_id": "Hospital_A",
+          "event_type": "patient_registration",
+          "base_priority": 2,
+          "prerequisite_ids": "[]",
+          "payload": "{\"patient_id\": \"CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A\", \"test_source\": \"live_integration_verification\"}",
+          "status": "pending",
+          "created_at": "2026-10-27T09:54:50.710203+00:00"
+        }
+      ],
+      "postgresql_during_outage": [
+        {
+          "event_id": "CG_LIVE_20261027_fa3c6536_NORMAL_A",
+          "site_id": "Hospital_A",
+          "event_type": "patient_registration",
+          "base_priority": 2,
+          "prerequisite_ids": [],
+          "payload": {
+            "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+            "test_source": "live_integration_verification"
+          },
+          "status": "applied",
+          "applied_at": "2026-10-27T09:54:44.026343+00:00"
+        }
+      ],
+      "dashboard_hospitals_during_outage": {
+        "hospital-a": {
+          "status": "healthy",
+          "total": 24,
+          "pending": 3,
+          "applied": 21,
+          "events": [
+            {
+              "event_id": "EDGE_3db7e732748a4f248bb6d9fdd1678490",
+              "site_id": "Hospital_A",
+              "event_type": "patient_registration",
+              "base_priority": 2,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "EDGE_PATIENT_ae2faa25223448beb40bd39d114a2b71",
+                "test_source": "crisisguard_edge_dashboard"
+              },
+              "status": "applied",
+              "created_at": "2026-10-21T12:29:21.874111+00:00"
+            },
+            {
+              "event_id": "EDGE_7ecf9a0139be40ae95d3d4755c57ab7e",
+              "site_id": "Hospital_A",
+              "event_type": "patient_registration",
+              "base_priority": 2,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "EDGE_PATIENT_3313f9e37e824227b061105b6086a3ab",
+                "test_source": "crisisguard_edge_dashboard"
+              },
+              "status": "applied",
+              "created_at": "2026-10-21T12:30:13.505247+00:00"
+            },
+            {
+              "event_id": "EDGE_c5ef451e8f01438e8122c664fb481f98",
+              "site_id": "Hospital_A",
+              "event_type": "patient_registration",
+              "base_priority": 2,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "EDGE_PATIENT_b13f714735354c64b6c4d3a19bc99334",
+                "test_source": "crisisguard_edge_dashboard"
+              },
+              "status": "applied",
+              "created_at": "2026-10-21T12:30:17.591956+00:00"
+            },
+            {
+              "event_id": "EDGE_fe4f00145381426b87af365b61f1ea59",
+              "site_id": "Hospital_A",
+              "event_type": "patient_registration",
+              "base_priority": 2,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "EDGE_PATIENT_f8e01db62c154137950098a7c45dc4c8",
+                "test_source": "crisisguard_edge_dashboard"
+              },
+              "status": "applied",
+              "created_at": "2026-10-21T12:37:08.314980+00:00"
+            },
+            {
+              "event_id": "EDGE_c56ca8be49004cc4a58db3f99514d35a",
+              "site_id": "Hospital_A",
+              "event_type": "patient_registration",
+              "base_priority": 2,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "EDGE_PATIENT_578d1f627492424693e7b6addf3c9b73",
+                "test_source": "crisisguard_edge_dashboard"
+              },
+              "status": "applied",
+              "created_at": "2026-10-21T12:37:10.712312+00:00"
+            },
+            {
+              "event_id": "EDGE_acd28c32f79142e6b5a4b66990ea3638",
+              "site_id": "Hospital_A",
+              "event_type": "patient_registration",
+              "base_priority": 2,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "EDGE_PATIENT_46c4bad8f32e40b284b552fe71364aaf",
+                "test_source": "crisisguard_edge_dashboard"
+              },
+              "status": "applied",
+              "created_at": "2026-10-21T12:40:46.302923+00:00"
+            },
+            {
+              "event_id": "EDGE_2e98e0233f31462586138696197ab4a6",
+              "site_id": "Hospital_A",
+              "event_type": "patient_registration",
+              "base_priority": 2,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "EDGE_PATIENT_d678ec1c94984d8ea82994b40896a161",
+                "test_source": "crisisguard_edge_dashboard"
+              },
+              "status": "applied",
+              "created_at": "2026-10-21T12:40:47.507286+00:00"
+            },
+            {
+              "event_id": "EDGE_af45331293b44481b18e9f594068db0c",
+              "site_id": "Hospital_A",
+              "event_type": "patient_registration",
+              "base_priority": 2,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "EDGE_PATIENT_9b82ef214e2f4717b0999cdeee9a834b",
+                "test_source": "crisisguard_edge_dashboard"
+              },
+              "status": "applied",
+              "created_at": "2026-10-21T12:40:48.765526+00:00"
+            },
+            {
+              "event_id": "EDGE_39f99c26ccc94fc68ae5402833b571db",
+              "site_id": "Hospital_A",
+              "event_type": "patient_registration",
+              "base_priority": 2,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "EDGE_PATIENT_a5ae35417cef45d9bc42af159496d32e",
+                "test_source": "crisisguard_edge_dashboard"
+              },
+              "status": "applied",
+              "created_at": "2026-10-21T13:06:00.222176+00:00"
+            },
+            {
+              "event_id": "TEST-AUTO-20261024143946892",
+              "site_id": "Hospital_A",
+              "event_type": "patient_registration",
+              "base_priority": 3,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "TEST-PATIENT-001",
+                "name": "Test Patient"
+              },
+              "status": "applied",
+              "created_at": "2026-10-24T06:39:47.557201+00:00"
+            },
+            {
+              "event_id": "TEST-EMG-20261024144059161",
+              "site_id": "Hospital_A",
+              "event_type": "emergency_record",
+              "base_priority": 1,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "TEST-PATIENT-001",
+                "description": "Synthetic emergency test"
+              },
+              "status": "applied",
+              "created_at": "2026-10-24T06:40:59.238253+00:00"
+            },
+            {
+              "event_id": "TEST-ADM-20261024144133969",
+              "site_id": "Hospital_A",
+              "event_type": "patient_discharge",
+              "base_priority": 3,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "TEST-PATIENT-001",
+                "description": "Synthetic discharge test"
+              },
+              "status": "applied",
+              "created_at": "2026-10-24T06:41:34.027998+00:00"
+            },
+            {
+              "event_id": "TEST-DEP-EMG-20261024144317395",
+              "site_id": "Hospital_A",
+              "event_type": "emergency_record",
+              "base_priority": 1,
+              "prerequisite_ids": [
+                "TEST-DEP-REG-20261024144317395"
+              ],
+              "payload": {
+                "patient_id": "TEST-DEP-PATIENT-20261024144317395",
+                "description": "Synthetic dependency ordering test"
+              },
+              "status": "applied",
+              "created_at": "2026-10-24T06:43:17.537524+00:00"
+            },
+            {
+              "event_id": "TEST-DEP-REG-20261024144317395",
+              "site_id": "Hospital_A",
+              "event_type": "patient_registration",
+              "base_priority": 3,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "TEST-DEP-PATIENT-20261024144317395",
+                "name": "Synthetic Dependency Test"
+              },
+              "status": "applied",
+              "created_at": "2026-10-24T06:43:17.639766+00:00"
+            },
+            {
+              "event_id": "TEST-OUTAGE-20261024145955114",
+              "site_id": "Hospital_A",
+              "event_type": "emergency_record",
+              "base_priority": 1,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "TEST-OUTAGE-PATIENT",
+                "description": "Synthetic emergency during cloud outage"
+              },
+              "status": "applied",
+              "created_at": "2026-10-24T06:59:55.754769+00:00"
+            },
+            {
+              "event_id": "OFFLINE_DEMO_A_20261025_001",
+              "site_id": "Hospital_A",
+              "event_type": "patient_registration",
+              "base_priority": 3,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "SYNTHETIC_OFFLINE_A_001"
+              },
+              "status": "applied",
+              "created_at": "2026-10-25T02:55:28.012494+00:00"
+            },
+            {
+              "event_id": "EDGE_6ba34de8e8fe4ed0be15171d5f902f52",
+              "site_id": "Hospital_A",
+              "event_type": "patient_registration",
+              "base_priority": 2,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "EDGE_PATIENT_197b378e2be04c61b198db001910e842",
+                "test_source": "crisisguard_edge_dashboard"
+              },
+              "status": "applied",
+              "created_at": "2026-10-25T03:35:56.457102+00:00"
+            },
+            {
+              "event_id": "EDGE_8ea59c054d5547f59b0a825bc2da54e2",
+              "site_id": "Hospital_A",
+              "event_type": "patient_registration",
+              "base_priority": 2,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "EDGE_PATIENT_d5312d0f59a0487aa90986fb48ed1ae6",
+                "test_source": "crisisguard_edge_dashboard"
+              },
+              "status": "applied",
+              "created_at": "2026-10-27T09:29:27.938096+00:00"
+            },
+            {
+              "event_id": "EDGE_93b34371969d4222803b61f733106500",
+              "site_id": "Hospital_A",
+              "event_type": "patient_registration",
+              "base_priority": 2,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "EDGE_PATIENT_d03a5b852eed4f89a49d651adc20047a",
+                "test_source": "crisisguard_edge_dashboard"
+              },
+              "status": "applied",
+              "created_at": "2026-10-27T09:29:50.985747+00:00"
+            },
+            {
+              "event_id": "EDGE_c672f9030ff141acba12ef8c82b53aea",
+              "site_id": "Hospital_A",
+              "event_type": "patient_registration",
+              "base_priority": 2,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "EDGE_PATIENT_8291224669bc4660a471b5cb9ca106cc",
+                "test_source": "crisisguard_edge_dashboard"
+              },
+              "status": "applied",
+              "created_at": "2026-10-27T09:35:19.412051+00:00"
+            },
+            {
+              "event_id": "CG_LIVE_20261027_fa3c6536_NORMAL_A",
+              "site_id": "Hospital_A",
+              "event_type": "patient_registration",
+              "base_priority": 2,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+                "test_source": "live_integration_verification"
+              },
+              "status": "applied",
+              "created_at": "2026-10-27T09:54:39.660672+00:00"
+            },
+            {
+              "event_id": "CG_LIVE_20261027_fa3c6536_OFFLINE_A_1",
+              "site_id": "Hospital_A",
+              "event_type": "patient_registration",
+              "base_priority": 2,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+                "test_source": "live_integration_verification"
+              },
+              "status": "pending",
+              "created_at": "2026-10-27T09:54:50.303263+00:00"
+            },
+            {
+              "event_id": "CG_LIVE_20261027_fa3c6536_OFFLINE_A_2",
+              "site_id": "Hospital_A",
+              "event_type": "patient_registration",
+              "base_priority": 2,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+                "test_source": "live_integration_verification"
+              },
+              "status": "pending",
+              "created_at": "2026-10-27T09:54:50.521206+00:00"
+            },
+            {
+              "event_id": "CG_LIVE_20261027_fa3c6536_OFFLINE_A_3",
+              "site_id": "Hospital_A",
+              "event_type": "patient_registration",
+              "base_priority": 2,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+                "test_source": "live_integration_verification"
+              },
+              "status": "pending",
+              "created_at": "2026-10-27T09:54:50.710203+00:00"
+            }
+          ]
+        },
+        "hospital-b": {
+          "status": "healthy",
+          "total": 17,
+          "pending": 0,
+          "applied": 17,
+          "events": [
+            {
+              "event_id": "EDGE_ef8d851450864f4d8a2e0134ec29c344",
+              "site_id": "Hospital_B",
+              "event_type": "patient_registration",
+              "base_priority": 2,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "EDGE_PATIENT_a667f07390354275870120bb73d954a3",
+                "test_source": "crisisguard_edge_dashboard"
+              },
+              "status": "applied",
+              "created_at": "2026-10-21T12:30:19.529132+00:00"
+            },
+            {
+              "event_id": "EDGE_d1cb2f54ac8641908191f0d242dd903d",
+              "site_id": "Hospital_B",
+              "event_type": "patient_registration",
+              "base_priority": 5,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "EDGE_PATIENT_123bed61b7c84e40bd129f55c55840d5",
+                "test_source": "crisisguard_edge_dashboard"
+              },
+              "status": "applied",
+              "created_at": "2026-10-21T12:30:22.364922+00:00"
+            },
+            {
+              "event_id": "EDGE_8b42519f609a4de9a5154da813664520",
+              "site_id": "Hospital_B",
+              "event_type": "patient_registration",
+              "base_priority": 4,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "EDGE_PATIENT_88660a9c5aaa4b3497a716ef27105540",
+                "test_source": "crisisguard_edge_dashboard"
+              },
+              "status": "applied",
+              "created_at": "2026-10-21T12:30:26.633096+00:00"
+            },
+            {
+              "event_id": "EDGE_6045045194b94ce3aefc12f89a7c0448",
+              "site_id": "Hospital_B",
+              "event_type": "patient_registration",
+              "base_priority": 4,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "EDGE_PATIENT_62846ada693643069fdf578b7869962b",
+                "test_source": "crisisguard_edge_dashboard"
+              },
+              "status": "applied",
+              "created_at": "2026-10-21T12:30:27.502738+00:00"
+            },
+            {
+              "event_id": "EDGE_e43afe02d8e543f9a607415a317f21dc",
+              "site_id": "Hospital_B",
+              "event_type": "patient_registration",
+              "base_priority": 2,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "EDGE_PATIENT_ca4f0d4759aa4b69944b3c4761f95e46",
+                "test_source": "crisisguard_edge_dashboard"
+              },
+              "status": "applied",
+              "created_at": "2026-10-21T12:40:52.238385+00:00"
+            },
+            {
+              "event_id": "EDGE_136f91e57d4947d9aff7616c9021a6ab",
+              "site_id": "Hospital_B",
+              "event_type": "patient_registration",
+              "base_priority": 2,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "EDGE_PATIENT_ea667aacb6fa4b79a8b9fdca305c5bbd",
+                "test_source": "crisisguard_edge_dashboard"
+              },
+              "status": "applied",
+              "created_at": "2026-10-21T12:40:53.372795+00:00"
+            },
+            {
+              "event_id": "TEST-B-20261024144206025",
+              "site_id": "Hospital_B",
+              "event_type": "patient_registration",
+              "base_priority": 3,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "TEST-PATIENT-B-001",
+                "name": "Synthetic Hospital B Patient"
+              },
+              "status": "applied",
+              "created_at": "2026-10-24T06:42:06.094379+00:00"
+            },
+            {
+              "event_id": "EDGE_a74af0b8ed2242e7832e9aefc7e63717",
+              "site_id": "Hospital_B",
+              "event_type": "patient_registration",
+              "base_priority": 2,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "EDGE_PATIENT_f94dc651c0164f1cb4528b35091575ae",
+                "test_source": "crisisguard_edge_dashboard"
+              },
+              "status": "applied",
+              "created_at": "2026-10-26T12:42:40.143965+00:00"
+            },
+            {
+              "event_id": "EDGE_23474a7d7c3f4127bd252e2e554e81b2",
+              "site_id": "Hospital_B",
+              "event_type": "patient_registration",
+              "base_priority": 2,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "EDGE_PATIENT_221f1ed5a3ab47fca3395ca013da4a7d",
+                "test_source": "crisisguard_edge_dashboard"
+              },
+              "status": "applied",
+              "created_at": "2026-10-26T12:42:49.725791+00:00"
+            },
+            {
+              "event_id": "EDGE_ed08cc20d6fd46f984b876c56b9df550",
+              "site_id": "Hospital_B",
+              "event_type": "patient_registration",
+              "base_priority": 2,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "EDGE_PATIENT_c6cba4c8b1b14460bd0f13540357d0c4",
+                "test_source": "crisisguard_edge_dashboard"
+              },
+              "status": "applied",
+              "created_at": "2026-10-26T12:42:58.252611+00:00"
+            },
+            {
+              "event_id": "EDGE_ee3ae488bcfc482ca6eb199429b7adfe",
+              "site_id": "Hospital_B",
+              "event_type": "patient_registration",
+              "base_priority": 2,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "EDGE_PATIENT_a6c79308136a44d7bce385b2a18d7fdf",
+                "test_source": "crisisguard_edge_dashboard"
+              },
+              "status": "applied",
+              "created_at": "2026-10-26T12:43:08.674795+00:00"
+            },
+            {
+              "event_id": "EDGE_1958b5f7f19d4e97aa770ba6f75b681d",
+              "site_id": "Hospital_B",
+              "event_type": "patient_registration",
+              "base_priority": 2,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "EDGE_PATIENT_4ed85bcf6c24483e821336023c1de220",
+                "test_source": "crisisguard_edge_dashboard"
+              },
+              "status": "applied",
+              "created_at": "2026-10-26T12:43:08.830195+00:00"
+            },
+            {
+              "event_id": "EDGE_c2c3e630e2a14ace837b37cb819868c4",
+              "site_id": "Hospital_B",
+              "event_type": "patient_registration",
+              "base_priority": 2,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "EDGE_PATIENT_072793b878d143b58edf7478d014039a",
+                "test_source": "crisisguard_edge_dashboard"
+              },
+              "status": "applied",
+              "created_at": "2026-10-26T12:43:08.988067+00:00"
+            },
+            {
+              "event_id": "EDGE_a120088086944f1bbd33a95f11a90ef8",
+              "site_id": "Hospital_B",
+              "event_type": "patient_registration",
+              "base_priority": 2,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "EDGE_PATIENT_6f28318b0d0046ff848fe249eeb138ef",
+                "test_source": "crisisguard_edge_dashboard"
+              },
+              "status": "applied",
+              "created_at": "2026-10-26T12:43:09.137591+00:00"
+            },
+            {
+              "event_id": "EDGE_7e97042f97a1489fa8f74270785b51a2",
+              "site_id": "Hospital_B",
+              "event_type": "patient_registration",
+              "base_priority": 2,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "EDGE_PATIENT_8891be3b75c04f63b98024407c36ea5e",
+                "test_source": "crisisguard_edge_dashboard"
+              },
+              "status": "applied",
+              "created_at": "2026-10-26T12:43:09.288051+00:00"
+            },
+            {
+              "event_id": "EDGE_4c7b027b43e64641a84d899fc0f553b1",
+              "site_id": "Hospital_B",
+              "event_type": "patient_registration",
+              "base_priority": 2,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "EDGE_PATIENT_e9506c16a13c413a8a3039095d53911c",
+                "test_source": "crisisguard_edge_dashboard"
+              },
+              "status": "applied",
+              "created_at": "2026-10-26T12:43:09.429683+00:00"
+            },
+            {
+              "event_id": "EDGE_de56b0e9538b4a8499610e149f8c2dd7",
+              "site_id": "Hospital_B",
+              "event_type": "patient_registration",
+              "base_priority": 2,
+              "prerequisite_ids": [],
+              "payload": {
+                "patient_id": "EDGE_PATIENT_03bc8aee6642463a86c4403d3bfde98a",
+                "test_source": "crisisguard_edge_dashboard"
+              },
+              "status": "applied",
+              "created_at": "2026-10-26T12:43:09.583434+00:00"
+            }
+          ]
+        }
+      },
+      "cloud_outage_status": {
+        "project": "crisisguard-local",
+        "services": {
+          "patient": {
+            "healthy": false,
+            "running": false
+          },
+          "emergency": {
+            "healthy": false,
+            "running": false
+          },
+          "admin": {
+            "healthy": false,
+            "running": false
+          }
+        },
+        "busy": true
+      },
+      "restored_cloud": {
+        "project": "crisisguard-local",
+        "services": {
+          "patient": {
+            "healthy": true,
+            "running": true
+          },
+          "emergency": {
+            "healthy": true,
+            "running": true
+          },
+          "admin": {
+            "healthy": true,
+            "running": true
+          }
+        },
+        "busy": true
+      },
+      "synchronization": {
+        "elapsed_observed_seconds": 3.74,
+        "postgresql": [
+          {
+            "event_id": "CG_LIVE_20261027_fa3c6536_OFFLINE_A_1",
+            "site_id": "Hospital_A",
+            "event_type": "patient_registration",
+            "base_priority": 2,
+            "prerequisite_ids": [],
+            "payload": {
+              "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+              "test_source": "live_integration_verification"
+            },
+            "status": "applied",
+            "applied_at": "2026-10-27T09:55:06.043641+00:00"
+          },
+          {
+            "event_id": "CG_LIVE_20261027_fa3c6536_OFFLINE_A_2",
+            "site_id": "Hospital_A",
+            "event_type": "patient_registration",
+            "base_priority": 2,
+            "prerequisite_ids": [],
+            "payload": {
+              "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+              "test_source": "live_integration_verification"
+            },
+            "status": "applied",
+            "applied_at": "2026-10-27T09:55:06.061222+00:00"
+          },
+          {
+            "event_id": "CG_LIVE_20261027_fa3c6536_OFFLINE_A_3",
+            "site_id": "Hospital_A",
+            "event_type": "patient_registration",
+            "base_priority": 2,
+            "prerequisite_ids": [],
+            "payload": {
+              "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+              "test_source": "live_integration_verification"
+            },
+            "status": "applied",
+            "applied_at": "2026-10-27T09:55:06.079181+00:00"
+          }
+        ],
+        "sqlite": [
+          {
+            "event_id": "CG_LIVE_20261027_fa3c6536_OFFLINE_A_1",
+            "site_id": "Hospital_A",
+            "event_type": "patient_registration",
+            "base_priority": 2,
+            "prerequisite_ids": "[]",
+            "payload": "{\"patient_id\": \"CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A\", \"test_source\": \"live_integration_verification\"}",
+            "status": "applied",
+            "created_at": "2026-10-27T09:54:50.303263+00:00"
+          },
+          {
+            "event_id": "CG_LIVE_20261027_fa3c6536_OFFLINE_A_2",
+            "site_id": "Hospital_A",
+            "event_type": "patient_registration",
+            "base_priority": 2,
+            "prerequisite_ids": "[]",
+            "payload": "{\"patient_id\": \"CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A\", \"test_source\": \"live_integration_verification\"}",
+            "status": "applied",
+            "created_at": "2026-10-27T09:54:50.521206+00:00"
+          },
+          {
+            "event_id": "CG_LIVE_20261027_fa3c6536_OFFLINE_A_3",
+            "site_id": "Hospital_A",
+            "event_type": "patient_registration",
+            "base_priority": 2,
+            "prerequisite_ids": "[]",
+            "payload": "{\"patient_id\": \"CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A\", \"test_source\": \"live_integration_verification\"}",
+            "status": "applied",
+            "created_at": "2026-10-27T09:54:50.710203+00:00"
+          }
+        ]
+      },
+      "result": "PASS"
+    },
+    "hospital_a_only_partition": {
+      "result": "NOT VERIFIED",
+      "actual": "Existing safe local control has all-Cloud scope; broader outage was explicitly authorized."
+    },
+    "dependency": {
+      "child_capture": {
+        "http_status": 200,
+        "capture_response": {
+          "http_status": 201,
+          "response": {
+            "status": "pending",
+            "event_id": "CG_LIVE_20261027_fa3c6536_DEPENDENCY_ENCOUNTER_A",
+            "site_id": "Hospital_A"
+          }
+        },
+        "immediate_sqlite": {
+          "event_id": "CG_LIVE_20261027_fa3c6536_DEPENDENCY_ENCOUNTER_A",
+          "site_id": "Hospital_A",
+          "event_type": "encounter_creation",
+          "base_priority": 5,
+          "prerequisite_ids": "[\"CG_LIVE_20261027_fa3c6536_DEPENDENCY_PARENT_A\"]",
+          "payload": "{\"patient_id\": \"CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A\", \"test_source\": \"live_integration_verification\"}",
+          "status": "pending",
+          "created_at": "2026-10-27T09:55:06.945857+00:00"
+        }
+      },
+      "scheduler_while_parent_missing": {
+        "inheritance_enabled": true,
+        "evaluated_at": "2026-10-27T09:55:10.156613+00:00",
+        "next_event_id": null,
+        "events": [
+          {
+            "event_id": "CG_LIVE_20261027_fa3c6536_DEPENDENCY_ENCOUNTER_A",
+            "created_at": "2026-10-27T09:55:06.945857+00:00",
+            "base_priority": 5,
+            "aged_priority": 5,
+            "effective_priority": null,
+            "inherited_from": null,
+            "prerequisite_ids": [
+              "CG_LIVE_20261027_fa3c6536_DEPENDENCY_PARENT_A"
+            ],
+            "waiting_on": [
+              "CG_LIVE_20261027_fa3c6536_DEPENDENCY_PARENT_A"
+            ],
+            "eligible": false,
+            "reason": "Missing prerequisite or downstream of missing event",
+            "selected": false
+          }
+        ],
+        "pending_count": 1,
+        "warning": "Read-only snapshot. Concurrent replay or capture may change the next scheduling decision."
+      },
+      "parent_capture": {
+        "http_status": 200,
+        "capture_response": {
+          "http_status": 201,
+          "response": {
+            "status": "pending",
+            "event_id": "CG_LIVE_20261027_fa3c6536_DEPENDENCY_PARENT_A",
+            "site_id": "Hospital_A"
+          }
+        },
+        "immediate_sqlite": {
+          "event_id": "CG_LIVE_20261027_fa3c6536_DEPENDENCY_PARENT_A",
+          "site_id": "Hospital_A",
+          "event_type": "patient_registration",
+          "base_priority": 1,
+          "prerequisite_ids": "[]",
+          "payload": "{\"patient_id\": \"CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A\", \"test_source\": \"live_integration_verification\"}",
+          "status": "pending",
+          "created_at": "2026-10-27T09:55:10.381037+00:00"
+        }
+      },
+      "scheduler_after_parent_capture": {
+        "inheritance_enabled": true,
+        "evaluated_at": "2026-10-27T09:55:10.638314+00:00",
+        "next_event_id": "CG_LIVE_20261027_fa3c6536_DEPENDENCY_PARENT_A",
+        "events": [
+          {
+            "event_id": "CG_LIVE_20261027_fa3c6536_DEPENDENCY_ENCOUNTER_A",
+            "created_at": "2026-10-27T09:55:06.945857+00:00",
+            "base_priority": 5,
+            "aged_priority": 5,
+            "effective_priority": 5,
+            "inherited_from": null,
+            "prerequisite_ids": [
+              "CG_LIVE_20261027_fa3c6536_DEPENDENCY_PARENT_A"
+            ],
+            "waiting_on": [
+              "CG_LIVE_20261027_fa3c6536_DEPENDENCY_PARENT_A"
+            ],
+            "eligible": false,
+            "reason": "Waiting for prerequisite acknowledgement",
+            "selected": false
+          },
+          {
+            "event_id": "CG_LIVE_20261027_fa3c6536_DEPENDENCY_PARENT_A",
+            "created_at": "2026-10-27T09:55:10.381037+00:00",
+            "base_priority": 1,
+            "aged_priority": 1,
+            "effective_priority": 5,
+            "inherited_from": "CG_LIVE_20261027_fa3c6536_DEPENDENCY_ENCOUNTER_A",
+            "prerequisite_ids": [],
+            "waiting_on": [],
+            "eligible": true,
+            "reason": "Eligible",
+            "selected": true
+          }
+        ],
+        "pending_count": 2,
+        "warning": "Read-only snapshot. Concurrent replay or capture may change the next scheduling decision."
+      },
+      "synchronization": {
+        "elapsed_observed_seconds": 2.123,
+        "postgresql": [
+          {
+            "event_id": "CG_LIVE_20261027_fa3c6536_DEPENDENCY_ENCOUNTER_A",
+            "site_id": "Hospital_A",
+            "event_type": "encounter_creation",
+            "base_priority": 5,
+            "prerequisite_ids": [
+              "CG_LIVE_20261027_fa3c6536_DEPENDENCY_PARENT_A"
+            ],
+            "payload": {
+              "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+              "test_source": "live_integration_verification"
+            },
+            "status": "applied",
+            "applied_at": "2026-10-27T09:55:11.154158+00:00"
+          },
+          {
+            "event_id": "CG_LIVE_20261027_fa3c6536_DEPENDENCY_PARENT_A",
+            "site_id": "Hospital_A",
+            "event_type": "patient_registration",
+            "base_priority": 1,
+            "prerequisite_ids": [],
+            "payload": {
+              "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+              "test_source": "live_integration_verification"
+            },
+            "status": "applied",
+            "applied_at": "2026-10-27T09:55:11.134661+00:00"
+          }
+        ],
+        "sqlite": [
+          {
+            "event_id": "CG_LIVE_20261027_fa3c6536_DEPENDENCY_ENCOUNTER_A",
+            "site_id": "Hospital_A",
+            "event_type": "encounter_creation",
+            "base_priority": 5,
+            "prerequisite_ids": "[\"CG_LIVE_20261027_fa3c6536_DEPENDENCY_PARENT_A\"]",
+            "payload": "{\"patient_id\": \"CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A\", \"test_source\": \"live_integration_verification\"}",
+            "status": "applied",
+            "created_at": "2026-10-27T09:55:06.945857+00:00"
+          },
+          {
+            "event_id": "CG_LIVE_20261027_fa3c6536_DEPENDENCY_PARENT_A",
+            "site_id": "Hospital_A",
+            "event_type": "patient_registration",
+            "base_priority": 1,
+            "prerequisite_ids": "[]",
+            "payload": "{\"patient_id\": \"CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A\", \"test_source\": \"live_integration_verification\"}",
+            "status": "applied",
+            "created_at": "2026-10-27T09:55:10.381037+00:00"
+          }
+        ]
+      },
+      "result": "PASS",
+      "selection_evidence_limit": "Inspector gives read-only next-decision snapshots, not an executed selection trace. Child was absent from PostgreSQL while its parent was missing. DB timestamps are retained as observations, not interpreted as commit order."
+    },
+    "two_hospital": {
+      "captures": [
+        {
+          "http_status": 200,
+          "capture_response": {
+            "http_status": 201,
+            "response": {
+              "status": "pending",
+              "event_id": "CG_LIVE_20261027_fa3c6536_PAIR_A",
+              "site_id": "Hospital_A"
+            }
+          },
+          "immediate_sqlite": {
+            "event_id": "CG_LIVE_20261027_fa3c6536_PAIR_A",
+            "site_id": "Hospital_A",
+            "event_type": "patient_registration",
+            "base_priority": 2,
+            "prerequisite_ids": "[]",
+            "payload": "{\"patient_id\": \"CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A\", \"test_source\": \"live_integration_verification\"}",
+            "status": "pending",
+            "created_at": "2026-10-27T09:55:12.779481+00:00"
+          }
+        },
+        {
+          "http_status": 200,
+          "capture_response": {
+            "http_status": 201,
+            "response": {
+              "status": "pending",
+              "event_id": "CG_LIVE_20261027_fa3c6536_PAIR_B",
+              "site_id": "Hospital_B"
+            }
+          },
+          "immediate_sqlite": {
+            "event_id": "CG_LIVE_20261027_fa3c6536_PAIR_B",
+            "site_id": "Hospital_B",
+            "event_type": "patient_registration",
+            "base_priority": 2,
+            "prerequisite_ids": "[]",
+            "payload": "{\"patient_id\": \"CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_B\", \"test_source\": \"live_integration_verification\"}",
+            "status": "pending",
+            "created_at": "2026-10-27T09:55:12.974765+00:00"
+          }
+        }
+      ],
+      "synchronization": {
+        "elapsed_observed_seconds": 3.723,
+        "postgresql": [
+          {
+            "event_id": "CG_LIVE_20261027_fa3c6536_PAIR_A",
+            "site_id": "Hospital_A",
+            "event_type": "patient_registration",
+            "base_priority": 2,
+            "prerequisite_ids": [],
+            "payload": {
+              "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+              "test_source": "live_integration_verification"
+            },
+            "status": "applied",
+            "applied_at": "2026-10-27T09:55:16.21253+00:00"
+          },
+          {
+            "event_id": "CG_LIVE_20261027_fa3c6536_PAIR_B",
+            "site_id": "Hospital_B",
+            "event_type": "patient_registration",
+            "base_priority": 2,
+            "prerequisite_ids": [],
+            "payload": {
+              "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_B",
+              "test_source": "live_integration_verification"
+            },
+            "status": "applied",
+            "applied_at": "2026-10-27T09:55:15.84772+00:00"
+          }
+        ],
+        "sqlite": [
+          {
+            "event_id": "CG_LIVE_20261027_fa3c6536_PAIR_A",
+            "site_id": "Hospital_A",
+            "event_type": "patient_registration",
+            "base_priority": 2,
+            "prerequisite_ids": "[]",
+            "payload": "{\"patient_id\": \"CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A\", \"test_source\": \"live_integration_verification\"}",
+            "status": "applied",
+            "created_at": "2026-10-27T09:55:12.779481+00:00"
+          },
+          {
+            "event_id": "CG_LIVE_20261027_fa3c6536_PAIR_B",
+            "site_id": "Hospital_B",
+            "event_type": "patient_registration",
+            "base_priority": 2,
+            "prerequisite_ids": "[]",
+            "payload": "{\"patient_id\": \"CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_B\", \"test_source\": \"live_integration_verification\"}",
+            "status": "applied",
+            "created_at": "2026-10-27T09:55:12.974765+00:00"
+          }
+        ]
+      },
+      "result": "PASS",
+      "fairness_limit": "Both sites progress; two events do not prove long-term fairness."
+    },
+    "dashboard_api_observability": {
+      "result": "PASS",
+      "queue_counts": {
+        "hospital-a": {
+          "total": 27,
+          "pending": 0,
+          "applied": 27
+        },
+        "hospital-b": {
+          "total": 18,
+          "pending": 0,
+          "applied": 18
+        }
+      },
+      "test_history": [
+        {
+          "event_id": "CG_LIVE_20261027_fa3c6536_PAIR_A",
+          "site_id": "Hospital_A",
+          "event_type": "patient_registration",
+          "base_priority": 2,
+          "prerequisite_ids": [],
+          "payload": {
+            "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+            "test_source": "live_integration_verification"
+          },
+          "status": "applied",
+          "applied_at": "2026-10-27T09:55:16.212530+00:00"
+        },
+        {
+          "event_id": "CG_LIVE_20261027_fa3c6536_PAIR_B",
+          "site_id": "Hospital_B",
+          "event_type": "patient_registration",
+          "base_priority": 2,
+          "prerequisite_ids": [],
+          "payload": {
+            "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_B",
+            "test_source": "live_integration_verification"
+          },
+          "status": "applied",
+          "applied_at": "2026-10-27T09:55:15.847720+00:00"
+        },
+        {
+          "event_id": "CG_LIVE_20261027_fa3c6536_DEPENDENCY_ENCOUNTER_A",
+          "site_id": "Hospital_A",
+          "event_type": "encounter_creation",
+          "base_priority": 5,
+          "prerequisite_ids": [
+            "CG_LIVE_20261027_fa3c6536_DEPENDENCY_PARENT_A"
+          ],
+          "payload": {
+            "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+            "test_source": "live_integration_verification"
+          },
+          "status": "applied",
+          "applied_at": "2026-10-27T09:55:11.154158+00:00"
+        },
+        {
+          "event_id": "CG_LIVE_20261027_fa3c6536_DEPENDENCY_PARENT_A",
+          "site_id": "Hospital_A",
+          "event_type": "patient_registration",
+          "base_priority": 1,
+          "prerequisite_ids": [],
+          "payload": {
+            "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+            "test_source": "live_integration_verification"
+          },
+          "status": "applied",
+          "applied_at": "2026-10-27T09:55:11.134661+00:00"
+        },
+        {
+          "event_id": "CG_LIVE_20261027_fa3c6536_OFFLINE_A_3",
+          "site_id": "Hospital_A",
+          "event_type": "patient_registration",
+          "base_priority": 2,
+          "prerequisite_ids": [],
+          "payload": {
+            "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+            "test_source": "live_integration_verification"
+          },
+          "status": "applied",
+          "applied_at": "2026-10-27T09:55:06.079181+00:00"
+        },
+        {
+          "event_id": "CG_LIVE_20261027_fa3c6536_OFFLINE_A_2",
+          "site_id": "Hospital_A",
+          "event_type": "patient_registration",
+          "base_priority": 2,
+          "prerequisite_ids": [],
+          "payload": {
+            "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+            "test_source": "live_integration_verification"
+          },
+          "status": "applied",
+          "applied_at": "2026-10-27T09:55:06.061222+00:00"
+        },
+        {
+          "event_id": "CG_LIVE_20261027_fa3c6536_OFFLINE_A_1",
+          "site_id": "Hospital_A",
+          "event_type": "patient_registration",
+          "base_priority": 2,
+          "prerequisite_ids": [],
+          "payload": {
+            "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+            "test_source": "live_integration_verification"
+          },
+          "status": "applied",
+          "applied_at": "2026-10-27T09:55:06.043641+00:00"
+        },
+        {
+          "event_id": "CG_LIVE_20261027_fa3c6536_NORMAL_A",
+          "site_id": "Hospital_A",
+          "event_type": "patient_registration",
+          "base_priority": 2,
+          "prerequisite_ids": [],
+          "payload": {
+            "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+            "test_source": "live_integration_verification"
+          },
+          "status": "applied",
+          "applied_at": "2026-10-27T09:54:44.026343+00:00"
+        }
+      ],
+      "postgresql": [
+        {
+          "event_id": "CG_LIVE_20261027_fa3c6536_DEPENDENCY_ENCOUNTER_A",
+          "site_id": "Hospital_A",
+          "event_type": "encounter_creation",
+          "base_priority": 5,
+          "prerequisite_ids": [
+            "CG_LIVE_20261027_fa3c6536_DEPENDENCY_PARENT_A"
+          ],
+          "payload": {
+            "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+            "test_source": "live_integration_verification"
+          },
+          "status": "applied",
+          "applied_at": "2026-10-27T09:55:11.154158+00:00"
+        },
+        {
+          "event_id": "CG_LIVE_20261027_fa3c6536_DEPENDENCY_PARENT_A",
+          "site_id": "Hospital_A",
+          "event_type": "patient_registration",
+          "base_priority": 1,
+          "prerequisite_ids": [],
+          "payload": {
+            "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+            "test_source": "live_integration_verification"
+          },
+          "status": "applied",
+          "applied_at": "2026-10-27T09:55:11.134661+00:00"
+        },
+        {
+          "event_id": "CG_LIVE_20261027_fa3c6536_NORMAL_A",
+          "site_id": "Hospital_A",
+          "event_type": "patient_registration",
+          "base_priority": 2,
+          "prerequisite_ids": [],
+          "payload": {
+            "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+            "test_source": "live_integration_verification"
+          },
+          "status": "applied",
+          "applied_at": "2026-10-27T09:54:44.026343+00:00"
+        },
+        {
+          "event_id": "CG_LIVE_20261027_fa3c6536_OFFLINE_A_1",
+          "site_id": "Hospital_A",
+          "event_type": "patient_registration",
+          "base_priority": 2,
+          "prerequisite_ids": [],
+          "payload": {
+            "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+            "test_source": "live_integration_verification"
+          },
+          "status": "applied",
+          "applied_at": "2026-10-27T09:55:06.043641+00:00"
+        },
+        {
+          "event_id": "CG_LIVE_20261027_fa3c6536_OFFLINE_A_2",
+          "site_id": "Hospital_A",
+          "event_type": "patient_registration",
+          "base_priority": 2,
+          "prerequisite_ids": [],
+          "payload": {
+            "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+            "test_source": "live_integration_verification"
+          },
+          "status": "applied",
+          "applied_at": "2026-10-27T09:55:06.061222+00:00"
+        },
+        {
+          "event_id": "CG_LIVE_20261027_fa3c6536_OFFLINE_A_3",
+          "site_id": "Hospital_A",
+          "event_type": "patient_registration",
+          "base_priority": 2,
+          "prerequisite_ids": [],
+          "payload": {
+            "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+            "test_source": "live_integration_verification"
+          },
+          "status": "applied",
+          "applied_at": "2026-10-27T09:55:06.079181+00:00"
+        },
+        {
+          "event_id": "CG_LIVE_20261027_fa3c6536_PAIR_A",
+          "site_id": "Hospital_A",
+          "event_type": "patient_registration",
+          "base_priority": 2,
+          "prerequisite_ids": [],
+          "payload": {
+            "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+            "test_source": "live_integration_verification"
+          },
+          "status": "applied",
+          "applied_at": "2026-10-27T09:55:16.21253+00:00"
+        },
+        {
+          "event_id": "CG_LIVE_20261027_fa3c6536_PAIR_B",
+          "site_id": "Hospital_B",
+          "event_type": "patient_registration",
+          "base_priority": 2,
+          "prerequisite_ids": [],
+          "payload": {
+            "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_B",
+            "test_source": "live_integration_verification"
+          },
+          "status": "applied",
+          "applied_at": "2026-10-27T09:55:15.84772+00:00"
+        }
+      ],
+      "metrics_proxy": {
+        "patient": {
+          "service": "patient",
+          "http_status": 200,
+          "response": {
+            "average_latency_ms": 8.03,
+            "error_rate": 0.0,
+            "throughput_rps": 0.3727,
+            "window_requests": 7,
+            "total_requests": 7,
+            "failed_requests": 0,
+            "window_seconds": 60,
+            "uptime_seconds": 18.78,
+            "sampled_at": "2026-10-27T09:55:17.703045+00:00",
+            "service": "patient",
+            "database_healthy": true
+          }
+        },
+        "emergency": {
+          "service": "emergency",
+          "http_status": 200,
+          "response": {
+            "average_latency_ms": 0.0,
+            "error_rate": 0.0,
+            "throughput_rps": 0.0,
+            "window_requests": 0,
+            "total_requests": 0,
+            "failed_requests": 0,
+            "window_seconds": 60,
+            "uptime_seconds": 15.6,
+            "sampled_at": "2026-10-27T09:55:17.714293+00:00",
+            "service": "emergency",
+            "database_healthy": true
+          }
+        },
+        "admin": {
+          "service": "admin",
+          "http_status": 200,
+          "response": {
+            "average_latency_ms": 0.0,
+            "error_rate": 0.0,
+            "throughput_rps": 0.0,
+            "window_requests": 0,
+            "total_requests": 0,
+            "failed_requests": 0,
+            "window_seconds": 60,
+            "uptime_seconds": 15.38,
+            "sampled_at": "2026-10-27T09:55:17.725748+00:00",
+            "service": "admin",
+            "database_healthy": true
+          }
+        }
+      },
+      "metrics_direct": {
+        "patient": {
+          "average_latency_ms": 8.03,
+          "error_rate": 0.0,
+          "throughput_rps": 0.3717,
+          "window_requests": 7,
+          "total_requests": 7,
+          "failed_requests": 0,
+          "window_seconds": 60,
+          "uptime_seconds": 18.83,
+          "sampled_at": "2026-10-27T09:55:17.753293+00:00",
+          "service": "patient",
+          "database_healthy": true
+        },
+        "emergency": {
+          "average_latency_ms": 0.0,
+          "error_rate": 0.0,
+          "throughput_rps": 0.0,
+          "window_requests": 0,
+          "total_requests": 0,
+          "failed_requests": 0,
+          "window_seconds": 60,
+          "uptime_seconds": 15.65,
+          "sampled_at": "2026-10-27T09:55:17.760445+00:00",
+          "service": "emergency",
+          "database_healthy": true
+        },
+        "admin": {
+          "average_latency_ms": 0.0,
+          "error_rate": 0.0,
+          "throughput_rps": 0.0,
+          "window_requests": 0,
+          "total_requests": 0,
+          "failed_requests": 0,
+          "window_seconds": 60,
+          "uptime_seconds": 15.44,
+          "sampled_at": "2026-10-27T09:55:17.784309+00:00",
+          "service": "admin",
+          "database_healthy": true
+        }
+      },
+      "limits": "HTTP/API checks only. Browser automatic refresh and duplicate-loop behavior not observed. API metrics are real rolling means/rates; no live-only p95."
+    },
+    "metaguard": {
+      "result": "NOT VERIFIED",
+      "actual": {
+        "status": "not_configured"
+      },
+      "reason": "No controller service in current seven-service stack; do not infer admission or fairness."
+    }
+  },
+  "calls": [
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "postgres",
+        "psql",
+        "-U",
+        "crisisguard",
+        "-d",
+        "crisisguard",
+        "-At",
+        "-c",
+        "SELECT coalesce(json_agg(event_id ORDER BY event_id),'[]'::json) FROM events"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-a",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-b",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8080/health",
+      "body": null,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8080/api/services",
+      "body": null,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8080/api/metrics",
+      "body": null,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8080/api/recovery",
+      "body": null,
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8080/api/hospitals/hospital-a/capture",
+      "body": {
+        "event_id": "CG_LIVE_20261027_fa3c6536_NORMAL_A",
+        "site_id": "Hospital_A",
+        "event_type": "patient_registration",
+        "base_priority": 2,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+          "test_source": "live_integration_verification"
+        }
+      },
+      "status": 200
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-a",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "postgres",
+        "psql",
+        "-U",
+        "crisisguard",
+        "-d",
+        "crisisguard",
+        "-At",
+        "-c",
+        "SELECT coalesce(json_agg(t),'[]'::json) FROM (SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,applied_at FROM events WHERE event_id LIKE 'CG_LIVE_20261027_fa3c6536%' ORDER BY event_id)t"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-a",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-b",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "postgres",
+        "psql",
+        "-U",
+        "crisisguard",
+        "-d",
+        "crisisguard",
+        "-At",
+        "-c",
+        "SELECT coalesce(json_agg(t),'[]'::json) FROM (SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,applied_at FROM events WHERE event_id LIKE 'CG_LIVE_20261027_fa3c6536%' ORDER BY event_id)t"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-a",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-b",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "postgres",
+        "psql",
+        "-U",
+        "crisisguard",
+        "-d",
+        "crisisguard",
+        "-At",
+        "-c",
+        "SELECT coalesce(json_agg(t),'[]'::json) FROM (SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,applied_at FROM events WHERE event_id LIKE 'CG_LIVE_20261027_fa3c6536%' ORDER BY event_id)t"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-a",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-b",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "postgres",
+        "psql",
+        "-U",
+        "crisisguard",
+        "-d",
+        "crisisguard",
+        "-At",
+        "-c",
+        "SELECT coalesce(json_agg(t),'[]'::json) FROM (SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,applied_at FROM events WHERE event_id LIKE 'CG_LIVE_20261027_fa3c6536%' ORDER BY event_id)t"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-a",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-b",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "python": "Control().operate(\"outage\")",
+      "scope": "Original project patient/emergency/admin APIs; explicitly authorized broader outage"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8080/api/hospitals/hospital-a/capture",
+      "body": {
+        "event_id": "CG_LIVE_20261027_fa3c6536_OFFLINE_A_1",
+        "site_id": "Hospital_A",
+        "event_type": "patient_registration",
+        "base_priority": 2,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+          "test_source": "live_integration_verification"
+        }
+      },
+      "status": 200
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-a",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8080/api/hospitals/hospital-a/capture",
+      "body": {
+        "event_id": "CG_LIVE_20261027_fa3c6536_OFFLINE_A_2",
+        "site_id": "Hospital_A",
+        "event_type": "patient_registration",
+        "base_priority": 2,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+          "test_source": "live_integration_verification"
+        }
+      },
+      "status": 200
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-a",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8080/api/hospitals/hospital-a/capture",
+      "body": {
+        "event_id": "CG_LIVE_20261027_fa3c6536_OFFLINE_A_3",
+        "site_id": "Hospital_A",
+        "event_type": "patient_registration",
+        "base_priority": 2,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+          "test_source": "live_integration_verification"
+        }
+      },
+      "status": 200
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-a",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-a",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "postgres",
+        "psql",
+        "-U",
+        "crisisguard",
+        "-d",
+        "crisisguard",
+        "-At",
+        "-c",
+        "SELECT coalesce(json_agg(t),'[]'::json) FROM (SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,applied_at FROM events WHERE event_id LIKE 'CG_LIVE_20261027_fa3c6536%' ORDER BY event_id)t"
+      ]
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8080/api/hospitals",
+      "body": null,
+      "status": 200
+    },
+    {
+      "python": "Control().operate(\"restore\")"
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "postgres",
+        "psql",
+        "-U",
+        "crisisguard",
+        "-d",
+        "crisisguard",
+        "-At",
+        "-c",
+        "SELECT coalesce(json_agg(t),'[]'::json) FROM (SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,applied_at FROM events WHERE event_id LIKE 'CG_LIVE_20261027_fa3c6536%' ORDER BY event_id)t"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-a",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-b",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "postgres",
+        "psql",
+        "-U",
+        "crisisguard",
+        "-d",
+        "crisisguard",
+        "-At",
+        "-c",
+        "SELECT coalesce(json_agg(t),'[]'::json) FROM (SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,applied_at FROM events WHERE event_id LIKE 'CG_LIVE_20261027_fa3c6536%' ORDER BY event_id)t"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-a",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-b",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "postgres",
+        "psql",
+        "-U",
+        "crisisguard",
+        "-d",
+        "crisisguard",
+        "-At",
+        "-c",
+        "SELECT coalesce(json_agg(t),'[]'::json) FROM (SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,applied_at FROM events WHERE event_id LIKE 'CG_LIVE_20261027_fa3c6536%' ORDER BY event_id)t"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-a",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-b",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-a",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8080/api/hospitals/hospital-a/capture",
+      "body": {
+        "event_id": "CG_LIVE_20261027_fa3c6536_DEPENDENCY_ENCOUNTER_A",
+        "site_id": "Hospital_A",
+        "event_type": "encounter_creation",
+        "base_priority": 5,
+        "prerequisite_ids": [
+          "CG_LIVE_20261027_fa3c6536_DEPENDENCY_PARENT_A"
+        ],
+        "payload": {
+          "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+          "test_source": "live_integration_verification"
+        }
+      },
+      "status": 200
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-a",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8080/api/hospitals/hospital-a/scheduler/inspect?inheritance=true",
+      "body": null,
+      "status": 200
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "postgres",
+        "psql",
+        "-U",
+        "crisisguard",
+        "-d",
+        "crisisguard",
+        "-At",
+        "-c",
+        "SELECT coalesce(json_agg(t),'[]'::json) FROM (SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,applied_at FROM events WHERE event_id LIKE 'CG_LIVE_20261027_fa3c6536%' ORDER BY event_id)t"
+      ]
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8080/api/hospitals/hospital-a/capture",
+      "body": {
+        "event_id": "CG_LIVE_20261027_fa3c6536_DEPENDENCY_PARENT_A",
+        "site_id": "Hospital_A",
+        "event_type": "patient_registration",
+        "base_priority": 1,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+          "test_source": "live_integration_verification"
+        }
+      },
+      "status": 200
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-a",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8080/api/hospitals/hospital-a/scheduler/inspect?inheritance=true",
+      "body": null,
+      "status": 200
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "postgres",
+        "psql",
+        "-U",
+        "crisisguard",
+        "-d",
+        "crisisguard",
+        "-At",
+        "-c",
+        "SELECT coalesce(json_agg(t),'[]'::json) FROM (SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,applied_at FROM events WHERE event_id LIKE 'CG_LIVE_20261027_fa3c6536%' ORDER BY event_id)t"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-a",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-b",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "postgres",
+        "psql",
+        "-U",
+        "crisisguard",
+        "-d",
+        "crisisguard",
+        "-At",
+        "-c",
+        "SELECT coalesce(json_agg(t),'[]'::json) FROM (SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,applied_at FROM events WHERE event_id LIKE 'CG_LIVE_20261027_fa3c6536%' ORDER BY event_id)t"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-a",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-b",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8080/api/hospitals/hospital-a/capture",
+      "body": {
+        "event_id": "CG_LIVE_20261027_fa3c6536_PAIR_A",
+        "site_id": "Hospital_A",
+        "event_type": "patient_registration",
+        "base_priority": 2,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+          "test_source": "live_integration_verification"
+        }
+      },
+      "status": 200
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-a",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8080/api/hospitals/hospital-b/capture",
+      "body": {
+        "event_id": "CG_LIVE_20261027_fa3c6536_PAIR_B",
+        "site_id": "Hospital_B",
+        "event_type": "patient_registration",
+        "base_priority": 2,
+        "prerequisite_ids": [],
+        "payload": {
+          "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_B",
+          "test_source": "live_integration_verification"
+        }
+      },
+      "status": 200
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-b",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "postgres",
+        "psql",
+        "-U",
+        "crisisguard",
+        "-d",
+        "crisisguard",
+        "-At",
+        "-c",
+        "SELECT coalesce(json_agg(t),'[]'::json) FROM (SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,applied_at FROM events WHERE event_id LIKE 'CG_LIVE_20261027_fa3c6536%' ORDER BY event_id)t"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-a",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-b",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "postgres",
+        "psql",
+        "-U",
+        "crisisguard",
+        "-d",
+        "crisisguard",
+        "-At",
+        "-c",
+        "SELECT coalesce(json_agg(t),'[]'::json) FROM (SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,applied_at FROM events WHERE event_id LIKE 'CG_LIVE_20261027_fa3c6536%' ORDER BY event_id)t"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-a",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-b",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "postgres",
+        "psql",
+        "-U",
+        "crisisguard",
+        "-d",
+        "crisisguard",
+        "-At",
+        "-c",
+        "SELECT coalesce(json_agg(t),'[]'::json) FROM (SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,applied_at FROM events WHERE event_id LIKE 'CG_LIVE_20261027_fa3c6536%' ORDER BY event_id)t"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-a",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-b",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8080/api/hospitals",
+      "body": null,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8080/api/history?limit=100",
+      "body": null,
+      "status": 200
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-a",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "hospital-b",
+        "python",
+        "-c",
+        "import sqlite3,os,json\nc=sqlite3.connect('file:'+os.environ['HOSPITAL_DB_PATH']+'?mode=ro',uri=True);c.row_factory=sqlite3.Row\nrows=[dict(r) for r in c.execute('SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,created_at FROM events')]\nprint(json.dumps(rows))"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "postgres",
+        "psql",
+        "-U",
+        "crisisguard",
+        "-d",
+        "crisisguard",
+        "-At",
+        "-c",
+        "SELECT coalesce(json_agg(t),'[]'::json) FROM (SELECT event_id,site_id,event_type,base_priority,prerequisite_ids,payload,status,applied_at FROM events WHERE event_id LIKE 'CG_LIVE_20261027_fa3c6536%' ORDER BY event_id)t"
+      ]
+    },
+    {
+      "command": [
+        "docker",
+        "compose",
+        "exec",
+        "-T",
+        "postgres",
+        "psql",
+        "-U",
+        "crisisguard",
+        "-d",
+        "crisisguard",
+        "-At",
+        "-c",
+        "SELECT coalesce(json_agg(event_id ORDER BY event_id),'[]'::json) FROM events"
+      ]
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8080/api/metrics",
+      "body": null,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8001/metrics",
+      "body": null,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8003/metrics",
+      "body": null,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8004/metrics",
+      "body": null,
+      "status": 200
+    },
+    {
+      "method": "GET",
+      "url": "http://127.0.0.1:8080/api/recovery",
+      "body": null,
+      "status": 200
+    }
+  ],
+  "events": [
+    {
+      "event_id": "CG_LIVE_20261027_fa3c6536_NORMAL_A",
+      "site_id": "Hospital_A",
+      "event_type": "patient_registration",
+      "base_priority": 2,
+      "prerequisite_ids": [],
+      "payload": {
+        "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+        "test_source": "live_integration_verification"
+      }
+    },
+    {
+      "event_id": "CG_LIVE_20261027_fa3c6536_OFFLINE_A_1",
+      "site_id": "Hospital_A",
+      "event_type": "patient_registration",
+      "base_priority": 2,
+      "prerequisite_ids": [],
+      "payload": {
+        "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+        "test_source": "live_integration_verification"
+      }
+    },
+    {
+      "event_id": "CG_LIVE_20261027_fa3c6536_OFFLINE_A_2",
+      "site_id": "Hospital_A",
+      "event_type": "patient_registration",
+      "base_priority": 2,
+      "prerequisite_ids": [],
+      "payload": {
+        "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+        "test_source": "live_integration_verification"
+      }
+    },
+    {
+      "event_id": "CG_LIVE_20261027_fa3c6536_OFFLINE_A_3",
+      "site_id": "Hospital_A",
+      "event_type": "patient_registration",
+      "base_priority": 2,
+      "prerequisite_ids": [],
+      "payload": {
+        "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+        "test_source": "live_integration_verification"
+      }
+    },
+    {
+      "event_id": "CG_LIVE_20261027_fa3c6536_DEPENDENCY_PARENT_A",
+      "site_id": "Hospital_A",
+      "event_type": "patient_registration",
+      "base_priority": 1,
+      "prerequisite_ids": [],
+      "payload": {
+        "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+        "test_source": "live_integration_verification"
+      }
+    },
+    {
+      "event_id": "CG_LIVE_20261027_fa3c6536_DEPENDENCY_ENCOUNTER_A",
+      "site_id": "Hospital_A",
+      "event_type": "encounter_creation",
+      "base_priority": 5,
+      "prerequisite_ids": [
+        "CG_LIVE_20261027_fa3c6536_DEPENDENCY_PARENT_A"
+      ],
+      "payload": {
+        "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+        "test_source": "live_integration_verification"
+      }
+    },
+    {
+      "event_id": "CG_LIVE_20261027_fa3c6536_PAIR_A",
+      "site_id": "Hospital_A",
+      "event_type": "patient_registration",
+      "base_priority": 2,
+      "prerequisite_ids": [],
+      "payload": {
+        "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_A",
+        "test_source": "live_integration_verification"
+      }
+    },
+    {
+      "event_id": "CG_LIVE_20261027_fa3c6536_PAIR_B",
+      "site_id": "Hospital_B",
+      "event_type": "patient_registration",
+      "base_priority": 2,
+      "prerequisite_ids": [],
+      "payload": {
+        "patient_id": "CG_LIVE_20261027_fa3c6536_PATIENT_Hospital_B",
+        "test_source": "live_integration_verification"
+      }
+    }
+  ],
+  "limitations": [],
+  "baseline": {
+    "cloud": {
+      "project": "crisisguard-local",
+      "services": {
+        "patient": {
+          "healthy": true,
+          "running": true
+        },
+        "emergency": {
+          "healthy": true,
+          "running": true
+        },
+        "admin": {
+          "healthy": true,
+          "running": true
+        }
+      },
+      "busy": false
+    },
+    "containers": {
+      "dashboard": {
+        "id": "109172d3e4313d33f24665fd526b20924faca822fe908e8449dacbf11f23c6c9",
+        "image": "sha256:4a22c27b3bf3c1bcd02e4c92bdff48dc438351cf968881bf9b371f0c95daf3b6",
+        "mounts": [],
+        "restarts": 0
+      },
+      "hospital-a": {
+        "id": "f0b33acea69f249c89e6a004a1bfe40a13d4699b00358ed584ba52ea41c4e16b",
+        "image": "sha256:4a22c27b3bf3c1bcd02e4c92bdff48dc438351cf968881bf9b371f0c95daf3b6",
+        "mounts": [
+          {
+            "Type": "volume",
+            "Name": "crisisguard-local_hospital-a-data",
+            "Source": "/var/lib/docker/volumes/crisisguard-local_hospital-a-data/_data",
+            "Destination": "/data",
+            "Driver": "local",
+            "Mode": "rw",
+            "RW": true,
+            "Propagation": ""
+          }
+        ],
+        "restarts": 0
+      },
+      "emergency": {
+        "id": "be6229be529dd6b7aec54bb98af43674a6cbcd3dfac7195054548b12fe0f7aa4",
+        "image": "sha256:4a22c27b3bf3c1bcd02e4c92bdff48dc438351cf968881bf9b371f0c95daf3b6",
+        "mounts": [],
+        "restarts": 0
+      },
+      "admin": {
+        "id": "5979811bd137ed9d9370a60b06157f4da4cdad6847c9cd3edd32dfa1dec086b4",
+        "image": "sha256:4a22c27b3bf3c1bcd02e4c92bdff48dc438351cf968881bf9b371f0c95daf3b6",
+        "mounts": [],
+        "restarts": 0
+      },
+      "hospital-b": {
+        "id": "ecada5b14cf25180667fa30ab927e12ffc4fe40e941969283fbd27d5ba1b6577",
+        "image": "sha256:4a22c27b3bf3c1bcd02e4c92bdff48dc438351cf968881bf9b371f0c95daf3b6",
+        "mounts": [
+          {
+            "Type": "volume",
+            "Name": "crisisguard-local_hospital-b-data",
+            "Source": "/var/lib/docker/volumes/crisisguard-local_hospital-b-data/_data",
+            "Destination": "/data",
+            "Driver": "local",
+            "Mode": "rw",
+            "RW": true,
+            "Propagation": ""
+          }
+        ],
+        "restarts": 0
+      },
+      "patient": {
+        "id": "7d42f305516a1d2f754f711bdf2c735f8cd89fd5f43c31b6a5f6abc61cef7243",
+        "image": "sha256:4a22c27b3bf3c1bcd02e4c92bdff48dc438351cf968881bf9b371f0c95daf3b6",
+        "mounts": [],
+        "restarts": 0
+      },
+      "postgres": {
+        "id": "01cce11cfc59db4d000d7fe60669817513e1d21eef90e0012c5ef4fd5e32b103",
+        "image": "sha256:9e2cf6287f25c3151f4c9421ccce2b17f3e60061c111a29165e0d2cdd9ff0a97",
+        "mounts": [
+          {
+            "Type": "volume",
+            "Name": "crisisguard-local_postgres-data",
+            "Source": "/var/lib/docker/volumes/crisisguard-local_postgres-data/_data",
+            "Destination": "/var/lib/postgresql/data",
+            "Driver": "local",
+            "Mode": "rw",
+            "RW": true,
+            "Propagation": ""
+          }
+        ],
+        "restarts": 0
+      }
+    },
+    "volumes": [
+      "b4a991065d804026972195281eea606219b68328d33d569a8a43e16276cbb9bd",
+      "crisisguard-local_hospital-a-data",
+      "crisisguard-local_hospital-b-data",
+      "crisisguard-local_postgres-data",
+      "crisisguard_pgdata",
+      "topicf-task4-benchmark_benchmark_postgres",
+      "topicf-task4-benchmark_benchmark_qdrant",
+      "topicf-task4-round3_round3_postgres",
+      "topicf-task4-round3_round3_qdrant",
+      "topicf-task4-round3_round3_state",
+      "topicf_gis_bedrock_ltm_data",
+      "topicf_gis_db_data",
+      "topicf_gis_titan_qdrant_data"
+    ],
+    "postgresql_count": 124,
+    "postgresql_ids_sha256": "6be79fcd38875506aabef54c8db9d7121bac98e028918e3a0957be36f0c7d64b",
+    "hospitals": {
+      "hospital-a": {
+        "total": 20,
+        "pending": 0,
+        "applied": 20
+      },
+      "hospital-b": {
+        "total": 17,
+        "pending": 0,
+        "applied": 17
+      }
+    },
+    "dashboard_services": {
+      "patient": {
+        "service": "patient",
+        "http_status": 200,
+        "response": {
+          "status": "healthy",
+          "service": "patient",
+          "database": "crisisguard"
+        }
+      },
+      "emergency": {
+        "service": "emergency",
+        "http_status": 200,
+        "response": {
+          "status": "healthy",
+          "service": "emergency",
+          "database": "crisisguard"
+        }
+      },
+      "admin": {
+        "service": "admin",
+        "http_status": 200,
+        "response": {
+          "status": "healthy",
+          "service": "admin",
+          "database": "crisisguard"
+        }
+      }
+    },
+    "metrics": {
+      "patient": {
+        "service": "patient",
+        "http_status": 200,
+        "response": {
+          "average_latency_ms": 0.0,
+          "error_rate": 0.0,
+          "throughput_rps": 0.0,
+          "window_requests": 0,
+          "total_requests": 4,
+          "failed_requests": 0,
+          "window_seconds": 60,
+          "uptime_seconds": 1804.89,
+          "sampled_at": "2026-10-27T09:54:39.603900+00:00",
+          "service": "patient",
+          "database_healthy": true
+        }
+      },
+      "emergency": {
+        "service": "emergency",
+        "http_status": 200,
+        "response": {
+          "average_latency_ms": 0.0,
+          "error_rate": 0.0,
+          "throughput_rps": 0.0,
+          "window_requests": 0,
+          "total_requests": 0,
+          "failed_requests": 0,
+          "window_seconds": 60,
+          "uptime_seconds": 1798.98,
+          "sampled_at": "2026-10-27T09:54:39.614856+00:00",
+          "service": "emergency",
+          "database_healthy": true
+        }
+      },
+      "admin": {
+        "service": "admin",
+        "http_status": 200,
+        "response": {
+          "average_latency_ms": 0.0,
+          "error_rate": 0.0,
+          "throughput_rps": 0.0,
+          "window_requests": 0,
+          "total_requests": 0,
+          "failed_requests": 0,
+          "window_seconds": 60,
+          "uptime_seconds": 1799.21,
+          "sampled_at": "2026-10-27T09:54:39.634223+00:00",
+          "service": "admin",
+          "database_healthy": true
+        }
+      }
+    },
+    "recovery": {
+      "hospitals": {
+        "hospital-a": {
+          "status": "available",
+          "enabled": true,
+          "cloud_reachable": true,
+          "last_check_at": "2026-10-27T09:54:38.977962+00:00",
+          "last_reconnected_at": "2026-10-27T09:24:46.303293+00:00",
+          "drain_completed_at": "2026-10-27T09:35:20.697266+00:00",
+          "last_replay_at": "2026-10-27T09:35:20.696947+00:00",
+          "last_replay_attempted": 1,
+          "last_replay_applied": 1,
+          "replayable_backlog": 0
+        },
+        "hospital-b": {
+          "status": "available",
+          "enabled": true,
+          "cloud_reachable": true,
+          "last_check_at": "2026-10-27T09:54:38.727356+00:00",
+          "last_reconnected_at": "2026-10-27T09:24:46.084583+00:00",
+          "drain_completed_at": null,
+          "last_replay_at": null,
+          "last_replay_attempted": 0,
+          "last_replay_applied": 0,
+          "replayable_backlog": 0
+        }
+      },
+      "controller": {
+        "status": "not_configured"
+      }
+    }
+  },
+  "deployed_assets": {
+    "/": {
+      "status": 200,
+      "sha256": "296edaa07383dc079b70c087e8514ee7a53febbfa67575d40aa42e2416e4c6d8",
+      "references_sync_status": false
+    },
+    "/static/app.js": {
+      "status": 200,
+      "sha256": "d05f361bdba52b25e367f2434b7027063a1eb985cd2b42f69fcc6ff469b0957a",
+      "references_sync_status": null
+    },
+    "/static/workspace.js": {
+      "status": 200,
+      "sha256": "024ec417726bb718d53aa2f7da3eae5c3ef15c4acb5239ab438699d93fdae607",
+      "references_sync_status": null
+    },
+    "/static/quick-events.js": {
+      "status": 404,
+      "sha256": "37ec4665a8102d115ffd1ac20dae94c98b4dac64b0c1a68228aa2a531caeb35d",
+      "references_sync_status": null
+    },
+    "/static/sync-status.js": {
+      "status": 404,
+      "sha256": "37ec4665a8102d115ffd1ac20dae94c98b4dac64b0c1a68228aa2a531caeb35d",
+      "references_sync_status": null
+    }
+  },
+  "final_counts": {
+    "postgresql": 132,
+    "hospitals": {
+      "hospital-a": {
+        "total": 27,
+        "pending": 0,
+        "applied": 27
+      },
+      "hospital-b": {
+        "total": 18,
+        "pending": 0,
+        "applied": 18
+      }
+    }
+  },
+  "all_original_event_ids_retained": true,
+  "environment_restored": true,
+  "container_identity_and_mounts_preserved": true,
+  "original_volumes_retained": true,
+  "finished_at": "2026-10-27T09:55:18.817568+00:00",
+  "test_id_log_lines": {
+    "hospital-a": [],
+    "hospital-b": [],
+    "patient": []
+  },
+  "final_docker_health": [
+    "admin running healthy",
+    "dashboard running healthy",
+    "emergency running healthy",
+    "hospital-a running healthy",
+    "hospital-b running healthy",
+    "patient running healthy",
+    "postgres running healthy"
+  ],
+  "browser_observation": {
+    "result": "NOT VERIFIED",
+    "tool_error": "Computer Use stopped because it could not determine the current browser URL on Windows with enough confidence to enforce policy. No browser interaction continued."
+  },
+  "preflight_query_error": "Earlier run CG_LIVE_20261027_b2ad7096 stopped before capture/connectivity changes: read-only SQLite query requested nonexistent applied_at. Verification query corrected; application unchanged."
+}

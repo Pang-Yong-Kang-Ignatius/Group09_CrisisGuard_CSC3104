@@ -1,0 +1,116 @@
+{
+  "date": "2026-10-25",
+  "result": "passed",
+  "base_commit": "a09cb5cc5f5aa040ca76469cca9fad48ea9e7c72",
+  "source_state": "Uncommitted test-only networking correction; production Compose/AWS and application code unchanged",
+  "original_failure": {
+    "workflow_run": 40148830409,
+    "job": 121035858671,
+    "url": "https://github.com/Pang-Yong-Kang-Ignatius/CrisisGuard/actions/runs/40148830409/job/121035858671",
+    "unit_job": "passed",
+    "deployment_job": "failed",
+    "step": "Verify dashboard, deployment health, recovery and backup restores",
+    "error": "RuntimeError: Dashboard cannot reach hospital-a",
+    "layout": "split",
+    "replay_mode": "manual"
+  },
+  "cause": "Test dashboard used host.docker.internal for hospital host ports bound to 127.0.0.1; Desktop forwarding masked native Linux reachability restrictions",
+  "fix": "Fresh internal peer bridge with API DNS and unique hospital aliases; retain default networks/DB storage and assert all published test ports are loopback; remove created network ID only",
+  "unit_tests": {
+    "passed": 477,
+    "new_regression_cases": 4,
+    "python": "3.11.17",
+    "warnings": 1,
+    "warning": "Existing Starlette TestClient deprecation"
+  },
+  "windows_smoke": {
+    "run_id": "cg-smoke-92a6f0f28df0",
+    "scenarios": [
+      "combined manual: capture during API outage, site isolation, scheduled replay, duplicate ACKs, pending/applied persistence, SQLite/PostgreSQL backup restoration and dashboard/reusable health checks",
+      "combined automatic: 8 events captured during API outage, pending queues survived hospital recreation, automatic three-service recovery without manual replay, dependency order, duplicate ACKs, applied persistence, dashboard and reusable health checker; {\"Hospital_A\": {\"last_reconnected_at\": \"2026-10-25T02:10:29.247481+00:00\", \"drain_completed_at\": \"2026-10-25T02:10:29.543218+00:00\", \"replayable_backlog\": 0}, \"Hospital_B\": {\"last_reconnected_at\": \"2026-10-25T02:10:27.376312+00:00\", \"drain_completed_at\": \"2026-10-25T02:10:27.727655+00:00\", \"replayable_backlog\": 0}}",
+      "split manual: capture during API outage, site isolation, scheduled replay, duplicate ACKs, pending/applied persistence, SQLite/PostgreSQL backup restoration and dashboard/reusable health checks",
+      "split automatic: 8 events captured during API outage, pending queues survived hospital recreation, automatic three-service recovery without manual replay, dependency order, duplicate ACKs, applied persistence, dashboard and reusable health checker; {\"Hospital_A\": {\"last_reconnected_at\": \"2026-10-25T02:16:31.581067+00:00\", \"drain_completed_at\": \"2026-10-25T02:16:31.843267+00:00\", \"replayable_backlog\": 0}, \"Hospital_B\": {\"last_reconnected_at\": \"2026-10-25T02:16:29.966514+00:00\", \"drain_completed_at\": \"2026-10-25T02:16:30.266862+00:00\", \"replayable_backlog\": 0}}"
+    ],
+    "health_checker_calls": 12,
+    "dashboard_checkpoints": 16
+  },
+  "linux_smoke": {
+    "run_id": "cg-smoke-7f42f0cd32fd",
+    "scenarios": [
+      "split manual: capture during API outage, site isolation, scheduled replay, duplicate ACKs, pending/applied persistence, SQLite/PostgreSQL backup restoration and dashboard/reusable health checks",
+      "split automatic: 8 events captured during API outage, pending queues survived hospital recreation, automatic three-service recovery without manual replay, dependency order, duplicate ACKs, applied persistence, dashboard and reusable health checker; {\"Hospital_A\": {\"last_reconnected_at\": \"2026-10-25T02:13:23.460832+00:00\", \"drain_completed_at\": \"2026-10-25T02:13:23.751106+00:00\", \"replayable_backlog\": 0}, \"Hospital_B\": {\"last_reconnected_at\": \"2026-10-25T02:13:23.446175+00:00\", \"drain_completed_at\": \"2026-10-25T02:13:23.758421+00:00\", \"replayable_backlog\": 0}}"
+    ],
+    "health_checker_calls": 6,
+    "dashboard_checkpoints": 8,
+    "environment": "Python 3.11.17 Linux client container, host networking and local Docker Desktop engine socket; not a GitHub-hosted runner"
+  },
+  "linux_update_rollback": {
+    "run_id": "cg-update-3dcdf76cc832",
+    "scope": "Local image-only maintenance rehearsal; same application schema/source",
+    "aws_used": false,
+    "live_database_restoration": false,
+    "images": {
+      "baseline": "sha256:ff059a2b65a38d6f830fcab75c21380695c93f84a1cb67a52400f8958d1a9e9e",
+      "candidate": "sha256:adc366dee8b98873b90836fba1a70d2be8a75889a0a734ce93c4c6001ed50039",
+      "broken": "sha256:a8363319548185873fae4909098a75ec9ca57b1519748aa264b7dc604c413546"
+    },
+    "backups": [
+      {
+        "kind": "postgres",
+        "bytes": 2119,
+        "sha256": "ea97d3e815ca42eb6c8e1f573054b977b8e5634dad9251eedc198433131e88aa",
+        "restore_expected_events_found": 2
+      },
+      {
+        "kind": "sqlite",
+        "bytes": 20480,
+        "sha256": "57f62129ef8eb35ba66ecaa8afb3612df35679ab5c7382b2a82423994f042a5b",
+        "restore_expected_events_found": 1
+      },
+      {
+        "kind": "sqlite",
+        "bytes": 20480,
+        "sha256": "a1802df1d20e8c7261579ba4f244df176aeb7a49222a785394c6b74c7a45b454",
+        "restore_expected_events_found": 1
+      }
+    ],
+    "configuration_drift_rejected": true,
+    "pending_sqlite_and_recovery_state_preserved": true,
+    "records_after_compatible_rollback": 6,
+    "before_failed_attempt_backup": {
+      "kind": "sqlite",
+      "bytes": 20480,
+      "sha256": "e440fa227b5548ced2fb95b625e74d489968cfc66284e0ab8213a321d1110312",
+      "restore_expected_events_found": 3
+    },
+    "failed_candidate_rejected_and_backed_out": true,
+    "postgres_identity_preserved": true,
+    "final_cloud_records": 6,
+    "final_records_per_hospital": 3,
+    "exact_target_images_verified": true,
+    "cleanup": "passed",
+    "result": "passed"
+  },
+  "source_sha256": {
+    "infrastructure/scripts/smoke_deployment.py": "36b9f63c3c888040b5e0f4e3f4f30396d0404a87602e75e605634b42fddc67c7",
+    "infrastructure/scripts/rehearse_update.py": "586f35280abaee623ba06ade17319c3cadcb9449c44763280c5f4fc71dcb84c4",
+    "tests/unit/test_smoke_dashboard.py": "839f769daa3eba5158be590dee30096e652cb04ef755e242e536369f97418f37"
+  },
+  "raw_log_sha256": {
+    "units.log": "bc1ed6350e45947196f33b3a23fa1ad2222fb1d206e94d18c0e7087c0fdf7912",
+    "windows-smoke.log": "d33ad3ceeb4bcd5efe41346cd61dbc43ba474867852f579d884088db2cfa3f75",
+    "linux-split-smoke.log": "396da06eebf9d265581b8ccbce737137a67f42b7c56690b4b59f2e93608ba13c",
+    "linux-rollback.log": "0e2be6a4c230bce7cb843591619d490611b4714df7d9780bc668e77cd27830e1"
+  },
+  "aws_used": false,
+  "hosted_ci_result_for_fix": "pending; commit/push required",
+  "cleanup": {
+    "result": "passed",
+    "generated_containers": 0,
+    "generated_volumes": 0,
+    "generated_networks": 0,
+    "generated_image_tags": 0,
+    "own_harness_tags_removed": 2,
+    "scope": "Exact generated run-name inventories plus successful helper cleanup; no pruning"
+  }
+}

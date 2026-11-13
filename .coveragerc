@@ -1,0 +1,18 @@
+[run]
+branch = True
+relative_files = True
+source =
+    cloud
+    edge
+    dashboard
+    evaluation
+    infrastructure/scripts
+omit =
+    */__pycache__/*
+    */tests/*
+    */results/*
+    */generated/*
+    */archive/*
+
+[report]
+show_missing = True

@@ -1,0 +1,96 @@
+{
+  "project": "cg-metaguard-958eb1f822d7",
+  "image": "crisisguard-metaguard-test:cg-metaguard-958eb1f822d7",
+  "started_at": "2026-10-26T05:12:17.018417+00:00",
+  "checks": [
+    {
+      "name": "Compose rendering, isolated ports/resources and unchanged hospital replay configuration",
+      "result": "passed"
+    },
+    {
+      "name": "All eight real containers healthy using the existing Dockerfile",
+      "result": "passed"
+    },
+    {
+      "name": "Controller HTTP liveness and real PostgreSQL connectivity/schema",
+      "result": "passed"
+    },
+    {
+      "name": "Ticket/grant persistence, duplicate requests, ACK/completion idempotency and Cloud token gate",
+      "result": "passed"
+    },
+    {
+      "name": "Controller container restart AND recreation preserve grants, history and waiting ticket",
+      "result": "passed"
+    },
+    {
+      "name": "Unacknowledged expiry reissues safely; acknowledged expiry requires authoritative reconciliation",
+      "result": "passed"
+    },
+    {
+      "name": "Database outage returns 503, container readiness fails, and same controller recovers",
+      "result": "passed"
+    },
+    {
+      "name": "Both hospitals capture offline; dashboard shows eight pending events during Cloud API outage",
+      "result": "passed"
+    },
+    {
+      "name": "Unchanged automatic replay delivers eight events to all three Cloud APIs with correct order and dashboard history",
+      "result": "passed"
+    },
+    {
+      "name": "Repository unit and controller/Cloud regression tests: 638 passed",
+      "result": "passed"
+    },
+    {
+      "name": "Cleanup and original container states, image tags and volumes preserved",
+      "result": "passed"
+    }
+  ],
+  "ports": {
+    "POSTGRES_PORT": 58083,
+    "CONTROLLER_PORT": 58084,
+    "PATIENT_PORT": 58085,
+    "EMERGENCY_PORT": 58086,
+    "ADMIN_PORT": 58087,
+    "HOSPITAL_A_PORT": 58088,
+    "HOSPITAL_B_PORT": 58089,
+    "DASHBOARD_PORT": 58090
+  },
+  "artifacts": "C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\.venv\\cg-metaguard-958eb1f822d7",
+  "aws_used": false,
+  "containers": {
+    "dashboard": "b281b33f81a8ebbf586faf1295bd3194895cd648b07e4cbe48872423d351a223",
+    "hospital-b": "920f861aff6e94de799ea5134b9c3239d2a5c9dcc35551609d2636603aacb7a1",
+    "admin": "f0caeb537f2271b534ee7b924262f5b9a0cbb2634c0e81c4bfba044027dd2a67",
+    "emergency": "e687579c92343b759207df67a5d0980f1d12835ceafa8c81c1f68b228de28f64",
+    "hospital-a": "6b8fc14595a97fb66ab2f71842f82b844718c18ffb9058ddbfa2d46ac0852c90",
+    "patient": "d6ebd952123b973af786341df7c4c642c483308dd07cc59f9c7ca5515aedcca0",
+    "controller": "078e027f6b4f5056fc11348594d1d45e638569466591afe65d4b660d6c2db1e1",
+    "postgres": "26297f3af7a70418678e0750e215dd9543eb879d93b9f03d117bba3b2c9b82a7"
+  },
+  "postgres_version": "16.15 (Debian 16.15-1.pgdg13+2)",
+  "pytest_paths": [
+    "tests/unit",
+    "tests/integration/test_controller_postgres.py",
+    "tests/integration/test_cloud_apis.py",
+    "tests/integration/test_cloud_telemetry.py"
+  ],
+  "pytest": {
+    "tests": 638,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 638
+  },
+  "docker_result": "passed",
+  "result": "passed",
+  "cleanup": "passed; disposable containers/network/volumes removed; test image retained",
+  "existing_resources_preserved": {
+    "containers": 24,
+    "volumes": 13,
+    "result": "passed"
+  },
+  "finished_at": "2026-10-26T05:14:29.742597+00:00"
+}

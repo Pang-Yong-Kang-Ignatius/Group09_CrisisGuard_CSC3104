@@ -1,0 +1,813 @@
+{
+  "executed_trials": 35,
+  "planned_trials": 35,
+  "analyzer_sha256": "8172d174ab5c714dcd3617edc3b4a1731ae294e00eedc10a3954735689f2107f",
+  "passed_trials": 35,
+  "total_original_events": 1540,
+  "total_observed_events": 1540,
+  "cleanup_all_passed": true,
+  "sampled_ticket_witnesses": 145,
+  "sampled_ticket_bound_violations": 0,
+  "preservation": {
+    "container_identity_image_mounts_equal": true,
+    "container_states_equal": true,
+    "exact_network_set_equal": true,
+    "exact_volume_set_equal": true
+  },
+  "paired_comparisons": [
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_A",
+      "policy": "bounded_b2",
+      "metric": "urgent_workflow_p95_upper_seconds",
+      "mean_paired_relative_change_pct": 13.566677877236629,
+      "relative_effect_pairs": 5,
+      "excluded_or_missing_seed_pairs": 0,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 0,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": [
+        -0.4358865200003493,
+        0.14168935999987298
+      ],
+      "n": 5,
+      "mean_policy_minus_rr_on": -0.1473160800007463,
+      "bootstrap_95pct": [
+        -7.068787940000038,
+        6.774155779998546
+      ],
+      "exact_sign_flip_p": 0.875
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_A",
+      "policy": "bounded_b2",
+      "metric": "routine_workflow_p95_upper_seconds",
+      "mean_paired_relative_change_pct": 0.31538766817718694,
+      "relative_effect_pairs": 5,
+      "excluded_or_missing_seed_pairs": 0,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 0,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": [
+        -0.5591750400002639,
+        0.030193560000043362
+      ],
+      "n": 5,
+      "mean_policy_minus_rr_on": -0.2667763400007971,
+      "bootstrap_95pct": [
+        -2.3841997000010453,
+        1.850647019999451
+      ],
+      "exact_sign_flip_p": 1.0
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_A",
+      "policy": "bounded_b2",
+      "metric": "cloud_drain_upper_seconds",
+      "mean_paired_relative_change_pct": 0.39358779262550503,
+      "relative_effect_pairs": 5,
+      "excluded_or_missing_seed_pairs": 0,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 0,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": [
+        -0.37854084000064175,
+        0.20341669999907025
+      ],
+      "n": 5,
+      "mean_policy_minus_rr_on": -0.09031910000048811,
+      "bootstrap_95pct": [
+        -0.9959840000010445,
+        0.8153458000000683
+      ],
+      "exact_sign_flip_p": 0.75
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_A",
+      "policy": "bounded_b4",
+      "metric": "urgent_workflow_p95_upper_seconds",
+      "mean_paired_relative_change_pct": 17.340856507263748,
+      "relative_effect_pairs": 5,
+      "excluded_or_missing_seed_pairs": 0,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 0,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": [
+        0.3142567199989571,
+        0.8957181999998284
+      ],
+      "n": 5,
+      "mean_policy_minus_rr_on": 0.606712759999209,
+      "bootstrap_95pct": [
+        -2.1427084200004174,
+        3.3561339399988355
+      ],
+      "exact_sign_flip_p": 0.8125
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_A",
+      "policy": "bounded_b4",
+      "metric": "routine_workflow_p95_upper_seconds",
+      "mean_paired_relative_change_pct": -11.80397301003552,
+      "relative_effect_pairs": 5,
+      "excluded_or_missing_seed_pairs": 0,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 0,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": [
+        -2.1600403400007053,
+        -1.5767317000005279
+      ],
+      "n": 5,
+      "mean_policy_minus_rr_on": -1.8737016000013682,
+      "bootstrap_95pct": [
+        -4.7317305600008694,
+        0.6374765799984743
+      ],
+      "exact_sign_flip_p": 0.3125
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_A",
+      "policy": "bounded_b4",
+      "metric": "cloud_drain_upper_seconds",
+      "mean_paired_relative_change_pct": -10.233057498219889,
+      "relative_effect_pairs": 5,
+      "excluded_or_missing_seed_pairs": 0,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 0,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": [
+        -2.1207550400002217,
+        -1.5382274800009328
+      ],
+      "n": 5,
+      "mean_policy_minus_rr_on": -1.831963280000491,
+      "bootstrap_95pct": [
+        -4.11939510000011,
+        0.4476602399990952
+      ],
+      "exact_sign_flip_p": 0.3125
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_A",
+      "policy": "bounded_on",
+      "metric": "urgent_workflow_p95_upper_seconds",
+      "mean_paired_relative_change_pct": -14.908108507937968,
+      "relative_effect_pairs": 5,
+      "excluded_or_missing_seed_pairs": 0,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 0,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": [
+        -3.623820459999115,
+        -3.049602899999445
+      ],
+      "n": 5,
+      "mean_policy_minus_rr_on": -3.3386083400000643,
+      "bootstrap_95pct": [
+        -7.944580340000539,
+        1.1572289600000658
+      ],
+      "exact_sign_flip_p": 0.375
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_A",
+      "policy": "bounded_on",
+      "metric": "routine_workflow_p95_upper_seconds",
+      "mean_paired_relative_change_pct": -9.171546189189344,
+      "relative_effect_pairs": 5,
+      "excluded_or_missing_seed_pairs": 0,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 0,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": [
+        -1.815245639999921,
+        -1.234492179998051
+      ],
+      "n": 5,
+      "mean_policy_minus_rr_on": -1.5314620799988916,
+      "bootstrap_95pct": [
+        -4.432135079998261,
+        1.145002460001706
+      ],
+      "exact_sign_flip_p": 0.375
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_A",
+      "policy": "bounded_on",
+      "metric": "cloud_drain_upper_seconds",
+      "mean_paired_relative_change_pct": -2.1423899213662967,
+      "relative_effect_pairs": 5,
+      "excluded_or_missing_seed_pairs": 0,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 0,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": [
+        -1.248880719999579,
+        -0.6725582599996415
+      ],
+      "n": 5,
+      "mean_policy_minus_rr_on": -0.9662940599991998,
+      "bootstrap_95pct": [
+        -4.218955139999889,
+        2.2863670200014896
+      ],
+      "exact_sign_flip_p": 0.6875
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_A",
+      "policy": "drr_on",
+      "metric": "urgent_workflow_p95_upper_seconds",
+      "mean_paired_relative_change_pct": 8.025507390351155,
+      "relative_effect_pairs": 5,
+      "excluded_or_missing_seed_pairs": 0,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 0,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": [
+        -2.000914520001243,
+        -1.4289190600000439
+      ],
+      "n": 5,
+      "mean_policy_minus_rr_on": -1.717924500000663,
+      "bootstrap_95pct": [
+        -8.79229376000003,
+        5.356444759998704
+      ],
+      "exact_sign_flip_p": 0.6875
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_A",
+      "policy": "drr_on",
+      "metric": "routine_workflow_p95_upper_seconds",
+      "mean_paired_relative_change_pct": -11.51984088476211,
+      "relative_effect_pairs": 5,
+      "excluded_or_missing_seed_pairs": 0,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 0,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": [
+        -2.210800800000288,
+        -1.6289941000002728
+      ],
+      "n": 5,
+      "mean_policy_minus_rr_on": -1.9259640000011131,
+      "bootstrap_95pct": [
+        -2.6841607000016667,
+        -1.0503939800008084
+      ],
+      "exact_sign_flip_p": 0.0625
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_A",
+      "policy": "drr_on",
+      "metric": "cloud_drain_upper_seconds",
+      "mean_paired_relative_change_pct": -10.79232303308256,
+      "relative_effect_pairs": 5,
+      "excluded_or_missing_seed_pairs": 0,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 0,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": [
+        -2.2959677400001963,
+        -1.714637040001253
+      ],
+      "n": 5,
+      "mean_policy_minus_rr_on": -2.008372840000811,
+      "bootstrap_95pct": [
+        -3.2302276400012486,
+        -0.7646505600001546
+      ],
+      "exact_sign_flip_p": 0.0625
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_A",
+      "policy": "drr_over",
+      "metric": "urgent_workflow_p95_upper_seconds",
+      "mean_paired_relative_change_pct": 24.579077685013775,
+      "relative_effect_pairs": 5,
+      "excluded_or_missing_seed_pairs": 0,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 0,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": [
+        0.7999176999990596,
+        1.3723497600010888
+      ],
+      "n": 5,
+      "mean_policy_minus_rr_on": 1.0833443200004695,
+      "bootstrap_95pct": [
+        -4.966239999998652,
+        5.8149165800008635
+      ],
+      "exact_sign_flip_p": 0.75
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_A",
+      "policy": "drr_over",
+      "metric": "routine_workflow_p95_upper_seconds",
+      "mean_paired_relative_change_pct": -14.20568342102147,
+      "relative_effect_pairs": 5,
+      "excluded_or_missing_seed_pairs": 0,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 0,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": [
+        -2.8601771999994527,
+        -2.27311425999942
+      ],
+      "n": 5,
+      "mean_policy_minus_rr_on": -2.5700841600002606,
+      "bootstrap_95pct": [
+        -5.014085419999901,
+        -0.5772388200013665
+      ],
+      "exact_sign_flip_p": 0.0625
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_A",
+      "policy": "drr_over",
+      "metric": "cloud_drain_upper_seconds",
+      "mean_paired_relative_change_pct": -11.391780519859221,
+      "relative_effect_pairs": 5,
+      "excluded_or_missing_seed_pairs": 0,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 0,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": [
+        -2.412220160000288,
+        -1.8322950599998875
+      ],
+      "n": 5,
+      "mean_policy_minus_rr_on": -2.126030859999446,
+      "bootstrap_95pct": [
+        -4.180641280000418,
+        -0.6947805199983123
+      ],
+      "exact_sign_flip_p": 0.0625
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_A",
+      "policy": "drr_under",
+      "metric": "urgent_workflow_p95_upper_seconds",
+      "mean_paired_relative_change_pct": 39.2249246128246,
+      "relative_effect_pairs": 5,
+      "excluded_or_missing_seed_pairs": 0,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 0,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": [
+        2.568176659998426,
+        3.146365079998941
+      ],
+      "n": 5,
+      "mean_policy_minus_rr_on": 2.8573596399983217,
+      "bootstrap_95pct": [
+        -3.7549001600003975,
+        7.684574379997502
+      ],
+      "exact_sign_flip_p": 0.4375
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_A",
+      "policy": "drr_under",
+      "metric": "routine_workflow_p95_upper_seconds",
+      "mean_paired_relative_change_pct": -6.897352894488556,
+      "relative_effect_pairs": 5,
+      "excluded_or_missing_seed_pairs": 0,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 0,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": [
+        -1.474095580001449,
+        -0.8889152800002194
+      ],
+      "n": 5,
+      "mean_policy_minus_rr_on": -1.1858851800010597,
+      "bootstrap_95pct": [
+        -2.9508225800003856,
+        0.34708577999917906
+      ],
+      "exact_sign_flip_p": 0.375
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_A",
+      "policy": "drr_under",
+      "metric": "cloud_drain_upper_seconds",
+      "mean_paired_relative_change_pct": -2.401603961091509,
+      "relative_effect_pairs": 5,
+      "excluded_or_missing_seed_pairs": 0,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 0,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": [
+        -0.6857832800007599,
+        -0.10292676000171923
+      ],
+      "n": 5,
+      "mean_policy_minus_rr_on": -0.3966625600012776,
+      "bootstrap_95pct": [
+        -1.6148612600009074,
+        0.7682839999979478
+      ],
+      "exact_sign_flip_p": 0.625
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_B",
+      "policy": "bounded_b2",
+      "metric": "urgent_workflow_p95_upper_seconds",
+      "mean_paired_relative_change_pct": -9.472591645311224,
+      "relative_effect_pairs": 5,
+      "excluded_or_missing_seed_pairs": 0,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 0,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": [
+        -0.6805626800000028,
+        -0.11036867999937386
+      ],
+      "n": 5,
+      "mean_policy_minus_rr_on": -0.39831063999954497,
+      "bootstrap_95pct": [
+        -1.9481440799994743,
+        1.1681234799994855
+      ],
+      "exact_sign_flip_p": 0.875
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_B",
+      "policy": "bounded_b2",
+      "metric": "routine_workflow_p95_upper_seconds",
+      "mean_paired_relative_change_pct": null,
+      "relative_effect_pairs": 0,
+      "excluded_or_missing_seed_pairs": 5,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 5,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": null,
+      "n": 0,
+      "mean_policy_minus_rr_on": null,
+      "bootstrap_95pct": null,
+      "exact_sign_flip_p": null
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_B",
+      "policy": "bounded_b2",
+      "metric": "cloud_drain_upper_seconds",
+      "mean_paired_relative_change_pct": 0.39358779262550503,
+      "relative_effect_pairs": 5,
+      "excluded_or_missing_seed_pairs": 0,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 0,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": [
+        -0.37854084000064175,
+        0.20341669999907025
+      ],
+      "n": 5,
+      "mean_policy_minus_rr_on": -0.09031910000048811,
+      "bootstrap_95pct": [
+        -0.9959840000010445,
+        0.8153458000000683
+      ],
+      "exact_sign_flip_p": 0.75
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_B",
+      "policy": "bounded_b4",
+      "metric": "urgent_workflow_p95_upper_seconds",
+      "mean_paired_relative_change_pct": -23.73485922618512,
+      "relative_effect_pairs": 5,
+      "excluded_or_missing_seed_pairs": 0,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 0,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": [
+        -2.304770639999333,
+        -1.7224792799999704
+      ],
+      "n": 5,
+      "mean_policy_minus_rr_on": -2.0104212400001416,
+      "bootstrap_95pct": [
+        -4.238563580000482,
+        0.497859820001031
+      ],
+      "exact_sign_flip_p": 0.1875
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_B",
+      "policy": "bounded_b4",
+      "metric": "routine_workflow_p95_upper_seconds",
+      "mean_paired_relative_change_pct": null,
+      "relative_effect_pairs": 0,
+      "excluded_or_missing_seed_pairs": 5,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 5,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": null,
+      "n": 0,
+      "mean_policy_minus_rr_on": null,
+      "bootstrap_95pct": null,
+      "exact_sign_flip_p": null
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_B",
+      "policy": "bounded_b4",
+      "metric": "cloud_drain_upper_seconds",
+      "mean_paired_relative_change_pct": -10.233057498219889,
+      "relative_effect_pairs": 5,
+      "excluded_or_missing_seed_pairs": 0,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 0,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": [
+        -2.1207550400002217,
+        -1.5382274800009328
+      ],
+      "n": 5,
+      "mean_policy_minus_rr_on": -1.831963280000491,
+      "bootstrap_95pct": [
+        -4.11939510000011,
+        0.4476602399990952
+      ],
+      "exact_sign_flip_p": 0.3125
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_B",
+      "policy": "bounded_on",
+      "metric": "urgent_workflow_p95_upper_seconds",
+      "mean_paired_relative_change_pct": 42.58584998548607,
+      "relative_effect_pairs": 5,
+      "excluded_or_missing_seed_pairs": 0,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 0,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": [
+        1.7025491200009129,
+        2.29095914000136
+      ],
+      "n": 5,
+      "mean_policy_minus_rr_on": 2.0030171800011884,
+      "bootstrap_95pct": [
+        -1.484865739999077,
+        5.823082280001108
+      ],
+      "exact_sign_flip_p": 0.4375
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_B",
+      "policy": "bounded_on",
+      "metric": "routine_workflow_p95_upper_seconds",
+      "mean_paired_relative_change_pct": null,
+      "relative_effect_pairs": 0,
+      "excluded_or_missing_seed_pairs": 5,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 5,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": null,
+      "n": 0,
+      "mean_policy_minus_rr_on": null,
+      "bootstrap_95pct": null,
+      "exact_sign_flip_p": null
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_B",
+      "policy": "bounded_on",
+      "metric": "cloud_drain_upper_seconds",
+      "mean_paired_relative_change_pct": -2.1423899213662967,
+      "relative_effect_pairs": 5,
+      "excluded_or_missing_seed_pairs": 0,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 0,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": [
+        -1.248880719999579,
+        -0.6725582599996415
+      ],
+      "n": 5,
+      "mean_policy_minus_rr_on": -0.9662940599991998,
+      "bootstrap_95pct": [
+        -4.218955139999889,
+        2.2863670200014896
+      ],
+      "exact_sign_flip_p": 0.6875
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_B",
+      "policy": "drr_on",
+      "metric": "urgent_workflow_p95_upper_seconds",
+      "mean_paired_relative_change_pct": -20.703803768362633,
+      "relative_effect_pairs": 5,
+      "excluded_or_missing_seed_pairs": 0,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 0,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": [
+        -2.1919552999999725,
+        -1.6145595600006346
+      ],
+      "n": 5,
+      "mean_policy_minus_rr_on": -1.9025015200008055,
+      "bootstrap_95pct": [
+        -4.29722518000126,
+        0.5615531000003102
+      ],
+      "exact_sign_flip_p": 0.1875
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_B",
+      "policy": "drr_on",
+      "metric": "routine_workflow_p95_upper_seconds",
+      "mean_paired_relative_change_pct": null,
+      "relative_effect_pairs": 0,
+      "excluded_or_missing_seed_pairs": 5,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 5,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": null,
+      "n": 0,
+      "mean_policy_minus_rr_on": null,
+      "bootstrap_95pct": null,
+      "exact_sign_flip_p": null
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_B",
+      "policy": "drr_on",
+      "metric": "cloud_drain_upper_seconds",
+      "mean_paired_relative_change_pct": -10.79232303308256,
+      "relative_effect_pairs": 5,
+      "excluded_or_missing_seed_pairs": 0,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 0,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": [
+        -2.2959677400001963,
+        -1.714637040001253
+      ],
+      "n": 5,
+      "mean_policy_minus_rr_on": -2.008372840000811,
+      "bootstrap_95pct": [
+        -3.2302276400012486,
+        -0.7646505600001546
+      ],
+      "exact_sign_flip_p": 0.0625
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_B",
+      "policy": "drr_over",
+      "metric": "urgent_workflow_p95_upper_seconds",
+      "mean_paired_relative_change_pct": 5.294605982124287,
+      "relative_effect_pairs": 5,
+      "excluded_or_missing_seed_pairs": 0,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 0,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": [
+        -1.7495826799990026,
+        -1.1566014799987898
+      ],
+      "n": 5,
+      "mean_policy_minus_rr_on": -1.4445434399989607,
+      "bootstrap_95pct": [
+        -4.621557499997289,
+        2.8945879000006243
+      ],
+      "exact_sign_flip_p": 0.5625
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_B",
+      "policy": "drr_over",
+      "metric": "routine_workflow_p95_upper_seconds",
+      "mean_paired_relative_change_pct": null,
+      "relative_effect_pairs": 0,
+      "excluded_or_missing_seed_pairs": 5,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 5,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": null,
+      "n": 0,
+      "mean_policy_minus_rr_on": null,
+      "bootstrap_95pct": null,
+      "exact_sign_flip_p": null
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_B",
+      "policy": "drr_over",
+      "metric": "cloud_drain_upper_seconds",
+      "mean_paired_relative_change_pct": -11.391780519859221,
+      "relative_effect_pairs": 5,
+      "excluded_or_missing_seed_pairs": 0,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 0,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": [
+        -2.412220160000288,
+        -1.8322950599998875
+      ],
+      "n": 5,
+      "mean_policy_minus_rr_on": -2.126030859999446,
+      "bootstrap_95pct": [
+        -4.180641280000418,
+        -0.6947805199983123
+      ],
+      "exact_sign_flip_p": 0.0625
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_B",
+      "policy": "drr_under",
+      "metric": "urgent_workflow_p95_upper_seconds",
+      "mean_paired_relative_change_pct": -25.932004646688235,
+      "relative_effect_pairs": 5,
+      "excluded_or_missing_seed_pairs": 0,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 0,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": [
+        -2.520299359999626,
+        -1.9377978800002893
+      ],
+      "n": 5,
+      "mean_policy_minus_rr_on": -2.22573984000046,
+      "bootstrap_95pct": [
+        -4.613817320000817,
+        0.3600083200013614
+      ],
+      "exact_sign_flip_p": 0.125
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_B",
+      "policy": "drr_under",
+      "metric": "routine_workflow_p95_upper_seconds",
+      "mean_paired_relative_change_pct": null,
+      "relative_effect_pairs": 0,
+      "excluded_or_missing_seed_pairs": 5,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 5,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": null,
+      "n": 0,
+      "mean_policy_minus_rr_on": null,
+      "bootstrap_95pct": null,
+      "exact_sign_flip_p": null
+    },
+    {
+      "condition": "ratio10-1_depth3_balanced",
+      "site": "Hospital_B",
+      "policy": "drr_under",
+      "metric": "cloud_drain_upper_seconds",
+      "mean_paired_relative_change_pct": -2.401603961091509,
+      "relative_effect_pairs": 5,
+      "excluded_or_missing_seed_pairs": 0,
+      "missing_seed_pairs": 0,
+      "empty_population_seed_pairs": 0,
+      "failed_or_unfinished_seed_pairs": 0,
+      "mean_difference_observation_interval": [
+        -0.6857832800007599,
+        -0.10292676000171923
+      ],
+      "n": 5,
+      "mean_policy_minus_rr_on": -0.3966625600012776,
+      "bootstrap_95pct": [
+        -1.6148612600009074,
+        0.7682839999979478
+      ],
+      "exact_sign_flip_p": 0.625
+    }
+  ],
+  "acceptance_targets": "NOT ESTABLISHED: uncalibrated live load and no supported grant-enforced live writes; bounded screen/cost stress is not full D2/D3",
+  "raw_backup_directory": "C:\\Users\\muhdh\\OneDrive\\Documents\\GitHub\\CrisisGuard\\.venv\\cp8-fce9fb6c4b7f"
+}

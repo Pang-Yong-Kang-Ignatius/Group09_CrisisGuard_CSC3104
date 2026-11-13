@@ -1,0 +1,11 @@
+condition,read_load_percent,read_rps,seed,constant_value,aimd_value,measurement_unit,paired_effect,paired_effect_unit,constant_attempts,constant_violations,aimd_attempts,aimd_violations,constant_cap_skips,constant_lag_skips,aimd_cap_skips,aimd_lag_skips
+ratio1-1_depth3_balanced_load30,30,36.0,3104,3.894927536231884,1.0435992578849722,percent,-2.851328278346912,percentage points,1104,43,4312,45,0,0,0,0
+ratio1-1_depth3_balanced_load30,30,36.0,3105,5.651105651105651,1.1583011583011582,percent,-4.492804492804494,percentage points,814,46,3885,45,0,0,0,0
+ratio1-1_depth3_balanced_load30,30,36.0,3106,3.589315525876461,1.1848341232227488,percent,-2.4044814026537122,percentage points,1198,43,3798,45,0,0,0,0
+ratio1-1_depth3_balanced_load30,30,36.0,3107,3.483768804433888,1.0145261701637076,percent,-2.46924263427018,percentage points,1263,44,4337,44,0,0,0,0
+ratio1-1_depth3_balanced_load30,30,36.0,3108,3.5031847133757963,0.9700176366843033,percent,-2.533167076691493,percentage points,1256,44,4536,44,0,0,0,0
+ratio1-1_depth3_balanced_load70,70,84.0,3104,5.16641828117238,0.997506234413965,percent,-4.168912046758415,percentage points,2013,104,10025,100,0,0,0,2
+ratio1-1_depth3_balanced_load70,70,84.0,3105,4.1526374859708195,0.9765438008616564,percent,-3.176093685109163,percentage points,2673,111,10445,102,0,0,0,0
+ratio1-1_depth3_balanced_load70,70,84.0,3106,3.2679738562091507,1.1895410167209068,percent,-2.0784328394882436,percentage points,3060,100,8911,106,0,0,0,0
+ratio1-1_depth3_balanced_load70,70,84.0,3107,3.428179636612959,1.1422044545973729,percent,-2.285975182015586,percentage points,2917,100,8755,100,0,0,0,0
+ratio1-1_depth3_balanced_load70,70,84.0,3108,4.52054794520548,1.1673151750972763,percent,-3.353232770108203,percentage points,2190,99,8738,102,0,1,0,0

@@ -1,0 +1,64 @@
+{
+  "checkpoint": "7B",
+  "scope": "Deployed caller provenance source, configuration and preservation inspection",
+  "captured_at": "2026-10-28T13:06:19.420903+00:00",
+  "deployed_source": {
+    "hospital_a_cloud_client_sha256": "dcb07beb94d8946d0a1d9d10d28473b875a119425b3d5a5bffbe067768f4f2f6",
+    "hospital_b_cloud_client_sha256": "dcb07beb94d8946d0a1d9d10d28473b875a119425b3d5a5bffbe067768f4f2f6",
+    "workspace_cloud_client_sha256": "dcb07beb94d8946d0a1d9d10d28473b875a119425b3d5a5bffbe067768f4f2f6",
+    "dashboard_main_sha256": "9f13a02c2d8f693a33682b6befe23212b27c00a33fa03353720f7e29250180cb",
+    "workspace_dashboard_main_sha256": "9f13a02c2d8f693a33682b6befe23212b27c00a33fa03353720f7e29250180cb",
+    "dashboard_traffic_sha256": "a4c8a4a3e377841da3a51e1a10617570dffda5629fca078cbc7be44a2380be0e",
+    "patient_traffic_sha256": "a4c8a4a3e377841da3a51e1a10617570dffda5629fca078cbc7be44a2380be0e",
+    "workspace_traffic_sha256": "a4c8a4a3e377841da3a51e1a10617570dffda5629fca078cbc7be44a2380be0e",
+    "matches_workspace": true
+  },
+  "credential_configuration_without_secret_values": {
+    "cloud_live_configured_minimum_32_characters": true,
+    "cloud_replay_configured_minimum_32_characters": true,
+    "cloud_live_and_replay_roles_distinct": true,
+    "cloud_live_length": 64,
+    "cloud_replay_length": 64,
+    "hospital_a_replay_and_controller_credentials_configured": true,
+    "hospital_b_replay_and_controller_credentials_configured": true,
+    "dashboard_live_credential_configured": true,
+    "dashboard_live_length": 64,
+    "secret_values_or_digests_recorded": false
+  },
+  "source_findings": {
+    "hospital_replay_post": "edge/capture_api/cloud_client.py send_to_cloud attaches traffic_headers('replay') before POST",
+    "hospital_reconciliation_get_gap": "edge/capture_api/cloud_client.py get_cloud_event_status performs GET without traffic_headers and is unclassified",
+    "dashboard_live_post": "dashboard/main.py forward_request attaches traffic_headers('live') only to POST /events",
+    "dashboard_runtime_guard": "METAGUARD_REQUIRED=1; POST /api/events/{service} returns 403 before forward_request",
+    "external_caller_gap": "Direct Cloud callers must explicitly attach a live credential. Several infrastructure verification scripts issue direct /events calls without telemetry provenance; these are test tools, and no general external production workload instrumentation was found."
+  },
+  "runtime_after_verification": {
+    "main_stack_containers_running_and_healthy": 8,
+    "main_container_ids_unchanged_from_calibration_preservation_evidence": true,
+    "docker_volume_count": 16,
+    "docker_container_count_including_stopped": 33,
+    "database_counts": {
+      "postgresql_events": 191,
+      "hospital_a_sqlite_events": 60,
+      "hospital_b_sqlite_events": 42,
+      "synthetic_probe_ids_persisted": 0,
+      "controller_grants": 8,
+      "controller_tickets": 0
+    },
+    "controller": {
+      "enabled": true,
+      "policy": "aimd",
+      "state": "Normal",
+      "reason": "healthy",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-28T13:06:15.183356+00:00",
+      "configuration_changed": false
+    }
+  },
+  "deployment_decision": {
+    "dashboard": "No deployment is required while direct Cloud submission remains disabled. Its deployed live credential/helper is valid, but the guarded route does not emit application traffic.",
+    "hospitals": "A code update and controlled Hospital A/B deployment are required to mark reconciliation GETs as replay traffic if full Hospital provenance coverage is required.",
+    "external_workloads": "Each real external live workload producer requires a live telemetry credential/header integration and separate deployment or ingress instrumentation."
+  }
+}

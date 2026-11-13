@@ -1,0 +1,294 @@
+{
+  "protocol_amendment": "Retrospective for existing trials; freeze prospectively before remaining execution",
+  "max_skip_fraction": 0.001,
+  "sensitivity_limits": [
+    0,
+    0.0001,
+    0.001
+  ],
+  "inputs": [
+    {
+      "summary": "evaluation\\results\\h1-h2-core-20261101-134710\\ratio10-1_depth3_a_only_load70-seed3104\\summary.json",
+      "sha256": "ae47bec0f3fb8756303782eaddcbb0ca0c783b38992c43fc6a8b62e84c055d16",
+      "preservation": {
+        "container_identity_image_mounts_equal": true,
+        "container_states_equal": true,
+        "exact_network_set_equal": true,
+        "exact_volume_set_equal": true
+      },
+      "trials": [
+        {
+          "policy": "bounded_off",
+          "admission": "aimd",
+          "scheduled_opportunities": 11115,
+          "issued_attempts": 11115,
+          "cap_skips": 0,
+          "lag_skips": 0,
+          "ledger_reconciled": true,
+          "skip_fraction": 0.0,
+          "issuance_ratio": 1.0,
+          "issued_rps": 84.0059858516235,
+          "scheduled_rps": 84.0059858516235
+        },
+        {
+          "policy": "rr_on",
+          "admission": "aimd",
+          "scheduled_opportunities": 10906,
+          "issued_attempts": 10906,
+          "cap_skips": 0,
+          "lag_skips": 0,
+          "ledger_reconciled": true,
+          "skip_fraction": 0.0,
+          "issuance_ratio": 1.0,
+          "issued_rps": 84.00280368792815,
+          "scheduled_rps": 84.00280368792815
+        },
+        {
+          "policy": "bounded_on",
+          "admission": "constant",
+          "scheduled_opportunities": 2073,
+          "issued_attempts": 2073,
+          "cap_skips": 0,
+          "lag_skips": 0,
+          "ledger_reconciled": true,
+          "skip_fraction": 0.0,
+          "issuance_ratio": 1.0,
+          "issued_rps": 84.02237354085439,
+          "scheduled_rps": 84.02237354085439
+        },
+        {
+          "policy": "rr_off",
+          "admission": "aimd",
+          "scheduled_opportunities": 10840,
+          "issued_attempts": 10840,
+          "cap_skips": 0,
+          "lag_skips": 0,
+          "ledger_reconciled": true,
+          "skip_fraction": 0.0,
+          "issuance_ratio": 1.0,
+          "issued_rps": 84.0004029539622,
+          "scheduled_rps": 84.0004029539622
+        },
+        {
+          "policy": "priority_on",
+          "admission": "aimd",
+          "scheduled_opportunities": 9040,
+          "issued_attempts": 9040,
+          "cap_skips": 0,
+          "lag_skips": 0,
+          "ledger_reconciled": true,
+          "skip_fraction": 0.0,
+          "issuance_ratio": 1.0,
+          "issued_rps": 84.00784321014012,
+          "scheduled_rps": 84.00784321014012
+        },
+        {
+          "policy": "bounded_on",
+          "admission": "aimd",
+          "scheduled_opportunities": 9490,
+          "issued_attempts": 9490,
+          "cap_skips": 0,
+          "lag_skips": 0,
+          "ledger_reconciled": true,
+          "skip_fraction": 0.0,
+          "issuance_ratio": 1.0,
+          "issued_rps": 84.00534659950888,
+          "scheduled_rps": 84.00534659950888
+        },
+        {
+          "policy": "drr_on",
+          "admission": "aimd",
+          "scheduled_opportunities": 9340,
+          "issued_attempts": 9340,
+          "cap_skips": 0,
+          "lag_skips": 0,
+          "ledger_reconciled": true,
+          "skip_fraction": 0.0,
+          "issuance_ratio": 1.0,
+          "issued_rps": 84.00262620630117,
+          "scheduled_rps": 84.00262620630117
+        }
+      ]
+    },
+    {
+      "summary": "evaluation\\results\\h1-h2-corrected-20261101-143329\\ratio1-1_depth3_balanced_load30-seed3104\\summary.json",
+      "sha256": "5e9fdb3eb5ef8c0b198a3b991ec1e0152af3581ac056317bed2e33f4742550ba",
+      "preservation": {
+        "container_identity_image_mounts_equal": true,
+        "container_states_equal": true,
+        "exact_network_set_equal": true,
+        "exact_volume_set_equal": true
+      },
+      "trials": [
+        {
+          "policy": "drr_on",
+          "admission": "aimd",
+          "scheduled_opportunities": 4128,
+          "issued_attempts": 4128,
+          "cap_skips": 0,
+          "lag_skips": 0,
+          "ledger_reconciled": true,
+          "skip_fraction": 0.0,
+          "issuance_ratio": 1.0,
+          "issued_rps": 36.003349148758325,
+          "scheduled_rps": 36.003349148758325
+        },
+        {
+          "policy": "bounded_on",
+          "admission": "aimd",
+          "scheduled_opportunities": 4312,
+          "issued_attempts": 4312,
+          "cap_skips": 0,
+          "lag_skips": 0,
+          "ledger_reconciled": true,
+          "skip_fraction": 0.0,
+          "issuance_ratio": 1.0,
+          "issued_rps": 36.003840855007354,
+          "scheduled_rps": 36.003840855007354
+        },
+        {
+          "policy": "priority_on",
+          "admission": "aimd",
+          "scheduled_opportunities": 4153,
+          "issued_attempts": 4153,
+          "cap_skips": 0,
+          "lag_skips": 0,
+          "ledger_reconciled": true,
+          "skip_fraction": 0.0,
+          "issuance_ratio": 1.0,
+          "issued_rps": 36.005340546539315,
+          "scheduled_rps": 36.005340546539315
+        },
+        {
+          "policy": "rr_off",
+          "admission": "aimd",
+          "scheduled_opportunities": 3779,
+          "issued_attempts": 3778,
+          "cap_skips": 0,
+          "lag_skips": 1,
+          "ledger_reconciled": true,
+          "skip_fraction": 0.0002646202699126753,
+          "issuance_ratio": 0.9997353797300873,
+          "issued_rps": 35.99706535306234,
+          "scheduled_rps": 36.00659342753377
+        },
+        {
+          "policy": "bounded_off",
+          "admission": "aimd",
+          "scheduled_opportunities": 3994,
+          "issued_attempts": 3993,
+          "cap_skips": 0,
+          "lag_skips": 1,
+          "ledger_reconciled": true,
+          "skip_fraction": 0.0002503755633450175,
+          "issuance_ratio": 0.9997496244366549,
+          "issued_rps": 35.99826905392963,
+          "scheduled_rps": 36.007284398045314
+        },
+        {
+          "policy": "rr_on",
+          "admission": "aimd",
+          "scheduled_opportunities": 4153,
+          "issued_attempts": 4152,
+          "cap_skips": 0,
+          "lag_skips": 1,
+          "ledger_reconciled": true,
+          "skip_fraction": 0.00024078979051288225,
+          "issuance_ratio": 0.9997592102094871,
+          "issued_rps": 35.9966708281312,
+          "scheduled_rps": 36.00534054653875
+        }
+      ]
+    },
+    {
+      "summary": "evaluation\\results\\h1-h2-core-20261101-134710\\ratio1-1_depth3_balanced_load30-seed3104\\summary.json",
+      "sha256": "e10e9e7a5532f2dcbb406c337b75b48111ed461dcf499081d554e21400d5ea83",
+      "preservation": {
+        "container_identity_image_mounts_equal": true,
+        "container_states_equal": true,
+        "exact_network_set_equal": true,
+        "exact_volume_set_equal": true
+      },
+      "trials": [
+        {
+          "policy": "drr_on",
+          "admission": "aimd",
+          "scheduled_opportunities": 4418,
+          "issued_attempts": 4418,
+          "cap_skips": 0,
+          "lag_skips": 0,
+          "ledger_reconciled": true,
+          "skip_fraction": 0.0,
+          "issuance_ratio": 1.0,
+          "issued_rps": 36.00563963391292,
+          "scheduled_rps": 36.00563963391292
+        },
+        {
+          "policy": "bounded_on",
+          "admission": "aimd",
+          "scheduled_opportunities": 4811,
+          "issued_attempts": 4811,
+          "cap_skips": 0,
+          "lag_skips": 0,
+          "ledger_reconciled": true,
+          "skip_fraction": 0.0,
+          "issuance_ratio": 1.0,
+          "issued_rps": 36.00374181478017,
+          "scheduled_rps": 36.00374181478017
+        },
+        {
+          "policy": "priority_on",
+          "admission": "aimd",
+          "scheduled_opportunities": 4769,
+          "issued_attempts": 4769,
+          "cap_skips": 0,
+          "lag_skips": 0,
+          "ledger_reconciled": true,
+          "skip_fraction": 0.0,
+          "issuance_ratio": 1.0,
+          "issued_rps": 36.00087567657362,
+          "scheduled_rps": 36.00087567657362
+        },
+        {
+          "policy": "rr_off",
+          "admission": "aimd",
+          "scheduled_opportunities": 4720,
+          "issued_attempts": 4719,
+          "cap_skips": 0,
+          "lag_skips": 1,
+          "ledger_reconciled": true,
+          "skip_fraction": 0.000211864406779661,
+          "issuance_ratio": 0.9997881355932203,
+          "issued_rps": 35.997070804155534,
+          "scheduled_rps": 36.00469891833315
+        },
+        {
+          "policy": "bounded_off",
+          "admission": "aimd",
+          "scheduled_opportunities": 4139,
+          "issued_attempts": 4139,
+          "cap_skips": 0,
+          "lag_skips": 0,
+          "ledger_reconciled": true,
+          "skip_fraction": 0.0,
+          "issuance_ratio": 1.0,
+          "issued_rps": 36.00100896763502,
+          "scheduled_rps": 36.00100896763502
+        },
+        {
+          "policy": "rr_on",
+          "admission": "aimd",
+          "scheduled_opportunities": 4073,
+          "issued_attempts": 4072,
+          "cap_skips": 0,
+          "lag_skips": 1,
+          "ledger_reconciled": true,
+          "skip_fraction": 0.00024551927326295114,
+          "issuance_ratio": 0.999754480726737,
+          "issued_rps": 35.99558011049724,
+          "scheduled_rps": 36.00441988950276
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,915 @@
+{
+  "decision": "further calibration required",
+  "profile": null,
+  "reason": "Healthy post-ready demand only; no sustained overloaded calibration class. Legacy throughput thresholds yield false positives.",
+  "trials": [
+    {
+      "source": "evaluation/results/aimd-independent-calibration-20261101-185222/run-60/summary.json",
+      "seed": 50101,
+      "read_rps": 60.0,
+      "generator": {
+        "scheduled_opportunities": 3480,
+        "issued_attempts": 3480,
+        "cap_skips": 0,
+        "lag_skips": 0,
+        "ledger_reconciled": true,
+        "skip_fraction": 0.0,
+        "issuance_ratio": 1.0,
+        "issued_rps": 60.0,
+        "scheduled_rps": 60.0
+      },
+      "valid_at_999_issuance": true,
+      "valid_at_9999_issuance": true,
+      "valid_at_zero_skips": true,
+      "completed_events": 176,
+      "preservation_passed": true,
+      "readiness_seconds": 12.360000000000582,
+      "drain_seconds": 57.98500000000058,
+      "post_ready_duration_seconds": 45.63999999999942,
+      "phases": {
+        "startup": {
+          "client": {
+            "requests": 741,
+            "transport_failures": 35,
+            "http_failures": 0,
+            "late_successes": 38,
+            "client_p95_ms": 515.9999999996217,
+            "successful_p95_ms": 514.9999999994179,
+            "start_lag_p95_ms": 15.99999999962165
+          },
+          "controller_snapshots": 46,
+          "fresh_snapshots": 4,
+          "states": {
+            "Recovery": 46
+          },
+          "decision_reasons": {
+            "telemetry_missing_invalid_or_stale": 42,
+            "patient:throughput_rps": 4
+          },
+          "rates_observed": [
+            20.0
+          ],
+          "cloud_metrics": {
+            "patient": {
+              "throughput_rps": {
+                "minimum": 63.5975,
+                "maximum": 158.2625
+              },
+              "average_latency_ms": {
+                "minimum": 6.98,
+                "maximum": 16.3
+              },
+              "p95_latency_ms": {
+                "minimum": 8.65,
+                "maximum": 41.25
+              },
+              "error_rate": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "live_p95_latency_ms": {
+                "minimum": 8.65,
+                "maximum": 41.25
+              },
+              "live_slo_violation_rate": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "executor_queue_depth": {
+                "minimum": 0,
+                "maximum": 0
+              }
+            },
+            "emergency": {
+              "throughput_rps": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "average_latency_ms": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "p95_latency_ms": null,
+              "error_rate": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "live_p95_latency_ms": null,
+              "live_slo_violation_rate": null,
+              "executor_queue_depth": {
+                "minimum": 0,
+                "maximum": 0
+              }
+            },
+            "admin": {
+              "throughput_rps": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "average_latency_ms": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "p95_latency_ms": null,
+              "error_rate": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "live_p95_latency_ms": null,
+              "live_slo_violation_rate": null,
+              "executor_queue_depth": {
+                "minimum": 0,
+                "maximum": 0
+              }
+            }
+          }
+        },
+        "post_ready": {
+          "client": {
+            "requests": 2739,
+            "transport_failures": 0,
+            "http_failures": 0,
+            "late_successes": 0,
+            "client_p95_ms": 16.00000000325963,
+            "successful_p95_ms": 16.00000000325963,
+            "start_lag_p95_ms": 15.99999999962165
+          },
+          "controller_snapshots": 167,
+          "fresh_snapshots": 167,
+          "states": {
+            "Recovery": 167
+          },
+          "decision_reasons": {
+            "patient:throughput_rps": 167
+          },
+          "rates_observed": [
+            20.0
+          ],
+          "cloud_metrics": {
+            "patient": {
+              "throughput_rps": {
+                "minimum": 62.9602,
+                "maximum": 65.5549
+              },
+              "average_latency_ms": {
+                "minimum": 6.23,
+                "maximum": 6.89
+              },
+              "p95_latency_ms": {
+                "minimum": 7.93,
+                "maximum": 8.65
+              },
+              "error_rate": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "live_p95_latency_ms": {
+                "minimum": 7.21,
+                "maximum": 8.36
+              },
+              "live_slo_violation_rate": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "executor_queue_depth": {
+                "minimum": 0,
+                "maximum": 0
+              }
+            },
+            "emergency": {
+              "throughput_rps": {
+                "minimum": 0.0,
+                "maximum": 0.7436
+              },
+              "average_latency_ms": {
+                "minimum": 0.0,
+                "maximum": 8.77
+              },
+              "p95_latency_ms": {
+                "minimum": 8.77,
+                "maximum": 10.54
+              },
+              "error_rate": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "live_p95_latency_ms": null,
+              "live_slo_violation_rate": null,
+              "executor_queue_depth": {
+                "minimum": 0,
+                "maximum": 0
+              }
+            },
+            "admin": {
+              "throughput_rps": {
+                "minimum": 0.1815,
+                "maximum": 0.6389
+              },
+              "average_latency_ms": {
+                "minimum": 8.52,
+                "maximum": 9.07
+              },
+              "p95_latency_ms": {
+                "minimum": 9.07,
+                "maximum": 11.75
+              },
+              "error_rate": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "live_p95_latency_ms": null,
+              "live_slo_violation_rate": null,
+              "executor_queue_depth": {
+                "minimum": 0,
+                "maximum": 0
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "source": "evaluation/results/aimd-independent-calibration-20261101-185222/run-60/summary.json",
+      "seed": 50102,
+      "read_rps": 60.0,
+      "generator": {
+        "scheduled_opportunities": 2412,
+        "issued_attempts": 2412,
+        "cap_skips": 0,
+        "lag_skips": 0,
+        "ledger_reconciled": true,
+        "skip_fraction": 0.0,
+        "issuance_ratio": 1.0,
+        "issued_rps": 60.01940926170441,
+        "scheduled_rps": 60.01940926170441
+      },
+      "valid_at_999_issuance": true,
+      "valid_at_9999_issuance": true,
+      "valid_at_zero_skips": true,
+      "completed_events": 176,
+      "preservation_passed": true,
+      "readiness_seconds": 12.389999999999418,
+      "drain_seconds": 40.125,
+      "post_ready_duration_seconds": 27.79699999999866,
+      "phases": {
+        "startup": {
+          "client": {
+            "requests": 743,
+            "transport_failures": 48,
+            "http_failures": 0,
+            "late_successes": 26,
+            "client_p95_ms": 515.9999999996217,
+            "successful_p95_ms": 16.00000000325963,
+            "start_lag_p95_ms": 16.666666666666607
+          },
+          "controller_snapshots": 46,
+          "fresh_snapshots": 9,
+          "states": {
+            "Recovery": 46
+          },
+          "decision_reasons": {
+            "telemetry_missing_invalid_or_stale": 37,
+            "patient:throughput_rps": 9
+          },
+          "rates_observed": [
+            20.0
+          ],
+          "cloud_metrics": {
+            "patient": {
+              "throughput_rps": {
+                "minimum": 62.6477,
+                "maximum": 66.1797
+              },
+              "average_latency_ms": {
+                "minimum": 6.03,
+                "maximum": 6.17
+              },
+              "p95_latency_ms": {
+                "minimum": 7.53,
+                "maximum": 8.01
+              },
+              "error_rate": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "live_p95_latency_ms": {
+                "minimum": 7.53,
+                "maximum": 7.8
+              },
+              "live_slo_violation_rate": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "executor_queue_depth": {
+                "minimum": 0,
+                "maximum": 0
+              }
+            },
+            "emergency": {
+              "throughput_rps": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "average_latency_ms": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "p95_latency_ms": null,
+              "error_rate": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "live_p95_latency_ms": null,
+              "live_slo_violation_rate": null,
+              "executor_queue_depth": {
+                "minimum": 0,
+                "maximum": 0
+              }
+            },
+            "admin": {
+              "throughput_rps": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "average_latency_ms": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "p95_latency_ms": null,
+              "error_rate": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "live_p95_latency_ms": null,
+              "live_slo_violation_rate": null,
+              "executor_queue_depth": {
+                "minimum": 0,
+                "maximum": 0
+              }
+            }
+          }
+        },
+        "post_ready": {
+          "client": {
+            "requests": 1669,
+            "transport_failures": 0,
+            "http_failures": 0,
+            "late_successes": 0,
+            "client_p95_ms": 16.00000000325963,
+            "successful_p95_ms": 16.00000000325963,
+            "start_lag_p95_ms": 16.66666666666572
+          },
+          "controller_snapshots": 102,
+          "fresh_snapshots": 102,
+          "states": {
+            "Recovery": 102
+          },
+          "decision_reasons": {
+            "patient:throughput_rps": 102
+          },
+          "rates_observed": [
+            20.0
+          ],
+          "cloud_metrics": {
+            "patient": {
+              "throughput_rps": {
+                "minimum": 63.6523,
+                "maximum": 65.4329
+              },
+              "average_latency_ms": {
+                "minimum": 6.08,
+                "maximum": 6.15
+              },
+              "p95_latency_ms": {
+                "minimum": 8.01,
+                "maximum": 8.29
+              },
+              "error_rate": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "live_p95_latency_ms": {
+                "minimum": 7.14,
+                "maximum": 7.67
+              },
+              "live_slo_violation_rate": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "executor_queue_depth": {
+                "minimum": 0,
+                "maximum": 0
+              }
+            },
+            "emergency": {
+              "throughput_rps": {
+                "minimum": 0.0,
+                "maximum": 0.8931
+              },
+              "average_latency_ms": {
+                "minimum": 0.0,
+                "maximum": 9.91
+              },
+              "p95_latency_ms": {
+                "minimum": 9.17,
+                "maximum": 14.69
+              },
+              "error_rate": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "live_p95_latency_ms": null,
+              "live_slo_violation_rate": null,
+              "executor_queue_depth": {
+                "minimum": 0,
+                "maximum": 0
+              }
+            },
+            "admin": {
+              "throughput_rps": {
+                "minimum": 0.0,
+                "maximum": 0.7084
+              },
+              "average_latency_ms": {
+                "minimum": 0.0,
+                "maximum": 9.43
+              },
+              "p95_latency_ms": {
+                "minimum": 8.93,
+                "maximum": 9.43
+              },
+              "error_rate": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "live_p95_latency_ms": null,
+              "live_slo_violation_rate": null,
+              "executor_queue_depth": {
+                "minimum": 0,
+                "maximum": 0
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "source": "evaluation/results/aimd-independent-calibration-20261101-185222/run-120/summary.json",
+      "seed": 50101,
+      "read_rps": 120.0,
+      "generator": {
+        "scheduled_opportunities": 6572,
+        "issued_attempts": 6572,
+        "cap_skips": 0,
+        "lag_skips": 0,
+        "ledger_reconciled": true,
+        "skip_fraction": 0.0,
+        "issuance_ratio": 1.0,
+        "issued_rps": 120.00146076031861,
+        "scheduled_rps": 120.00146076031861
+      },
+      "valid_at_999_issuance": true,
+      "valid_at_9999_issuance": true,
+      "valid_at_zero_skips": true,
+      "completed_events": 176,
+      "preservation_passed": true,
+      "readiness_seconds": 12.407000000002881,
+      "drain_seconds": 54.71900000000096,
+      "post_ready_duration_seconds": 42.35900000000038,
+      "phases": {
+        "startup": {
+          "client": {
+            "requests": 1487,
+            "transport_failures": 101,
+            "http_failures": 0,
+            "late_successes": 49,
+            "client_p95_ms": 545.9999999984575,
+            "successful_p95_ms": 61.99999999807915,
+            "start_lag_p95_ms": 16.00000000325963
+          },
+          "controller_snapshots": 46,
+          "fresh_snapshots": 4,
+          "states": {
+            "Recovery": 46
+          },
+          "decision_reasons": {
+            "telemetry_missing_invalid_or_stale": 42,
+            "patient:throughput_rps": 4
+          },
+          "rates_observed": [
+            20.0
+          ],
+          "cloud_metrics": {
+            "patient": {
+              "throughput_rps": {
+                "minimum": 124.4513,
+                "maximum": 255.4438
+              },
+              "average_latency_ms": {
+                "minimum": 9.36,
+                "maximum": 50.24
+              },
+              "p95_latency_ms": {
+                "minimum": 36.21,
+                "maximum": 91.11
+              },
+              "error_rate": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "live_p95_latency_ms": {
+                "minimum": 36.21,
+                "maximum": 91.11
+              },
+              "live_slo_violation_rate": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "executor_queue_depth": {
+                "minimum": 0,
+                "maximum": 0
+              }
+            },
+            "emergency": {
+              "throughput_rps": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "average_latency_ms": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "p95_latency_ms": null,
+              "error_rate": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "live_p95_latency_ms": null,
+              "live_slo_violation_rate": null,
+              "executor_queue_depth": {
+                "minimum": 0,
+                "maximum": 0
+              }
+            },
+            "admin": {
+              "throughput_rps": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "average_latency_ms": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "p95_latency_ms": null,
+              "error_rate": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "live_p95_latency_ms": null,
+              "live_slo_violation_rate": null,
+              "executor_queue_depth": {
+                "minimum": 0,
+                "maximum": 0
+              }
+            }
+          }
+        },
+        "post_ready": {
+          "client": {
+            "requests": 5085,
+            "transport_failures": 0,
+            "http_failures": 0,
+            "late_successes": 0,
+            "client_p95_ms": 15.99999999962165,
+            "successful_p95_ms": 15.99999999962165,
+            "start_lag_p95_ms": 16.00000000325963
+          },
+          "controller_snapshots": 155,
+          "fresh_snapshots": 155,
+          "states": {
+            "Recovery": 155
+          },
+          "decision_reasons": {
+            "patient:throughput_rps": 155
+          },
+          "rates_observed": [
+            20.0
+          ],
+          "cloud_metrics": {
+            "patient": {
+              "throughput_rps": {
+                "minimum": 123.3055,
+                "maximum": 125.6684
+              },
+              "average_latency_ms": {
+                "minimum": 7.23,
+                "maximum": 9.13
+              },
+              "p95_latency_ms": {
+                "minimum": 8.7,
+                "maximum": 32.9
+              },
+              "error_rate": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "live_p95_latency_ms": {
+                "minimum": 8.39,
+                "maximum": 32.9
+              },
+              "live_slo_violation_rate": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "executor_queue_depth": {
+                "minimum": 0,
+                "maximum": 0
+              }
+            },
+            "emergency": {
+              "throughput_rps": {
+                "minimum": 0.0,
+                "maximum": 0.8676
+              },
+              "average_latency_ms": {
+                "minimum": 0.0,
+                "maximum": 9.38
+              },
+              "p95_latency_ms": {
+                "minimum": 9.03,
+                "maximum": 9.38
+              },
+              "error_rate": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "live_p95_latency_ms": null,
+              "live_slo_violation_rate": null,
+              "executor_queue_depth": {
+                "minimum": 0,
+                "maximum": 0
+              }
+            },
+            "admin": {
+              "throughput_rps": {
+                "minimum": 0.0,
+                "maximum": 0.6612
+              },
+              "average_latency_ms": {
+                "minimum": 0.0,
+                "maximum": 9.08
+              },
+              "p95_latency_ms": {
+                "minimum": 9.36,
+                "maximum": 11.05
+              },
+              "error_rate": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "live_p95_latency_ms": null,
+              "live_slo_violation_rate": null,
+              "executor_queue_depth": {
+                "minimum": 0,
+                "maximum": 0
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "source": "evaluation/results/aimd-independent-calibration-20261101-185222/run-120/summary.json",
+      "seed": 50102,
+      "read_rps": 120.0,
+      "generator": {
+        "scheduled_opportunities": 5162,
+        "issued_attempts": 5160,
+        "cap_skips": 0,
+        "lag_skips": 2,
+        "ledger_reconciled": true,
+        "skip_fraction": 0.0003874467260751647,
+        "issuance_ratio": 0.9996125532739248,
+        "issued_rps": 119.95815413228107,
+        "scheduled_rps": 120.00464954085946
+      },
+      "valid_at_999_issuance": true,
+      "valid_at_9999_issuance": false,
+      "valid_at_zero_skips": false,
+      "completed_events": 176,
+      "preservation_passed": true,
+      "readiness_seconds": 12.4220000000023,
+      "drain_seconds": 42.98400000000038,
+      "post_ready_duration_seconds": 30.59299999999712,
+      "phases": {
+        "startup": {
+          "client": {
+            "requests": 1489,
+            "transport_failures": 66,
+            "http_failures": 0,
+            "late_successes": 84,
+            "client_p95_ms": 686.9999999980791,
+            "successful_p95_ms": 687.9999999982829,
+            "start_lag_p95_ms": 14.999999999417923
+          },
+          "controller_snapshots": 46,
+          "fresh_snapshots": 8,
+          "states": {
+            "Recovery": 46
+          },
+          "decision_reasons": {
+            "telemetry_missing_invalid_or_stale": 38,
+            "patient:throughput_rps": 8
+          },
+          "rates_observed": [
+            20.0
+          ],
+          "cloud_metrics": {
+            "patient": {
+              "throughput_rps": {
+                "minimum": 128.3757,
+                "maximum": 139.998
+              },
+              "average_latency_ms": {
+                "minimum": 10.79,
+                "maximum": 17.18
+              },
+              "p95_latency_ms": {
+                "minimum": 54.6,
+                "maximum": 61.55
+              },
+              "error_rate": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "live_p95_latency_ms": {
+                "minimum": 54.6,
+                "maximum": 61.55
+              },
+              "live_slo_violation_rate": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "executor_queue_depth": {
+                "minimum": 0,
+                "maximum": 0
+              }
+            },
+            "emergency": {
+              "throughput_rps": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "average_latency_ms": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "p95_latency_ms": null,
+              "error_rate": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "live_p95_latency_ms": null,
+              "live_slo_violation_rate": null,
+              "executor_queue_depth": {
+                "minimum": 0,
+                "maximum": 0
+              }
+            },
+            "admin": {
+              "throughput_rps": {
+                "minimum": 0.0,
+                "maximum": 0.1884
+              },
+              "average_latency_ms": {
+                "minimum": 0.0,
+                "maximum": 9.37
+              },
+              "p95_latency_ms": {
+                "minimum": 9.37,
+                "maximum": 9.37
+              },
+              "error_rate": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "live_p95_latency_ms": null,
+              "live_slo_violation_rate": null,
+              "executor_queue_depth": {
+                "minimum": 0,
+                "maximum": 0
+              }
+            }
+          }
+        },
+        "post_ready": {
+          "client": {
+            "requests": 3671,
+            "transport_failures": 0,
+            "http_failures": 0,
+            "late_successes": 0,
+            "client_p95_ms": 16.00000000325963,
+            "successful_p95_ms": 16.00000000325963,
+            "start_lag_p95_ms": 14.999999999417923
+          },
+          "controller_snapshots": 112,
+          "fresh_snapshots": 112,
+          "states": {
+            "Recovery": 112
+          },
+          "decision_reasons": {
+            "patient:throughput_rps": 112
+          },
+          "rates_observed": [
+            20.0
+          ],
+          "cloud_metrics": {
+            "patient": {
+              "throughput_rps": {
+                "minimum": 125.1398,
+                "maximum": 128.706
+              },
+              "average_latency_ms": {
+                "minimum": 7.84,
+                "maximum": 10.79
+              },
+              "p95_latency_ms": {
+                "minimum": 9.15,
+                "maximum": 54.6
+              },
+              "error_rate": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "live_p95_latency_ms": {
+                "minimum": 8.75,
+                "maximum": 54.6
+              },
+              "live_slo_violation_rate": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "executor_queue_depth": {
+                "minimum": 0,
+                "maximum": 0
+              }
+            },
+            "emergency": {
+              "throughput_rps": {
+                "minimum": 0.0,
+                "maximum": 0.8003
+              },
+              "average_latency_ms": {
+                "minimum": 0.0,
+                "maximum": 11.31
+              },
+              "p95_latency_ms": {
+                "minimum": 8.96,
+                "maximum": 11.31
+              },
+              "error_rate": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "live_p95_latency_ms": null,
+              "live_slo_violation_rate": null,
+              "executor_queue_depth": {
+                "minimum": 0,
+                "maximum": 0
+              }
+            },
+            "admin": {
+              "throughput_rps": {
+                "minimum": 0.0865,
+                "maximum": 0.6923
+              },
+              "average_latency_ms": {
+                "minimum": 8.51,
+                "maximum": 9.37
+              },
+              "p95_latency_ms": {
+                "minimum": 9.37,
+                "maximum": 10.18
+              },
+              "error_rate": {
+                "minimum": 0.0,
+                "maximum": 0.0
+              },
+              "live_p95_latency_ms": null,
+              "live_slo_violation_rate": null,
+              "executor_queue_depth": {
+                "minimum": 0,
+                "maximum": 0
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "sources_sha256": {
+    "evaluation/results/aimd-independent-calibration-20261101-185222/run-60/summary.json": "d2f3b0987898eb3259cb64f29ab1187dae9da0bec4e0b9c0f3e1402ae3a65b54",
+    "evaluation/results/aimd-independent-calibration-20261101-185222/run-120/summary.json": "beaac2637124834bb800a1247a9d05aef765eec7e590dd56ed0eed3ca709a95a"
+  },
+  "script_sha256": "17ec41d7fa14ef7bec014ef73001f5dc06c1e83c40f6f3b13f070c7db023b0e5"
+}

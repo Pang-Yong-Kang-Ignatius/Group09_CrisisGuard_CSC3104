@@ -1,0 +1,7 @@
+# Targeted Checkpoint 7B deployment override. The base/private Compose files
+# retain all existing credentials, volumes, commands and AIMD configuration.
+services:
+  hospital-a:
+    image: crisisguard-hospital:cp7b-provenance-20261028
+  hospital-b:
+    image: crisisguard-hospital:cp7b-provenance-20261028

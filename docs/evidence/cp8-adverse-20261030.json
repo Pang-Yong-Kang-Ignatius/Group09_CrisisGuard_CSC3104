@@ -1,0 +1,214 @@
+{
+  "initial_2rps_expansion": {
+    "planned_trials": 280,
+    "executed_or_interrupted": 4,
+    "not_executed_under_this_configuration": 276,
+    "original_event_denominator": 176,
+    "observed_applications": 152,
+    "not_observed_at_retained_cutoffs": 24,
+    "interpretation": "Different seed/policy attempts are not paired ON/OFF evidence; interrupted/timeout absences are cutoff observations, not permanent-loss claims.",
+    "preservation": {
+      "container_identity_image_state_mounts_equal": true,
+      "exact_volume_set_equal": true
+    },
+    "records": [
+      {
+        "condition": "ratio1-1_depth0_balanced",
+        "seed": 3105,
+        "policy": "bounded_on",
+        "project": "cg-cp8-4f284ae4b63b",
+        "result": "failed",
+        "error": "TimeoutError: Original backlog did not drain",
+        "raw_path": "C:\\Users\\muhdh\\OneDrive\\Documents\\GitHub\\CrisisGuard\\.venv\\cp8-2091777e8b95\\cg-cp8-4f284ae4b63b\\raw.json",
+        "cleanup": "passed",
+        "cloud_drain_interval_seconds": null,
+        "original_events": 44,
+        "observed_applications": 43,
+        "not_observed_at_cutoff": 1,
+        "original_workflows": 44,
+        "capture_attempts": 44,
+        "capture_201_responses": 44
+      },
+      {
+        "condition": "ratio1-1_depth0_balanced",
+        "seed": 3104,
+        "policy": "bounded_off",
+        "project": "cg-cp8-bb995e99ae0a",
+        "result": "passed",
+        "error": null,
+        "raw_path": "C:\\Users\\muhdh\\OneDrive\\Documents\\GitHub\\CrisisGuard\\.venv\\cp8-2091777e8b95\\cg-cp8-bb995e99ae0a\\raw.json",
+        "cleanup": "passed",
+        "cloud_drain_interval_seconds": [
+          157.81610850000106,
+          158.09674900000027
+        ],
+        "original_events": 44,
+        "observed_applications": 44,
+        "not_observed_at_cutoff": 0,
+        "original_workflows": 44,
+        "capture_attempts": 44,
+        "capture_201_responses": 44
+      },
+      {
+        "project": "cg-cp8-63486f28aee8",
+        "result": "interrupted",
+        "reason": "Stop expansion after first bounded matrix timeout; retain original denominators",
+        "raw_path": "C:\\Users\\muhdh\\OneDrive\\Documents\\GitHub\\CrisisGuard\\.venv\\cp8-2091777e8b95\\cg-cp8-63486f28aee8\\interrupted.json",
+        "condition": "ratio1-1_depth0_balanced",
+        "seed": 3104,
+        "policy": "Not recorded in interrupted snapshot",
+        "policy_note": "The matching planned workload identifies seed/condition only; policy/configuration are not fabricated from later runs.",
+        "original_events": 44,
+        "original_workflows": 44,
+        "observed_applications": 33,
+        "not_observed_at_cutoff": 11,
+        "local_snapshot_events": 44,
+        "local_status_counts": {
+          "pending": 11,
+          "applied": 33
+        },
+        "capture_attempts": "Not retained; all 44 original local IDs verified in snapshot",
+        "cleanup": "passed"
+      },
+      {
+        "project": "cg-cp8-b1f2a66bad06",
+        "result": "interrupted",
+        "reason": "Stop expansion after first bounded matrix timeout; retain original denominators",
+        "raw_path": "C:\\Users\\muhdh\\OneDrive\\Documents\\GitHub\\CrisisGuard\\.venv\\cp8-2091777e8b95\\cg-cp8-b1f2a66bad06\\interrupted.json",
+        "condition": "ratio1-1_depth0_balanced",
+        "seed": 3106,
+        "policy": "Not recorded in interrupted snapshot",
+        "policy_note": "The matching planned workload identifies seed/condition only; policy/configuration are not fabricated from later runs.",
+        "original_events": 44,
+        "original_workflows": 44,
+        "observed_applications": 32,
+        "not_observed_at_cutoff": 12,
+        "local_snapshot_events": 44,
+        "local_status_counts": {
+          "pending": 12,
+          "applied": 32
+        },
+        "capture_attempts": "Not retained; all 44 original local IDs verified in snapshot",
+        "cleanup": "passed"
+      }
+    ]
+  },
+  "automatic_measurement_failures": [
+    {
+      "study": "cp8-auto01-20261030",
+      "project": "cg-cp8-48b0a80accf7",
+      "result": "failed",
+      "error": "AssertionError: Reconnection observer missed a site",
+      "raw_path": "C:\\Users\\muhdh\\OneDrive\\Documents\\GitHub\\CrisisGuard\\.venv\\cp8-8dde221cd7bc\\cg-cp8-48b0a80accf7\\raw.json",
+      "cleanup": "passed",
+      "cloud_drain_interval_seconds": [
+        10.418767399998615,
+        10.700305899998057
+      ],
+      "duplicate_probe_status": 409,
+      "disabled_manual_probe_status": null,
+      "integrity": null,
+      "reconnection_observations": {},
+      "original_events": 44,
+      "original_workflows": 12,
+      "observed_applications": 44,
+      "capture_attempts": 44,
+      "capture_201_responses": 44,
+      "preservation": {
+        "container_identity_image_mounts_equal": true,
+        "container_states_equal": true,
+        "exact_network_set_equal": true,
+        "exact_volume_set_equal": true
+      },
+      "source_unchanged_during_run": true
+    },
+    {
+      "study": "cp8-auto02-20261030",
+      "project": "cg-cp8-5520d9bad40a",
+      "result": "failed",
+      "error": "AssertionError: ",
+      "raw_path": "C:\\Users\\muhdh\\OneDrive\\Documents\\GitHub\\CrisisGuard\\.venv\\cp8-269706b8a5dc\\cg-cp8-5520d9bad40a\\raw.json",
+      "cleanup": "passed",
+      "cloud_drain_interval_seconds": [
+        42.467678900000465,
+        42.749312899999495
+      ],
+      "duplicate_probe_status": 409,
+      "disabled_manual_probe_status": 404,
+      "integrity": null,
+      "reconnection_observations": {
+        "Hospital_B": {
+          "interval_seconds": [
+            7.96950680000009,
+            8.25487989999965
+          ],
+          "status": {
+            "enabled": true,
+            "cloud_reachable": true,
+            "service_health": {
+              "patient": false,
+              "emergency": false,
+              "admin": true
+            },
+            "last_check_at": "2026-10-30T11:37:08.587146+00:00",
+            "last_disconnected_at": null,
+            "last_reconnected_at": "2026-10-30T11:37:08.587146+00:00",
+            "drain_completed_at": null,
+            "last_replay_at": null,
+            "last_replay_attempted": 0,
+            "last_replay_applied": 0,
+            "replayable_backlog": 22,
+            "reconciled_on_startup": {
+              "applied": [],
+              "released": [],
+              "unresolved": []
+            },
+            "last_error": null
+          }
+        },
+        "Hospital_A": {
+          "interval_seconds": [
+            8.248697999999422,
+            8.55025039999964
+          ],
+          "status": {
+            "enabled": true,
+            "cloud_reachable": true,
+            "service_health": {
+              "patient": false,
+              "emergency": false,
+              "admin": true
+            },
+            "last_check_at": "2026-10-30T11:37:08.777470+00:00",
+            "last_disconnected_at": null,
+            "last_reconnected_at": "2026-10-30T11:37:08.777470+00:00",
+            "drain_completed_at": null,
+            "last_replay_at": null,
+            "last_replay_attempted": 0,
+            "last_replay_applied": 0,
+            "replayable_backlog": 22,
+            "reconciled_on_startup": {
+              "applied": [],
+              "released": [],
+              "unresolved": []
+            },
+            "last_error": null
+          }
+        }
+      },
+      "original_events": 44,
+      "original_workflows": 12,
+      "observed_applications": 44,
+      "capture_attempts": 44,
+      "capture_201_responses": 44,
+      "preservation": {
+        "container_identity_image_mounts_equal": true,
+        "container_states_equal": true,
+        "exact_network_set_equal": true,
+        "exact_volume_set_equal": true
+      },
+      "source_unchanged_during_run": true
+    }
+  ],
+  "correction": "auto03 uses observed all-services-unreachable preparation, then Cloud restoration; disabled manual replay expects existing 404 contract. Failed attempts remain failed."
+}

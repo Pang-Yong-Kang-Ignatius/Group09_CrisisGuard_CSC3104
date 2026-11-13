@@ -1,0 +1,18 @@
+[
+  {
+    "event_id": "TEAM_A_REG_001",
+    "site_id": "Hospital_A",
+    "event_type": "patient_registration",
+    "base_priority": 1,
+    "prerequisite_ids": [],
+    "payload": {"patient_id": "SYNTHETIC_TEAM_A"}
+  },
+  {
+    "event_id": "TEAM_B_REG_001",
+    "site_id": "Hospital_B",
+    "event_type": "patient_registration",
+    "base_priority": 1,
+    "prerequisite_ids": [],
+    "payload": {"patient_id": "SYNTHETIC_TEAM_B"}
+  }
+]

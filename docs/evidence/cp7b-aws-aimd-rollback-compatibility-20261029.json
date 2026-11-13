@@ -1,0 +1,167 @@
+{
+  "date_sgt": "2026-10-29",
+  "old_revision": "1482fe3827896f135577ee53b68ddd67b57f881f",
+  "new_revision": "f128ac0f2b6e551af3e03cb3e3d44262b451195a",
+  "docker_endpoint_kind": "local_npipe",
+  "storage": "one disposable PostgreSQL 16 tmpfs container; random loopback port",
+  "original_schema": {
+    "aimd_columns": [],
+    "grant_indexes": [
+      "controller_active_event_uniq",
+      "controller_grants_expiry_idx",
+      "controller_grants_pkey"
+    ],
+    "grant_unique_constraints": []
+  },
+  "migrated_schema": {
+    "aimd_columns": [
+      "rate_healthy_count",
+      "rate_rps"
+    ],
+    "grant_indexes": [
+      "controller_active_event_uniq",
+      "controller_grants_expiry_idx",
+      "controller_grants_pkey"
+    ],
+    "grant_unique_constraints": []
+  },
+  "pre_migration_rows": {
+    "events": {
+      "rows": 2,
+      "sha256": "de32831491ce907bc6a562bebea93992120a0f13305214a21136a40b76939240"
+    },
+    "grants": {
+      "rows": 2,
+      "sha256": "22a2506d464d0c87edde65bf9d866a0ee04a8d31c63e01a95959c4d885f3e43f"
+    },
+    "tickets": {
+      "rows": 1,
+      "sha256": "70613b9cd86b70a18c60904a451a1cd8299ecc30273995e356d66d3dd6e4d3db"
+    },
+    "grant_audit": {
+      "rows": 1,
+      "sha256": "af7170476a6e474195c0f07af7b44835ef109d213555ce36d0a6f71182161241"
+    },
+    "admission_base": {
+      "rows": 1,
+      "sha256": "0662829bd3dfb5ccb6b64f5a32ed90f5cb92543cd69889e245cd802a7db9d03f"
+    }
+  },
+  "post_migration_rows_before_poll": {
+    "events": {
+      "rows": 2,
+      "sha256": "de32831491ce907bc6a562bebea93992120a0f13305214a21136a40b76939240"
+    },
+    "grants": {
+      "rows": 2,
+      "sha256": "22a2506d464d0c87edde65bf9d866a0ee04a8d31c63e01a95959c4d885f3e43f"
+    },
+    "tickets": {
+      "rows": 1,
+      "sha256": "70613b9cd86b70a18c60904a451a1cd8299ecc30273995e356d66d3dd6e4d3db"
+    },
+    "grant_audit": {
+      "rows": 1,
+      "sha256": "af7170476a6e474195c0f07af7b44835ef109d213555ce36d0a6f71182161241"
+    },
+    "admission_base": {
+      "rows": 1,
+      "sha256": "0662829bd3dfb5ccb6b64f5a32ed90f5cb92543cd69889e245cd802a7db9d03f"
+    }
+  },
+  "post_aimd_rows": {
+    "events": {
+      "rows": 2,
+      "sha256": "de32831491ce907bc6a562bebea93992120a0f13305214a21136a40b76939240"
+    },
+    "grants": {
+      "rows": 2,
+      "sha256": "22a2506d464d0c87edde65bf9d866a0ee04a8d31c63e01a95959c4d885f3e43f"
+    },
+    "tickets": {
+      "rows": 1,
+      "sha256": "70613b9cd86b70a18c60904a451a1cd8299ecc30273995e356d66d3dd6e4d3db"
+    },
+    "grant_audit": {
+      "rows": 1,
+      "sha256": "af7170476a6e474195c0f07af7b44835ef109d213555ce36d0a6f71182161241"
+    },
+    "admission_base": {
+      "rows": 1,
+      "sha256": "2efc5a2abc0e0665092a14484b05d5ca511eeabe7fc563223b9bba2bba8276e4"
+    }
+  },
+  "rows_preserved_during_migration": true,
+  "new_columns_before_poll": {
+    "rate_rps": null,
+    "rate_healthy_count": 0
+  },
+  "aimd": {
+    "policy": "aimd",
+    "states_and_rates": [
+      [
+        "Normal",
+        0.2,
+        1
+      ],
+      [
+        "Normal",
+        0.4,
+        0
+      ]
+    ],
+    "candidate_api_available": true
+  },
+  "new_controller_fixed_policy_backout": {
+    "policy": "fixed",
+    "state": "Normal",
+    "reported_rate_rps": 2.0,
+    "telemetry_fresh": true,
+    "candidate_api_available": true
+  },
+  "old_controller_after_migration": {
+    "state": "Normal",
+    "reported_rate_rps": 2.0,
+    "waiting_before_issue": 1,
+    "grant_identity_preserved": true,
+    "issued": true,
+    "issued_rate_rps": 2.0,
+    "candidate_api_available": false
+  },
+  "events_preserved_after_old_issue": true,
+  "old_stale_telemetry": {
+    "allowed": true,
+    "state": "Recovery",
+    "reason": "admitted"
+  },
+  "new_stale_telemetry": {
+    "allowed": false,
+    "state": "Recovery",
+    "reason": "telemetry_unavailable"
+  },
+  "new_fixed_stale_telemetry": {
+    "allowed": false,
+    "state": "Recovery",
+    "reason": "telemetry_unavailable"
+  },
+  "old_stale_with_default_caps_after_drain": {
+    "allowed": true,
+    "state": "Recovery",
+    "reason": "admitted"
+  },
+  "new_fixed_stale_with_default_caps_after_drain": {
+    "allowed": false,
+    "state": "Recovery",
+    "reason": "telemetry_unavailable"
+  },
+  "old_superseded_ticket": {
+    "added_ticket_after_superseded_grant": false
+  },
+  "new_superseded_ticket": {
+    "added_ticket_after_superseded_grant": true
+  },
+  "active_duplicate_grant_rejected": true,
+  "terminal_grant_history_allowed": true,
+  "decision": "direct_old_controller_rollback_unsafe",
+  "disposable_container_removed": true
+}

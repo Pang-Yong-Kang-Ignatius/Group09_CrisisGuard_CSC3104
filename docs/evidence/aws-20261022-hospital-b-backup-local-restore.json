@@ -1,0 +1,15 @@
+{
+  "checked_at_utc": "2026-10-22T06:16:12.213787+00:00",
+  "operation": "restore-check",
+  "sha256": "388fb0fd5e1ac8d58fb8684c686ac78c83ae77e9eafd31055bd52a931d3680df",
+  "kind": "sqlite",
+  "tables": {
+    "events": 1,
+    "recovery_state": 1
+  },
+  "event_status_counts": {
+    "applied": 1
+  },
+  "expected_events_found": 1,
+  "result": "passed"
+}

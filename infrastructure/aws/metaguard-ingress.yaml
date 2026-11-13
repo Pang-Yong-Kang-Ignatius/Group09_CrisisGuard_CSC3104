@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Optional MetaGuard private ingress for existing CrisisGuard security groups. Requires TX review.
+Parameters:
+  CloudSecurityGroupId:
+    Type: AWS::EC2::SecurityGroup::Id
+  HospitalSecurityGroupId:
+    Type: AWS::EC2::SecurityGroup::Id
+  ControllerPort:
+    Type: Number
+    Default: 8005
+    MinValue: 1024
+    MaxValue: 65535
+Resources:
+  ControllerFromHospitals:
+    Type: AWS::EC2::SecurityGroupIngress
+    Properties:
+      GroupId: {Ref: CloudSecurityGroupId}
+      SourceSecurityGroupId: {Ref: HospitalSecurityGroupId}
+      IpProtocol: tcp
+      FromPort: {Ref: ControllerPort}
+      ToPort: {Ref: ControllerPort}
+      Description: Hospital security group only; no public CIDR and no PostgreSQL ingress

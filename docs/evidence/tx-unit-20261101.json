@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-01",
+  "python": "3.11.9",
+  "command": "python -m pytest tests/unit -vv -x -p no:cacheprovider -o faulthandler_timeout=25",
+  "result": "passed",
+  "passed": 982,
+  "warnings": 1,
+  "seconds": 39.61,
+  "raw_log_sha256": "9be1a4588cabbe8d8cc7c0d5ce26aae399cd5d3d958181419a6fba29cdcfda48",
+  "scope": "Python 3.11 unit tests; not a Docker/AWS acceptance result"
+}

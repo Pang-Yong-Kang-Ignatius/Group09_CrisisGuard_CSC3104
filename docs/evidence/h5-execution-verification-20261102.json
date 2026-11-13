@@ -1,0 +1,35 @@
+{
+  "base_commit": "a631e6ea8ab80d549e09b7b80fcf16af816d09e6",
+  "source_image": "crisisguard-cp8:b2893f293f0e",
+  "image_id": "sha256:f24503de1d32422f7ef768b4dcc394fc0abf134cfc039e9b73fee16e2f9b3575",
+  "application_files_verified": 29,
+  "source_hashes": 44,
+  "trials": 40,
+  "strict_valid_trials": 0,
+  "generator_and_functional_valid_trials": 40,
+  "overall_run_result": "failed",
+  "completed_original_events": 3520,
+  "unit_tests": 1193,
+  "postgres_tests": 71,
+  "sampled_ticket_witnesses": 689,
+  "sampled_ticket_bound_violations": 0,
+  "preservation": {
+    "container_identity_image_mounts_equal": true,
+    "container_states_equal": true,
+    "exact_network_set_equal": false,
+    "exact_volume_set_equal": true
+  },
+  "source_unchanged_during_run": true,
+  "runtime": {
+    "host_python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+    "docker_capacity": {
+      "NCPU": 12,
+      "MemTotal": 8240369664,
+      "ServerVersion": "29.9.2"
+    }
+  },
+  "trial_integrity_all_passed": true,
+  "trial_cleanup_all_passed": true,
+  "summary_sha256": "93479cb9fb021392f01f4edae2251a5a1cba89037999d7a7c0daa2ba016ad35d",
+  "pressure_probe_sha256": "dbf8bbe4b465e3765bf9eb3853e4ae3ee23b531421f8101aa451f6ced23065b1"
+}

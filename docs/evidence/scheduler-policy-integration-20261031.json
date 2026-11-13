@@ -1,0 +1,119 @@
+{
+  "date": "2026-10-31",
+  "scope": "Local working-tree merge validation; extends Bettina shared settings with Haris experimental compatibility",
+  "head_before_merge": "6b415d9aeb90f3a16d1be59ac18d04d588490777",
+  "merging": "7f418355c4cba9f2abf03c5a69672e26ee262400",
+  "policy_contract": {
+    "base": "SCHEDULER_ENABLE_INHERITANCE and SCHEDULER_AGEING_INTERVAL_SECONDS",
+    "experimental": "Opted-in REPLAY_INHERITANCE override and REPLAY_SELECTION_POLICY priority/fifo",
+    "consumers": "Startup, replay, Inspector and selection logs share load_scheduler_settings",
+    "safety": "Dependencies, grants, retry/quarantine and uncertain-attempt pinning retained"
+  },
+  "python_unit": {
+    "tests": 933,
+    "failed": 0,
+    "skipped": 0,
+    "existing_deprecation_warnings": 1,
+    "junit": "evaluation/results/cp8-bettina-merge-unit-20261031.xml"
+  },
+  "javascript_unit": {
+    "tests": 61,
+    "failed": 0,
+    "skipped": 0,
+    "command": "node --test tests/unit/*.cjs"
+  },
+  "offline_compose": {
+    "result": "passed",
+    "preflights": 6,
+    "containers_started": 0,
+    "aws_used": false
+  },
+  "repository_artifact_name_audit": {
+    "result": "passed",
+    "tracked_paths_checked": 424,
+    "scope": "Names only, not content/history secret scanning"
+  },
+  "initial_fifo_pilot": {
+    "result": "failed",
+    "trial_result": "passed",
+    "original_events": 44,
+    "verified_events": 44,
+    "postgres_tests": 67,
+    "preservation": {
+      "container_identity_image_mounts_equal": true,
+      "container_states_equal": true,
+      "exact_network_set_equal": false,
+      "exact_volume_set_equal": true
+    },
+    "source_unchanged": true,
+    "note": "Builtin Docker bridge ID changed; existing CrisisGuard network ID unchanged. Cause not measured. Failure retained.",
+    "raw_directory": "C:\\Users\\muhdh\\OneDrive\\Documents\\GitHub\\CrisisGuard\\.venv\\cp8-69e65934172e",
+    "inspector_probe": "Ad hoc API probes returned ConnectTimeout; no successful live Inspector observation claimed."
+  },
+  "repeated_fifo_pilot": {
+    "result": "passed",
+    "original_events": 44,
+    "verified_events": 44,
+    "postgres_tests": 67,
+    "integrity": "passed",
+    "duplicate_probe_status": 409,
+    "cloud_drain_observation_interval_seconds": [
+      10.628930400001991,
+      10.90687070000422
+    ],
+    "preservation": {
+      "container_identity_image_mounts_equal": true,
+      "container_states_equal": true,
+      "exact_network_set_equal": true,
+      "exact_volume_set_equal": true
+    },
+    "source_unchanged": true,
+    "raw_directory": "C:\\Users\\muhdh\\OneDrive\\Documents\\GitHub\\CrisisGuard\\.venv\\cp8-66c12296bb81"
+  },
+  "counts_note": "Repeated pilot PostgreSQL suites overlap; do not add them as distinct cases. Functional pilot, not comparative performance/acceptance.",
+  "image": "crisisguard-cp8:173a86af4593",
+  "image_id": "sha256:9508abd481d1e4a1072dbf9e4d1a12b59f0766ac5011516fa3e4a7286cbe497e",
+  "exact_image_app_source_match": true,
+  "source_sha256": {
+    "edge/capture_api/auto_replay.py": "16fb8671258854a1961f07bc7747e523b2df655f2ee18d2bd8531b3e7f9ed02d",
+    "edge/capture_api/cloud_client.py": "8d8dc47669a8949e348926964008ef1b9ab879fd489cf3417da6ee221ce7bd29",
+    "edge/capture_api/grant_client.py": "a61c1388c2bb446dbbda9bcb3c308f0cba1f944ecc4e80bad4aa70a5c2343272",
+    "edge/capture_api/main.py": "e2085aa55b53acde55549a1e592feca8d2878cae820e1b45d1fafd08fa2e0c7b",
+    "edge/capture_api/scheduled_replay.py": "570f9b51a9195bb2560553b57a5002b8f429e7f0fda789ca6752c4c36faec2ab",
+    "edge/database/db.py": "3764a7ca8282355a88c495a5169bb669c0dadf14d1f3e431b7a166f86c6b1523",
+    "edge/scheduler/config.py": "2a603a16b87441ae40eb73a33e634c4b43e89357da01df9037f47d857623eda5",
+    "edge/scheduler/dag.py": "e3862739ffbd2d3ca01840eb26df620f707f5a23046877f768a081eebbbd70f8",
+    "edge/scheduler/inspector.py": "079ebe6e0457d72dc48b03060f6d0ac43348f103728670fa55ece2a9e5380664",
+    "edge/scheduler/live_preview.py": "5d536280ec226dfc9d4b09aba3168a87e3113aeae32593b844eefbf6953e898e",
+    "edge/scheduler/priority.py": "0da0e9eed9b9f9bfdbe7a855c2118ac16ea534f654596953aed4458979075113",
+    "edge/scheduler/scheduler.py": "ad285a9728d7d50605da4c6e4f86c5cfc11815261da1343cfd6e9a01b8401697",
+    "edge/scheduler/session.py": "a055640df0b652de7f79692d8dc877e6afb9cae2c0c9a92879ab2cfe15572c40",
+    "edge/scheduler/validation.py": "593aeeb8b27968e03b0ee623679706a2b7d8fc250e88417861785a0785b873fc",
+    "cloud/metaguard.py": "fbb397ee27185e069335a98715eeceb39081500770d36ade8e71e7c9ee7a77f5",
+    "cloud/telemetry.py": "2bfc4189836f8b50a1aa8c3921d330fc0c27c503774262fb081354f0851b67f4",
+    "cloud/traffic.py": "a4c8a4a3e377841da3a51e1a10617570dffda5629fca078cbc7be44a2380be0e",
+    "cloud/admin_service/main.py": "69d6bcba9a336770083eb6b6cbfe9b72603ea0d54713a12372d82cde2c6c872d",
+    "cloud/controller/admission.py": "a386e8809304cf2128dbd00bad75d454551b84285f3b1d6bf9e0ccd506cc09bc",
+    "cloud/controller/experimental.py": "c95bf5aab30e3c61a3ab65ef1a675c3ed0902db1f591047f090fc4f6347862ef",
+    "cloud/controller/grants.py": "c157ccf624d42b86c2b15ef64d45c3494a59435359996e3f64bb85d25c8ae110",
+    "cloud/controller/main.py": "5b00a4ed4ece991df89e19a504b78e16b1ab4cb49c5c9646d9663eac59585801",
+    "cloud/controller/scheduler.py": "41d873d616ec25b824a06ba13a05fce71a6258ffe5dfdc6b643b29244420a3ad",
+    "cloud/controller/storage.py": "9af052d6a2fef8b83fba6146e78b55dfa9d6ad06fd12d0e2c8a4d5c45b2ae69f",
+    "cloud/database/db.py": "ba2eef73df6439d1621b60397ab8e1c5daad7310bea7e9a2bcafb43ca0fb9cf0",
+    "cloud/emergency_service/main.py": "8ff78f7b82360bdc37738c76e3a199d400f54f1908380ec61c38696858397b4b",
+    "cloud/patient_service/main.py": "d8978fa415aaaa1833bf5150bbaf08dfb3e06a3b95cb13ca9c8cb7a72ffe2169"
+  },
+  "not_executed": [
+    "AWS/shared deployment",
+    "full recovery matrix on merged source",
+    "hosted CI"
+  ],
+  "raw_backup": {
+    "filename": "CrisisGuard-scheduler-integration-20261031.zip",
+    "scope": "Local retention outside repository and virtualenv; off-machine restore not checked",
+    "bytes": 316716,
+    "sha256": "97481fd127d576415ddd263257dfa63c650ec534c9f702c2db1bb37d5ddeb299",
+    "all_entry_hashes_verified": true,
+    "excludes": "Private Compose credentials, command logs and database binaries"
+  }
+}

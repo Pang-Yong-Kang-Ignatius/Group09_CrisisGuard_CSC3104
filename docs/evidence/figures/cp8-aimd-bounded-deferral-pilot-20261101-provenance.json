@@ -1,0 +1,20 @@
+{
+  "assessment": "docs\\evidence\\aimd-deferral-pilot-review-20261101.json",
+  "assessment_sha256": "6246c965cd0e4a00393f2effb530ed93d4f7b7d7fba81a875b6c16b03d650188",
+  "source_sha256": {
+    "evaluation\\results\\aimd-deferral-pilot-20261101-202315\\run-bounded-deferral\\summary.json": "0bcdd5f02d3452aa3792027385eb26afc7537a58739dbec98b70f41164e81ca9",
+    "C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\.venv\\cp8-ebbeccfee970\\cg-cp8-50f0ff7d01f0\\raw.json": "ed9b4e8be172232dc6d20f80f5002a34bb530f9d9ceb8bf156ef14238d95351c",
+    "evaluation\\results\\aimd-deferral-pilot-20261101-202315\\run-failure-backoff\\summary.json": "db3c955efdebf703edc2faaeec771a2f93254fed27afc494041e2669e55b72cf",
+    "C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\.venv\\cp8-423054ddee6e\\cg-cp8-5e19ed87dc03\\raw.json": "2816164a3b95347734106b7c17f7c3d4bef63b3e59e0319955e36b6926e656e8"
+  },
+  "builder_sha256": "b6485857c966664cea58abdb542c82b49820cb84653cf67bde420b17c709e12b",
+  "observed_reduction_percent": 46.59551963121271,
+  "n_pairs": 1,
+  "statistical_interval": null,
+  "output_sha256": {
+    "cp8-aimd-bounded-deferral-pilot-20261101.png": "14b2d8f54cc9b89b843dd41d093a2920e48743910178fe527ca97dabe13a6950",
+    "cp8-aimd-bounded-deferral-pilot-20261101.pdf": "8e9394dff09b1f5a595bc460db948f0db605d7c78f4b8e43d41f65a65886b7e5",
+    "cp8-aimd-bounded-deferral-pilot-20261101-data.csv": "e877a09e61a69b43e294ba5f4162fd2ff75795a39fc35705e130e5f2d0e7f6d5",
+    "cp8-aimd-bounded-deferral-pilot-20261101-caption.md": "d564888410f950248dddd145f93dbbb8f2521c9b7cbaeac4458ac932bfc91345"
+  }
+}

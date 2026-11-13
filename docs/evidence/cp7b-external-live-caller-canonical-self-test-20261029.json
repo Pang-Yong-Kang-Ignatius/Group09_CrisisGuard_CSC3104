@@ -1,0 +1,14 @@
+{
+  "checkpoint": "7B",
+  "scope": "Canonical ordered-row preservation comparison self-test",
+  "captured_at": "2026-10-29T01:26:54.317291+00:00",
+  "method": "SHA-256 over all columns returned as row JSON in deterministic primary-key/column order; row counts are recorded separately",
+  "checks": {
+    "complete_rows_are_hashed": true,
+    "deterministic_order_required_by_queries": true,
+    "modification_detected": true,
+    "addition_detected": true,
+    "deletion_detected": true
+  },
+  "result": "passed"
+}

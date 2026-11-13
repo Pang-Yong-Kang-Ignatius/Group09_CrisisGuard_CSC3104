@@ -1,0 +1,1005 @@
+{
+  "project": "cg-metaguard-41f79711c3cc",
+  "policy": "aimd",
+  "checks": [
+    "Missing real Cloud telemetry blocks grant issuance without changing tickets or bypasses; both hospitals retain eight offline records",
+    "Eight A/B dependency-chain events applied exactly once; PostgreSQL and SQLite agree; initial test records preserved",
+    "AIMD fresh-telemetry recovery reaches Normal and 2 req/s ceiling; B root receives grant within two preceding grants"
+  ],
+  "samples": [
+    {
+      "server_time": "2026-10-27T11:02:40.842373+00:00",
+      "state": "Caution",
+      "rate_rps": 0.45,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:41.162914+00:00",
+      "state": "Caution",
+      "rate_rps": 0.45,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:41.498732+00:00",
+      "state": "Caution",
+      "rate_rps": 0.45,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:41.821188+00:00",
+      "state": "Caution",
+      "rate_rps": 0.45,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:42.141793+00:00",
+      "state": "Caution",
+      "rate_rps": 0.45,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:42.478635+00:00",
+      "state": "Caution",
+      "rate_rps": 0.45,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:42.817331+00:00",
+      "state": "Caution",
+      "rate_rps": 0.65,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:43.137606+00:00",
+      "state": "Caution",
+      "rate_rps": 0.65,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:43.457757+00:00",
+      "state": "Caution",
+      "rate_rps": 0.65,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:43.779031+00:00",
+      "state": "Normal",
+      "rate_rps": 0.65,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:44.114999+00:00",
+      "state": "Normal",
+      "rate_rps": 0.65,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:44.435174+00:00",
+      "state": "Normal",
+      "rate_rps": 0.65,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:44.770743+00:00",
+      "state": "Normal",
+      "rate_rps": 0.8500000000000001,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:45.092828+00:00",
+      "state": "Normal",
+      "rate_rps": 0.8500000000000001,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:45.414076+00:00",
+      "state": "Normal",
+      "rate_rps": 0.8500000000000001,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:45.752010+00:00",
+      "state": "Normal",
+      "rate_rps": 0.8500000000000001,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:46.095019+00:00",
+      "state": "Normal",
+      "rate_rps": 0.8500000000000001,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:46.434850+00:00",
+      "state": "Normal",
+      "rate_rps": 0.8500000000000001,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:46.756733+00:00",
+      "state": "Normal",
+      "rate_rps": 0.8500000000000001,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:47.079636+00:00",
+      "state": "Normal",
+      "rate_rps": 1.05,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:47.411754+00:00",
+      "state": "Normal",
+      "rate_rps": 1.05,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:47.732865+00:00",
+      "state": "Normal",
+      "rate_rps": 1.05,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:48.052836+00:00",
+      "state": "Normal",
+      "rate_rps": 1.05,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:48.372873+00:00",
+      "state": "Normal",
+      "rate_rps": 1.05,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:48.702909+00:00",
+      "state": "Normal",
+      "rate_rps": 1.05,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:49.025099+00:00",
+      "state": "Normal",
+      "rate_rps": 1.25,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:49.347935+00:00",
+      "state": "Normal",
+      "rate_rps": 1.25,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:49.668802+00:00",
+      "state": "Normal",
+      "rate_rps": 1.25,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:49.990192+00:00",
+      "state": "Normal",
+      "rate_rps": 1.25,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:50.310799+00:00",
+      "state": "Normal",
+      "rate_rps": 1.25,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:50.651283+00:00",
+      "state": "Normal",
+      "rate_rps": 1.25,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:50.991266+00:00",
+      "state": "Normal",
+      "rate_rps": 1.45,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:51.312977+00:00",
+      "state": "Normal",
+      "rate_rps": 1.45,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:51.644161+00:00",
+      "state": "Normal",
+      "rate_rps": 1.45,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:51.971277+00:00",
+      "state": "Normal",
+      "rate_rps": 1.45,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:52.295162+00:00",
+      "state": "Normal",
+      "rate_rps": 1.45,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:52.638316+00:00",
+      "state": "Normal",
+      "rate_rps": 1.45,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:52.959391+00:00",
+      "state": "Normal",
+      "rate_rps": 1.45,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:53.280985+00:00",
+      "state": "Normal",
+      "rate_rps": 1.65,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:53.601103+00:00",
+      "state": "Normal",
+      "rate_rps": 1.65,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:53.938061+00:00",
+      "state": "Normal",
+      "rate_rps": 1.65,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:54.258180+00:00",
+      "state": "Normal",
+      "rate_rps": 1.65,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:54.592052+00:00",
+      "state": "Normal",
+      "rate_rps": 1.65,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:54.913764+00:00",
+      "state": "Normal",
+      "rate_rps": 1.65,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:55.236107+00:00",
+      "state": "Normal",
+      "rate_rps": 1.8499999999999999,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:55.582312+00:00",
+      "state": "Normal",
+      "rate_rps": 1.8499999999999999,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:55.904976+00:00",
+      "state": "Normal",
+      "rate_rps": 1.8499999999999999,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:56.249144+00:00",
+      "state": "Normal",
+      "rate_rps": 1.8499999999999999,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:56.571681+00:00",
+      "state": "Normal",
+      "rate_rps": 1.8499999999999999,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:56.895134+00:00",
+      "state": "Normal",
+      "rate_rps": 1.8499999999999999,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:57.215498+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:57.551516+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:57.891163+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:58.210387+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:58.530716+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:58.851215+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:59.172284+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:59.493789+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:02:59.814071+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:00.134888+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:00.480142+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:00.820058+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:01.142593+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:01.464210+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:01.801507+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:02.124428+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:02.446322+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:02.788742+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:03.107661+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:03.428871+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:03.762667+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:04.102767+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:04.445114+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:04.788848+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:05.109643+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:05.431428+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:05.753632+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:06.100308+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:06.423320+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:06.744320+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:07.067191+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:07.388123+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:07.709043+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:08.028866+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:08.349260+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:08.670404+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:08.991994+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:09.331951+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:09.654825+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:09.976870+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:10.313298+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:10.635073+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:10.977274+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:11.299078+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:11.621521+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:11.941657+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:12.262241+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:12.582611+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:12.903405+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:13.225421+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    },
+    {
+      "server_time": "2026-10-27T11:03:13.545736+00:00",
+      "state": "Normal",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "policy": "aimd"
+    }
+  ],
+  "aws_used": false,
+  "private_configuration": ".venv\\cg-metaguard-41f79711c3cc\\local-aimd.compose.json",
+  "baseline_event_count": 36,
+  "initial_status": {
+    "enabled": true,
+    "state": "Normal",
+    "reason": "healthy",
+    "state_since": "2026-10-27T11:02:12.427878+00:00",
+    "observed_at": "2026-10-27T11:02:23.778567+00:00",
+    "server_time": "2026-10-27T11:02:23.898637+00:00",
+    "healthy_samples": 0,
+    "rate_rps": 2.0,
+    "policy": "aimd",
+    "telemetry_fresh": true,
+    "inflight_limit": 4,
+    "next_issue_at": "2026-10-27T10:58:42.106265+00:00",
+    "next_ack_at": "2026-10-27T10:58:45.728649+00:00",
+    "allowed": 84,
+    "denied": 1100,
+    "last_decision": {
+      "at": "2026-10-27T10:58:45.228649+00:00",
+      "phase": "ack",
+      "state": "Normal",
+      "reason": "admitted",
+      "allowed": true,
+      "inflight": 0,
+      "rate_rps": 2.0,
+      "inflight_limit": 4
+    },
+    "metrics": {
+      "admin": {
+        "service": "admin",
+        "error_rate": 0.0,
+        "sampled_at": "2026-10-27T11:02:23.779717+00:00",
+        "p95_latency_ms": null,
+        "throughput_rps": 0.0,
+        "total_requests": 0,
+        "uptime_seconds": 19.85,
+        "window_seconds": 60,
+        "failed_requests": 0,
+        "window_requests": 0,
+        "database_healthy": true,
+        "average_latency_ms": 0.0,
+        "in_flight_requests": 0,
+        "observation_seconds": 19.846575,
+        "latency_sample_count": 0
+      },
+      "patient": {
+        "service": "patient",
+        "error_rate": 0.0,
+        "sampled_at": "2026-10-27T11:02:23.778567+00:00",
+        "p95_latency_ms": null,
+        "throughput_rps": 0.0,
+        "total_requests": 0,
+        "uptime_seconds": 25.78,
+        "window_seconds": 60,
+        "failed_requests": 0,
+        "window_requests": 0,
+        "database_healthy": true,
+        "average_latency_ms": 0.0,
+        "in_flight_requests": 0,
+        "observation_seconds": 25.778277,
+        "latency_sample_count": 0
+      },
+      "emergency": {
+        "service": "emergency",
+        "error_rate": 0.0,
+        "sampled_at": "2026-10-27T11:02:23.780023+00:00",
+        "p95_latency_ms": null,
+        "throughput_rps": 0.0,
+        "total_requests": 0,
+        "uptime_seconds": 20.04,
+        "window_seconds": 60,
+        "failed_requests": 0,
+        "window_requests": 0,
+        "database_healthy": true,
+        "average_latency_ms": 0.0,
+        "in_flight_requests": 0,
+        "observation_seconds": 20.038048,
+        "latency_sample_count": 0
+      }
+    },
+    "settings": {
+      "normal_rps": 2.0,
+      "caution_rps": 0.5,
+      "recovery_rps": 0.2,
+      "normal_inflight": 4,
+      "caution_inflight": 2,
+      "recovery_inflight": 1,
+      "caution_latency_ms": 80.0,
+      "recovery_latency_ms": 1000.0,
+      "healthy_latency_ms": 50.0,
+      "caution_error_rate": 0.05,
+      "recovery_error_rate": 0.15,
+      "healthy_error_rate": 0.01,
+      "caution_throughput_rps": 20.0,
+      "recovery_throughput_rps": 50.0,
+      "healthy_throughput_rps": 10.0,
+      "poll_seconds": 1.0,
+      "max_age_seconds": 5.0,
+      "timeout_seconds": 1.0,
+      "dwell_seconds": 3.0,
+      "healthy_samples": 2,
+      "additive_rps": 0.2
+    }
+  },
+  "paused_status": {
+    "enabled": true,
+    "state": "Recovery",
+    "reason": "telemetry_missing_or_stale",
+    "state_since": "2026-10-27T11:02:28.811544+00:00",
+    "observed_at": null,
+    "server_time": "2026-10-27T11:02:28.984100+00:00",
+    "healthy_samples": 0,
+    "rate_rps": 1.0,
+    "policy": "aimd",
+    "telemetry_fresh": false,
+    "inflight_limit": 1,
+    "next_issue_at": "2026-10-27T10:58:42.106265+00:00",
+    "next_ack_at": "2026-10-27T10:58:45.728649+00:00",
+    "allowed": 84,
+    "denied": 1103,
+    "last_decision": {
+      "at": "2026-10-27T11:02:28.958168+00:00",
+      "phase": "issue",
+      "state": "Recovery",
+      "reason": "telemetry_unavailable",
+      "allowed": false,
+      "inflight": 0,
+      "rate_rps": 1.0,
+      "inflight_limit": 1
+    },
+    "metrics": {
+      "admin": {
+        "error": "telemetry_unavailable"
+      },
+      "patient": {
+        "service": "patient",
+        "error_rate": 0.0,
+        "sampled_at": "2026-10-27T11:02:24.808780+00:00",
+        "p95_latency_ms": null,
+        "throughput_rps": 0.0,
+        "total_requests": 0,
+        "uptime_seconds": 26.81,
+        "window_seconds": 60,
+        "failed_requests": 0,
+        "window_requests": 0,
+        "database_healthy": true,
+        "average_latency_ms": 0.0,
+        "in_flight_requests": 0,
+        "observation_seconds": 26.808327,
+        "latency_sample_count": 0
+      },
+      "emergency": {
+        "error": "telemetry_unavailable"
+      }
+    },
+    "settings": {
+      "normal_rps": 2.0,
+      "caution_rps": 0.5,
+      "recovery_rps": 0.2,
+      "normal_inflight": 4,
+      "caution_inflight": 2,
+      "recovery_inflight": 1,
+      "caution_latency_ms": 80.0,
+      "recovery_latency_ms": 1000.0,
+      "healthy_latency_ms": 50.0,
+      "caution_error_rate": 0.05,
+      "recovery_error_rate": 0.15,
+      "healthy_error_rate": 0.01,
+      "caution_throughput_rps": 20.0,
+      "recovery_throughput_rps": 50.0,
+      "healthy_throughput_rps": 10.0,
+      "poll_seconds": 1.0,
+      "max_age_seconds": 5.0,
+      "timeout_seconds": 1.0,
+      "dwell_seconds": 3.0,
+      "healthy_samples": 2,
+      "additive_rps": 0.2
+    }
+  },
+  "paused_tickets": [
+    {
+      "hospital_id": "Hospital_A",
+      "event_id": "CP7B_cg_metaguard_41f79711c3cc_aimd_Hospital_A_1",
+      "priority": 5,
+      "bypass_count": 0
+    },
+    {
+      "hospital_id": "Hospital_B",
+      "event_id": "CP7B_cg_metaguard_41f79711c3cc_aimd_Hospital_B_1",
+      "priority": 1,
+      "bypass_count": 0
+    }
+  ],
+  "grant_order": [
+    {
+      "event_id": "CP7B_cg_metaguard_41f79711c3cc_aimd_Hospital_A_1",
+      "hospital": "Hospital_A",
+      "at": "2026-10-27 11:02:42.230953+00:00"
+    },
+    {
+      "event_id": "CP7B_cg_metaguard_41f79711c3cc_aimd_Hospital_A_2",
+      "hospital": "Hospital_A",
+      "at": "2026-10-27 11:02:47.343230+00:00"
+    },
+    {
+      "event_id": "CP7B_cg_metaguard_41f79711c3cc_aimd_Hospital_B_1",
+      "hospital": "Hospital_B",
+      "at": "2026-10-27 11:02:52.460715+00:00"
+    },
+    {
+      "event_id": "CP7B_cg_metaguard_41f79711c3cc_aimd_Hospital_A_3",
+      "hospital": "Hospital_A",
+      "at": "2026-10-27 11:02:57.714511+00:00"
+    },
+    {
+      "event_id": "CP7B_cg_metaguard_41f79711c3cc_aimd_Hospital_B_2",
+      "hospital": "Hospital_B",
+      "at": "2026-10-27 11:02:58.303326+00:00"
+    },
+    {
+      "event_id": "CP7B_cg_metaguard_41f79711c3cc_aimd_Hospital_A_4",
+      "hospital": "Hospital_A",
+      "at": "2026-10-27 11:03:02.905126+00:00"
+    },
+    {
+      "event_id": "CP7B_cg_metaguard_41f79711c3cc_aimd_Hospital_B_3",
+      "hospital": "Hospital_B",
+      "at": "2026-10-27 11:03:08.021370+00:00"
+    },
+    {
+      "event_id": "CP7B_cg_metaguard_41f79711c3cc_aimd_Hospital_B_4",
+      "hospital": "Hospital_B",
+      "at": "2026-10-27 11:03:13.277666+00:00"
+    }
+  ],
+  "rates_observed": [
+    0.45,
+    0.65,
+    0.85,
+    1.05,
+    1.25,
+    1.45,
+    1.65,
+    1.85,
+    2.0
+  ],
+  "postgresql_events": [
+    {
+      "event_id": "CP7B_cg_metaguard_41f79711c3cc_aimd_Hospital_A_1",
+      "status": "applied"
+    },
+    {
+      "event_id": "CP7B_cg_metaguard_41f79711c3cc_aimd_Hospital_A_2",
+      "status": "applied"
+    },
+    {
+      "event_id": "CP7B_cg_metaguard_41f79711c3cc_aimd_Hospital_B_1",
+      "status": "applied"
+    },
+    {
+      "event_id": "CP7B_cg_metaguard_41f79711c3cc_aimd_Hospital_A_3",
+      "status": "applied"
+    },
+    {
+      "event_id": "CP7B_cg_metaguard_41f79711c3cc_aimd_Hospital_B_2",
+      "status": "applied"
+    },
+    {
+      "event_id": "CP7B_cg_metaguard_41f79711c3cc_aimd_Hospital_A_4",
+      "status": "applied"
+    },
+    {
+      "event_id": "CP7B_cg_metaguard_41f79711c3cc_aimd_Hospital_B_3",
+      "status": "applied"
+    },
+    {
+      "event_id": "CP7B_cg_metaguard_41f79711c3cc_aimd_Hospital_B_4",
+      "status": "applied"
+    }
+  ],
+  "result": "passed",
+  "original_services_unchanged": true,
+  "volumes_preserved": true,
+  "local_integration_left_running": true,
+  "finished_at": "2026-10-27T11:03:13.823584+00:00"
+}

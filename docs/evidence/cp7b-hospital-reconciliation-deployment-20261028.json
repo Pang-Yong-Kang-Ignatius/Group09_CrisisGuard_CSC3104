@@ -1,0 +1,137 @@
+{
+  "checkpoint": "7B",
+  "scope": "Original desktop Hospital A/B reconciliation provenance fix and targeted deployment",
+  "date": "2026-10-28",
+  "result": "passed",
+  "source_change": {
+    "file": "edge/capture_api/cloud_client.py",
+    "behavior": "get_cloud_event_status obtains traffic_headers('replay') and supplies them to the Cloud status GET when a valid 32+ character replay credential is configured",
+    "missing_or_weak_credential_behavior": "No provenance headers are sent; Cloud classification remains fail-closed to unclassified",
+    "workspace_sha256": "8d8dc47669a8949e348926964008ef1b9ab879fd489cf3417da6ee221ce7bd29",
+    "admission_or_telemetry_definition_changes": false
+  },
+  "tests": {
+    "focused": {
+      "selection": [
+        "tests/unit/test_cloud_live_metrics.py",
+        "tests/unit/test_edge_routing_and_recovery.py"
+      ],
+      "passed": 36,
+      "failed": 0,
+      "junit": "docs/evidence/cp7b-reconciliation-provenance-focused-20261028.xml"
+    },
+    "replay_controller_postgresql": {
+      "selection": [
+        "tests/unit/test_metaguard_replay.py",
+        "tests/unit/test_scheduler_replay_policy.py",
+        "tests/integration/test_metaguard_reliability.py",
+        "tests/integration/test_controller_postgres.py"
+      ],
+      "isolation": "Unique temporary PostgreSQL schemas; zero checkpoint1_* schemas remained",
+      "passed": 121,
+      "failed": 0,
+      "skipped": 0,
+      "junit": "docs/evidence/cp7b-reconciliation-provenance-regression-20261028.xml"
+    },
+    "full_unit": {
+      "passed": 818,
+      "failed": 0,
+      "junit": "docs/evidence/cp7b-reconciliation-provenance-unit-regression-20261028.xml"
+    },
+    "overlap_note": "Focused and replay/controller selections overlap the full unit suite; counts are not additive unique cases.",
+    "preserved_attempts": {
+      "focused_restricted_shell": {
+        "summary": "25 passed before 11 temporary-directory permission setup errors; no assertion failure",
+        "junit": "docs/evidence/cp7b-reconciliation-provenance-focused-attempt1-20261028.xml"
+      },
+      "postgres_opt_in_unset": {
+        "summary": "43 passed and 78 skipped before rerun with isolated schema configuration",
+        "junit": "docs/evidence/cp7b-reconciliation-provenance-regression-skipped-20261028.xml"
+      }
+    }
+  },
+  "fresh_private_backups": {
+    "directory": "backups/cp7b-provenance-20261028T211015+0800/",
+    "git_ignored": true,
+    "postgresql": {
+      "sha256": "e1f8889ff739fa93ff342a91b69c87318bc2ff5eb623ec066f491134f5a25193",
+      "bytes": 18741,
+      "isolated_restore_events": 191,
+      "status": "passed"
+    },
+    "hospital_a": {
+      "sha256": "039cc94b85694c18b9b534f20bcc3c550d2349d289e22bb8806504db5e586c0f",
+      "bytes": 45056,
+      "isolated_restore_events": 60,
+      "status": "passed"
+    },
+    "hospital_b": {
+      "sha256": "55785cf1b4afd1169397c9b34e8bc73bc889b7186e98dddde6bbfd6fea5e5061",
+      "bytes": 40960,
+      "isolated_restore_events": 42,
+      "status": "passed"
+    }
+  },
+  "deployment": {
+    "image": "crisisguard-hospital:cp7b-provenance-20261028",
+    "image_id": "sha256:9f4ea824e641dd93b965c18fc40e677dd1bbf322b91b44a8f5197508a6983ecc",
+    "embedded_source_sha256_matches_workspace": true,
+    "rollback_image": "crisisguard-local:cp7b-pre-hospital-provenance-20261028",
+    "override": "docs/evidence/cp7b-hospital-provenance.compose.yaml",
+    "recreated_services": ["hospital-a", "hospital-b"],
+    "other_services_recreated_or_restarted": [],
+    "hospital_a": {
+      "before_container_id": "03f2fb9ef00cf370a138b8096a4cef633c8c59636177cd1d3f4d33cec22f005d",
+      "after_container_id": "65027a4e4229c94d43a8c6555a2f621306de14048043ac60a53e41a691e09eea",
+      "volume": "crisisguard-local_hospital-a-data",
+      "health": "healthy"
+    },
+    "hospital_b": {
+      "before_container_id": "aead6bf7e8676c210acbdff32b8488dc9961ba942f73c3bc46dc53d277288592",
+      "after_container_id": "fc5e22e7be32ced0ca74937dc77abe981fdb9623b6a7d4d69ca11cf484fe8ff0",
+      "volume": "crisisguard-local_hospital-b-data",
+      "health": "healthy"
+    }
+  },
+  "live_reconciliation_verification": {
+    "all_statuses": "applied",
+    "site_ids": {
+      "hospital_a_patient": "Hospital_A",
+      "hospital_b_patient": "Hospital_B",
+      "hospital_a_emergency": "Hospital_A",
+      "hospital_a_admin": "Hospital_A"
+    },
+    "classification": {
+      "patient": {"replay": 2, "live": 0, "unclassified": 0},
+      "emergency": {"replay": 1, "live": 0, "unclassified": 0},
+      "admin": {"replay": 1, "live": 0, "unclassified": 0}
+    },
+    "raw_evidence": "docs/evidence/cp7b-hospital-reconciliation-live-20261028.json"
+  },
+  "preservation": {
+    "postgresql_events": 191,
+    "postgresql_event_hash_before_and_after": "4c916b2f01e836bc1118e0621105dfcf589f2a5ffc17e1bd560bf0620d839d7f",
+    "hospital_a_events": 60,
+    "hospital_a_event_hash_before_and_after": "13a287aef75bd1bdb4e9fa757636d807a4708e6db4c2c04cdca304e8c0a9b27a",
+    "hospital_b_events": 42,
+    "hospital_b_event_hash_before_and_after": "aee2685d59b3a86640ed3a7331f1742eb1320b732ad63a08b5f63b2dd2e28642",
+    "controller_grants": 8,
+    "controller_grants_canonical_sha256_before_and_after": "9a6525c5ede47feb562509c851b49a823a9360bfe88a6355ed3e0e36e25de13d",
+    "controller_tickets": 0,
+    "controller_tickets_canonical_sha256_before_and_after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "controller_runtime_metadata_note": "A broad controller-table dump hash changed because the running controller updates runtime timestamps; canonical durable grant and ticket rows are identical.",
+    "controller_before_and_after": "enabled AIMD, Normal, healthy, fresh, 2.0 RPS",
+    "unrelated_main_container_ids_images_mounts_unchanged": true,
+    "docker_volumes_before_and_after": 16,
+    "docker_containers_before_and_after": 33,
+    "hospital_sqlite_integrity": "ok",
+    "hospital_replayable_backlogs": {"hospital_a": 0, "hospital_b": 0},
+    "hospital_error_log_lines": {"hospital_a": 0, "hospital_b": 0}
+  },
+  "evidence": {
+    "before_snapshot": "docs/evidence/cp7b-hospital-provenance-before-20261028.json",
+    "after_snapshot": "docs/evidence/cp7b-hospital-provenance-after-20261028.json",
+    "snapshot_script": "docs/evidence/cp7b-hospital-provenance-snapshot-20261028.py",
+    "build_log": "docs/evidence/cp7b-hospital-provenance-build-20261028.txt"
+  }
+}

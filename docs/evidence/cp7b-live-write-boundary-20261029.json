@@ -1,0 +1,388 @@
+{
+  "schema": "cp7b-live-write-boundary-v1",
+  "started_at": "2026-10-29T08:24:17.537877+00:00",
+  "project": "cg-livewrite-3d23fc29",
+  "source_revision": "f128ac0f2b6e551af3e03cb3e3d44262b451195a",
+  "isolated": true,
+  "observations": [
+    {
+      "label": "live_write_no_hospital_token",
+      "method": "POST",
+      "status_code": 401,
+      "client_latency_ms": 206.001
+    },
+    {
+      "label": "live_write_no_grant",
+      "method": "POST",
+      "status_code": 403,
+      "client_latency_ms": 248.573
+    },
+    {
+      "label": "register_ticket",
+      "method": "POST",
+      "status_code": 200,
+      "client_latency_ms": 242.223
+    },
+    {
+      "label": "issue_grant",
+      "method": "POST",
+      "status_code": 200,
+      "client_latency_ms": 221.849
+    },
+    {
+      "label": "ack_grant",
+      "method": "POST",
+      "status_code": 200,
+      "client_latency_ms": 243.934
+    },
+    {
+      "label": "patient_authorized_write",
+      "method": "POST",
+      "status_code": 201,
+      "client_latency_ms": 231.676
+    },
+    {
+      "label": "patient_identical_retry",
+      "method": "POST",
+      "status_code": 200,
+      "client_latency_ms": 237.366
+    },
+    {
+      "label": "complete_grant",
+      "method": "POST",
+      "status_code": 200,
+      "client_latency_ms": 220.246
+    },
+    {
+      "label": "register_ticket",
+      "method": "POST",
+      "status_code": 200,
+      "client_latency_ms": 230.111
+    },
+    {
+      "label": "issue_grant",
+      "method": "POST",
+      "status_code": 200,
+      "client_latency_ms": 225.493
+    },
+    {
+      "label": "ack_grant",
+      "method": "POST",
+      "status_code": 200,
+      "client_latency_ms": 220.968
+    },
+    {
+      "label": "emergency_authorized_write",
+      "method": "POST",
+      "status_code": 201,
+      "client_latency_ms": 238.292
+    },
+    {
+      "label": "complete_grant",
+      "method": "POST",
+      "status_code": 200,
+      "client_latency_ms": 231.572
+    },
+    {
+      "label": "register_ticket",
+      "method": "POST",
+      "status_code": 200,
+      "client_latency_ms": 234.684
+    },
+    {
+      "label": "issue_grant",
+      "method": "POST",
+      "status_code": 200,
+      "client_latency_ms": 238.304
+    },
+    {
+      "label": "issue_grant",
+      "method": "POST",
+      "status_code": 200,
+      "client_latency_ms": 224.409
+    },
+    {
+      "label": "ack_grant",
+      "method": "POST",
+      "status_code": 200,
+      "client_latency_ms": 216.64
+    },
+    {
+      "label": "admin_authorized_write",
+      "method": "POST",
+      "status_code": 201,
+      "client_latency_ms": 234.05
+    },
+    {
+      "label": "complete_grant",
+      "method": "POST",
+      "status_code": 200,
+      "client_latency_ms": 233.113
+    },
+    {
+      "label": "patient_live_read_0",
+      "method": "GET",
+      "status_code": 200,
+      "client_latency_ms": 232.232
+    },
+    {
+      "label": "patient_replay_read_0",
+      "method": "GET",
+      "status_code": 200,
+      "client_latency_ms": 233.289
+    },
+    {
+      "label": "patient_live_read_1",
+      "method": "GET",
+      "status_code": 200,
+      "client_latency_ms": 214.862
+    },
+    {
+      "label": "patient_replay_read_1",
+      "method": "GET",
+      "status_code": 200,
+      "client_latency_ms": 233.687
+    },
+    {
+      "label": "patient_live_read_2",
+      "method": "GET",
+      "status_code": 200,
+      "client_latency_ms": 234.577
+    },
+    {
+      "label": "patient_replay_read_2",
+      "method": "GET",
+      "status_code": 200,
+      "client_latency_ms": 218.559
+    },
+    {
+      "label": "patient_live_read_3",
+      "method": "GET",
+      "status_code": 200,
+      "client_latency_ms": 245.249
+    },
+    {
+      "label": "patient_replay_read_3",
+      "method": "GET",
+      "status_code": 200,
+      "client_latency_ms": 233.721
+    },
+    {
+      "label": "emergency_live_read_0",
+      "method": "GET",
+      "status_code": 200,
+      "client_latency_ms": 219.319
+    },
+    {
+      "label": "emergency_replay_read_0",
+      "method": "GET",
+      "status_code": 200,
+      "client_latency_ms": 216.972
+    },
+    {
+      "label": "emergency_live_read_1",
+      "method": "GET",
+      "status_code": 200,
+      "client_latency_ms": 234.211
+    },
+    {
+      "label": "emergency_replay_read_1",
+      "method": "GET",
+      "status_code": 200,
+      "client_latency_ms": 233.783
+    },
+    {
+      "label": "emergency_live_read_2",
+      "method": "GET",
+      "status_code": 200,
+      "client_latency_ms": 211.417
+    },
+    {
+      "label": "emergency_replay_read_2",
+      "method": "GET",
+      "status_code": 200,
+      "client_latency_ms": 236.987
+    },
+    {
+      "label": "emergency_live_read_3",
+      "method": "GET",
+      "status_code": 200,
+      "client_latency_ms": 234.141
+    },
+    {
+      "label": "emergency_replay_read_3",
+      "method": "GET",
+      "status_code": 200,
+      "client_latency_ms": 214.484
+    },
+    {
+      "label": "admin_live_read_0",
+      "method": "GET",
+      "status_code": 200,
+      "client_latency_ms": 222.736
+    },
+    {
+      "label": "admin_replay_read_0",
+      "method": "GET",
+      "status_code": 200,
+      "client_latency_ms": 233.78
+    },
+    {
+      "label": "admin_live_read_1",
+      "method": "GET",
+      "status_code": 200,
+      "client_latency_ms": 233.593
+    },
+    {
+      "label": "admin_replay_read_1",
+      "method": "GET",
+      "status_code": 200,
+      "client_latency_ms": 230.34
+    },
+    {
+      "label": "admin_live_read_2",
+      "method": "GET",
+      "status_code": 200,
+      "client_latency_ms": 231.562
+    },
+    {
+      "label": "admin_replay_read_2",
+      "method": "GET",
+      "status_code": 200,
+      "client_latency_ms": 211.282
+    },
+    {
+      "label": "admin_live_read_3",
+      "method": "GET",
+      "status_code": 200,
+      "client_latency_ms": 226.156
+    },
+    {
+      "label": "admin_replay_read_3",
+      "method": "GET",
+      "status_code": 200,
+      "client_latency_ms": 244.403
+    }
+  ],
+  "metrics": {
+    "patient": {
+      "sampled_at": "2026-10-29T08:24:50.774405+00:00",
+      "live_p95_latency_ms": 8.0,
+      "live_latency_sample_count": 6,
+      "replay_latency_sample_count": 6,
+      "unclassified_latency_sample_count": 0,
+      "p95_latency_ms": 10.3,
+      "latency_sample_count": 12,
+      "average_latency_ms": 6.22,
+      "error_rate": 0.0,
+      "failed_requests": 0,
+      "total_requests": 12,
+      "window_requests": 12,
+      "executor_queue_depth": 0,
+      "executor_active_workers": 0,
+      "executor_worker_limit": 40,
+      "executor_queue_pressure": 0.0,
+      "database_healthy": true
+    },
+    "emergency": {
+      "sampled_at": "2026-10-29T08:24:51.008886+00:00",
+      "live_p95_latency_ms": 6.83,
+      "live_latency_sample_count": 4,
+      "replay_latency_sample_count": 4,
+      "unclassified_latency_sample_count": 1,
+      "p95_latency_ms": 9.59,
+      "latency_sample_count": 9,
+      "average_latency_ms": 7.12,
+      "error_rate": 0.0,
+      "failed_requests": 0,
+      "total_requests": 9,
+      "window_requests": 9,
+      "executor_queue_depth": 0,
+      "executor_active_workers": 0,
+      "executor_worker_limit": 40,
+      "executor_queue_pressure": 0.0,
+      "database_healthy": true
+    },
+    "admin": {
+      "sampled_at": "2026-10-29T08:24:51.242123+00:00",
+      "live_p95_latency_ms": 7.4,
+      "live_latency_sample_count": 4,
+      "replay_latency_sample_count": 5,
+      "unclassified_latency_sample_count": 0,
+      "p95_latency_ms": 9.72,
+      "latency_sample_count": 9,
+      "average_latency_ms": 7.25,
+      "error_rate": 0.0,
+      "failed_requests": 0,
+      "total_requests": 9,
+      "window_requests": 9,
+      "executor_queue_depth": 0,
+      "executor_active_workers": 0,
+      "executor_worker_limit": 40,
+      "executor_queue_pressure": 0.0,
+      "database_healthy": true
+    }
+  },
+  "result": "passed_boundary_characterization",
+  "original_resource_counts": {
+    "containers": 33,
+    "volumes": 16
+  },
+  "controller": {
+    "policy": "aimd",
+    "state": "Normal",
+    "telemetry_fresh": true
+  },
+  "database": {
+    "events": [
+      {
+        "event_id": "SYN-LIVEWRITE-b06162-admin",
+        "site_id": "Hospital_A",
+        "event_type": "patient_discharge",
+        "status": "applied"
+      },
+      {
+        "event_id": "SYN-LIVEWRITE-b06162-emergency",
+        "site_id": "Hospital_B",
+        "event_type": "emergency_record",
+        "status": "applied"
+      },
+      {
+        "event_id": "SYN-LIVEWRITE-b06162-patient",
+        "site_id": "Hospital_A",
+        "event_type": "patient_registration",
+        "status": "applied"
+      }
+    ],
+    "grants": [
+      {
+        "event_id": "SYN-LIVEWRITE-b06162-admin",
+        "status": "completed"
+      },
+      {
+        "event_id": "SYN-LIVEWRITE-b06162-emergency",
+        "status": "completed"
+      },
+      {
+        "event_id": "SYN-LIVEWRITE-b06162-patient",
+        "status": "completed"
+      }
+    ],
+    "tickets": 0,
+    "unauthorized_event_absent": true,
+    "duplicate_rows": false
+  },
+  "client_p95_ms": {
+    "patient": 245.249,
+    "emergency": 238.292,
+    "admin": 244.403,
+    "live_write": 248.573
+  },
+  "finding": "No successful grant-enforced write can enter live-only p95: a grant-bearing live-labelled write is unclassified; grantless live writes are rejected.",
+  "compose_cleanup": "passed",
+  "image_cleanup": "passed",
+  "original_resources_preserved": true,
+  "project_resources_absent": true,
+  "private_work_cleanup": "passed",
+  "finished_at": "2026-10-29T08:24:53.908935+00:00"
+}

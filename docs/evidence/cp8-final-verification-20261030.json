@@ -1,0 +1,105 @@
+{
+  "final_resource_preservation": {
+    "original_container_ids_equal": true,
+    "original_container_states_equal": true,
+    "original_volume_set_equal": true,
+    "original_network_set_equal": true
+  },
+  "container_count": 9,
+  "volume_count": 6,
+  "network_count": 4,
+  "images": {
+    "cp8-matrix02-20261030": {
+      "tag": "crisisguard-cp8:8369ec74324e",
+      "id": "sha256:3168735e6d05dbe60a2b38ed018b6120c3b185e0fc6291e7eeb5d84fae3cc616",
+      "matches_verified_main_image": true
+    },
+    "cp8-auto03-20261030": {
+      "tag": "crisisguard-cp8:4a5a01c24385",
+      "id": "sha256:89933753fbe55eb40e08faade7521dcd9602b5e50608ccc19979c1d928b32044",
+      "matches_verified_main_image": false,
+      "exact_26_app_source_match": true,
+      "runtime": {
+        "python": "3.11.18 (main, Oct 28 2026, 02:02:50) [GCC 14.2.0]",
+        "versions": {
+          "fastapi": "0.162.0",
+          "uvicorn": "0.54.0",
+          "pydantic": "2.14.2",
+          "sqlalchemy": "2.1.6",
+          "psycopg": "3.3.6",
+          "httpx": "0.28.1",
+          "anyio": "4.15.1",
+          "matplotlib": "3.11.2",
+          "numpy": "2.4.6",
+          "pandas": "3.1.0",
+          "pytest": "9.2.0"
+        }
+      },
+      "runtime_matches_main": true
+    },
+    "cp8-constant01-20261030": {
+      "tag": "crisisguard-cp8:a011c710d910",
+      "id": "sha256:5241352bf348e6f46a9bf9b5c18d9983a858cab5f3cdf7ae491a37f8d6150ec6",
+      "matches_verified_main_image": false,
+      "exact_26_app_source_match": true,
+      "runtime": {
+        "python": "3.11.18 (main, Oct 28 2026, 02:02:50) [GCC 14.2.0]",
+        "versions": {
+          "fastapi": "0.162.0",
+          "uvicorn": "0.54.0",
+          "pydantic": "2.14.2",
+          "sqlalchemy": "2.1.6",
+          "psycopg": "3.3.6",
+          "httpx": "0.28.1",
+          "anyio": "4.15.1",
+          "matplotlib": "3.11.2",
+          "numpy": "2.4.6",
+          "pandas": "3.1.0",
+          "pytest": "9.2.0"
+        }
+      },
+      "runtime_matches_main": true
+    },
+    "cp8-cost-stress01-20261030": {
+      "tag": "crisisguard-cp8:3bad94588307",
+      "id": "sha256:e2008d5807281c5a31ad96f70544cb8ac89dcd2925cc366ba17e9f48145bca34",
+      "matches_verified_main_image": false,
+      "exact_26_app_source_match": true,
+      "runtime": {
+        "python": "3.11.18 (main, Oct 28 2026, 02:02:50) [GCC 14.2.0]",
+        "versions": {
+          "fastapi": "0.162.0",
+          "uvicorn": "0.54.0",
+          "pydantic": "2.14.2",
+          "sqlalchemy": "2.1.6",
+          "psycopg": "3.3.6",
+          "httpx": "0.28.1",
+          "anyio": "4.15.1",
+          "matplotlib": "3.11.2",
+          "numpy": "2.4.6",
+          "pandas": "3.1.0",
+          "pytest": "9.2.0"
+        }
+      },
+      "runtime_matches_main": true
+    }
+  },
+  "all_26_app_files_still_match_verified_image_source": true,
+  "build_inputs_sha256": {
+    "infrastructure/docker/Dockerfile": "96c7595b6f4321de0737a8cdb17e8db384c2520a79207691a212c36325dc58a6",
+    "requirements.txt": "7472f6d05ef34874e64f48e41cc0c97eb4841bee615320414265d36ab65a5907",
+    ".dockerignore": "5da40eb6a2c678e234491591ad7430d45599b25ea75cfc6d74e0e344be68f293"
+  },
+  "postgres_junit": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "67",
+    "time": "31.860",
+    "timestamp": "2026-10-30T19:41:09.183955+08:00",
+    "hostname": "h-z-pc"
+  },
+  "scope": "Metadata-only original resource inventory; no original database was queried or mounted",
+  "followup_verification_scope": "Ephemeral no-network/no-volume image processes; different image IDs retained, application source and package versions independently checked"
+}

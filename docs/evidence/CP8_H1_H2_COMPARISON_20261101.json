@@ -1,0 +1,254 @@
+[
+    {
+        "batch":  "h1-30-constant",
+        "overall_result":  "failed",
+        "source_unchanged":  true,
+        "preservation":  {
+                             "container_identity_image_mounts_equal":  true,
+                             "container_states_equal":  false,
+                             "exact_network_set_equal":  true,
+                             "exact_volume_set_equal":  true
+                         },
+        "trials":  [
+                       {
+                           "seed":  9191,
+                           "result":  "passed",
+                           "recovery_upper_seconds":  7.188000000000102,
+                           "live_requests":  174,
+                           "successful_200":  174,
+                           "generator_skips":  0,
+                           "client_p95_ms":  16.000,
+                           "client_slo_violations":  0
+                       },
+                       {
+                           "seed":  9192,
+                           "result":  "passed",
+                           "recovery_upper_seconds":  14.094000000000051,
+                           "live_requests":  339,
+                           "successful_200":  339,
+                           "generator_skips":  0,
+                           "client_p95_ms":  16.000,
+                           "client_slo_violations":  0
+                       },
+                       {
+                           "seed":  9193,
+                           "result":  "passed",
+                           "recovery_upper_seconds":  6.141000000000076,
+                           "live_requests":  149,
+                           "successful_200":  149,
+                           "generator_skips":  0,
+                           "client_p95_ms":  16.000,
+                           "client_slo_violations":  0
+                       },
+                       {
+                           "seed":  9194,
+                           "result":  "passed",
+                           "recovery_upper_seconds":  6.437000000000353,
+                           "live_requests":  156,
+                           "successful_200":  156,
+                           "generator_skips":  0,
+                           "client_p95_ms":  16.000,
+                           "client_slo_violations":  0
+                       },
+                       {
+                           "seed":  9195,
+                           "result":  "passed",
+                           "recovery_upper_seconds":  7.936999999999898,
+                           "live_requests":  192,
+                           "successful_200":  192,
+                           "generator_skips":  0,
+                           "client_p95_ms":  16.000,
+                           "client_slo_violations":  0
+                       }
+                   ]
+    },
+    {
+        "batch":  "h1-30-aimd",
+        "overall_result":  "passed",
+        "source_unchanged":  true,
+        "preservation":  {
+                             "container_identity_image_mounts_equal":  true,
+                             "container_states_equal":  true,
+                             "exact_network_set_equal":  true,
+                             "exact_volume_set_equal":  true
+                         },
+        "trials":  [
+                       {
+                           "seed":  9191,
+                           "result":  "passed",
+                           "recovery_upper_seconds":  3.719000000000051,
+                           "live_requests":  91,
+                           "successful_200":  91,
+                           "generator_skips":  0,
+                           "client_p95_ms":  16.000,
+                           "client_slo_violations":  0
+                       },
+                       {
+                           "seed":  9192,
+                           "result":  "passed",
+                           "recovery_upper_seconds":  4.858999999999469,
+                           "live_requests":  118,
+                           "successful_200":  118,
+                           "generator_skips":  0,
+                           "client_p95_ms":  15.000,
+                           "client_slo_violations":  0
+                       },
+                       {
+                           "seed":  9193,
+                           "result":  "passed",
+                           "recovery_upper_seconds":  6.67200000000048,
+                           "live_requests":  161,
+                           "successful_200":  161,
+                           "generator_skips":  0,
+                           "client_p95_ms":  16.000,
+                           "client_slo_violations":  0
+                       },
+                       {
+                           "seed":  9194,
+                           "result":  "passed",
+                           "recovery_upper_seconds":  6.375,
+                           "live_requests":  155,
+                           "successful_200":  155,
+                           "generator_skips":  0,
+                           "client_p95_ms":  16.000,
+                           "client_slo_violations":  0
+                       },
+                       {
+                           "seed":  9195,
+                           "result":  "passed",
+                           "recovery_upper_seconds":  3.780999999999949,
+                           "live_requests":  92,
+                           "successful_200":  92,
+                           "generator_skips":  0,
+                           "client_p95_ms":  16.000,
+                           "client_slo_violations":  0
+                       }
+                   ]
+    },
+    {
+        "batch":  "h1-70-constant",
+        "overall_result":  "passed",
+        "source_unchanged":  true,
+        "preservation":  {
+                             "container_identity_image_mounts_equal":  true,
+                             "container_states_equal":  true,
+                             "exact_network_set_equal":  true,
+                             "exact_volume_set_equal":  true
+                         },
+        "trials":  [
+                       {
+                           "seed":  9191,
+                           "result":  "passed",
+                           "recovery_upper_seconds":  5.094000000000051,
+                           "live_requests":  288,
+                           "successful_200":  288,
+                           "generator_skips":  0,
+                           "client_p95_ms":  31.000,
+                           "client_slo_violations":  0
+                       },
+                       {
+                           "seed":  9192,
+                           "result":  "passed",
+                           "recovery_upper_seconds":  5.703000000000429,
+                           "live_requests":  323,
+                           "successful_200":  323,
+                           "generator_skips":  0,
+                           "client_p95_ms":  16.000,
+                           "client_slo_violations":  0
+                       },
+                       {
+                           "seed":  9193,
+                           "result":  "passed",
+                           "recovery_upper_seconds":  3.7650000000003274,
+                           "live_requests":  213,
+                           "successful_200":  213,
+                           "generator_skips":  1,
+                           "client_p95_ms":  31.000,
+                           "client_slo_violations":  0
+                       },
+                       {
+                           "seed":  9194,
+                           "result":  "passed",
+                           "recovery_upper_seconds":  3.813000000000102,
+                           "live_requests":  217,
+                           "successful_200":  217,
+                           "generator_skips":  0,
+                           "client_p95_ms":  32.000,
+                           "client_slo_violations":  0
+                       },
+                       {
+                           "seed":  9195,
+                           "result":  "passed",
+                           "recovery_upper_seconds":  3.7969999999995707,
+                           "live_requests":  215,
+                           "successful_200":  215,
+                           "generator_skips":  0,
+                           "client_p95_ms":  47.000,
+                           "client_slo_violations":  0
+                       }
+                   ]
+    },
+    {
+        "batch":  "h1-70-aimd",
+        "overall_result":  "failed",
+        "source_unchanged":  true,
+        "preservation":  {
+                             "container_identity_image_mounts_equal":  true,
+                             "container_states_equal":  false,
+                             "exact_network_set_equal":  true,
+                             "exact_volume_set_equal":  true
+                         },
+        "trials":  [
+                       {
+                           "seed":  9191,
+                           "result":  "passed",
+                           "recovery_upper_seconds":  7.234999999999673,
+                           "live_requests":  408,
+                           "successful_200":  408,
+                           "generator_skips":  0,
+                           "client_p95_ms":  16.000,
+                           "client_slo_violations":  0
+                       },
+                       {
+                           "seed":  9192,
+                           "result":  "passed",
+                           "recovery_upper_seconds":  3.7650000000003274,
+                           "live_requests":  213,
+                           "successful_200":  213,
+                           "generator_skips":  0,
+                           "client_p95_ms":  32.000,
+                           "client_slo_violations":  0
+                       },
+                       {
+                           "seed":  9193,
+                           "result":  "passed",
+                           "recovery_upper_seconds":  3.780999999999949,
+                           "live_requests":  215,
+                           "successful_200":  215,
+                           "generator_skips":  0,
+                           "client_p95_ms":  31.000,
+                           "client_slo_violations":  0
+                       },
+                       {
+                           "seed":  9194,
+                           "result":  "passed",
+                           "recovery_upper_seconds":  6.125,
+                           "live_requests":  346,
+                           "successful_200":  346,
+                           "generator_skips":  0,
+                           "client_p95_ms":  16.000,
+                           "client_slo_violations":  0
+                       },
+                       {
+                           "seed":  9195,
+                           "result":  "passed",
+                           "recovery_upper_seconds":  6.95299999999952,
+                           "live_requests":  392,
+                           "successful_200":  392,
+                           "generator_skips":  0,
+                           "client_p95_ms":  16.000,
+                           "client_slo_violations":  0
+                       }
+                   ]
+    }
+]

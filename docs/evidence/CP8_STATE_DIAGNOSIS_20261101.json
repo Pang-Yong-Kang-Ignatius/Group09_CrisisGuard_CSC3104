@@ -1,0 +1,42 @@
+[
+  {
+    "summary": "evaluation\\results\\h1-30-constant\\summary.json",
+    "log_sha256": "75cb6146a0e4fef619601c2e19b07fab1908a93155f868e2e49d37934df9f9fd",
+    "changes": [
+      {
+        "id": "6a84630d4f13eff108390c318397679bdacf8968e736e41f48643b7036d999a8",
+        "name": "/cg-metaguard-41f79711c3cc-controller-1",
+        "before": "restarting",
+        "after": "running",
+        "restart_count": 50,
+        "exit_code": 0
+      }
+    ],
+    "preservation": {
+      "container_identity_image_mounts_equal": true,
+      "container_states_equal": false,
+      "exact_network_set_equal": true,
+      "exact_volume_set_equal": true
+    }
+  },
+  {
+    "summary": "evaluation\\results\\h1-70-aimd\\summary.json",
+    "log_sha256": "f56c0dc92dfb123e7ca5116d431b08cf19c75401b8eda2180eeb2be58b30e9ee",
+    "changes": [
+      {
+        "id": "6a84630d4f13eff108390c318397679bdacf8968e736e41f48643b7036d999a8",
+        "name": "/cg-metaguard-41f79711c3cc-controller-1",
+        "before": "restarting",
+        "after": "running",
+        "restart_count": 68,
+        "exit_code": 0
+      }
+    ],
+    "preservation": {
+      "container_identity_image_mounts_equal": true,
+      "container_states_equal": false,
+      "exact_network_set_equal": true,
+      "exact_volume_set_equal": true
+    }
+  }
+]

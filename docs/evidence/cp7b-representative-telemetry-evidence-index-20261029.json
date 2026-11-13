@@ -1,0 +1,188 @@
+{
+  "raw_runs": [
+    {
+      "path": "docs\\evidence\\cp7b-representative-telemetry-raw-20261029.json",
+      "sha256": "bf90aad9f5ea1dab0621529306df88ebc8d59405668a19e7031d62c4219de850",
+      "recorded_result": "failed",
+      "recorded_preservation": {
+        "containers": 33,
+        "volumes": 16,
+        "container_identity_image_mounts_equal": true,
+        "volume_set_equal": true,
+        "application_sources_equal": true
+      }
+    },
+    {
+      "path": "docs\\evidence\\cp7b-representative-telemetry-diagnostics-20261029.json",
+      "sha256": "eddd195a867d0b009f6254775bd1f83c6f052026e537f317da56f191643ccf23",
+      "recorded_result": "failed",
+      "recorded_preservation": {
+        "containers": 33,
+        "volumes": 16,
+        "container_identity_image_mounts_equal": false,
+        "volume_set_equal": false,
+        "application_sources_equal": true
+      }
+    },
+    {
+      "path": "docs\\evidence\\cp7b-representative-telemetry-diagnostic-recovery-20261029.json",
+      "sha256": "f1924b152e7d05429f6fcb1c77b6589d4f107ae62a79f5e1affd65571ec8c17b",
+      "recorded_result": "passed",
+      "recorded_preservation": {
+        "containers": 33,
+        "volumes": 16,
+        "container_identity_image_mounts_equal": true,
+        "volume_set_equal": true,
+        "application_sources_equal": true
+      }
+    }
+  ],
+  "completed_phase_replicas": [
+    {
+      "trial": 1,
+      "phase": "live_6rps",
+      "project": "cg-telemetry-1-7a9137ed",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-raw-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": false
+    },
+    {
+      "trial": 1,
+      "phase": "live_24rps",
+      "project": "cg-telemetry-1-7a9137ed",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-raw-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": false
+    },
+    {
+      "trial": 1,
+      "phase": "mixed_live_replay",
+      "project": "cg-telemetry-1-7a9137ed",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-raw-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": false
+    },
+    {
+      "trial": 1,
+      "phase": "db_wait_low_concurrency",
+      "project": "cg-telemetry-1-260a226f",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-diagnostics-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": false
+    },
+    {
+      "trial": 1,
+      "phase": "executor_wait_bounded",
+      "project": "cg-telemetry-1-260a226f",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-diagnostics-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": false
+    },
+    {
+      "trial": 1,
+      "phase": "upstream_delay_300ms",
+      "project": "cg-telemetry-1-260a226f",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-diagnostics-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": false
+    },
+    {
+      "trial": 2,
+      "phase": "live_6rps",
+      "project": "cg-telemetry-2-6291ac87",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-raw-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": false
+    },
+    {
+      "trial": 2,
+      "phase": "live_24rps",
+      "project": "cg-telemetry-2-6291ac87",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-raw-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": false
+    },
+    {
+      "trial": 2,
+      "phase": "mixed_live_replay",
+      "project": "cg-telemetry-2-6291ac87",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-raw-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": false
+    },
+    {
+      "trial": 2,
+      "phase": "db_wait_low_concurrency",
+      "project": "cg-telemetry-2-0104504d",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-diagnostic-recovery-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": true
+    },
+    {
+      "trial": 2,
+      "phase": "executor_wait_bounded",
+      "project": "cg-telemetry-2-0104504d",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-diagnostic-recovery-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": true
+    },
+    {
+      "trial": 2,
+      "phase": "upstream_delay_300ms",
+      "project": "cg-telemetry-2-0104504d",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-diagnostic-recovery-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": true
+    },
+    {
+      "trial": 3,
+      "phase": "live_6rps",
+      "project": "cg-telemetry-3-cf5eab62",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-raw-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": false
+    },
+    {
+      "trial": 3,
+      "phase": "live_24rps",
+      "project": "cg-telemetry-3-cf5eab62",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-raw-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": false
+    },
+    {
+      "trial": 3,
+      "phase": "mixed_live_replay",
+      "project": "cg-telemetry-3-cf5eab62",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-raw-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": false
+    },
+    {
+      "trial": 3,
+      "phase": "db_wait_low_concurrency",
+      "project": "cg-telemetry-3-27c381ca",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-diagnostics-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": false
+    },
+    {
+      "trial": 3,
+      "phase": "executor_wait_bounded",
+      "project": "cg-telemetry-3-27c381ca",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-diagnostics-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": false
+    },
+    {
+      "trial": 3,
+      "phase": "upstream_delay_300ms",
+      "project": "cg-telemetry-3-27c381ca",
+      "source": "docs\\evidence\\cp7b-representative-telemetry-diagnostics-20261029.json",
+      "validated_phase_complete": true,
+      "diagnostic_fixture_seed": false
+    }
+  ],
+  "interrupted_phases_included": false,
+  "original_results_preserved": true
+}

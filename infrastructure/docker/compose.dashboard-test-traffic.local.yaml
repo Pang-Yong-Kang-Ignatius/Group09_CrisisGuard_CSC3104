@@ -1,0 +1,9 @@
+# Explicit local-development opt-in. Never use this override on AWS/production.
+# Base Compose and AWS deployment configuration remain unchanged.
+services:
+  dashboard:
+    environment:
+      CRISISGUARD_DEPLOYMENT_MODE: local-development
+      DASHBOARD_TEST_TRAFFIC_ENABLED: "1"
+      CLOUD_REPLAY_TELEMETRY_TOKEN: ${CLOUD_REPLAY_TELEMETRY_TOKEN:-}
+    command: [python, -m, uvicorn, dashboard.main:app, --host, 0.0.0.0, --port, "8080", --workers, "1"]

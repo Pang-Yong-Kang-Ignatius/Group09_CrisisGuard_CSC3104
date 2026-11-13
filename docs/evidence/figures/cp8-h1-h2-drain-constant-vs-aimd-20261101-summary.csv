@@ -1,0 +1,3 @@
+condition,n_pairs,constant_mean,aimd_mean,measurement_unit,mean_paired_effect,effect_unit,paired_bootstrap_95_low,paired_bootstrap_95_high,exact_sign_flip_p,target_max,status,strict_zero_pairs,issuance_9999_pairs
+ratio1-1_depth3_balanced_load30,5,31.24360000000015,115.88420000000005,seconds,278.5198656992187,percent,236.82498006525057,331.6632342117106,0.0625,20,failed,5,5
+ratio1-1_depth3_balanced_load70,5,30.553200000000288,111.55960000000013,seconds,276.33824503545577,percent,214.92560167748192,339.59387270347605,0.0625,20,failed,3,3

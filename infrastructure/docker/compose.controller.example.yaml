@@ -1,0 +1,32 @@
+# Integration scaffold only: Wayne's implementation/image does not exist yet.
+# Merge explicitly after the cloud base (+ AWS override on EC2) when reviewed.
+# The real image MUST define its own working HEALTHCHECK and default command.
+services:
+  controller:
+    image: ${CONTROLLER_IMAGE:?Choose the reviewed local controller image ID/digest}
+    pull_policy: never
+    profiles: [controller]
+    env_file:
+      - ${CONTROLLER_ENV_FILE:?Choose the private controller environment file}
+    ports:
+      - "127.0.0.1:${CONTROLLER_HOST_PORT:?Choose an SSH-tunnel host port}:${CONTROLLER_INTERNAL_PORT:?Use Wayne's agreed listener port}"
+    volumes:
+      - type: volume
+        source: controller-data
+        target: ${CONTROLLER_STATE_PATH:?Use Wayne's agreed durable state directory}
+    restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    depends_on:
+      patient:
+        condition: service_healthy
+      emergency:
+        condition: service_healthy
+      admin:
+        condition: service_healthy
+
+volumes:
+  controller-data:

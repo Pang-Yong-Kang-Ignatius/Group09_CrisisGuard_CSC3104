@@ -1,0 +1,321 @@
+{
+  "project": "cg-metaguard-41f79711c3cc",
+  "image": "crisisguard-metaguard-test:cg-metaguard-41f79711c3cc",
+  "started_at": "2026-10-27T10:54:50.045019+00:00",
+  "checks": [
+    {
+      "name": "Compose rendering, isolated ports/resources and selected hospital replay mode",
+      "result": "passed"
+    },
+    {
+      "name": "All eight real containers healthy using the existing Dockerfile",
+      "result": "passed"
+    },
+    {
+      "name": "Fresh real telemetry requires stepwise cold-start recovery before Normal",
+      "result": "passed"
+    },
+    {
+      "name": "Simultaneous authenticated A/B automatic recovery is gated and completes eight dependency-ordered events",
+      "result": "passed"
+    },
+    {
+      "name": "Real PostgreSQL write latency enters Caution and lowers global admission; critical A and waiting B both progress",
+      "result": "passed"
+    },
+    {
+      "name": "Actual Cloud HTTP 503 errors enter Recovery; measured replay pacing becomes severely restricted",
+      "result": "passed"
+    },
+    {
+      "name": "Real 60-second telemetry window cools; admission recovers Recovery -> Caution -> Normal without flapping",
+      "result": "passed"
+    },
+    {
+      "name": "Failed telemetry is conservative; controller restart preserves both durable cooldowns and counters",
+      "result": "passed"
+    },
+    {
+      "name": "PostgreSQL outage keeps capture local; restored hospitals resume without resetting admission budgets",
+      "result": "passed"
+    },
+    {
+      "name": "Repository unit and controller/Cloud regression tests: 891 passed",
+      "result": "passed"
+    },
+    {
+      "name": "Cleanup and original container states, image tags and volumes preserved",
+      "result": "passed"
+    }
+  ],
+  "ports": {
+    "POSTGRES_PORT": 57662,
+    "CONTROLLER_PORT": 57663,
+    "PATIENT_PORT": 57664,
+    "EMERGENCY_PORT": 57665,
+    "ADMIN_PORT": 57666,
+    "HOSPITAL_A_PORT": 57667,
+    "HOSPITAL_B_PORT": 57668,
+    "DASHBOARD_PORT": 57669
+  },
+  "artifacts": "C:\\Users\\USER\\Documents\\GitHub\\CrisisGuard\\.venv\\cg-metaguard-41f79711c3cc",
+  "aws_used": false,
+  "containers": {
+    "dashboard": "7b3accd8dc01d80e5c26302ceb4a6465355bdfeca06f76762b4cfe5b40eec83a",
+    "hospital-a": "c0723414ef3c0bf1a9a9f4ae342f73c6aa9a7a5a790b73347aa601f692754920",
+    "admin": "d6f2d1b9ec94afede98a8f7826cfc8c71103d021a91c7d1eb5ceb8a58a15fa3d",
+    "emergency": "b96d3f42951c886da801ed3329cf627da97af68782ea4125566ba7bd82b96af3",
+    "hospital-b": "587c72d580e2e698a007dad6cd9fb08c8b9da5138b70f1a6e35b52aeaf6bd4e7",
+    "patient": "e1ccb436e7555d4017ab84ad7f42fe8d347d1536b579368703e84ba6011752f6",
+    "controller": "8744d689abea0627f793b6630060955562ba22422c075dd3c09b2067e7272ec4",
+    "postgres": "1ee2f44e729786a599168f6b8933b6913444ba04fb048a987988399e5a7d0f7b"
+  },
+  "admission_measurements": {
+    "fault_method": "temporary PostgreSQL trigger; actual Cloud HTTP/metrics; unchanged 60s window",
+    "phases": {
+      "normal": {
+        "events": 8,
+        "state": "Normal",
+        "configured_rps": 2.0,
+        "achieved_rps": 1.8556116745543418,
+        "minimum_grant_gap_seconds": 0.526449,
+        "hospital_order": [
+          "Hospital_A",
+          "Hospital_B",
+          "Hospital_A",
+          "Hospital_A",
+          "Hospital_B",
+          "Hospital_A",
+          "Hospital_B",
+          "Hospital_B"
+        ],
+        "cloud_statuses": [
+          201,
+          201,
+          201,
+          201,
+          201,
+          201,
+          201,
+          201
+        ],
+        "latency_ms": 9.0,
+        "error_rate": 0.0,
+        "throughput_rps": 0.1667,
+        "database_healthy": true
+      },
+      "latency_prime": {
+        "events": 6,
+        "state": "Caution",
+        "configured_rps": 0.5,
+        "achieved_rps": 0.6606025117692943,
+        "minimum_grant_gap_seconds": 0.707711,
+        "hospital_order": [
+          "Hospital_A",
+          "Hospital_B",
+          "Hospital_A",
+          "Hospital_B",
+          "Hospital_A",
+          "Hospital_B"
+        ],
+        "cloud_statuses": [
+          201,
+          201,
+          201,
+          201,
+          201,
+          201
+        ],
+        "latency_ms": 235.68,
+        "error_rate": 0.0,
+        "throughput_rps": 0.2667,
+        "database_healthy": true
+      },
+      "caution": {
+        "events": 4,
+        "state": "Caution",
+        "configured_rps": 0.5,
+        "achieved_rps": 0.49230672284214577,
+        "minimum_grant_gap_seconds": 2.02048,
+        "hospital_order": [
+          "Hospital_A",
+          "Hospital_B",
+          "Hospital_A",
+          "Hospital_B"
+        ],
+        "cloud_statuses": [
+          201,
+          201,
+          201,
+          201
+        ],
+        "latency_ms": 311.15,
+        "error_rate": 0.0,
+        "throughput_rps": 0.3333,
+        "database_healthy": true
+      },
+      "error_prime": {
+        "events": 6,
+        "state": "Recovery",
+        "configured_rps": 0.2,
+        "achieved_rps": 0.3106712337823403,
+        "minimum_grant_gap_seconds": 2.001198,
+        "hospital_order": [
+          "Hospital_A",
+          "Hospital_A",
+          "Hospital_B",
+          "Hospital_A",
+          "Hospital_B",
+          "Hospital_B"
+        ],
+        "cloud_statuses": [
+          503,
+          503,
+          503,
+          503,
+          503,
+          503
+        ],
+        "latency_ms": 250.67,
+        "error_rate": 0.2,
+        "throughput_rps": 0.4167,
+        "database_healthy": true
+      },
+      "recovery": {
+        "events": 4,
+        "state": "Recovery",
+        "configured_rps": 0.2,
+        "achieved_rps": 0.19869333961380903,
+        "minimum_grant_gap_seconds": 5.008278,
+        "hospital_order": [
+          "Hospital_A",
+          "Hospital_B",
+          "Hospital_A",
+          "Hospital_B"
+        ],
+        "cloud_statuses": [
+          201,
+          201,
+          201,
+          201
+        ],
+        "latency_ms": 232.74,
+        "error_rate": 0.2222,
+        "throughput_rps": 0.45,
+        "database_healthy": true
+      },
+      "restored": {
+        "events": 4,
+        "state": "Normal",
+        "configured_rps": 2.0,
+        "achieved_rps": 1.9165765343313161,
+        "minimum_grant_gap_seconds": 0.506966,
+        "hospital_order": [
+          "Hospital_A",
+          "Hospital_B",
+          "Hospital_A",
+          "Hospital_B"
+        ],
+        "cloud_statuses": [
+          201,
+          201,
+          201,
+          201
+        ],
+        "latency_ms": 8.73,
+        "error_rate": 0.0,
+        "throughput_rps": 0.1,
+        "database_healthy": true
+      }
+    },
+    "transitions": [
+      {
+        "state": "Normal",
+        "at": "2026-10-27T10:55:18.397931+00:00",
+        "reason": "healthy"
+      },
+      {
+        "state": "Normal",
+        "at": "2026-10-27T10:56:23.901057+00:00",
+        "reason": "healthy"
+      },
+      {
+        "state": "Caution",
+        "at": "2026-10-27T10:56:38.859408+00:00",
+        "reason": "patient:average_latency_ms"
+      },
+      {
+        "state": "Recovery",
+        "at": "2026-10-27T10:57:04.675449+00:00",
+        "reason": "patient:error_rate"
+      },
+      {
+        "state": "Recovery",
+        "at": "2026-10-27T10:57:24.789043+00:00",
+        "reason": "patient:error_rate"
+      },
+      {
+        "state": "Caution",
+        "at": "2026-10-27T10:58:06.185470+00:00",
+        "reason": "healthy"
+      },
+      {
+        "state": "Normal",
+        "at": "2026-10-27T10:58:09.557325+00:00",
+        "reason": "healthy"
+      },
+      {
+        "state": "Recovery",
+        "at": "2026-10-27T10:58:12.891562+00:00",
+        "reason": "telemetry_missing_or_stale"
+      },
+      {
+        "state": "Caution",
+        "at": "2026-10-27T10:58:26.082440+00:00",
+        "reason": "healthy"
+      },
+      {
+        "state": "Normal",
+        "at": "2026-10-27T10:58:27.159391+00:00",
+        "reason": "healthy"
+      }
+    ],
+    "restart": {
+      "preserved": {
+        "next_issue_at": "2026-10-27T10:58:11.921100+00:00",
+        "next_ack_at": "2026-10-27T10:58:11.997258+00:00",
+        "allowed": 80,
+        "denied": 1098
+      },
+      "state": "Recovery"
+    }
+  },
+  "pytest_paths": [
+    "tests/unit",
+    "tests/integration/test_controller_postgres.py",
+    "tests/integration/test_cloud_apis.py",
+    "tests/integration/test_cloud_telemetry.py",
+    "tests/integration/test_manual_replay_security.py"
+  ],
+  "pytest": {
+    "tests": 891,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 891
+  },
+  "docker_result": "passed",
+  "result": "passed",
+  "retained_test_volumes": [
+    "cg-metaguard-41f79711c3cc_hospital-a-data",
+    "cg-metaguard-41f79711c3cc_hospital-b-data",
+    "cg-metaguard-41f79711c3cc_postgres-data"
+  ],
+  "cleanup": "passed; disposable containers/network removed; test volumes and image retained",
+  "existing_resources_preserved": {
+    "containers": 24,
+    "volumes": 13,
+    "result": "passed"
+  },
+  "finished_at": "2026-10-27T10:59:21.338665+00:00"
+}

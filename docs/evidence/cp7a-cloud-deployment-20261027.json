@@ -1,0 +1,1411 @@
+{
+  "verified_at": "2026-10-27T12:20:53.815099+00:00",
+  "status": "PASS",
+  "credential_validation": "valid, distinct, consistent; values never printed or recorded",
+  "baseline": {
+    "recorded_at": "2026-10-27T12:16:46.820350+00:00",
+    "containers": {
+      "crisisguard-local-dashboard-1": {
+        "id": "4f6d1a86999c2f9b18f660e17556ea02c1180a453fbc7666068b83e6fe56b4e2",
+        "image": "sha256:4c6bac0a7424bcc59a03f12e47bc7e659d545d12d2930c1e9a4c552f0c71282a",
+        "image_ref": "crisisguard-local:dev",
+        "started_at": "2026-10-27T11:25:09.163749214Z",
+        "restart_count": 0,
+        "mounts": [],
+        "health": "healthy",
+        "service": "dashboard",
+        "project": "crisisguard-local"
+      },
+      "cg-metaguard-41f79711c3cc-dashboard-1": {
+        "id": "b742f42f7805a68d046d3cb7de2dfa765d6fee26fc45957e389179a9522fcba8",
+        "image": "sha256:44e59576dabf314c55bd74814b29d776a418dac5934ecca6bf47712c6e818a68",
+        "image_ref": "crisisguard-local:dev",
+        "started_at": "2026-10-27T11:11:07.43353467Z",
+        "restart_count": 0,
+        "mounts": [],
+        "health": "healthy",
+        "service": "dashboard",
+        "project": "cg-metaguard-41f79711c3cc"
+      },
+      "cg-metaguard-41f79711c3cc-hospital-a-1": {
+        "id": "7989278b7645b72eb50ae9d86a112e429e33732c7faaf5634bb53a3a2321f0e1",
+        "image": "sha256:6c74a404a962e93cbe9605e631da9b98e4b90874615520f30b9106597c9da0fa",
+        "image_ref": "crisisguard-metaguard-test:cg-metaguard-41f79711c3cc",
+        "started_at": "2026-10-27T11:01:52.175992156Z",
+        "restart_count": 0,
+        "mounts": [
+          {
+            "Type": "volume",
+            "Name": "cg-metaguard-41f79711c3cc_hospital-a-data",
+            "Source": "/var/lib/docker/volumes/cg-metaguard-41f79711c3cc_hospital-a-data/_data",
+            "Destination": "/data",
+            "Driver": "local",
+            "Mode": "rw",
+            "RW": true,
+            "Propagation": ""
+          }
+        ],
+        "health": "healthy",
+        "service": "hospital-a",
+        "project": "cg-metaguard-41f79711c3cc"
+      },
+      "cg-metaguard-41f79711c3cc-hospital-b-1": {
+        "id": "8403468e12ab8219b9b7d5fb6359cff40203eddd478233341a1e85b3d322fd91",
+        "image": "sha256:6c74a404a962e93cbe9605e631da9b98e4b90874615520f30b9106597c9da0fa",
+        "image_ref": "crisisguard-metaguard-test:cg-metaguard-41f79711c3cc",
+        "started_at": "2026-10-27T11:01:51.967484401Z",
+        "restart_count": 0,
+        "mounts": [
+          {
+            "Type": "volume",
+            "Name": "cg-metaguard-41f79711c3cc_hospital-b-data",
+            "Source": "/var/lib/docker/volumes/cg-metaguard-41f79711c3cc_hospital-b-data/_data",
+            "Destination": "/data",
+            "Driver": "local",
+            "Mode": "rw",
+            "RW": true,
+            "Propagation": ""
+          }
+        ],
+        "health": "healthy",
+        "service": "hospital-b",
+        "project": "cg-metaguard-41f79711c3cc"
+      },
+      "cg-metaguard-41f79711c3cc-emergency-1": {
+        "id": "97a296e0857ec7b6379513400f9d44523d71cfb003dd1865d03400aecc19e2a8",
+        "image": "sha256:6c74a404a962e93cbe9605e631da9b98e4b90874615520f30b9106597c9da0fa",
+        "image_ref": "crisisguard-metaguard-test:cg-metaguard-41f79711c3cc",
+        "started_at": "2026-10-27T11:02:34.943439275Z",
+        "restart_count": 0,
+        "mounts": [],
+        "health": "healthy",
+        "service": "emergency",
+        "project": "cg-metaguard-41f79711c3cc"
+      },
+      "cg-metaguard-41f79711c3cc-admin-1": {
+        "id": "564b1608bd34f27e389ff9e307a0201e6f373ceb6bea6ece05ebffd0d86e7965",
+        "image": "sha256:6c74a404a962e93cbe9605e631da9b98e4b90874615520f30b9106597c9da0fa",
+        "image_ref": "crisisguard-metaguard-test:cg-metaguard-41f79711c3cc",
+        "started_at": "2026-10-27T11:02:35.155322745Z",
+        "restart_count": 0,
+        "mounts": [],
+        "health": "healthy",
+        "service": "admin",
+        "project": "cg-metaguard-41f79711c3cc"
+      },
+      "cg-metaguard-41f79711c3cc-controller-1": {
+        "id": "6a84630d4f13eff108390c318397679bdacf8968e736e41f48643b7036d999a8",
+        "image": "sha256:6c74a404a962e93cbe9605e631da9b98e4b90874615520f30b9106597c9da0fa",
+        "image_ref": "crisisguard-metaguard-test:cg-metaguard-41f79711c3cc",
+        "started_at": "2026-10-27T11:01:57.681295945Z",
+        "restart_count": 0,
+        "mounts": [],
+        "health": "healthy",
+        "service": "controller",
+        "project": "cg-metaguard-41f79711c3cc"
+      },
+      "cg-metaguard-41f79711c3cc-patient-1": {
+        "id": "ea00d7f6ce18b5c90435edc3d8296573ede0defb24f84561cf7d9ba3b935fc21",
+        "image": "sha256:6c74a404a962e93cbe9605e631da9b98e4b90874615520f30b9106597c9da0fa",
+        "image_ref": "crisisguard-metaguard-test:cg-metaguard-41f79711c3cc",
+        "started_at": "2026-10-27T11:02:29.227574354Z",
+        "restart_count": 0,
+        "mounts": [],
+        "health": "healthy",
+        "service": "patient",
+        "project": "cg-metaguard-41f79711c3cc"
+      },
+      "cg-metaguard-41f79711c3cc-postgres-1": {
+        "id": "aff06e3ec433e36ff0f96de7d4f9626355d6d022ddb6e4a7e7468ef7f992351b",
+        "image": "sha256:9e2cf6287f25c3151f4c9421ccce2b17f3e60061c111a29165e0d2cdd9ff0a97",
+        "image_ref": "postgres:16",
+        "started_at": "2026-10-27T11:01:51.741708025Z",
+        "restart_count": 0,
+        "mounts": [
+          {
+            "Type": "volume",
+            "Name": "cg-metaguard-41f79711c3cc_postgres-data",
+            "Source": "/var/lib/docker/volumes/cg-metaguard-41f79711c3cc_postgres-data/_data",
+            "Destination": "/var/lib/postgresql/data",
+            "Driver": "local",
+            "Mode": "rw",
+            "RW": true,
+            "Propagation": ""
+          }
+        ],
+        "health": "healthy",
+        "service": "postgres",
+        "project": "cg-metaguard-41f79711c3cc"
+      },
+      "crisisguard-local-hospital-a-1": {
+        "id": "f0b33acea69f249c89e6a004a1bfe40a13d4699b00358ed584ba52ea41c4e16b",
+        "image": "sha256:4a22c27b3bf3c1bcd02e4c92bdff48dc438351cf968881bf9b371f0c95daf3b6",
+        "image_ref": "crisisguard-local:dev",
+        "started_at": "2026-10-27T09:24:28.80873215Z",
+        "restart_count": 0,
+        "mounts": [
+          {
+            "Type": "volume",
+            "Name": "crisisguard-local_hospital-a-data",
+            "Source": "/var/lib/docker/volumes/crisisguard-local_hospital-a-data/_data",
+            "Destination": "/data",
+            "Driver": "local",
+            "Mode": "rw",
+            "RW": true,
+            "Propagation": ""
+          }
+        ],
+        "health": "healthy",
+        "service": "hospital-a",
+        "project": "crisisguard-local"
+      },
+      "crisisguard-local-emergency-1": {
+        "id": "be6229be529dd6b7aec54bb98af43674a6cbcd3dfac7195054548b12fe0f7aa4",
+        "image": "sha256:4a22c27b3bf3c1bcd02e4c92bdff48dc438351cf968881bf9b371f0c95daf3b6",
+        "image_ref": "crisisguard-local:dev",
+        "started_at": "2026-10-27T09:55:01.575853847Z",
+        "restart_count": 0,
+        "mounts": [],
+        "health": "healthy",
+        "service": "emergency",
+        "project": "crisisguard-local"
+      },
+      "crisisguard-local-admin-1": {
+        "id": "5979811bd137ed9d9370a60b06157f4da4cdad6847c9cd3edd32dfa1dec086b4",
+        "image": "sha256:4a22c27b3bf3c1bcd02e4c92bdff48dc438351cf968881bf9b371f0c95daf3b6",
+        "image_ref": "crisisguard-local:dev",
+        "started_at": "2026-10-27T09:55:01.782974753Z",
+        "restart_count": 0,
+        "mounts": [],
+        "health": "healthy",
+        "service": "admin",
+        "project": "crisisguard-local"
+      },
+      "crisisguard-local-hospital-b-1": {
+        "id": "ecada5b14cf25180667fa30ab927e12ffc4fe40e941969283fbd27d5ba1b6577",
+        "image": "sha256:4a22c27b3bf3c1bcd02e4c92bdff48dc438351cf968881bf9b371f0c95daf3b6",
+        "image_ref": "crisisguard-local:dev",
+        "started_at": "2026-10-27T09:24:28.581004265Z",
+        "restart_count": 0,
+        "mounts": [
+          {
+            "Type": "volume",
+            "Name": "crisisguard-local_hospital-b-data",
+            "Source": "/var/lib/docker/volumes/crisisguard-local_hospital-b-data/_data",
+            "Destination": "/data",
+            "Driver": "local",
+            "Mode": "rw",
+            "RW": true,
+            "Propagation": ""
+          }
+        ],
+        "health": "healthy",
+        "service": "hospital-b",
+        "project": "crisisguard-local"
+      },
+      "crisisguard-local-patient-1": {
+        "id": "7d42f305516a1d2f754f711bdf2c735f8cd89fd5f43c31b6a5f6abc61cef7243",
+        "image": "sha256:4a22c27b3bf3c1bcd02e4c92bdff48dc438351cf968881bf9b371f0c95daf3b6",
+        "image_ref": "crisisguard-local:dev",
+        "started_at": "2026-10-27T09:54:58.468714971Z",
+        "restart_count": 0,
+        "mounts": [],
+        "health": "healthy",
+        "service": "patient",
+        "project": "crisisguard-local"
+      },
+      "crisisguard-local-postgres-1": {
+        "id": "01cce11cfc59db4d000d7fe60669817513e1d21eef90e0012c5ef4fd5e32b103",
+        "image": "sha256:9e2cf6287f25c3151f4c9421ccce2b17f3e60061c111a29165e0d2cdd9ff0a97",
+        "image_ref": "postgres:16",
+        "started_at": "2026-10-27T09:24:28.369837588Z",
+        "restart_count": 0,
+        "mounts": [
+          {
+            "Type": "volume",
+            "Name": "crisisguard-local_postgres-data",
+            "Source": "/var/lib/docker/volumes/crisisguard-local_postgres-data/_data",
+            "Destination": "/var/lib/postgresql/data",
+            "Driver": "local",
+            "Mode": "rw",
+            "RW": true,
+            "Propagation": ""
+          }
+        ],
+        "health": "healthy",
+        "service": "postgres",
+        "project": "crisisguard-local"
+      },
+      "topicf_gis-frontend-1": {
+        "id": "d081697aa59921b00e909d8a3dafa83518a3a0289299d29f0dce49dc522a4e74",
+        "image": "sha256:f1ac7656580993cc2b36ef8ef3d27035d9bfe6a3f5e88871062f2f7c6259ab9a",
+        "image_ref": "topicf_gis-frontend",
+        "started_at": "0001-01-01T00:00:00Z",
+        "restart_count": 0,
+        "mounts": [],
+        "health": null,
+        "service": "frontend",
+        "project": "topicf_gis"
+      },
+      "topicf_gis-backend-1": {
+        "id": "3eb6ec3768846e34f3ca01be018b3373f2d8f4dbe61050dec2b42ebc591d307c",
+        "image": "sha256:bb6fb92a170ead6824017a2f8fe36e965b845cc3f50de12b89ddb192334220f4",
+        "image_ref": "topicf_gis-backend",
+        "started_at": "0001-01-01T00:00:00Z",
+        "restart_count": 0,
+        "mounts": [],
+        "health": null,
+        "service": "backend",
+        "project": "topicf_gis"
+      },
+      "topicf_gis-gis-1": {
+        "id": "61d5b12671b0523921b9b1e7455d7a127476ecc0cf88a8b6e3f97416a0069170",
+        "image": "sha256:356d64e53c50e945aa685cdb6540b8a6c50b9253d2532ddc8aadb9e4f7ffdc56",
+        "image_ref": "topicf_gis-gis",
+        "started_at": "0001-01-01T00:00:00Z",
+        "restart_count": 0,
+        "mounts": [
+          {
+            "Type": "bind",
+            "Source": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\TopicF_GIS_Customer_Day_2_Source_2026-10-26\\TopicF_GIS\\gis\\data",
+            "Destination": "/app/gis/data",
+            "Mode": "rw",
+            "RW": true,
+            "Propagation": "rprivate"
+          }
+        ],
+        "health": null,
+        "service": "gis",
+        "project": "topicf_gis"
+      },
+      "topicf_gis-db-1": {
+        "id": "5b143aee4f0945c73c951e01c840dafbd63ed016b9fb3ac36fcfa78f941b537f",
+        "image": "sha256:44126d872ac91993766c341e369c539e8196614321765d36a6f1bab0419a5fa5",
+        "image_ref": "postgis/postgis:16-3.4",
+        "started_at": "0001-01-01T00:00:00Z",
+        "restart_count": 0,
+        "mounts": [
+          {
+            "Type": "volume",
+            "Name": "topicf_gis_db_data",
+            "Source": "/var/lib/docker/volumes/topicf_gis_db_data/_data",
+            "Destination": "/var/lib/postgresql/data",
+            "Driver": "local",
+            "Mode": "rw",
+            "RW": true,
+            "Propagation": ""
+          }
+        ],
+        "health": null,
+        "service": "db",
+        "project": "topicf_gis"
+      },
+      "topicf_gis-ltm-1": {
+        "id": "bc388d68e29a836959713a9a4d7881729b041d30a34eabcf769f5535eec127a4",
+        "image": "sha256:83f72e6dc222a261373012a00bc18d66f8764610b41ea56d3c352fc2233f3da7",
+        "image_ref": "topicf_gis-ltm",
+        "started_at": "0001-01-01T00:00:00Z",
+        "restart_count": 0,
+        "mounts": [
+          {
+            "Type": "volume",
+            "Name": "topicf_gis_bedrock_ltm_data",
+            "Source": "/var/lib/docker/volumes/topicf_gis_bedrock_ltm_data/_data",
+            "Destination": "/app/data",
+            "Driver": "local",
+            "Mode": "rw",
+            "RW": true,
+            "Propagation": ""
+          }
+        ],
+        "health": null,
+        "service": "ltm",
+        "project": "topicf_gis"
+      },
+      "topicf-task4-round3-postgres-1": {
+        "id": "fac28841ea108efe32c6585b6a58e1b3a41b744723c8d53ff8c7c261b7679762",
+        "image": "sha256:33198da2828a14c30348d2ccb4750833d5ed9a44c88d840a0e523d7417120337",
+        "image_ref": "pgvector/pgvector:0.8.1-pg16",
+        "started_at": "2026-10-25T06:44:27.005794439Z",
+        "restart_count": 0,
+        "mounts": [
+          {
+            "Type": "volume",
+            "Name": "topicf-task4-round3_round3_postgres",
+            "Source": "/var/lib/docker/volumes/topicf-task4-round3_round3_postgres/_data",
+            "Destination": "/var/lib/postgresql/data",
+            "Driver": "local",
+            "Mode": "rw",
+            "RW": true,
+            "Propagation": ""
+          }
+        ],
+        "health": "unhealthy",
+        "service": "postgres",
+        "project": "topicf-task4-round3"
+      },
+      "topicf-task4-round3-qdrant-1": {
+        "id": "42bb59276c732e2752b62b99f9d9f102a9a94b311f129bfd4e6b5d7ff65b06cd",
+        "image": "sha256:12364fe851b9f17356fc88189fc06d1b521262e04659ec7345975b00c9246a10",
+        "image_ref": "qdrant/qdrant:v1.19.1",
+        "started_at": "2026-10-25T06:44:27.261724634Z",
+        "restart_count": 0,
+        "mounts": [
+          {
+            "Type": "volume",
+            "Name": "topicf-task4-round3_round3_qdrant",
+            "Source": "/var/lib/docker/volumes/topicf-task4-round3_round3_qdrant/_data",
+            "Destination": "/qdrant/storage",
+            "Driver": "local",
+            "Mode": "rw",
+            "RW": true,
+            "Propagation": ""
+          }
+        ],
+        "health": null,
+        "service": "qdrant",
+        "project": "topicf-task4-round3"
+      },
+      "topicf-task4-benchmark-runner-1": {
+        "id": "439c4c1de70d44e85fa43da1bb42b6e96c81438e8a037471fd35e4ed93a7ccfb",
+        "image": "sha256:7b6a09413a065f83289dfa0ba8fe33b91a8fbc9ab4bdcac68de65fe796408507",
+        "image_ref": "topicf-task4-benchmark-runner",
+        "started_at": "2026-10-25T06:13:55.796446064Z",
+        "restart_count": 0,
+        "mounts": [
+          {
+            "Type": "bind",
+            "Source": "C:\\Users\\USER\\Documents\\GitHub\\TopicF_GIS\\research\\ltm-vector-benchmark\\results",
+            "Destination": "/results",
+            "Mode": "rw",
+            "RW": true,
+            "Propagation": "rprivate"
+          }
+        ],
+        "health": null,
+        "service": "runner",
+        "project": "topicf-task4-benchmark"
+      },
+      "topicf-task4-benchmark-qdrant-1": {
+        "id": "1ccbef9efbb2f41de301b63e8608232eca4e113c70e006e36305391587b2e242",
+        "image": "sha256:12364fe851b9f17356fc88189fc06d1b521262e04659ec7345975b00c9246a10",
+        "image_ref": "qdrant/qdrant:v1.19.1",
+        "started_at": "2026-10-25T06:25:19.065687845Z",
+        "restart_count": 0,
+        "mounts": [
+          {
+            "Type": "volume",
+            "Name": "topicf-task4-benchmark_benchmark_qdrant",
+            "Source": "/var/lib/docker/volumes/topicf-task4-benchmark_benchmark_qdrant/_data",
+            "Destination": "/qdrant/storage",
+            "Driver": "local",
+            "Mode": "rw",
+            "RW": true,
+            "Propagation": ""
+          }
+        ],
+        "health": null,
+        "service": "qdrant",
+        "project": "topicf-task4-benchmark"
+      },
+      "topicf-task4-benchmark-postgres-1": {
+        "id": "d1508a040c56aa98bf7e97a4e1679e251a72d6b71a9db2d6c1b18dfacbad1565",
+        "image": "sha256:33198da2828a14c30348d2ccb4750833d5ed9a44c88d840a0e523d7417120337",
+        "image_ref": "pgvector/pgvector:0.8.1-pg16",
+        "started_at": "2026-10-25T06:25:18.843726898Z",
+        "restart_count": 0,
+        "mounts": [
+          {
+            "Type": "volume",
+            "Name": "topicf-task4-benchmark_benchmark_postgres",
+            "Source": "/var/lib/docker/volumes/topicf-task4-benchmark_benchmark_postgres/_data",
+            "Destination": "/var/lib/postgresql/data",
+            "Driver": "local",
+            "Mode": "rw",
+            "RW": true,
+            "Propagation": ""
+          }
+        ],
+        "health": "unhealthy",
+        "service": "postgres",
+        "project": "topicf-task4-benchmark"
+      },
+      "topicf_gis-redis-1": {
+        "id": "91a4b4e81d6ffcaa3fd2a4641f73a1c1806e57b322701e92fd453b63fdef32d8",
+        "image": "sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499",
+        "image_ref": "redis:7-alpine",
+        "started_at": "2026-10-26T08:38:50.104297728Z",
+        "restart_count": 0,
+        "mounts": [
+          {
+            "Type": "volume",
+            "Name": "b4a991065d804026972195281eea606219b68328d33d569a8a43e16276cbb9bd",
+            "Source": "/var/lib/docker/volumes/b4a991065d804026972195281eea606219b68328d33d569a8a43e16276cbb9bd/_data",
+            "Destination": "/data",
+            "Driver": "local",
+            "Mode": "z",
+            "RW": true,
+            "Propagation": ""
+          }
+        ],
+        "health": null,
+        "service": "redis",
+        "project": "topicf_gis"
+      },
+      "topicf_gis-qdrant-1": {
+        "id": "07831148b3f86b3722da48e9b0c99a1f1ccaf559cc88f7988e9dfdb1b5bb3dfa",
+        "image": "sha256:6c01f782a6b4f437cc15d44053af726ebd7bb58c08215b1f4cb8f3acabcb7da2",
+        "image_ref": "topicf_gis-qdrant",
+        "started_at": "2026-10-26T08:38:50.6041382Z",
+        "restart_count": 0,
+        "mounts": [
+          {
+            "Type": "volume",
+            "Name": "topicf_gis_titan_qdrant_data",
+            "Source": "/var/lib/docker/volumes/topicf_gis_titan_qdrant_data/_data",
+            "Destination": "/qdrant/storage",
+            "Driver": "local",
+            "Mode": "rw",
+            "RW": true,
+            "Propagation": ""
+          }
+        ],
+        "health": "unhealthy",
+        "service": "qdrant",
+        "project": "topicf_gis"
+      },
+      "web_new": {
+        "id": "4ecfdc05dfd867bdee9998ed2a194ce89f064f287e993384d254b3af2b48ae14",
+        "image": "sha256:9235f69b276741a08fbb64e3737490331e8c40007b27eaa8789e527f62bc5a61",
+        "image_ref": "myhttpd:v2",
+        "started_at": "2026-10-15T11:59:53.204358547Z",
+        "restart_count": 0,
+        "mounts": [],
+        "health": null,
+        "service": null,
+        "project": null
+      },
+      "web2": {
+        "id": "52dd6fa28c64de03d825c9bda124a89a42e1908080f9074aaa0cab03cbb2f418",
+        "image": "sha256:c874628d465617c31044de05ee4d42cd9ee624a16912081a7e7af7d4b3136482",
+        "image_ref": "myhttpd:v1",
+        "started_at": "2026-10-15T11:57:48.05820649Z",
+        "restart_count": 0,
+        "mounts": [],
+        "health": null,
+        "service": null,
+        "project": null
+      },
+      "web1": {
+        "id": "b89da75f38a8f3887f64a1a299d905785e1afdde501c8e7685b110a0a5a21c88",
+        "image": "sha256:c874628d465617c31044de05ee4d42cd9ee624a16912081a7e7af7d4b3136482",
+        "image_ref": "myhttpd:v1",
+        "started_at": "2026-10-15T11:43:16.395369357Z",
+        "restart_count": 0,
+        "mounts": [],
+        "health": null,
+        "service": null,
+        "project": null
+      },
+      "festive_ride": {
+        "id": "fdd0c6e82182d3a5388642431c7975da4fe102f9835da6cdd00bc7f4cb877b60",
+        "image": "sha256:5e23090353324d887c48ad5e5c56d294eab81588df9605b07d1afe895f9cc8f8",
+        "image_ref": "hello-world",
+        "started_at": "2026-10-15T11:40:41.372585629Z",
+        "restart_count": 0,
+        "mounts": [],
+        "health": null,
+        "service": null,
+        "project": null
+      },
+      "crisisguard-postgres": {
+        "id": "032d6f604fe6ea388645570ea9d17e7f0051a00e06b14611c1157f5f6d564cd8",
+        "image": "sha256:ca0bd484cb98bf4b24eb1010e73fb3fcbd6714d240fbc1a10eea5b7dbecb641d",
+        "image_ref": "postgres:16",
+        "started_at": "2026-10-12T09:50:01.947104069Z",
+        "restart_count": 0,
+        "mounts": [
+          {
+            "Type": "volume",
+            "Name": "crisisguard_pgdata",
+            "Source": "/var/lib/docker/volumes/crisisguard_pgdata/_data",
+            "Destination": "/var/lib/postgresql/data",
+            "Driver": "local",
+            "Mode": "z",
+            "RW": true,
+            "Propagation": ""
+          }
+        ],
+        "health": null,
+        "service": null,
+        "project": null
+      }
+    },
+    "volumes": [
+      "b4a991065d804026972195281eea606219b68328d33d569a8a43e16276cbb9bd",
+      "cg-metaguard-41f79711c3cc_hospital-a-data",
+      "cg-metaguard-41f79711c3cc_hospital-b-data",
+      "cg-metaguard-41f79711c3cc_postgres-data",
+      "crisisguard-local_hospital-a-data",
+      "crisisguard-local_hospital-b-data",
+      "crisisguard-local_postgres-data",
+      "crisisguard_pgdata",
+      "topicf-task4-benchmark_benchmark_postgres",
+      "topicf-task4-benchmark_benchmark_qdrant",
+      "topicf-task4-round3_round3_postgres",
+      "topicf-task4-round3_round3_qdrant",
+      "topicf-task4-round3_round3_state",
+      "topicf_gis_bedrock_ltm_data",
+      "topicf_gis_db_data",
+      "topicf_gis_titan_qdrant_data"
+    ],
+    "data": {
+      "postgres_count_and_hash": "183|7da0926aa78fedc6b296a7a361fa643a",
+      "sqlite": {
+        "hospital-a": {
+          "count": 55,
+          "sha256": "fdf2492bb9928bc0fedbaacc7f3e1636b983097a044442c10aceac30a4f6130a"
+        },
+        "hospital-b": {
+          "count": 39,
+          "sha256": "8cc6e04e12e3ee06988abd2880ca09765723817fba461191cff77ddedaef4653"
+        }
+      }
+    }
+  },
+  "post_deployment": {
+    "crisisguard-local-admin-1": {
+      "id": "6f61d6c2df1503739267c5b4006b270b14a740e3d0c7fd61289f3f318124664e",
+      "image": "sha256:55cb80928288851103652cb9d77b6630eb434dd8330e1a7312b81370812ebc54",
+      "image_ref": "crisisguard-local:dev",
+      "started_at": "2026-10-27T12:18:44.956633835Z",
+      "restart_count": 0,
+      "mounts": [],
+      "health": "healthy",
+      "service": "admin",
+      "project": "crisisguard-local"
+    },
+    "crisisguard-local-emergency-1": {
+      "id": "00e0b105c3b1d29531901821b73a7bc772a78ce33e5aaa40ad07e618fc02c2fb",
+      "image": "sha256:55cb80928288851103652cb9d77b6630eb434dd8330e1a7312b81370812ebc54",
+      "image_ref": "crisisguard-local:dev",
+      "started_at": "2026-10-27T12:18:44.737930222Z",
+      "restart_count": 0,
+      "mounts": [],
+      "health": "healthy",
+      "service": "emergency",
+      "project": "crisisguard-local"
+    },
+    "crisisguard-local-patient-1": {
+      "id": "482ee212162f899fed3ac86a0bdcaa241bbad7a39dc5773e6014cc8b7373b878",
+      "image": "sha256:55cb80928288851103652cb9d77b6630eb434dd8330e1a7312b81370812ebc54",
+      "image_ref": "crisisguard-local:dev",
+      "started_at": "2026-10-27T12:18:39.026682938Z",
+      "restart_count": 0,
+      "mounts": [],
+      "health": "healthy",
+      "service": "patient",
+      "project": "crisisguard-local"
+    },
+    "crisisguard-local-dashboard-1": {
+      "id": "4f6d1a86999c2f9b18f660e17556ea02c1180a453fbc7666068b83e6fe56b4e2",
+      "image": "sha256:4c6bac0a7424bcc59a03f12e47bc7e659d545d12d2930c1e9a4c552f0c71282a",
+      "image_ref": "crisisguard-local:dev",
+      "started_at": "2026-10-27T11:25:09.163749214Z",
+      "restart_count": 0,
+      "mounts": [],
+      "health": "healthy",
+      "service": "dashboard",
+      "project": "crisisguard-local"
+    },
+    "cg-metaguard-41f79711c3cc-dashboard-1": {
+      "id": "b742f42f7805a68d046d3cb7de2dfa765d6fee26fc45957e389179a9522fcba8",
+      "image": "sha256:44e59576dabf314c55bd74814b29d776a418dac5934ecca6bf47712c6e818a68",
+      "image_ref": "crisisguard-local:dev",
+      "started_at": "2026-10-27T11:11:07.43353467Z",
+      "restart_count": 0,
+      "mounts": [],
+      "health": "healthy",
+      "service": "dashboard",
+      "project": "cg-metaguard-41f79711c3cc"
+    },
+    "cg-metaguard-41f79711c3cc-hospital-a-1": {
+      "id": "7989278b7645b72eb50ae9d86a112e429e33732c7faaf5634bb53a3a2321f0e1",
+      "image": "sha256:6c74a404a962e93cbe9605e631da9b98e4b90874615520f30b9106597c9da0fa",
+      "image_ref": "crisisguard-metaguard-test:cg-metaguard-41f79711c3cc",
+      "started_at": "2026-10-27T11:01:52.175992156Z",
+      "restart_count": 0,
+      "mounts": [
+        {
+          "Type": "volume",
+          "Name": "cg-metaguard-41f79711c3cc_hospital-a-data",
+          "Source": "/var/lib/docker/volumes/cg-metaguard-41f79711c3cc_hospital-a-data/_data",
+          "Destination": "/data",
+          "Driver": "local",
+          "Mode": "rw",
+          "RW": true,
+          "Propagation": ""
+        }
+      ],
+      "health": "healthy",
+      "service": "hospital-a",
+      "project": "cg-metaguard-41f79711c3cc"
+    },
+    "cg-metaguard-41f79711c3cc-hospital-b-1": {
+      "id": "8403468e12ab8219b9b7d5fb6359cff40203eddd478233341a1e85b3d322fd91",
+      "image": "sha256:6c74a404a962e93cbe9605e631da9b98e4b90874615520f30b9106597c9da0fa",
+      "image_ref": "crisisguard-metaguard-test:cg-metaguard-41f79711c3cc",
+      "started_at": "2026-10-27T11:01:51.967484401Z",
+      "restart_count": 0,
+      "mounts": [
+        {
+          "Type": "volume",
+          "Name": "cg-metaguard-41f79711c3cc_hospital-b-data",
+          "Source": "/var/lib/docker/volumes/cg-metaguard-41f79711c3cc_hospital-b-data/_data",
+          "Destination": "/data",
+          "Driver": "local",
+          "Mode": "rw",
+          "RW": true,
+          "Propagation": ""
+        }
+      ],
+      "health": "healthy",
+      "service": "hospital-b",
+      "project": "cg-metaguard-41f79711c3cc"
+    },
+    "cg-metaguard-41f79711c3cc-emergency-1": {
+      "id": "97a296e0857ec7b6379513400f9d44523d71cfb003dd1865d03400aecc19e2a8",
+      "image": "sha256:6c74a404a962e93cbe9605e631da9b98e4b90874615520f30b9106597c9da0fa",
+      "image_ref": "crisisguard-metaguard-test:cg-metaguard-41f79711c3cc",
+      "started_at": "2026-10-27T11:02:34.943439275Z",
+      "restart_count": 0,
+      "mounts": [],
+      "health": "healthy",
+      "service": "emergency",
+      "project": "cg-metaguard-41f79711c3cc"
+    },
+    "cg-metaguard-41f79711c3cc-admin-1": {
+      "id": "564b1608bd34f27e389ff9e307a0201e6f373ceb6bea6ece05ebffd0d86e7965",
+      "image": "sha256:6c74a404a962e93cbe9605e631da9b98e4b90874615520f30b9106597c9da0fa",
+      "image_ref": "crisisguard-metaguard-test:cg-metaguard-41f79711c3cc",
+      "started_at": "2026-10-27T11:02:35.155322745Z",
+      "restart_count": 0,
+      "mounts": [],
+      "health": "healthy",
+      "service": "admin",
+      "project": "cg-metaguard-41f79711c3cc"
+    },
+    "cg-metaguard-41f79711c3cc-controller-1": {
+      "id": "6a84630d4f13eff108390c318397679bdacf8968e736e41f48643b7036d999a8",
+      "image": "sha256:6c74a404a962e93cbe9605e631da9b98e4b90874615520f30b9106597c9da0fa",
+      "image_ref": "crisisguard-metaguard-test:cg-metaguard-41f79711c3cc",
+      "started_at": "2026-10-27T11:01:57.681295945Z",
+      "restart_count": 0,
+      "mounts": [],
+      "health": "healthy",
+      "service": "controller",
+      "project": "cg-metaguard-41f79711c3cc"
+    },
+    "cg-metaguard-41f79711c3cc-patient-1": {
+      "id": "ea00d7f6ce18b5c90435edc3d8296573ede0defb24f84561cf7d9ba3b935fc21",
+      "image": "sha256:6c74a404a962e93cbe9605e631da9b98e4b90874615520f30b9106597c9da0fa",
+      "image_ref": "crisisguard-metaguard-test:cg-metaguard-41f79711c3cc",
+      "started_at": "2026-10-27T11:02:29.227574354Z",
+      "restart_count": 0,
+      "mounts": [],
+      "health": "healthy",
+      "service": "patient",
+      "project": "cg-metaguard-41f79711c3cc"
+    },
+    "cg-metaguard-41f79711c3cc-postgres-1": {
+      "id": "aff06e3ec433e36ff0f96de7d4f9626355d6d022ddb6e4a7e7468ef7f992351b",
+      "image": "sha256:9e2cf6287f25c3151f4c9421ccce2b17f3e60061c111a29165e0d2cdd9ff0a97",
+      "image_ref": "postgres:16",
+      "started_at": "2026-10-27T11:01:51.741708025Z",
+      "restart_count": 0,
+      "mounts": [
+        {
+          "Type": "volume",
+          "Name": "cg-metaguard-41f79711c3cc_postgres-data",
+          "Source": "/var/lib/docker/volumes/cg-metaguard-41f79711c3cc_postgres-data/_data",
+          "Destination": "/var/lib/postgresql/data",
+          "Driver": "local",
+          "Mode": "rw",
+          "RW": true,
+          "Propagation": ""
+        }
+      ],
+      "health": "healthy",
+      "service": "postgres",
+      "project": "cg-metaguard-41f79711c3cc"
+    },
+    "crisisguard-local-hospital-a-1": {
+      "id": "f0b33acea69f249c89e6a004a1bfe40a13d4699b00358ed584ba52ea41c4e16b",
+      "image": "sha256:4a22c27b3bf3c1bcd02e4c92bdff48dc438351cf968881bf9b371f0c95daf3b6",
+      "image_ref": "crisisguard-local:dev",
+      "started_at": "2026-10-27T09:24:28.80873215Z",
+      "restart_count": 0,
+      "mounts": [
+        {
+          "Type": "volume",
+          "Name": "crisisguard-local_hospital-a-data",
+          "Source": "/var/lib/docker/volumes/crisisguard-local_hospital-a-data/_data",
+          "Destination": "/data",
+          "Driver": "local",
+          "Mode": "rw",
+          "RW": true,
+          "Propagation": ""
+        }
+      ],
+      "health": "healthy",
+      "service": "hospital-a",
+      "project": "crisisguard-local"
+    },
+    "crisisguard-local-hospital-b-1": {
+      "id": "ecada5b14cf25180667fa30ab927e12ffc4fe40e941969283fbd27d5ba1b6577",
+      "image": "sha256:4a22c27b3bf3c1bcd02e4c92bdff48dc438351cf968881bf9b371f0c95daf3b6",
+      "image_ref": "crisisguard-local:dev",
+      "started_at": "2026-10-27T09:24:28.581004265Z",
+      "restart_count": 0,
+      "mounts": [
+        {
+          "Type": "volume",
+          "Name": "crisisguard-local_hospital-b-data",
+          "Source": "/var/lib/docker/volumes/crisisguard-local_hospital-b-data/_data",
+          "Destination": "/data",
+          "Driver": "local",
+          "Mode": "rw",
+          "RW": true,
+          "Propagation": ""
+        }
+      ],
+      "health": "healthy",
+      "service": "hospital-b",
+      "project": "crisisguard-local"
+    },
+    "crisisguard-local-postgres-1": {
+      "id": "01cce11cfc59db4d000d7fe60669817513e1d21eef90e0012c5ef4fd5e32b103",
+      "image": "sha256:9e2cf6287f25c3151f4c9421ccce2b17f3e60061c111a29165e0d2cdd9ff0a97",
+      "image_ref": "postgres:16",
+      "started_at": "2026-10-27T09:24:28.369837588Z",
+      "restart_count": 0,
+      "mounts": [
+        {
+          "Type": "volume",
+          "Name": "crisisguard-local_postgres-data",
+          "Source": "/var/lib/docker/volumes/crisisguard-local_postgres-data/_data",
+          "Destination": "/var/lib/postgresql/data",
+          "Driver": "local",
+          "Mode": "rw",
+          "RW": true,
+          "Propagation": ""
+        }
+      ],
+      "health": "healthy",
+      "service": "postgres",
+      "project": "crisisguard-local"
+    },
+    "topicf_gis-frontend-1": {
+      "id": "d081697aa59921b00e909d8a3dafa83518a3a0289299d29f0dce49dc522a4e74",
+      "image": "sha256:f1ac7656580993cc2b36ef8ef3d27035d9bfe6a3f5e88871062f2f7c6259ab9a",
+      "image_ref": "topicf_gis-frontend",
+      "started_at": "0001-01-01T00:00:00Z",
+      "restart_count": 0,
+      "mounts": [],
+      "health": null,
+      "service": "frontend",
+      "project": "topicf_gis"
+    },
+    "topicf_gis-backend-1": {
+      "id": "3eb6ec3768846e34f3ca01be018b3373f2d8f4dbe61050dec2b42ebc591d307c",
+      "image": "sha256:bb6fb92a170ead6824017a2f8fe36e965b845cc3f50de12b89ddb192334220f4",
+      "image_ref": "topicf_gis-backend",
+      "started_at": "0001-01-01T00:00:00Z",
+      "restart_count": 0,
+      "mounts": [],
+      "health": null,
+      "service": "backend",
+      "project": "topicf_gis"
+    },
+    "topicf_gis-gis-1": {
+      "id": "61d5b12671b0523921b9b1e7455d7a127476ecc0cf88a8b6e3f97416a0069170",
+      "image": "sha256:356d64e53c50e945aa685cdb6540b8a6c50b9253d2532ddc8aadb9e4f7ffdc56",
+      "image_ref": "topicf_gis-gis",
+      "started_at": "0001-01-01T00:00:00Z",
+      "restart_count": 0,
+      "mounts": [
+        {
+          "Type": "bind",
+          "Source": "C:\\Users\\USER\\Downloads\\Telegram Desktop\\TopicF_GIS_Customer_Day_2_Source_2026-10-26\\TopicF_GIS\\gis\\data",
+          "Destination": "/app/gis/data",
+          "Mode": "rw",
+          "RW": true,
+          "Propagation": "rprivate"
+        }
+      ],
+      "health": null,
+      "service": "gis",
+      "project": "topicf_gis"
+    },
+    "topicf_gis-db-1": {
+      "id": "5b143aee4f0945c73c951e01c840dafbd63ed016b9fb3ac36fcfa78f941b537f",
+      "image": "sha256:44126d872ac91993766c341e369c539e8196614321765d36a6f1bab0419a5fa5",
+      "image_ref": "postgis/postgis:16-3.4",
+      "started_at": "0001-01-01T00:00:00Z",
+      "restart_count": 0,
+      "mounts": [
+        {
+          "Type": "volume",
+          "Name": "topicf_gis_db_data",
+          "Source": "/var/lib/docker/volumes/topicf_gis_db_data/_data",
+          "Destination": "/var/lib/postgresql/data",
+          "Driver": "local",
+          "Mode": "rw",
+          "RW": true,
+          "Propagation": ""
+        }
+      ],
+      "health": null,
+      "service": "db",
+      "project": "topicf_gis"
+    },
+    "topicf_gis-ltm-1": {
+      "id": "bc388d68e29a836959713a9a4d7881729b041d30a34eabcf769f5535eec127a4",
+      "image": "sha256:83f72e6dc222a261373012a00bc18d66f8764610b41ea56d3c352fc2233f3da7",
+      "image_ref": "topicf_gis-ltm",
+      "started_at": "0001-01-01T00:00:00Z",
+      "restart_count": 0,
+      "mounts": [
+        {
+          "Type": "volume",
+          "Name": "topicf_gis_bedrock_ltm_data",
+          "Source": "/var/lib/docker/volumes/topicf_gis_bedrock_ltm_data/_data",
+          "Destination": "/app/data",
+          "Driver": "local",
+          "Mode": "rw",
+          "RW": true,
+          "Propagation": ""
+        }
+      ],
+      "health": null,
+      "service": "ltm",
+      "project": "topicf_gis"
+    },
+    "topicf-task4-round3-postgres-1": {
+      "id": "fac28841ea108efe32c6585b6a58e1b3a41b744723c8d53ff8c7c261b7679762",
+      "image": "sha256:33198da2828a14c30348d2ccb4750833d5ed9a44c88d840a0e523d7417120337",
+      "image_ref": "pgvector/pgvector:0.8.1-pg16",
+      "started_at": "2026-10-25T06:44:27.005794439Z",
+      "restart_count": 0,
+      "mounts": [
+        {
+          "Type": "volume",
+          "Name": "topicf-task4-round3_round3_postgres",
+          "Source": "/var/lib/docker/volumes/topicf-task4-round3_round3_postgres/_data",
+          "Destination": "/var/lib/postgresql/data",
+          "Driver": "local",
+          "Mode": "rw",
+          "RW": true,
+          "Propagation": ""
+        }
+      ],
+      "health": "unhealthy",
+      "service": "postgres",
+      "project": "topicf-task4-round3"
+    },
+    "topicf-task4-round3-qdrant-1": {
+      "id": "42bb59276c732e2752b62b99f9d9f102a9a94b311f129bfd4e6b5d7ff65b06cd",
+      "image": "sha256:12364fe851b9f17356fc88189fc06d1b521262e04659ec7345975b00c9246a10",
+      "image_ref": "qdrant/qdrant:v1.19.1",
+      "started_at": "2026-10-25T06:44:27.261724634Z",
+      "restart_count": 0,
+      "mounts": [
+        {
+          "Type": "volume",
+          "Name": "topicf-task4-round3_round3_qdrant",
+          "Source": "/var/lib/docker/volumes/topicf-task4-round3_round3_qdrant/_data",
+          "Destination": "/qdrant/storage",
+          "Driver": "local",
+          "Mode": "rw",
+          "RW": true,
+          "Propagation": ""
+        }
+      ],
+      "health": null,
+      "service": "qdrant",
+      "project": "topicf-task4-round3"
+    },
+    "topicf-task4-benchmark-runner-1": {
+      "id": "439c4c1de70d44e85fa43da1bb42b6e96c81438e8a037471fd35e4ed93a7ccfb",
+      "image": "sha256:7b6a09413a065f83289dfa0ba8fe33b91a8fbc9ab4bdcac68de65fe796408507",
+      "image_ref": "topicf-task4-benchmark-runner",
+      "started_at": "2026-10-25T06:13:55.796446064Z",
+      "restart_count": 0,
+      "mounts": [
+        {
+          "Type": "bind",
+          "Source": "C:\\Users\\USER\\Documents\\GitHub\\TopicF_GIS\\research\\ltm-vector-benchmark\\results",
+          "Destination": "/results",
+          "Mode": "rw",
+          "RW": true,
+          "Propagation": "rprivate"
+        }
+      ],
+      "health": null,
+      "service": "runner",
+      "project": "topicf-task4-benchmark"
+    },
+    "topicf-task4-benchmark-qdrant-1": {
+      "id": "1ccbef9efbb2f41de301b63e8608232eca4e113c70e006e36305391587b2e242",
+      "image": "sha256:12364fe851b9f17356fc88189fc06d1b521262e04659ec7345975b00c9246a10",
+      "image_ref": "qdrant/qdrant:v1.19.1",
+      "started_at": "2026-10-25T06:25:19.065687845Z",
+      "restart_count": 0,
+      "mounts": [
+        {
+          "Type": "volume",
+          "Name": "topicf-task4-benchmark_benchmark_qdrant",
+          "Source": "/var/lib/docker/volumes/topicf-task4-benchmark_benchmark_qdrant/_data",
+          "Destination": "/qdrant/storage",
+          "Driver": "local",
+          "Mode": "rw",
+          "RW": true,
+          "Propagation": ""
+        }
+      ],
+      "health": null,
+      "service": "qdrant",
+      "project": "topicf-task4-benchmark"
+    },
+    "topicf-task4-benchmark-postgres-1": {
+      "id": "d1508a040c56aa98bf7e97a4e1679e251a72d6b71a9db2d6c1b18dfacbad1565",
+      "image": "sha256:33198da2828a14c30348d2ccb4750833d5ed9a44c88d840a0e523d7417120337",
+      "image_ref": "pgvector/pgvector:0.8.1-pg16",
+      "started_at": "2026-10-25T06:25:18.843726898Z",
+      "restart_count": 0,
+      "mounts": [
+        {
+          "Type": "volume",
+          "Name": "topicf-task4-benchmark_benchmark_postgres",
+          "Source": "/var/lib/docker/volumes/topicf-task4-benchmark_benchmark_postgres/_data",
+          "Destination": "/var/lib/postgresql/data",
+          "Driver": "local",
+          "Mode": "rw",
+          "RW": true,
+          "Propagation": ""
+        }
+      ],
+      "health": "unhealthy",
+      "service": "postgres",
+      "project": "topicf-task4-benchmark"
+    },
+    "topicf_gis-redis-1": {
+      "id": "91a4b4e81d6ffcaa3fd2a4641f73a1c1806e57b322701e92fd453b63fdef32d8",
+      "image": "sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499",
+      "image_ref": "redis:7-alpine",
+      "started_at": "2026-10-26T08:38:50.104297728Z",
+      "restart_count": 0,
+      "mounts": [
+        {
+          "Type": "volume",
+          "Name": "b4a991065d804026972195281eea606219b68328d33d569a8a43e16276cbb9bd",
+          "Source": "/var/lib/docker/volumes/b4a991065d804026972195281eea606219b68328d33d569a8a43e16276cbb9bd/_data",
+          "Destination": "/data",
+          "Driver": "local",
+          "Mode": "z",
+          "RW": true,
+          "Propagation": ""
+        }
+      ],
+      "health": null,
+      "service": "redis",
+      "project": "topicf_gis"
+    },
+    "topicf_gis-qdrant-1": {
+      "id": "07831148b3f86b3722da48e9b0c99a1f1ccaf559cc88f7988e9dfdb1b5bb3dfa",
+      "image": "sha256:6c01f782a6b4f437cc15d44053af726ebd7bb58c08215b1f4cb8f3acabcb7da2",
+      "image_ref": "topicf_gis-qdrant",
+      "started_at": "2026-10-26T08:38:50.6041382Z",
+      "restart_count": 0,
+      "mounts": [
+        {
+          "Type": "volume",
+          "Name": "topicf_gis_titan_qdrant_data",
+          "Source": "/var/lib/docker/volumes/topicf_gis_titan_qdrant_data/_data",
+          "Destination": "/qdrant/storage",
+          "Driver": "local",
+          "Mode": "rw",
+          "RW": true,
+          "Propagation": ""
+        }
+      ],
+      "health": "unhealthy",
+      "service": "qdrant",
+      "project": "topicf_gis"
+    },
+    "web_new": {
+      "id": "4ecfdc05dfd867bdee9998ed2a194ce89f064f287e993384d254b3af2b48ae14",
+      "image": "sha256:9235f69b276741a08fbb64e3737490331e8c40007b27eaa8789e527f62bc5a61",
+      "image_ref": "myhttpd:v2",
+      "started_at": "2026-10-15T11:59:53.204358547Z",
+      "restart_count": 0,
+      "mounts": [],
+      "health": null,
+      "service": null,
+      "project": null
+    },
+    "web2": {
+      "id": "52dd6fa28c64de03d825c9bda124a89a42e1908080f9074aaa0cab03cbb2f418",
+      "image": "sha256:c874628d465617c31044de05ee4d42cd9ee624a16912081a7e7af7d4b3136482",
+      "image_ref": "myhttpd:v1",
+      "started_at": "2026-10-15T11:57:48.05820649Z",
+      "restart_count": 0,
+      "mounts": [],
+      "health": null,
+      "service": null,
+      "project": null
+    },
+    "web1": {
+      "id": "b89da75f38a8f3887f64a1a299d905785e1afdde501c8e7685b110a0a5a21c88",
+      "image": "sha256:c874628d465617c31044de05ee4d42cd9ee624a16912081a7e7af7d4b3136482",
+      "image_ref": "myhttpd:v1",
+      "started_at": "2026-10-15T11:43:16.395369357Z",
+      "restart_count": 0,
+      "mounts": [],
+      "health": null,
+      "service": null,
+      "project": null
+    },
+    "festive_ride": {
+      "id": "fdd0c6e82182d3a5388642431c7975da4fe102f9835da6cdd00bc7f4cb877b60",
+      "image": "sha256:5e23090353324d887c48ad5e5c56d294eab81588df9605b07d1afe895f9cc8f8",
+      "image_ref": "hello-world",
+      "started_at": "2026-10-15T11:40:41.372585629Z",
+      "restart_count": 0,
+      "mounts": [],
+      "health": null,
+      "service": null,
+      "project": null
+    },
+    "crisisguard-postgres": {
+      "id": "032d6f604fe6ea388645570ea9d17e7f0051a00e06b14611c1157f5f6d564cd8",
+      "image": "sha256:ca0bd484cb98bf4b24eb1010e73fb3fcbd6714d240fbc1a10eea5b7dbecb641d",
+      "image_ref": "postgres:16",
+      "started_at": "2026-10-12T09:50:01.947104069Z",
+      "restart_count": 0,
+      "mounts": [
+        {
+          "Type": "volume",
+          "Name": "crisisguard_pgdata",
+          "Source": "/var/lib/docker/volumes/crisisguard_pgdata/_data",
+          "Destination": "/var/lib/postgresql/data",
+          "Driver": "local",
+          "Mode": "z",
+          "RW": true,
+          "Propagation": ""
+        }
+      ],
+      "health": null,
+      "service": null,
+      "project": null
+    }
+  },
+  "final_data": {
+    "postgres_count_and_hash": "183|7da0926aa78fedc6b296a7a361fa643a",
+    "sqlite": {
+      "hospital-a": {
+        "count": 55,
+        "sha256": "fdf2492bb9928bc0fedbaacc7f3e1636b983097a044442c10aceac30a4f6130a"
+      },
+      "hospital-b": {
+        "count": 39,
+        "sha256": "8cc6e04e12e3ee06988abd2880ca09765723817fba461191cff77ddedaef4653"
+      }
+    }
+  },
+  "http_checks": {
+    "patient": {
+      "checks": "PASS",
+      "live_requests_sent": 66,
+      "replay_requests_sent": 5,
+      "unclassified_requests_sent": 5,
+      "concurrent_live_workers": 16,
+      "before": {
+        "live_p95_latency_ms": 5.95,
+        "live_latency_sample_count": 66,
+        "replay_latency_sample_count": 5,
+        "unclassified_latency_sample_count": 5,
+        "p95_latency_ms": 5.95,
+        "latency_sample_count": 76,
+        "observation_seconds": 54.950525,
+        "in_flight_requests": 0,
+        "average_latency_ms": 3.04,
+        "error_rate": 0.0,
+        "throughput_rps": 1.3831,
+        "window_requests": 76,
+        "total_requests": 76,
+        "failed_requests": 0,
+        "window_seconds": 60,
+        "uptime_seconds": 54.95,
+        "executor_queue_depth": 0,
+        "executor_active_workers": 0,
+        "executor_worker_limit": 40,
+        "executor_queue_pressure": 0.0,
+        "executor_queue_sampled_at": "2026-10-27T12:19:34.445802+00:00",
+        "sampled_at": "2026-10-27T12:19:34.445735+00:00",
+        "service": "patient",
+        "database_healthy": true
+      },
+      "after": {
+        "live_p95_latency_ms": 6.17,
+        "live_latency_sample_count": 132,
+        "replay_latency_sample_count": 10,
+        "unclassified_latency_sample_count": 10,
+        "p95_latency_ms": 6.1,
+        "latency_sample_count": 152,
+        "observation_seconds": 55.033579,
+        "in_flight_requests": 0,
+        "average_latency_ms": 3.05,
+        "error_rate": 0.0,
+        "throughput_rps": 2.762,
+        "window_requests": 152,
+        "total_requests": 152,
+        "failed_requests": 0,
+        "window_seconds": 60,
+        "uptime_seconds": 55.03,
+        "executor_queue_depth": 0,
+        "executor_active_workers": 0,
+        "executor_worker_limit": 40,
+        "executor_queue_pressure": 0.0,
+        "executor_queue_sampled_at": "2026-10-27T12:19:34.528849+00:00",
+        "sampled_at": "2026-10-27T12:19:34.528791+00:00",
+        "service": "patient",
+        "database_healthy": true
+      }
+    },
+    "emergency": {
+      "checks": "PASS",
+      "live_requests_sent": 66,
+      "replay_requests_sent": 5,
+      "unclassified_requests_sent": 5,
+      "concurrent_live_workers": 16,
+      "before": {
+        "live_p95_latency_ms": null,
+        "live_latency_sample_count": 0,
+        "replay_latency_sample_count": 0,
+        "unclassified_latency_sample_count": 0,
+        "p95_latency_ms": null,
+        "latency_sample_count": 0,
+        "observation_seconds": 49.627866,
+        "in_flight_requests": 0,
+        "average_latency_ms": 0.0,
+        "error_rate": 0.0,
+        "throughput_rps": 0.0,
+        "window_requests": 0,
+        "total_requests": 0,
+        "failed_requests": 0,
+        "window_seconds": 60,
+        "uptime_seconds": 49.63,
+        "executor_queue_depth": 0,
+        "executor_active_workers": 0,
+        "executor_worker_limit": 40,
+        "executor_queue_pressure": 0.0,
+        "executor_queue_sampled_at": "2026-10-27T12:19:34.861151+00:00",
+        "sampled_at": "2026-10-27T12:19:34.861118+00:00",
+        "service": "emergency",
+        "database_healthy": true
+      },
+      "after": {
+        "live_p95_latency_ms": 3.95,
+        "live_latency_sample_count": 66,
+        "replay_latency_sample_count": 5,
+        "unclassified_latency_sample_count": 5,
+        "p95_latency_ms": 3.95,
+        "latency_sample_count": 76,
+        "observation_seconds": 49.712286,
+        "in_flight_requests": 0,
+        "average_latency_ms": 1.71,
+        "error_rate": 0.0,
+        "throughput_rps": 1.5288,
+        "window_requests": 76,
+        "total_requests": 76,
+        "failed_requests": 0,
+        "window_seconds": 60,
+        "uptime_seconds": 49.71,
+        "executor_queue_depth": 0,
+        "executor_active_workers": 0,
+        "executor_worker_limit": 40,
+        "executor_queue_pressure": 0.0,
+        "executor_queue_sampled_at": "2026-10-27T12:19:34.945583+00:00",
+        "sampled_at": "2026-10-27T12:19:34.945539+00:00",
+        "service": "emergency",
+        "database_healthy": true
+      }
+    },
+    "admin": {
+      "checks": "PASS",
+      "live_requests_sent": 66,
+      "replay_requests_sent": 5,
+      "unclassified_requests_sent": 5,
+      "concurrent_live_workers": 16,
+      "before": {
+        "live_p95_latency_ms": null,
+        "live_latency_sample_count": 0,
+        "replay_latency_sample_count": 0,
+        "unclassified_latency_sample_count": 0,
+        "p95_latency_ms": null,
+        "latency_sample_count": 0,
+        "observation_seconds": 49.721091,
+        "in_flight_requests": 0,
+        "average_latency_ms": 0.0,
+        "error_rate": 0.0,
+        "throughput_rps": 0.0,
+        "window_requests": 0,
+        "total_requests": 0,
+        "failed_requests": 0,
+        "window_seconds": 60,
+        "uptime_seconds": 49.72,
+        "executor_queue_depth": 0,
+        "executor_active_workers": 2,
+        "executor_worker_limit": 40,
+        "executor_queue_pressure": 0.0,
+        "executor_queue_sampled_at": "2026-10-27T12:19:35.184266+00:00",
+        "sampled_at": "2026-10-27T12:19:35.184250+00:00",
+        "service": "admin",
+        "database_healthy": true
+      },
+      "after": {
+        "live_p95_latency_ms": 6.35,
+        "live_latency_sample_count": 66,
+        "replay_latency_sample_count": 5,
+        "unclassified_latency_sample_count": 5,
+        "p95_latency_ms": 6.35,
+        "latency_sample_count": 76,
+        "observation_seconds": 49.803202,
+        "in_flight_requests": 0,
+        "average_latency_ms": 3.11,
+        "error_rate": 0.0,
+        "throughput_rps": 1.526,
+        "window_requests": 76,
+        "total_requests": 76,
+        "failed_requests": 0,
+        "window_seconds": 60,
+        "uptime_seconds": 49.8,
+        "executor_queue_depth": 0,
+        "executor_active_workers": 0,
+        "executor_worker_limit": 40,
+        "executor_queue_pressure": 0.0,
+        "executor_queue_sampled_at": "2026-10-27T12:19:35.266401+00:00",
+        "sampled_at": "2026-10-27T12:19:35.266358+00:00",
+        "service": "admin",
+        "database_healthy": true
+      }
+    }
+  },
+  "expired_windows": {
+    "patient": {
+      "live_p95_latency_ms": null,
+      "live_latency_sample_count": 0,
+      "replay_latency_sample_count": 0,
+      "unclassified_latency_sample_count": 0,
+      "p95_latency_ms": null,
+      "latency_sample_count": 0,
+      "observation_seconds": 60,
+      "in_flight_requests": 0,
+      "average_latency_ms": 0.0,
+      "error_rate": 0.0,
+      "throughput_rps": 0.0,
+      "window_requests": 0,
+      "total_requests": 152,
+      "failed_requests": 0,
+      "window_seconds": 60,
+      "uptime_seconds": 133.27,
+      "executor_queue_depth": 0,
+      "executor_active_workers": 0,
+      "executor_worker_limit": 40,
+      "executor_queue_pressure": 0.0,
+      "executor_queue_sampled_at": "2026-10-27T12:20:52.765242+00:00",
+      "sampled_at": "2026-10-27T12:20:52.765207+00:00",
+      "service": "patient",
+      "database_healthy": true
+    },
+    "emergency": {
+      "live_p95_latency_ms": null,
+      "live_latency_sample_count": 0,
+      "replay_latency_sample_count": 0,
+      "unclassified_latency_sample_count": 0,
+      "p95_latency_ms": null,
+      "latency_sample_count": 0,
+      "observation_seconds": 60,
+      "in_flight_requests": 0,
+      "average_latency_ms": 0.0,
+      "error_rate": 0.0,
+      "throughput_rps": 0.0,
+      "window_requests": 0,
+      "total_requests": 76,
+      "failed_requests": 0,
+      "window_seconds": 60,
+      "uptime_seconds": 127.76,
+      "executor_queue_depth": 0,
+      "executor_active_workers": 0,
+      "executor_worker_limit": 40,
+      "executor_queue_pressure": 0.0,
+      "executor_queue_sampled_at": "2026-10-27T12:20:52.993234+00:00",
+      "sampled_at": "2026-10-27T12:20:52.993198+00:00",
+      "service": "emergency",
+      "database_healthy": true
+    },
+    "admin": {
+      "live_p95_latency_ms": null,
+      "live_latency_sample_count": 0,
+      "replay_latency_sample_count": 0,
+      "unclassified_latency_sample_count": 0,
+      "p95_latency_ms": null,
+      "latency_sample_count": 0,
+      "observation_seconds": 60,
+      "in_flight_requests": 0,
+      "average_latency_ms": 0.0,
+      "error_rate": 0.0,
+      "throughput_rps": 0.0,
+      "window_requests": 0,
+      "total_requests": 76,
+      "failed_requests": 0,
+      "window_seconds": 60,
+      "uptime_seconds": 127.74,
+      "executor_queue_depth": 0,
+      "executor_active_workers": 0,
+      "executor_worker_limit": 40,
+      "executor_queue_pressure": 0.0,
+      "executor_queue_sampled_at": "2026-10-27T12:20:53.203087+00:00",
+      "sampled_at": "2026-10-27T12:20:53.203049+00:00",
+      "service": "admin",
+      "database_healthy": true
+    }
+  },
+  "smoke_tests": {
+    "passed": 75,
+    "failed": 0,
+    "warnings": 1,
+    "junit": "cp7a-deploy-smoke-20261027.xml"
+  },
+  "commands": [
+    "docker compose build patient",
+    "docker compose up -d --no-deps --no-build --force-recreate --wait --wait-timeout 120 patient emergency admin",
+    "GET /health",
+    "GET /metrics",
+    "GET / with live, replay, missing and invalid provenance",
+    "POST /events with empty invalid payload (422); no event writes"
+  ],
+  "rollback": {
+    "image": "crisisguard-cloud-rollback:cp7a-20261027",
+    "method": "Original container filesystem exported/imported because Docker original image content was unavailable; no embedded container environment. WORKDIR /app restored.",
+    "required": false,
+    "command": "docker compose -f compose.yaml -f compose.override.yaml -f .venv/cp7a-deployment/rollback.compose.json up -d --no-deps --no-build --force-recreate patient emergency admin"
+  },
+  "limitations": [
+    "Existing hospital and dashboard containers deliberately not recreated; their previous callers do not gain new provenance code/config in this deployment.",
+    "Queue fields verified via real HTTP; controlled nonzero queue occupancy verified in unit smoke, not induced on deployed stack.",
+    "No valid event writes or destructive outages used.",
+    "Metrics are process-local; MetaGuard consumer unchanged; AIMD not enabled."
+  ]
+}

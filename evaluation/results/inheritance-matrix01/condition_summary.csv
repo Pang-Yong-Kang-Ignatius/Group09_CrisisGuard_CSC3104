@@ -1,0 +1,17 @@
+condition,site_id,seed_count,off_unresolved_events_total,on_unresolved_events_total,urgent_eligible_seed_pairs,urgent_empty_population_pairs,urgent_incomplete_pairs,urgent_mean_p95_position_reduction,urgent_median_p95_position_reduction,urgent_min_p95_position_reduction,urgent_max_p95_position_reduction,urgent_mean_p95_position_reduction_pct,urgent_improved_pairs,urgent_unchanged_pairs,urgent_worsened_pairs,routine_eligible_seed_pairs,routine_empty_population_pairs,routine_incomplete_pairs,routine_mean_p95_position_reduction,routine_median_p95_position_reduction,routine_min_p95_position_reduction,routine_max_p95_position_reduction,routine_mean_p95_position_reduction_pct,routine_improved_pairs,routine_unchanged_pairs,routine_worsened_pairs
+ratio1-1_depth0_a_only,Hospital_A,5,0,0,5,0,0,0,0,0,0,0.0,0,5,0,5,0,0,0,0,0,0,0.0,0,5,0
+ratio1-1_depth0_a_only,Hospital_B,5,0,0,0,5,0,,,,,,0,0,0,5,0,0,0,0,0,0,0.0,0,5,0
+ratio1-1_depth0_balanced,Hospital_A,5,0,0,5,0,0,0,0,0,0,0.0,0,5,0,5,0,0,0,0,0,0,0.0,0,5,0
+ratio1-1_depth0_balanced,Hospital_B,5,0,0,5,0,0,0,0,0,0,0.0,0,5,0,5,0,0,0,0,0,0,0.0,0,5,0
+ratio1-1_depth3_a_only,Hospital_A,5,0,0,5,0,0,115.4,116,109,120,57.858362501900906,5,0,0,5,0,0,-2.6,-2,-5,-1,-1.2107359926715882,0,0,5
+ratio1-1_depth3_a_only,Hospital_B,5,0,0,0,5,0,,,,,,0,0,0,5,0,0,-3,-3,-5,0,-1.4032099574189323,0,1,4
+ratio1-1_depth3_balanced,Hospital_A,5,0,0,5,0,0,156.4,154,146,166,78.01015358910095,5,0,0,5,0,0,-3.8,-4,-5,-1,-1.7792232801446966,0,0,5
+ratio1-1_depth3_balanced,Hospital_B,5,0,0,5,0,0,157.8,158,140,176,78.11736591719372,5,0,0,5,0,0,-3.6,-4,-7,-1,-1.6968426131902068,0,0,5
+ratio10-1_depth0_a_only,Hospital_A,5,0,0,5,0,0,0,0,0,0,0.0,0,5,0,5,0,0,0,0,0,0,0.0,0,5,0
+ratio10-1_depth0_a_only,Hospital_B,5,0,0,0,5,0,,,,,,0,0,0,5,0,0,0,0,0,0,0.0,0,5,0
+ratio10-1_depth0_balanced,Hospital_A,5,0,0,5,0,0,0,0,0,0,0.0,0,5,0,5,0,0,0,0,0,0,0.0,0,5,0
+ratio10-1_depth0_balanced,Hospital_B,5,0,0,5,0,0,0,0,0,0,0.0,0,5,0,5,0,0,0,0,0,0,0.0,0,5,0
+ratio10-1_depth3_a_only,Hospital_A,5,0,0,5,0,0,287.8,289,274,297,77.39740531003815,5,0,0,5,0,0,-7.8,-7,-11,-6,-2.0091474999228125,0,0,5
+ratio10-1_depth3_a_only,Hospital_B,5,0,0,0,5,0,,,,,,0,0,0,5,0,0,0,0,0,0,0.0,0,5,0
+ratio10-1_depth3_balanced,Hospital_A,5,0,0,5,0,0,292.4,290,284,302,79.36458132227565,5,0,0,5,0,0,-9,-8,-11,-7,-2.337854550444347,0,0,5
+ratio10-1_depth3_balanced,Hospital_B,5,0,0,5,0,0,17,13,7,29,64.1204239098976,5,0,0,5,0,0,0,0,0,0,0.0,0,5,0

@@ -1,0 +1,230 @@
+{
+  "checkpoint": "7B",
+  "scope": "Deployed Hospital A/B reconciliation GET provenance",
+  "started_at": "2026-10-28T13:16:53.947187+00:00",
+  "finished_at": "2026-10-28T13:16:54.781984+00:00",
+  "method": "Real deployed get_cloud_event_status calls on existing applied IDs; read-only",
+  "baseline_metrics": {
+    "patient": {
+      "live_p95_latency_ms": null,
+      "live_latency_sample_count": 0,
+      "replay_latency_sample_count": 0,
+      "unclassified_latency_sample_count": 0,
+      "p95_latency_ms": null,
+      "latency_sample_count": 0,
+      "observation_seconds": 60,
+      "in_flight_requests": 0,
+      "average_latency_ms": 0.0,
+      "error_rate": 0.0,
+      "throughput_rps": 0.0,
+      "window_requests": 0,
+      "total_requests": 380,
+      "failed_requests": 0,
+      "window_seconds": 60,
+      "uptime_seconds": 2654.05,
+      "executor_queue_depth": 0,
+      "executor_active_workers": 0,
+      "executor_worker_limit": 40,
+      "executor_queue_pressure": 0.0,
+      "executor_queue_sampled_at": "2026-10-28T13:16:53.901549+00:00",
+      "sampled_at": "2026-10-28T13:16:53.901503+00:00",
+      "service": "patient",
+      "database_healthy": true
+    },
+    "emergency": {
+      "live_p95_latency_ms": null,
+      "live_latency_sample_count": 0,
+      "replay_latency_sample_count": 0,
+      "unclassified_latency_sample_count": 0,
+      "p95_latency_ms": null,
+      "latency_sample_count": 0,
+      "observation_seconds": 60,
+      "in_flight_requests": 0,
+      "average_latency_ms": 0.0,
+      "error_rate": 0.0,
+      "throughput_rps": 0.0,
+      "window_requests": 0,
+      "total_requests": 364,
+      "failed_requests": 0,
+      "window_seconds": 60,
+      "uptime_seconds": 2787.38,
+      "executor_queue_depth": 0,
+      "executor_active_workers": 0,
+      "executor_worker_limit": 40,
+      "executor_queue_pressure": 0.0,
+      "executor_queue_sampled_at": "2026-10-28T13:16:53.910504+00:00",
+      "sampled_at": "2026-10-28T13:16:53.910472+00:00",
+      "service": "emergency",
+      "database_healthy": true
+    },
+    "admin": {
+      "live_p95_latency_ms": null,
+      "live_latency_sample_count": 0,
+      "replay_latency_sample_count": 0,
+      "unclassified_latency_sample_count": 0,
+      "p95_latency_ms": null,
+      "latency_sample_count": 0,
+      "observation_seconds": 60,
+      "in_flight_requests": 0,
+      "average_latency_ms": 0.0,
+      "error_rate": 0.0,
+      "throughput_rps": 0.0,
+      "window_requests": 0,
+      "total_requests": 364,
+      "failed_requests": 0,
+      "window_seconds": 60,
+      "uptime_seconds": 2787.23,
+      "executor_queue_depth": 0,
+      "executor_active_workers": 0,
+      "executor_worker_limit": 40,
+      "executor_queue_pressure": 0.0,
+      "executor_queue_sampled_at": "2026-10-28T13:16:53.940488+00:00",
+      "sampled_at": "2026-10-28T13:16:53.940452+00:00",
+      "service": "admin",
+      "database_healthy": true
+    }
+  },
+  "reconciliation_results": {
+    "hospital_a_patient": {
+      "state": "applied",
+      "site_id": "Hospital_A"
+    },
+    "hospital_b_patient": {
+      "state": "applied",
+      "site_id": "Hospital_B"
+    },
+    "hospital_a_emergency": {
+      "state": "applied",
+      "site_id": "Hospital_A"
+    },
+    "hospital_a_admin": {
+      "state": "applied",
+      "site_id": "Hospital_A"
+    }
+  },
+  "final_metrics": {
+    "patient": {
+      "live_p95_latency_ms": null,
+      "live_latency_sample_count": 0,
+      "replay_latency_sample_count": 2,
+      "unclassified_latency_sample_count": 0,
+      "p95_latency_ms": 7.36,
+      "latency_sample_count": 2,
+      "observation_seconds": 60,
+      "in_flight_requests": 0,
+      "average_latency_ms": 7.34,
+      "error_rate": 0.0,
+      "throughput_rps": 0.0333,
+      "window_requests": 2,
+      "total_requests": 382,
+      "failed_requests": 0,
+      "window_seconds": 60,
+      "uptime_seconds": 2654.9,
+      "executor_queue_depth": 0,
+      "executor_active_workers": 0,
+      "executor_worker_limit": 40,
+      "executor_queue_pressure": 0.0,
+      "executor_queue_sampled_at": "2026-10-28T13:16:54.744955+00:00",
+      "sampled_at": "2026-10-28T13:16:54.744911+00:00",
+      "service": "patient",
+      "database_healthy": true
+    },
+    "emergency": {
+      "live_p95_latency_ms": null,
+      "live_latency_sample_count": 0,
+      "replay_latency_sample_count": 1,
+      "unclassified_latency_sample_count": 0,
+      "p95_latency_ms": 7.68,
+      "latency_sample_count": 1,
+      "observation_seconds": 60,
+      "in_flight_requests": 0,
+      "average_latency_ms": 7.68,
+      "error_rate": 0.0,
+      "throughput_rps": 0.0167,
+      "window_requests": 1,
+      "total_requests": 365,
+      "failed_requests": 0,
+      "window_seconds": 60,
+      "uptime_seconds": 2788.22,
+      "executor_queue_depth": 0,
+      "executor_active_workers": 0,
+      "executor_worker_limit": 40,
+      "executor_queue_pressure": 0.0,
+      "executor_queue_sampled_at": "2026-10-28T13:16:54.753782+00:00",
+      "sampled_at": "2026-10-28T13:16:54.753749+00:00",
+      "service": "emergency",
+      "database_healthy": true
+    },
+    "admin": {
+      "live_p95_latency_ms": null,
+      "live_latency_sample_count": 0,
+      "replay_latency_sample_count": 1,
+      "unclassified_latency_sample_count": 0,
+      "p95_latency_ms": 7.23,
+      "latency_sample_count": 1,
+      "observation_seconds": 60,
+      "in_flight_requests": 0,
+      "average_latency_ms": 7.23,
+      "error_rate": 0.0,
+      "throughput_rps": 0.0167,
+      "window_requests": 1,
+      "total_requests": 365,
+      "failed_requests": 0,
+      "window_seconds": 60,
+      "uptime_seconds": 2788.06,
+      "executor_queue_depth": 0,
+      "executor_active_workers": 0,
+      "executor_worker_limit": 40,
+      "executor_queue_pressure": 0.0,
+      "executor_queue_sampled_at": "2026-10-28T13:16:54.775067+00:00",
+      "sampled_at": "2026-10-28T13:16:54.775024+00:00",
+      "service": "admin",
+      "database_healthy": true
+    }
+  },
+  "observed_counts": {
+    "patient": {
+      "live_latency_sample_count": 0,
+      "replay_latency_sample_count": 2,
+      "unclassified_latency_sample_count": 0,
+      "latency_sample_count": 2
+    },
+    "emergency": {
+      "live_latency_sample_count": 0,
+      "replay_latency_sample_count": 1,
+      "unclassified_latency_sample_count": 0,
+      "latency_sample_count": 1
+    },
+    "admin": {
+      "live_latency_sample_count": 0,
+      "replay_latency_sample_count": 1,
+      "unclassified_latency_sample_count": 0,
+      "latency_sample_count": 1
+    }
+  },
+  "expected_counts": {
+    "patient": {
+      "live_latency_sample_count": 0,
+      "replay_latency_sample_count": 2,
+      "unclassified_latency_sample_count": 0,
+      "latency_sample_count": 2
+    },
+    "emergency": {
+      "live_latency_sample_count": 0,
+      "replay_latency_sample_count": 1,
+      "unclassified_latency_sample_count": 0,
+      "latency_sample_count": 1
+    },
+    "admin": {
+      "live_latency_sample_count": 0,
+      "replay_latency_sample_count": 1,
+      "unclassified_latency_sample_count": 0,
+      "latency_sample_count": 1
+    }
+  },
+  "assertions": {
+    "all_existing_events_return_applied": true,
+    "exact_replay_classification_no_live_or_unclassified": true
+  },
+  "result": "passed"
+}

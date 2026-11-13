@@ -1,0 +1,42 @@
+{
+  "prepared_at": "2026-10-28T07:13:16.462041+00:00",
+  "project": "crisisguard-7b-laptop-20261028-4f7c0324",
+  "commit": "66e66bb2f566afd9f2d1e792c3267fc89ac34c74",
+  "branch": "main",
+  "docker_context": "default",
+  "ports": {
+    "postgres": 28070,
+    "controller": 28071,
+    "patient": 28072,
+    "emergency": 28073,
+    "admin": 28074,
+    "hospital-a": 28075,
+    "hospital-b": 28076,
+    "dashboard": 28077
+  },
+  "network": "crisisguard-7b-laptop-20261028-4f7c0324_default",
+  "volumes": {
+    "postgres-data": "crisisguard-7b-laptop-20261028-4f7c0324_postgres-data",
+    "hospital-a-data": "crisisguard-7b-laptop-20261028-4f7c0324_hospital-a-data",
+    "hospital-b-data": "crisisguard-7b-laptop-20261028-4f7c0324_hospital-b-data"
+  },
+  "image_to_build": "crisisguard-7b-laptop-20261028-4f7c0324:66e66bb2f566",
+  "private_directory": ".review\\crisisguard-7b-laptop-20261028-4f7c0324",
+  "checks": [
+    "Compose config and build plan pass",
+    "8 services on sole isolated network",
+    "localhost ports bound successfully during preparation and avoid all existing container bindings",
+    "7 fresh distinct 256-bit credentials",
+    "AIMD enabled and automatic/manual replay disabled",
+    "Cloud/controller/dashboard use isolated PostgreSQL; hospital SQLite on separate fresh volumes",
+    "existing 14 containers, all named networks and all existing volumes preserved",
+    "new network empty; fresh volumes unattached",
+    "no containers created/started, builds, migrations, commits or pushes"
+  ],
+  "limitations": [
+    "Ports must be rechecked before deployment",
+    "Image build and runtime readiness not executed",
+    "Service startup initializes schemas only in new isolated databases"
+  ],
+  "resource_inventory_note": "Initial preparation verified all existing container states and volumes unchanged. Docker default bridge ID changed independently during inspection; all pre-existing named CrisisGuard/LTM and unused 7B networks retained their IDs. Follow-up inventory was stable."
+}

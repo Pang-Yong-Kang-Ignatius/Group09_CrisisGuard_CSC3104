@@ -1,0 +1,194 @@
+name: crisisguard-local
+
+x-app: &app
+  image: crisisguard-local:dev
+  build:
+    context: .
+    dockerfile: infrastructure/docker/Dockerfile
+
+x-cloud-environment: &cloud-environment
+  DATABASE_URL: postgresql://${POSTGRES_USER:-crisisguard}:${POSTGRES_PASSWORD:-crisisguard_dev}@postgres:5432/${POSTGRES_DB:-crisisguard}
+
+x-cloud-telemetry-environment: &cloud-telemetry-environment
+  <<: *cloud-environment
+  CLOUD_LIVE_TELEMETRY_TOKEN: ${CLOUD_LIVE_TELEMETRY_TOKEN:-}
+  CLOUD_REPLAY_TELEMETRY_TOKEN: ${CLOUD_REPLAY_TELEMETRY_TOKEN:-}
+  CLOUD_LIVE_SLO_MS: ${CLOUD_LIVE_SLO_MS:-}
+
+x-cloud-health: &cloud-health
+  test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=2)"]
+  interval: 5s
+  timeout: 3s
+  retries: 12
+  start_period: 10s
+
+x-edge-health: &edge-health
+  test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/', timeout=2)"]
+  interval: 5s
+  timeout: 3s
+  retries: 12
+  start_period: 10s
+
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-crisisguard}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-crisisguard_dev}
+      POSTGRES_DB: ${POSTGRES_DB:-crisisguard}
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -h 127.0.0.1 -U \"$$POSTGRES_USER\" -d \"$$POSTGRES_DB\""]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+      start_period: 10s
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-5433}:5432"
+
+  controller:
+    # Opt in without changing the existing seven-service/offline replay stack.
+    profiles: [metaguard]
+    image: crisisguard-controller:local
+    build:
+      context: .
+      dockerfile: infrastructure/docker/Dockerfile
+    command: ["python", "-m", "uvicorn", "cloud.controller.main:app", "--host", "0.0.0.0", "--port", "8000"]
+    environment:
+      <<: *cloud-environment
+      # Empty disables trusted completion/reconciliation APIs (fail closed).
+      CONTROLLER_CLOUD_TOKEN: ${CONTROLLER_CLOUD_TOKEN:-}
+    ports:
+      - "127.0.0.1:${CONTROLLER_PORT:-8005}:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+    # /health is liveness; also check DB connectivity for container readiness.
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; from cloud.database.db import get_connection; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=2); conn = get_connection(); conn.execute('SELECT 1'); conn.close()"]
+      interval: 5s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  patient:
+    <<: *app
+    command: ["python", "-m", "uvicorn", "cloud.patient_service.main:app", "--host", "0.0.0.0", "--port", "8000"]
+    environment: *cloud-telemetry-environment
+    ports:
+      - "127.0.0.1:${PATIENT_PORT:-8001}:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck: *cloud-health
+
+  emergency:
+    <<: *app
+    command: ["python", "-m", "uvicorn", "cloud.emergency_service.main:app", "--host", "0.0.0.0", "--port", "8000"]
+    environment: *cloud-telemetry-environment
+    ports:
+      - "127.0.0.1:${EMERGENCY_PORT:-8003}:8000"
+    # Patient creates the shared table first on a fresh database. This avoids
+    # concurrent CREATE TABLE calls from the three current API lifespans.
+    depends_on:
+      patient:
+        condition: service_healthy
+    healthcheck: *cloud-health
+
+  admin:
+    <<: *app
+    command: ["python", "-m", "uvicorn", "cloud.admin_service.main:app", "--host", "0.0.0.0", "--port", "8000"]
+    environment: *cloud-telemetry-environment
+    ports:
+      - "127.0.0.1:${ADMIN_PORT:-8004}:8000"
+    depends_on:
+      patient:
+        condition: service_healthy
+    healthcheck: *cloud-health
+
+  hospital-a:
+    <<: *app
+    environment:
+      ENABLE_MANUAL_REPLAY: ${ENABLE_MANUAL_REPLAY:-0}
+      MANUAL_REPLAY_TOKEN: ${MANUAL_REPLAY_TOKEN:-}
+      CLOUD_REPLAY_TELEMETRY_TOKEN: ${CLOUD_REPLAY_TELEMETRY_TOKEN:-}
+      HOSPITAL_DB_PATH: /data/hospital.db
+      SITE_ID: Hospital_A
+      CLOUD_URL: http://patient:8000/events
+      EMERGENCY_URL: http://emergency:8000/events
+      ADMIN_URL: http://admin:8000/events
+      AUTO_REPLAY: ${AUTO_REPLAY:-1}
+      AUTO_REPLAY_INTERVAL_SECONDS: ${AUTO_REPLAY_INTERVAL_SECONDS:-5}
+      SCHEDULER_ENABLE_INHERITANCE: ${SCHEDULER_ENABLE_INHERITANCE:-1}
+      SCHEDULER_AGEING_INTERVAL_SECONDS: ${SCHEDULER_AGEING_INTERVAL_SECONDS:-600}
+    ports:
+      - "127.0.0.1:${HOSPITAL_A_PORT:-8000}:8000"
+    volumes:
+      - hospital-a-data:/data
+    # No cloud dependency: local capture must start during a cloud outage.
+    healthcheck: *edge-health
+
+  hospital-b:
+    <<: *app
+    environment:
+      ENABLE_MANUAL_REPLAY: ${ENABLE_MANUAL_REPLAY:-0}
+      MANUAL_REPLAY_TOKEN: ${MANUAL_REPLAY_TOKEN:-}
+      CLOUD_REPLAY_TELEMETRY_TOKEN: ${CLOUD_REPLAY_TELEMETRY_TOKEN:-}
+      HOSPITAL_DB_PATH: /data/hospital.db
+      SITE_ID: Hospital_B
+      CLOUD_URL: http://patient:8000/events
+      EMERGENCY_URL: http://emergency:8000/events
+      ADMIN_URL: http://admin:8000/events
+      AUTO_REPLAY: ${AUTO_REPLAY:-1}
+      AUTO_REPLAY_INTERVAL_SECONDS: ${AUTO_REPLAY_INTERVAL_SECONDS:-5}
+      SCHEDULER_ENABLE_INHERITANCE: ${SCHEDULER_ENABLE_INHERITANCE:-1}
+      SCHEDULER_AGEING_INTERVAL_SECONDS: ${SCHEDULER_AGEING_INTERVAL_SECONDS:-600}
+    ports:
+      - "127.0.0.1:${HOSPITAL_B_PORT:-8002}:8000"
+    volumes:
+      - hospital-b-data:/data
+    healthcheck: *edge-health
+  dashboard:
+    <<: *app
+    command:
+      - python
+      - -m
+      - uvicorn
+      - dashboard.main:app
+      - --host
+      - 0.0.0.0
+      - --port
+      - "8080"
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-crisisguard}:${POSTGRES_PASSWORD:-crisisguard_dev}@postgres:5432/${POSTGRES_DB:-crisisguard}
+      CLOUD_LIVE_TELEMETRY_TOKEN: ${CLOUD_LIVE_TELEMETRY_TOKEN:-}
+      DASHBOARD_PATIENT_URL: http://patient:8000
+      DASHBOARD_EMERGENCY_URL: http://emergency:8000
+      DASHBOARD_ADMIN_URL: http://admin:8000
+      DASHBOARD_HOSPITAL_A_URL: http://hospital-a:8000
+      DASHBOARD_HOSPITAL_B_URL: http://hospital-b:8000
+    ports:
+      - "127.0.0.1:${DASHBOARD_PORT:-8080}:8080"
+    depends_on:
+      patient:
+        condition: service_healthy
+      emergency:
+        condition: service_healthy
+      admin:
+        condition: service_healthy
+      hospital-a:
+        condition: service_healthy
+      hospital-b:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/health', timeout=2)"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+      start_period: 10s
+volumes:
+  postgres-data:
+  hospital-a-data:
+  hospital-b-data:

@@ -1,0 +1,566 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CrisisGuard | Control Center</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+  <script src="/static/outage.js" defer></script>
+  <script src="/static/workspace.js" defer></script>
+  <script src="/static/sync-status.js" defer></script>
+  <script src="/static/quick-events.js" defer></script>
+  <script src="/static/test-traffic.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-symbol">C</div>
+      <div>
+        <strong>CrisisGuard</strong>
+        <small>Cloud Control Center</small>
+      </div>
+    </div>
+
+    <div class="nav-heading">WORKSPACE</div>
+    <button id="menu-toggle" class="button secondary" aria-expanded="false" aria-controls="workspace-nav">Menu</button>
+    <nav id="workspace-nav" aria-label="Main navigation">
+      <a href="#overview" class="nav-link active" aria-current="page">Overview</a>
+      <a href="#events" class="nav-link">Events &amp; Hospitals</a>
+      <a href="#recovery" class="nav-link">Recovery &amp; MetaGuard</a>
+      <a href="#monitoring" class="nav-link">Monitoring</a>
+      <a href="#settings" class="nav-link">Settings &amp; Diagnostics</a>
+    </nav>
+
+    <div class="sidebar-footer">
+
+      Local operations console
+      <small>Dashboard :8080</small>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">CSC3104 · GROUP 09</div>
+        <h1 id="page-title" tabindex="-1">Overview</h1>
+        <p><span id="page-description">Cloud services and hospital operations at a glance.</span></p>
+      </div>
+      <button id="refresh" class="button secondary">Refresh now</button>
+    </header>
+
+<div class="workspace-page" data-page="overview"><section id="overview">
+      <div class="section-title">
+        <h2>System Overview</h2>
+        <span id="updated">Waiting for data</span>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-label">Patient API</div>
+          <div id="patient-health" class="health waiting">Checking...</div>
+          <div class="card-subtitle">localhost:8001</div>
+        </article>
+        <article class="card">
+          <div class="card-label">Emergency API</div>
+          <div id="emergency-health" class="health waiting">Checking...</div>
+          <div class="card-subtitle">localhost:8003</div>
+        </article>
+        <article class="card">
+          <div class="card-label">Admin API</div>
+          <div id="admin-health" class="health waiting">Checking...</div>
+          <div class="card-subtitle">localhost:8004</div>
+        </article>
+      </div>
+    </section><section aria-label="Operational summary"><div id="overview-summary" class="cards" aria-live="polite"><article class="card">Waiting for hospital and recovery data...</article></div><div id="overview-metrics" class="cards"></div></section></div>
+<div class="workspace-page" data-page="events" hidden><section id="edge">
+  <div class="section-title">
+    <div>
+      <h2>Hospital Edge Simulation</h2>
+      <p>Monitor local SQLite storage and capture events independently of the cloud.</p>
+    </div>
+    <button id="open-scheduler-inspector" class="button secondary" type="button">
+      Open Scheduler Inspector
+    </button>
+    <button id="refresh-edge" class="button secondary">
+      Refresh Hospitals
+    </button>
+  </div>
+
+  <div class="cards">
+    <article class="card">
+      <div class="card-label">Hospital A</div>
+      <div id="edge-a-status" class="health waiting">Checking...</div>
+      <div class="metric-row">
+        <span>Total events</span>
+        <strong id="edge-a-total">Unknown</strong>
+      </div>
+      <div class="metric-row">
+        <span>Pending</span>
+        <strong id="edge-a-pending">Unknown</strong>
+      </div>
+      <div class="metric-row">
+        <span>Applied</span>
+        <strong id="edge-a-applied">Unknown</strong>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-label">Hospital B</div>
+      <div id="edge-b-status" class="health waiting">Checking...</div>
+      <div class="metric-row">
+        <span>Total events</span>
+        <strong id="edge-b-total">Unknown</strong>
+      </div>
+      <div class="metric-row">
+        <span>Pending</span>
+        <strong id="edge-b-pending">Unknown</strong>
+      </div>
+      <div class="metric-row">
+        <span>Applied</span>
+        <strong id="edge-b-applied">Unknown</strong>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-label">Offline Storage</div>
+      <div>Durable SQLite queues</div>
+      <p class="hint">
+        Each hospital stores its events in a separate persistent
+        Docker volume. Capturing an event does not require PostgreSQL.
+      </p>
+    </article>
+  </div>
+
+<article class="panel edge-replay-panel">
+  <div class="section-title">
+    <div>
+      <h3>Manual Cloud Replay</h3>
+      <p>Synchronize pending hospital events using the dependency scheduler.</p>
+    </div>
+  </div>
+
+  <div class="replay-actions">
+    <label for="replay-token">Temporary replay operator token</label>
+    <input id="replay-token" type="password" autocomplete="off" placeholder="Enter operator token for one replay">
+    <button id="replay-a" class="button primary" type="button">
+      Replay Hospital A
+    </button>
+    <button id="replay-b" class="button primary" type="button">
+      Replay Hospital B
+    </button>
+  </div>
+
+  <div class="instructions">
+    This triggers actual cloud synchronization. Successfully acknowledged
+    events are marked applied in hospital SQLite and stored in PostgreSQL.
+
+    Manual replay requires explicit server-side enablement and authorization. Automatic replay is the default recovery workflow.
+  </div>
+
+  <div id="replay-status" class="result-status waiting">
+    No replay executed
+  </div>
+
+  <pre id="replay-output">Select a hospital to begin.</pre>
+</article>
+
+  <div class="testing-layout edge-forms">
+    <article class="panel">
+      <h3>Capture Hospital Event</h3>
+
+      <label for="edge-hospital">Hospital</label>
+      <select id="edge-hospital">
+        <option value="hospital-a">Hospital A</option>
+        <option value="hospital-b">Hospital B</option>
+      </select>
+
+      <label for="edge-event-type">Event Type</label>
+      <select id="edge-event-type">
+        <option value="patient_registration">Patient Registration</option>
+        <option value="encounter_creation">Encounter Creation</option>
+      </select>
+
+      <label for="edge-priority">Priority</label>
+      <input id="edge-priority" type="number" min="1" max="5" value="2">
+
+      <label for="edge-event-id">Event ID</label>
+      <input id="edge-event-id" type="text">
+
+      <label for="edge-prerequisites">Prerequisite IDs (comma separated)</label>
+      <input id="edge-prerequisites" type="text"
+             placeholder="e.g. ROOT-1, ROOT-2"
+             aria-describedby="edge-prerequisites-hint">
+      <p id="edge-prerequisites-hint" class="hint">
+        Leave blank for no dependencies. Use event IDs from this hospital;
+        the event waits until all prerequisites are acknowledged.
+      </p>
+
+      <button id="capture-edge" class="button primary">
+        Capture to Local SQLite
+      </button>
+
+      <div class="instructions">
+        Events captured here are saved at the selected hospital.
+        They remain pending until a separate replay process
+        successfully synchronizes them with the cloud.
+      </div>
+    </article>
+
+    <article class="panel">
+      <h3>Edge Capture Result</h3>
+      <div id="edge-result-status" class="result-status waiting">
+        No event captured
+      </div>
+      <pre id="edge-result-output">Capture an event to begin.</pre>
+    </article>
+  </div>
+
+  <article class="panel">
+    <div class="section-title">
+
+<h3>Hospital SQLite Event Queue</h3>
+
+<div class="queue-actions">
+  <label class="queue-toggle">
+    <input type="checkbox" id="show-applied-edge">
+    Show applied events
+  </label>
+
+  <button
+    id="refresh-edge-queue"
+    class="button secondary"
+    type="button"
+  >
+    Refresh Queue
+  </button>
+</div>
+
+    </div>
+
+    <div class="history-table-wrapper">
+      <table class="history-table">
+        <thead>
+          <tr>
+            <th>Hospital</th>
+            <th>Event ID</th>
+            <th>Event Type</th>
+            <th>Priority</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="edge-events-body">
+          <tr>
+            <td colspan="5">No events loaded.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
+</section><section id="history">
+  <div class="section-title">
+    <div>
+      <h2>Cloud Event History</h2>
+      <p>Recently applied events stored in PostgreSQL</p>
+    </div>
+    <button id="refresh-history" class="button secondary">
+      Refresh Events
+    </button>
+  </div>
+
+  <article class="panel">
+    <div class="history-toolbar">
+      <input
+        id="history-search"
+        type="search"
+        placeholder="Search event ID, hospital or event type..."
+      >
+      <select id="history-limit">
+        <option value="25">Last 25</option>
+        <option value="50" selected>Last 50</option>
+        <option value="100">Last 100</option>
+      </select>
+    </div>
+
+    <p id="history-count" class="hint">
+      Loading events...
+    </p>
+
+    <div class="history-table-wrapper">
+      <table class="history-table">
+        <thead>
+          <tr>
+            <th>Event ID</th>
+            <th>Hospital</th>
+            <th>Event Type</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>Applied At</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody id="history-body">
+          <tr>
+            <td colspan="7">Loading...</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="event-details" class="event-details" hidden>
+      <div class="section-title">
+        <h3>Event Details</h3>
+        <button id="close-details" class="button secondary">
+          Close
+        </button>
+      </div>
+      <pre id="event-details-json"></pre>
+    </div>
+  </article>
+</section><details class="advanced-tools"><summary>Direct Cloud API test scenarios</summary><section id="testing">
+      <div class="section-title">
+        <div>
+          <h2>Guided Event Simulator</h2>
+          <p>Send directly to Cloud APIs; requires Cloud connectivity. Use hospital capture to save events offline.</p>
+        </div>
+      </div>
+
+      <div class="testing-layout">
+        <article class="panel">
+          <h3>Configure Event</h3>
+
+          <label for="scenario">Test scenario</label>
+          <select id="scenario">
+            <option value="new">201 - New Event</option>
+            <option value="duplicate">200 - Duplicate Event</option>
+            <option value="missing">409 - Missing Prerequisite</option>
+            <option value="invalid">422 - Invalid Priority</option>
+            <option value="outage">503 - Database Outage</option>
+          </select>
+
+          <label for="service">Cloud service</label>
+          <select id="service">
+            <option value="patient">Patient API</option>
+            <option value="emergency">Emergency API</option>
+            <option value="admin">Admin API</option>
+          </select>
+
+          <label for="site">Hospital</label>
+          <select id="site">
+            <option value="Hospital_A">Hospital A</option>
+            <option value="Hospital_B">Hospital B</option>
+          </select>
+
+          <label for="event-type">Event type</label>
+          <select id="event-type"></select>
+
+          <label for="priority">Priority (1-5)</label>
+          <input id="priority" type="number" min="1" max="5" value="2">
+
+          <label for="event-id">Event ID</label>
+          <div class="input-row">
+            <input id="event-id" type="text">
+            <button id="generate-id" class="button secondary" type="button">
+              New ID
+            </button>
+          </div>
+
+          <label for="prerequisites">Prerequisite IDs (comma separated)</label>
+          <input id="prerequisites" type="text" placeholder="Optional">
+
+          <label for="payload">Event payload (JSON)</label>
+          <textarea id="payload" rows="5"></textarea>
+
+          <div id="scenario-instructions" class="instructions"></div>
+
+          <button id="submit-event" class="button primary">
+            Execute Test
+          </button>
+        </article>
+
+        <article class="panel result-panel">
+          <h3>Test Results</h3>
+          <p class="hint">Your last API response will appear here.</p>
+          <div id="result-status" class="result-status waiting">
+            No test executed
+          </div>
+          <pre id="result-output">Select a scenario and execute a test.</pre>
+          <div id="result-explanation" class="instructions">
+            HTTP response explanations appear after submission.
+          </div>
+        </article>
+      </div>
+    </section></details><details id="scheduler-inspector" class="advanced-tools"><summary>Scheduler Inspector: priority and dependency preview</summary><section id="scheduler">
+  <div class="section-title">
+    <div>
+      <h2>Scheduler Inspector</h2>
+      <p>
+        Preview priority inheritance and eligibility
+        without replaying events.
+      </p>
+    </div>
+  </div>
+
+  <article class="panel">
+
+    <label for="scheduler-hospital">Hospital</label>
+    <select id="scheduler-hospital">
+      <option value="hospital-a">Hospital A</option>
+      <option value="hospital-b">Hospital B</option>
+    </select>
+
+    <label for="scheduler-inheritance">
+      Priority Inheritance
+    </label>
+    <select id="scheduler-inheritance">
+      <option value="active">Active replay policy</option>
+      <option value="true">Preview inheritance ON</option>
+      <option value="false">Preview inheritance OFF</option>
+    </select>
+
+    <button
+      id="preview-scheduler"
+      type="button"
+      class="button primary"
+    >
+      Preview Next Selection
+    </button>
+
+    <p id="scheduler-summary" class="hint">
+      No preview loaded.
+    </p>
+
+    <div class="history-table-wrapper">
+      <table class="history-table">
+        <thead>
+          <tr>
+            <th>Event ID</th>
+            <th>Base</th>
+            <th>Aged</th>
+            <th>Effective</th>
+            <th>Inherited From</th>
+            <th>Prerequisite IDs</th>
+            <th>Waiting On</th>
+            <th>Eligible</th>
+            <th>Reason</th>
+            <th>Next?</th>
+          </tr>
+        </thead>
+        <tbody id="scheduler-events-body">
+          <tr>
+            <td colspan="10">
+              Click Preview Next Selection.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="hint">
+      Read-only snapshot. The next selection may change
+      if new events arrive or recovery state changes.
+    </p>
+
+  </article>
+</section></details></div>
+<div class="workspace-page" data-page="recovery" hidden><section id="outage-simulator">
+      <div class="section-title"><h2>Cloud Outage Simulator</h2><span>Original local Docker project only</span></div>
+      <article class="card">
+        <p>Stop only Patient, Emergency and Admin APIs. Hospitals keep capturing offline events; automatic replay resumes after recovery.</p>
+        <p id="outage-health" role="status">Checking Cloud API health...</p>
+        <label for="outage-token">Temporary local host-agent token</label>
+        <div class="input-row">
+          <input id="outage-token" type="password" autocomplete="off" placeholder="Paste token from the local agent terminal">
+          <button id="outage-connect" class="button secondary">Authorize local controls</button>
+        </div>
+        <div class="replay-actions">
+          <button id="outage-stop" class="button secondary" disabled>Simulate Cloud Outage</button>
+          <button id="outage-restore" class="button primary" disabled>Restore Cloud</button>
+        </div>
+        <p id="outage-message" role="status" aria-live="polite">Controls disabled. Run python -m infrastructure.scripts.local_outage_agent --allow-local-demo on the local host, then enter its temporary token.</p>
+      </article>
+    </section><section><div class="section-title"><h2>Recovery &amp; MetaGuard</h2><span class="chip">Read-only monitoring</span></div><div id="recovery-grid" class="metrics-grid" aria-live="polite">Loading recovery status...</div><article class="card"><h3>Outage demonstration</h3><ol><li>Start the local agent and authorize using the controls above.</li><li>Simulate Cloud Outage, then capture events at either hospital.</li><li>Restore Cloud and watch pending queues drain through automatic replay.</li></ol><div id="quick-events">
+  <h3>Quick Event Generator</h3>
+  <p>Generate synthetic patient registrations in the selected hospital's local queue. Priority 2, no prerequisites. During a Cloud outage, events stay pending until replay can synchronize them.</p>
+  <div class="quick-event-controls">
+    <div><label for="quick-hospital">Hospital</label><select id="quick-hospital"><option value="hospital-a">Hospital A</option><option value="hospital-b">Hospital B</option></select></div>
+    <div><label for="quick-count">Number of events (1?10)</label><input id="quick-count" type="number" min="1" max="10" step="1" value="3"></div>
+    <button id="quick-generate" class="button primary" type="button">Generate test events</button>
+  </div>
+  <p id="quick-status" role="status" aria-live="polite">No events generated.</p>
+  <ul id="quick-results" aria-label="Capture results"></ul>
+  <p class="hint">Requests are never retried automatically. A failed or unconfirmed response may still have stored an event; check its ID in Events &amp; Hospitals before generating more. <a href="#events">Open full capture form, priorities and prerequisites</a>.</p>
+</div><p class="hint">Hospital progress is a sampled snapshot. Failed-event totals, aggregate active grants and fairness are not exposed by these monitoring APIs.</p></article></section></div>
+<div class="workspace-page" data-page="monitoring" hidden><section id="telemetry">
+      <div class="section-title">
+        <div>
+          <h2>Live Cloud Telemetry</h2>
+          <p>Rolling 60-second application request metrics</p>
+          <p class="hint">Live metrics count authenticated live traffic only. General metrics also include replay and unclassified requests. Services with no samples have no measured p95.</p>
+        </div>
+        <span class="chip">Refreshes every 5s</span>
+      </div>
+
+      <article class="card" id="test-traffic" aria-label="Local test traffic">
+        <h3>Test Traffic</h3>
+        <p class="hint">First prepare three synthetic records through Hospital A and wait for MetaGuard replay. Then generate read-only traffic against applied records. Maximum 5 reads/second per API; live metrics expire after 60 seconds.</p>
+        <button type="button" id="demo-prepare" class="button secondary" disabled>Prepare Demo Records</button>
+        <p id="demo-status" role="status" aria-live="polite">Checking local preparation availability.</p>
+        <ul id="demo-results" aria-live="polite"></ul>
+        <label for="test-traffic-count">Requests per API</label>
+        <select id="test-traffic-count" disabled>
+          <option value="10">10</option><option value="50">50</option><option value="100" selected>100</option>
+        </select>
+        <button type="button" id="test-traffic-generate" class="button secondary" disabled>Generate Test Traffic</button>
+        <p id="test-traffic-status" role="status" aria-live="polite">Disabled unless explicitly enabled for local development.</p>
+        <ul id="test-traffic-results" aria-live="polite"></ul>
+      </article>
+      <div class="metrics-grid" id="metrics-grid">
+        <article class="card empty">
+          Connecting to telemetry services...
+        </article>
+      </div>
+      <p class="hint">
+        Health and metrics polling are excluded from application traffic.
+        Measurements are per service and reset after service restarts. Mean and p95 cover mixed monitored application traffic; p95 is undefined with no samples. In-flight requests measure active work, not queue pressure. Missing fields remain unavailable until the Cloud service exposes them.
+      </p>
+    </section></div>
+<div class="workspace-page" data-page="settings" hidden><section><div class="section-title"><h2>Configuration &amp; connection diagnostics</h2></div><article class="card"><p>The dashboard uses server-side service configuration. Refresh interval: 5 seconds. Cloud metrics use a rolling 60-second window and reset on restart.</p><p id="connection-status" role="status">Checking connections...</p><p>Hospital queues remain available during Cloud outages. For connection errors, check the service process and Docker health, then refresh. PostgreSQL errors require database connectivity to be restored.</p><p>Manual replay is optional and disabled by default. Local outage authorization is temporary and stays in memory; reload clears it. Use synthetic data only.</p><p>MetaGuard monitoring requires server-side DASHBOARD_CONTROLLER_URL and DASHBOARD_CONTROLLER_TOKEN. Credentials are never entered or displayed here. The default seven-service stack has no controller.</p><p>Run instructions and troubleshooting: see docs/DASHBOARD.md in the repository.</p></article></section><section id="guide">
+      <div class="section-title">
+        <h2>HTTP Response Guide</h2>
+      </div>
+      <div class="guide-grid">
+        <article class="guide-card">
+          <strong>201 Created</strong>
+          <p>New event successfully applied and stored in PostgreSQL.</p>
+        </article>
+        <article class="guide-card">
+          <strong>200 OK</strong>
+          <p>Identical event already exists. No duplicate row is inserted.</p>
+        </article>
+        <article class="guide-card">
+          <strong>409 Conflict</strong>
+          <p>A prerequisite is missing, or an existing ID has different data.</p>
+        </article>
+        <article class="guide-card">
+          <strong>422 Invalid Input</strong>
+          <p>The event does not satisfy the API's validation rules.</p>
+        </article>
+        <article class="guide-card">
+          <strong>503 Unavailable</strong>
+          <p>PostgreSQL is unavailable. Restore connectivity and retry safely.</p>
+        </article>
+      </div>
+    </section></div>    <div class="card" id="sync-panel" aria-label="Event synchronization">
+      <p id="sync-updated" role="status" aria-live="polite">Synchronization: waiting for update.</p>
+      <button id="sync-refresh" class="button secondary" type="button">Refresh synchronization</button>
+      <ul id="sync-events" aria-label="Tracked events"></ul>
+      <p class="hint">Cloud confirmation uses the latest 100 PostgreSQL events. Events outside this history window remain unconfirmed. Tracking lasts for this browser session; no events are retried.</p>
+    </div>
+    <footer>
+      CrisisGuard · Local Development Testing Console · Synthetic Data Only
+    </footer>
+  </main>
+</body>
+</html>

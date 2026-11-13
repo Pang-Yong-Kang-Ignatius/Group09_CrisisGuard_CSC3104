@@ -1,0 +1,9 @@
+condition,site,metric,units,mean,ci_low,ci_high,p,target_max,status
+ratio1-1_depth3_balanced_load30,Hospital_A,routine_post_reconnect_p95_upper_seconds,percent,607.1476396575615,433.4976838496922,778.3380061735845,0.0625,20,failed
+ratio1-1_depth3_balanced_load30,global,cloud_drain_upper_seconds,percent,278.5198656992187,236.82498006525057,331.6632342117106,0.0625,20,failed
+ratio1-1_depth3_balanced_load30,global,client_live_end_to_end_violation_rate,percentage points,-2.9502047769533584,-3.7468446318828215,-2.456123030107855,0.0625,1,achieved
+ratio1-1_depth3_balanced_load30,Hospital_B,routine_post_reconnect_p95_upper_seconds,percent,497.17720941207017,359.3085859143693,622.6775689551617,0.0625,20,failed
+ratio1-1_depth3_balanced_load70,Hospital_A,routine_post_reconnect_p95_upper_seconds,percent,442.52905169383473,304.79235294466594,580.2657504430035,0.0625,20,failed
+ratio1-1_depth3_balanced_load70,global,cloud_drain_upper_seconds,percent,276.33824503545577,214.92560167748192,339.59387270347605,0.0625,20,failed
+ratio1-1_depth3_balanced_load70,global,client_live_end_to_end_violation_rate,percentage points,-3.012529304695922,-3.6440766637684794,-2.374901294117704,0.0625,1,achieved
+ratio1-1_depth3_balanced_load70,Hospital_B,routine_post_reconnect_p95_upper_seconds,percent,369.89796965120365,258.82887230637436,493.25520319302086,0.0625,20,failed

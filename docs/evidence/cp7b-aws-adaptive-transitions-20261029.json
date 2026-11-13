@@ -1,0 +1,1512 @@
+{
+  "schema": "cp7b-aws-aimd-transitions-v1",
+  "revision": "f128ac0f2b6e551af3e03cb3e3d44262b451195a",
+  "project": "cgaws-4fed6a8c",
+  "started_at": "2026-10-29T08:04:01.255196+00:00",
+  "isolated": true,
+  "synthetic_data_only": true,
+  "snapshots": [
+    {
+      "label": "initial_normal",
+      "at": "2026-10-29T08:04:28.106618+00:00",
+      "policy": "aimd",
+      "state": "Caution",
+      "reason": "healthy",
+      "rate_rps": 0.6000000000000001,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:27.736280+00:00",
+      "server_time": "2026-10-29T08:04:28.102565+00:00",
+      "allowed": 0,
+      "denied": 0,
+      "last_decision": {},
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:27.737981+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:27.736280+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:27.770227+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "initial_normal",
+      "at": "2026-10-29T08:04:29.125024+00:00",
+      "policy": "aimd",
+      "state": "Normal",
+      "reason": "healthy",
+      "rate_rps": 0.6000000000000001,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:28.863879+00:00",
+      "server_time": "2026-10-29T08:04:29.120829+00:00",
+      "allowed": 0,
+      "denied": 0,
+      "last_decision": {},
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:28.882070+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:28.863879+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:28.871207+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "initial_normal",
+      "at": "2026-10-29T08:04:30.147883+00:00",
+      "policy": "aimd",
+      "state": "Normal",
+      "reason": "healthy",
+      "rate_rps": 0.8,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:29.958204+00:00",
+      "server_time": "2026-10-29T08:04:30.143092+00:00",
+      "allowed": 0,
+      "denied": 0,
+      "last_decision": {},
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:29.958204+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:29.969176+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:29.974903+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "initial_normal",
+      "at": "2026-10-29T08:04:31.166564+00:00",
+      "policy": "aimd",
+      "state": "Normal",
+      "reason": "healthy",
+      "rate_rps": 0.8,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:31.058036+00:00",
+      "server_time": "2026-10-29T08:04:31.162546+00:00",
+      "allowed": 0,
+      "denied": 0,
+      "last_decision": {},
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:31.084156+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:31.058036+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:31.065728+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "initial_normal",
+      "at": "2026-10-29T08:04:32.214569+00:00",
+      "policy": "aimd",
+      "state": "Normal",
+      "reason": "healthy",
+      "rate_rps": 0.8,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:31.058036+00:00",
+      "server_time": "2026-10-29T08:04:32.201496+00:00",
+      "allowed": 0,
+      "denied": 0,
+      "last_decision": {},
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:31.084156+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:31.058036+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:31.065728+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "initial_normal",
+      "at": "2026-10-29T08:04:33.231892+00:00",
+      "policy": "aimd",
+      "state": "Normal",
+      "reason": "healthy",
+      "rate_rps": 1.0,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:32.178387+00:00",
+      "server_time": "2026-10-29T08:04:33.228784+00:00",
+      "allowed": 0,
+      "denied": 0,
+      "last_decision": {},
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:32.215357+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:32.178387+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:32.213690+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "initial_normal",
+      "at": "2026-10-29T08:04:34.249974+00:00",
+      "policy": "aimd",
+      "state": "Normal",
+      "reason": "healthy",
+      "rate_rps": 1.0,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:33.310801+00:00",
+      "server_time": "2026-10-29T08:04:34.246256+00:00",
+      "allowed": 0,
+      "denied": 0,
+      "last_decision": {},
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:33.310801+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:33.318142+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:33.318867+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "initial_normal",
+      "at": "2026-10-29T08:04:35.267924+00:00",
+      "policy": "aimd",
+      "state": "Normal",
+      "reason": "healthy",
+      "rate_rps": 1.2,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:34.403585+00:00",
+      "server_time": "2026-10-29T08:04:35.264268+00:00",
+      "allowed": 0,
+      "denied": 0,
+      "last_decision": {},
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:34.403585+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:34.426149+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:34.425044+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "initial_normal",
+      "at": "2026-10-29T08:04:36.285845+00:00",
+      "policy": "aimd",
+      "state": "Normal",
+      "reason": "healthy",
+      "rate_rps": 1.2,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:35.535227+00:00",
+      "server_time": "2026-10-29T08:04:36.281932+00:00",
+      "allowed": 0,
+      "denied": 0,
+      "last_decision": {},
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:35.535227+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:35.552254+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:35.552254+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "initial_normal",
+      "at": "2026-10-29T08:04:37.311419+00:00",
+      "policy": "aimd",
+      "state": "Normal",
+      "reason": "healthy",
+      "rate_rps": 1.4,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:36.634127+00:00",
+      "server_time": "2026-10-29T08:04:37.305062+00:00",
+      "allowed": 0,
+      "denied": 0,
+      "last_decision": {},
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:36.646545+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:36.645116+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:36.634127+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "initial_normal",
+      "at": "2026-10-29T08:04:38.328803+00:00",
+      "policy": "aimd",
+      "state": "Normal",
+      "reason": "healthy",
+      "rate_rps": 1.4,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:37.750810+00:00",
+      "server_time": "2026-10-29T08:04:38.325619+00:00",
+      "allowed": 0,
+      "denied": 0,
+      "last_decision": {},
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:37.750810+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:37.752198+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:37.750979+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "initial_normal",
+      "at": "2026-10-29T08:04:39.346964+00:00",
+      "policy": "aimd",
+      "state": "Normal",
+      "reason": "healthy",
+      "rate_rps": 1.5999999999999999,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:38.922630+00:00",
+      "server_time": "2026-10-29T08:04:39.343068+00:00",
+      "allowed": 0,
+      "denied": 0,
+      "last_decision": {},
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:38.922630+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:38.927785+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:38.934965+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "initial_normal",
+      "at": "2026-10-29T08:04:40.364645+00:00",
+      "policy": "aimd",
+      "state": "Normal",
+      "reason": "healthy",
+      "rate_rps": 1.5999999999999999,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:40.017947+00:00",
+      "server_time": "2026-10-29T08:04:40.360887+00:00",
+      "allowed": 0,
+      "denied": 0,
+      "last_decision": {},
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:40.017947+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:40.027617+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:40.029173+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "initial_normal",
+      "at": "2026-10-29T08:04:41.382720+00:00",
+      "policy": "aimd",
+      "state": "Normal",
+      "reason": "healthy",
+      "rate_rps": 1.7999999999999998,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:41.110819+00:00",
+      "server_time": "2026-10-29T08:04:41.378929+00:00",
+      "allowed": 0,
+      "denied": 0,
+      "last_decision": {},
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:41.132371+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:41.110819+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:41.126629+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "initial_normal",
+      "at": "2026-10-29T08:04:42.400701+00:00",
+      "policy": "aimd",
+      "state": "Normal",
+      "reason": "healthy",
+      "rate_rps": 1.7999999999999998,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:42.212788+00:00",
+      "server_time": "2026-10-29T08:04:42.396931+00:00",
+      "allowed": 0,
+      "denied": 0,
+      "last_decision": {},
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:42.222620+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:42.212788+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:42.233084+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "initial_normal",
+      "at": "2026-10-29T08:04:43.489573+00:00",
+      "policy": "aimd",
+      "state": "Normal",
+      "reason": "healthy",
+      "rate_rps": 1.7999999999999998,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:42.212788+00:00",
+      "server_time": "2026-10-29T08:04:43.476302+00:00",
+      "allowed": 0,
+      "denied": 0,
+      "last_decision": {},
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:42.222620+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:42.212788+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:42.233084+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "initial_normal",
+      "at": "2026-10-29T08:04:44.506895+00:00",
+      "policy": "aimd",
+      "state": "Normal",
+      "reason": "healthy",
+      "rate_rps": 1.9999999999999998,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:43.364423+00:00",
+      "server_time": "2026-10-29T08:04:44.503626+00:00",
+      "allowed": 0,
+      "denied": 0,
+      "last_decision": {},
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:43.364423+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:43.429702+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:43.378441+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "caution",
+      "at": "2026-10-29T08:04:44.528225+00:00",
+      "policy": "aimd",
+      "state": "Normal",
+      "reason": "healthy",
+      "rate_rps": 1.9999999999999998,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:43.364423+00:00",
+      "server_time": "2026-10-29T08:04:44.522863+00:00",
+      "allowed": 0,
+      "denied": 0,
+      "last_decision": {},
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:43.364423+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:43.429702+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:43.378441+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "caution",
+      "at": "2026-10-29T08:04:45.546952+00:00",
+      "policy": "aimd",
+      "state": "Caution",
+      "reason": "patient:average_latency_ms",
+      "rate_rps": 0.9999999999999999,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:44.558964+00:00",
+      "server_time": "2026-10-29T08:04:45.542998+00:00",
+      "allowed": 0,
+      "denied": 0,
+      "last_decision": {},
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:44.577704+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:44.577473+00:00",
+          "average_latency_ms": 300.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:44.558964+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "stale_recovery",
+      "at": "2026-10-29T08:04:45.565714+00:00",
+      "policy": "aimd",
+      "state": "Caution",
+      "reason": "patient:average_latency_ms",
+      "rate_rps": 0.9999999999999999,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:44.558964+00:00",
+      "server_time": "2026-10-29T08:04:45.561561+00:00",
+      "allowed": 0,
+      "denied": 0,
+      "last_decision": {},
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:44.577704+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:44.577473+00:00",
+          "average_latency_ms": 300.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:44.558964+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "stale_recovery",
+      "at": "2026-10-29T08:04:46.584800+00:00",
+      "policy": "aimd",
+      "state": "Recovery",
+      "reason": "telemetry_missing_or_stale",
+      "rate_rps": 0.49999999999999994,
+      "telemetry_fresh": false,
+      "observed_at": null,
+      "server_time": "2026-10-29T08:04:46.580393+00:00",
+      "allowed": 0,
+      "denied": 0,
+      "last_decision": {},
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:45.679656+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:15.684149+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:45.656284+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "stale_denial",
+      "at": "2026-10-29T08:04:46.659878+00:00",
+      "policy": "aimd",
+      "state": "Recovery",
+      "reason": "telemetry_missing_or_stale",
+      "rate_rps": 0.49999999999999994,
+      "telemetry_fresh": false,
+      "observed_at": null,
+      "server_time": "2026-10-29T08:04:46.655381+00:00",
+      "allowed": 0,
+      "denied": 1,
+      "last_decision": {
+        "at": "2026-10-29T08:04:46.635869+00:00",
+        "phase": "issue",
+        "state": "Recovery",
+        "reason": "telemetry_unavailable",
+        "allowed": false,
+        "inflight": 0,
+        "rate_rps": 0.49999999999999994,
+        "inflight_limit": 1
+      },
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:45.679656+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:15.684149+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:45.656284+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "recovery_to_caution",
+      "at": "2026-10-29T08:04:46.677794+00:00",
+      "policy": "aimd",
+      "state": "Recovery",
+      "reason": "telemetry_missing_or_stale",
+      "rate_rps": 0.49999999999999994,
+      "telemetry_fresh": false,
+      "observed_at": null,
+      "server_time": "2026-10-29T08:04:46.673985+00:00",
+      "allowed": 0,
+      "denied": 1,
+      "last_decision": {
+        "at": "2026-10-29T08:04:46.635869+00:00",
+        "phase": "issue",
+        "state": "Recovery",
+        "reason": "telemetry_unavailable",
+        "allowed": false,
+        "inflight": 0,
+        "rate_rps": 0.49999999999999994,
+        "inflight_limit": 1
+      },
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:45.679656+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:15.684149+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:45.656284+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "recovery_to_caution",
+      "at": "2026-10-29T08:04:47.696230+00:00",
+      "policy": "aimd",
+      "state": "Recovery",
+      "reason": "healthy",
+      "rate_rps": 0.49999999999999994,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:46.755224+00:00",
+      "server_time": "2026-10-29T08:04:47.692489+00:00",
+      "allowed": 0,
+      "denied": 1,
+      "last_decision": {
+        "at": "2026-10-29T08:04:46.635869+00:00",
+        "phase": "issue",
+        "state": "Recovery",
+        "reason": "telemetry_unavailable",
+        "allowed": false,
+        "inflight": 0,
+        "rate_rps": 0.49999999999999994,
+        "inflight_limit": 1
+      },
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:46.755224+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:46.785005+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:46.781272+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "recovery_to_caution",
+      "at": "2026-10-29T08:04:48.714617+00:00",
+      "policy": "aimd",
+      "state": "Recovery",
+      "reason": "healthy",
+      "rate_rps": 0.7,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:47.887987+00:00",
+      "server_time": "2026-10-29T08:04:48.710363+00:00",
+      "allowed": 0,
+      "denied": 1,
+      "last_decision": {
+        "at": "2026-10-29T08:04:46.635869+00:00",
+        "phase": "issue",
+        "state": "Recovery",
+        "reason": "telemetry_unavailable",
+        "allowed": false,
+        "inflight": 0,
+        "rate_rps": 0.49999999999999994,
+        "inflight_limit": 1
+      },
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:47.899972+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:47.899988+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:47.887987+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "recovery_to_caution",
+      "at": "2026-10-29T08:04:49.733765+00:00",
+      "policy": "aimd",
+      "state": "Caution",
+      "reason": "healthy",
+      "rate_rps": 0.7,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:49.015502+00:00",
+      "server_time": "2026-10-29T08:04:49.729717+00:00",
+      "allowed": 0,
+      "denied": 1,
+      "last_decision": {
+        "at": "2026-10-29T08:04:46.635869+00:00",
+        "phase": "issue",
+        "state": "Recovery",
+        "reason": "telemetry_unavailable",
+        "allowed": false,
+        "inflight": 0,
+        "rate_rps": 0.49999999999999994,
+        "inflight_limit": 1
+      },
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:49.022882+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:49.017598+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:49.015502+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "caution_to_normal",
+      "at": "2026-10-29T08:04:49.751962+00:00",
+      "policy": "aimd",
+      "state": "Caution",
+      "reason": "healthy",
+      "rate_rps": 0.7,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:49.015502+00:00",
+      "server_time": "2026-10-29T08:04:49.747851+00:00",
+      "allowed": 0,
+      "denied": 1,
+      "last_decision": {
+        "at": "2026-10-29T08:04:46.635869+00:00",
+        "phase": "issue",
+        "state": "Recovery",
+        "reason": "telemetry_unavailable",
+        "allowed": false,
+        "inflight": 0,
+        "rate_rps": 0.49999999999999994,
+        "inflight_limit": 1
+      },
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:49.022882+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:49.017598+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:49.015502+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "caution_to_normal",
+      "at": "2026-10-29T08:04:50.770161+00:00",
+      "policy": "aimd",
+      "state": "Caution",
+      "reason": "healthy",
+      "rate_rps": 0.8999999999999999,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:50.123135+00:00",
+      "server_time": "2026-10-29T08:04:50.766410+00:00",
+      "allowed": 0,
+      "denied": 1,
+      "last_decision": {
+        "at": "2026-10-29T08:04:46.635869+00:00",
+        "phase": "issue",
+        "state": "Recovery",
+        "reason": "telemetry_unavailable",
+        "allowed": false,
+        "inflight": 0,
+        "rate_rps": 0.49999999999999994,
+        "inflight_limit": 1
+      },
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:50.141638+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:50.123135+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:50.135122+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "caution_to_normal",
+      "at": "2026-10-29T08:04:51.788788+00:00",
+      "policy": "aimd",
+      "state": "Caution",
+      "reason": "healthy",
+      "rate_rps": 0.8999999999999999,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:51.228908+00:00",
+      "server_time": "2026-10-29T08:04:51.784862+00:00",
+      "allowed": 0,
+      "denied": 1,
+      "last_decision": {
+        "at": "2026-10-29T08:04:46.635869+00:00",
+        "phase": "issue",
+        "state": "Recovery",
+        "reason": "telemetry_unavailable",
+        "allowed": false,
+        "inflight": 0,
+        "rate_rps": 0.49999999999999994,
+        "inflight_limit": 1
+      },
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:51.239172+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:51.228908+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:51.250158+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "caution_to_normal",
+      "at": "2026-10-29T08:04:52.810677+00:00",
+      "policy": "aimd",
+      "state": "Normal",
+      "reason": "healthy",
+      "rate_rps": 1.0999999999999999,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:52.323350+00:00",
+      "server_time": "2026-10-29T08:04:52.805720+00:00",
+      "allowed": 0,
+      "denied": 1,
+      "last_decision": {
+        "at": "2026-10-29T08:04:46.635869+00:00",
+        "phase": "issue",
+        "state": "Recovery",
+        "reason": "telemetry_unavailable",
+        "allowed": false,
+        "inflight": 0,
+        "rate_rps": 0.49999999999999994,
+        "inflight_limit": 1
+      },
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:52.337733+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:52.323350+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:52.335107+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "caution_to_normal",
+      "at": "2026-10-29T08:04:53.829026+00:00",
+      "policy": "aimd",
+      "state": "Normal",
+      "reason": "healthy",
+      "rate_rps": 1.0999999999999999,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:53.420162+00:00",
+      "server_time": "2026-10-29T08:04:53.825106+00:00",
+      "allowed": 0,
+      "denied": 1,
+      "last_decision": {
+        "at": "2026-10-29T08:04:46.635869+00:00",
+        "phase": "issue",
+        "state": "Recovery",
+        "reason": "telemetry_unavailable",
+        "allowed": false,
+        "inflight": 0,
+        "rate_rps": 0.49999999999999994,
+        "inflight_limit": 1
+      },
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:53.434166+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:53.434134+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:53.420162+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "caution_to_normal",
+      "at": "2026-10-29T08:04:54.850867+00:00",
+      "policy": "aimd",
+      "state": "Normal",
+      "reason": "healthy",
+      "rate_rps": 1.2999999999999998,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:54.543135+00:00",
+      "server_time": "2026-10-29T08:04:54.847437+00:00",
+      "allowed": 0,
+      "denied": 1,
+      "last_decision": {
+        "at": "2026-10-29T08:04:46.635869+00:00",
+        "phase": "issue",
+        "state": "Recovery",
+        "reason": "telemetry_unavailable",
+        "allowed": false,
+        "inflight": 0,
+        "rate_rps": 0.49999999999999994,
+        "inflight_limit": 1
+      },
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:54.557810+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:54.543135+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:54.553679+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "caution_to_normal",
+      "at": "2026-10-29T08:04:55.870849+00:00",
+      "policy": "aimd",
+      "state": "Normal",
+      "reason": "healthy",
+      "rate_rps": 1.2999999999999998,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:55.636381+00:00",
+      "server_time": "2026-10-29T08:04:55.866413+00:00",
+      "allowed": 0,
+      "denied": 1,
+      "last_decision": {
+        "at": "2026-10-29T08:04:46.635869+00:00",
+        "phase": "issue",
+        "state": "Recovery",
+        "reason": "telemetry_unavailable",
+        "allowed": false,
+        "inflight": 0,
+        "rate_rps": 0.49999999999999994,
+        "inflight_limit": 1
+      },
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:55.646183+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:55.636381+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:55.647118+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "caution_to_normal",
+      "at": "2026-10-29T08:04:56.889645+00:00",
+      "policy": "aimd",
+      "state": "Normal",
+      "reason": "healthy",
+      "rate_rps": 1.4999999999999998,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:56.730666+00:00",
+      "server_time": "2026-10-29T08:04:56.885637+00:00",
+      "allowed": 0,
+      "denied": 1,
+      "last_decision": {
+        "at": "2026-10-29T08:04:46.635869+00:00",
+        "phase": "issue",
+        "state": "Recovery",
+        "reason": "telemetry_unavailable",
+        "allowed": false,
+        "inflight": 0,
+        "rate_rps": 0.49999999999999994,
+        "inflight_limit": 1
+      },
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:56.730666+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:56.744823+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:56.743376+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "caution_to_normal",
+      "at": "2026-10-29T08:04:57.934608+00:00",
+      "policy": "aimd",
+      "state": "Normal",
+      "reason": "healthy",
+      "rate_rps": 1.4999999999999998,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:56.730666+00:00",
+      "server_time": "2026-10-29T08:04:57.930646+00:00",
+      "allowed": 0,
+      "denied": 1,
+      "last_decision": {
+        "at": "2026-10-29T08:04:46.635869+00:00",
+        "phase": "issue",
+        "state": "Recovery",
+        "reason": "telemetry_unavailable",
+        "allowed": false,
+        "inflight": 0,
+        "rate_rps": 0.49999999999999994,
+        "inflight_limit": 1
+      },
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:56.730666+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:56.744823+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:56.743376+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "caution_to_normal",
+      "at": "2026-10-29T08:04:58.952814+00:00",
+      "policy": "aimd",
+      "state": "Normal",
+      "reason": "healthy",
+      "rate_rps": 1.4999999999999998,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:57.866039+00:00",
+      "server_time": "2026-10-29T08:04:58.948996+00:00",
+      "allowed": 0,
+      "denied": 1,
+      "last_decision": {
+        "at": "2026-10-29T08:04:46.635869+00:00",
+        "phase": "issue",
+        "state": "Recovery",
+        "reason": "telemetry_unavailable",
+        "allowed": false,
+        "inflight": 0,
+        "rate_rps": 0.49999999999999994,
+        "inflight_limit": 1
+      },
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:57.866039+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:57.871037+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:57.870209+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "caution_to_normal",
+      "at": "2026-10-29T08:04:59.973342+00:00",
+      "policy": "aimd",
+      "state": "Normal",
+      "reason": "healthy",
+      "rate_rps": 1.6999999999999997,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:04:58.990204+00:00",
+      "server_time": "2026-10-29T08:04:59.969268+00:00",
+      "allowed": 0,
+      "denied": 1,
+      "last_decision": {
+        "at": "2026-10-29T08:04:46.635869+00:00",
+        "phase": "issue",
+        "state": "Recovery",
+        "reason": "telemetry_unavailable",
+        "allowed": false,
+        "inflight": 0,
+        "rate_rps": 0.49999999999999994,
+        "inflight_limit": 1
+      },
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:04:58.990204+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:04:59.001715+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:04:58.999358+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "caution_to_normal",
+      "at": "2026-10-29T08:05:00.992016+00:00",
+      "policy": "aimd",
+      "state": "Normal",
+      "reason": "healthy",
+      "rate_rps": 1.6999999999999997,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:05:00.088390+00:00",
+      "server_time": "2026-10-29T08:05:00.988433+00:00",
+      "allowed": 0,
+      "denied": 1,
+      "last_decision": {
+        "at": "2026-10-29T08:04:46.635869+00:00",
+        "phase": "issue",
+        "state": "Recovery",
+        "reason": "telemetry_unavailable",
+        "allowed": false,
+        "inflight": 0,
+        "rate_rps": 0.49999999999999994,
+        "inflight_limit": 1
+      },
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:05:00.108746+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:05:00.088390+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:05:00.099775+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "caution_to_normal",
+      "at": "2026-10-29T08:05:02.019021+00:00",
+      "policy": "aimd",
+      "state": "Normal",
+      "reason": "healthy",
+      "rate_rps": 1.8999999999999997,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:05:01.214999+00:00",
+      "server_time": "2026-10-29T08:05:02.014880+00:00",
+      "allowed": 0,
+      "denied": 1,
+      "last_decision": {
+        "at": "2026-10-29T08:04:46.635869+00:00",
+        "phase": "issue",
+        "state": "Recovery",
+        "reason": "telemetry_unavailable",
+        "allowed": false,
+        "inflight": 0,
+        "rate_rps": 0.49999999999999994,
+        "inflight_limit": 1
+      },
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:05:01.227266+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:05:01.233792+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:05:01.214999+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "caution_to_normal",
+      "at": "2026-10-29T08:05:03.049941+00:00",
+      "policy": "aimd",
+      "state": "Normal",
+      "reason": "healthy",
+      "rate_rps": 1.8999999999999997,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:05:02.364793+00:00",
+      "server_time": "2026-10-29T08:05:03.042358+00:00",
+      "allowed": 0,
+      "denied": 1,
+      "last_decision": {
+        "at": "2026-10-29T08:04:46.635869+00:00",
+        "phase": "issue",
+        "state": "Recovery",
+        "reason": "telemetry_unavailable",
+        "allowed": false,
+        "inflight": 0,
+        "rate_rps": 0.49999999999999994,
+        "inflight_limit": 1
+      },
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:05:02.364953+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:05:02.364793+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:05:02.368731+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "caution_to_normal",
+      "at": "2026-10-29T08:05:04.075811+00:00",
+      "policy": "aimd",
+      "state": "Normal",
+      "reason": "healthy",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:05:03.472150+00:00",
+      "server_time": "2026-10-29T08:05:04.070805+00:00",
+      "allowed": 0,
+      "denied": 1,
+      "last_decision": {
+        "at": "2026-10-29T08:04:46.635869+00:00",
+        "phase": "issue",
+        "state": "Recovery",
+        "reason": "telemetry_unavailable",
+        "allowed": false,
+        "inflight": 0,
+        "rate_rps": 0.49999999999999994,
+        "inflight_limit": 1
+      },
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:05:03.489634+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:05:03.472150+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:05:03.483299+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "rate_limit",
+      "at": "2026-10-29T08:05:04.193279+00:00",
+      "policy": "aimd",
+      "state": "Normal",
+      "reason": "healthy",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:05:03.472150+00:00",
+      "server_time": "2026-10-29T08:05:04.189314+00:00",
+      "allowed": 1,
+      "denied": 2,
+      "last_decision": {
+        "at": "2026-10-29T08:05:04.168993+00:00",
+        "phase": "issue",
+        "state": "Normal",
+        "reason": "rate_limit",
+        "allowed": false,
+        "inflight": 1,
+        "rate_rps": 2.0,
+        "inflight_limit": 4
+      },
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:05:03.489634+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:05:03.472150+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:05:03.483299+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "second_grant_ready",
+      "at": "2026-10-29T08:05:04.214203+00:00",
+      "policy": "aimd",
+      "state": "Normal",
+      "reason": "healthy",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:05:03.472150+00:00",
+      "server_time": "2026-10-29T08:05:04.209493+00:00",
+      "allowed": 1,
+      "denied": 2,
+      "last_decision": {
+        "at": "2026-10-29T08:05:04.168993+00:00",
+        "phase": "issue",
+        "state": "Normal",
+        "reason": "rate_limit",
+        "allowed": false,
+        "inflight": 1,
+        "rate_rps": 2.0,
+        "inflight_limit": 4
+      },
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:05:03.489634+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:05:03.472150+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:05:03.483299+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    },
+    {
+      "label": "second_grant_ready",
+      "at": "2026-10-29T08:05:05.233775+00:00",
+      "policy": "aimd",
+      "state": "Normal",
+      "reason": "healthy",
+      "rate_rps": 2.0,
+      "telemetry_fresh": true,
+      "observed_at": "2026-10-29T08:05:04.575159+00:00",
+      "server_time": "2026-10-29T08:05:05.229942+00:00",
+      "allowed": 1,
+      "denied": 2,
+      "last_decision": {
+        "at": "2026-10-29T08:05:04.168993+00:00",
+        "phase": "issue",
+        "state": "Normal",
+        "reason": "rate_limit",
+        "allowed": false,
+        "inflight": 1,
+        "rate_rps": 2.0,
+        "inflight_limit": 4
+      },
+      "metrics": {
+        "admin": {
+          "sampled_at": "2026-10-29T08:05:04.585607+00:00",
+          "average_latency_ms": 0.0
+        },
+        "patient": {
+          "sampled_at": "2026-10-29T08:05:04.575159+00:00",
+          "average_latency_ms": 0.0
+        },
+        "emergency": {
+          "sampled_at": "2026-10-29T08:05:04.587026+00:00",
+          "average_latency_ms": 0.0
+        }
+      }
+    }
+  ],
+  "grants": [
+    {
+      "event_id": "AWS-SYNTHETIC-A",
+      "outcome": "issued"
+    },
+    {
+      "event_id": "AWS-SYNTHETIC-B",
+      "outcome": "paced_then_issued"
+    }
+  ],
+  "checks": {
+    "normal": 1.9999999999999998,
+    "caution": 0.9999999999999999,
+    "stale_recovery": 0.49999999999999994,
+    "recovered_normal": 2.0,
+    "stale_denial": true,
+    "pacing_denial": true,
+    "allowed_before_second_grant": 1,
+    "denied_before_second_grant": 2
+  },
+  "result": "passed",
+  "compose_cleanup": "passed",
+  "finished_at": "2026-10-29T08:05:15.705573+00:00",
+  "aws_context": {
+    "region": "us-east-1",
+    "instance_id": "i-0f813e0b5138a9851",
+    "instance_type": "t3.medium",
+    "ami": "ami-0d6dd9e8265d48906",
+    "root_volume_id": "vol-08890a7b96c69d3f4",
+    "root_volume_gib": 30,
+    "root_volume_type": "gp3",
+    "delete_on_termination": true,
+    "security_group_id": "sg-0533aea3e6b8d8183",
+    "iam_instance_profile": null,
+    "ssh_host_fingerprint": "SHA256:K60BPbbEosFBJj3uhAZmInUiQOQmcAiy08O4FI7+N6E",
+    "source_archive_sha256": "62fe42f9e4d677b1331faa84c6bc7408d31d24c16425e6b418ab4bf47b5a22a9"
+  },
+  "admission_config": {
+    "CONTROLLER_ADMISSION_POLICY": "aimd",
+    "CONTROLLER_ADMISSION_ENABLED": "1",
+    "CONTROLLER_ADMISSION_POLL_SECONDS": "1",
+    "CONTROLLER_ADMISSION_MAX_AGE_SECONDS": "5",
+    "CONTROLLER_ADMISSION_TIMEOUT_SECONDS": "1",
+    "CONTROLLER_ADMISSION_DWELL_SECONDS": "3",
+    "CONTROLLER_ADMISSION_HEALTHY_SAMPLES": "2",
+    "CONTROLLER_ADMISSION_ADDITIVE_RPS": "0.2"
+  },
+  "telemetry_faults": {
+    "caution": "Patient average_latency_ms set to 300 in fresh real /metrics response",
+    "stale": "Patient sampled_at set 30 seconds behind in real /metrics response"
+  },
+  "aws_cleanup": {
+    "checked_at": "2026-10-29T08:08:21.370560+00:00",
+    "instance": "terminated",
+    "root_volume": "absent",
+    "test_security_group": "absent",
+    "production_instances": {
+      "i-0150ab4c3e0c14b62": "running",
+      "i-07cc176b6546ae567": "running",
+      "i-06c17311b91ff4637": "running"
+    }
+  },
+  "preflight_correction": "Initial script invocation stopped before Compose because an untracked local compose.override.yaml was absent from the source archive. The optional-file lookup was corrected; this evidence is the single completed run."
+}

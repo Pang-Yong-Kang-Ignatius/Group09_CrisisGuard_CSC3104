@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-23",
+  "scope": "Local Docker launcher verification; no AWS deployment",
+  "includes_uncommitted_launcher_changes": true,
+  "docker_engine": "29.5.2",
+  "image": "crisisguard-aws-launcher:dev",
+  "image_id": "sha256:66b260b00da452ceb3530a4fcb7b4dc69e3eb9480620d38346e1a0243c22ef53",
+  "container_python": "3.11.17",
+  "boto3": "1.43.118",
+  "botocore": "1.43.118",
+  "unit_tests": {"path": "tests/unit/test_lab_launcher.py", "passed": 20},
+  "checks": {
+    "docker_image_build": "passed",
+    "preview_in_container_with_network_none": "passed",
+    "documented_powershell_preview_wrapper": "passed",
+    "cloudformation_schema_cfn_lint_1_58_0": "passed",
+    "broad_ssh_source_rejected_in_container": "passed",
+    "missing_credentials_rejected_in_container": "passed",
+    "temporary_launcher_containers_removed": true
+  },
+  "fixes": [
+    "Use schema-valid zero resource IDs marked as preview placeholders",
+    "Remove redundant Cloud dependency already enforced by UserData GetAtt",
+    "Add CloudFormation schema lint to hosted CI"
+  ],
+  "aws_calls_made": false,
+  "aws_resources_created": false,
+  "remaining": [
+    "Commit launcher files before git archive HEAD can include them",
+    "Fresh Learner Lab read-only plan with current temporary credentials",
+    "Permitted fresh AWS launch and end-to-end synthetic capture/replay test",
+    "Hosted CI result"
+  ],
+  "full_unit_suite": "Not rerun during this focused validation; earlier broader run stalled"
+}

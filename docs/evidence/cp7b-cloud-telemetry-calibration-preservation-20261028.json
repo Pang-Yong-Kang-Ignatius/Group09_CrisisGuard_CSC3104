@@ -1,0 +1,70 @@
+{
+  "checkpoint": "7B",
+  "scope": "Original desktop Cloud telemetry calibration preservation audit",
+  "calibration_started_at": "2026-10-28T12:50:44.969296+00:00",
+  "calibration_finished_at": "2026-10-28T12:52:14.510054+00:00",
+  "raw_evidence": {
+    "path": "docs/evidence/cp7b-cloud-telemetry-calibration-20261028.json",
+    "sha256": "1fb5e72e0307a5e2e3efb9e1ed2d4005de6320b4889a60dab093fc4f50dc317e",
+    "bytes": 755352
+  },
+  "reproduction_script": {
+    "path": "docs/evidence/cp7b-cloud-telemetry-calibration-20261028.py",
+    "sha256": "a26341db2268b4dfafa8cfb6f20d7e3d742228d184b10e69a3686b332999b9db"
+  },
+  "database_integrity": {
+    "postgresql": {
+      "before_count": 191,
+      "after_count": 191,
+      "before_logical_sha256": "0766916b2acbb9246b40d7d75004f311bd0bde2ca9b56c8990a5e9f3808cb10a",
+      "after_logical_sha256": "0766916b2acbb9246b40d7d75004f311bd0bde2ca9b56c8990a5e9f3808cb10a"
+    },
+    "hospital_a_sqlite": {
+      "before_count": 60,
+      "after_count": 60,
+      "before_logical_sha256": "52690a16085f1ac9b92e301752fb4bd0e9c8d5d804acc9c52f0987d829ab2379",
+      "after_logical_sha256": "52690a16085f1ac9b92e301752fb4bd0e9c8d5d804acc9c52f0987d829ab2379"
+    },
+    "hospital_b_sqlite": {
+      "before_count": 42,
+      "after_count": 42,
+      "before_logical_sha256": "b008cd17415ae5afc615da78af3bfb4c8c096bfebd7c1848ff751c012af4a253",
+      "after_logical_sha256": "b008cd17415ae5afc615da78af3bfb4c8c096bfebd7c1848ff751c012af4a253"
+    },
+    "controller_grants_before_and_after": 8,
+    "controller_tickets_before_and_after": 0
+  },
+  "runtime_integrity": {
+    "containers_recreated": false,
+    "containers_restarted": false,
+    "controller_configuration_changed": false,
+    "images_changed": false,
+    "volumes_before": 16,
+    "volumes_after": 16,
+    "containers_before": 33,
+    "containers_after": 33,
+    "main_stack_healthy_after": true,
+    "application_error_lines_during_run": 0,
+    "main_container_ids": {
+      "postgres": "01cce11cfc59db4d000d7fe60669817513e1d21eef90e0012c5ef4fd5e32b103",
+      "controller": "abace36180c2cf450db629f6d6382b2d081d06a32bf883200b8deec1a889e9b8",
+      "patient": "471fddd4fb574e11c6c7ebf62c8fc29bb6a887fae851ea658b32a9bb2729c11d",
+      "emergency": "ebced519cb0e158fe986ea24bd5e8f8ebd5a6ddc12a8cd7fb97a475b7a0e413e",
+      "admin": "0da8ab1757e3cc5a474ea9227a78b735eba980e845e583bb33ab366d69f23718",
+      "hospital_a": "03f2fb9ef00cf370a138b8096a4cef633c8c59636177cd1d3f4d33cec22f005d",
+      "hospital_b": "aead6bf7e8676c210acbdff32b8488dc9961ba942f73c3bc46dc53d277288592",
+      "dashboard": "fdec29438b27a784d2e84d4b3d1b616952047f11d75ed4cae7ba21c385ac612a"
+    },
+    "config_hashes": {
+      "postgres": "2a662cb9cdd1b0978fc90832ac46347b930152e844419dbeb8908c10b1c48d25",
+      "controller": "0380277aaed5ffdc78e331c854b775b7cbeffb234c22e5bb8054221dc1c0e1bd",
+      "patient": "68a21492c54e3570e82f4a6da7a1af96513d793171a177642470416f19bda052",
+      "emergency": "eeaabc0df1f4abfe7766008d1110986a045357026f771b936c997b5dd201629d",
+      "admin": "3af9a31f039c6205f86df0b0e1eb6c52bff55bd7b76f9c00b540fa1973329802",
+      "hospital_a": "ccd8ef6dba686840313c96503e2ceb79bb41e093600c94e7d7ac969d3a6c2624",
+      "hospital_b": "b00710801607b36d50927805ec6e5e84efe266f85f22ecc2649351cd63174d9e",
+      "dashboard": "242ce0d4de3e6bcb39eaa28d02f098ee3a17ca5d7a0cc5b2ec81f518b831f47b"
+    }
+  },
+  "result": "passed"
+}

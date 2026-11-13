@@ -1,0 +1,197 @@
+{
+  "run_id": "verify-20261025-e2900ef8",
+  "started_at_utc": "2026-10-24T16:04:56.841592+00:00",
+  "region": "us-east-1",
+  "scope": "Original three EC2 hosts; source-verified existing application plus label-only candidate; no schema changes",
+  "new_ec2_instances": 0,
+  "new_aws_stacks": 0,
+  "backup_downloads": 0,
+  "phases": [
+    {
+      "phase": "prepare",
+      "result": "passed",
+      "role": "cloud",
+      "baseline_records": 10,
+      "backup": {
+        "bytes": 2296,
+        "sha256": "2d9ac7e2d32a02cc18dc9f30466ac2e51d64779e4c5e25455eb71c7728cbbacb",
+        "restored_records": 10
+      },
+      "source_verified": true
+    },
+    {
+      "phase": "prepare",
+      "result": "passed",
+      "role": "hospital-a",
+      "baseline_records": 5,
+      "backup": {
+        "bytes": 20480,
+        "sha256": "ba89459c1643949e71aa6f0ac366f195773cf6eae60701fa56f7b5c21de6a8a2",
+        "restored_records": 5
+      },
+      "source_verified": true
+    },
+    {
+      "phase": "prepare",
+      "result": "passed",
+      "role": "hospital-b",
+      "baseline_records": 5,
+      "backup": {
+        "bytes": 20480,
+        "sha256": "56177b42d1cac719441809dadb31267ca5eadd7d78b26049ec00f1b54ebcf962",
+        "restored_records": 5
+      },
+      "source_verified": true
+    },
+    {
+      "phase": "update",
+      "role": "cloud",
+      "result": "passed",
+      "records_retained": 10,
+      "exact_candidate_verified": true
+    },
+    {
+      "phase": "update",
+      "role": "hospital-a",
+      "result": "passed",
+      "records_retained": 5,
+      "exact_candidate_verified": true
+    },
+    {
+      "phase": "update",
+      "role": "hospital-b",
+      "result": "passed",
+      "records_retained": 5,
+      "exact_candidate_verified": true
+    },
+    {
+      "phase": "capture",
+      "role": "hospital-a",
+      "result": "passed",
+      "new_synthetic_records": 1
+    },
+    {
+      "phase": "capture",
+      "role": "hospital-b",
+      "result": "passed",
+      "new_synthetic_records": 1
+    },
+    {
+      "phase": "accept",
+      "role": "cloud",
+      "result": "passed",
+      "records": 12
+    },
+    {
+      "phase": "accept",
+      "role": "hospital-a",
+      "result": "passed",
+      "records": 6
+    },
+    {
+      "phase": "accept",
+      "role": "hospital-b",
+      "result": "passed",
+      "records": 6
+    },
+    {
+      "phase": "rollback",
+      "role": "hospital-b",
+      "result": "passed",
+      "records_retained": 6,
+      "exact_previous_verified": true,
+      "postgres_identity_verified": false
+    },
+    {
+      "phase": "rollback",
+      "role": "hospital-a",
+      "result": "passed",
+      "records_retained": 6,
+      "exact_previous_verified": true,
+      "postgres_identity_verified": false
+    },
+    {
+      "phase": "rollback",
+      "role": "cloud",
+      "result": "passed",
+      "records_retained": 12,
+      "exact_previous_verified": true,
+      "postgres_identity_verified": true
+    },
+    {
+      "phase": "failed-release",
+      "role": "hospital-a",
+      "result": "passed",
+      "health_gate_rejected": true,
+      "records_retained": 6,
+      "backup": {
+        "bytes": 20480,
+        "sha256": "42495d4a8cc93fce1e36460edfcbe009bcbd15469d370ea03402748917e2e369",
+        "restored_records": 6
+      }
+    },
+    {
+      "phase": "final",
+      "role": "cloud",
+      "result": "passed",
+      "records": 12,
+      "data_state_unchanged_after_rollback": true
+    },
+    {
+      "phase": "final",
+      "role": "hospital-a",
+      "result": "passed",
+      "records": 6,
+      "data_state_unchanged_after_rollback": true
+    },
+    {
+      "phase": "final",
+      "role": "hospital-b",
+      "result": "passed",
+      "records": 6,
+      "data_state_unchanged_after_rollback": true
+    }
+  ],
+  "result": "passed",
+  "emergency_backout": [],
+  "completed_at_utc": "2026-10-24T16:08:01.804951+00:00",
+  "aws_shutdown": {
+    "instances": {
+      "cloud": "stopped",
+      "hospital-a": "stopped",
+      "hospital-b": "stopped"
+    },
+    "learner_lab": "terminated",
+    "timer": "00:00",
+    "verified_at_utc": "2026-10-24T16:14:05.872068+00:00"
+  },
+  "server_artifacts": "Any generated backups, reports, manifests, image pins and checkpoints remain private on each selected host; see completed phases",
+  "verification_date_singapore": "2026-10-25",
+  "application_commit": "ab76b88638f7a1ebaa50e45f866a62eb69a03390",
+  "source_verification": "Running cloud/edge Python source matched deployed Git revision after CRLF/LF normalization; original runtime/source files not edited",
+  "initial_gate": "First preparation attempt stopped before cutover because raw byte hashes differed; normalized comparison proved newline-only differences",
+  "lab_budget_display": {
+    "before": "Used $1.2 of $50",
+    "after": "Used $1.2 of $50",
+    "scope": "Rounded portal display, not a billing delta; a refresh showed a budget-retrieval alert which was dismissed"
+  },
+  "new_synthetic_records": 2,
+  "final_records": {
+    "cloud": 12,
+    "hospital_a": 6,
+    "hospital_b": 6
+  },
+  "configuration_or_access_changes": false,
+  "live_database_restore": false,
+  "controller_deployed": false,
+  "active_application_images": "Previous immutable images restored on all three hosts",
+  "retention": "Existing EBS/database volumes, two new synthetic records, fresh on-server backups/checkpoints and verification image tags retained; no database backups downloaded",
+  "raw_log_sha256": "d9d1fa46ab98cc5f224669efed9575d2fd649cfa90086ccc45700a5781ebb61f",
+  "limitations": [
+    "Same-source label-only update, not a new application release or migration compatibility proof",
+    "Fresh backups were restored only into isolated temporary targets",
+    "No new EC2, CloudFormation, IAM, security-group or storage provisioning",
+    "No live launcher cleanup-plan/teardown against the original manual deployment",
+    "Hosted CI and independent teammate reproduction remain pending"
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "checkpoint": "7B AWS AIMD pre-upgrade backups",
+  "date_sgt": "2026-10-29",
+  "region": "us-east-1",
+  "application_revision": "1482fe3827896f135577ee53b68ddd67b57f881f",
+  "backup_utility_sha256": "ab7d1c6ec6573f89326238223239027c9d6db92855a39e98280a616248bd9251",
+  "method": {
+    "cloud": "pg_dump custom archive from the running PostgreSQL service",
+    "hospitals": "SQLite online backup API from the running hospital service",
+    "postgres_restore": "PostgreSQL 16 temporary container with no network or persistent volume; pg_restore single transaction and exit on error",
+    "sqlite_restore": "temporary SQLite file; integrity, foreign-key, schema and full-content checks",
+    "live_services_stopped_or_recreated": false
+  },
+  "cloud": {
+    "instance_id": "i-0150ab4c3e0c14b62",
+    "free_gib_before": 13.03,
+    "backup": "~/crisisguard-backups/cp7b-aimd-20261029-cloud-trddmili/cloud.dump",
+    "backup_checked_at_utc": "2026-10-29T07:25:51.260480+00:00",
+    "restore_checked_at_utc": "2026-10-29T07:25:52.022532+00:00",
+    "bytes": 12514,
+    "sha256": "a57502fdbdfd2ac24072ca2bca3307a27cf6737cb436b299e6a20a56e0351560",
+    "checksum_and_restore": "passed",
+    "source_before_restored_source_after": {
+      "events": 16,
+      "event_statuses": {"applied": 16},
+      "site_counts": {"Hospital_A": 9, "Hospital_B": 7},
+      "events_fingerprint": "51e028d22e2bf2f34f857941e6e04121",
+      "grants": 12,
+      "grant_statuses": {"completed": 12},
+      "grants_fingerprint": "0775eb8231fe745602f611f7417ab7c2",
+      "tickets": 0,
+      "tickets_fingerprint": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "postgres_volume": "crisisguard-aws-cloud_postgres-data",
+    "existing_containers_healthy_after": true,
+    "temporary_restore_containers_remaining": 0
+  },
+  "hospital_a": {
+    "instance_id": "i-07cc176b6546ae567",
+    "free_gib_before": 9.69,
+    "backup": "~/crisisguard-backups/cp7b-aimd-20261029-hospital-a-aza1n8vj/hospital-a.sqlite3",
+    "backup_checked_at_utc": "2026-10-29T07:26:35.259932+00:00",
+    "restore_checked_at_utc": "2026-10-29T07:26:35.794031+00:00",
+    "bytes": 28672,
+    "sha256": "cd8a6c2f0a7ecfa1b324fa06f7924cb79911583191218447fe9625ee7ee802f4",
+    "checksum_and_restore": "passed",
+    "source_before_restored_source_after": {
+      "event_statuses": {"applied": 9},
+      "site_counts": {"Hospital_A": 9},
+      "table_rows": {"events": 9, "metaguard_attempts": 7, "recovery_state": 9},
+      "in_flight": 0,
+      "quarantined": 0,
+      "logical_sha256": "11d3fc3e431e2e5a97776baac084417ccce08b9c2473cab7771c5580271d9d4c"
+    },
+    "sqlite_integrity": "ok",
+    "foreign_key_violations": 0,
+    "hospital_volume": "crisisguard-aws-hospital-a_hospital-data",
+    "existing_container_healthy_after": true
+  },
+  "hospital_b": {
+    "instance_id": "i-06c17311b91ff4637",
+    "free_gib_before": 9.7,
+    "backup": "~/crisisguard-backups/cp7b-aimd-20261029-hospital-b-3ig15yqe/hospital-b.sqlite3",
+    "backup_checked_at_utc": "2026-10-29T07:26:34.127542+00:00",
+    "restore_checked_at_utc": "2026-10-29T07:26:34.666457+00:00",
+    "bytes": 28672,
+    "sha256": "5c8fd33acefc1b513c5836c2af6e7be6b792e2b83978e32732a7345409023df0",
+    "checksum_and_restore": "passed",
+    "source_before_restored_source_after": {
+      "event_statuses": {"applied": 7},
+      "site_counts": {"Hospital_B": 7},
+      "table_rows": {"events": 7, "metaguard_attempts": 5, "recovery_state": 7},
+      "in_flight": 0,
+      "quarantined": 0,
+      "logical_sha256": "567d781999d2729e00bf59513ef930dcd202e1277d05330a9bafb269be3cef53"
+    },
+    "sqlite_integrity": "ok",
+    "foreign_key_violations": 0,
+    "hospital_volume": "crisisguard-aws-hospital-b_hospital-data",
+    "existing_container_healthy_after": true
+  },
+  "privacy": {
+    "backup_directory_mode": "0700",
+    "backup_and_report_file_mode": "0600",
+    "database_archives_in_repository": false,
+    "gitignore_patterns": ["*.dump", "*.sqlite3", "/backups/"],
+    "secrets_or_event_payloads_in_this_report": false
+  },
+  "remaining_upgrade_gates": [
+    "Keep protected off-host copies of all three archives and verify their SHA-256 values there.",
+    "Validate controller-aware rollback compatibility with the two pending AIMD admission columns before rollout.",
+    "Map the AIMD policy and additive rate into the AWS controller container configuration.",
+    "Use an agreed isolated AWS setting or another proven safe method for Normal/Caution/Recovery transition verification."
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-03",
+  "base_commit": "d394fd9d939ee67a9cd790834843771adc8f1266",
+  "state": "uncommitted detached checkout; no push or merge",
+  "source_scope": "H5 harness/assessment plus documentation; upstream W5 files preserved",
+  "unit_tests": {
+    "python": "3.13.14",
+    "total": 1309,
+    "passed": 1307,
+    "failed": 2,
+    "failed_cases": [
+      "tests.unit.test_project_e2e.test_e2e_dispatch_does_not_run_unit_or_live_existing_integrations",
+      "tests.unit.test_project_verify.test_nonzero_check_fails_overall_but_missing_coverage_does_not"
+    ],
+    "reason": "Both fail at upstream project_verify Python 3.11 gate; reproduced against untouched latest ZIP. Python 3.11 not installed locally.",
+    "junit_sha256": "9f9c875c8f108e49bcdc3e720deb13f76a3dafbcddf2353883989d68cc9f0df9",
+    "junit_path": "evaluation/results/h5-w5-unit-tests-20261103.xml"
+  },
+  "focused_scratch_compatibility": {
+    "passed": 54,
+    "failed": 0
+  },
+  "plan_only": {
+    "planned_trials": 40,
+    "retain_test_databases": true,
+    "experiments_executed": 0,
+    "plan_sha256": "45c41dfaccc02bf94ad56cb961c2bf36f8f941de4865c28cf9dac6920de3d32f"
+  },
+  "preservation": {
+    "h5_immutable_evidence_and_spec_files": 12,
+    "h5_archive_sha256": "d6321c46ea165bb1c07528d435465c61cd7cd07bb5e62c73036a5126f73cba6a",
+    "upstream_nonoverlapping_files_preserved": true,
+    "production_source_unchanged": true
+  },
+  "checks": {
+    "conflict_markers": "none remaining in updated documents/source",
+    "whitespace": "passed excluding intentional upstream Markdown trailing hard-breaks"
+  },
+  "not_executed": [
+    "Python 3.11 full suite",
+    "Docker/PostgreSQL experiments",
+    "hosted CI",
+    "W5 raw archive reproduction"
+  ],
+  "remaining_risks": [
+    "H5 failed network guard remains failed",
+    "W5 drain and routine targets failed",
+    "Experimental component approvals, scheduler target and full correctness/fairness/overload coverage remain open"
+  ]
+}

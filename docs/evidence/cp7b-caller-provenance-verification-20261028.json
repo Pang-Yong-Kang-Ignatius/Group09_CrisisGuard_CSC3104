@@ -1,0 +1,345 @@
+{
+  "checkpoint": "7B",
+  "scope": "Original desktop deployed-caller provenance verification",
+  "started_at": "2026-10-28T13:05:49.534711+00:00",
+  "finished_at": "2026-10-28T13:05:51.978243+00:00",
+  "method": {
+    "clean_window_required": true,
+    "hospital_calls": "Deployed edge.capture_api.cloud_client functions invoked in each running Hospital container",
+    "dashboard_live_calls": "Deployed cloud.traffic helper invoked in Dashboard container; not an active Dashboard route while direct submissions are disabled",
+    "write_safety": "Synthetic Hospital POSTs use an authenticated but nonexistent grant UUID and must be rejected before persistence"
+  },
+  "baseline_metrics": {
+    "patient": {
+      "live_p95_latency_ms": null,
+      "live_latency_sample_count": 0,
+      "replay_latency_sample_count": 0,
+      "unclassified_latency_sample_count": 0,
+      "p95_latency_ms": null,
+      "latency_sample_count": 0,
+      "observation_seconds": 60,
+      "in_flight_requests": 0,
+      "average_latency_ms": 0.0,
+      "error_rate": 0.0,
+      "throughput_rps": 0.0,
+      "window_requests": 0,
+      "total_requests": 372,
+      "failed_requests": 0,
+      "window_seconds": 60,
+      "uptime_seconds": 1989.23,
+      "executor_queue_depth": 0,
+      "executor_active_workers": 0,
+      "executor_worker_limit": 40,
+      "executor_queue_pressure": 0.0,
+      "executor_queue_sampled_at": "2026-10-28T13:05:49.111474+00:00",
+      "sampled_at": "2026-10-28T13:05:49.111439+00:00",
+      "service": "patient",
+      "database_healthy": true
+    },
+    "emergency": {
+      "live_p95_latency_ms": null,
+      "live_latency_sample_count": 0,
+      "replay_latency_sample_count": 0,
+      "unclassified_latency_sample_count": 0,
+      "p95_latency_ms": null,
+      "latency_sample_count": 0,
+      "observation_seconds": 60,
+      "in_flight_requests": 0,
+      "average_latency_ms": 0.0,
+      "error_rate": 0.0,
+      "throughput_rps": 0.0,
+      "window_requests": 0,
+      "total_requests": 362,
+      "failed_requests": 0,
+      "window_seconds": 60,
+      "uptime_seconds": 2122.59,
+      "executor_queue_depth": 0,
+      "executor_active_workers": 0,
+      "executor_worker_limit": 40,
+      "executor_queue_pressure": 0.0,
+      "executor_queue_sampled_at": "2026-10-28T13:05:49.144361+00:00",
+      "sampled_at": "2026-10-28T13:05:49.144260+00:00",
+      "service": "emergency",
+      "database_healthy": true
+    },
+    "admin": {
+      "live_p95_latency_ms": null,
+      "live_latency_sample_count": 0,
+      "replay_latency_sample_count": 0,
+      "unclassified_latency_sample_count": 0,
+      "p95_latency_ms": null,
+      "latency_sample_count": 0,
+      "observation_seconds": 60,
+      "in_flight_requests": 0,
+      "average_latency_ms": 0.0,
+      "error_rate": 0.0,
+      "throughput_rps": 0.0,
+      "window_requests": 0,
+      "total_requests": 362,
+      "failed_requests": 0,
+      "window_seconds": 60,
+      "uptime_seconds": 2122.43,
+      "executor_queue_depth": 0,
+      "executor_active_workers": 0,
+      "executor_worker_limit": 40,
+      "executor_queue_pressure": 0.0,
+      "executor_queue_sampled_at": "2026-10-28T13:05:49.175313+00:00",
+      "sampled_at": "2026-10-28T13:05:49.175270+00:00",
+      "service": "admin",
+      "database_healthy": true
+    }
+  },
+  "reconciliation_get_results": {
+    "hospital_a_patient": {
+      "state": "applied",
+      "site_id": "Hospital_A"
+    },
+    "hospital_a_emergency": {
+      "state": "applied",
+      "site_id": "Hospital_A"
+    },
+    "hospital_a_admin": {
+      "state": "applied",
+      "site_id": "Hospital_A"
+    },
+    "hospital_b_patient": {
+      "state": "applied",
+      "site_id": "Hospital_B"
+    }
+  },
+  "invalid_grant_replay_post_results": {
+    "hospital_a": {
+      "status": "http_error",
+      "status_code": 409,
+      "error": "{\"detail\":\"Grant cannot authorize this event attempt\"}"
+    },
+    "hospital_b": {
+      "status": "http_error",
+      "status_code": 409,
+      "error": "{\"detail\":\"Grant cannot authorize this event attempt\"}"
+    }
+  },
+  "dashboard_live_credential_helper_results": {
+    "patient": {
+      "status_code": 200,
+      "body_status": "applied",
+      "telemetry_header_present": true,
+      "token_length_policy_met": true
+    },
+    "emergency": {
+      "status_code": 200,
+      "body_status": "applied",
+      "telemetry_header_present": true,
+      "token_length_policy_met": true
+    },
+    "admin": {
+      "status_code": 200,
+      "body_status": "applied",
+      "telemetry_header_present": true,
+      "token_length_policy_met": true
+    }
+  },
+  "dashboard_direct_submission_guard": {
+    "captured_at": "2026-10-28T13:05:51.568509+00:00",
+    "status_code": 403,
+    "body": {
+      "detail": "Direct Cloud submissions are disabled. Use Hospital A/B capture for grant-controlled delivery."
+    }
+  },
+  "external_unmarked_result": {
+    "captured_at": "2026-10-28T13:05:51.355306+00:00",
+    "status_code": 200,
+    "body": {
+      "event_id": "CP7B_RESUME_20261028T123204Z_Hospital_A_stale",
+      "site_id": "Hospital_A",
+      "event_type": "patient_registration",
+      "status": "applied",
+      "applied_at": "2026-10-28T12:33:00.903060+00:00"
+    }
+  },
+  "external_invalid_mark_result": {
+    "captured_at": "2026-10-28T13:05:51.364226+00:00",
+    "status_code": 200,
+    "body": {
+      "event_id": "CP7B_RESUME_20261028T123204Z_Hospital_A_stale",
+      "site_id": "Hospital_A",
+      "event_type": "patient_registration",
+      "status": "applied",
+      "applied_at": "2026-10-28T12:33:00.903060+00:00"
+    }
+  },
+  "contradictory_live_with_grant_result": {
+    "status_code": 200,
+    "body_status": "applied",
+    "telemetry_header_present": true,
+    "token_length_policy_met": true
+  },
+  "final_metrics": {
+    "patient": {
+      "live_p95_latency_ms": 6.68,
+      "live_latency_sample_count": 1,
+      "replay_latency_sample_count": 2,
+      "unclassified_latency_sample_count": 5,
+      "p95_latency_ms": 7.67,
+      "latency_sample_count": 8,
+      "observation_seconds": 60,
+      "in_flight_requests": 0,
+      "average_latency_ms": 6.74,
+      "error_rate": 0.0,
+      "throughput_rps": 0.1333,
+      "window_requests": 8,
+      "total_requests": 380,
+      "failed_requests": 0,
+      "window_seconds": 60,
+      "uptime_seconds": 1991.72,
+      "executor_queue_depth": 0,
+      "executor_active_workers": 0,
+      "executor_worker_limit": 40,
+      "executor_queue_pressure": 0.0,
+      "executor_queue_sampled_at": "2026-10-28T13:05:51.603840+00:00",
+      "sampled_at": "2026-10-28T13:05:51.603793+00:00",
+      "service": "patient",
+      "database_healthy": true
+    },
+    "emergency": {
+      "live_p95_latency_ms": 7.07,
+      "live_latency_sample_count": 1,
+      "replay_latency_sample_count": 0,
+      "unclassified_latency_sample_count": 1,
+      "p95_latency_ms": 7.68,
+      "latency_sample_count": 2,
+      "observation_seconds": 60,
+      "in_flight_requests": 0,
+      "average_latency_ms": 7.38,
+      "error_rate": 0.0,
+      "throughput_rps": 0.0333,
+      "window_requests": 2,
+      "total_requests": 364,
+      "failed_requests": 0,
+      "window_seconds": 60,
+      "uptime_seconds": 2125.08,
+      "executor_queue_depth": 0,
+      "executor_active_workers": 0,
+      "executor_worker_limit": 40,
+      "executor_queue_pressure": 0.0,
+      "executor_queue_sampled_at": "2026-10-28T13:05:51.635411+00:00",
+      "sampled_at": "2026-10-28T13:05:51.635361+00:00",
+      "service": "emergency",
+      "database_healthy": true
+    },
+    "admin": {
+      "live_p95_latency_ms": 7.19,
+      "live_latency_sample_count": 1,
+      "replay_latency_sample_count": 0,
+      "unclassified_latency_sample_count": 1,
+      "p95_latency_ms": 7.19,
+      "latency_sample_count": 2,
+      "observation_seconds": 60,
+      "in_flight_requests": 0,
+      "average_latency_ms": 7.16,
+      "error_rate": 0.0,
+      "throughput_rps": 0.0333,
+      "window_requests": 2,
+      "total_requests": 364,
+      "failed_requests": 0,
+      "window_seconds": 60,
+      "uptime_seconds": 2124.9,
+      "executor_queue_depth": 0,
+      "executor_active_workers": 0,
+      "executor_worker_limit": 40,
+      "executor_queue_pressure": 0.0,
+      "executor_queue_sampled_at": "2026-10-28T13:05:51.643690+00:00",
+      "sampled_at": "2026-10-28T13:05:51.643654+00:00",
+      "service": "admin",
+      "database_healthy": true
+    }
+  },
+  "observed_classification_counts": {
+    "patient": {
+      "live_latency_sample_count": 1,
+      "replay_latency_sample_count": 2,
+      "unclassified_latency_sample_count": 5,
+      "latency_sample_count": 8
+    },
+    "emergency": {
+      "live_latency_sample_count": 1,
+      "replay_latency_sample_count": 0,
+      "unclassified_latency_sample_count": 1,
+      "latency_sample_count": 2
+    },
+    "admin": {
+      "live_latency_sample_count": 1,
+      "replay_latency_sample_count": 0,
+      "unclassified_latency_sample_count": 1,
+      "latency_sample_count": 2
+    }
+  },
+  "expected_classification_counts": {
+    "patient": {
+      "live_latency_sample_count": 1,
+      "replay_latency_sample_count": 2,
+      "unclassified_latency_sample_count": 5,
+      "latency_sample_count": 8
+    },
+    "emergency": {
+      "live_latency_sample_count": 1,
+      "replay_latency_sample_count": 0,
+      "unclassified_latency_sample_count": 1,
+      "latency_sample_count": 2
+    },
+    "admin": {
+      "live_latency_sample_count": 1,
+      "replay_latency_sample_count": 0,
+      "unclassified_latency_sample_count": 1,
+      "latency_sample_count": 2
+    }
+  },
+  "rejected_event_ids": {
+    "hospital_a": "CP7B_PROVENANCE_REJECT_HOSPITAL_A_20261028",
+    "hospital_b": "CP7B_PROVENANCE_REJECT_HOSPITAL_B_20261028"
+  },
+  "database_before": {
+    "postgresql": {
+      "count": 191,
+      "logical_sha256": "4c916b2f01e836bc1118e0621105dfcf589f2a5ffc17e1bd560bf0620d839d7f"
+    },
+    "hospital_a_sqlite": {
+      "count": 60,
+      "logical_sha256": "13a287aef75bd1bdb4e9fa757636d807a4708e6db4c2c04cdca304e8c0a9b27a"
+    },
+    "hospital_b_sqlite": {
+      "count": 42,
+      "logical_sha256": "aee2685d59b3a86640ed3a7331f1742eb1320b732ad63a08b5f63b2dd2e28642"
+    }
+  },
+  "database_after": {
+    "postgresql": {
+      "count": 191,
+      "logical_sha256": "4c916b2f01e836bc1118e0621105dfcf589f2a5ffc17e1bd560bf0620d839d7f"
+    },
+    "hospital_a_sqlite": {
+      "count": 60,
+      "logical_sha256": "13a287aef75bd1bdb4e9fa757636d807a4708e6db4c2c04cdca304e8c0a9b27a"
+    },
+    "hospital_b_sqlite": {
+      "count": 42,
+      "logical_sha256": "aee2685d59b3a86640ed3a7331f1742eb1320b732ad63a08b5f63b2dd2e28642"
+    }
+  },
+  "assertions": {
+    "classification_counts_exact": true,
+    "all_reconciliation_applied": true,
+    "authenticated_invalid_grant_posts_denied_409": true,
+    "dashboard_direct_submission_denied_403": true,
+    "dashboard_live_helper_authenticated": true,
+    "unmarked_and_invalid_requests_succeeded_but_unclassified": true,
+    "contradictory_live_with_grant_succeeded_but_unclassified": true,
+    "database_logical_snapshots_unchanged": true
+  },
+  "result": "passed",
+  "limitations": [
+    "Hospital reconciliation GETs are unmarked by deployed code and therefore unclassified.",
+    "Dashboard direct Cloud POST forwarding is intentionally unreachable while METAGUARD_REQUIRED=1; helper probes validate its configured live credential, not an active submission route.",
+    "External callers require explicit live provenance credentials; missing, invalid, or contradictory markings fail closed to unclassified."
+  ]
+}

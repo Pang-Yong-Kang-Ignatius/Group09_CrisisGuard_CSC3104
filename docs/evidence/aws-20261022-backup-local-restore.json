@@ -1,0 +1,14 @@
+{
+  "checked_at_utc": "2026-10-22T05:59:39.384603+00:00",
+  "operation": "restore-check",
+  "sha256": "67fef154f9a66cd26ddefc99770622c43d5159d3a333ca6308be7111738f5579",
+  "kind": "postgres",
+  "event_count": 2,
+  "event_status_counts": {
+    "applied": 2
+  },
+  "events_fingerprint": "fcef9204e2f059b3e61e3747e75ca34b",
+  "expected_events_found": 2,
+  "restore_target": "isolated container; no network or persistent volume",
+  "result": "passed"
+}

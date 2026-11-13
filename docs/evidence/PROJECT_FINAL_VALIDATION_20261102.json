@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-02",
+  "tested_base_revision": "a631e6ea8ab80d549e09b7b80fcf16af816d09e6",
+  "command": ".\\test.project.ps1 -Full",
+  "environment": {
+    "python": "3.11.9",
+    "node": "v24.22.1",
+    "platform": "Windows"
+  },
+  "checks": {
+    "Python unit tests": "PASS",
+    "API contract checks": "PASS",
+    "Security regression": "PASS",
+    "Python coverage": "PASS",
+    "JavaScript unit tests": "PASS",
+    "JavaScript coverage": "NOT VERIFIED",
+    "PostgreSQL integration": "SKIP",
+    "Docker health": "SKIP",
+    "Evaluation evidence": "PASS",
+    "Proposal acceptance": "NOT VERIFIED",
+    "Coverage audit generation": "PASS"
+  },
+  "tests": {
+    "Python safe regression": {
+      "total": 1359,
+      "passed": 1359,
+      "failed": 0,
+      "skipped": 0
+    },
+    "JavaScript (including queue file test)": {
+      "total": 86,
+      "passed": 86,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "tested_framework_sha256": {
+    ".coveragerc": "92a2bafe3810ae07cb59ca3101cbc262eb98d2fd83f9203b8794e7a63834904e",
+    "infrastructure/scripts/project_audit_catalog.py": "4d44ecf109983c62f41e94a6cf0c4c123674f51f8536b9ef7e1d7f41151bc341",
+    "infrastructure/scripts/project_docker_guard.py": "e3ae08c1dba1a82050528bde541aa7cc2ea7a5c17e46131dbdfe998e510b5589",
+    "infrastructure/scripts/project_e2e.py": "828a427abd5a06014b8e721afd1fab81badcacfc791dbb63bead86637dc9edaa",
+    "infrastructure/scripts/project_e2e_scenarios.py": "3b9494ccd6369f25cc59f5615037f3fa36bd4a8bd8ad8b3801d6d08bd04f348c",
+    "infrastructure/scripts/project_test_probe.py": "68f4431bad81bd638a4010d3a9a72c61a80c887e36881182fad26ab7c15bd08e",
+    "infrastructure/scripts/project_v8_probe.cjs": "7506ee78198142595e10f0d4d33229637cf84044d70933ba57b394c4ac98b6c3",
+    "infrastructure/scripts/project_verify.py": "85989bd78166ba66f28480d3581f9be59c5619edaf9b31f355450c22c532aa7e",
+    "requirements-test.txt": "af2a022eb2873db050bfe38b90a065c7d18466baaee8c9c14a95baa4faec8ba5",
+    "test.project.ps1": "f6ba867f8c7f2bf44893a4da60b4d979b847560052e034d869f6bcdc325d4da4",
+    "tests/unit/test_project_docker_guard.py": "54ab69c356c3c6bebfcbdfea3ee9ba7a4af231e1bb6f66916de1cdfb0d49d12e",
+    "tests/unit/test_project_e2e.py": "b271b195801d7df39f94fc90abe0823472ad7dcf30ab8868ce08702fd7a793b9",
+    "tests/unit/test_project_security_gaps.py": "8827fb4c54aced1703040bcd0c093b82ac68cb4eed9679250b633126fab8d2e7",
+    "tests/unit/test_project_verify.py": "df6cf97239c57fa1e0f6cb94065e06028e9c1cb9765fb7a52eb794cc5f70b351"
+  },
+  "e2e": {
+    "session": "e2e-c0bb4282cba64ab6ab54b9c505325df4",
+    "scenario_status_counts": {
+      "PASS": 12
+    },
+    "original_resource_counts": {
+      "containers": 72,
+      "volumes": 32,
+      "networks": 13
+    },
+    "owned_resource_counts": {
+      "containers": 9,
+      "volumes": 3,
+      "networks": 2
+    },
+    "captured_events": 34,
+    "authoritative_events": 34,
+    "grant_status_counts": {
+      "completed": 34,
+      "expired": 1
+    },
+    "active_faults": [],
+    "unresolved_events": {
+      "hospital-a": [],
+      "hospital-b": []
+    },
+    "unresolved_grants": [],
+    "historical_evidence_unchanged": true,
+    "cleanup": {
+      "status": "SKIP",
+      "detail": "Disposable stack retained as explicitly requested; no cleanup performed"
+    }
+  },
+  "local_evidence_sha256": {
+    ".project-test-results/20261102T145907Z-3702f94b/summary.json": "239ac467702b5c76470ea16784fc90b767c1d3722c5d087de9625287b8fe4c08",
+    ".project-test-results/controlled-c0bb4282-20261102/results.json": "6d3698d690029743f5a1ba16a9b84f50c9e2aa69f2fbc950c188cb0769f9a52f",
+    ".project-test-results/controlled-c0bb4282-20261102/final-review.json": "e9e154405673313acaf2fdb04271e38adc2473dd6f4ea407c56c417a548cce26",
+    ".project-test-results/controlled-c0bb4282-20261102/guard-checks.jsonl": "e4b861503cca65fda9f1eb313284e90b9cb3ee6bf479864ace87174c25ab965e"
+  },
+  "docker_operations_during_final_validation": false,
+  "limitations": [
+    "Complete JavaScript/browser coverage NOT VERIFIED",
+    "Original PostgreSQL pre-run content equality NOT VERIFIED",
+    "Broader live policy/admission/crash suite NOT VERIFIED",
+    "Full D2 and performance/proposal acceptance NOT VERIFIED",
+    "CI on pushed commit remains separate"
+  ],
+  "command_verification": "PowerShell help executed; setup/start/stop/cleanup checked against source without mutating Docker"
+}

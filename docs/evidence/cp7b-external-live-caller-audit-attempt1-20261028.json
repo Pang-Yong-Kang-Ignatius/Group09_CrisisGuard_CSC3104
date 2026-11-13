@@ -1,0 +1,535 @@
+{
+  "checkpoint": "7B",
+  "scope": "External/project-owned live event producer audit",
+  "started_at": "2026-10-28T13:36:08.060105+00:00",
+  "finished_at": "2026-10-28T13:36:11.938838+00:00",
+  "producer_inventory": {
+    "project_owned_runtime": [
+      {
+        "producer": "Dashboard direct Cloud submission",
+        "path": "browser POST /api/events/{service} -> Dashboard forward_request -> Cloud POST /events",
+        "provenance": "authenticated live",
+        "runtime": "disabled before forwarding by METAGUARD_REQUIRED=1"
+      },
+      {
+        "producer": "Dashboard Hospital capture",
+        "path": "browser POST /api/hospitals/{hospital}/capture -> Hospital /capture",
+        "provenance": "not a Cloud call; later Hospital delivery is authenticated replay",
+        "runtime": "enabled"
+      },
+      {
+        "producer": "Hospital A/B replay",
+        "path": "Hospital send_to_cloud -> Cloud POST /events",
+        "provenance": "authenticated replay",
+        "runtime": "enabled"
+      }
+    ],
+    "external_test_tools_not_runtime_producers": [
+      "tests/integration/test_concurrency.py",
+      "tests/integration/test_cross_service_concurrency.py",
+      "infrastructure/scripts/smoke_deployment.py",
+      "infrastructure/scripts/smoke_metaguard_deployment.py",
+      "infrastructure/scripts/aws_outage_host.py"
+    ],
+    "hypothetical_future_clients": "No implementation or deployment exists; callers must use the documented authenticated live provenance contract if introduced."
+  },
+  "deployment_decision": "No application source or deployment change required: the only project-owned live Cloud producer is already instrumented and is deliberately disabled by the grant-enforcement guard.",
+  "baseline_metrics": {
+    "patient": {
+      "live_p95_latency_ms": null,
+      "live_latency_sample_count": 0,
+      "replay_latency_sample_count": 0,
+      "unclassified_latency_sample_count": 0,
+      "p95_latency_ms": null,
+      "latency_sample_count": 0,
+      "observation_seconds": 60,
+      "in_flight_requests": 0,
+      "average_latency_ms": 0.0,
+      "error_rate": 0.0,
+      "throughput_rps": 0.0,
+      "window_requests": 0,
+      "total_requests": 382,
+      "failed_requests": 0,
+      "window_seconds": 60,
+      "uptime_seconds": 3806.87,
+      "executor_queue_depth": 0,
+      "executor_active_workers": 0,
+      "executor_worker_limit": 40,
+      "executor_queue_pressure": 0.0,
+      "executor_queue_sampled_at": "2026-10-28T13:36:06.671073+00:00",
+      "sampled_at": "2026-10-28T13:36:06.671032+00:00",
+      "service": "patient",
+      "database_healthy": true
+    },
+    "emergency": {
+      "live_p95_latency_ms": null,
+      "live_latency_sample_count": 0,
+      "replay_latency_sample_count": 0,
+      "unclassified_latency_sample_count": 0,
+      "p95_latency_ms": null,
+      "latency_sample_count": 0,
+      "observation_seconds": 60,
+      "in_flight_requests": 0,
+      "average_latency_ms": 0.0,
+      "error_rate": 0.0,
+      "throughput_rps": 0.0,
+      "window_requests": 0,
+      "total_requests": 365,
+      "failed_requests": 0,
+      "window_seconds": 60,
+      "uptime_seconds": 3940.2,
+      "executor_queue_depth": 0,
+      "executor_active_workers": 0,
+      "executor_worker_limit": 40,
+      "executor_queue_pressure": 0.0,
+      "executor_queue_sampled_at": "2026-10-28T13:36:06.682334+00:00",
+      "sampled_at": "2026-10-28T13:36:06.682287+00:00",
+      "service": "emergency",
+      "database_healthy": true
+    },
+    "admin": {
+      "live_p95_latency_ms": null,
+      "live_latency_sample_count": 0,
+      "replay_latency_sample_count": 0,
+      "unclassified_latency_sample_count": 0,
+      "p95_latency_ms": null,
+      "latency_sample_count": 0,
+      "observation_seconds": 60,
+      "in_flight_requests": 0,
+      "average_latency_ms": 0.0,
+      "error_rate": 0.0,
+      "throughput_rps": 0.0,
+      "window_requests": 0,
+      "total_requests": 365,
+      "failed_requests": 0,
+      "window_seconds": 60,
+      "uptime_seconds": 3940.03,
+      "executor_queue_depth": 0,
+      "executor_active_workers": 0,
+      "executor_worker_limit": 40,
+      "executor_queue_pressure": 0.0,
+      "executor_queue_sampled_at": "2026-10-28T13:36:06.693564+00:00",
+      "sampled_at": "2026-10-28T13:36:06.693521+00:00",
+      "service": "admin",
+      "database_healthy": true
+    }
+  },
+  "guarded_route_results": {
+    "patient": {
+      "status_code": 403,
+      "body": {
+        "detail": "Direct Cloud submissions are disabled. Use Hospital A/B capture for grant-controlled delivery."
+      }
+    },
+    "emergency": {
+      "status_code": 403,
+      "body": {
+        "detail": "Direct Cloud submissions are disabled. Use Hospital A/B capture for grant-controlled delivery."
+      }
+    },
+    "admin": {
+      "status_code": 403,
+      "body": {
+        "detail": "Direct Cloud submissions are disabled. Use Hospital A/B capture for grant-controlled delivery."
+      }
+    }
+  },
+  "metrics_after_guarded_routes": {
+    "patient": {
+      "live_p95_latency_ms": null,
+      "live_latency_sample_count": 0,
+      "replay_latency_sample_count": 0,
+      "unclassified_latency_sample_count": 0,
+      "p95_latency_ms": null,
+      "latency_sample_count": 0,
+      "observation_seconds": 60,
+      "in_flight_requests": 0,
+      "average_latency_ms": 0.0,
+      "error_rate": 0.0,
+      "throughput_rps": 0.0,
+      "window_requests": 0,
+      "total_requests": 382,
+      "failed_requests": 0,
+      "window_seconds": 60,
+      "uptime_seconds": 3808.33,
+      "executor_queue_depth": 0,
+      "executor_active_workers": 0,
+      "executor_worker_limit": 40,
+      "executor_queue_pressure": 0.0,
+      "executor_queue_sampled_at": "2026-10-28T13:36:08.131799+00:00",
+      "sampled_at": "2026-10-28T13:36:08.131750+00:00",
+      "service": "patient",
+      "database_healthy": true
+    },
+    "emergency": {
+      "live_p95_latency_ms": null,
+      "live_latency_sample_count": 0,
+      "replay_latency_sample_count": 0,
+      "unclassified_latency_sample_count": 0,
+      "p95_latency_ms": null,
+      "latency_sample_count": 0,
+      "observation_seconds": 60,
+      "in_flight_requests": 0,
+      "average_latency_ms": 0.0,
+      "error_rate": 0.0,
+      "throughput_rps": 0.0,
+      "window_requests": 0,
+      "total_requests": 365,
+      "failed_requests": 0,
+      "window_seconds": 60,
+      "uptime_seconds": 3941.68,
+      "executor_queue_depth": 0,
+      "executor_active_workers": 0,
+      "executor_worker_limit": 40,
+      "executor_queue_pressure": 0.0,
+      "executor_queue_sampled_at": "2026-10-28T13:36:08.162524+00:00",
+      "sampled_at": "2026-10-28T13:36:08.162487+00:00",
+      "service": "emergency",
+      "database_healthy": true
+    },
+    "admin": {
+      "live_p95_latency_ms": null,
+      "live_latency_sample_count": 0,
+      "replay_latency_sample_count": 0,
+      "unclassified_latency_sample_count": 0,
+      "p95_latency_ms": null,
+      "latency_sample_count": 0,
+      "observation_seconds": 60,
+      "in_flight_requests": 0,
+      "average_latency_ms": 0.0,
+      "error_rate": 0.0,
+      "throughput_rps": 0.0,
+      "window_requests": 0,
+      "total_requests": 365,
+      "failed_requests": 0,
+      "window_seconds": 60,
+      "uptime_seconds": 3941.51,
+      "executor_queue_depth": 0,
+      "executor_active_workers": 0,
+      "executor_worker_limit": 40,
+      "executor_queue_pressure": 0.0,
+      "executor_queue_sampled_at": "2026-10-28T13:36:08.173001+00:00",
+      "sampled_at": "2026-10-28T13:36:08.172951+00:00",
+      "service": "admin",
+      "database_healthy": true
+    }
+  },
+  "deployed_transport_results": {
+    "patient": {
+      "service": "patient",
+      "http_status": 401,
+      "response": {
+        "detail": "Hospital credentials required"
+      }
+    },
+    "emergency": {
+      "service": "emergency",
+      "http_status": 401,
+      "response": {
+        "detail": "Hospital credentials required"
+      }
+    },
+    "admin": {
+      "service": "admin",
+      "http_status": 401,
+      "response": {
+        "detail": "Hospital credentials required"
+      }
+    }
+  },
+  "final_metrics": {
+    "patient": {
+      "live_p95_latency_ms": 0.94,
+      "live_latency_sample_count": 1,
+      "replay_latency_sample_count": 0,
+      "unclassified_latency_sample_count": 0,
+      "p95_latency_ms": 0.94,
+      "latency_sample_count": 1,
+      "observation_seconds": 60,
+      "in_flight_requests": 0,
+      "average_latency_ms": 0.94,
+      "error_rate": 0.0,
+      "throughput_rps": 0.0167,
+      "window_requests": 1,
+      "total_requests": 383,
+      "failed_requests": 0,
+      "window_seconds": 60,
+      "uptime_seconds": 3810.65,
+      "executor_queue_depth": 0,
+      "executor_active_workers": 0,
+      "executor_worker_limit": 40,
+      "executor_queue_pressure": 0.0,
+      "executor_queue_sampled_at": "2026-10-28T13:36:10.447158+00:00",
+      "sampled_at": "2026-10-28T13:36:10.447112+00:00",
+      "service": "patient",
+      "database_healthy": true
+    },
+    "emergency": {
+      "live_p95_latency_ms": 11.83,
+      "live_latency_sample_count": 1,
+      "replay_latency_sample_count": 0,
+      "unclassified_latency_sample_count": 0,
+      "p95_latency_ms": 11.83,
+      "latency_sample_count": 1,
+      "observation_seconds": 60,
+      "in_flight_requests": 0,
+      "average_latency_ms": 11.83,
+      "error_rate": 0.0,
+      "throughput_rps": 0.0167,
+      "window_requests": 1,
+      "total_requests": 366,
+      "failed_requests": 0,
+      "window_seconds": 60,
+      "uptime_seconds": 3943.98,
+      "executor_queue_depth": 0,
+      "executor_active_workers": 0,
+      "executor_worker_limit": 40,
+      "executor_queue_pressure": 0.0,
+      "executor_queue_sampled_at": "2026-10-28T13:36:10.459934+00:00",
+      "sampled_at": "2026-10-28T13:36:10.459875+00:00",
+      "service": "emergency",
+      "database_healthy": true
+    },
+    "admin": {
+      "live_p95_latency_ms": 15.23,
+      "live_latency_sample_count": 1,
+      "replay_latency_sample_count": 0,
+      "unclassified_latency_sample_count": 0,
+      "p95_latency_ms": 15.23,
+      "latency_sample_count": 1,
+      "observation_seconds": 60,
+      "in_flight_requests": 0,
+      "average_latency_ms": 15.23,
+      "error_rate": 0.0,
+      "throughput_rps": 0.0167,
+      "window_requests": 1,
+      "total_requests": 366,
+      "failed_requests": 0,
+      "window_seconds": 60,
+      "uptime_seconds": 3943.81,
+      "executor_queue_depth": 0,
+      "executor_active_workers": 0,
+      "executor_worker_limit": 40,
+      "executor_queue_pressure": 0.0,
+      "executor_queue_sampled_at": "2026-10-28T13:36:10.473279+00:00",
+      "sampled_at": "2026-10-28T13:36:10.473211+00:00",
+      "service": "admin",
+      "database_healthy": true
+    }
+  },
+  "observed_counts": {
+    "patient": {
+      "live_latency_sample_count": 1,
+      "replay_latency_sample_count": 0,
+      "unclassified_latency_sample_count": 0,
+      "latency_sample_count": 1
+    },
+    "emergency": {
+      "live_latency_sample_count": 1,
+      "replay_latency_sample_count": 0,
+      "unclassified_latency_sample_count": 0,
+      "latency_sample_count": 1
+    },
+    "admin": {
+      "live_latency_sample_count": 1,
+      "replay_latency_sample_count": 0,
+      "unclassified_latency_sample_count": 0,
+      "latency_sample_count": 1
+    }
+  },
+  "expected_counts": {
+    "patient": {
+      "live_latency_sample_count": 1,
+      "replay_latency_sample_count": 0,
+      "unclassified_latency_sample_count": 0,
+      "latency_sample_count": 1
+    },
+    "emergency": {
+      "live_latency_sample_count": 1,
+      "replay_latency_sample_count": 0,
+      "unclassified_latency_sample_count": 0,
+      "latency_sample_count": 1
+    },
+    "admin": {
+      "live_latency_sample_count": 1,
+      "replay_latency_sample_count": 0,
+      "unclassified_latency_sample_count": 0,
+      "latency_sample_count": 1
+    }
+  },
+  "database_before": {
+    "events": 191,
+    "grants": 8,
+    "tickets": 0,
+    "probe_events": 0,
+    "events_logical_sha256": "4c916b2f01e836bc1118e0621105dfcf589f2a5ffc17e1bd560bf0620d839d7f",
+    "grants_data_sha256": "79c20ccc37d194153702836c82f08894c89f80d0f61fbb0906a279b90cfea5c7",
+    "tickets_data_sha256": "79c901379fa46bd1bce9e1c93882c0d1fa29c8843e6b53636ab572fc083002e7"
+  },
+  "database_after": {
+    "events": 191,
+    "grants": 8,
+    "tickets": 0,
+    "probe_events": 0,
+    "events_logical_sha256": "4c916b2f01e836bc1118e0621105dfcf589f2a5ffc17e1bd560bf0620d839d7f",
+    "grants_data_sha256": "07c7b70708fecda2c6defbb573a8682c1a0e0972b56e9b1a4af52eb083072733",
+    "tickets_data_sha256": "38020d2c7e8944e79bf4d7588cf5e0bb86c332427eae99dc0b9ca3851ef7fa35"
+  },
+  "runtime_before": {
+    "containers": {
+      "crisisguard-local-postgres-1": {
+        "id": "01cce11cfc59db4d000d7fe60669817513e1d21eef90e0012c5ef4fd5e32b103",
+        "image": "sha256:9e2cf6287f25c3151f4c9421ccce2b17f3e60061c111a29165e0d2cdd9ff0a97",
+        "state": "running",
+        "health": "healthy"
+      },
+      "crisisguard-local-controller-1": {
+        "id": "abace36180c2cf450db629f6d6382b2d081d06a32bf883200b8deec1a889e9b8",
+        "image": "sha256:55cb80928288851103652cb9d77b6630eb434dd8330e1a7312b81370812ebc54",
+        "state": "running",
+        "health": "healthy"
+      },
+      "crisisguard-local-patient-1": {
+        "id": "471fddd4fb574e11c6c7ebf62c8fc29bb6a887fae851ea658b32a9bb2729c11d",
+        "image": "sha256:55cb80928288851103652cb9d77b6630eb434dd8330e1a7312b81370812ebc54",
+        "state": "running",
+        "health": "healthy"
+      },
+      "crisisguard-local-emergency-1": {
+        "id": "ebced519cb0e158fe986ea24bd5e8f8ebd5a6ddc12a8cd7fb97a475b7a0e413e",
+        "image": "sha256:55cb80928288851103652cb9d77b6630eb434dd8330e1a7312b81370812ebc54",
+        "state": "running",
+        "health": "healthy"
+      },
+      "crisisguard-local-admin-1": {
+        "id": "0da8ab1757e3cc5a474ea9227a78b735eba980e845e583bb33ab366d69f23718",
+        "image": "sha256:55cb80928288851103652cb9d77b6630eb434dd8330e1a7312b81370812ebc54",
+        "state": "running",
+        "health": "healthy"
+      },
+      "crisisguard-local-hospital-a-1": {
+        "id": "65027a4e4229c94d43a8c6555a2f621306de14048043ac60a53e41a691e09eea",
+        "image": "sha256:9f4ea824e641dd93b965c18fc40e677dd1bbf322b91b44a8f5197508a6983ecc",
+        "state": "running",
+        "health": "healthy"
+      },
+      "crisisguard-local-hospital-b-1": {
+        "id": "fc5e22e7be32ced0ca74937dc77abe981fdb9623b6a7d4d69ca11cf484fe8ff0",
+        "image": "sha256:9f4ea824e641dd93b965c18fc40e677dd1bbf322b91b44a8f5197508a6983ecc",
+        "state": "running",
+        "health": "healthy"
+      },
+      "crisisguard-local-dashboard-1": {
+        "id": "fdec29438b27a784d2e84d4b3d1b616952047f11d75ed4cae7ba21c385ac612a",
+        "image": "sha256:03ef0e42bc4733961e88d4f5be3846998d8b7f190284d346c5972efb148f44d0",
+        "state": "running",
+        "health": "healthy"
+      }
+    },
+    "volumes": [
+      "b4a991065d804026972195281eea606219b68328d33d569a8a43e16276cbb9bd",
+      "cg-metaguard-41f79711c3cc_hospital-a-data",
+      "cg-metaguard-41f79711c3cc_hospital-b-data",
+      "cg-metaguard-41f79711c3cc_postgres-data",
+      "crisisguard-local_hospital-a-data",
+      "crisisguard-local_hospital-b-data",
+      "crisisguard-local_postgres-data",
+      "crisisguard_pgdata",
+      "topicf-task4-benchmark_benchmark_postgres",
+      "topicf-task4-benchmark_benchmark_qdrant",
+      "topicf-task4-round3_round3_postgres",
+      "topicf-task4-round3_round3_qdrant",
+      "topicf-task4-round3_round3_state",
+      "topicf_gis_bedrock_ltm_data",
+      "topicf_gis_db_data",
+      "topicf_gis_titan_qdrant_data"
+    ],
+    "all_container_count": 33
+  },
+  "runtime_after": {
+    "containers": {
+      "crisisguard-local-postgres-1": {
+        "id": "01cce11cfc59db4d000d7fe60669817513e1d21eef90e0012c5ef4fd5e32b103",
+        "image": "sha256:9e2cf6287f25c3151f4c9421ccce2b17f3e60061c111a29165e0d2cdd9ff0a97",
+        "state": "running",
+        "health": "healthy"
+      },
+      "crisisguard-local-controller-1": {
+        "id": "abace36180c2cf450db629f6d6382b2d081d06a32bf883200b8deec1a889e9b8",
+        "image": "sha256:55cb80928288851103652cb9d77b6630eb434dd8330e1a7312b81370812ebc54",
+        "state": "running",
+        "health": "healthy"
+      },
+      "crisisguard-local-patient-1": {
+        "id": "471fddd4fb574e11c6c7ebf62c8fc29bb6a887fae851ea658b32a9bb2729c11d",
+        "image": "sha256:55cb80928288851103652cb9d77b6630eb434dd8330e1a7312b81370812ebc54",
+        "state": "running",
+        "health": "healthy"
+      },
+      "crisisguard-local-emergency-1": {
+        "id": "ebced519cb0e158fe986ea24bd5e8f8ebd5a6ddc12a8cd7fb97a475b7a0e413e",
+        "image": "sha256:55cb80928288851103652cb9d77b6630eb434dd8330e1a7312b81370812ebc54",
+        "state": "running",
+        "health": "healthy"
+      },
+      "crisisguard-local-admin-1": {
+        "id": "0da8ab1757e3cc5a474ea9227a78b735eba980e845e583bb33ab366d69f23718",
+        "image": "sha256:55cb80928288851103652cb9d77b6630eb434dd8330e1a7312b81370812ebc54",
+        "state": "running",
+        "health": "healthy"
+      },
+      "crisisguard-local-hospital-a-1": {
+        "id": "65027a4e4229c94d43a8c6555a2f621306de14048043ac60a53e41a691e09eea",
+        "image": "sha256:9f4ea824e641dd93b965c18fc40e677dd1bbf322b91b44a8f5197508a6983ecc",
+        "state": "running",
+        "health": "healthy"
+      },
+      "crisisguard-local-hospital-b-1": {
+        "id": "fc5e22e7be32ced0ca74937dc77abe981fdb9623b6a7d4d69ca11cf484fe8ff0",
+        "image": "sha256:9f4ea824e641dd93b965c18fc40e677dd1bbf322b91b44a8f5197508a6983ecc",
+        "state": "running",
+        "health": "healthy"
+      },
+      "crisisguard-local-dashboard-1": {
+        "id": "fdec29438b27a784d2e84d4b3d1b616952047f11d75ed4cae7ba21c385ac612a",
+        "image": "sha256:03ef0e42bc4733961e88d4f5be3846998d8b7f190284d346c5972efb148f44d0",
+        "state": "running",
+        "health": "healthy"
+      }
+    },
+    "volumes": [
+      "b4a991065d804026972195281eea606219b68328d33d569a8a43e16276cbb9bd",
+      "cg-metaguard-41f79711c3cc_hospital-a-data",
+      "cg-metaguard-41f79711c3cc_hospital-b-data",
+      "cg-metaguard-41f79711c3cc_postgres-data",
+      "crisisguard-local_hospital-a-data",
+      "crisisguard-local_hospital-b-data",
+      "crisisguard-local_postgres-data",
+      "crisisguard_pgdata",
+      "topicf-task4-benchmark_benchmark_postgres",
+      "topicf-task4-benchmark_benchmark_qdrant",
+      "topicf-task4-round3_round3_postgres",
+      "topicf-task4-round3_round3_qdrant",
+      "topicf-task4-round3_round3_state",
+      "topicf_gis_bedrock_ltm_data",
+      "topicf_gis_db_data",
+      "topicf_gis_titan_qdrant_data"
+    ],
+    "all_container_count": 33
+  },
+  "assertions": {
+    "dashboard_routes_denied_403": true,
+    "guarded_routes_did_not_reach_cloud": true,
+    "deployed_live_transports_denied_by_admission_401": true,
+    "exact_authenticated_live_classification": true,
+    "no_event_or_controller_history_change": false,
+    "probe_ids_not_persisted": true,
+    "runtime_resources_unchanged": true
+  },
+  "result": "failed",
+  "limitations": [
+    "Transport probes intentionally bypass the Dashboard route guard only inside the deployed container and remain unauthorized at Cloud; they prove provenance without creating events.",
+    "Test harnesses are not production workload coverage and were not given private live credentials.",
+    "No claim is made about hypothetical callers outside the repository or future deployments."
+  ]
+}

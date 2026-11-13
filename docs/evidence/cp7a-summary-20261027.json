@@ -1,0 +1,61 @@
+{
+  "checkpoint": "7A",
+  "date": "2026-10-27",
+  "status": "partially_complete_against_proposal",
+  "python": "3.13.0 (tags/v3.13.0:60403a5, Oct  7 2024, 09:38:07) [MSC v.1941 64 bit (AMD64)]",
+  "head": "9b68831d1b74890a12eefce2f209a408327f51e1",
+  "working_tree_dirty": true,
+  "source_sha256": {
+    "cloud/telemetry.py": "6eef041d2c8cdcdbd0295b240c8a9a0c34f56755b14249fb223f5d0a6997ef38",
+    "tests/unit/test_cloud_metrics.py": "831e095b847571000c8489be55ff0c04924689d02e08980b4fe822c02adf249c",
+    "tests/integration/test_cloud_telemetry.py": "a1050edbd320f8b8815d6cc6f488fb385e98e2a4f1d1d177eeea8e527fbc1569",
+    "tests/integration/test_cloud_metrics_docker.py": "e6aa26d0eeb6d429507ffef1a83c73d3aeef20f1bacb571f6dae96c7f2d8c982"
+  },
+  "protected_implementations_unchanged": {
+    "cloud/controller/admission.py": true,
+    "cloud/controller/grants.py": true,
+    "cloud/controller/main.py": true,
+    "cloud/controller/scheduler.py": true,
+    "cloud/controller/storage.py": true,
+    "cloud/database/db.py": true,
+    "cloud/metaguard.py": true,
+    "edge/capture_api/auto_replay.py": true,
+    "edge/capture_api/cloud_client.py": true,
+    "edge/capture_api/grant_client.py": true,
+    "edge/capture_api/main.py": true,
+    "edge/capture_api/scheduled_replay.py": true,
+    "edge/database/db.py": true,
+    "edge/scheduler/dag.py": true,
+    "edge/scheduler/inspector.py": true,
+    "edge/scheduler/live_preview.py": true,
+    "edge/scheduler/priority.py": true,
+    "edge/scheduler/scheduler.py": true,
+    "edge/scheduler/session.py": true,
+    "edge/scheduler/validation.py": true
+  },
+  "final_tests": {
+    "regression": {
+      "passed": 807,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "docker": {
+      "passed": 5,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "focused_overlaps_regression": 92
+  },
+  "image": "crisisguard-metrics:cp7a-a4259b33b432",
+  "existing_docker_resources_preserved": true,
+  "runtime_services_redeployed": false,
+  "limitations": [
+    "Mixed monitored traffic, not live-only p95",
+    "No underlying Cloud queue-depth instrumentation; in-flight is not queue depth",
+    "MetaGuard still consumes legacy fields",
+    "Per-process exact sample retention/sort; not multi-worker aggregation",
+    "No AWS or sustainable-load/SLO benchmark"
+  ]
+}

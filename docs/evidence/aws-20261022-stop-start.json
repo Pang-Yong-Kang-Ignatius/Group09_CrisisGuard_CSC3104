@@ -1,0 +1,100 @@
+{
+  "test": "AWS stop/start recovery",
+  "deployed_commit": "2c7cb71fbfca624b540bc8c18b08bb8c62c4b9d6",
+  "reports": [
+    {
+      "checked_at_utc": "2026-10-22T05:42:05.403437+00:00",
+      "hostname": "ip-172-31-23-56",
+      "role": "cloud",
+      "scope": "Existing deployment health and original applied records; no writes or replay",
+      "containers": [
+        {
+          "Service": "admin",
+          "State": "running",
+          "Health": "healthy"
+        },
+        {
+          "Service": "emergency",
+          "State": "running",
+          "Health": "healthy"
+        },
+        {
+          "Service": "patient",
+          "State": "running",
+          "Health": "healthy"
+        },
+        {
+          "Service": "postgres",
+          "State": "running",
+          "Health": "healthy"
+        }
+      ],
+      "cloud_health_ports": [
+        8001,
+        8003,
+        8004
+      ],
+      "verified_events": [
+        {
+          "event_id": "TX_AWS_A_20261016_01",
+          "site_id": "Hospital_A",
+          "status": "applied"
+        },
+        {
+          "event_id": "TX_AWS_B_20261016_01",
+          "site_id": "Hospital_B",
+          "status": "applied"
+        }
+      ],
+      "result": "passed"
+    },
+    {
+      "checked_at_utc": "2026-10-22T05:42:05.956137+00:00",
+      "hostname": "ip-172-31-27-60",
+      "role": "hospital-a",
+      "scope": "Existing deployment health and original applied records; no writes or replay",
+      "containers": [
+        {
+          "Service": "hospital",
+          "State": "running",
+          "Health": "healthy"
+        }
+      ],
+      "cloud_health_ports": [
+        8001
+      ],
+      "verified_events": [
+        {
+          "event_id": "TX_AWS_A_20261016_01",
+          "site_id": "Hospital_A",
+          "status": "applied"
+        }
+      ],
+      "result": "passed"
+    },
+    {
+      "checked_at_utc": "2026-10-22T05:42:06.452665+00:00",
+      "hostname": "ip-172-31-19-60",
+      "role": "hospital-b",
+      "scope": "Existing deployment health and original applied records; no writes or replay",
+      "containers": [
+        {
+          "Service": "hospital",
+          "State": "running",
+          "Health": "healthy"
+        }
+      ],
+      "cloud_health_ports": [
+        8001
+      ],
+      "verified_events": [
+        {
+          "event_id": "TX_AWS_B_20261016_01",
+          "site_id": "Hospital_B",
+          "status": "applied"
+        }
+      ],
+      "result": "passed"
+    }
+  ]
+}

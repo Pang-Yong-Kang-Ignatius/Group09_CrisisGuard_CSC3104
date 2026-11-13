@@ -1,0 +1,397 @@
+{
+  "method": "Source inspection, automated tests and HTTP only; no Computer Use or browser automation",
+  "dashboards": {
+    "original": {
+      "pages": 5,
+      "assets": {
+        "/static/style.css": {
+          "status": 200,
+          "matches_updated_workspace": true
+        },
+        "/static/app.js": {
+          "status": 200,
+          "matches_updated_workspace": false
+        },
+        "/static/outage.js": {
+          "status": 200,
+          "matches_updated_workspace": true
+        },
+        "/static/workspace.js": {
+          "status": 200,
+          "matches_updated_workspace": false
+        },
+        "/static/sync-status.js": {
+          "status": 200,
+          "matches_updated_workspace": false
+        },
+        "/static/quick-events.js": {
+          "status": 200,
+          "matches_updated_workspace": true
+        }
+      },
+      "endpoints": {
+        "/health": {
+          "status": 200,
+          "response": {
+            "status": "ok",
+            "service": "dashboard"
+          }
+        },
+        "/api/services": {
+          "status": 200,
+          "response": {
+            "patient": {
+              "service": "patient",
+              "http_status": 200,
+              "response": {
+                "status": "healthy",
+                "service": "patient",
+                "database": "crisisguard"
+              }
+            },
+            "emergency": {
+              "service": "emergency",
+              "http_status": 200,
+              "response": {
+                "status": "healthy",
+                "service": "emergency",
+                "database": "crisisguard"
+              }
+            },
+            "admin": {
+              "service": "admin",
+              "http_status": 200,
+              "response": {
+                "status": "healthy",
+                "service": "admin",
+                "database": "crisisguard"
+              }
+            }
+          }
+        },
+        "/api/metrics": {
+          "status": 200,
+          "response": {
+            "patient": {
+              "service": "patient",
+              "http_status": 200,
+              "response": {
+                "average_latency_ms": 0.0,
+                "error_rate": 0.0,
+                "throughput_rps": 0.0,
+                "window_requests": 0,
+                "total_requests": 7,
+                "failed_requests": 0,
+                "window_seconds": 60,
+                "uptime_seconds": 5338.51,
+                "sampled_at": "2026-10-27T11:23:57.201676+00:00",
+                "service": "patient",
+                "database_healthy": true
+              }
+            },
+            "emergency": {
+              "service": "emergency",
+              "http_status": 200,
+              "response": {
+                "average_latency_ms": 0.0,
+                "error_rate": 0.0,
+                "throughput_rps": 0.0,
+                "window_requests": 0,
+                "total_requests": 0,
+                "failed_requests": 0,
+                "window_seconds": 60,
+                "uptime_seconds": 5335.33,
+                "sampled_at": "2026-10-27T11:23:57.218771+00:00",
+                "service": "emergency",
+                "database_healthy": true
+              }
+            },
+            "admin": {
+              "service": "admin",
+              "http_status": 200,
+              "response": {
+                "average_latency_ms": 0.0,
+                "error_rate": 0.0,
+                "throughput_rps": 0.0,
+                "window_requests": 0,
+                "total_requests": 0,
+                "failed_requests": 0,
+                "window_seconds": 60,
+                "uptime_seconds": 5335.12,
+                "sampled_at": "2026-10-27T11:23:57.232488+00:00",
+                "service": "admin",
+                "database_healthy": true
+              }
+            }
+          }
+        },
+        "/api/hospitals": {
+          "status": 200,
+          "response": {
+            "hospital-a": {
+              "status": "healthy",
+              "total": 27,
+              "pending": 0,
+              "applied": 27
+            },
+            "hospital-b": {
+              "status": "healthy",
+              "total": 18,
+              "pending": 0,
+              "applied": 18
+            }
+          }
+        },
+        "/api/history?limit=100": {
+          "status": 200,
+          "response": {
+            "count": 100,
+            "events_returned": 100
+          }
+        },
+        "/api/recovery": {
+          "status": 200,
+          "response": {
+            "hospitals": {
+              "hospital-a": {
+                "status": "available",
+                "enabled": true,
+                "cloud_reachable": true,
+                "last_check_at": "2026-10-27T11:23:54.168942+00:00",
+                "last_reconnected_at": "2026-10-27T09:55:06.028237+00:00",
+                "drain_completed_at": "2026-10-27T09:55:16.218362+00:00",
+                "last_replay_at": "2026-10-27T09:55:16.218140+00:00",
+                "last_replay_attempted": 1,
+                "last_replay_applied": 1,
+                "replayable_backlog": 0
+              },
+              "hospital-b": {
+                "status": "available",
+                "enabled": true,
+                "cloud_reachable": true,
+                "last_check_at": "2026-10-27T11:23:53.923454+00:00",
+                "last_reconnected_at": "2026-10-27T09:55:05.757292+00:00",
+                "drain_completed_at": "2026-10-27T09:55:15.853716+00:00",
+                "last_replay_at": "2026-10-27T09:55:15.853464+00:00",
+                "last_replay_attempted": 1,
+                "last_replay_applied": 1,
+                "replayable_backlog": 0
+              }
+            },
+            "controller": {
+              "status": "not_configured"
+            }
+          }
+        }
+      }
+    },
+    "aimd": {
+      "pages": 5,
+      "assets": {
+        "/static/style.css": {
+          "status": 200,
+          "matches_updated_workspace": true
+        },
+        "/static/app.js": {
+          "status": 200,
+          "matches_updated_workspace": false
+        },
+        "/static/outage.js": {
+          "status": 200,
+          "matches_updated_workspace": true
+        },
+        "/static/workspace.js": {
+          "status": 200,
+          "matches_updated_workspace": false
+        },
+        "/static/sync-status.js": {
+          "status": 200,
+          "matches_updated_workspace": false
+        },
+        "/static/quick-events.js": {
+          "status": 200,
+          "matches_updated_workspace": true
+        }
+      },
+      "endpoints": {
+        "/health": {
+          "status": 200,
+          "response": {
+            "status": "ok",
+            "service": "dashboard"
+          }
+        },
+        "/api/services": {
+          "status": 200,
+          "response": {
+            "patient": {
+              "service": "patient",
+              "http_status": 200,
+              "response": {
+                "status": "healthy",
+                "service": "patient",
+                "database": "cp3_verify"
+              }
+            },
+            "emergency": {
+              "service": "emergency",
+              "http_status": 200,
+              "response": {
+                "status": "healthy",
+                "service": "emergency",
+                "database": "cp3_verify"
+              }
+            },
+            "admin": {
+              "service": "admin",
+              "http_status": 200,
+              "response": {
+                "status": "healthy",
+                "service": "admin",
+                "database": "cp3_verify"
+              }
+            }
+          }
+        },
+        "/api/metrics": {
+          "status": 200,
+          "response": {
+            "patient": {
+              "service": "patient",
+              "http_status": 200,
+              "response": {
+                "p95_latency_ms": null,
+                "latency_sample_count": 0,
+                "observation_seconds": 60,
+                "in_flight_requests": 0,
+                "average_latency_ms": 0.0,
+                "error_rate": 0.0,
+                "throughput_rps": 0.0,
+                "window_requests": 0,
+                "total_requests": 5,
+                "failed_requests": 0,
+                "window_seconds": 60,
+                "uptime_seconds": 1287.71,
+                "sampled_at": "2026-10-27T11:23:57.368255+00:00",
+                "service": "patient",
+                "database_healthy": true
+              }
+            },
+            "emergency": {
+              "service": "emergency",
+              "http_status": 200,
+              "response": {
+                "p95_latency_ms": null,
+                "latency_sample_count": 0,
+                "observation_seconds": 60,
+                "in_flight_requests": 0,
+                "average_latency_ms": 0.0,
+                "error_rate": 0.0,
+                "throughput_rps": 0.0,
+                "window_requests": 0,
+                "total_requests": 3,
+                "failed_requests": 0,
+                "window_seconds": 60,
+                "uptime_seconds": 1282.0,
+                "sampled_at": "2026-10-27T11:23:57.380136+00:00",
+                "service": "emergency",
+                "database_healthy": true
+              }
+            },
+            "admin": {
+              "service": "admin",
+              "http_status": 200,
+              "response": {
+                "p95_latency_ms": null,
+                "latency_sample_count": 0,
+                "observation_seconds": 60,
+                "in_flight_requests": 0,
+                "average_latency_ms": 0.0,
+                "error_rate": 0.0,
+                "throughput_rps": 0.0,
+                "window_requests": 0,
+                "total_requests": 3,
+                "failed_requests": 0,
+                "window_seconds": 60,
+                "uptime_seconds": 1281.82,
+                "sampled_at": "2026-10-27T11:23:57.392116+00:00",
+                "service": "admin",
+                "database_healthy": true
+              }
+            }
+          }
+        },
+        "/api/hospitals": {
+          "status": 200,
+          "response": {
+            "hospital-a": {
+              "status": "healthy",
+              "total": 9,
+              "pending": 0,
+              "applied": 9
+            },
+            "hospital-b": {
+              "status": "healthy",
+              "total": 9,
+              "pending": 0,
+              "applied": 9
+            }
+          }
+        },
+        "/api/history?limit=100": {
+          "status": 200,
+          "response": {
+            "count": 44,
+            "events_returned": 44
+          }
+        },
+        "/api/recovery": {
+          "status": 200,
+          "response": {
+            "hospitals": {
+              "hospital-a": {
+                "status": "available",
+                "enabled": true,
+                "cloud_reachable": true,
+                "last_check_at": "2026-10-27T11:23:53.028456+00:00",
+                "last_reconnected_at": "2026-10-27T11:02:09.549969+00:00",
+                "drain_completed_at": "2026-10-27T11:03:03.476555+00:00",
+                "last_replay_at": "2026-10-27T11:03:03.476224+00:00",
+                "last_replay_attempted": 1,
+                "last_replay_applied": 1,
+                "replayable_backlog": 0
+              },
+              "hospital-b": {
+                "status": "available",
+                "enabled": true,
+                "cloud_reachable": true,
+                "last_check_at": "2026-10-27T11:23:53.014927+00:00",
+                "last_reconnected_at": "2026-10-27T11:02:42.171778+00:00",
+                "drain_completed_at": "2026-10-27T11:03:13.369006+00:00",
+                "last_replay_at": "2026-10-27T11:03:13.368712+00:00",
+                "last_replay_attempted": 1,
+                "last_replay_applied": 1,
+                "replayable_backlog": 0
+              }
+            },
+            "controller": {
+              "status": "available",
+              "enabled": true,
+              "state": "Normal",
+              "state_since": "2026-10-27T11:02:43.720057+00:00",
+              "observed_at": "2026-10-27T11:23:56.641351+00:00",
+              "server_time": "2026-10-27T11:23:57.448580+00:00",
+              "rate_rps": 2.0,
+              "inflight_limit": 4,
+              "healthy_samples": 0,
+              "allowed": 100,
+              "denied": 1109,
+              "telemetry_fresh": true,
+              "policy": "aimd"
+            }
+          }
+        }
+      }
+    }
+  }
+}
